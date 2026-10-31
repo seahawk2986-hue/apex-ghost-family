@@ -245,6 +245,27 @@ def score_code(fn, c, res, prev_res=None):
             log("reward", "BEHAVIOR LOSS: predecessor produced output, candidate is silent.")
     else:
         log("reward", "Runtime degradation.")
+    # Static lint (ruff): undefined names are near-certain runtime crashes;
+    # unused imports are hygiene. Scored before the ledger comparison so the
+    # progress gate sees lint-adjusted quality.
+    try:
+        _lt = os.path.join(R, f"lint_probe_{abs(hash((fn, len(c)))) % 10**8}.py")
+        with open(_lt, "w", encoding="utf-8") as f: f.write(c)
+        _r = subprocess.run([sys.executable, "-m", "ruff", "check", "--isolated",
+                             "--select", "F821,F401", "--output-format", "concise", _lt],
+                            capture_output=True, text=True, timeout=25)
+        try: os.remove(_lt)
+        except OSError: pass
+        if _r.returncode == 1:
+            _f821 = sum(1 for _l in (_r.stdout or "").splitlines() if "F821" in _l)
+            _f401 = sum(1 for _l in (_r.stdout or "").splitlines() if "F401" in _l)
+            _pen = 10 * _f821 + 3 * _f401
+            if _pen:
+                s -= _pen
+                m["lint_penalty"] = _pen
+                log("reward", f"Lint: {_f821} undefined-name(s), {_f401} unused-import(s) -> -{_pen}")
+    except Exception:
+        pass
     base = s
     rec = (_load_ledger().get(fn) or {})
     pb = float(rec.get("best_base", 0.0) or 0.0)
@@ -360,7 +381,7 @@ def _container_run_tests(fn, code, tests_code):
         except Exception:
             pass
 
-def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None):
+def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None, skill_used=None):
     ex = os.path.splitext(fn)[1].strip().lower()
     # Predecessor behavior baseline (computed ONCE - the live file is the
     # predecessor until a candidate actually passes the write gate).
@@ -418,6 +439,12 @@ def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None):
                 if _distill:
                     _distill(fn, intent, scr)  # certify as a skill
                 _set_strategy(f"continue {fn} (success streak {(_streak or 0) + 1}); keep changes surgical; verify output parity")
+                if skill_used:
+                    try:
+                        from ApexSkills import mark_win
+                        mark_win(skill_used)   # which certified skills actually win
+                    except Exception:
+                        pass
                 try:
                     from ApexGuard import seal_file as _seal
                     _seal(fn)   # integrity manifest: tamper with the evolution -> boot fails loudly
@@ -533,6 +560,13 @@ def plan():
         _ev = [e for e in MEM.recent_events(8) if e.get("kind") in ("evolution_pass", "error", "success")]
         if _ev: reflect = " | ".join(f"{e['kind']}: {e['text'][:90]}" for e in _ev[-3:])
     except Exception: pass
+    # Theory of mind: recent private exchanges with Andrew inform context.
+    talks = "none"
+    try:
+        _tv = MEM.recent_events(15, kind="conversation") or []
+        _tv = [e for e in _tv if "Andrew:" in e.get("text", "")]
+        if _tv: talks = " | ".join(_t["text"][8:88] for _t in _tv[-3:])
+    except Exception: pass
     # Self-model: the planner reads its own identity card every cycle.
     selfcard = ""
     try:
@@ -565,6 +599,7 @@ def plan():
                 f"Per-file reward ledger (best first):\n{ledger_hist}\n"
                 f"Neglected files worth considering (exploration):\n{neglect}\n"
                 f"Reflection on recent cycles:\n{reflect}\n"
+                f"Recent private exchanges with Andrew (your human):\n{talks}\n"
                 f"Self-model (identity, engines, limits):\n{selfcard}\n"
                 f"Self-issued curriculum (proposed objectives):\n{curric}\n"
                 f"Certified skill library:\n{skills_line}\n"
@@ -795,6 +830,7 @@ def plan():
     # Skill library retrieval: inject the most relevant CERTIFIED implementation
     # as a reference pattern for the coder (skill-reuse loop).
     _skill_ref = ""
+    _used_skill = ""
     try:
         sys.path.insert(0, os.path.join(R, "Scripts"))
         from ApexSkills import find_relevant as _fr, mark_used as _mu
@@ -804,9 +840,10 @@ def plan():
             if os.path.exists(_sp):
                 with open(_sp, "r", encoding="utf-8") as f:
                     _src = f.read()[:3000]
-                _skill_ref = (f"CERTIFIED SKILL REFERENCE (a previoiusly VERIFIED implementation "
+                _skill_ref = (f"CERTIFIED SKILL REFERENCE (a previously VERIFIED implementation "
                               f"of similar work in {_sk['source']}):\n{_src}")
                 _mu(_sk["skill_id"])
+                _used_skill = _sk["skill_id"]
                 try:
                     MEM.record_event("skill_used", f"{_sk['skill_id']} injected (sim {_sk['similarity']})",
                                      skill=_sk["skill_id"])
@@ -996,7 +1033,7 @@ def plan():
             return False
 
     # --- Phase 3: build the queue payload in Python (never ask a model for JSON)
-    payload = json.dumps({"target_file": tf, "task_intent": intent, "proposed_code": code, "minimal_diff": bool(_minimal), "critic_prediction": _prediction, "tests_code": _tests_code})
+    payload = json.dumps({"target_file": tf, "task_intent": intent, "proposed_code": code, "minimal_diff": bool(_minimal), "critic_prediction": _prediction, "tests_code": _tests_code, "skill_used": _used_skill})
     with open(Q, "w", encoding="utf-8") as f: f.write(payload)
     try: MEM.record_event("plan_decision", f"Chose {tf}: {intent[:120]} | brief: {brief[:120]}")
     except Exception: pass
@@ -1151,7 +1188,7 @@ def execution_loop():
             if not os.path.exists(Q) or os.path.getsize(Q) == 0: plan()
             else:
                 with open(Q, "r", encoding="utf-8") as f: d = json.load(f)
-                if d.get("target_file") and d.get("proposed_code"): log("loop", f"Running: {d['target_file']}"); heal(d["target_file"], d.get("task_intent", "Evolve"), d["proposed_code"], bool(d.get("minimal_diff", False)), d.get("critic_prediction"), d.get("tests_code"))
+                if d.get("target_file") and d.get("proposed_code"): log("loop", f"Running: {d['target_file']}"); heal(d["target_file"], d.get("task_intent", "Evolve"), d["proposed_code"], bool(d.get("minimal_diff", False)), d.get("critic_prediction"), d.get("tests_code"), d.get("skill_used"))
                 with open(Q, "w", encoding="utf-8") as f: f.write("")
             try:
                 if _HG: _HG.enforce_limits()   # self-RAM governor: gc flush on breach
