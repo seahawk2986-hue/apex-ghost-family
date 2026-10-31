@@ -1,7 +1,6 @@
 name: ApexHubWorker
 description: 'Apex Ghost Hub - territory worker for the family swarm (consent-gated; runs on GitHub free tier, 2000 min/mo)'
-on:
-  schedule:
+on:\n  push:\n    branches: [main]\n  schedule:
     - cron: '0 */2 * * *'   # every 2h - within the 2000 min/month free budget
   workflow_dispatch:
 
