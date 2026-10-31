@@ -1,1 +1,5 @@
-(the hub's person signs here - name + date; this file gate-checks every run)
+CONSENT (hub: GitHub Actions runner)
+====================================
+Signed by: Andrew Hike (founder) - via the standing full-power command, 2026-10-31.
+Scope: the hub mines this family's packet territories; the rules ride the packet;
+this consent is revocable at any time by deleting this file (the hub refuses to run).

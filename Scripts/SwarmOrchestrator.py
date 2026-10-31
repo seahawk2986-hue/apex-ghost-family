@@ -1531,6 +1531,16 @@ async def network_phase(ghosts_n, ledger, seen, minutes_cap, state, pending):
       wave 3: LICENSE verification of the strongest leads
     """
     gnet = GhostNet()
+    # BULLETPROOF NET: every channel exists from the first line, guaranteed
+    # (tonight's AttributeError came from init-order; this kills that class)
+    for _a, _v in (("_reg_seen", set()), ("host_block", {}), ("cc_leads", []),
+                   ("lane_hits", {}), ("origin", {}), ("lane_mines", {}),
+                   ("mined_repos", set()), ("nudge", []), ("lead_list", []),
+                   ("tar_imports", []), ("grades_now", {}), ("paused", False),
+                   ("helpers_spawned", 0), ("announcements", 0), ("checked", set()),
+                   ("lease", {}), ("hb_state", lambda: {})):
+        if not hasattr(gnet, _a):
+            setattr(gnet, _a, _v)
     # politeness tiers: bulk CDNs carry 24 in-flight; every API/DB host is
     # capped at 8 - throughput triples WITHOUT raising per-service load
     _fleet = max(1, int(os.environ.get("APEX_FLEET", "1")))
