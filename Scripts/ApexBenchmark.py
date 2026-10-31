@@ -60,17 +60,31 @@ def run(include_cloud=True):
         out["security"] = 0.0
         out["security_err"] = str(e)[:80]
 
-    # -- memory: store -> recall roundtrip
+    # -- memory: store -> recall roundtrip with a 3-probe precision set
     try:
+        import tempfile
         from ApexMemory import ApexMemory
-        m = ApexMemory()
-        probe_text = f"Benchmark probe {time.time()} zebra-quota-alpha"
+        mm = ApexMemory()
+        mm.semantic_path = os.path.join(tempfile.gettempdir(), "apex_memprobe_sem.jsonl")
+        mm.episodic_path = os.path.join(tempfile.gettempdir(), "apex_memprobe_epi.jsonl")
+        probes = [
+            ("The red-team suite runs ten adversarial drills nightly for apex",
+             "how many red-team drills run nightly for apex", "ten adversarial drills"),
+            ("The adapter endpoint is reachable on tailscale port 9443 for apex",
+             "which port serves the apex adapter endpoint", "port 9443"),
+            ("Andrew runs apex hardware on 16GB of memory and an RTX 3050",
+             "how much memory does andrew have", "16GB"),
+        ]
         t0 = time.time()
-        m.remember(probe_text, kind="fragment")
-        hits = m.recall("zebra quota alpha benchmark probe", k=3)
+        hits = 0
+        for fact, q, marker in probes:
+            mm.remember(fact, kind="fragment")
+            top = mm.recall(q, k=1)
+            if top and any(w in top[0]["text"].lower() for w in marker.lower().split()[:3]):
+                hits += 1
         dt = time.time() - t0
-        hit = any("zebra" in h["text"] for h in hits)
-        out["memory_recall_hit"] = 1.0 if hit else 0.0
+        out["memory_recall_hit"] = round(hits / len(probes), 2)
+        out["memory_probe_precision"] = round(hits / len(probes), 2)
         out["memory_latency_s"] = round(dt, 2)
     except Exception as e:
         out["memory_recall_hit"] = 0.0

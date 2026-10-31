@@ -467,6 +467,15 @@ def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None, skill
                     _seal(fn)   # integrity manifest: tamper with the evolution -> boot fails loudly
                 except Exception:
                     pass
+                # Per-file strategy counters: learn which edit style wins HERE
+                try:
+                    lg = _load_ledger()
+                    rec = lg.setdefault(fn, {"best": 0.0, "best_base": 0.0, "attempts": 0, "successes": 0, "streak": 0})
+                    _key = "ok_min" if minimal else "ok_full"
+                    rec[_key] = rec.get(_key, 0) + 1
+                    _save_ledger(lg)
+                except Exception:
+                    pass
                 # TDD verification (metrics-only: tests inform, never gate rewards)
                 try:
                     if cloud_ask and _docker_engine():
@@ -716,6 +725,18 @@ def plan():
         _ensemble = ""
     if _ensemble:
         log("planner", f"Ensemble: {_ensemble[:130]}")
+
+    # Per-file strategy memory: consult the ledger for which edit style wins
+    # on THIS file (learning loop closing on editing strategy per target).
+    try:
+        _frec = _lg.get(tf) or {}
+        _om, _of = int(_frec.get("ok_min", 0) or 0), int(_frec.get("ok_full", 0) or 0)
+        if _om + _of >= 2:
+            _prefer_minimal = _om >= _of
+            log("planner", f"Per-file strategy ({tf}): minimal {_om} vs full {_of} -> "
+                           f"{'minimal-diff' if _prefer_minimal else 'full-rewrite'}")
+    except Exception:
+        pass
 
     # Disagreement resolution: when planners split, a deciding vote reviews
     # BOTH positions and picks the better target for THIS cycle.
