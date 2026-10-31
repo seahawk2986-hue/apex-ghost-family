@@ -1,5 +1,5 @@
 {
- "shift": 31,
+ "shift": 32,
  "wave": 4,
  "board": {
   "backlog": 1455,
@@ -7,6 +7,6 @@
   "skills": 245,
   "points": 45145.0,
   "money": 0.0,
-  "ram": 1.65
+  "ram": 1.87
  }
 }
