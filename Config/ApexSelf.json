@@ -1,4 +1,4 @@
-﻿{
+{
  "identity": "Apex",
  "role": "Autonomous software evolution agent and collaborative coding peer",
  "hardware": {
@@ -74,4 +74,3 @@
   "weakest_dimension": "security"
  }
 }
-/* drill-tamper */

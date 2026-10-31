@@ -42,7 +42,18 @@ try {
         Write-Log "[!] LM Studio not reachable on port 1234. Start it and load deepseek-r1-distill-llama-8b + qwen2.5-coder-7b-instruct." "Red"
     }
 
-    # --- 2. Interpreter sanity check --------------------------------------------
+    # --- 1.5 LM Studio server headless ensure (autonomy: no manual clicks) ------
+    $lms = Join-Path $env:USERPROFILE ".lmstudio\bin\lms.exe"
+    if (Test-Path $lms) {
+        $st = (& $lms status 2>&1) | Out-String
+        if ($st -notmatch 'ON') {
+            Write-Log "[*] LM Studio server down - starting headless via lms..."
+            & $lms server start 2>&1 | Out-Null
+            Start-Sleep -Seconds 6
+            $st2 = (& $lms status 2>&1) | Out-String
+            Write-Log $(if ($st2 -match 'ON') { "[OK] LM Studio server restarted (port 1234)." } else { "[!] lms server start failed - cloud lanes will carry the load." }) $(if ($st2 -match 'ON') { "Green" } else { "Yellow" })
+        }
+    }
     if (Test-Path $PyExe) {
         & $PyExe --version 2>&1 | ForEach-Object { Write-Log "[OK] Python runtime: $_" "Green" }
     } else {

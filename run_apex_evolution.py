@@ -333,7 +333,34 @@ def _set_strategy(text):
         pass
 
 
-def heal(fn, intent, code, minimal=False, predicted=None):
+def _container_run_tests(fn, code, tests_code):
+    """Execute a candidate + its intent-derived test suite inside the sealed
+    container. METRICS ONLY: results never gate rewards (self-grade gaming)."""
+    droot = os.path.join(R, "Config", "sandbox_runs")
+    d = os.path.join(droot, f"{int(time.time() * 1000)}_tdd_{fn}")
+    os.makedirs(d, exist_ok=True)
+    with open(os.path.join(d, fn), "w", encoding="utf-8") as f: f.write(code)
+    with open(os.path.join(d, "run_tests.py"), "w", encoding="utf-8") as f: f.write(tests_code)
+    name = f"apexev-tdd-{os.path.basename(d)[:28]}"
+    try:
+        res = subprocess.run(
+            ["docker", "run", "--rm", "--network", "none", "--name", name,
+             "--read-only", "--tmpfs", "/tmp",
+             "-v", f"{d}:/sandbox", "-w", "/sandbox",
+             "python:3.12-slim", "python", "/sandbox/run_tests.py"],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=45)
+        return {"status": "PASSED" if (res.returncode == 0 and "ALL TESTS PASSED" in (res.stdout or "")) else "FAILED",
+                "output": (res.stdout or "")[:1200],
+                "error": (res.stderr or "")[:300] if res.returncode else None}
+    except Exception as e:
+        return {"status": "ERROR", "output": "", "error": str(e)[:200]}
+    finally:
+        try:
+            shutil.rmtree(d, ignore_errors=True)
+        except Exception:
+            pass
+
+def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None):
     ex = os.path.splitext(fn)[1].strip().lower()
     # Predecessor behavior baseline (computed ONCE - the live file is the
     # predecessor until a candidate actually passes the write gate).
@@ -396,6 +423,38 @@ def heal(fn, intent, code, minimal=False, predicted=None):
                     _seal(fn)   # integrity manifest: tamper with the evolution -> boot fails loudly
                 except Exception:
                     pass
+                # TDD verification (metrics-only: tests inform, never gate rewards)
+                try:
+                    if cloud_ask and _docker_engine():
+                        _tests_raw = cloud_ask(
+                            f"You are Apex's TDD unit for the file {fn}.\nTask intent: {intent}\n"
+                            f"Write a PLAIN-python test script (no external deps) that verifies this code:\n"
+                            f"```python\n{code[:3500]}\n```\n"
+                            "The candidate already exists at /sandbox/candidate.py when your tests run; "
+                            "your script MUST start with:\n"
+                            "exec(compile(open('/sandbox/candidate.py').read(), 'candidate', 'exec'))\n"
+                            "then run REAL asserts on the resulting globals/functions, print actual results, "
+                            "and print 'ALL TESTS PASSED' as the final successful statement. "
+                            "Output ONLY the test script in one ```python block.",
+                            max_tokens=700)
+                        _tc = ext_code(_tests_raw or "", ".py")
+                        if _tc:
+                            _tdd = _container_run_tests(fn, code, _tc)
+                            MEM.record_event("tdd", f"{fn}: {_tdd['status']} on intent-derived tests",
+                                             file=fn, result=_tdd["status"])
+                            log("system", f"TDD: {_tdd['status']} for {fn}")
+                except Exception:
+                    pass
+            except Exception:
+                pass
+            # Post-write spec check: re-run the intent-derived tests in the
+            # container against the newly written file (drift detection).
+            try:
+                if tests_code and _docker_engine():
+                    _tdd3 = _container_run_tests(fn, code, tests_code)
+                    MEM.record_event("tdd", f"{fn} post-write spec check: {_tdd3.get('status')}",
+                                     file=fn, result=_tdd3.get("status"))
+                    log("system", f"Post-write TDD: {_tdd3.get('status')}")
             except Exception:
                 pass
             _bump_ledger(fn, {k: m.get(k, 0) for k in ("syntax", "safety", "runtime", "output")}, scr, True)
@@ -756,13 +815,37 @@ def plan():
     except Exception:
         _skill_ref = ""
 
-    # --- Phase 2: Qwen2.5-coder EDITS (minimal-diff first, full-file fallback) -
     log("planner", f"Locked onto: {tf}. DeepSeek plan: {brief[:120]}")
     try:
         with open(os.path.join(R, tf), "r", encoding="utf-8") as f: cur_full = f.read()
     except Exception: return False
     fence = "powershell" if tf.lower().endswith(".ps1") else "python"
     ex = os.path.splitext(tf)[1].strip().lower()
+
+    # Tests-first (spec-then-code): tests are derived from the intent BEFORE
+    # any code exists, so verification is independent of the implementation.
+    # The coder receives them as the specification it must satisfy.
+    _tests_code = ""
+    try:
+        if cloud_ask:
+            _tests_raw = cloud_ask(
+                "You are Apex's specification unit. Write a PLAIN-python test script (no "
+                "external deps) that strictly verifies the TASK below - assert the observable "
+                "behaviors the task requires, edge cases included. The implementation does not "
+                "exist yet; write tests that WOULD pass for a correct implementation. The script "
+                'will run with the implementation pre-loaded into globals via: '
+                "exec(compile(open('/sandbox/candidate.py').read(), 'candidate', 'exec'))\n"
+                "Then run REAL asserts based on the task, print actual results, and print "
+                "'ALL TESTS PASSED' as the final successful statement - ONLY for a genuinely "
+                "correct implementation. Output ONLY the test script in one ```python block.\n\n"
+                f"TASK (intent): {intent}\nChange brief: {brief}\nTarget: {tf}\n"
+                f"Current file behavior reference (first 2000 chars):\n{cur_full[:2000]}",
+                max_tokens=600)
+            _tests_code = ext_code(_tests_raw or "", ".py")
+            if _tests_code:
+                log("planner", f"Spec-first: test suite derived from intent ({len(_tests_code)} chars)")
+    except Exception:
+        _tests_code = ""
     code = None
     _minimal = False
     patch_out = None
@@ -774,7 +857,8 @@ def plan():
         f"{_guard_line}\n"
         f"Conservative mode: {('YES - smallest possible change; assume unvalidated assumptions are false' if _shrink else 'no')}\n\n"
         f"{_skill_ref}\n\n"
-        f"[CURRENT FILE CONTENT]:\n{cur_full[:6000]}\n\n"
+        + (f"SPECIFICATION THE RESULT MUST SATISFY (tests derived independently from the intent):\n{_tests_code}\n\n" if _tests_code else "")
+        + f"[CURRENT FILE CONTENT]:\n{cur_full[:6000]}\n\n"
         "Output ONLY one or more edit blocks in exactly this format (no fences, no commentary):\n"
         "<<<<<<< SEARCH\n<exact lines to find in the file>\n=======\n<replacement lines>\n>>>>>>> REPLACE\n"
         "Each SEARCH must appear in the current file exactly once. Keep edits as small as possible while "
@@ -791,7 +875,8 @@ def plan():
             f"Target file: {tf}\nIntent: {intent}\nChange brief: {brief}\n"
             f"{_guard_line}\n"
             f"Conservative mode: {('YES - smallest possible change; assume unvalidated assumptions are false' if _shrink else 'no')}\n\n"
-            f"[CURRENT FILE CONTENT]:\n{cur_full[:6000]}\n\n"
+            + (f"SPECIFICATION THE RESULT MUST SATISFY (tests derived independently from the intent):\n{_tests_code}\n\n" if _tests_code else "")
+            + f"[CURRENT FILE CONTENT]:\n{cur_full[:6000]}\n\n"
             f"Rewrite the complete file with the change applied. Keep the valid, working, non-destructive parts of the "
             f"existing structure intact; only make the requested improvement. Output ONLY the full file content "
             f"in a single ```{fence} fenced block. No commentary.")
@@ -869,8 +954,49 @@ def plan():
     except Exception:
         pass
 
+    # Spec-first verification: the intent-derived test suite executes against
+    # the chosen candidate in the sealed container. FAILED = one targeted
+    # repair pass; still failing = the plan is honestly discarded.
+    _tdd_out = ""
+    if _tests_code and _docker_engine():
+        try:
+            _tdd = _container_run_tests(tf, code, _tests_code)
+            _tdd_out = (_tdd.get("output") or "") + (("\n" + (_tdd.get("error") or "")) if _tdd.get("error") else "")
+            try:
+                MEM.record_event("tdd", f"{tf}: spec-first tests {_tdd.get('status')}", file=tf, result=_tdd.get("status"))
+            except Exception:
+                pass
+            log("planner", f"Spec-first TDD: {_tdd.get('status')}")
+            if _tdd.get("status") == "FAILED":
+                _fix = query_qw(
+                    "The candidate FAILED its specification tests. Fix it to pass ALL of them. "
+                    f"Change nothing unrelated.\n[TEST FAILURES]:\n{_tdd_out[:1500]}\n\n"
+                    f"[CURRENT CANDIDATE]:\n{code[:4000]}\n\n"
+                    "Output ONLY the full corrected file in a single ```python fenced block.")
+                _fixed = ext_code(_fix or "", ".py")
+                if _fixed and len(_fixed) > 30:
+                    _resF = sandbox(tf, _fixed)
+                    if _resF.get("status") == "SUCCESS":
+                        code = _fixed
+                        _tdd2 = _container_run_tests(tf, code, _tests_code)
+                        _tdd_out = (_tdd2.get("output") or "")
+                        try:
+                            MEM.record_event("tdd", f"{tf}: spec-first tests after targeted repair: {_tdd2.get('status')}", file=tf, result=_tdd2.get("status"))
+                        except Exception:
+                            pass
+                        log("planner", f"Spec-first TDD after repair: {_tdd2.get('status')}")
+        except Exception:
+            pass
+        if "ALL TESTS PASSED" not in _tdd_out:
+            log("planner", "Spec-first TDD unresolved - PLAN DISCARDED (honest rejection; no unverified write)")
+            try:
+                MEM.record_event("error", f"{tf} plan discarded: spec tests unresolved after repair", file=tf)
+            except Exception:
+                pass
+            return False
+
     # --- Phase 3: build the queue payload in Python (never ask a model for JSON)
-    payload = json.dumps({"target_file": tf, "task_intent": intent, "proposed_code": code, "minimal_diff": bool(_minimal), "critic_prediction": _prediction})
+    payload = json.dumps({"target_file": tf, "task_intent": intent, "proposed_code": code, "minimal_diff": bool(_minimal), "critic_prediction": _prediction, "tests_code": _tests_code})
     with open(Q, "w", encoding="utf-8") as f: f.write(payload)
     try: MEM.record_event("plan_decision", f"Chose {tf}: {intent[:120]} | brief: {brief[:120]}")
     except Exception: pass
@@ -1025,7 +1151,7 @@ def execution_loop():
             if not os.path.exists(Q) or os.path.getsize(Q) == 0: plan()
             else:
                 with open(Q, "r", encoding="utf-8") as f: d = json.load(f)
-                if d.get("target_file") and d.get("proposed_code"): log("loop", f"Running: {d['target_file']}"); heal(d["target_file"], d.get("task_intent", "Evolve"), d["proposed_code"], bool(d.get("minimal_diff", False)), d.get("critic_prediction"))
+                if d.get("target_file") and d.get("proposed_code"): log("loop", f"Running: {d['target_file']}"); heal(d["target_file"], d.get("task_intent", "Evolve"), d["proposed_code"], bool(d.get("minimal_diff", False)), d.get("critic_prediction"), d.get("tests_code"))
                 with open(Q, "w", encoding="utf-8") as f: f.write("")
             try:
                 if _HG: _HG.enforce_limits()   # self-RAM governor: gc flush on breach
