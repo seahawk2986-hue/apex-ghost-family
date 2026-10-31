@@ -132,6 +132,45 @@ def main():
                 trend = f"{'IMPROVING' if t > 0.02 else 'STAGNANT' if t > -0.02 else 'DECLINING'} ({_was:.2f} -> {_now:.2f})"
     except Exception:
         pass
+    # Agency round: pattern distillation + self-synthesized task DAG
+    try:
+        pat_out = {"patterns": []}
+        sr_path = os.path.join(R, "Config", "SkillRegistry.json")
+        if os.path.exists(sr_path):
+            sr = json.load(open(sr_path, encoding="utf-8-sig"))
+            for k, v in list(sr.items())[:14]:
+                if not isinstance(v, dict):
+                    continue
+                name = str(v.get("source", k))[:60]
+                intent = str(v.get("intent", ""))[:200]
+                pat_out["patterns"].append({"skill": name,
+                                            "best": v.get("best", "?"),
+                                            "summary": intent or ("certified pattern from " + name)})
+        with open(os.path.join(R, "Config", "Patterns.json"), "w", encoding="utf-8") as f:
+            json.dump(pat_out, f, indent=1)
+    except Exception:
+        pass
+    try:
+        import requests as _rq_ag
+        dag = None
+        ag_payload = {"model": "qwen3-8b", "messages": [
+            {"role": "system", "content": "Return ONLY strict JSON. Shape: an object with a tasks list of objects with keys title (str <=60), why (str <=120), est_minutes (int), capability_gain (str <=60). Produce exactly 3 self-improvement subtasks that make the agent better at its weakest area."},
+            {"role": "user", "content": "weakest dimension: " + str(weakest) + "; benchmark snapshot: " + json.dumps(bench)[:500] + "; propose 3 concrete self-driven subtasks."}],
+            "temperature": 0.2, "stream": False, "max_tokens": 400}
+        ag_r = _rq_ag.post("http://127.0.0.1:1234/v1/chat/completions", json=ag_payload, timeout=60)
+        if ag_r.status_code == 200:
+            ag_txt = (ag_r.json()["choices"][0]["message"]["content"] or "")
+            s0, e0 = ag_txt.find("{"), ag_txt.rfind("}")
+            if s0 >= 0 and e0 > s0:
+                dag = json.loads(ag_txt[s0:e0 + 1])
+        if isinstance(dag, dict) and dag.get("tasks"):
+            with open(os.path.join(R, "Config", "TaskDAG.json"), "w", encoding="utf-8") as f:
+                json.dump({"weakest": weakest,
+                           "created": time.strftime("%Y-%m-%d %H:%M"),
+                           "tasks": dag["tasks"][:3]}, f, indent=1, ensure_ascii=False)
+    except Exception:
+        pass
+
     # Security-ops round: supply-chain audit, backup rotation, disk pressure
     sec_ops = {}
     try:

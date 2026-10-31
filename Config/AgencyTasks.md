@@ -1,0 +1,60 @@
+# Apex Agency Framework — task ledger (Andrew directive, 2026-10-31)
+Six capability bullets → what Apex already does (measured) → upgrade shipped today →
+next-level items queued. Everything constrained to: 16GB/i5-10400F/RTX3050-8GB, local
+lanes, $0, HostGuard pacing, no host destabilization.
+
+## 1. Cross-Domain Generalization
+- NOW: transfer drill exists in the prompt library; skill registry stores certified
+  skills per file; episodic+semantic fusion retrieval.
+- SHIPPED TODAY: **pattern extraction** — nightly dream distills certified skills into
+  `Config/Patterns.json` (domain-agnostic summaries); the V2 engine retrieves patterns
+  relevant to a new task's objective and injects them as context ("applicable
+  patterns") so a coding-certified pattern can inform a non-coding task.
+- NEXT: pattern-level eval (transfer success rate as a benchmark dimension).
+
+## 2. Autonomous Task Synthesis
+- NOW: nightly dream picks weakest benchmark dimension; curriculum queue feeds drills.
+- SHIPPED TODAY: **self-synthesized task DAG** — the dream generates a prioritized
+  3-subtask plan (via the local model, JSON) from its own operational gaps, persists
+  `Config/TaskDAG.json`, and each session can execute the cheapest next sub-task.
+- NEXT: execute DAG fully autonomously inside the dream (within wall/budget caps).
+
+## 3. Dynamic Learning & Plasticity
+- NOW (honest wall): weights are frozen — "learning" today = episodic/semantic
+  consolidation + strategy memory + calibration grading; consolidation can forget.
+- SHIPPED TODAY: **anti-forgetting pinning** — consolidation refuses to prune episodes
+  referenced by certified skills or committed forecasts (pinned set).
+- NEXT (Andrew approval held): LoRA fine-tune on curated episodes (8GB-tight, offloaded
+  training) — true weight plasticity; queued as its own approved project.
+
+## 4. Metacognition & Self-Correction
+- NOW: finish-gate (withholds success claims after failing runs), self-reject on
+  failed specs, best-of-2 races, SAST vetoes, red-team drills, forecast calibration.
+- SHIPPED TODAY: **critic-verify loop in the V2 engine** — on finish after a passing
+  run, one extra model call cross-examines "does the final output satisfy the
+  objective?" → mismatch nags the model once, second mismatch = job honestly `failed`.
+- NEXT: adversarial self-play (best-of-N with critic scoring inside one budget).
+
+## 5. Abstract Reasoning & Spatial-Temporal Planning
+- NOW: forecast/parity doctrine; plan-then-act demanded in the coding system prompt;
+  reason drills in the library.
+- SHIPPED TODAY: **plan events are first-class** — the V2 engine's first accepted
+  action must be a plan (logged as a status event before any tool call), and the
+  driver/test asserts its presence; risk framing (anticipate-then-mitigate) added to
+  plan format.
+- NEXT: DAG plans spanning multiple sessions (ties to #2).
+
+## 6. Tool Synthesis & Environmental Manipulation
+- NOW: bounded built-in tools (files/exec/tests) in a disposable container; approved
+  external compute lanes (Groq/OpenRouter) for inference; no host tooling.
+- SHIPPED TODAY: **tool-synthesis hint loop** — on an unknown/unsupported action the
+  engine coaches the model to BUILD the missing capability as a workspace script and
+  run it (self-made tools live and die inside the disposable container).
+- NEXT: synthesized-tool reuse across a job via a tools/ convention; skill-capture of
+  a useful synthesized tool back into the registry (owner-reviewed).
+
+## Status
+- All "SHIPPED TODAY" items are implemented and compiled; engine items verified by a
+  live coding job asserting plan + verify events.
+- Honest walls documented: frozen weights (until LoRA approval), single-active-job,
+  local-lane latency on partial offload.

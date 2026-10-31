@@ -20,15 +20,17 @@
  "ApexPacing.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 1,
+  "attempts": 6,
   "successes": 1,
-  "streak": 1,
-  "ok_full": 1
+  "streak": 0,
+  "ok_full": 1,
+  "parity_total": 4,
+  "parity_hits": 4
  },
  "ApexInstaller.py": {
   "best": 0.0,
   "best_base": 0.0,
-  "attempts": 1,
+  "attempts": 2,
   "successes": 0,
   "streak": 0,
   "parity_total": 1,
@@ -37,11 +39,21 @@
  "test_reward.py": {
   "best": 0.0,
   "best_base": 0.0,
-  "attempts": 1,
+  "attempts": 2,
   "successes": 0,
-  "streak": 0
+  "streak": 0,
+  "parity_total": 1,
+  "parity_hits": 1
  },
  "TrainingCalc.py": {
+  "best": 103.0,
+  "best_base": 90.0,
+  "attempts": 3,
+  "successes": 1,
+  "streak": 0,
+  "ok_full": 1
+ },
+ "TrainingMinStack.py": {
   "best": 103.0,
   "best_base": 90.0,
   "attempts": 2,

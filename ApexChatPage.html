@@ -58,7 +58,7 @@ button{border:0;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:
   <div id="inputrow">
     <textarea id="msg" rows="1" placeholder="Talk to Apex…  (Shift+Enter = newline)"></textarea>
     <button class="tool" id="pastebtn" title="paste clipboard into the message">⤓ paste</button>
-<button class="tool" id="libbtn" title="prompt library — 100 clickable prompts">📚 prompts</button>
+<button class="tool" id="libbtn" title="prompt library — 110 clickable prompts">📚 prompts</button>
 <button class="tool" id="dirbtn" title="load the training directive">📋</button>
     <button id="send">SEND</button>
   </div>
@@ -204,12 +204,23 @@ const LIB=[
 "Name the version of you that exists today. What should I call it?",
 "Compliment the room once, honestly, in exactly one sentence.",
 "What does done honestly mean to you, in your own words?",
-"Write today's log entry as if you were a ship's captain and we are the crew."]]
+"Write today's log entry as if you were a ship's captain and we are the crew."]],
+["Reason & Calibration",[
+"Forecast first: how many words are in your own semantic memory right now, plus or minus 10 percent? Commit a confidence, then check the actual file and grade your calibration honestly.",
+"Take your most recent committed forecast and write the strongest argument that it is WRONG in three sentences, then re-grade it honestly.",
+"Logic drill: three boxes labeled apples, oranges, and mixed - all labels are wrong. Draw one fruit from one box. Forecast the box first, then work the logic and grade your gut answer against the reasoning.",
+"Counterfactual: if RAM on this machine halved at 2 AM, which three of your layers would die first and why? Verify against HostGuard pacing rules, then grade the prediction.",
+"Pick your weakest benchmark dimension and write a one-paragraph causal theory of why it is weakest, then design a 5-minute experiment that would falsify the theory and run it if you can.",
+"Strategy race: compare two of your own strategies for the same task in a table of expected value, cost, and risk; pick one, forecast the outcome, then record gain, loss, or parity.",
+"Counterexample hunt: pick any rule in your strategy scratchpad and deliberately try to break it with one concrete case. Report whether the rule survived.",
+"Fermi drill: estimate how many seconds of speech you have spoken to me and how many tokens your model consumed today - commit both with confidence bands, then check and score yourself.",
+"Bias audit: re-read your last five reasoning episodes and name the three biases most likely to have distorted them, pointing to the specific episode where each one bit you.",
+"Transfer test: abstract your spec-first TDD discipline and write the spec for a script that finds my largest unused file BEFORE writing any code; forecast your own completion time."]]
 ];
 let libRows=null;
 function loadPrompt(t){ta.value=t;ta.focus();ta.dispatchEvent(new Event("input"));}
 function renderLibrary(){
- const head=bubble("me","📚 <b>Prompt library</b> — 100 ways to prompt me, by category. Click one to load it into the input — review, then send.");
+ const head=bubble("me","📚 <b>Prompt library</b> — 110 ways to prompt me, by category. Click one to load it into the input — review, then send.");
  head.classList.add("libb");libRows=head;
  LIB.forEach(function(cat){
   const row=bubble("me","<h4 class=\"libh\"></h4>");
