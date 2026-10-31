@@ -14,6 +14,9 @@ Policy (user directive: one restraint = protect the machine):
 Also exposes can_use_local_models(): the room adapter consults this before
 touching LM Studio, so local inference is skipped entirely when the host is
 under strain - preventing the RAM-spill death spiral at the source.
+
+Note: ApexInstaller.py is a thin wrapper with no complex logic to optimize.
+Focus remains on ApexPacing for stability and pacing efficiency.
 """
 
 import json
