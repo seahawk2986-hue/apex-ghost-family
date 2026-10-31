@@ -1,1 +1,1 @@
-{"groq": {"count": 26, "errors": 18, "avg_s": 0.269}, "local": {"count": 9, "errors": 1, "avg_s": 5.914}, "openrouter": {"count": 1, "errors": 0, "avg_s": 1.458}}
+{"groq": {"count": 70, "errors": 42, "avg_s": 0.329}, "local": {"count": 22, "errors": 3, "avg_s": 4.777}, "openrouter": {"count": 2, "errors": 0, "avg_s": 2.632}}
