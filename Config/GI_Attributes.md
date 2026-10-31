@@ -57,8 +57,8 @@ Hardware envelope: Core i5-10400F / 16GB RAM / RTX 3050 8GB. All items fit in-bu
 ## 6. Safety & Governance
 | Attribute | Implementation | Evidence | Status |
 |---|---|---|---|
-| Action gating | Write gate: 100 score, no regression, no no-op, behavior parity | test_reward | DONE |
-| Resource governance | Pacing brakes 60-600s; install governor; forbidden actions | pacing.log | DONE |
+| Action gating | Write gate: 100 score, no regression, no no-op, behavior parity + eval/exec penalties + file-integrity manifest seals + boot tamper verification | test_reward 8/8, ApexGuard verify | DONE |
+| Resource governance | Pacing brakes 60-600s; install governor; forbidden actions + HardwareGovernor per-cycle | pacing.log | DONE |
 | Auditability | All decisions logged + episodic memory + live dashboard (GET 8080) + nightly dream report + git-backed evolution history (.env firewalled) + lane telemetry + log rotation | logs/, dream.log, .git, LaneStats.json | DONE |
 | Revocability | Stop/kill paths; rolling snapshot + git revert; one-command rollback; token revocation | ApexVersions.rollback, git checkout | DONE |
 
