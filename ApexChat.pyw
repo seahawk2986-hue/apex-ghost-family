@@ -61,8 +61,19 @@ class ApexChat:
 
         self.add("sys", "Private channel to Apex. He remembers this conversation. "
                         "Type 'remember this ...' to write a permanent lesson.")
+        threading.Thread(target=self._load_notes, daemon=True).start()
         self.win.after(120, self.pump)
         self.win.mainloop()
+
+    def _load_notes(self):
+        """Apex's overnight dream notes greet you first."""
+        try:
+            with urllib.request.urlopen("http://127.0.0.1:8080/notes", timeout=10) as r:
+                data = json.loads(r.read().decode("utf-8"))
+            for n in (data.get("notes") or [])[-1:]:
+                self.q.put(("sys", f"[{n.get('ts')}] APEX (overnight dream): {n.get('note', '')[:200]}"))
+        except Exception:
+            pass
 
     def add(self, tag, text):
         self.log.configure(state="normal")

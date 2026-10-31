@@ -1,0 +1,53 @@
+{
+ "ts": "2026-10-31 01:58:22",
+ "ledger": {
+  "ApexIPCEngine.py": {
+   "best": 103.0,
+   "best_base": 90.0,
+   "attempts": 1,
+   "successes": 1,
+   "streak": 1,
+   "parity_total": 2,
+   "parity_hits": 2
+  }
+ },
+ "layer_registry": {
+  "evolution": {
+   "pid": 33288,
+   "started": "2026-10-31 01:57:51"
+  }
+ },
+ "skill_registry": {
+  "ApexIPCEngine.py@20261031_015006": {
+   "source": "ApexIPCEngine.py",
+   "intent": "Historical certified evolution (best 103)",
+   "reward": 103.0,
+   "best": 103.0,
+   "ts": "2026-10-31 01:50:06"
+  }
+ },
+ "semantic_records": 39,
+ "benchmark": {
+  "ts": "2026-10-31 01:58:21",
+  "security": 1.0,
+  "memory_recall_hit": 1.0,
+  "memory_latency_s": 0.22,
+  "learning_mean_best": 1.03,
+  "certified_files": 1,
+  "reasoning_calibration": 1.0,
+  "supervision_ok": 1.0,
+  "supervision_latency_s": 0.23,
+  "lane_latency_s": 0.22,
+  "lane_ok": 1.0,
+  "weakest_dimension": "security",
+  "weakest_score": 1.0,
+  "dimensions": {
+   "security": 1.0,
+   "memory": 1.0,
+   "learning": 1.03,
+   "reasoning": 1.0,
+   "supervision": 1.0,
+   "lanes": 1.0
+  }
+ }
+}

@@ -4,6 +4,8 @@
   "best_base": 90.0,
   "attempts": 1,
   "successes": 1,
-  "streak": 1
+  "streak": 1,
+  "parity_total": 2,
+  "parity_hits": 2
  }
 }

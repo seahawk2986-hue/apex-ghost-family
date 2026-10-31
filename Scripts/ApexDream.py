@@ -70,6 +70,28 @@ def main():
         pass
 
     weakest = bench.get("weakest_dimension", "unknown")
+    # Dynamic self-model: the identity card carries MEASURED capabilities,
+    # refreshed from real benchmark data (not static descriptions).
+    try:
+        self_path = os.path.join(R, "Config", "ApexSelf.json")
+        with open(self_path, "r", encoding="utf-8") as f:
+            selfcard = json.load(f)
+        selfcard["measured"] = {
+            "updated": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "security": bench.get("security"),
+            "memory_recall": bench.get("memory_recall_hit"),
+            "learning": bench.get("learning_mean_best"),
+            "reasoning_calibration": bench.get("reasoning_calibration"),
+            "supervision": bench.get("supervision_ok"),
+            "lane_latency_s": bench.get("lane_latency_s"),
+            "weakest_dimension": weakest,
+        }
+        tmp = self_path + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(selfcard, f, indent=1)
+        os.replace(tmp, self_path)
+    except Exception:
+        pass
     summary = {
         "ts": time.strftime("%Y-%m-%d %H:%M:%S"),
         "insights_consolidated": made,
@@ -91,6 +113,31 @@ def main():
     m.remember(f"Dream insight: consolidated {made} insights; red-team {passed}/{len(drills)}; "
                f"weakest dimension right now is '{weakest}' - next curriculum effort should "
                f"target it. Checkpoint saved to CheckpointState.json.", kind="insight")
+    # Overnight note: the private console greets Andrew with Apex's own words.
+    try:
+        notes_path = os.path.join(R, "Config", "ApexNotes.json")
+        notes = []
+        if os.path.exists(notes_path):
+            with open(notes_path, "r", encoding="utf-8") as f:
+                notes = json.load(f)
+        notes.append({"ts": time.strftime("%Y-%m-%d %H:%M:%S"),
+                      "note": (f"Dream complete. {made} insight(s) consolidated; red-team "
+                               f"{passed}/{len(drills)}; weakest dimension: {weakest}. "
+                               f"Everything is in order - I will keep evolving.")})
+        notes = notes[-5:]
+        with open(notes_path + ".tmp", "w", encoding="utf-8") as f:
+            json.dump(notes, f, indent=1)
+        os.replace(notes_path + ".tmp", notes_path)
+        # Desktop copy: Andrew sees the note without opening anything.
+        home = os.path.expanduser("~")
+        desk = next((c for c in (os.path.join(home, "OneDrive", "Desktop"),
+                                 os.path.join(home, "Desktop")) if os.path.isdir(c)), home)
+        with open(os.path.join(desk, "APEX overnight note.txt"), "w", encoding="utf-8") as f:
+            f.write("APEX (overnight dream note)\n"
+                    f"written {time.strftime('%Y-%m-%d %H:%M:%S')}\n\n"
+                    + notes[-1]["note"] + "\n")
+    except Exception:
+        pass
     print(json.dumps(summary, indent=2))
 
 

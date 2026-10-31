@@ -10,7 +10,8 @@ Hardware envelope: Core i5-10400F / 16GB RAM / RTX 3050 8GB. All items fit in-bu
 | Attribute | Implementation | Evidence | Status |
 |---|---|---|---|
 | Persona | Stable name, purpose | room adapter identity, self card | DONE |
-| Self-model | `Config/ApexSelf.json` read by planner every cycle | planner prompt includes card | DONE |
+| Self-model | `Config/ApexSelf.json` — DYNAMIC: "measured" capability block refreshed nightly from real benchmark data (security/memory/learning/calibration/supervision scores + weakest dimension) | ApexSelf.json "measured" | DONE |
+| Perception | Logs, ports, telemetry, peer directives + NEW-FILE DIFFING (notices environment changes incl. its own creations, feeds planner) | planner perception events | DONE |
 | Core values | Honesty protocol + HostGuard restraint in semantic memory | `memory_semantic.jsonl` rules | DONE |
 
 ## 2. Architecture
@@ -18,8 +19,8 @@ Hardware envelope: Core i5-10400F / 16GB RAM / RTX 3050 8GB. All items fit in-bu
 |---|---|---|---|
 | Perception | Logs, memory streams, ports, telemetry, peer directives | watchdog log, adapter /chat | DONE |
 | World model | Sandbox pre-verification; per-file ledger; behavior-change calibration (predicted vs actual) tracked per strategy | RewardLedger calibration counters | RUNNING |
-| Memory | Tier 1/2/3 (working/episodic/semantic) + consolidation + decay + dedup | ApexMemory v2, 14+ records | DONE |
-| Reasoning engine | Hybrid: DeepSeek-thinks, Qwen-codes, nomic-embeds | logs: plan->code->verify chain | DONE |
+| Memory | Tier 1/2/3 (working/episodic/semantic) + consolidation + decay + dedup + hybrid fusion retrieval | ApexMemory v2, 6/6 tests | DONE |
+| Reasoning engine | Hybrid: DeepSeek-thinks, Qwen-codes, nomic-embeds + self-consistency voting + Socratic interrogation + critic pass + Best-of-2 sandbox races | logs: votes/thinking/critique chain | DONE |
 | Planning | plan() -> queue -> heal (3 repair trajectories) | planner.log locked targets | DONE |
 | Tool use | winget, process supervisor, Docker, HTTP, model APIs | ApexInstaller, adapter | DONE |
 | Execution isolation | Disposable Docker containers, network-isolated | adapter sandbox path | PENDING WSL2 |
@@ -29,6 +30,7 @@ Hardware envelope: Core i5-10400F / 16GB RAM / RTX 3050 8GB. All items fit in-bu
 |---|---|---|---|
 | Learning | Multi-dim reward (syntax/safety/runtime/output-proof/progress), ledger bests, streak bonuses | RewardLedger + test_reward 7/7 | DONE |
 | Reflection | Reflexion pre-brief assembled from recent events each cycle | plan() prompt | DONE |
+| Critical thinking | Socratic interrogation before coding: assumptions surfaced, pre-mortem -> coder guards, falsifiers stated, verdicts enforced (proceed/shrink/abort with self-rejection) | ApexThink smoke test (4 unvalidated assumptions flagged on own success streak) | DONE |
 | Metacognition | Honest degradation doctrine; never invents results; ensemble disagreement -> conservative coding | adapter "UNEXECUTED" path; ensemble line | DONE |
 | Uncertainty | Skip-over unavailable engines; partial replies labeled partial; research notes labeled UNVERIFIED | hook engine chain + ApexResearch | DONE |
 | Exploration/exploitation | Bandit-style neglected-file prior + reward-maximizing choice + self-issued curriculum | planner prompt + ApexSkills.curriculum | DONE |
