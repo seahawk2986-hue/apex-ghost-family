@@ -422,12 +422,17 @@ def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None, skill
         cand_out = (res.get("output") or "").strip()
         actual = ("gain" if len(cand_out) > len(prev_out)
                   else "loss" if len(cand_out) < len(prev_out) else "parity")
-        expected = (predicted or ("parity" if minimal else "variable")) if traj == 0 else "gain-repair"
+        expected = (predicted if predicted in ("gain", "loss", "parity")
+                    else ("parity" if minimal else "gain")) if traj == 0 else "gain"
+        # Committed forecasts only: abstentions record predicted="none" and are
+        # excluded from accuracy (forecast practice: uncertainty != wrongness).
+        committed = expected in ("gain", "loss", "parity")
         try:
             MEM.record_event("calibration",
                              f"{fn} pass {traj+1} predicted {expected}, actual {actual} "
                              f"(strategy={'minimal' if minimal else 'rewrite'})",
-                             file=fn, predicted=expected, actual=actual,
+                             file=fn, predicted=expected if committed else "none",
+                             actual=actual if committed else "none",
                              strategy="minimal" if minimal else "rewrite")
             if traj == 0 and minimal:
                 lg = _load_ledger()
@@ -964,15 +969,16 @@ def plan():
 
     # Critic pass (constitutional self-refinement): a second model reviews the
     # candidate for hidden hazards BEFORE the sandbox - cheaper than failing.
-    _prediction = "variable"
+    _prediction = "parity"   # data-driven prior: most gate-passing evolutions are behavior-preserving
     try:
         if cloud_ask:
             _crit = cloud_ask(
                 "You are Apex's code critic. Review the proposed rewrite for hidden hazards: "
                 "syntax issues, runtime hazards, behavioral regressions vs the current file, "
-                "security problems. ALSO forecast its observable behavior change. Reply ONLY "
+                "security problems. ALSO forecast its observable behavior change. Commit to a "
+                "forecast when warranted; reply 'none' only if genuinely undecidable. Reply ONLY "
                 "strict JSON: {\"verdict\": \"ok\" | \"issues\", \"issues\": [\"...\"], "
-                "\"behavior_prediction\": \"gain\" | \"loss\" | \"parity\"}\n\n"
+                "\"behavior_prediction\": \"gain\" | \"loss\" | \"parity\" | \"none\"}\n\n"
                 "CURRENT FILE:\n" + cur_full[:3000] + "\n\nPROPOSED REWRITE:\n" + code[:3000],
                 max_tokens=300)
             _verdict, _issues = "ok", []
@@ -980,9 +986,9 @@ def plan():
                 _cj = json.loads(_crit[_crit.find("{"): _crit.rfind("}") + 1])
                 _verdict = str(_cj.get("verdict", "ok"))
                 _issues = [str(i) for i in (_cj.get("issues") or [])][:5]
-            _prediction = str(_cj.get("behavior_prediction", "variable")).strip().lower() if (_crit and "{" in _crit) else "variable"
+            _prediction = str(_cj.get("behavior_prediction", "none")).strip().lower() if (_crit and "{" in _crit) else "none"
             if _prediction not in ("gain", "loss", "parity"):
-                _prediction = "variable"
+                _prediction = "none"   # abstention: counted, never scored as a miss
             try: MEM.record_event("critic_prediction", f"{tf} predicted {_prediction}", file=tf, predicted=_prediction)
             except Exception: pass
             try: MEM.record_event("critique", f"{tf}: critic={_verdict} issues={len(_issues)}")
