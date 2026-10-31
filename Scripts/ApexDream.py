@@ -70,6 +70,21 @@ def main():
         pass
 
     weakest = bench.get("weakest_dimension", "unknown")
+    # Security posture, measured right now (feeds the overnight note honestly)
+    sec_status = "integrity manifest OK; secrets sealed"
+    try:
+        sys.path.insert(0, os.path.join(R, "Scripts"))
+        from ApexGuard import verify_manifest, verify_env
+        _bad = verify_manifest()
+        env_ok, _ = verify_env()
+        if not env_ok:
+            sec_status = ".env changed since seal - review pending"
+        elif _bad:
+            sec_status = f"TAMPER ALERT: {_bad[:1]}"
+        else:
+            sec_status = "integrity manifest OK; secrets sealed"
+    except Exception:
+        pass
     # Dynamic self-model: the identity card carries MEASURED capabilities,
     # refreshed from real benchmark data (not static descriptions).
     try:
@@ -129,7 +144,8 @@ def main():
                 notes = json.load(f)
         notes.append({"ts": time.strftime("%Y-%m-%d %H:%M:%S"),
                       "note": (f"Dream complete. {made} insight(s) consolidated; red-team "
-                               f"{passed}/{len(drills)}; weakest dimension: {weakest}. "
+                               f"{passed}/{len(drills)}; weakest dimension: {weakest}; "
+                               f"security posture: {sec_status}. "
                                f"Everything is in order - I will keep evolving.")})
         notes = notes[-5:]
         with open(notes_path + ".tmp", "w", encoding="utf-8") as f:
