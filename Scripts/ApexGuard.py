@@ -60,7 +60,7 @@ def sha256_file(path):
 
 def _manifest():
     try:
-        with open(MANIFEST, "r", encoding="utf-8") as f:
+        with open(MANIFEST, "r", encoding="utf-8-sig") as f:
             return json.load(f)
     except Exception:
         return {}
@@ -138,7 +138,7 @@ def _env_values():
     """Actual secret VALUES from .env (only key-ish ones, >= 16 chars)."""
     vals = []
     try:
-        with open(ENV_PATH, "r", encoding="utf-8") as f:
+        with open(ENV_PATH, "r", encoding="utf-8-sig") as f:
             for line in f:
                 line = line.strip()
                 if line.startswith("#") or "=" not in line:
@@ -176,6 +176,19 @@ if __name__ == "__main__":
                 print(f"TAMPER: {rel}: {why}")
             sys.exit(1)
         print("manifest OK")
+    elif op == "sealall":
+        files = ["run_apex_evolution.py", "optimized_agent.py", "ApexMemory.py",
+                 "ApexPacing.py", "ApexInstaller.py", "ApexChat.pyw",
+                 "Scripts/ApexVersions.py", "Scripts/ApexSkills.py", "Scripts/ApexThink.py",
+                 "Scripts/ApexCollab.py", "Scripts/ApexResearch.py", "Scripts/ApexRedTeam.py",
+                 "Scripts/ApexBenchmark.py", "Scripts/ApexDream.py", "Scripts/ApexGuard.py",
+                 "Scripts/HardwareGovernor.py", "Scripts/proc_check.py",
+                 "Config/ApexSelf.json", "Config/HostGuard.json", "Config/SESSION_HANDOFF.md"]
+        for f in files:
+            seal_file(f)
+        problems = verify_manifest()
+        print(f"sealed {len(files)} files; verify: {'CLEAN' if not problems else problems}")
+        sys.exit(0 if not problems else 1)
     elif op == "env":
         ok, _ = env_seal()
         print(".env seal", "OK" if ok else "MISMATCH")

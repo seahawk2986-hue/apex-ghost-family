@@ -123,7 +123,7 @@ def _shell_destructive(node):
 
 def _load_ledger():
     try:
-        with open(LEDGER, "r", encoding="utf-8") as f: return json.load(f)
+        with open(LEDGER, "r", encoding="utf-8-sig") as f: return json.load(f)
     except Exception: return {}
 
 def _save_ledger(lg):
@@ -426,6 +426,24 @@ def plan():
             selfcard = f.read()[:900]
     except Exception:
         pass
+    # Interconnection: certified skill library -> planner awareness.
+    skills_line = ""
+    try:
+        with open(os.path.join(R, "Config", "SkillRegistry.json"), "r", encoding="utf-8") as f:
+            sk = json.load(f)
+        _names = sorted(sk.keys(), reverse=True)[:3]
+        skills_line = f"{len(sk)} certified skill(s); latest: {', '.join(_names)}" if sk else "none yet"
+    except Exception:
+        skills_line = "none yet"
+    # Interconnection: research cache -> planner awareness.
+    research_line = ""
+    try:
+        with open(os.path.join(R, "Config", "ResearchCache.json"), "r", encoding="utf-8") as f:
+            rc = json.load(f)
+        if rc:
+            research_line = f"{len(rc)} cached research note(s) on file for: {', '.join(list(rc.keys())[-3:])}"
+    except Exception:
+        research_line = ""
     # --- Phase 1: DeepSeek-R1 THINKS (planning only, no code) -----------------
     o = query_ds(f"You are Apex automation head. Choose ONE file from [{', '.join(all_f)}] to optimize.\n"
                 f"Recent reward history:\n{hist}\n"
@@ -435,6 +453,8 @@ def plan():
                 f"Reflection on recent cycles:\n{reflect}\n"
                 f"Self-model (identity, engines, limits):\n{selfcard}\n"
                 f"Self-issued curriculum (proposed objectives):\n{curric}\n"
+                f"Certified skill library:\n{skills_line}\n"
+                f"Reference notes on file (research cache):\n{research_line}\n"
                 f"Working strategy from last cycle:\n{strat}\n"
                 "Rules: do NOT target core modules, do NOT propose destructive code.\n"
                 "Return ONLY strict JSON (no code, no explanation): {\n  \"target_file\": \"filename.ext\",\n  \"task_intent\": \"one-sentence goal\",\n  \"change_brief\": \"2-3 sentences on the exact change to make\"\n}")
@@ -611,6 +631,29 @@ def plan():
                    + [f"re-check: {g}" for g in (_think.get("falsifiers") or [])[:3]])
     _guard_line = ("CRITICAL-THINKING GUARDS (must not violate): " + "; ".join(_guards)) if _guards else ""
 
+    # Skill library retrieval: inject the most relevant CERTIFIED implementation
+    # as a reference pattern for the coder (skill-reuse loop).
+    _skill_ref = ""
+    try:
+        sys.path.insert(0, os.path.join(R, "Scripts"))
+        from ApexSkills import find_relevant as _fr, mark_used as _mu
+        _sk = _fr(f"{intent} {brief}")
+        if _sk:
+            _sp = os.path.join(R, _sk["source"])
+            if os.path.exists(_sp):
+                with open(_sp, "r", encoding="utf-8") as f:
+                    _src = f.read()[:3000]
+                _skill_ref = (f"CERTIFIED SKILL REFERENCE (a previoiusly VERIFIED implementation "
+                              f"of similar work in {_sk['source']}):\n{_src}")
+                _mu(_sk["skill_id"])
+                try:
+                    MEM.record_event("skill_used", f"{_sk['skill_id']} injected (sim {_sk['similarity']})",
+                                     skill=_sk["skill_id"])
+                except Exception:
+                    pass
+    except Exception:
+        _skill_ref = ""
+
     # --- Phase 2: Qwen2.5-coder EDITS (minimal-diff first, full-file fallback) -
     log("planner", f"Locked onto: {tf}. DeepSeek plan: {brief[:120]}")
     try:
@@ -628,6 +671,7 @@ def plan():
         f"Second-opinion check: {(_ensemble or 'none')}\n"
         f"{_guard_line}\n"
         f"Conservative mode: {('YES - smallest possible change; assume unvalidated assumptions are false' if _shrink else 'no')}\n\n"
+        f"{_skill_ref}\n\n"
         f"[CURRENT FILE CONTENT]:\n{cur_full[:6000]}\n\n"
         "Output ONLY one or more edit blocks in exactly this format (no fences, no commentary):\n"
         "<<<<<<< SEARCH\n<exact lines to find in the file>\n=======\n<replacement lines>\n>>>>>>> REPLACE\n"
