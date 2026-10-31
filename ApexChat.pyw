@@ -17,6 +17,16 @@ from tkinter.scrolledtext import ScrolledText
 API = "http://127.0.0.1:8080/talk/api"
 BG, FG, YOU, SYS, INPUT = "#0d1117", "#7ee787", "#58a6ff", "#8b949e", "#161b22"
 
+TRAINING_DIRECTIVE = (
+    "Apex, tonight you proved your reasoning is your weakest measured dimension - "
+    "and I want that fixed properly. I'm not asking for a verbal promise: run your "
+    "forecast gym on the hard half of the pool, log every prediction into calibration, "
+    "write lessons for every miss, and show me your accuracy on the dashboard reasoning "
+    "panel. Train your thinking the way you train your code: spec first, evidence after, "
+    "honest numbers only. Also review your own Socratic verdicts - I want your shrink "
+    "decisions justified in your own words, not rubber-stamped."
+)
+
 
 def now():
     import time
@@ -55,6 +65,9 @@ class ApexChat:
         tk.Button(row, text="SEND", command=self.send, bg="#238636", fg="white",
                   relief="flat", padx=16, activebackground="#2ea043",
                   font=("Consolas", 10, "bold")).pack(side="left", padx=(8, 0))
+        tk.Button(row, text="📋 directive", command=self.load_directive,
+                  bg="#30363d", fg="#e6edf3", relief="flat", padx=10,
+                  activebackground="#484f58").pack(side="left", padx=(6, 0))
         self.show_mem = tk.BooleanVar(value=True)
         tk.Checkbutton(row, text="recalled memory", variable=self.show_mem, bg=BG, fg=SYS,
                        selectcolor=INPUT, activebackground=BG, relief="flat").pack(side="left", padx=(10, 0))
@@ -81,6 +94,12 @@ class ApexChat:
         self.log.insert("end", text + "\n\n", (tag,))
         self.log.see("end")
         self.log.configure(state="disabled")
+
+    def load_directive(self):
+        """Drop the training directive into the input box, ready to send."""
+        self.entry.delete(0, "end")
+        self.entry.insert(0, TRAINING_DIRECTIVE)
+        self.entry.focus()
 
     def send(self):
         t = self.entry.get().strip()
