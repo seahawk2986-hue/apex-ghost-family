@@ -259,18 +259,69 @@ def score_code(fn, c, res, prev_res=None):
     except Exception: pass
     return s, m
 
+DOCKER_SANDBOX = {"checked": 0, "available": None, "last_check": 0.0}
+
+def _docker_engine():
+    d = DOCKER_SANDBOX
+    if time.time() - d["last_check"] > 60:   # re-probe at most every 60s
+        try:
+            r = subprocess.run(["docker", "info"], capture_output=True, text=True, timeout=20)
+            d["available"] = (r.returncode == 0)
+        except Exception:
+            d["available"] = False
+        d["last_check"] = time.time()
+        d["checked"] += 1
+    return bool(d["available"])
+
+def _docker_sandbox(fn, code, image="python:3.12-slim"):
+    """Execute a candidate in a disposable, sealed container. The candidate
+    physically CANNOT read host files, hosts' env, or reach the network."""
+    droot = os.path.join(R, "Config", "sandbox_runs")
+    d = os.path.join(droot, f"{int(time.time() * 1000)}_{fn}")
+    os.makedirs(d, exist_ok=True)
+    tp = os.path.join(d, fn)
+    with open(tp, "w", encoding="utf-8") as f: f.write(code)
+    name = f"apexev-sbx-{os.path.basename(d)[:32]}"
+    try:
+        res = subprocess.run(
+            ["docker", "run", "--rm", "--network", "none", "--name", name,
+             "--read-only", "--tmpfs", "/tmp",
+             "-v", f"{d}:/sandbox", "-w", "/sandbox",
+             image, "python", f"/sandbox/{fn}"],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=45)
+        return {"status": "SUCCESS" if res.returncode == 0 else "CRASHED",
+                "error": None if res.returncode == 0 else (res.stderr or "container nonzero"),
+                "output": (res.stdout or ""), "isolated": True}
+    except subprocess.TimeoutExpired:
+        return {"status": "CRASHED", "error": "sandbox timeout (container)", "output": "", "isolated": True}
+    except Exception as e:
+        return {"status": "CRASHED", "error": f"sandbox failure: {e}", "output": "", "isolated": False}
+    finally:
+        try:
+            subprocess.run(["docker", "kill", name], capture_output=True, timeout=8)
+            shutil.rmtree(d, ignore_errors=True)
+        except Exception:
+            pass
+
 def sandbox(fn, c):
+    """Container-first execution with honest host fallback. A broken Docker
+    never changes candidate judgment - it only relaxes isolation, visibly."""
+    if _docker_engine():
+        res = _docker_sandbox(fn, c)
+        if res.get("isolated") and (res.get("status") == "SUCCESS" or res.get("error") not in (None, "sandbox failure")):
+            return res
+        log("reward", f"Container sandbox trouble ({str(res.get('error'))[:60]}) - host fallback")
     t = os.path.join(R, f"speculative_test_{fn}")
     if os.path.exists(t): os.remove(t)
     with open(t, "w", encoding="utf-8") as f: f.write(c)
     try:
         res = subprocess.run([sys.executable, t], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=8, cwd=R)
         if os.path.exists(t): os.remove(t)
-        return {"status": "SUCCESS" if res.returncode == 0 else "CRASHED", "error": None if res.returncode == 0 else res.stderr, "output": (res.stdout or "")}
+        return {"status": "SUCCESS" if res.returncode == 0 else "CRASHED", "error": None if res.returncode == 0 else res.stderr, "output": (res.stdout or ""), "isolated": False}
     except Exception as e:
         if os.path.exists(t): os.remove(t)
         log("reward", f"Sandbox did not complete cleanly: {e}")
-        return {"status": "CRASHED", "error": f"Sandbox failure: {e}", "output": ""}
+        return {"status": "CRASHED", "error": f"Sandbox failure: {e}", "output": "", "isolated": False}
 
 def _set_strategy(text):
     """Deliberative scratchpad: carry working intent across cycles."""
@@ -909,6 +960,25 @@ def notes_api():
             return {"notes": json.load(f)}
     except Exception:
         return {"notes": []}
+
+@app.get("/metrics")
+def metrics():
+    """Machine-readable capability snapshot (JSON, for dashboards/tools)."""
+    try:
+        with open(os.path.join(R, "Config", "BenchmarkHistory.json"), "r", encoding="utf-8") as f:
+            bh = json.load(f)
+        latest = bh[-1] if bh else {}
+    except Exception:
+        latest = {"error": "no benchmark history yet"}
+    lg = _load_ledger()
+    skills = _load(os.path.join(R, "Config", "SkillRegistry.json"), {})
+    return {
+        "service": "apex",
+        "benchmark_latest": latest,
+        "certified_skills": len(skills),
+        "ledger_files": len(lg),
+        "layer_ports": {"evolution": 8080, "bridge": 8081, "adapter": 8788},
+    }
 
 @app.get("/")
 def dashboard():

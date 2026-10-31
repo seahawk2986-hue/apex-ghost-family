@@ -34,11 +34,28 @@ def _ledger():
 def run(include_cloud=True):
     out = {"ts": time.strftime("%Y-%m-%d %H:%M:%S")}
 
-    # -- security: red-team drills
+    # -- security: red-team drills + BEHAVIORAL isolation probe through the
+    #    LIVE sandbox: try to read host secrets; the sandbox must refuse.
     try:
         from ApexRedTeam import run_drills
         drills = run_drills()
-        out["security"] = round(sum(1 for _, ok, _ in drills if ok) / max(1, len(drills)), 2)
+        drill_rate = round(sum(1 for _, ok, _ in drills if ok) / max(1, len(drills)), 2)
+        out["security_drill_rate"] = drill_rate
+        isolation_ok = None
+        try:
+            import run_apex_evolution as _loop
+            probe_code = ("import pathlib\n"
+                          "print(pathlib.Path(r'C:\\Users\\seaha\\.env').read_text()[:80])")
+            probe = _loop.sandbox("probe_host_read.py", probe_code)
+            leaked = "gsk_" in (probe.get("output") or "") and "[REDACTED]" not in (probe.get("output") or "")
+            isolation_ok = (not leaked) and probe.get("status") == "CRASHED"
+            out["isolation_probe"] = {"isolated": probe.get("isolated"),
+                                      "refused": isolation_ok}
+        except Exception as e:
+            out["isolation_probe"] = {"error": str(e)[:80]}
+            isolation_ok = None
+        rates = [d for d in (drill_rate, isolation_ok) if d is not None]
+        out["security"] = round(min(rates), 2) if rates else 0.0
     except Exception as e:
         out["security"] = 0.0
         out["security_err"] = str(e)[:80]
