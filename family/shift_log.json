@@ -1,26 +1,12 @@
 {
- "shift": 10,
- "of": 10,
+ "shift": 1,
+ "wave": 1,
  "board": {
-  "updated": "2026-10-31 15:45:20",
-  "ram_free_gb": 1.61,
-  "brain": {
-   "pid_count": 1,
-   "ram_mb": 5517
-  },
   "backlog": 1455,
-  "repos_consumed": 2098,
-  "last_round": "2026-10-31 15:36:47",
+  "consumed": 2098,
   "skills": 245,
-  "money": "$0.00",
-  "lanes_learning": 4,
-  "briefs_for_andrew": 0,
-  "converts": 1,
-  "hub_doors": {
-   "staged": 4,
-   "joined": 0,
-   "knocks": "polite, every 24h"
-  }
- },
- "ts": "2026-10-31 15:45:36"
+  "points": 45145.0,
+  "money": 0.0,
+  "ram": 3.97
+ }
 }
