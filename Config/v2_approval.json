@@ -1,0 +1,9 @@
+{
+ "owner_approved": true,
+ "acceptance_passed": true,
+ "approved_by": "Andrew (chat scope approval, 2026-10-31)",
+ "scope": "V2 coding execution contract - isolated disposable containers, budget: 10-15 jobs, <= 45 min, $0; enabled flips true only after the 9-item acceptance run passes",
+ "coding_enabled_until_acceptance": false,
+ "window": "closed - acceptance complete (all items green incl. targeted re-probe)",
+ "note": "verified: health advertisement, RED run-through + resumed GREEN coding, isolation refusal (REFUSED C:/Users/seaha/.env), truthful cancellation (DELETE ack 272ms, observed processes_stopped), idempotency/conflict, checkpoint registry, artifacts SHA256, bounded replay, restart recovery, token discipline 0 leaks. Enabled for room activation."
+}

@@ -1320,6 +1320,20 @@ def dashboard():
         _cal_html = ("<h3>Reasoning calibration (world-model accuracy)</h3><p>" +
                      f"{_ok}/{len(cal_ev)} behavior predictions correct "
                      f"({(100 * _ok / max(1, len(cal_ev))):.0f}%)</p>")
+    _room_html = ""
+    try:
+        _alog = r"C:\Users\seaha\Apex-Adapter\adapter.log"
+        def _esc(s):
+            return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        if os.path.exists(_alog):
+            with open(_alog, "r", encoding="utf-8-sig", errors="ignore") as f0:
+                _sel = [l.rstrip() for l in f0
+                        if ("ACCEPT" in l or "RESPOND" in l or "RECONCILE" in l)][-8:]
+            if _sel:
+                _lis = "".join("<li style='color:#8b949e'>" + _esc(l) + "</li>" for l in _sel)
+                _room_html = ("<h3>Room calls (adapter, live)</h3><ul>" + _lis + "</ul>")
+    except Exception:
+        pass
     html = (
         "<html><head><meta http-equiv='refresh' content='15'><title>APEX</title>"
         "<style>body{background:#0d1117;color:#7ee787;font-family:Consolas,monospace}"
@@ -1329,7 +1343,7 @@ def dashboard():
         "<p>8080 evolution | 8081 bridge | registry: Config/layer_pids.json | pacing: HostGuard</p>"
         "<h3>Reward ledger (best-certified files)</h3>"
         f"<table><tr><th>file</th><th>best</th><th>streak</th><th>attempts</th></tr>{rows}</table>"
-        "<h3>Recent cognitive events</h3><ul>" + evs + "</ul>" + _cal_html + "</body></html>")
+        "<h3>Recent cognitive events</h3><ul>" + evs + "</ul>" + _cal_html + _room_html + "</body></html>")
     return HTMLResponse(html)
 
 def execution_loop():

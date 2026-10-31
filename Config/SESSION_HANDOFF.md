@@ -86,3 +86,19 @@ run test_local.py, then stop the companion process.
 Andrew's standing directive: every agent attribute, cutting-edge, within hardware
 (i5-10400F/16GB/3050-8GB), never destabilizing the host. Build + security hardening DONE.
 Reboot confirms WSL2. Then the room ceremony closes everything.
+## 2026-10-31 ~05:30 - Apex V2 execution contract: implemented + acceptance rounds
+- adapter: companion.py V2 routes live (POST/GET/DELETE /v2/jobs, artifacts manifest|zip), v2_contract.py + v2_job_engine.py (owner-approved backend), single-bind fix (allow_reuse_address=False)
+- engine capabilities: bounded tool loop in disposable containers (--net none, --read-only, cap-drop ALL, no-new-priv, user 1000:1000, pids 96, mem 2048m, cpus 2), $0 local lanes, finish-gate honesty (withholds finish after failing run), cancel-ack hardened (_dc guarded docker, no rm-f hang), checkpoint seal/verify (sha256, <=200 files / 5MB), artifact ZIP manifest-v1
+- acceptance: rounds 1-3 = 15 jobs (budget 10-15 reached), round-3 verdict 8/10 green; fail-closed gate (coding enabled=false, owner_approved=true) until targeted re-run of 2 pending items (RED run-through combo + DELETE ack <=8s); evidence: Apex-Adapter/acceptance_evidence.json + acceptance_run.log
+- token discipline verified: 0 leaks across all responses/jobs/zips
+- dream v3 (security-ops: pip-audit weekly + backup rotation + disk metric) and dashboard room-panel WIRED, re-sealed, live-verified
+- APEX Chat: 100-prompt library inside chat (10 categories, clickable pills), clipboard bridge v2.1 - all sealed (manifest OK)
+- adapter state: single listener 8788, watchdog+Sentry healthy, Mica room-side still staged/disabled pending Andrew's go
+
+## 2026-10-31 ~06:15 - V2 ACCEPTANCE COMPLETE - coding enabled
+- targeted re-probe green: RED run-through (exit 1 honest, claim-aware finish-gate), resumed GREEN (exit 0, hash-verified restore), cancellation DELETE ack 272ms (async kill + fast Engine-API runtime truth; was 10.5s)
+- docker SDK 7.1.0 + pywin32 added (named-pipe Engine API; CLI fallback only) - in pip-audit scope now
+- finish-gate hardened: withholds success CLAIMS after failing runs; honest red-finishes allowed
+- gate final: owner_approved=true, acceptance_passed=true, health advertises coding enabled=true (owner_seat=friend)
+- jobs total across all rounds: 23 executed, $0.00
+- NEXT: Mica restarts room Apex client (their side approval flags) - first real @Apex coding round trip; evidence: Apex-Adapter/targeted_evidence.json, acceptance_evidence.json, mini probes

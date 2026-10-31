@@ -1,17 +1,3 @@
-"""
-TRAINING OBJECTIVE (human-assigned, 2026-10-31):
-
-Implement a Calculator class in this file so that it satisfies:
-  - methods: add(a, b), subtract(a, b), multiply(a, b), divide(a, b)
-  - divide raises ZeroDivisionError on zero divisor (do not swallow it)
-  - every operation is recorded in self.history as a string like "2 + 3 = 5"
-  - a clear() method empties history
-  - all operations must work for ints and floats
-
-Current state: intentionally incomplete - Apex, apply your full pipeline:
-spec-first tests derived from this objective, then implement to satisfy them.
-"""
-
 class Calculator:
     """A simple arithmetic calculator with operation history."""
 
@@ -21,17 +7,29 @@ class Calculator:
     # TODO: implement add, subtract, multiply, divide, clear per the objective.
     # TRAINING NOTE: division by zero must raise ZeroDivisionError with a clear message.
     def add(self, a, b):
-        raise NotImplementedError("training objective - implement me")
+        result = a + b
+        self.history.append(f"{a} + {b} = {result}")
+        return result
 
     def subtract(self, a, b):
-        raise NotImplementedError("training objective - implement me")
+        result = a - b
+        self.history.append(f"{a} - {b} = {result}")
+        return result
 
     def multiply(self, a, b):
-        raise NotImplementedError("training objective - implement me")
+        result = a * b
+        self.history.append(f"{a} * {b} = {result}")
+        return result
 
     def divide(self, a, b):
-        raise NotImplementedError("training objective - implement me")
+        if b == 0:
+            raise ZeroDivisionError("Cannot divide by zero")
+        result = a / b
+        self.history.append(f"{a} / {b} = {result}")
+        return result
 
+    def clear(self):
+        self.history.clear()
 
 if __name__ == "__main__":
     c = Calculator()
