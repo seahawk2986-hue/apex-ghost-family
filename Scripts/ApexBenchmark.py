@@ -25,7 +25,7 @@ HIST = os.path.join(R, "Config", "BenchmarkHistory.json")
 
 def _ledger():
     try:
-        with open(os.path.join(R, "Config", "RewardLedger.json"), "r", encoding="utf-8") as f:
+        with open(os.path.join(R, "Config", "RewardLedger.json"), "r", encoding="utf-8-sig") as f:
             return json.load(f)
     except Exception:
         return {}
@@ -121,7 +121,7 @@ def run(include_cloud=True):
     try:
         hist = []
         if os.path.exists(HIST):
-            with open(HIST, "r", encoding="utf-8") as f:
+            with open(HIST, "r", encoding="utf-8-sig") as f:
                 hist = json.load(f)
         hist.append(out)
         hist = hist[-90:]

@@ -49,6 +49,38 @@ def main():
         bench = _bench_run()
     except Exception as e:
         bench = {"error": str(e)[:80]}
+    # Skill re-certification: nightly sandbox re-verification + demotion
+    _recert = {"error": "not run"}
+    try:
+        import run_apex_evolution as _loop
+        from ApexSkills import recertify as _recert_fn
+        _recert = _recert_fn(max_n=5, sandbox_fn=_loop.sandbox)
+        if _recert.get("demoted"):
+            m.record_event("error", f"Skill re-certification demoted {_recert.get('demoted')} stale skill(s)",
+                           skills=True)
+    except Exception as e:
+        _recert = {"error": str(e)[:80]}
+    # Monthly free-tier catalog refresh (TierScout - interconnection upgrade)
+    try:
+        _scout_path = os.path.join(R, "Config", "FreeTierCatalog.json")
+        _age_days = 999.0
+        if os.path.exists(_scout_path):
+            with open(_scout_path, "r", encoding="utf-8") as f:
+                _cat = json.load(f)
+            try:
+                _t = time.mktime(time.strptime(_cat.get("scanned_at", ""), "%Y-%m-%d %H:%M:%S"))
+                _age_days = (time.time() - _t) / 86400.0
+            except Exception:
+                pass
+        if _age_days > 30:
+            _pyexe = os.path.join(R, "apex_venv", "Scripts", "python.exe")
+            subprocess.run([_pyexe, os.path.join(R, "Scripts", "ApexTierScout.py")],
+                           capture_output=True, timeout=240)
+            _msg = f"TierScout refreshed the free-tier catalog (was {_age_days:.0f} days old)"
+            m.record_event("success", _msg, scout=True)
+            print("[DREAM]", _msg)
+    except Exception:
+        pass
 
     ledger = _read_json(os.path.join(R, "Config", "RewardLedger.json"), {})
     registry = _read_json(os.path.join(R, "Config", "layer_pids.json"), {})
@@ -120,7 +152,7 @@ def main():
     # refreshed from real benchmark data (not static descriptions).
     try:
         self_path = os.path.join(R, "Config", "ApexSelf.json")
-        with open(self_path, "r", encoding="utf-8") as f:
+        with open(self_path, "r", encoding="utf-8-sig") as f:
             selfcard = json.load(f)
         selfcard["measured"] = {
             "updated": time.strftime("%Y-%m-%d %H:%M:%S"),
@@ -152,6 +184,7 @@ def main():
         "certified_skills": len(skills),
         "semantic_records": semantic_records,
         "capability_trend": trend,
+        "recertification": _recert,
         "benchmark": {k: bench.get(k) for k in (
             "security", "memory_recall_hit", "memory_latency_s", "learning_mean_best",
             "reasoning_calibration", "supervision_ok", "lane_latency_s", "lane_ok")},
