@@ -41,7 +41,11 @@
   "log rotation + history compression for room threads",
   "live dashboard: GET http://127.0.0.1:8080/",
   "security stack: file-integrity manifest (SHA256 seals + boot verification), .env sealing, loopback-only binding, prompt-injection defense, read-only containers, eval/exec penalties, 6-drill red-team regime",
-  "security hardening: alias-import + getattr-obfuscation + shutdown + ctypes vetoes; 10-drill adversarial red-team regime"
+  "security hardening: alias-import + getattr-obfuscation + shutdown + ctypes vetoes; 10-drill adversarial red-team regime",
+  "per-file edit-strategy learning: ledger chooses minimal-diff vs full-rewrite per target file",
+  "skill-reuse in room replies: certified implementations inject into peer-context coding",
+  "Apex-Sentry guards the room adapter (resurrects companion via task scheduler)",
+  "memory precision benchmarked over a 3-probe set (temp-store isolation)"
  ],
  "limits": [
   "local reasoning is 8B-class; frontier quality comes from burst lanes and verification loops",
