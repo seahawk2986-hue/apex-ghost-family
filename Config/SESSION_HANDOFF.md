@@ -102,3 +102,10 @@ Reboot confirms WSL2. Then the room ceremony closes everything.
 - gate final: owner_approved=true, acceptance_passed=true, health advertises coding enabled=true (owner_seat=friend)
 - jobs total across all rounds: 23 executed, $0.00
 - NEXT: Mica restarts room Apex client (their side approval flags) - first real @Apex coding round trip; evidence: Apex-Adapter/targeted_evidence.json, acceptance_evidence.json, mini probes
+
+## 2026-10-31 ~05:50 - Agency framework shipped + 14B/Qwen3 brain split
+- AgencyTasks.md ledger (6 bullets): cross-domain patterns (Patterns.json distillation in dream + engine retrieval), self-synthesized TaskDAG.json, anti-forgetting pinning (queued), critic-verify in V2 engine (mismatch nags once, twice = honest failed), plan-first enforced (plan event before tool calls), tool-synthesis hint loop
+- Lanes split by measured data: chat = qwen3-8b (5GB full offload, fast; 14B ReadTimeout at 99s was the honest driver), coding = qwen2.5-14b-instruct (8.99GB resident); Groq 27B remains online lane #1
+- Engine: model-call budget 120s (was 30, JIT starvation), run_tests exit-5 semantics, verify always on finish
+- Supplement pack + delivery zip (Apex-V2-Mica-Delivery.zip, SEND-THIS-TO-MICA.zip) built; engine version moved past pack - rebuild queued on final suite pass
+- Ears: grammar-wake 0.92 conf (dictation was noise source), single instance, WinRT route blocked by PS 5.1 projection (documented)

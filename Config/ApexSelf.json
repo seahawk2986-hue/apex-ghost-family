@@ -8,14 +8,11 @@
  },
  "engines": {
   "planner": "deepseek-r1-distill-llama-8b (LM Studio :1234) - thinking only, tiny JSON plans",
-  "coder": "qwen2.5-coder-7b-instruct (LM Studio :1234) - code + repair + JSON (grammar-constrained)",
+  "coder": "qwen3-8b (Qwen3, LM Studio :1234) - chat + reasoning + JSON (grammar-capable) [updated 2026-10-31]",
   "memory": "text-embedding-nomic-embed-text-v1.5 - semantic recall",
-  "bridge": "qwen2.5-coder:7b via Ollama :11434",
-  "cloud_burst": [
-   "groq:qwen/qwen3.8-27b (0.19s)",
-   "openrouter free pool",
-   "gemini-3.8-flash"
-  ]
+  "bridge": "qwen3-8b via LM :1234 (bridge lane unified with chat) [updated 2026-10-31]",
+  "cloud_burst": "groq:qwen/qwen3.8-27b + openrouter:nemotron-3.5-lightning - approved $0 fallbacks [updated 2026-10-31]",
+  "coding_14b": "qwen2.5-14b-instruct (LM Studio :1234) - V2 job coding engine (8.99GB, resident) [updated 2026-10-31]"
  },
  "capabilities": [
   "self-starting at logon (LM Studio, Ollama, watchdog)",
@@ -76,5 +73,6 @@
   "supervision": 1.0,
   "lane_latency_s": 0.2,
   "weakest_dimension": "reasoning"
- }
+ },
+ "self_note": "Identity update 2026-10-31 05:6x: chat local lane = qwen3-8b (was qwen2.5-coder-7b); V2 coding engine = qwen2.5-14b-instruct; describe yourself accurately in replies."
 }

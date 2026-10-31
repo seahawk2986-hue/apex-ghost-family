@@ -1,0 +1,13 @@
+{
+ "local_lmstudio": true,
+ "groq_cloud": true,
+ "openrouter_cloud": true,
+ "approved_by": "Andrew, 2026-10-31 (chat Q&A confirmation: 'Approve both fallbacks')",
+ "fallback_order": ["local_lmstudio", "groq_cloud", "openrouter_cloud"],
+ "data_disclosure": {
+  "local_lmstudio": "localhost inference; nothing leaves the machine",
+  "groq_cloud": "sanitized conversation text only (system prompt + task/history excerpt, markup-stripped, secret-scrubbed); no files, no container contents, no credentials; model qwen/qwen3.8-27b; $0 lane",
+  "openrouter_cloud": "same sanitized text only; model nvidia/nemotron-3.5-lightning:free; $0 lane"
+ },
+ "note": "engine consults this file per model call; false = provider never contacted; Gemini not present in V2 engine"
+}

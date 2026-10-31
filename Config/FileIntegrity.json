@@ -60,8 +60,8 @@
   "ts": "2026-10-31 03:45:52"
  },
  "Scripts\\ApexDream.py": {
-  "sha256": "64812ee56c28542009a7066e9c6e5822e503ad88031ab86bd148d7420e0de03e",
-  "ts": "2026-10-31 04:16:25"
+  "sha256": "507524eae456d1cb9b556a2cbe15212d506e60399931031c2132e73070844a30",
+  "ts": "2026-10-31 05:40:25"
  },
  "Scripts\\ApexGuard.py": {
   "sha256": "87aa89f359bf66eef456635f1ed71bbea0b2a2d915ca9918d2e7c2f966c549af",
@@ -76,8 +76,8 @@
   "ts": "2026-10-31 03:45:52"
  },
  "Config\\SESSION_HANDOFF.md": {
-  "sha256": "58c6f16c9b45a337fe28aaca994f556e71e7d1ab4c23ae4147845dd7523f312b",
-  "ts": "2026-10-31 03:45:52"
+  "sha256": "d8423add4afa7205b118d0ac4b910f079384eaab2f5bf3532f9f430657d709bb",
+  "ts": "2026-10-31 05:40:23"
  },
  "apexpacing.py": {
   "sha256": "a7663bbb422c95e68bd7e5a92879602a0f5c37b094969d2ee305b12483cb8396",
@@ -88,11 +88,15 @@
   "ts": "2026-10-31 03:18:48"
  },
  "ApexChatPage.html": {
-  "sha256": "073946cda53231d8e8d6b63f5a630b2805a207babc41a4722f13acf780df1bf7",
-  "ts": "2026-10-31 04:19:01"
+  "sha256": "401b3f9f56f791702d9656de67689a0f7766ac3a984cff56bd1d9bc9f8e74aff",
+  "ts": "2026-10-31 04:55:12"
  },
  "TrainingCalc.py": {
   "sha256": "2dd0a89f96da778bea92377da4b9f64254e67dfc5fac3b0566b4dccf1023bc9b",
   "ts": "2026-10-31 04:42:44"
+ },
+ "TrainingMinStack.py": {
+  "sha256": "7c23391bbb4473688858e9ebd2417fe22308833595733c5318603c5e66802cbd",
+  "ts": "2026-10-31 04:47:35"
  }
 }
