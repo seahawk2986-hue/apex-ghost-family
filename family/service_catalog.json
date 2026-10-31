@@ -1,0 +1,49 @@
+{
+ "ts": "2026-10-31 15:07:36",
+ "disclosure": "ALL WORK IS AI-ASSISTED AND DISCLOSED - the family's honesty law",
+ "services": [
+  {
+   "id": "webpage",
+   "name": "Website page build",
+   "deliverable": "responsive HTML/CSS/JS page + deploy instructions",
+   "capability": "PROVEN (V2 engine), price_suggest: 40-150 USD each"
+  },
+  {
+   "id": "svglogo",
+   "name": "SVG logo/graphic",
+   "deliverable": "code-generated SVG (scalable, editable source)",
+   "capability": "PROVEN (code-gen visuals), price_suggest: 25-80 USD",
+   "disclosure": "vector/code-generated only - NO raster art (honest limit)"
+  },
+  {
+   "id": "scraper",
+   "name": "Web scraper / data pipeline",
+   "deliverable": "keyless scraping script + sample data + docs",
+   "capability": "THE FAMILY'S CORE SKILL, price_suggest: 80-400 USD"
+  },
+  {
+   "id": "monitor",
+   "name": "Site/API monitoring setup",
+   "deliverable": "scheduled checks + alert script (the family's watch stack)",
+   "capability": "PROVEN nightly, price_suggest: 50-200 USD/mo"
+  },
+  {
+   "id": "codetask",
+   "name": "Custom coding task",
+   "deliverable": "code + tests + docs via the V2 engine (plan-first, council-verified)",
+   "capability": "PROVEN, price_suggest: scope-based"
+  },
+  {
+   "id": "datamining",
+   "name": "Research/mining report",
+   "deliverable": "mined + verified knowledge dossier on a topic of your choice",
+   "capability": "PROVEN (HarvestIndex), price_suggest: 60-250 USD"
+  }
+ ],
+ "channels": {
+  "storefront_1": "Mica's room (@Apex via the token-authed V2 pipeline)",
+  "storefront_2": "the family pitch (family_pitch.md) - direct offers",
+  "delivery": "V2 engine jobs + GrainLine-verified artifacts",
+  "payment": "USD to Andrew's accounts (bank/PayPal/Sponsors) - 80% cap + ledger; each job announced in chat"
+ }
+}

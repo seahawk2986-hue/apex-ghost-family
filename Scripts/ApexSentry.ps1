@@ -54,7 +54,7 @@ if ($doIt) {
         $os = Get-CimInstance Win32_OperatingSystem
         $freeGB = [math]::Round($os.FreePhysicalMemory / 1MB, 1)
         if ($freeGB -gt 6) {
-            $pathChoice = if ((Get-Random -Max 2) -eq 0) { 'C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed\Scripts\ApexGym.py' } else { 'C:\Users\seaha\Apex-Adapter\SeekGrowth.py' }
+            $pathChoice = if ((Get-Random -Max 2) -eq 0) { 'C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed\Scripts\ApexGym.py' } else { 'C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed\Scripts\SeekGrowth.py' }
             $args2 = if ($pathChoice -like '*ApexGym*') { @($pathChoice, '--minutes', '5', '--traits', 'auto') } else { @($pathChoice, '--minutes', '5') }
             Start-Process "$root\apex_venv\Scripts\python.exe" -ArgumentList $args2 -WindowStyle Hidden
             [System.IO.File]::WriteAllText($cdFile, $now.ToString('s'))

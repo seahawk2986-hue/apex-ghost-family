@@ -20,21 +20,22 @@
  "ApexPacing.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 6,
+  "attempts": 8,
   "successes": 1,
   "streak": 0,
   "ok_full": 1,
-  "parity_total": 4,
+  "parity_total": 6,
   "parity_hits": 4
  },
  "ApexInstaller.py": {
-  "best": 0.0,
-  "best_base": 0.0,
-  "attempts": 3,
-  "successes": 0,
+  "best": 105.0,
+  "best_base": 90.0,
+  "attempts": 7,
+  "successes": 1,
   "streak": 0,
-  "parity_total": 2,
-  "parity_hits": 2
+  "parity_total": 4,
+  "parity_hits": 2,
+  "ok_min": 1
  },
  "test_reward.py": {
   "best": 105.0,
@@ -49,7 +50,7 @@
  "TrainingCalc.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 3,
+  "attempts": 6,
   "successes": 1,
   "streak": 0,
   "ok_full": 1
@@ -57,7 +58,7 @@
  "TrainingMinStack.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 6,
+  "attempts": 11,
   "successes": 1,
   "streak": 0,
   "ok_full": 1
@@ -65,16 +66,17 @@
  "TrainingLogParser.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 5,
+  "attempts": 25,
   "successes": 1,
   "streak": 0,
   "ok_full": 1,
-  "parity_total": 4,
-  "parity_hits": 4
+  "parity_total": 19,
+  "parity_hits": 19
  },
  "Scripts/ApexGym.py": {
   "best": 100,
-  "streak": 1,
-  "attempts": 243
- }
+  "streak": 2,
+  "attempts": 253
+ },
+ "Scripts/SwarmOrchestrator.py": 20335
 }
