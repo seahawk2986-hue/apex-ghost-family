@@ -48,9 +48,24 @@ def _port_pid(port):
     return None
 
 
+def _port_up(port):
+    """Bind-test fallback: is something serving this port right now?"""
+    import socket
+    s = socket.socket()
+    s.settimeout(1.5)
+    try:
+        s.connect(("127.0.0.1", port))
+        return True
+    except OSError:
+        return False
+    finally:
+        s.close()
+
+
 def _alive_pid(key):
     """Return the layer's PID if alive (registry PID that is a live python),
-    else the port-owner PID. None means not serving."""
+    else the port-owner PID. None means not serving. A connectable port with
+    no owner information still counts as alive (psutil scans can miss)."""
     ent = _registry().get(key) or {}
     pid = ent.get("pid")
     if pid:
@@ -59,7 +74,10 @@ def _alive_pid(key):
                 return pid
         except Exception:
             pass
-    return _port_pid(PORT_OF.get(key, 0))
+    port = PORT_OF.get(key, 0)
+    if port and _port_up(port):
+        return -1   # alive; owner unknown but service is reachable
+    return _port_pid(port)
 
 
 def main():

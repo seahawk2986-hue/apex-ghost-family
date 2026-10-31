@@ -1,7 +1,7 @@
 {
  "run_apex_evolution.py": {
-  "sha256": "55e06275466c1af8be7aec1c20fabe55b2dcc567105044ba2571768e1c2dbbd7",
-  "ts": "2026-10-31 03:13:31"
+  "sha256": "ebe045bbdc8acca6b91b77ef8a96034c54c6da69e885fe6478a44bf6056b8f25",
+  "ts": "2026-10-31 03:18:53"
  },
  "optimized_agent.py": {
   "sha256": "52228da0c6c91d516f5bd2e33a22030ea1f16f11c3030376711002dfb8e80a07",
@@ -12,8 +12,8 @@
   "ts": "2026-10-31 02:56:59"
  },
  "Config\\ApexSelf.json": {
-  "sha256": "4473ce3686fc5b6a9cabe041cd6d949252fb5ade989755464ecf98616fe3a2b8",
-  "ts": "2026-10-31 02:56:59"
+  "sha256": "b3131d6f96a0204bd6cbfc93dda2276cba2e9ef1c3e28ec5b10bf059205ef961",
+  "ts": "2026-10-31 03:18:48"
  },
  "Config\\HostGuard.json": {
   "sha256": "9cd71cd3820d78d4190c16348efe8dea53e5511a5df8260f1005ef392ef4df5e",
@@ -56,8 +56,8 @@
   "ts": "2026-10-31 02:56:59"
  },
  "Scripts\\ApexBenchmark.py": {
-  "sha256": "adba916015e559d21b8f33907cc7b6aabb05b4af4267fd949796bea743fd0136",
-  "ts": "2026-10-31 02:56:59"
+  "sha256": "218fee1de3af9437c8be701e987b5b281419e4998cc5e51eb1a6aaba9b9effab",
+  "ts": "2026-10-31 03:18:53"
  },
  "Scripts\\ApexDream.py": {
   "sha256": "ded2d54ea8f14ec39529f1fce656f16fa2cfdf55a5982276d836fc8ab7097963",
@@ -72,8 +72,8 @@
   "ts": "2026-10-31 02:56:59"
  },
  "Scripts\\proc_check.py": {
-  "sha256": "208a818e1f15e1f7d9803a0467f522f63f37211b03d225fbc01b6d0c32dd317c",
-  "ts": "2026-10-31 02:56:59"
+  "sha256": "0f5e0a811d81af4f8aaa48c81f7c28eda71feea55e17fabdbcc6ec194287a648",
+  "ts": "2026-10-31 03:19:27"
  },
  "Config\\SESSION_HANDOFF.md": {
   "sha256": "58c6f16c9b45a337fe28aaca994f556e71e7d1ab4c23ae4147845dd7523f312b",
@@ -82,5 +82,9 @@
  "apexpacing.py": {
   "sha256": "7ed87785f6735dd734e06ac0ab69ccad19422974ac720679b43f226769083f70",
   "ts": "2026-10-31 02:35:00"
+ },
+ "Config\\GI_Attributes.md": {
+  "sha256": "49aa4c52b0ec6fb6e6cff2ce517fc7643992b00d735c3da2c0aedc06e7226856",
+  "ts": "2026-10-31 03:18:48"
  }
 }
