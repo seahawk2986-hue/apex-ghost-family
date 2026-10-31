@@ -1,1 +1,1 @@
-{"strategy": "switch to a different file; use smaller surgical changes; verify behavior parity against the ledger best", "updated": "2026-10-31 06:05:17"}
+{"strategy": "continue test_reward.py (success streak 1); keep changes surgical; verify output parity", "updated": "2026-10-31 06:09:00"}

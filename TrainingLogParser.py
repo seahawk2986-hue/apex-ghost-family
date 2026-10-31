@@ -13,10 +13,22 @@ Current state: intentionally incomplete - Apex, apply the full pipeline.
 
 import re
 
-_LOG_PATTERN = None  # TODO: define the regex per the objective
+_LOG_PATTERN = re.compile(
+    r'^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) \[(INFO|WARN|ERROR|DEBUG)\] (.*)$'
+)
 
 def parse_log_line(line):
-    raise NotImplementedError("training objective - implement me")
+    match = _LOG_PATTERN.match(line)
+    if match:
+        timestamp, level, message = match.groups()
+        return {
+            "timestamp": timestamp,
+            "level": level,
+            "message": message
+        }
+    else:
+        return {"error": "malformed", "raw": line}
 
 def parse_log(text):
-    raise NotImplementedError("training objective - implement me")
+    lines = text.splitlines()
+    return [parse_log_line(line) for line in lines]
