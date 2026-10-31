@@ -1,5 +1,6 @@
 {
- "ts": "2026-10-31 02:03:38",
+ "ts": "2026-10-31 02:08:41",
+ "git_head": "1149b22",
  "ledger": {
   "ApexIPCEngine.py": {
    "best": 103.0,
@@ -7,14 +8,14 @@
    "attempts": 1,
    "successes": 1,
    "streak": 1,
-   "parity_total": 3,
-   "parity_hits": 3
+   "parity_total": 5,
+   "parity_hits": 5
   }
  },
  "layer_registry": {
   "evolution": {
-   "pid": 32796,
-   "started": "2026-10-31 02:02:19"
+   "pid": 1392,
+   "started": "2026-10-31 02:07:41"
   }
  },
  "skill_registry": {
@@ -26,19 +27,20 @@
    "ts": "2026-10-31 01:50:06"
   }
  },
- "semantic_records": 41,
+ "semantic_records": 43,
  "benchmark": {
-  "ts": "2026-10-31 02:03:38",
+  "ts": "2026-10-31 02:08:41",
   "security": 1.0,
   "memory_recall_hit": 1.0,
-  "memory_latency_s": 0.22,
+  "memory_latency_s": 0.25,
   "learning_mean_best": 1.03,
   "certified_files": 1,
   "reasoning_calibration": 1.0,
   "supervision_ok": 1.0,
-  "supervision_latency_s": 0.22,
-  "lane_latency_s": 0.24,
+  "supervision_latency_s": 0.24,
+  "lane_latency_s": 0.22,
   "lane_ok": 1.0,
+  "unmeasured": [],
   "weakest_dimension": "security",
   "weakest_score": 1.0,
   "dimensions": {

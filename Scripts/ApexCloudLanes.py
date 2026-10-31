@@ -87,9 +87,39 @@ LANES = [
 ]
 
 
+def _adaptive_order(lane_list):
+    """Reorder lanes by measured telemetry when enough samples exist.
+
+    Reads the adapter's LaneStats.json (per-lane count/errors/avg_s written by
+    every generation call). Lanes with higher error-rate or latency drift down.
+    Falls back to static order silently whenever data is thin or unreadable -
+    never a failure path, just a preference.
+    """
+    try:
+        stats_path = os.path.join(os.path.dirname(R), "Apex-Adapter", "Config", "LaneStats.json")
+        if not os.path.exists(stats_path):
+            return lane_list
+        with open(stats_path, "r", encoding="utf-8") as f:
+            st = json.load(f)
+        if not isinstance(st, dict):
+            return lane_list
+        scored = []
+        for name, fn, budget in lane_list:
+            e = st.get(name)
+            if isinstance(e, dict) and int(e.get("count", 0)) >= 5:
+                errors = int(e.get("errors", 0)) / max(1, int(e["count"]))
+                scored.append((round(errors * 2 + float(e.get("avg_s", 0.0)), 3), name, fn, budget))
+            else:
+                scored.append((0.0, name, fn, budget))  # insufficient data = default priority
+        scored.sort(key=lambda kv: kv[0])
+        return [(n, f, b) for _, n, f, b in scored]
+    except Exception:
+        return lane_list
+
+
 def ask(prompt, max_tokens=400, verbose=True):
     """Try each cloud lane fastest-first. Return text or '' if all fail."""
-    for name, fn, budget in LANES:
+    for name, fn, budget in _adaptive_order(LANES):
         try:
             t0 = time.time()
             out = fn(prompt, max_tokens, budget)

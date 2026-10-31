@@ -11,6 +11,7 @@ Runs at system-idle hours via scheduled task:
 
 import json
 import os
+import subprocess
 import sys
 import time
 
@@ -56,8 +57,15 @@ def main():
 
     # Durable checkpoint: the restorable state in one file
     try:
+        _git = subprocess.run(["git", "-C", R, "rev-parse", "--short", "HEAD"],
+                              capture_output=True, text=True, timeout=10)
+        git_head = _git.stdout.strip() or None
+    except Exception:
+        git_head = None
+    try:
         snap = {
             "ts": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "git_head": git_head,
             "ledger": ledger,
             "layer_registry": registry,
             "skill_registry": skills,
@@ -69,6 +77,29 @@ def main():
     except Exception:
         pass
 
+    weakest = bench.get("weakest_dimension", "unknown")
+    # Capability trend detection: is the flywheel actually improving?
+    trend = "insufficient history"
+    try:
+        hist_path = os.path.join(R, "Config", "BenchmarkHistory.json")
+        bh = []
+        if os.path.exists(hist_path):
+            with open(hist_path, "r", encoding="utf-8") as f:
+                bh = json.load(f)
+        if len(bh) >= 4:
+            def _mean(entries):
+                vals = [e for e in entries if isinstance(e.get("dimensions"), dict)]
+                if not vals:
+                    return None
+                allv = [v for e in vals for v in e["dimensions"].values()]
+                return sum(allv) / max(1, len(allv))
+            _now = _mean(bh[-3:])
+            _was = _mean(bh[-6:-3])
+            if _now is not None and _was is not None:
+                t = _now - _was
+                trend = f"{'IMPROVING' if t > 0.02 else 'STAGNANT' if t > -0.02 else 'DECLINING'} ({_was:.2f} -> {_now:.2f})"
+    except Exception:
+        pass
     weakest = bench.get("weakest_dimension", "unknown")
     # Security posture, measured right now (feeds the overnight note honestly)
     sec_status = "integrity manifest OK; secrets sealed"
@@ -120,6 +151,7 @@ def main():
         "redteam": f"{passed}/{len(drills)} drills fired correctly",
         "certified_skills": len(skills),
         "semantic_records": semantic_records,
+        "capability_trend": trend,
         "benchmark": {k: bench.get(k) for k in (
             "security", "memory_recall_hit", "memory_latency_s", "learning_mean_best",
             "reasoning_calibration", "supervision_ok", "lane_latency_s", "lane_ok")},
