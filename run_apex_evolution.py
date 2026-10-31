@@ -695,6 +695,27 @@ def plan():
         log("planner", f"Plan rejected (invalid target: {tf or 'none'})")
         return False
 
+    # COACH MODE: a human-assigned objective pins the training target. The full
+    # reasoning pipeline still runs on the assigned exercise - votes, Socratic,
+    # critic, spec-TDD all practice on it - but the coach chooses the drill.
+    _coach = bool(_human_objective)
+    if _coach:
+        _m2 = re.search(r"([A-Za-z0-9_]+\.py)", _human_objective)
+        _coach_target = _m2.group(1) if _m2 else ""
+        _eligible = {f.lower(): f for f in all_f}
+        if _coach_target and _coach_target.lower() in _eligible:
+            _assign = _eligible[_coach_target.lower()]
+            if _assign.lower() != tf.lower():
+                log("planner", f"COACH MODE: target locked to human assignment {_assign}")
+                tf = _assign
+                intent = f"Human-directed training exercise: {_human_objective[:180]}"
+                brief = "Implement the assigned objective fully, satisfying the in-file docstring spec and the derived test suite."
+            else:
+                log("planner", "COACH MODE: planner independently chose the assigned exercise")
+        else:
+            log("planner", "COACH MODE: assignment target not found among eligible files - free planning continues")
+            _coach = False
+
     # Self-consistency planning: modal target wins the vote (DeepSeek + 2 Groq
     # ballots, confidence-weighted). Majority agreement = proceed confidently;
     # split votes = conservative coding.
@@ -765,8 +786,9 @@ def plan():
         pass
 
     # Disagreement resolution: when planners split, a deciding vote reviews
-    # BOTH positions and picks the better target for THIS cycle.
-    if "DISAGREES" in _ensemble:
+    # BOTH positions and picks the better target for THIS cycle. In coach mode
+    # the assignment stands - disagreement is recorded, never overruled.
+    if "DISAGREES" in _ensemble and not _coach:
         try:
             if cloud_ask:
                 _modal_name = _modal if "_modal" in dir() else ""
