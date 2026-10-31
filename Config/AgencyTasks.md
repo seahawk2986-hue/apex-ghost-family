@@ -58,3 +58,14 @@ lanes, $0, HostGuard pacing, no host destabilization.
   live coding job asserting plan + verify events.
 - Honest walls documented: frozen weights (until LoRA approval), single-active-job,
   local-lane latency on partial offload.
+## OPEN CARRY LIST (addendum from Directives Audit, 2026-10-31 ~06:15)
+- [ ] Council live-fire success row (directive-upgraded nag deployed; auto-verified next suite)
+- [ ] Pack version-bump rebuild (engine hashes moved past shipped pack; queued behind suite)
+- [ ] Micah folder refresh with rebuilt packs
+- [ ] ApexSelf identity confirmation via live chat (engines block rewritten 2026-10-31)
+- [ ] Ears: spoken end-to-end test on grammar build (Andrew); dictation quality beyond SAPI (upgr. path)
+- [ ] LoRA weight-plasticity project (APPROVAL-GATED by Andrew)
+- [ ] Multi-session DAG execution (designed)
+- [ ] Transfer-success-rate benchmark dimension
+- [ ] Room activation: Mica/Chad restart after pack review (external party)
+Compliance audit: Config/DirectivesAudit.md (25 directives, 22 closed, carry list above).

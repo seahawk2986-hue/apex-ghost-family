@@ -37,13 +37,14 @@
   "parity_hits": 1
  },
  "test_reward.py": {
-  "best": 0.0,
-  "best_base": 0.0,
-  "attempts": 2,
-  "successes": 0,
-  "streak": 0,
+  "best": 105.0,
+  "best_base": 90.0,
+  "attempts": 3,
+  "successes": 1,
+  "streak": 1,
   "parity_total": 1,
-  "parity_hits": 1
+  "parity_hits": 1,
+  "ok_min": 1
  },
  "TrainingCalc.py": {
   "best": 103.0,
