@@ -8,3 +8,11 @@ if (-not $watchdogs) {
     "$((Get-Date).ToString('s')) sentry: watchdog missing -> task started" |
         Out-File "$root\Logs\sentry.log" -Append -Encoding utf8
 }
+# Guard the room adapter too: resurrect the Apex-Companion task if killed.
+$companion = Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
+    Where-Object { $_.CommandLine -like '*Apex-Adapter\companion.py*' }
+if (-not $companion) {
+    Start-ScheduledTask -TaskName 'Apex-Companion' -ErrorAction SilentlyContinue
+    "$((Get-Date).ToString('s')) sentry: room adapter missing -> Apex-Companion task started" |
+        Out-File "$root\Logs\sentry.log" -Append -Encoding utf8
+}

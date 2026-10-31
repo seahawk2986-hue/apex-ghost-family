@@ -223,3 +223,7 @@
 {"id": "92ef5189e94b", "ts": "2026-10-31 03:13:12", "kind": "conversation", "text": "Andrew: are you there? | Apex replied (260 chars)", "meta": {"talk": true}, "imp": 0.8333333333333334}
 {"id": "0a61c1987ee2", "ts": "2026-10-31 03:14:08", "kind": "planning_vote", "text": "votes={'apexipcengine.py': 1, 'apexpacing.py': 2} modal=apexpacing.py agree=2/3", "meta": {"file": "ApexIPCEngine.py", "agree": 2, "total": 3}, "imp": 0.8333333333333334}
 {"id": "ef362b0850cc", "ts": "2026-10-31 03:14:09", "kind": "thinking", "text": "ApexIPCEngine.py: socratic verdict=shrink assumptions=4 pre-mortem factors=4", "meta": {}, "imp": 0.8333333333333334}
+{"id": "5c5c772c3a73", "ts": "2026-10-31 03:16:35", "kind": "tdd", "text": "ApexIPCEngine.py: spec-first tests FAILED", "meta": {"file": "ApexIPCEngine.py", "result": "FAILED"}, "imp": 0.8333333333333334}
+{"id": "fe7b7e1f42c2", "ts": "2026-10-31 03:16:52", "kind": "tdd", "text": "ApexIPCEngine.py: spec-first tests after targeted repair: FAILED", "meta": {"file": "ApexIPCEngine.py", "result": "FAILED"}, "imp": 0.8333333333333334}
+{"id": "2a125e351c44", "ts": "2026-10-31 03:16:52", "kind": "error", "text": "ApexIPCEngine.py plan discarded: spec tests unresolved after repair", "meta": {"file": "ApexIPCEngine.py"}, "imp": 0.75}
+{"id": "e3d55c64f78f", "ts": "2026-10-31 03:16:52", "kind": "error", "text": "Hardware pacing: host under strain (RAM guard: 0.31GB free < 2.0GB); Apex is pacing itself down.", "meta": {}, "imp": 0.75}
