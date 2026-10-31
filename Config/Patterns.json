@@ -1,0 +1,309 @@
+{
+ "patterns": [
+  {
+   "skill": "ApexIPCEngine.py",
+   "best": 103.0,
+   "summary": "Historical certified evolution (best 103)"
+  },
+  {
+   "skill": "butterworth_filter",
+   "best": "library",
+   "summary": "from math import cos, sin, sqrt, tau (audio_filters/butterworth_filter.py)"
+  },
+  {
+   "skill": "equal_loudness_filter",
+   "best": "library",
+   "summary": "from __future__ import annotations (audio_filters/equal_loudness_filter.py)"
+  },
+  {
+   "skill": "iir_filter",
+   "best": "library",
+   "summary": "from __future__ import annotations (audio_filters/iir_filter.py)"
+  },
+  {
+   "skill": "show_response",
+   "best": "library",
+   "summary": "\"\"\" (audio_filters/show_response.py)"
+  },
+  {
+   "skill": "all_combinations",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/all_combinations.py)"
+  },
+  {
+   "skill": "all_subsequences",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/all_subsequences.py)"
+  },
+  {
+   "skill": "coloring",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/coloring.py)"
+  },
+  {
+   "skill": "combination_sum",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/combination_sum.py)"
+  },
+  {
+   "skill": "crossword_puzzle_solver",
+   "best": "library",
+   "summary": "# https://www.geeksforgeeks.org/solve-crossword-puzzle/ (backtracking/crossword_puzzle_solver.py)"
+  },
+  {
+   "skill": "generate_parentheses",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/generate_parentheses.py)"
+  },
+  {
+   "skill": "generate_parentheses_iterative",
+   "best": "library",
+   "summary": "def generate_parentheses_iterative(length: int) -> list[str]: (backtracking/generate_parentheses_iterative.py)"
+  },
+  {
+   "skill": "hamiltonian_cycle",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/hamiltonian_cycle.py)"
+  },
+  {
+   "skill": "knight_tour",
+   "best": "library",
+   "summary": "# Knight Tour Intro: https://www.youtube.com/watch?v=ab_dY3dZFHM (backtracking/knight_tour.py)"
+  },
+  {
+   "skill": "match_word_pattern",
+   "best": "library",
+   "summary": "def match_word_pattern(pattern: str, input_string: str) -> bool: (backtracking/match_word_pattern.py)"
+  },
+  {
+   "skill": "minimax",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/minimax.py)"
+  },
+  {
+   "skill": "n_queens",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/n_queens.py)"
+  },
+  {
+   "skill": "n_queens_math",
+   "best": "library",
+   "summary": "r\"\"\" (backtracking/n_queens_math.py)"
+  },
+  {
+   "skill": "power_sum",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/power_sum.py)"
+  },
+  {
+   "skill": "rat_in_maze",
+   "best": "library",
+   "summary": "from __future__ import annotations (backtracking/rat_in_maze.py)"
+  },
+  {
+   "skill": "sudoku",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/sudoku.py)"
+  },
+  {
+   "skill": "sum_of_subsets",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/sum_of_subsets.py)"
+  },
+  {
+   "skill": "word_break",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/word_break.py)"
+  },
+  {
+   "skill": "word_ladder",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/word_ladder.py)"
+  },
+  {
+   "skill": "word_search",
+   "best": "library",
+   "summary": "\"\"\" (backtracking/word_search.py)"
+  },
+  {
+   "skill": "binary_and_operator",
+   "best": "library",
+   "summary": "\"\"\"Bitwise AND helper. (bit_manipulation/binary_and_operator.py)"
+  },
+  {
+   "skill": "binary_coded_decimal",
+   "best": "library",
+   "summary": "def binary_coded_decimal(number: int) -> str: (bit_manipulation/binary_coded_decimal.py)"
+  },
+  {
+   "skill": "binary_count_setbits",
+   "best": "library",
+   "summary": "def binary_count_setbits(a: int) -> int: (bit_manipulation/binary_count_setbits.py)"
+  },
+  {
+   "skill": "binary_count_trailing_zeros",
+   "best": "library",
+   "summary": "from math import log2 (bit_manipulation/binary_count_trailing_zeros.py)"
+  },
+  {
+   "skill": "binary_or_operator",
+   "best": "library",
+   "summary": "\"\"\"Bitwise OR helper. (bit_manipulation/binary_or_operator.py)"
+  },
+  {
+   "skill": "binary_shifts",
+   "best": "library",
+   "summary": "# Information on binary shifts: (bit_manipulation/binary_shifts.py)"
+  },
+  {
+   "skill": "binary_twos_complement",
+   "best": "library",
+   "summary": "# Information on 2's complement: https://en.wikipedia.org/wiki/Two%27s_complement (bit_manipulation/binary_twos_complement.py)"
+  },
+  {
+   "skill": "binary_xor_operator",
+   "best": "library",
+   "summary": "\"\"\"Bitwise XOR helper. (bit_manipulation/binary_xor_operator.py)"
+  },
+  {
+   "skill": "bitwise_addition_recursive",
+   "best": "library",
+   "summary": "\"\"\" (bit_manipulation/bitwise_addition_recursive.py)"
+  },
+  {
+   "skill": "count_1s_brian_kernighan_method",
+   "best": "library",
+   "summary": "def get_1s_count(number: int) -> int: (bit_manipulation/count_1s_brian_kernighan_method.py)"
+  },
+  {
+   "skill": "count_number_of_one_bits",
+   "best": "library",
+   "summary": "from timeit import timeit (bit_manipulation/count_number_of_one_bits.py)"
+  },
+  {
+   "skill": "excess_3_code",
+   "best": "library",
+   "summary": "def excess_3_code(number: int) -> str: (bit_manipulation/excess_3_code.py)"
+  },
+  {
+   "skill": "fast_walsh_hadamard_transform",
+   "best": "library",
+   "summary": "\"\"\" (bit_manipulation/fast_walsh_hadamard_transform.py)"
+  },
+  {
+   "skill": "find_previous_power_of_two",
+   "best": "library",
+   "summary": "def find_previous_power_of_two(number: int) -> int: (bit_manipulation/find_previous_power_of_two.py)"
+  },
+  {
+   "skill": "find_unique_number",
+   "best": "library",
+   "summary": "def find_unique_number(arr: list[int]) -> int: (bit_manipulation/find_unique_number.py)"
+  },
+  {
+   "skill": "gray_code_sequence",
+   "best": "library",
+   "summary": "def gray_code(bit_count: int) -> list[int]: (bit_manipulation/gray_code_sequence.py)"
+  },
+  {
+   "skill": "frontend",
+   "best": "library",
+   "summary": "from tkinter import * (AutoComplete_App/frontend.py)"
+  },
+  {
+   "skill": "backend",
+   "best": "library",
+   "summary": "class DLL: (BrowserHistory/backend.py)"
+  },
+  {
+   "skill": "cat",
+   "best": "library",
+   "summary": "\"\"\" (Cat/cat.py)"
+  },
+  {
+   "skill": "multicoloredline",
+   "best": "library",
+   "summary": "from rich.console import Console (Colors/multicoloredline.py)"
+  },
+  {
+   "skill": "pixel_sort",
+   "best": "library",
+   "summary": "\"\"\"Pixel Sorting\"\"\" (Colors/pixel_sort.py)"
+  },
+  {
+   "skill": "primary_colors",
+   "best": "library",
+   "summary": "def diff(a, b): (Colors/primary_colors.py)"
+  },
+  {
+   "skill": "print_colors",
+   "best": "library",
+   "summary": "import sys (Colors/print_colors.py)"
+  },
+  {
+   "skill": "PSNR",
+   "best": "library",
+   "summary": "import math (Compression_Analysis/PSNR.py)"
+  },
+  {
+   "skill": "Ohms_law",
+   "best": "library",
+   "summary": "def ohms_law(v=0, i=0, r=0): (Electronics_Algorithms/Ohms_law.py)"
+  },
+  {
+   "skill": "resistance",
+   "best": "library",
+   "summary": "def resistance_calculator( (Electronics_Algorithms/resistance.py)"
+  },
+  {
+   "skill": "main",
+   "best": "library",
+   "summary": "# %% (Extract-Table-from-pdf-txt-docx/main.py)"
+  },
+  {
+   "skill": "extract_thumbnail_from_video",
+   "best": "library",
+   "summary": "import cv2 (ExtractThumbnailFromVideo/extract_thumbnail_from_video.py)"
+  },
+  {
+   "skill": "create_dir",
+   "best": "library",
+   "summary": "\"\"\" (Google_Image_Downloader/create_dir.py)"
+  },
+  {
+   "skill": "main",
+   "best": "library",
+   "summary": "import pdfkit (HTML_to_PDF/main.py)"
+  },
+  {
+   "skill": "hand_motion_recognizer",
+   "best": "library",
+   "summary": "import mediapipe as mp (Hand-Motion-Detection/hand_motion_recognizer.py)"
+  },
+  {
+   "skill": "app",
+   "best": "library",
+   "summary": "import customtkinter as ctk (Image-watermarker/app.py)"
+  },
+  {
+   "skill": "watermark",
+   "best": "library",
+   "summary": "from PIL import ImageDraw, ImageFont (Image-watermarker/watermark.py)"
+  },
+  {
+   "skill": "ai",
+   "best": "library",
+   "summary": "from openai import OpenAI, OpenAIError (JARVIS/ai.py)"
+  },
+  {
+   "skill": "apps",
+   "best": "library",
+   "summary": "import json (JARVIS/apps.py)"
+  },
+  {
+   "skill": "config",
+   "best": "library",
+   "summary": "from pathlib import Path (JARVIS/config.py)"
+  }
+ ]
+}

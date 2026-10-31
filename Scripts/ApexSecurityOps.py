@@ -1,3 +1,4 @@
+_R_ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 """ApexDream v3 additions: voice capability note, supply-chain audit (weekly),
 backup rotation, disk-pressure metric. Kept HostGuard-compatible."""
 import json
@@ -39,6 +40,9 @@ def supply_chain_audit(force=False):
         state["last_pip_audit"] = time.time()
         _write(SEC_STATE, state)
         try:
+            import sys as _sys
+            _sys.path.insert(0, _R_ROOT)
+            from ApexMemory import ApexMemory
             m = ApexMemory()
             if findings:
                 m.record_event("error", f"Supply-chain audit: {len(findings)} CVE(s) found in dependencies", audit=True)

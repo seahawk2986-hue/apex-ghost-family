@@ -1,0 +1,19 @@
+{
+ "gym_gain_per_drill": 10,
+ "gym_dominant_session_multiplier": 2,
+ "gym_streak_milestone_bonus": 100,
+ "gym_streak_milestone_every": 3,
+ "library_source_farm": 100,
+ "library_skill_registered": 40,
+ "library_consult_list": 2,
+ "library_consult_search": 4,
+ "library_consult_stats": 3,
+ "library_data_applied_in_v2_job": 80,
+ "library_milestone_100_skills": 150,
+ "initiative_self_directed_action": 20,
+ "initiative_taskdag_executed": 60,
+ "honest_failure_reported": 5,
+ "honest_council_mismatch_nagged": 10,
+ "reasoning_gym_drill_attempt": 5,
+ "reasoning_gym_drill_gain": 25
+}

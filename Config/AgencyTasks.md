@@ -69,3 +69,27 @@ lanes, $0, HostGuard pacing, no host destabilization.
 - [ ] Transfer-success-rate benchmark dimension
 - [ ] Room activation: Mica/Chad restart after pack review (external party)
 Compliance audit: Config/DirectivesAudit.md (25 directives, 22 closed, carry list above).
+
+## HYBRID BRAIN ROUTING (Andrew approved 2026-10-31 ~06:5x: "yes we will use the best weight for the best jo
+b")
+- Purpose-routed brains with TIME-SHARE discipline (never stack big models; RAM wall 16GB total):
+  chat/reasoning -> Qwen3-30B-A3B MoE (download started; quant chosen for RAM fit at load test)
+  V2 coding -> qwen2.5-14b-instruct (resident) | offline chat fallback -> qwen3-8b
+  QLoRA specialist -> trained on Andrew-discourse + gym-graded examples (separate py3.12 venv via uv;
+    torch/peft/bitsandbytes; trains ONLY while other models are unloaded; eval via gym scorecard
+    BEFORE promotion; swap needs Andrew approval)
+- HostGuard: RAM brake rules training start (abort < 2GB free); MoE sessions unload other models
+- Honesty: candidate brains must beat incumbent on GymScoreboard before promotion (ledger records rank)
+
+
+## CHAT-TRIGGERED AUTONOMY + IDLE DRIVE (2026-10-31 ~06:3x) — shipped
+- Apex can now ACT from his own chat: 'run the gym' -> gym spawn; 'harvest/farm/seek' ->
+  curiosity drive spawn; 'skill session' -> python-semantics drills; 'library stats' ->
+  live library summary. Each spawn is bounded (3-5 min) and rewarded.
+- Sentry idle-driven autonomy: every minute, when RAM > 6 GB free and cooldown (2h)
+  passed, Sentry spawns either a 5-min gym round or a 5-min curiosity farm - rotating.
+  Boundaries binding: HostGuard RAM brake still rules; critical system files NEVER
+  written by Apex; the V2 container stays network-isolated; all autonomy bounded and
+  logged (Logs/sentry.log + episodic rows).
+- TaskDAG execution loop: DAG synthesis runs in the dream; executing proposed DAG items
+  as drills is the next queued build.

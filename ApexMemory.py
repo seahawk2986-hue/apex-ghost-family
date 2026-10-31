@@ -157,6 +157,8 @@ class ApexMemory:
         into semantic insight fragments (Generative-Agents-style, no LLM cost)."""
         try:
             events = self.recent_events(200)
+            lessons = []
+            gym_stats = {"drills": 0, "gains": 0}
             stats = {}
             order = []
             for e in events:
@@ -168,8 +170,37 @@ class ApexMemory:
                 elif k in st:
                     st[k] += 1
                 st["last"] = e.get("text", "")[:140]
+                if k == "lesson":
+                    lessons.append(txt[:180])
+                if e.get("meta", {}).get("gym") or txt.startswith("GYM["):
+                    gym_stats["drills"] += 1
+                    gym_stats["gains"] += 1 if "gain" in txt else 0
                 order.append(fn)
             made = 0
+            if gym_stats["drills"]:
+                rate = gym_stats["gains"] / max(1, gym_stats["drills"])
+                self.remember(f"Gym insight: {gym_stats['gains']}/{gym_stats['drills']} "
+                              f"drills gained (rate {rate:.2f}). Weakest traits next.",
+                              kind="insight", gym=True)
+            trait_insights = {}
+            if lessons:
+                self.remember("Recent lessons worth keeping: " + " | ".join(lessons[:4]),
+                              kind="insight", lesson_batch=True)
+            trait_stats2 = {}
+            for e in events:
+                if e.get("kind") == "calibration":
+                    tr = str((e.get("meta") or {}).get("kind") or (e.get("meta") or {}).get("trait") or "general")
+                    st2 = trait_stats2.setdefault(tr, {"try": 0, "hit": 0, "misses": []})
+                    st2["try"] += 1
+                    if (e.get("meta") or {}).get("match") is True or "gain" in e.get("text", ""):
+                        st2["hit"] += 1
+                    elif "miss" in e.get("text", "") and len(st2["misses"]) < 2:
+                        st2["misses"].append(e.get("text", "")[:90])
+            for tr, st2 in trait_stats2.items():
+                if st2["try"] >= 2:
+                    self.remember(f"Trait insight [{tr}]: {st2['hit']}/{st2['try']} gained."
+                                  + (" Misses: " + " | ".join(st2["misses"]) if st2["misses"] else ""),
+                                  kind="insight", trait_insight=True, trait=tr)
             for fn, st in stats.items():
                 if st["success"] + st["error"] + st["pass"] < 3:
                     continue

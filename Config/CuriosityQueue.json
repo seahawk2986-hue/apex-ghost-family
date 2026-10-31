@@ -1,0 +1,12 @@
+{
+ "explored": [],
+ "pending": [
+  "TheAlgorithms/Python",
+  "keon/algorithms",
+  "trekhleb/homemade-machine-learning",
+  "dennybritz/reinforcement-learning",
+  "lightgbm-org/LightGBM",
+  "DLR-RM/stable-baselines3"
+ ],
+ "rotated": "2026-10-31"
+}

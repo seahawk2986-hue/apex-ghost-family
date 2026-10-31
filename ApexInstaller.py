@@ -133,6 +133,7 @@ def install_tool(winget_id, scope="user"):
         proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                 text=True, shell=False)
     except Exception as e:
+        _log(f"install {winget_id}: spawn failed - {e}")
         return {"status": "FAILED", "reason": f"spawn failed: {e}"}
 
     tail = []

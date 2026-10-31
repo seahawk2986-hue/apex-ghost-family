@@ -1,4 +1,4 @@
-import os
+﻿import os
 import sys
 import json
 import time
@@ -53,6 +53,7 @@ if __name__ == "__main__":
     # Single-instance guard v2: PID registry (no enumeration - hang-proof).
     try:
         import psutil
+        R = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
         reg_path = os.path.join(R, "Config", "layer_pids.json")
         reg = {}
         try:
