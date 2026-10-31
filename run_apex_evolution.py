@@ -264,6 +264,23 @@ def score_code(fn, c, res, prev_res=None):
                 s -= _pen
                 m["lint_penalty"] = _pen
                 log("reward", f"Lint: {_f821} undefined-name(s), {_f401} unused-import(s) -> -{_pen}")
+        # Security SAST (bandit): HIGH findings -15, MEDIUM -5 (industry scanner)
+        _b = subprocess.run([sys.executable, "-m", "bandit", "-q", "-f", "json", _lt],
+                            capture_output=True, text=True, timeout=40)
+        if _b.returncode in (0, 1):
+            try:
+                _bres = json.loads(_b.stdout or "{}").get("results", [])
+                _hi = sum(1 for _r0 in _bres if _r0.get("issue_severity") == "HIGH")
+                _me = sum(1 for _r0 in _bres if _r0.get("issue_severity") == "MEDIUM")
+                _bpen = 15 * _hi + 5 * _me
+                if _bpen:
+                    s -= _bpen
+                    m["bandit_penalty"] = _bpen
+                    log("reward", f"Bandit: {_hi} HIGH, {_me} MEDIUM security finding(s) -> -{_bpen}")
+            except Exception:
+                pass
+        try: os.remove(_lt)
+        except OSError: pass
     except Exception:
         pass
     base = s
