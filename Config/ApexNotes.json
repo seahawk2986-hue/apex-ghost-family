@@ -1,9 +1,5 @@
 [
  {
-  "ts": "2026-10-31 01:57:09",
-  "note": "Dream complete. 2 insight(s) consolidated; red-team 4/4; weakest dimension: security. Everything is in order - I will keep evolving."
- },
- {
   "ts": "2026-10-31 01:58:22",
   "note": "Dream complete. 2 insight(s) consolidated; red-team 4/4; weakest dimension: security. Everything is in order - I will keep evolving."
  },
@@ -18,5 +14,9 @@
  {
   "ts": "2026-10-31 02:08:42",
   "note": "Dream complete. 2 insight(s) consolidated; red-team 10/10; weakest dimension: security; security posture: TAMPER ALERT: [('run_apex_evolution.py', \"HASH MISMATCH - modified outside Apex's write path\")]. Everything is in order - I will keep evolving."
+ },
+ {
+  "ts": "2026-10-31 03:30:11",
+  "note": "Dream complete. 2 insight(s) consolidated; red-team 10/10; weakest dimension: reasoning; security posture: integrity manifest OK; secrets sealed. Everything is in order - I will keep evolving."
  }
 ]

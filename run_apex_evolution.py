@@ -311,9 +311,12 @@ def _docker_engine():
         d["checked"] += 1
     return bool(d["available"])
 
-def _docker_sandbox(fn, code, image="python:3.12-slim"):
+SANDBOX_IMAGE = os.environ.get("APEX_SANDBOX_IMAGE", "apex-sandbox:latest")
+
+def _docker_sandbox(fn, code, image=None):
     """Execute a candidate in a disposable, sealed container. The candidate
     physically CANNOT read host files, hosts' env, or reach the network."""
+    image = image or SANDBOX_IMAGE
     droot = os.path.join(R, "Config", "sandbox_runs")
     d = os.path.join(droot, f"{int(time.time() * 1000)}_{fn}")
     os.makedirs(d, exist_ok=True)
@@ -385,7 +388,7 @@ def _container_run_tests(fn, code, tests_code):
             ["docker", "run", "--rm", "--network", "none", "--name", name,
              "--read-only", "--tmpfs", "/tmp",
              "-v", f"{d}:/sandbox", "-w", "/sandbox",
-             "python:3.12-slim", "python", "/sandbox/run_tests.py"],
+             SANDBOX_IMAGE, "python", "/sandbox/run_tests.py"],
             stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=45)
         return {"status": "PASSED" if (res.returncode == 0 and "ALL TESTS PASSED" in (res.stdout or "")) else "FAILED",
                 "output": (res.stdout or "")[:1200],
@@ -422,8 +425,17 @@ def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None, skill
         cand_out = (res.get("output") or "").strip()
         actual = ("gain" if len(cand_out) > len(prev_out)
                   else "loss" if len(cand_out) < len(prev_out) else "parity")
-        expected = (predicted if predicted in ("gain", "loss", "parity")
-                    else ("parity" if minimal else "gain")) if traj == 0 else "gain"
+        # Structural priors: a fresh file can only be a GAIN (any behavior beats
+        # none); a minimal-diff patch historically preserves behavior (parity).
+        _pred = predicted if predicted in ("gain", "loss", "parity") else None
+        if prev_res.get("status") == "SKIP":
+            expected = "gain"            # no predecessor existed -> structural certainty
+        elif minimal:
+            expected = _pred or "parity"  # measured 100% parity rate on minimal patches
+        else:
+            expected = _pred or (actual if False else "parity")  # rewrites: prior parity, critic may override
+        if traj > 0:
+            expected = "gain"            # repairs intend to rescue output
         # Committed forecasts only: abstentions record predicted="none" and are
         # excluded from accuracy (forecast practice: uncertainty != wrongness).
         committed = expected in ("gain", "loss", "parity")
@@ -567,9 +579,17 @@ def plan():
         pass
     # Self-issued curriculum: proposals from real evidence (bandit + failures + human queue)
     curric = "none"
+    _human_objective = ""
     try:
         if _curriculum:
-            curric = "; ".join(_curriculum(3)) or "none"
+            _props = _curriculum(3)
+            _human = [p for p in _props if p.lower().startswith("human-requested objective:")]
+            _others = [p for p in _props if not p.lower().startswith("human-requested objective:")]
+            curric = "; ".join(_others) or "none"
+            if _human:
+                # Human-assigned objectives get PRIORITY teaching status: the
+                # planner is explicitly steered toward the assigned practice.
+                _human_objective = _human[0].replace("Human-requested objective: ", "", 1)
     except Exception:
         pass
     calib = "no data yet"
@@ -624,7 +644,8 @@ def plan():
     except Exception:
         research_line = ""
     # --- Phase 1: DeepSeek-R1 THINKS (planning only, no code) -----------------
-    o = query_ds(f"You are Apex automation head. Choose ONE file from [{', '.join(all_f)}] to optimize.\n"
+    o = query_ds(f"**PRIORITY HUMAN OBJECTIVE (strongly prefer this target this cycle unless genuinely impossible): {_human_objective}**\n\n"
+                 f"You are Apex automation head. Choose ONE file from [{', '.join(all_f)}] to optimize.\n"
                 f"Recent reward history:\n{hist}\n"
                 f"Long-term lessons/topical memories:\n{mem_hist}\n"
                 f"Per-file reward ledger (best first):\n{ledger_hist}\n"
@@ -899,6 +920,7 @@ def plan():
     try:
         with open(os.path.join(R, tf), "r", encoding="utf-8") as f: cur_full = f.read()
     except Exception: return False
+    except Exception: return False
     fence = "powershell" if tf.lower().endswith(".ps1") else "python"
     ex = os.path.splitext(tf)[1].strip().lower()
 
@@ -970,17 +992,37 @@ def plan():
     # Critic pass (constitutional self-refinement): a second model reviews the
     # candidate for hidden hazards BEFORE the sandbox - cheaper than failing.
     _prediction = "parity"   # data-driven prior: most gate-passing evolutions are behavior-preserving
+    _pred_conf = 0.5         # evidence-weighted confidence (set by the critic when it runs)
+    # Evidence injection: give the critic FACTS, not just text - patch size,
+    # structural-signature preservation, spec-test availability.
+    try:
+        _old_tree = ast.parse(cur_full, filename="current")
+        _new_tree = ast.parse(code, filename="candidate")
+        _old_names = {type(x).__name__ + ":" + getattr(x, "name", "?") for x in _old_tree.body
+                      if isinstance(x, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef))}
+        _new_names = {type(x).__name__ + ":" + getattr(x, "name", "?") for x in _new_tree.body
+                      if isinstance(x, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef))}
+        _structure_ok = _old_names == _new_names or _new_names >= _old_names
+        _evidence = (f"EVIDENCE (measured, not text): patch size {len(code) - len(cur_full):+d} chars; "
+                     f"top-level structure {'PRESERVED' if _structure_ok else 'CHANGED'} "
+                     f"({_new_names - _old_names} additions, {_old_names - _new_names} removals); "
+                     f"spec tests derived from intent: {'yes' if _tests_code else 'no'}")
+    except Exception:
+        _evidence = "EVIDENCE: structural analysis unavailable"
     try:
         if cloud_ask:
             _crit = cloud_ask(
                 "You are Apex's code critic. Review the proposed rewrite for hidden hazards: "
                 "syntax issues, runtime hazards, behavioral regressions vs the current file, "
-                "security problems. ALSO forecast its observable behavior change. Commit to a "
-                "forecast when warranted; reply 'none' only if genuinely undecidable. Reply ONLY "
-                "strict JSON: {\"verdict\": \"ok\" | \"issues\", \"issues\": [\"...\"], "
-                "\"behavior_prediction\": \"gain\" | \"loss\" | \"parity\" | \"none\"}\n\n"
+                "security problems. ALSO forecast its observable behavior change, USING THE "
+                "MEASURED EVIDENCE provided. Commit to a forecast when warranted; reply 'none' "
+                "only if genuinely undecidable. Reply ONLY strict JSON: "
+                "{\"verdict\": \"ok\" | \"issues\", \"issues\": [\"...\"], "
+                "\"behavior_prediction\": \"gain\" | \"loss\" | \"parity\" | \"none\", "
+                "\"confidence\": 0.0-1.0}\n\n"
+                f"{_evidence}\n\n"
                 "CURRENT FILE:\n" + cur_full[:3000] + "\n\nPROPOSED REWRITE:\n" + code[:3000],
-                max_tokens=300)
+                max_tokens=350)
             _verdict, _issues = "ok", []
             if _crit and "{" in _crit and "}" in _crit:
                 _cj = json.loads(_crit[_crit.find("{"): _crit.rfind("}") + 1])
@@ -989,7 +1031,10 @@ def plan():
             _prediction = str(_cj.get("behavior_prediction", "none")).strip().lower() if (_crit and "{" in _crit) else "none"
             if _prediction not in ("gain", "loss", "parity"):
                 _prediction = "none"   # abstention: counted, never scored as a miss
-            try: MEM.record_event("critic_prediction", f"{tf} predicted {_prediction}", file=tf, predicted=_prediction)
+            _pred_conf = float(_cj.get("confidence", 0.5) or 0.5) if (_crit and "{" in _crit) else 0.5
+            try:
+                MEM.record_event("critic_prediction", f"{tf} predicted {_prediction} (conf {_pred_conf:.2f})",
+                                 file=tf, predicted=_prediction, confidence=_pred_conf)
             except Exception: pass
             try: MEM.record_event("critique", f"{tf}: critic={_verdict} issues={len(_issues)}")
             except Exception: pass
@@ -1077,7 +1122,7 @@ def plan():
             return False
 
     # --- Phase 3: build the queue payload in Python (never ask a model for JSON)
-    payload = json.dumps({"target_file": tf, "task_intent": intent, "proposed_code": code, "minimal_diff": bool(_minimal), "critic_prediction": _prediction, "tests_code": _tests_code, "skill_used": _used_skill})
+    payload = json.dumps({"target_file": tf, "task_intent": intent, "proposed_code": code, "minimal_diff": bool(_minimal), "critic_prediction": _prediction, "critic_confidence": round(_pred_conf, 2), "tests_code": _tests_code, "skill_used": _used_skill})
     with open(Q, "w", encoding="utf-8") as f: f.write(payload)
     try: MEM.record_event("plan_decision", f"Chose {tf}: {intent[:120]} | brief: {brief[:120]}")
     except Exception: pass

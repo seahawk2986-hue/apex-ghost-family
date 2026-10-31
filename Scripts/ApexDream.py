@@ -148,6 +148,16 @@ def main():
             sec_status = "integrity manifest OK; secrets sealed"
     except Exception:
         pass
+    # Toast: the dream speaks to Andrew's desktop.
+    try:
+        subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass",
+                        "-File", os.path.join(R, "Scripts", "ApexToast.ps1"),
+                        "-Title", "APEX dream complete",
+                        "-Message", (f"{made} insight(s) consolidated; red-team {passed}/{len(drills)}; "
+                                     f"weakest: {weakest}. Checkpoint saved.")],
+                       capture_output=True, timeout=30)
+    except Exception:
+        pass
     # Dynamic self-model: the identity card carries MEASURED capabilities,
     # refreshed from real benchmark data (not static descriptions).
     try:

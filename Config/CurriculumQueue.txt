@@ -1,0 +1,1 @@
+﻿Human-requested objective: implement the Calculator class in TrainingCalc.py (add/subtract/multiply/divide, divide-by-zero raises ZeroDivisionError, history strings, clear method) - a training exercise; satisfy the docstring spec.
