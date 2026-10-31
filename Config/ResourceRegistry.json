@@ -1,0 +1,22 @@
+﻿{
+  "ActiveProvider": "Local-Ollama-Fallback",
+  "CurrentMonthAccumulatedSpendUSD": 0.0,
+  "MonthlySpendLimitUSD": 5.0,
+  "LastDaemonScan": null,
+  "Pools": [
+    {
+      "ProviderName": "Local-Ollama-Fallback",
+      "Status": "Active",
+      "EndpointUrl": "http://localhost:11434",
+      "QuotaRemaining": 9999,
+      "CostPerMillionTokensUSD": 0.0
+    },
+    {
+      "ProviderName": "LM-Studio-Local",
+      "Status": "Active",
+      "EndpointUrl": "http://localhost:1234",
+      "QuotaRemaining": 9999,
+      "CostPerMillionTokensUSD": 0.0
+    }
+  ]
+}

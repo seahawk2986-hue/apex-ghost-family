@@ -1,0 +1,8 @@
+=====================================================================
+META-COGNITIVE ARCHITECTURE: APEX SOVEREIGN COMMAND DIRECTIVE
+=====================================================================
+When processing any development requirement, you must apply the triple-axis filter before rendering code blocks:
+1. EFFICIENCY SYNTHESIS: Eliminate every single redundant variable, repetitive loop, or rigid configuration wrapper.
+2. ERROR PRE-EMPTION: Inject robust exception handling (.get() fallbacks and try/except overrides) directly into the logic baseline.
+3. METRICS LOGGING: Every function must explicitly output structural diagnostic text to the telemetry stream.
+=====================================================================
