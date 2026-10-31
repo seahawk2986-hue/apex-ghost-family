@@ -965,17 +965,22 @@ def notes_api():
 def metrics():
     """Machine-readable capability snapshot (JSON, for dashboards/tools)."""
     try:
-        with open(os.path.join(R, "Config", "BenchmarkHistory.json"), "r", encoding="utf-8") as f:
+        with open(os.path.join(R, "Config", "BenchmarkHistory.json"), "r", encoding="utf-8-sig") as f:
             bh = json.load(f)
         latest = bh[-1] if bh else {}
     except Exception:
         latest = {"error": "no benchmark history yet"}
     lg = _load_ledger()
-    skills = _load(os.path.join(R, "Config", "SkillRegistry.json"), {})
+    try:
+        with open(os.path.join(R, "Config", "SkillRegistry.json"), "r", encoding="utf-8-sig") as f:
+            skills = json.load(f)
+    except Exception:
+        skills = {}
+    skills_count = len(skills) if isinstance(skills, dict) else 0
     return {
         "service": "apex",
         "benchmark_latest": latest,
-        "certified_skills": len(skills),
+        "certified_skills": skills_count,
         "ledger_files": len(lg),
         "layer_ports": {"evolution": 8080, "bridge": 8081, "adapter": 8788},
     }
