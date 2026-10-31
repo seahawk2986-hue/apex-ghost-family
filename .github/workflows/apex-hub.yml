@@ -29,5 +29,5 @@ jobs:
           git config user.name "apex-ghost-hub"
           git config user.email "hub@apex.family"
           git add hub_round_result.json hub_packet_home.json family/
-          git diff --cached --quiet || git commit -m "grain: hub harvest ${GITHUB_RUN_NUMBER} (manifest-digested)"
+          git diff --cached --quiet || git commit -m "grain: hub harvest ${GITHUB_RUN_NUMBER} (manifest-digested) [skip ci]"
           git push
