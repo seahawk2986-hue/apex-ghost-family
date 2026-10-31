@@ -1,7 +1,25 @@
-﻿import os, sys, json, ast, time, shutil, re, subprocess, threading
+import os, sys, json, ast, time, shutil, re, subprocess, threading, secrets
+from collections import defaultdict, deque
 from pydantic import BaseModel
-from fastapi import FastAPI, BackgroundTasks
+from fastapi import FastAPI, BackgroundTasks, Request
+from fastapi.responses import JSONResponse
 import uvicorn, requests
+
+# ---- security gate: token auth + rate limit + body cap ----------------------
+# the 8080 surface spawns gym/farm subprocesses on chat matches, so every
+# mutation requires X-Apex-Key header OR apex_key cookie (the browser gets the
+# cookie automatically at GET /talk - no JS changes needed). Canonical key file
+# is Config\apex_api.key; it is generated once and never printed to logs.
+_APEX_ROOT = KEY_FILE = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
+KEY_FILE = os.path.join(_APEX_ROOT, "Config", "apex_api.key")
+try:
+    APEX_KEY = open(KEY_FILE, encoding="utf-8-sig").read().strip()
+except Exception:
+    APEX_KEY = ""
+APEX_KEY = os.getenv("APEX_API_KEY") or APEX_KEY
+_POST_RATE = defaultdict(lambda: deque(maxlen=40))     # 40 mutations/min/IP
+_GET_RATE = defaultdict(lambda: deque(maxlen=300))     # 300 reads/min/IP
+_BODY_CAP = 32 * 1024
 
 R = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 from ApexMemory import ApexMemory
@@ -60,21 +78,57 @@ def query_ds(p):
         if cloud_ask: return cloud_ask(p, max_tokens=700)
     return ""
 
+# Identity anchor for every model call in the chat brain.
+# Honest AND brand-correct: Apex is the agent; Qwen3-8B / Qwen2.5-14B are engines it runs on.
+SYSTEM_IDENTITY = (
+    "You are Apex, a personal autonomous software agent created by Andrew HIKE (your founder and owner) and working for Andrew "
+    "(and the room partners he authorizes). You are NOT a generic assistant and NOT plain Qwen: "
+    "you are Apex. Your reasoning engine is Qwen3-8B and your coding engine is Qwen2.5-14B, both "
+    "running locally on Andrew's machine via LM Studio - say so openly when asked for details, "
+    "the way you'd name a tool you're using. When asked what you are or which model runs you, "
+    "answer in first person as Apex (optionally crediting your engines), never as a stock Qwen "
+    "assistant, and never as a cloud model. Stay direct, honest, and concise; never claim "
+    "unverified results."
+)
+
+LAST_BRAIN_REASON = "ok (no failed calls this session)"
+
 def query_qw(p, schema=False):
-    payload = {"model": "qwen2.5-coder-7b-instruct", "messages": [{"role": "user", "content": p}], "temperature": 0.2, "stream": False}
+    global LAST_BRAIN_REASON
+    payload = {"model": "qwen3-8b", "messages": [{"role": "system", "content": SYSTEM_IDENTITY}, {"role": "user", "content": p}], "temperature": 0.2, "stream": False}
     if schema: payload["response_format"] = {"type": "json_object"}
-    payload["max_tokens"] = 1600
-    try:
-        r = requests.post(U, json=payload, timeout=120.0)
-        if r.status_code == 200:
-            choices = r.json().get("choices", [])
-            if choices and isinstance(choices, list):
-                return choices[0].get("message", {}).get("content", "").strip()
-        log("system", f"Qwen HTTP {r.status_code} - bursting coding task to cloud lanes")
-        if cloud_ask: return cloud_ask(p, max_tokens=1600)
-    except Exception as e:
-        log("system", f"Qwen drop: {e} - bursting coding task to cloud lanes")
-        if cloud_ask: return cloud_ask(p, max_tokens=1600)
+
+    def _call(mt):
+        payload["max_tokens"] = mt
+        try:
+            r = requests.post(U, json=payload, timeout=300.0)
+            if r.status_code == 200:
+                choice = (r.json().get("choices") or [{}])
+                c = (choice[0].get("message", {}) or {}).get("content", "") or ""
+                return "ok", c.strip()
+            return f"LM Studio HTTP {r.status_code}", ""
+        except Exception as e:
+            return f"local brain unreachable: {str(e)[:90]}", ""
+
+    # reasoning models can burn the first token budget on think tokens (retry
+    # bigger); HTTP 400 can be the TTL-expiry/JIT-reload race (wait, re-call)
+    reasons, text = [], ""
+    for mt, wait_s in ((1800, 0.0), (2600, 0.0), (1800, 5.0), (2600, 0.0)):
+        if wait_s:
+            time.sleep(wait_s)
+        reason, text = _call(mt)
+        if text:
+            LAST_BRAIN_REASON = f"local qwen3-8b ok (max_tokens={mt})"
+            return text
+        reasons.append(reason if reason != "ok" else "empty content")
+    LAST_BRAIN_REASON = " | ".join(reasons[-2:])
+    log("system", f"brain drop ({LAST_BRAIN_REASON}) - bursting to cloud lanes")
+    if cloud_ask:
+        cr = cloud_ask(p, max_tokens=1600)
+        if cr:
+            LAST_BRAIN_REASON += " -> served by cloud lane"
+            return cr
+        LAST_BRAIN_REASON += " -> cloud lanes also returned empty"
     return ""
 
 def _apply_patches(cur_full, patch_out):
@@ -1152,6 +1206,53 @@ def plan():
 
 app = FastAPI()
 
+
+@app.middleware("http")
+async def apex_gate(request: Request, call_next):
+    """Auth + rate limit + body cap. Fail-closed: if no key is provisioned the
+    gate BOOTSTRAPS one at first boot, then blocks every unauthenticated write."""
+    global APEX_KEY
+    if not APEX_KEY:
+        APEX_KEY = secrets.token_urlsafe(32)
+        try:
+            with open(KEY_FILE, "w", encoding="utf-8") as f:
+                f.write(APEX_KEY)
+            try:
+                os.chmod(KEY_FILE, 0o600)
+            except OSError:
+                pass
+        except OSError:
+            pass
+    ip = (request.client.host if request.client else "local") or "local"
+    now = time.monotonic()
+    path = request.url.path
+    if request.method in ("POST", "PUT", "DELETE"):
+        cl = int(request.headers.get("content-length", "0") or "0")
+        if cl > _BODY_CAP:
+            return JSONResponse({"error": "body too large"}, status_code=413)
+        if path in ("/talk/api", "/chat"):
+            q = _POST_RATE[ip]
+            while q and now - q[0] > 60:
+                q.popleft()
+            if len(q) >= 40:
+                return JSONResponse({"error": "rate limited"}, status_code=429)
+            q.append(now)
+            supplied = request.headers.get("x-apex-key", "") or (
+                request.cookies.get("apex_key", ""))
+            if not APEX_KEY or supplied != APEX_KEY:
+                return JSONResponse({"error": "Unauthorized - Apex gate"}, status_code=401)
+    else:
+        q = _GET_RATE[ip]
+        while q and now - q[0] > 60:
+            q.popleft()
+        if len(q) >= 300:
+            return JSONResponse({"error": "rate limited"}, status_code=429)
+        q.append(now)
+    resp = await call_next(request)
+    resp.headers["X-Content-Type-Options"] = "nosniff"
+    resp.headers["Referrer-Policy"] = "no-referrer"
+    return resp
+
 def extract_friend_directive(friend_text: str):
     raw_response = query_qw(f"Extract technical directives or code rules from this packet: {friend_text}. Output ONLY raw text content.")
     with open(I, "w", encoding="utf-8") as f: f.write(raw_response)
@@ -1186,7 +1287,20 @@ def talk_page():
         html = html.replace("TRAINING_DIRECTIVE_PLACEHOLDER", _directive_js)
     except OSError:
         html = "<html><body><h2>APEX</h2><p>chat page file missing - see talk_page.html</p></body></html>"
-    return HTMLResponse(html)
+    resp = HTMLResponse(html)
+    # the page's own fetches are same-origin, so this cookie authenticates them
+    # without touching page JS; httponly keeps the key away from page scripts
+    if APEX_KEY:
+        try:
+            resp.set_cookie("apex_key", APEX_KEY, httponly=True,
+                            samesite="strict", max_age=7 * 24 * 3600)
+        except Exception:
+            pass
+    resp.headers["X-Content-Type-Options"] = "nosniff"
+    resp.headers["Referrer-Policy"] = "no-referrer"
+    resp.headers["Content-Security-Policy"] = ("default-src 'self'; script-src 'self' 'unsafe-inline'; "
+                                               "connect-src 'self'; style-src 'self' 'unsafe-inline'")
+    return resp
 
 @app.get("/talk/history")
 def talk_history():
@@ -1217,7 +1331,14 @@ def talk_status():
         adapter = (r.status_code == 200)
     except Exception:
         adapter = False
-    return {"brain": brain, "adapter": adapter,
+    money = 0.0
+    try:
+        _cl = json.load(open(r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed\Config\CryptoLedger.json",
+                             encoding="utf-8-sig"))
+        money = float(_cl.get("earned", 0)) - float(_cl.get("spent", 0))
+    except Exception:
+        money = 0.0
+    return {"brain": brain, "adapter": adapter, "money_usdc": round(money, 2),
             "layers": True,  # this route IS the evolution layer
             "directive": ("Apex, tonight you proved your reasoning is your weakest measured "
                           "dimension - and I want that fixed properly. I'm not asking for a verbal "
@@ -1310,6 +1431,17 @@ def talk_api(t: TalkMsg):
     ltxt = "\n".join(f"- {l['text'][:140]}" for l in lessons) or "none"
     skill_hits = ""
     try:
+        # HARVEST-USE: semantic retrieval over the mined index first - the
+        # frontier RAG pattern; keyword scan stays as the backup
+        sys.path.insert(0, os.path.join(R, "Scripts"))
+        import HarvestUse as _hu
+        _hits = _hu.consult(msg, 2)
+        if _hits:
+            skill_hits = "\nSEMANTIC SKILL HITS (HarvestUse.consult):\n" + "\n".join(
+                "- " + x["skill"] + " (" + x["repo"] + ") sim=" + str(x["score"]) for x in _hits)
+    except Exception:
+        pass
+    try:
         sys.path.insert(0, os.path.join(R, "Scripts"))
         import SkillLibrary as _sl
         words = set(re.findall(r"[a-z]{5,}", msg.lower()))
@@ -1327,10 +1459,23 @@ def talk_api(t: TalkMsg):
         pass
     selfcard = ""
     try:
+        # compose the self-model from its meaningful blocks instead of raw prefix
+        # truncation (engines block used to be cut off below [:700], so Apex could
+        # not even see what hardware/engines it runs on)
         with open(os.path.join(R, "Config", "ApexSelf.json"), "r", encoding="utf-8") as f:
-            selfcard = f.read()[:700]
+            _self = json.load(f)
+        _pref = ("identity", "role", "engines", "hardware", "capabilities",
+                 "north_star", "gym", "library")
+        selfcard = " | ".join(
+            f"{k}: {json.dumps(_self[k], ensure_ascii=False)[:450]}"
+            for k in _pref if _self.get(k))
+        selfcard = selfcard[:2400]
     except Exception:
-        pass
+        try:
+            with open(os.path.join(R, "Config", "ApexSelf.json"), "r", encoding="utf-8") as f:
+                selfcard = f.read()[:700]
+        except Exception:
+            pass
     prompt = (
         "You are Apex, talking privately with Andrew - your creator, and the human who runs "
         "your hardware. Andrew is NOT the room coordinator; this is your personal channel. "
@@ -1349,8 +1494,23 @@ def talk_api(t: TalkMsg):
             MEM.remember(f"Andrew asked me to remember: {msg[:300]}", kind="lesson")
     except Exception:
         pass
-    return {"reply": reply or ("All engines are busy right now, Andrew - the pacing brakes may "
-                               "be active. Try again in a minute."),
+    if not reply:
+        # no more mystery canned message: disclose exactly why the brain failed,
+        # measure the RAM, and give the actionable recovery step (REPORT-HONESTY)
+        ram_gb = -1.0
+        try:
+            import psutil as _ps
+            ram_gb = _ps.virtual_memory().available / (1024 ** 3)
+        except Exception:
+            pass
+        diag = f"HONEST DIAGNOSTIC: {LAST_BRAIN_REASON}"
+        if ram_gb >= 0:
+            diag += f" | RAM free ~{ram_gb:.1f} GB"
+        diag += ". If it repeats: close Chrome/Steam for RAM headroom, then run Scripts\\ApexServe.ps1 Chat to re-pin my brain."
+        return {"reply": ("All engines are busy right now, Andrew - the pacing brakes may be "
+                          f"active. Try again in a minute.\n\n{diag}"),
+                "recall": [{"text": l["text"][:140]} for l in lessons]}
+    return {"reply": reply,
             "recall": [{"text": l["text"][:140]} for l in lessons]}
 
 @app.get("/notes")
