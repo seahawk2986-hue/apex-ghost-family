@@ -1,12 +1,12 @@
 {
- "shift": 10,
- "wave": 1,
+ "shift": 11,
+ "wave": 2,
  "board": {
   "backlog": 1455,
   "consumed": 2098,
   "skills": 245,
   "points": 45145.0,
   "money": 0.0,
-  "ram": 3.94
+  "ram": 3.99
  }
 }
