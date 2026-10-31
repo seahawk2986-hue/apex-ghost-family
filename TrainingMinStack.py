@@ -1,22 +1,28 @@
-"""
-TRAINING OBJECTIVE #2 (human-assigned): implement a MinStack in this file.
-
-Implement a MinStack class satisfying:
-  - push(x), pop() (pop returns the popped value), top(), and get_min()
-  - get_min() is O(1) time and O(n) space at most
-  - pop/top/get_min on an empty stack raise IndexError with clear messages
-  - handle int and float values
-
-Current state: intentionally incomplete - Apex, apply the full pipeline:
-spec-first tests from this objective, then implement to satisfy them.
-"""
-
 class MinStack:
     """A stack with O(1) minimum retrieval."""
 
     def __init__(self):
         self._stack = []
+        self._min_stack = []
 
-    # TODO: implement push, pop, top, get_min per the objective.
     def push(self, x):
-        raise NotImplementedError("training objective - implement me")
+        if not self._stack or x <= self._min_stack[-1]:
+            self._min_stack.append(x)
+        self._stack.append(x)
+
+    def pop(self):
+        if not self._stack:
+            raise IndexError("pop from empty stack")
+        if self._stack[-1] == self._min_stack[-1]:
+            self._min_stack.pop()
+        return self._stack.pop()
+
+    def top(self):
+        if not self._stack:
+            raise IndexError("top from empty stack")
+        return self._stack[-1]
+
+    def get_min(self):
+        if not self._min_stack:
+            raise IndexError("get_min from empty stack")
+        return self._min_stack[-1]
