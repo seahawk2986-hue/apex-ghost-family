@@ -90,6 +90,13 @@ def main():
         with open(tmp, "w", encoding="utf-8") as f:
             json.dump(selfcard, f, indent=1)
         os.replace(tmp, self_path)
+        # Re-seal what we legitimately wrote (keeps tamper detection exact)
+        try:
+            sys.path.insert(0, os.path.join(R, "Scripts"))
+            from ApexGuard import seal_file as _seal
+            _seal(os.path.join(R, "Config", "ApexSelf.json"))
+        except Exception:
+            pass
     except Exception:
         pass
     summary = {
