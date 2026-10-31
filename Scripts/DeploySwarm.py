@@ -2,6 +2,9 @@
 Called by the hourly scheduled task; each shard self-gates (RAM >= 2 GB) and
 dissolves when its territory's round ends."""
 import json
+import sys as _sys
+_sys.path.insert(0, r"C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts")
+import Births
 import time
 import os
 import subprocess
@@ -103,7 +106,7 @@ for shard, note in plan:
     env = dict(os.environ, APEX_SHARD=str(shard), APEX_FLEET=str(fleet_n), **_variant_env(shard))
     _c0 = subprocess.Popen(
         [PY, "-c", "import sys; sys.path.insert(0, r'" + ROOT + r"\Scripts');"
-         "import SwarmOrchestrator as so; so.main(8, None, False);"
+         "import SwarmOrchestrator as so; so.main(10, None, False);"
          "import sys as _ss; _ss.path.insert(0, r'" + ROOT + r"\Scripts');"
          "import CryptoEconomy as ce; ce.bounty_scan(6); ce.rung1_issue_lane()",
          "print('[DUAL-MISSION] gold round + economy scan complete')"],
@@ -137,6 +140,10 @@ try:
         except Exception as e:
             print(f"grain line shard {shard}: {str(e)[:70]}")
         print(f"grain line: shard {shard} -> {json.dumps(r1 or {})[:120]}")
+        try:
+            Births.death(shard, "child")   # the census: dissolved, not lost
+        except Exception:
+            pass
     try:
         print("CONVOY:", json.dumps(_gl.guard_convoy())[:260])
     except Exception:
