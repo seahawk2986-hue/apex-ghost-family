@@ -1,5 +1,5 @@
 name: ApexHubWorker
-description: 'Apex Ghost Hub - off-box mining (consent-gated, packet-driven)'
+
 on:
   push:
     branches: [main]
@@ -16,13 +16,10 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: The hub's round (script-based: consent check + packet + polite mining)
-        run: |
-          python3 family/hub_round.py
-      - name: Upload the family's harvest (the grain returns)
+      - name: mining round
+        run: python3 family/hub_round.py
+      - name: grain home
         uses: actions/upload-artifact@v4
         with:
           name: apex-hub-harvest
-          path: |
-            hub_round_result.json
-            hub_packet_home.json
+          path: hub_round_result.json
