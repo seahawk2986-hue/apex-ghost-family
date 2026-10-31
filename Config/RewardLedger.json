@@ -11,9 +11,9 @@
  "apexpacing.py": {
   "best": 105.0,
   "best_base": 90.0,
-  "attempts": 1,
+  "attempts": 2,
   "successes": 1,
-  "streak": 1,
+  "streak": 0,
   "parity_total": 1,
   "parity_hits": 1
  },
@@ -30,20 +30,20 @@
  "ApexInstaller.py": {
   "best": 0.0,
   "best_base": 0.0,
-  "attempts": 2,
+  "attempts": 3,
   "successes": 0,
   "streak": 0,
-  "parity_total": 1,
-  "parity_hits": 1
+  "parity_total": 2,
+  "parity_hits": 2
  },
  "test_reward.py": {
   "best": 105.0,
   "best_base": 90.0,
-  "attempts": 3,
+  "attempts": 11,
   "successes": 1,
-  "streak": 1,
-  "parity_total": 1,
-  "parity_hits": 1,
+  "streak": 0,
+  "parity_total": 2,
+  "parity_hits": 2,
   "ok_min": 1
  },
  "TrainingCalc.py": {
@@ -57,9 +57,24 @@
  "TrainingMinStack.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 2,
+  "attempts": 6,
   "successes": 1,
   "streak": 0,
   "ok_full": 1
+ },
+ "TrainingLogParser.py": {
+  "best": 103.0,
+  "best_base": 90.0,
+  "attempts": 5,
+  "successes": 1,
+  "streak": 0,
+  "ok_full": 1,
+  "parity_total": 4,
+  "parity_hits": 4
+ },
+ "Scripts/ApexGym.py": {
+  "best": 100,
+  "streak": 1,
+  "attempts": 243
  }
 }

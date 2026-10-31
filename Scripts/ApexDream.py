@@ -171,6 +171,40 @@ def main():
     except Exception:
         pass
 
+    # Reasoning gym: bounded self-training round (drills -> calibration rows)
+    try:
+        gym_proc = subprocess.run([sys.executable, os.path.join(R, "Scripts", "ApexGym.py"), "--minutes", "8", "--traits", "auto"], capture_output=True, text=True, timeout=720)
+        gym_tail = (gym_proc.stdout or "").strip().splitlines()[-1:]
+        _gym_note = "GYM: " + (gym_tail[0] if gym_tail else "no output")
+    except Exception as _e_gym:
+        _gym_note = "GYM skipped: " + str(_e_gym)[:80]
+    try:
+        import ApexMemory
+        ApexMemory.ApexMemory().record_event("training", _gym_note)
+    except Exception:
+        pass
+
+    # Curiosity drive: nightly cloud-farming round (open sources, vetted, rewarded)
+    try:
+        seek = subprocess.run([sys.executable, os.path.join(R, "Scripts", "SeekGrowth.py"), "--minutes", "6"],
+                              capture_output=True, text=True, timeout=900)
+        seek_tail = (seek.stdout or "").strip().splitlines()[-1:]
+        _seek_note = "SEEK: " + (seek_tail[0] if seek_tail else "farmed")
+        ApexMemory.ApexMemory().record_event("training", _seek_note)
+    except Exception as _e_seek:
+        _seek_note = "SEEK skipped: " + str(_e_seek)[:80]
+
+    # Autonomy: self-directed decisions (TaskDAG execution, weakest-train,
+    #                      farm, goal restatement - all self-initiated)
+    try:
+        _il = subprocess.run([sys.executable, os.path.join(R, "Scripts", "InitiativeLoop.py"), "--max", "2"],
+                             capture_output=True, text=True, timeout=600)
+        _il_tail = (_il.stdout or "").strip().splitlines()[-3:]
+        for _il_ln in _il_tail:
+            ApexMemory.ApexMemory().record_event("initiative", _il_ln)
+    except Exception:
+        pass
+
     # Security-ops round: supply-chain audit, backup rotation, disk pressure
     sec_ops = {}
     try:

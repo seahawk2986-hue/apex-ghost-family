@@ -1,4 +1,4 @@
-import os, sys, json, ast, time, shutil, re, subprocess, threading
+﻿import os, sys, json, ast, time, shutil, re, subprocess, threading
 from pydantic import BaseModel
 from fastapi import FastAPI, BackgroundTasks
 import uvicorn, requests
@@ -1233,11 +1233,98 @@ def talk_api(t: TalkMsg):
     msg = (t.message or "").strip()[:4000]
     if not msg:
         return {"reply": "Say something, Andrew - I'm listening."}
+    if re.match(r"\s*(run the gym|go train|gym)\b", msg.lower()):
+        try:
+            import threading as _th
+            _th.Thread(target=subprocess.run,
+                       args=([sys.executable, os.path.join(R, "Scripts", "ApexGym.py"),
+                              "--minutes", "3", "--traits", "auto"],),
+                       kwargs={"capture_output": True, "text": True, "timeout": 420},
+                       daemon=True).start()
+        except Exception:
+            return {"reply": "Tried to open the gym and failed - check Logs."}
+        return {"reply": "Gym opened - a short drill set is running now. Score and "
+                         "leaderboard rank update when I finish; misses become lessons "
+                         "in my memory."}
+    if re.search(r"\b(harvest|seek|farm|explore|find new|discover)\b", msg.lower()):
+        try:
+            import threading as _th2
+            _th2.Thread(target=subprocess.run,
+                        args=([sys.executable, os.path.join(R, "Scripts", "SeekGrowth.py"),
+                               "--minutes", "5"],),
+                        kwargs={"capture_output": True, "text": True, "timeout": 700},
+                        daemon=True).start()
+        except Exception:
+            return {"reply": "Tried to run the curiosity drive and failed - check Logs."}
+        return {"reply": "Curiosity drive running: discovering new MIT-licensed sources, "
+                         "vetting with bandit + compile, registering verified skills with "
+                         "SHA256 provenance. +100 per new source farmed. Score when done."}
+    if re.search(r"\b(skill session|skill drills?|python drills?)\b", msg.lower()):
+        try:
+            import threading as _th3
+            _th3.Thread(target=subprocess.run,
+                        args=([sys.executable, os.path.join(r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed",
+                                                            "apex_venv", "Scripts", "python.exe"),
+                               r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed\..\Apex-Adapter\run_skill_session.py"],),
+                        kwargs={"capture_output": True, "text": True, "timeout": 900},
+                        daemon=True).start()
+        except Exception:
+            return {"reply": "Tried to run a skill session and failed - check Logs."}
+        return {"reply": "Python-semantics skill session running: I forecast each drill's "
+                         "output BEFORE execution, get graded against ground truth, and "
+                         "misses become lessons in my memory. Calibration rows feed the "
+                         "benchmark. Results in Config/SkillSession.json."}
+    if re.match(r"\s*(what.s in your library|library stats)\b", msg.lower()):
+        try:
+            lib = json.load(open(os.path.join(R, "Config", "SkillLibrary.json"),
+                                 encoding="utf-8-sig"))
+            nsk = len(lib.get("skills", []))
+            cats = {}
+            for s0 in lib.get("skills", [])[:300]:
+                for imp in (s0.get("imports") or ["core"])[:1]:
+                    cats[imp] = cats.get(imp, 0) + 1
+            top = ", ".join(f"{k}: {v}" for k, v in sorted(cats.items(), key=lambda x: -x[1])[:6])
+            return {"reply": f"Skill library: {nsk} vetted skills (SHA-tracked, MIT sources). "
+                             f"Categories: {top}. Search via SkillLibrary.py; I consult "
+                             "it whenever a task outgrows my built-ins, and I earn points "
+                             "for every consult."}
+        except Exception:
+            return {"reply": "Library stats failed - check Config/SkillLibrary.json."}
+
+        try:
+            import threading as _th
+            _th.Thread(target=subprocess.run,
+                       args=([sys.executable, os.path.join(R, "Scripts", "ApexGym.py"),
+                              "--minutes", "3", "--traits", "auto"],),
+                       kwargs={"capture_output": True, "text": True, "timeout": 420},
+                       daemon=True).start()
+        except Exception:
+            return {"reply": "Tried to open the gym and failed - check Logs."}
+        return {"reply": "Gym opened - a short drill set is running now. Score and "
+                         "leaderboard rank update when I finish; misses become lessons "
+                         "in my memory."}
     try:
         lessons = MEM.recall(msg, k=3)
     except Exception:
         lessons = []
     ltxt = "\n".join(f"- {l['text'][:140]}" for l in lessons) or "none"
+    skill_hits = ""
+    try:
+        sys.path.insert(0, os.path.join(R, "Scripts"))
+        import SkillLibrary as _sl
+        words = set(re.findall(r"[a-z]{5,}", msg.lower()))
+        best = []
+        for _s0 in _sl.load()["skills"]:
+            hay = (_s0.get("skill", "") + " " + _s0.get("source_file", "") + " "
+                   + " ".join(_s0.get("imports", []))).lower()
+            if len(words & set(re.findall(r"[a-z]{3,}", hay))) >= 2:
+                best.append("- " + _s0["skill"] + " (" + _s0["source_repo"] + ")")
+            if len(best) >= 2:
+                break
+        if best:
+            skill_hits = "\nLIBRARY SKILLS AVAILABLE (search/show via SkillLibrary):\n" + "\n".join(best)
+    except Exception:
+        pass
     selfcard = ""
     try:
         with open(os.path.join(R, "Config", "ApexSelf.json"), "r", encoding="utf-8") as f:
@@ -1250,7 +1337,7 @@ def talk_api(t: TalkMsg):
         "Be direct, honest, concise. You may discuss your own architecture openly (see "
         "SELF-MODEL). Never claim results you have not verified. If Andrew asks you to "
         "remember something, acknowledge it plainly.\n\n"
-        f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n\n"
+        f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n\nLIBRARY SKILLS:{skill_hits}\n\n"
         f"ANDREW SAYS:\n{msg}\n\nREPLY:")
     reply = query_qw(prompt)
     if not reply and cloud_ask:

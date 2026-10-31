@@ -1,0 +1,94 @@
+{
+ "started": "2026-10-31 06:20:42",
+ "rows": [
+  {
+   "id": "mut_default",
+   "lane": "local/qwen3-8b",
+   "forecast": "[1]\n[1, 2]",
+   "actual": "[1]\n[1, 2]",
+   "match": true,
+   "truth_rc": 0
+  },
+  {
+   "id": "negfloor",
+   "lane": "groq/qwen3.8-27b",
+   "forecast": "-4\n-4",
+   "actual": "-4\n-4",
+   "match": true,
+   "truth_rc": 0
+  },
+  {
+   "id": "boolmath",
+   "lane": "local/qwen3-8b",
+   "forecast": "2\n0",
+   "actual": "2\n0",
+   "match": true,
+   "truth_rc": 0
+  },
+  {
+   "id": "closureloop",
+   "lane": "none",
+   "forecast": "",
+   "actual": "2 2",
+   "match": false,
+   "truth_rc": 0
+  },
+  {
+   "id": "dupdict",
+   "lane": "groq/qwen3.8-27b",
+   "forecast": "{2: 4, 3: 9}",
+   "actual": "{2: 4, 3: 9}",
+   "match": true,
+   "truth_rc": 0
+  },
+  {
+   "id": "slicealias",
+   "lane": "local/qwen3-8b",
+   "forecast": "[1, 2, 3] [1, 2, 3, 4]",
+   "actual": "[1, 2, 3] [1, 2, 3, 4]",
+   "match": true,
+   "truth_rc": 0
+  },
+  {
+   "id": "formatprec",
+   "lane": "local/qwen3-8b",
+   "forecast": "0.33\n0",
+   "actual": "0.33\n0",
+   "match": true,
+   "truth_rc": 0
+  },
+  {
+   "id": "swap",
+   "lane": "local/qwen3-8b",
+   "forecast": "2 3",
+   "actual": "2 3",
+   "match": true,
+   "truth_rc": 0
+  },
+  {
+   "id": "exflow",
+   "lane": "local/qwen3-8b",
+   "forecast": "a\nc\ne",
+   "actual": "a\nc\ne",
+   "match": true,
+   "truth_rc": 0
+  },
+  {
+   "id": "strmult",
+   "lane": "local/qwen3-8b",
+   "forecast": "ababc",
+   "actual": "ababc",
+   "match": true,
+   "truth_rc": 0
+  },
+  {
+   "id": "closureloop-redo",
+   "lane": "groq/qwen3.8-27b (lesson-informed)",
+   "forecast": "2 2",
+   "actual": "2 2",
+   "match": true
+  }
+ ],
+ "finished": "2026-10-31 06:24:01",
+ "accuracy": "10/11 (incl. lesson-informed redo)"
+}

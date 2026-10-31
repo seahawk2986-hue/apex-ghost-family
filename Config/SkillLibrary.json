@@ -1,0 +1,1961 @@
+{
+ "skills": [
+  {
+   "skill": "butterworth_filter",
+   "source_file": "audio_filters/butterworth_filter.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "1e0b640eeab279ad95aab25c46ea801576803ba9cf3751b8ad708f65fe09d31c",
+   "lines": 361,
+   "first_line": "from math import cos, sin, sqrt, tau",
+   "imports": [],
+   "registered": "2026-10-31 06:45:13"
+  },
+  {
+   "skill": "equal_loudness_filter",
+   "source_file": "audio_filters/equal_loudness_filter.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "fdc1d820272469d9d65d7147df6566f9251d81924189d55b1b350a43140a70ef",
+   "lines": 198,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 06:45:14"
+  },
+  {
+   "skill": "iir_filter",
+   "source_file": "audio_filters/iir_filter.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "1c8a18c65424ecad71b556b3a2e1bb8a6e42cfd49ddf8ba28bd0f4028ff118b5",
+   "lines": 129,
+   "first_line": "from __future__ import annotations",
+   "imports": [],
+   "registered": "2026-10-31 06:45:15"
+  },
+  {
+   "skill": "show_response",
+   "source_file": "audio_filters/show_response.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "4f972e628506a57a3f342699836f9d52a3357e2e0d05397d2645401a23915e09",
+   "lines": 101,
+   "first_line": "\"\"\"",
+   "imports": [
+    "matplotlib",
+    "numpy"
+   ],
+   "registered": "2026-10-31 06:45:15"
+  },
+  {
+   "skill": "all_combinations",
+   "source_file": "backtracking/all_combinations.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "e6c22b86d971857ae11a8271944840f4542f1d53fbeb90f3e1ad5ead3515c297",
+   "lines": 116,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 06:45:16"
+  },
+  {
+   "skill": "all_subsequences",
+   "source_file": "backtracking/all_subsequences.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "1dc893b0323c0d49fe9998e300aa91b1e63f27fc7f3114250fcd10678c25311a",
+   "lines": 108,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 06:45:17"
+  },
+  {
+   "skill": "coloring",
+   "source_file": "backtracking/coloring.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "963f2e6386e0561052d8cdab0615a26337b7a607235d9d9554e14e2aac723218",
+   "lines": 186,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 06:45:17"
+  },
+  {
+   "skill": "combination_sum",
+   "source_file": "backtracking/combination_sum.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "376bac453ba140719240d28c2099e6bb5bfc4e3159f24ca1561e1ee1e05dd3d7",
+   "lines": 76,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:18"
+  },
+  {
+   "skill": "crossword_puzzle_solver",
+   "source_file": "backtracking/crossword_puzzle_solver.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "80d0945ab4f3a7c22ef6315620afe69e5f274ffcfcf7b22eba55f835b904e371",
+   "lines": 122,
+   "first_line": "# https://www.geeksforgeeks.org/solve-crossword-puzzle/",
+   "imports": [],
+   "registered": "2026-10-31 06:45:19"
+  },
+  {
+   "skill": "generate_parentheses",
+   "source_file": "backtracking/generate_parentheses.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "e337db1a59e3060e6f400dd857ecf6e4eb73297e01f813fc3688442f840c1da0",
+   "lines": 81,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:19"
+  },
+  {
+   "skill": "generate_parentheses_iterative",
+   "source_file": "backtracking/generate_parentheses_iterative.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "c7c6d3ebcc121a832234ea83db3de74c57702f5873a4f808b778633571d190c8",
+   "lines": 67,
+   "first_line": "def generate_parentheses_iterative(length: int) -> list[str]:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:20"
+  },
+  {
+   "skill": "hamiltonian_cycle",
+   "source_file": "backtracking/hamiltonian_cycle.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "216ceb622f942554a53c6f5216e0fb54da1062ca25d3e068e7f49de9dcd856e7",
+   "lines": 176,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 06:45:20"
+  },
+  {
+   "skill": "knight_tour",
+   "source_file": "backtracking/knight_tour.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "9250a499d67b2d52ec39d3bd12da468ee90206b89591e5e177f39322bd4f3b61",
+   "lines": 101,
+   "first_line": "# Knight Tour Intro: https://www.youtube.com/watch?v=ab_dY3dZFHM",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:21"
+  },
+  {
+   "skill": "match_word_pattern",
+   "source_file": "backtracking/match_word_pattern.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "f558846bc592a8fe5d85e917b5c488518555dc8926ae90d3991a730c7609a321",
+   "lines": 61,
+   "first_line": "def match_word_pattern(pattern: str, input_string: str) -> bool:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:22"
+  },
+  {
+   "skill": "minimax",
+   "source_file": "backtracking/minimax.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "59a509877d235b0fe203c5875521a4a3baf098cdfbc8e09449c6bda251cb08de",
+   "lines": 101,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest",
+    "math"
+   ],
+   "registered": "2026-10-31 06:45:22"
+  },
+  {
+   "skill": "n_queens",
+   "source_file": "backtracking/n_queens.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "4b53309df68d5a302842d5076781d3e2e5a4f6f1c2c48a54792bb7e6f9a5bc4e",
+   "lines": 109,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 06:45:23"
+  },
+  {
+   "skill": "n_queens_math",
+   "source_file": "backtracking/n_queens_math.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "c104b71127c3903ebd9317a32fefb451b167d08dc36a7963e2f509c4d57efa60",
+   "lines": 158,
+   "first_line": "r\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:24"
+  },
+  {
+   "skill": "power_sum",
+   "source_file": "backtracking/power_sum.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "19a2454ccb73cbd74a2d89f6c00a2b696a66d68980abf6cefcb4601a53e59c25",
+   "lines": 91,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:24"
+  },
+  {
+   "skill": "rat_in_maze",
+   "source_file": "backtracking/rat_in_maze.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "a86e721f8289b2a7e69aa42cfa755328163687e24c209cf2d85e43a96e594b20",
+   "lines": 197,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:25"
+  },
+  {
+   "skill": "sudoku",
+   "source_file": "backtracking/sudoku.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "523aa86104ad9e9558ae8f197255f26b0f1235b666981c45689ee5cd1da53318",
+   "lines": 133,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 06:45:26"
+  },
+  {
+   "skill": "sum_of_subsets",
+   "source_file": "backtracking/sum_of_subsets.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "abf5c7a1a84729dc93a16cdeaf7a272efb5084d0c80f06ea6fb654e20a0db46a",
+   "lines": 81,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:26"
+  },
+  {
+   "skill": "word_break",
+   "source_file": "backtracking/word_break.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "f7193b2658a593f9a1cc001ba8f69a9ef1c4fc27e6d08289dd54db7e6c2c1ee8",
+   "lines": 74,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 06:45:27"
+  },
+  {
+   "skill": "word_ladder",
+   "source_file": "backtracking/word_ladder.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "7d0fc8bdea25596069b8aeec6ffbe8f9b2116f83a67f23e2b99c5f944c5cf9f3",
+   "lines": 100,
+   "first_line": "\"\"\"",
+   "imports": [
+    "string"
+   ],
+   "registered": "2026-10-31 06:45:27"
+  },
+  {
+   "skill": "word_search",
+   "source_file": "backtracking/word_search.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "37328b0b2bacd67489b189b81b41761ecb2335770a864f6f21506071c86812c3",
+   "lines": 249,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:28"
+  },
+  {
+   "skill": "binary_and_operator",
+   "source_file": "bit_manipulation/binary_and_operator.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "2eb2b41939de29c2c9c59daf6eaf737de2b19feb308c08209785d9af1c83b01c",
+   "lines": 90,
+   "first_line": "\"\"\"Bitwise AND helper.",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:29"
+  },
+  {
+   "skill": "binary_coded_decimal",
+   "source_file": "bit_manipulation/binary_coded_decimal.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "10f25bfc20d790e15343d1059107a1d31c9936bb1e680ec218f7950e8408001a",
+   "lines": 29,
+   "first_line": "def binary_coded_decimal(number: int) -> str:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:29"
+  },
+  {
+   "skill": "binary_count_setbits",
+   "source_file": "bit_manipulation/binary_count_setbits.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "a21c9dd8120e1076c59cfd25b592d6ac849ecf393df54df04082b8ab9234e5f4",
+   "lines": 41,
+   "first_line": "def binary_count_setbits(a: int) -> int:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:30"
+  },
+  {
+   "skill": "binary_count_trailing_zeros",
+   "source_file": "bit_manipulation/binary_count_trailing_zeros.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "ceaf92a270d792b2fe6c63b8cb579f5df6b2a40b52b19f594a38952ab8d4ed59",
+   "lines": 55,
+   "first_line": "from math import log2",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:30"
+  },
+  {
+   "skill": "binary_or_operator",
+   "source_file": "bit_manipulation/binary_or_operator.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "753513a200672ca386428ff2133ff73d5f2fd304b47c12cb212539e00e7ce77b",
+   "lines": 50,
+   "first_line": "\"\"\"Bitwise OR helper.",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:31"
+  },
+  {
+   "skill": "binary_shifts",
+   "source_file": "bit_manipulation/binary_shifts.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "ef056dbb755a8ef8eb458c9beebfe87c94131eeaae84f548bf05974982d5de2b",
+   "lines": 109,
+   "first_line": "# Information on binary shifts:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:32"
+  },
+  {
+   "skill": "binary_twos_complement",
+   "source_file": "bit_manipulation/binary_twos_complement.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "2a8f0bb265f8f51547c7a945895b69a1e9a368d5072bfccdd76b443088e7df70",
+   "lines": 43,
+   "first_line": "# Information on 2's complement: https://en.wikipedia.org/wiki/Two%27s_complement",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:32"
+  },
+  {
+   "skill": "binary_xor_operator",
+   "source_file": "bit_manipulation/binary_xor_operator.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "b03704321e5f33bc4eda1272bc24808bcca56711ebaf022e6b78bbc7d13b7551",
+   "lines": 51,
+   "first_line": "\"\"\"Bitwise XOR helper.",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:33"
+  },
+  {
+   "skill": "bitwise_addition_recursive",
+   "source_file": "bit_manipulation/bitwise_addition_recursive.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "7abbbb778951abdcac62ef01261d59862dfbc3dee1e47a074495a6eba26d392e",
+   "lines": 55,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:34"
+  },
+  {
+   "skill": "count_1s_brian_kernighan_method",
+   "source_file": "bit_manipulation/count_1s_brian_kernighan_method.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "705e7b1f66dcc523628b42ecd0f6b2c7c83ce903408b11fba90892f267bc37f3",
+   "lines": 46,
+   "first_line": "def get_1s_count(number: int) -> int:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:34"
+  },
+  {
+   "skill": "count_number_of_one_bits",
+   "source_file": "bit_manipulation/count_number_of_one_bits.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "c94a673d1331c518a05bf466c1910e22f8f8c6b177a108b6eef06f289293a836",
+   "lines": 146,
+   "first_line": "from timeit import timeit",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:35"
+  },
+  {
+   "skill": "excess_3_code",
+   "source_file": "bit_manipulation/excess_3_code.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "a28cb57eb76cb16b733f6ced33537013184a656c24c85cf579eb5e47c24695fd",
+   "lines": 27,
+   "first_line": "def excess_3_code(number: int) -> str:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:35"
+  },
+  {
+   "skill": "fast_walsh_hadamard_transform",
+   "source_file": "bit_manipulation/fast_walsh_hadamard_transform.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "e2a0a51c5e47b47cf487bf8a6fbb5ddd14fe2afd7b9e5f3f20a5c1910eb4cd0d",
+   "lines": 209,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:36"
+  },
+  {
+   "skill": "find_previous_power_of_two",
+   "source_file": "bit_manipulation/find_previous_power_of_two.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "c4614c5b5da2ffa613b3aa057bc8e35f8f308a612188cf4fe1e04db65748e453",
+   "lines": 30,
+   "first_line": "def find_previous_power_of_two(number: int) -> int:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:37"
+  },
+  {
+   "skill": "find_unique_number",
+   "source_file": "bit_manipulation/find_unique_number.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "397936c8ff65a64960ba52f4eb300f97a5abac4e884236912ea40e4f0a592bbb",
+   "lines": 37,
+   "first_line": "def find_unique_number(arr: list[int]) -> int:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:37"
+  },
+  {
+   "skill": "gray_code_sequence",
+   "source_file": "bit_manipulation/gray_code_sequence.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "9b7932071d8c367620bff98b9764a614e576ae3b9013ac3fffa74439798db5e6",
+   "lines": 95,
+   "first_line": "def gray_code(bit_count: int) -> list[int]:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:45:38"
+  },
+  {
+   "skill": "frontend",
+   "source_file": "AutoComplete_App/frontend.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "1775bcdc931ffed319185af7d8a6b5a6bffb0647334cefc75daa383a7a5cb6a2",
+   "lines": 38,
+   "first_line": "from tkinter import *",
+   "imports": [
+    "backend"
+   ],
+   "registered": "2026-10-31 06:45:39"
+  },
+  {
+   "skill": "backend",
+   "source_file": "BrowserHistory/backend.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "807bd9c1f9efb23938fd32869e4aecb872c286f3d29feda7ee208f6087a1dfc1",
+   "lines": 103,
+   "first_line": "class DLL:",
+   "imports": [],
+   "registered": "2026-10-31 06:45:40"
+  },
+  {
+   "skill": "cat",
+   "source_file": "Cat/cat.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "bd68e01f4a12189b9ca2fca278d366b6e230639b34c6401be55168806fa572f5",
+   "lines": 148,
+   "first_line": "\"\"\"",
+   "imports": [
+    "argparse",
+    "sys"
+   ],
+   "registered": "2026-10-31 06:45:41"
+  },
+  {
+   "skill": "multicoloredline",
+   "source_file": "Colors/multicoloredline.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "62c6b3cd16e429c52193e33ab22b185752ba858ff608e17607d828fc8ce115ba",
+   "lines": 52,
+   "first_line": "from rich.console import Console",
+   "imports": [
+    "json",
+    "time"
+   ],
+   "registered": "2026-10-31 06:45:41"
+  },
+  {
+   "skill": "pixel_sort",
+   "source_file": "Colors/pixel_sort.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "0aea149b60b809d9c307a15a16efed85107538c337340deb1c71be93bc974e29",
+   "lines": 170,
+   "first_line": "\"\"\"Pixel Sorting\"\"\"",
+   "imports": [
+    "argparse",
+    "colorsys",
+    "cv2",
+    "math",
+    "numpy",
+    "os",
+    "pandas",
+    "sound"
+   ],
+   "registered": "2026-10-31 06:45:42"
+  },
+  {
+   "skill": "primary_colors",
+   "source_file": "Colors/primary_colors.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "55f567a0bbae5b298d4213705f30e78fe5d95b49cf998bdc186a8ef03c9bc15a",
+   "lines": 176,
+   "first_line": "def diff(a, b):",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-10-31 06:45:43"
+  },
+  {
+   "skill": "print_colors",
+   "source_file": "Colors/print_colors.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "bad54a07db24d51ee5b37f6b609b69ea64d2d9d4f8508addc3b9e451cc87357d",
+   "lines": 21,
+   "first_line": "import sys",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-10-31 06:45:43"
+  },
+  {
+   "skill": "PSNR",
+   "source_file": "Compression_Analysis/PSNR.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "f4e558691a41e53fd8c6e0a822031e58419b59f129d5d5b62da2c81ad1829a5a",
+   "lines": 41,
+   "first_line": "import math",
+   "imports": [
+    "cv2",
+    "math",
+    "numpy"
+   ],
+   "registered": "2026-10-31 06:45:44"
+  },
+  {
+   "skill": "Ohms_law",
+   "source_file": "Electronics_Algorithms/Ohms_law.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "186437e8ecee1ee47cd1a220e671e2305b2348c1422436907952ea084dbfca6a",
+   "lines": 12,
+   "first_line": "def ohms_law(v=0, i=0, r=0):",
+   "imports": [],
+   "registered": "2026-10-31 06:45:45"
+  },
+  {
+   "skill": "resistance",
+   "source_file": "Electronics_Algorithms/resistance.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "1574a9ffc3b8f0005c6ed377ed68dbce266fbd71b1d4e7fbbf0bec7188ea64b9",
+   "lines": 40,
+   "first_line": "def resistance_calculator(",
+   "imports": [],
+   "registered": "2026-10-31 06:45:45"
+  },
+  {
+   "skill": "main",
+   "source_file": "Extract-Table-from-pdf-txt-docx/main.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "a41d9b8bac43dde054db204e5a6dda77e99d09bd36120cd19edbc4eb8335685f",
+   "lines": 104,
+   "first_line": "# %%",
+   "imports": [
+    "os",
+    "pandas",
+    "tabula"
+   ],
+   "registered": "2026-10-31 06:45:46"
+  },
+  {
+   "skill": "extract_thumbnail_from_video",
+   "source_file": "ExtractThumbnailFromVideo/extract_thumbnail_from_video.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "2504b06d5b2fc9f6629dc3d66f8c2e2287ea56158888f4484287d689d1ee7d5d",
+   "lines": 48,
+   "first_line": "import cv2",
+   "imports": [
+    "cv2",
+    "os"
+   ],
+   "registered": "2026-10-31 06:45:47"
+  },
+  {
+   "skill": "create_dir",
+   "source_file": "Google_Image_Downloader/create_dir.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "0827efb0fcc9bd4d6ca20f3c893f62a9e82e3570447d8932f9974c4bf1edc34c",
+   "lines": 66,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 06:45:47"
+  },
+  {
+   "skill": "main",
+   "source_file": "HTML_to_PDF/main.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "0842518fd7411f6dfe3942e652afc95d49f686a4d93762c5ada41010a245656b",
+   "lines": 37,
+   "first_line": "import pdfkit",
+   "imports": [
+    "os",
+    "pdfkit"
+   ],
+   "registered": "2026-10-31 06:45:48"
+  },
+  {
+   "skill": "hand_motion_recognizer",
+   "source_file": "Hand-Motion-Detection/hand_motion_recognizer.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "9db88a28e00df0c38eeeb89b2ab2ee757b685e86105fd18ff9a9ebb5bd198dd9",
+   "lines": 55,
+   "first_line": "import mediapipe as mp",
+   "imports": [
+    "cv2",
+    "mediapipe"
+   ],
+   "registered": "2026-10-31 06:45:49"
+  },
+  {
+   "skill": "app",
+   "source_file": "Image-watermarker/app.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "057954c0acc191c28e429cd1abb283fd455ebfa4079a13b9d55821eecb1fd1be",
+   "lines": 332,
+   "first_line": "import customtkinter as ctk",
+   "imports": [
+    "customtkinter",
+    "pyglet"
+   ],
+   "registered": "2026-10-31 06:45:49"
+  },
+  {
+   "skill": "watermark",
+   "source_file": "Image-watermarker/watermark.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "17e16f9062490a2f45f8317f1772927a86988f0e58517be0bb182d229eda731b",
+   "lines": 45,
+   "first_line": "from PIL import ImageDraw, ImageFont",
+   "imports": [],
+   "registered": "2026-10-31 06:45:50"
+  },
+  {
+   "skill": "ai",
+   "source_file": "JARVIS/ai.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "5a35cc4d0c5861a669f112b463d9fe2e6edba21ada8f590964089a1d522a4516",
+   "lines": 64,
+   "first_line": "from openai import OpenAI, OpenAIError",
+   "imports": [],
+   "registered": "2026-10-31 06:45:52"
+  },
+  {
+   "skill": "apps",
+   "source_file": "JARVIS/apps.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "f49aa2dc5584cd1768e548e59a84c54870e5fabbf4e4a2ea56f190963ace9289",
+   "lines": 105,
+   "first_line": "import json",
+   "imports": [
+    "json",
+    "os",
+    "re"
+   ],
+   "registered": "2026-10-31 06:45:53"
+  },
+  {
+   "skill": "config",
+   "source_file": "JARVIS/config.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "7f71c20cc3f6dfd84aa4426b869a9315186a7cf1a7ae60f0245281ac74cbb165",
+   "lines": 41,
+   "first_line": "from pathlib import Path",
+   "imports": [],
+   "registered": "2026-10-31 06:45:54"
+  },
+  {
+   "skill": "jarvis",
+   "source_file": "JARVIS/jarvis.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "dbcf44dae6c100ac4ac433a0cb8444ab7fa46d2333c7782af47c004e376cd8b8",
+   "lines": 8,
+   "first_line": "import sys",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-10-31 06:45:54"
+  },
+  {
+   "skill": "memory",
+   "source_file": "JARVIS/memory.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "31263c06a92be0603094912e1eb016c56a41cbb2877a84f47d2abbd73cda779f",
+   "lines": 47,
+   "first_line": "import json",
+   "imports": [
+    "json"
+   ],
+   "registered": "2026-10-31 06:45:55"
+  },
+  {
+   "skill": "prompts",
+   "source_file": "JARVIS/prompts.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "42a2eab1b69401c1ea7af96c5893c08b67bc89676a70a4193e1a23afebb0bb58",
+   "lines": 28,
+   "first_line": "ASSISTANT_PROMPT = (",
+   "imports": [],
+   "registered": "2026-10-31 06:45:55"
+  },
+  {
+   "skill": "safety",
+   "source_file": "JARVIS/safety.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "2b0d52493ec0f0c264f2dd47fd23076f3daf793711825d3ef8c061c9015fda67",
+   "lines": 50,
+   "first_line": "import re",
+   "imports": [
+    "re"
+   ],
+   "registered": "2026-10-31 06:45:56"
+  },
+  {
+   "skill": "highest_set_bit",
+   "source_file": "bit_manipulation/highest_set_bit.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "b615134f1947ac37053dbfc92c7137d82b10cc60478cb0cc936bfa5b8f7aeef8",
+   "lines": 34,
+   "first_line": "def get_highest_set_bit_position(number: int) -> int:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:44"
+  },
+  {
+   "skill": "index_of_rightmost_set_bit",
+   "source_file": "bit_manipulation/index_of_rightmost_set_bit.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "6cce20f15744c258f04da06f2f53ecad06734c56d609ddf6d8ba4bfc3feebd45",
+   "lines": 51,
+   "first_line": "# Reference: https://www.geeksforgeeks.org/position-of-rightmost-set-bit/",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:45"
+  },
+  {
+   "skill": "is_even",
+   "source_file": "bit_manipulation/is_even.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "1eae91e43f84ae11d17ff39e3a8863900cd419d388544bc3967acbf08ed533c2",
+   "lines": 75,
+   "first_line": "def is_even(number: int) -> bool:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:45"
+  },
+  {
+   "skill": "is_power_of_two",
+   "source_file": "bit_manipulation/is_power_of_two.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "7dd2b251fd0e652b4712a510c94a426475f773eae15d365b2a7869e94881a0fb",
+   "lines": 61,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:46"
+  },
+  {
+   "skill": "largest_pow_of_two_le_num",
+   "source_file": "bit_manipulation/largest_pow_of_two_le_num.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "6776813e1a874b6abde673813ed842655c185b8645a6f186e16631add9869361",
+   "lines": 60,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:46"
+  },
+  {
+   "skill": "missing_number",
+   "source_file": "bit_manipulation/missing_number.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "c0c256efd45ef13ca1d8e7a34f49a10b753076253265378f429bea15da686394",
+   "lines": 40,
+   "first_line": "def find_missing_number(nums: list[int]) -> int:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:47"
+  },
+  {
+   "skill": "next_power_of_two",
+   "source_file": "bit_manipulation/next_power_of_two.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "47e30696468c2e4011be5a71453fb2a176e991d17d3660fe337c8f81f309e370",
+   "lines": 55,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:48"
+  },
+  {
+   "skill": "numbers_different_signs",
+   "source_file": "bit_manipulation/numbers_different_signs.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "5fac3cf4b3a1e8c54cd58f98091e2c5192ff8d9c0a53cb572e75defbd109c850",
+   "lines": 39,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:48"
+  },
+  {
+   "skill": "parity",
+   "source_file": "bit_manipulation/parity.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "29ba7613e71826c99527a29168891bee8941d76568573b9b629f58abeeedfa90",
+   "lines": 43,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:49"
+  },
+  {
+   "skill": "power_of_4",
+   "source_file": "bit_manipulation/power_of_4.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "1873f8705b4c65a57afd6a2dcabd9bfaa682c625bad4efa8c935c99b9fc21e68",
+   "lines": 67,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:49"
+  },
+  {
+   "skill": "reverse_bits",
+   "source_file": "bit_manipulation/reverse_bits.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "5ba1856dce9249771dd5c3ffe1c1b51983cc8a1f755b5cbf018022a1216da7d2",
+   "lines": 86,
+   "first_line": "def get_reverse_bit_string(number: int) -> str:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:57"
+  },
+  {
+   "skill": "rotate_bits",
+   "source_file": "bit_manipulation/rotate_bits.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "4fbfe839074133cb182b996c6b7b7f99da715a8309363a1d84e011ef29683f12",
+   "lines": 70,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:57"
+  },
+  {
+   "skill": "single_bit_manipulation_operations",
+   "source_file": "bit_manipulation/single_bit_manipulation_operations.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "0638df3c8a7aeaf846b8e6c063b7b47a50c55871d0115c0639639d8a3e8d48d5",
+   "lines": 123,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:58"
+  },
+  {
+   "skill": "swap_all_odd_and_even_bits",
+   "source_file": "bit_manipulation/swap_all_odd_and_even_bits.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "190ea9e5aae81d769e1ed2207b9e42a457acbb9034c26e56321b87d0d94bfedd",
+   "lines": 58,
+   "first_line": "def show_bits(before: int, after: int) -> str:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:59"
+  },
+  {
+   "skill": "xor_swap_two_integers",
+   "source_file": "bit_manipulation/xor_swap_two_integers.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "6e9a51c09408885a34db356867cd53b7fad39d53d83f2b32a2f04e2048de61ed",
+   "lines": 40,
+   "first_line": "# Information on XOR swap: https://en.wikipedia.org/wiki/Bitwise_operation#XOR",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:46:59"
+  },
+  {
+   "skill": "diophantine_equation",
+   "source_file": "blockchain/diophantine_equation.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "15808c87168ecfa9c0a18f0485f721c978c9819eeefb68cff7a17d7d2ed65f42",
+   "lines": 167,
+   "first_line": "from __future__ import annotations",
+   "imports": [],
+   "registered": "2026-10-31 06:47:00"
+  },
+  {
+   "skill": "merkle_tree",
+   "source_file": "blockchain/merkle_tree.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "4746ba64e6811a7947e239f167c53e248b91a53cd9b04462df701058333af400",
+   "lines": 107,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest",
+    "hashlib"
+   ],
+   "registered": "2026-10-31 06:47:01"
+  },
+  {
+   "skill": "proof_of_stake",
+   "source_file": "blockchain/proof_of_stake.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "d54a82c0564b2d4ad243aa265ab4bfa07f96330cfee5390df75ab0df132f0761",
+   "lines": 40,
+   "first_line": "import random",
+   "imports": [
+    "random"
+   ],
+   "registered": "2026-10-31 06:47:01"
+  },
+  {
+   "skill": "proof_of_work",
+   "source_file": "blockchain/proof_of_work.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "aafeef3e5e0be6f7236985c2e7d04e9ed259483931eebde7422fb971dbae1ba6",
+   "lines": 189,
+   "first_line": "# Title: Proof of Work Algorithm for Blockchain",
+   "imports": [
+    "hashlib",
+    "time"
+   ],
+   "registered": "2026-10-31 06:47:02"
+  },
+  {
+   "skill": "simple_blockchain",
+   "source_file": "blockchain/simple_blockchain.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "4886432377a72ec5ed7e40b63e39994c8e96ae1a0f916f300932767b39d162b5",
+   "lines": 168,
+   "first_line": "\"\"\"",
+   "imports": [
+    "hashlib"
+   ],
+   "registered": "2026-10-31 06:47:03"
+  },
+  {
+   "skill": "simple_proof_of_work",
+   "source_file": "blockchain/simple_proof_of_work.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "20a3931e9302aa26187b6d521403425f07533efb8db77c0afbb14bad89e9c12c",
+   "lines": 62,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest",
+    "hashlib"
+   ],
+   "registered": "2026-10-31 06:47:09"
+  },
+  {
+   "skill": "and_gate",
+   "source_file": "boolean_algebra/and_gate.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "35df92fc365012dffa9cc5b802c021df90abe66f8f3844b82a85cce986ab5a02",
+   "lines": 95,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:10"
+  },
+  {
+   "skill": "imply_gate",
+   "source_file": "boolean_algebra/imply_gate.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "346153eb7ecbbe5c03fd352c9da2b6e4fc5d8721da82269a41cf41e43a3f5a6f",
+   "lines": 91,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:11"
+  },
+  {
+   "skill": "karnaugh_map_simplification",
+   "source_file": "boolean_algebra/karnaugh_map_simplification.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "9f39ae62c7a5a37dddb21986e6e1ab50b2aa0d2fdf31e1529e0755b716aef4d4",
+   "lines": 55,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 06:47:12"
+  },
+  {
+   "skill": "multiplexer",
+   "source_file": "boolean_algebra/multiplexer.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "7279542f216587c8f90597c21c189aaa5360bbb5e160284dec1d5365cfb3c276",
+   "lines": 42,
+   "first_line": "def mux(input0: int, input1: int, select: int) -> int:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:12"
+  },
+  {
+   "skill": "nand_gate",
+   "source_file": "boolean_algebra/nand_gate.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "02f924c38b7933c4ceb42d32872d8ee87bde3bc2c252bc69329c8d69f1dcd1f8",
+   "lines": 36,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:13"
+  },
+  {
+   "skill": "nimply_gate",
+   "source_file": "boolean_algebra/nimply_gate.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "4c696a219c4e415fcf14bc078b95e1115368c67f84b7ffce128509c6576e4c16",
+   "lines": 39,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:13"
+  },
+  {
+   "skill": "nor_gate",
+   "source_file": "boolean_algebra/nor_gate.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "aded137880a75729ab2a96b199431a7536415a8022feef262035a32bed6ab5a6",
+   "lines": 68,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:14"
+  },
+  {
+   "skill": "not_gate",
+   "source_file": "boolean_algebra/not_gate.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "15b05f5446dea6e7b91a6b62f4c490233c429a6d164c388abf245b41d92c5d9d",
+   "lines": 30,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:15"
+  },
+  {
+   "skill": "or_gate",
+   "source_file": "boolean_algebra/or_gate.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "24141b4e2becc0d3872aef6bfe6c3e36dbf697eaa88e4d0a63bf05871eea1783",
+   "lines": 35,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:15"
+  },
+  {
+   "skill": "xnor_gate",
+   "source_file": "boolean_algebra/xnor_gate.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "b54ca2b0377bc48473c97fa05234791e70aa51054fe328da324a15616d71f5c2",
+   "lines": 37,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:22"
+  },
+  {
+   "skill": "xor_gate",
+   "source_file": "boolean_algebra/xor_gate.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "94c4f8e6ba73b07897423bc9a259bab5cbe89d8ce73de7a312a03c8ccf08afef",
+   "lines": 37,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:22"
+  },
+  {
+   "skill": "elementary_cellular_automaton",
+   "source_file": "cellular_automata/elementary_cellular_automaton.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "5acf84b5c6ba09d0f328ab84eef7409d21b19eca042b13a45c69edcb643db409",
+   "lines": 74,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 06:47:23"
+  },
+  {
+   "skill": "langtons_ant",
+   "source_file": "cellular_automata/langtons_ant.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "33bdb6042a06458e1c73363ec5f374ec993c4b0fd6d8c317869bbe836e781e89",
+   "lines": 106,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:24"
+  },
+  {
+   "skill": "nagel_schrekenberg",
+   "source_file": "cellular_automata/nagel_schrekenberg.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "d0da2677866418b014776c40ae2514e38eb3afa796ef95277b28a107247673ee",
+   "lines": 140,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:25"
+  },
+  {
+   "skill": "atbash",
+   "source_file": "ciphers/atbash.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "515dd579c93adc1379f07a51465c50a0e4a54874c01fc5f5803a23c9fb55c196",
+   "lines": 54,
+   "first_line": "\"\"\"https://en.wikipedia.org/wiki/Atbash\"\"\"",
+   "imports": [
+    "string"
+   ],
+   "registered": "2026-10-31 06:47:26"
+  },
+  {
+   "skill": "baconian_cipher",
+   "source_file": "ciphers/baconian_cipher.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "d7ee175f277ded014d238f2ffc8986e64f0817145557802048f2827a01ece9e8",
+   "lines": 89,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 06:47:27"
+  },
+  {
+   "skill": "base16",
+   "source_file": "ciphers/base16.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "1bfc4f0b2e9215597646482e96331032b93744c0a9e520a2ce574cdaf69f2c1d",
+   "lines": 66,
+   "first_line": "def base16_encode(data: bytes) -> str:",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:27"
+  },
+  {
+   "skill": "base32",
+   "source_file": "ciphers/base32.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "f3bffb2edc15d663c236c23b5a970aa70f41140b01fd317385899dc7806a8fde",
+   "lines": 46,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:28"
+  },
+  {
+   "skill": "base58",
+   "source_file": "ciphers/base58.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "58a68aa6e646e276ae8215846b7410be3a7602eca9f89b332451eb12274960bf",
+   "lines": 142,
+   "first_line": "B64_CHARSET = \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:47:29"
+  },
+  {
+   "skill": "speech",
+   "source_file": "JARVIS/speech.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "2253704e1ae85557b9790ba6e3b898f7a4ccb3b1d91c5b800ac6d69c9ade55ba",
+   "lines": 136,
+   "first_line": "import importlib",
+   "imports": [
+    "importlib",
+    "os",
+    "pyttsx3",
+    "speech_recognition",
+    "sys",
+    "tempfile"
+   ],
+   "registered": "2026-10-31 06:47:38"
+  },
+  {
+   "skill": "state",
+   "source_file": "JARVIS/state.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "062729847e72b53a2fa0b818e3151f8ba0caade81fb21e8323a9ffd2aa5393b1",
+   "lines": 17,
+   "first_line": "DEVELOPER_MODE = False",
+   "imports": [],
+   "registered": "2026-10-31 06:47:39"
+  },
+  {
+   "skill": "text_utils",
+   "source_file": "JARVIS/text_utils.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "ff6804679c11104864002f0a992e2a35f1b998662ccef58311579ba41693e879",
+   "lines": 24,
+   "first_line": "import re",
+   "imports": [
+    "re"
+   ],
+   "registered": "2026-10-31 06:47:39"
+  },
+  {
+   "skill": "key_binding",
+   "source_file": "Key_Binding/key_binding.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "ca26323095031c2c145a4946058c233277ce7735f15c26ea0b68ac03e96a4738",
+   "lines": 12,
+   "first_line": "from quo.keys import bind",
+   "imports": [],
+   "registered": "2026-10-31 06:47:40"
+  },
+  {
+   "skill": "neural_architecture_search",
+   "source_file": "ML/examples/neural_architecture_search.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "1c429fb79ec291f6d186b742be2678308d4fb8397bf9451aeaa903fe589baca2",
+   "lines": 60,
+   "first_line": "import sys",
+   "imports": [
+    "sys",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:47:41"
+  },
+  {
+   "skill": "train_cifar10",
+   "source_file": "ML/examples/train_cifar10.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "17e5d465ab47abfbdb9f9f8aa08dcc3a727afff5c234846e0a62be930f64a4a0",
+   "lines": 65,
+   "first_line": "import sys",
+   "imports": [
+    "os",
+    "sys",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:47:41"
+  },
+  {
+   "skill": "train_custom",
+   "source_file": "ML/examples/train_custom.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "f6c8f9dcd93e0ef83898a5c3b382325456df19f48f66be52d91f6705297146f0",
+   "lines": 47,
+   "first_line": "import sys",
+   "imports": [
+    "sys",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:47:42"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "ML/src/python/neuralforge/__init__.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "8084c6dc8e33ff488149749e883b23409a930e367fe2764730b9ff86e8b77939",
+   "lines": 10,
+   "first_line": "from . import nn",
+   "imports": [],
+   "registered": "2026-10-31 06:47:43"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "ML/src/python/neuralforge/cli/__init__.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "49c3854162e88b7fdd3d4037c8185a7910333f0f17ffd168146a22b36e6c273a",
+   "lines": 6,
+   "first_line": "from . import train",
+   "imports": [],
+   "registered": "2026-10-31 06:47:43"
+  },
+  {
+   "skill": "nas",
+   "source_file": "ML/src/python/neuralforge/cli/nas.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "b12cc54b8aad208a14a1e22d0d31b4bcceae1e49615fb5210e43b0e79e850382",
+   "lines": 70,
+   "first_line": "import argparse",
+   "imports": [
+    "argparse",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:47:44"
+  },
+  {
+   "skill": "train",
+   "source_file": "ML/src/python/neuralforge/cli/train.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "af2349e1483d72eb7211421513a9f0bc7c84def445ca0af2703ec21e0f50f322",
+   "lines": 208,
+   "first_line": "import argparse",
+   "imports": [
+    "argparse",
+    "numpy",
+    "os",
+    "random",
+    "sys",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:47:50"
+  },
+  {
+   "skill": "config",
+   "source_file": "ML/src/python/neuralforge/config.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "89629bc4e088aed92a2b906e06e3d2b5c46658907fa630a1ab99ffbdaec0b105",
+   "lines": 55,
+   "first_line": "import json",
+   "imports": [
+    "json",
+    "os"
+   ],
+   "registered": "2026-10-31 06:47:51"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "ML/src/python/neuralforge/data/__init__.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "03330bcd2856d3d530dc0bf03ecd7fb2f9893829afe8f008da808d5f03c52765",
+   "lines": 15,
+   "first_line": "from .dataset import *",
+   "imports": [],
+   "registered": "2026-10-31 06:47:51"
+  },
+  {
+   "skill": "augmentation",
+   "source_file": "ML/src/python/neuralforge/data/augmentation.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "96fe407f2d8acd9903390b44c003e1c5550955f8de2fbc11d3409b934f1ad78d",
+   "lines": 209,
+   "first_line": "import torch",
+   "imports": [
+    "numpy",
+    "random",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:47:52"
+  },
+  {
+   "skill": "dataset",
+   "source_file": "ML/src/python/neuralforge/data/dataset.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "c2b37699dbb12eb3e163ad0d9ed4a594c52be49861dbeead725e239e27a09a12",
+   "lines": 185,
+   "first_line": "import torch",
+   "imports": [
+    "numpy",
+    "os",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:47:53"
+  },
+  {
+   "skill": "transforms",
+   "source_file": "ML/src/python/neuralforge/data/transforms.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "905d168a45175b7beab7c2b2ce65aecd0432f497cc35198680debbe2659ed2b3",
+   "lines": 108,
+   "first_line": "from torchvision import transforms",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-10-31 06:47:53"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "ML/src/python/neuralforge/models/__init__.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "ccbb6559094b5c2e110d25144718f18bfa54caae2bb9ef34ff82705ee46117f5",
+   "lines": 11,
+   "first_line": "from .resnet import ResNet18, ResNet34, ResNet50",
+   "imports": [],
+   "registered": "2026-10-31 06:47:54"
+  },
+  {
+   "skill": "efficientnet",
+   "source_file": "ML/src/python/neuralforge/models/efficientnet.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "9a41f57add4850fc2075525d194f92eb231a886ccb6b2d42f61376836c8c7fdf",
+   "lines": 43,
+   "first_line": "import torch.nn as nn",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-10-31 06:47:55"
+  },
+  {
+   "skill": "resnet",
+   "source_file": "ML/src/python/neuralforge/models/resnet.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "8f13a390f896334b67d5396ad6b5b5117c1122f4e4d904e46ee132cfcc26b57f",
+   "lines": 15,
+   "first_line": "import torch.nn as nn",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-10-31 06:47:55"
+  },
+  {
+   "skill": "vit",
+   "source_file": "ML/src/python/neuralforge/models/vit.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "bc96914b786a2578731f5a492da7eff3e8d46104336ddaf79616289a82601835",
+   "lines": 24,
+   "first_line": "import torch.nn as nn",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-10-31 06:47:56"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "ML/src/python/neuralforge/nas/__init__.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "baa6ecf5b6e71ff40dcb55441921a5d6324815e35e0c859ad3914107430574ee",
+   "lines": 10,
+   "first_line": "from .search_space import *",
+   "imports": [],
+   "registered": "2026-10-31 06:48:02"
+  },
+  {
+   "skill": "evolution",
+   "source_file": "ML/src/python/neuralforge/nas/evolution.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "7e39f0e9d82902cd9c985022e382bd26e7df9670044138b6183b91b99e6061ca",
+   "lines": 129,
+   "first_line": "import torch",
+   "imports": [
+    "numpy",
+    "random",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:48:03"
+  },
+  {
+   "skill": "search_space",
+   "source_file": "ML/src/python/neuralforge/nas/search_space.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "2fda935c3b91f953cf9890c9d9a98d0274391f693fa2a4f138ef94b0be19b571",
+   "lines": 181,
+   "first_line": "import torch",
+   "imports": [
+    "numpy",
+    "random",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:48:04"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "ML/src/python/neuralforge/nn/__init__.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "092e85184b7aceaac9362bb4d464bb80a420682925a3000409dada1333d84707",
+   "lines": 18,
+   "first_line": "from .modules import *",
+   "imports": [],
+   "registered": "2026-10-31 06:48:04"
+  },
+  {
+   "skill": "activations",
+   "source_file": "ML/src/python/neuralforge/nn/activations.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "5a360d06f0d7a8243d3ffe739f77e713c3f21d4a99bd214e79eab3ac37a83ce9",
+   "lines": 122,
+   "first_line": "import torch",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-10-31 06:48:05"
+  },
+  {
+   "skill": "attention",
+   "source_file": "ML/src/python/neuralforge/nn/attention.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "9079955d4909fe48d52458385696462df514324d3146bfd16827f57e692174ab",
+   "lines": 207,
+   "first_line": "import torch",
+   "imports": [
+    "math",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:48:06"
+  },
+  {
+   "skill": "convolution",
+   "source_file": "ML/src/python/neuralforge/nn/convolution.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "76d5950d62dfe258ade2e825c955214d08360897d279d0249b8b5cc316fc81b9",
+   "lines": 239,
+   "first_line": "import torch",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-10-31 06:48:06"
+  },
+  {
+   "skill": "layers",
+   "source_file": "ML/src/python/neuralforge/nn/layers.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "f8dd7aebb36ee59159d59e611c4ac1ea0442fb60b10cfd5c67e88e4426a0469c",
+   "lines": 174,
+   "first_line": "import torch",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-10-31 06:48:07"
+  },
+  {
+   "skill": "modules",
+   "source_file": "ML/src/python/neuralforge/nn/modules.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "64dd4b6dfe29dc4a83057f7bc1e95e37e6034b34ab1a786687a2ab7f5c0ec1cd",
+   "lines": 188,
+   "first_line": "import torch",
+   "imports": [
+    "math",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:48:08"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "ML/src/python/neuralforge/optim/__init__.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "be525502534ca7345210d5b31c535478c87693dea15dd754709b9418f09b6ada",
+   "lines": 13,
+   "first_line": "from .optimizers import *",
+   "imports": [],
+   "registered": "2026-10-31 06:48:08"
+  },
+  {
+   "skill": "optimizers",
+   "source_file": "ML/src/python/neuralforge/optim/optimizers.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "4cc6b63a0698c5f02e42e9146880509086978e0ff5ffb07385a9a04b3b4f6897",
+   "lines": 266,
+   "first_line": "import torch",
+   "imports": [
+    "math",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:48:16"
+  },
+  {
+   "skill": "schedulers",
+   "source_file": "ML/src/python/neuralforge/optim/schedulers.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "661e4fee3f0f2b02c562d7dcc62cbecdf7847aa49fe0c55190449f7c58e1dc1b",
+   "lines": 142,
+   "first_line": "import torch",
+   "imports": [
+    "math",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:48:17"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "ML/src/python/neuralforge/utils/__init__.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "c493477fe1482e79b7b79196a217871d0c48150fe8265ebc52feae194f65ab19",
+   "lines": 10,
+   "first_line": "from .logger import *",
+   "imports": [],
+   "registered": "2026-10-31 06:48:17"
+  },
+  {
+   "skill": "logger",
+   "source_file": "ML/src/python/neuralforge/utils/logger.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "c62c6f605c1184500aeeaf371cbc1ecee3c8ebbdc557bb75a54ad4fad43b0259",
+   "lines": 115,
+   "first_line": "import os",
+   "imports": [
+    "logging",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-10-31 06:48:18"
+  },
+  {
+   "skill": "metrics",
+   "source_file": "ML/src/python/neuralforge/utils/metrics.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "6a956222a3acba588796d75fd33aa793817f920f2c3e522e4a19e33b22f65d24",
+   "lines": 168,
+   "first_line": "import json",
+   "imports": [
+    "json",
+    "numpy",
+    "os"
+   ],
+   "registered": "2026-10-31 06:48:19"
+  },
+  {
+   "skill": "visualization",
+   "source_file": "ML/src/python/neuralforge/utils/visualization.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "4ec1bcc074436d2c17f57b1d3f506eac9f6ace72afd583e551633f64e524d148",
+   "lines": 192,
+   "first_line": "import matplotlib.pyplot as plt",
+   "imports": [
+    "matplotlib",
+    "numpy",
+    "os"
+   ],
+   "registered": "2026-10-31 06:48:19"
+  },
+  {
+   "skill": "train",
+   "source_file": "ML/train.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "a54b3a06f04009bbcf3d665b50a7071a7f88e3242ff10def6e44560a7aa30cb5",
+   "lines": 196,
+   "first_line": "import torch",
+   "imports": [
+    "argparse",
+    "numpy",
+    "os",
+    "random",
+    "torch"
+   ],
+   "registered": "2026-10-31 06:48:20"
+  },
+  {
+   "skill": "Newsapp",
+   "source_file": "News_App/Newsapp.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "eb9c3e0b01ea98b41ff2e7a6f3648f98cfe3cdf4c04b727e38b47d0fd5b27f71",
+   "lines": 52,
+   "first_line": "import solara as sr",
+   "imports": [
+    "solara",
+    "yfinance"
+   ],
+   "registered": "2026-10-31 06:48:20"
+  },
+  {
+   "skill": "patterns",
+   "source_file": "News_App/patterns.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "4119971f5e51b7cd0b261b76d785bc55469d6ad8d1060f1306ecf5c83171e8b3",
+   "lines": 119,
+   "first_line": "patterns = {",
+   "imports": [],
+   "registered": "2026-10-31 06:48:21"
+  },
+  {
+   "skill": "basic",
+   "source_file": "PDF/basic.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "8e243a1c6edee9492850557753061b8cfec3b1f2aa1a2908d5c44380eb646210",
+   "lines": 34,
+   "first_line": "from fpdf import FPDF",
+   "imports": [],
+   "registered": "2026-10-31 06:48:22"
+  },
+  {
+   "skill": "base64_cipher",
+   "source_file": "ciphers/base64_cipher.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "58a68aa6e646e276ae8215846b7410be3a7602eca9f89b332451eb12274960bf",
+   "lines": 142,
+   "first_line": "B64_CHARSET = \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:55:40"
+  },
+  {
+   "skill": "base85",
+   "source_file": "ciphers/base85.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "21b522cf5113df4f2c0897e70bef703213643573616c7b4742f8da1abf348479",
+   "lines": 58,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:55:41"
+  },
+  {
+   "skill": "beaufort_cipher",
+   "source_file": "ciphers/beaufort_cipher.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "ec975b04d43f708440f3413cfde9c59f3aa63b13c75465ab17a477438bb1e284",
+   "lines": 82,
+   "first_line": "\"\"\"",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:55:42"
+  },
+  {
+   "skill": "bifid",
+   "source_file": "ciphers/bifid.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "c3a652c5762f1b984a16f3b397f9a87b2721cc04d7c2360cdb54b7c0c56ec32a",
+   "lines": 111,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 06:55:43"
+  },
+  {
+   "skill": "columnar_transposition",
+   "source_file": "ciphers/columnar_transposition.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "8eb051eabb7146526adfa13bd6cffec951b7dd0cb80a666a95aa9ea2d0f7d8aa",
+   "lines": 127,
+   "first_line": "\"\"\"Columnar Transposition cipher.",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-10-31 06:55:44"
+  },
+  {
+   "skill": "cryptomath_module",
+   "source_file": "ciphers/cryptomath_module.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "d0ebbad28f9f4f97199504b735891343859c7c6d3f087c7ffb462f19c636ca70",
+   "lines": 82,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 06:55:45"
+  },
+  {
+   "skill": "decrypt_caesar_with_chi_squared",
+   "source_file": "ciphers/decrypt_caesar_with_chi_squared.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "8c7d80cee2e52a0e2873b25a78c01691ca95b0182b05ea06fe7eeb1ad0335d91",
+   "lines": 253,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [],
+   "registered": "2026-10-31 06:55:46"
+  }
+ ],
+ "sources": [],
+ "built": "2026-10-31 06:55:46",
+ "dedup_done": "2026-10-31 06:46:43"
+}
