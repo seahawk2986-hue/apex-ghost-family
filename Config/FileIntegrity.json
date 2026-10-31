@@ -28,8 +28,8 @@
   "ts": "2026-10-31 03:28:35"
  },
  "ApexChat.pyw": {
-  "sha256": "9751b8c8bfe952b3a7d4dfd55fb1a6fb8a8593d04ece514e298cefbb072e5784",
-  "ts": "2026-10-31 03:28:35"
+  "sha256": "a2eab430d3be35cbed85c0afaf7cd17967a73fd568475d6f1903b5791f2a1113",
+  "ts": "2026-10-31 03:42:41"
  },
  "Scripts\\ApexVersions.py": {
   "sha256": "c3ec5ac5302a2d9526fb634b4f29efe408c4f16cc44a304b49b31ea207782fd4",
@@ -56,12 +56,12 @@
   "ts": "2026-10-31 03:28:35"
  },
  "Scripts\\ApexBenchmark.py": {
-  "sha256": "218fee1de3af9437c8be701e987b5b281419e4998cc5e51eb1a6aaba9b9effab",
-  "ts": "2026-10-31 03:28:35"
+  "sha256": "12b37d923bece4a6af448faf40a9ec4e4cd865006a8e02cddff20ee1fdc24f78",
+  "ts": "2026-10-31 03:42:44"
  },
  "Scripts\\ApexDream.py": {
-  "sha256": "51d5abaebab40e9223b6f8f9f13284b463e9fd4714bd48b904281ceccb4cba39",
-  "ts": "2026-10-31 03:28:35"
+  "sha256": "914709c6db49c01481cad9b0b85e27719577af2efd3b054df69801ce88e3ea73",
+  "ts": "2026-10-31 03:43:28"
  },
  "Scripts\\ApexGuard.py": {
   "sha256": "87aa89f359bf66eef456635f1ed71bbea0b2a2d915ca9918d2e7c2f966c549af",

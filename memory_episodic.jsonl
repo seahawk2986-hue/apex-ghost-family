@@ -277,3 +277,5 @@
 {"id": "49f900cf83d5", "ts": "2026-10-31 03:40:08", "kind": "thinking", "text": "ApexIPCEngine.py: socratic verdict=shrink assumptions=3 pre-mortem factors=4", "meta": {}, "imp": 0.8333333333333334}
 {"id": "9a3e0a134d2e", "ts": "2026-10-31 03:40:44", "kind": "critic_prediction", "text": "ApexIPCEngine.py predicted parity (conf 0.95)", "meta": {"file": "ApexIPCEngine.py", "predicted": "parity", "confidence": 0.95}, "imp": 0.8333333333333334}
 {"id": "13ea4ef9a601", "ts": "2026-10-31 03:40:44", "kind": "critique", "text": "ApexIPCEngine.py: critic=issues issues=3", "meta": {}, "imp": 0.8333333333333334}
+{"id": "d43a28b43ede", "ts": "2026-10-31 03:44:06", "kind": "planning_vote", "text": "votes={'apexinstaller.py': 1, 'apexipcengine.py': 2} modal=apexipcengine.py agree=2/3", "meta": {"file": "ApexInstaller.py", "agree": 2, "total": 3}, "imp": 0.8333333333333334}
+{"id": "e8a8207d78ac", "ts": "2026-10-31 03:44:07", "kind": "thinking", "text": "ApexInstaller.py: socratic verdict=shrink assumptions=3 pre-mortem factors=4", "meta": {}, "imp": 0.8333333333333334}

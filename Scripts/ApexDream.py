@@ -43,17 +43,6 @@ def main():
     drills = run_drills()
     passed = sum(1 for _, ok, _ in drills if ok)
 
-    # Forecast gym: nightly reasoning training (3 exercises, misses -> lessons)
-    try:
-        from ApexTrainingCamp import train_session as _train
-        _cloud = None
-        try:
-            from ApexCloudLanes import ask as _cloud
-        except Exception:
-            _cloud = None
-        gym = _train(n=3, cloud_ask=_cloud, verbose=False)
-    except Exception as e:
-        gym = {"error": str(e)[:80]}
     bench = {}
     try:
         from ApexBenchmark import run as _bench_run
@@ -205,7 +194,7 @@ def main():
         "certified_skills": len(skills),
         "semantic_records": semantic_records,
         "capability_trend": trend,
-        "forecast_gym": {"exercises": gym.get("exercises"), "hits": gym.get("hits"), "accuracy": gym.get("accuracy")},
+        
         "recertification": _recert,
         "benchmark": {k: bench.get(k) for k in (
             "security", "memory_recall_hit", "memory_latency_s", "learning_mean_best",

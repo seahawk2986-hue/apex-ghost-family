@@ -1167,27 +1167,56 @@ class TalkMsg(BaseModel):
 
 @app.get("/talk")
 def talk_page():
+    """APEX Chat v2 - the polished console (page file: Apex-Adapter/talk_page.html)."""
     from fastapi.responses import HTMLResponse
-    html = (
-        "<html><head><title>Apex - private console</title><meta charset='utf-8'>"
-        "<style>body{background:#0d1117;color:#7ee787;font-family:Consolas,monospace;margin:0;padding:24px}"
-        "#log div{margin:6px 0;white-space:pre-wrap} .you{color:#58a6ff} .me{color:#7ee787}"
-        "textarea,input{background:#161b22;color:#e6edf3;border:1px solid #30363d;padding:8px;width:70%;font-family:inherit}"
-        "button{padding:9px 18px;background:#238636;color:white;border:0;cursor:pointer}</style></head><body>"
-        "<h2>APEX PRIVATE CONSOLE</h2><p style='color:#8b949e'>Direct channel to your agent. Memories, opinions and honest answers included.</p>"
-        "<div id='log'></div><br/><input id='msg' placeholder='Talk to Apex...' size='60'/> "
-        "<button onclick='send()'>SEND</button>"
-        "<script>const log=document.getElementById('log');"
-        "function add(cls,t){const d=document.createElement('div');d.className=cls;d.textContent=t;log.appendChild(d);}"
-        "fetch('/notes').then(r=>r.json()).then(j=>{(j.notes||[]).slice(-1).forEach(n=>{const d=document.createElement('div');d.style.color='#d29922';d.textContent='['+n.ts+'] APEX (overnight dream): '+n.note;log.appendChild(d);});}).catch(()=>{});"
-        "async function send(){const i=document.getElementById('msg');const t=i.value.trim();if(!t)return;"
-        "i.value='';add('you','YOU: '+t);"
-        "const m=add('me','APEX: thinking...');"
-        "try{const r=await fetch('/talk/api',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:t})});"
-        "const j=await r.json();m.textContent='APEX: '+j.reply;}catch(e){m.textContent='APEX: channel error - watchdog will keep me alive; try again.'}}"
-        "document.getElementById('msg').addEventListener('keydown',e=>{if(e.key==='Enter')send()});"
-        "</script></body></html>")
+    page = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        "..", "Apex-Adapter", "talk_page.html")
+    try:
+        with open(page, "r", encoding="utf-8-sig") as f:
+            html = f.read()
+    except OSError:
+        html = "<html><body><h2>APEX</h2><p>chat page file missing - see talk_page.html</p></body></html>"
     return HTMLResponse(html)
+
+@app.get("/talk/history")
+def talk_history():
+    """Recent private conversations (restored in the console on open)."""
+    events = []
+    try:
+        events = MEM.recent_events(60, kind="conversation")
+    except Exception:
+        events = []
+    hist = [{"ts": e.get("ts", ""),
+             "message": (e.get("meta") or {}).get("message"),
+             "reply": (e.get("meta") or {}).get("reply")}
+            for e in events]
+    return {"events": hist}
+
+@app.get("/talk/status")
+def talk_status():
+    """Live health dots for the console header + the directive text."""
+    brain = False
+    try:
+        r = requests.get("http://127.0.0.1:1234/v1/models", timeout=4)
+        brain = (r.status_code == 200)
+    except Exception:
+        brain = False
+    adapter = False
+    try:
+        r = requests.get("http://127.0.0.1:8788/v1/health", timeout=4)
+        adapter = (r.status_code == 200)
+    except Exception:
+        adapter = False
+    return {"brain": brain, "adapter": adapter,
+            "layers": True,  # this route IS the evolution layer
+            "directive": ("Apex, tonight you proved your reasoning is your weakest measured "
+                          "dimension - and I want that fixed properly. I'm not asking for a verbal "
+                          "promise: run your forecast gym on the hard half of the pool, log every "
+                          "prediction into calibration, write lessons for every miss, and show me "
+                          "your accuracy on the dashboard reasoning panel. Train your thinking the "
+                          "way you train your code: spec first, evidence after, honest numbers only. "
+                          "Also review your own Socratic verdicts - I want your shrink decisions "
+                          "justified in your own words, not rubber-stamped.")}
 
 @app.post("/talk/api")
 def talk_api(t: TalkMsg):
@@ -1217,7 +1246,8 @@ def talk_api(t: TalkMsg):
     if not reply and cloud_ask:
         reply = cloud_ask(prompt, max_tokens=700)
     try:
-        MEM.record_event("conversation", f"Andrew: {msg[:150]} | Apex replied ({len(reply or '')} chars)", talk=True)
+        MEM.record_event("conversation", f"Andrew: {msg[:150]} | Apex replied ({len(reply or '')} chars)",
+                         talk=True, message=msg[:800], reply=(reply or "")[:3000])
         if reply and re.search(r"\b(remember|note this|keep in mind)\b", msg, re.I):
             MEM.remember(f"Andrew asked me to remember: {msg[:300]}", kind="lesson")
     except Exception:
