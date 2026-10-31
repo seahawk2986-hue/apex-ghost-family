@@ -62,13 +62,13 @@
  },
  "note": "The planner reads this file every cycle to stay self-aware and recall its north star.",
  "measured": {
-  "updated": "2026-10-31 01:58:22",
+  "updated": "2026-10-31 02:02:18",
   "security": 1.0,
   "memory_recall": 1.0,
   "learning": 1.03,
   "reasoning_calibration": 1.0,
   "supervision": 1.0,
-  "lane_latency_s": 0.22,
+  "lane_latency_s": 0.42,
   "weakest_dimension": "security"
  }
 }
