@@ -1167,13 +1167,23 @@ class TalkMsg(BaseModel):
 
 @app.get("/talk")
 def talk_page():
-    """APEX Chat v2 - the polished console (page file: Apex-Adapter/talk_page.html)."""
+    """APEX Chat v2 - the polished console (page file: repo-local ApexChatPage.html)."""
     from fastapi.responses import HTMLResponse
-    page = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                        "..", "Apex-Adapter", "talk_page.html")
+    page = os.path.join(R, "ApexChatPage.html")
     try:
         with open(page, "r", encoding="utf-8-sig") as f:
             html = f.read()
+        # Substitute the directive placeholder with a proper JS string literal
+        # (a bare identifier in the page JS would be a ReferenceError).
+        _directive_js = json.dumps(
+            ("Apex, tonight you proved your reasoning is your weakest measured dimension - and I "
+             "want that fixed properly. I'm not asking for a verbal promise: run your forecast gym "
+             "on the hard half of the pool, log every prediction into calibration, write lessons "
+             "for every miss, and show me your accuracy on the dashboard reasoning panel. Train "
+             "your thinking the way you train your code: spec first, evidence after, honest numbers "
+             "only. Also review your own Socratic verdicts - I want your shrink decisions justif"
+             "ied in your own words, not rubber-stamped."), ensure_ascii=False)
+        html = html.replace("TRAINING_DIRECTIVE_PLACEHOLDER", _directive_js)
     except OSError:
         html = "<html><body><h2>APEX</h2><p>chat page file missing - see talk_page.html</p></body></html>"
     return HTMLResponse(html)
@@ -1377,3 +1387,4 @@ if __name__ == "__main__":
         pass  # never block startup on registry failure
     threading.Thread(target=execution_loop, daemon=True).start()
     uvicorn.run(app, host="127.0.0.1", port=8080, reload=False, workers=1)
+

@@ -61,6 +61,9 @@ class Pace:
         self.stress_streak = 0
         self.healthy_streak = 0
         self._last_mem_event = 0.0
+        self._last_hardware_check = 0.0
+        self._last_hardware_result = (True, "cached")
+        self._hardware_check_interval = 5.0  # Cache hardware status for 5 seconds
 
     def _memory_note(self, text):
         # Rate-limit: at most one memory note per 10 minutes per stress episode.
@@ -75,12 +78,38 @@ class Pace:
         except Exception:
             pass
 
+    def _get_hardware_status(self):
+        """
+        Returns cached hardware status if recent, otherwise checks and caches.
+        This reduces CPU usage by avoiding frequent calls to hardware_ok()
+        which may involve system calls or subprocesses.
+        """
+        now = time.time()
+        if now - self._last_hardware_check < self._hardware_check_interval:
+            return self._last_hardware_result
+        
+        if hardware_ok is None:
+            self._last_hardware_check = now
+            self._last_hardware_result = (True, "governor unavailable")
+            return self._last_hardware_result
+        
+        try:
+            result = hardware_ok(load_guard())
+        except Exception as e:
+            result = (False, f"hardware check error: {e}")
+        
+        self._last_hardware_check = now
+        self._last_hardware_result = result
+        return result
+
     def next_delay(self, base=BASE_CYCLE_S):
         """Seconds to wait before the next work cycle (no sleeping)."""
         if hardware_ok is None:
             return base
-        ok, reason = hardware_ok(load_guard())
+        
+        ok, reason = self._get_hardware_status()
         _ = json  # guard import retained for config future use
+        
         if not ok:
             self.stress_streak += 1
             self.healthy_streak = 0
@@ -90,6 +119,7 @@ class Pace:
             if self.stress_streak == 1:
                 self._memory_note(f"host under strain ({reason}); Apex is pacing itself down.")
             return wait
+        
         if self.stress_streak:
             _log(f"recovered after {self.stress_streak} paced cycle(s): {reason}")
         self.stress_streak = 0
@@ -106,7 +136,7 @@ def can_use_local_models():
     """True when the host has headroom for local LM inference."""
     if hardware_ok is None:
         return True, "governor unavailable - assuming OK"
-    return hardware_ok(load_guard())
+    return PACER._get_hardware_status()
 
 
 PACER = Pace()
