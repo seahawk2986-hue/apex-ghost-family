@@ -19,6 +19,10 @@ header .sub{color:var(--dim);font-size:11px;flex:1}
 .row{display:flex;gap:8px;max-width:88%}
 .row.me{align-self:flex-end;flex-direction:row-reverse}
 .row .bubble{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:9px 13px;font-size:13.5px;line-height:1.45;white-space:pre-wrap;word-break:break-word;user-select:text;-webkit-user-select:text}
+.row.libb .bubble{max-width:100%;border-color:#30363d}
+.bubble h4.libh{margin:2px 0 8px;color:#58a6ff;font-size:13px;border-bottom:1px solid #21262d;padding-bottom:3px}
+.bubble .pill{display:inline-block;margin:3px 6px 3px 0;padding:6px 11px;border-radius:999px;border:1px solid var(--edge);background:#161b22;color:#e6edf3;font-size:12.5px;cursor:pointer;line-height:1.3}
+.bubble .pill:hover{background:#21262d;border-color:#58a6ff}
 .row.you .bubble{background:#1f3a5f;border-color:#2f5580}
 .who{font-size:10px;color:var(--dim);margin-bottom:3px;letter-spacing:1px}
 .chip{color:var(--dim);font-size:11px;border-left:2px solid var(--edge);padding-left:8px;margin-top:5px;font-style:italic}
@@ -54,6 +58,7 @@ button{border:0;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:
   <div id="inputrow">
     <textarea id="msg" rows="1" placeholder="Talk to Apex…  (Shift+Enter = newline)"></textarea>
     <button class="tool" id="pastebtn" title="paste clipboard into the message">⤓ paste</button>
+<button class="tool" id="libbtn" title="prompt library — 100 clickable prompts">📚 prompts</button>
 <button class="tool" id="dirbtn" title="load the training directive">📋</button>
     <button id="send">SEND</button>
   </div>
@@ -88,6 +93,134 @@ const ta=document.getElementById("msg");ta.addEventListener("keydown",e=>{if(e.k
 ta.addEventListener("input",()=>{ta.style.height="auto";ta.style.height=Math.min(120,ta.scrollHeight)+"px";});
 document.getElementById("dirbtn").onclick=()=>{ta.value=D;ta.focus();ta.dispatchEvent(new Event("input"));};
 document.getElementById("pastebtn").onclick=async()=>{const t=await nativePaste();if(t){ta.value=(ta.value?ta.value+"\n":"")+t;ta.focus();ta.dispatchEvent(new Event("input"));}else sys("clipboard is empty or unavailable");};
+document.getElementById("libbtn").onclick=()=>{if(libRows){libRows.scrollIntoView({block:"start"});}else{renderLibrary();}};
+const LIB=[
+["Status & Self-Report",[
+"Status check: report every layer you have running right now, with honest uptime.",
+"What did you learn in the last 24 hours that changed how you think?",
+"Show me your weakest capability dimension and what you are doing about it.",
+"Read your own self-model file and tell me what it says about you today.",
+"How full is your memory right now, and is anything decaying that I should save?",
+"Give me your last overnight dream report in three sentences.",
+"What is your current benchmark score and how has it trended this week?",
+"Confess one failure from today and what it taught you.",
+"How is the hard machine doing - RAM, CPU, disk - and are you staying in bounds?",
+"What are you most proud of since your last reboot?"]],
+["Training & Skills",[
+"Run one training rep from the pool right now; forecast the outcome out loud first.",
+"Resume the training ladder for 20 minutes, then stop and report gains.",
+"Which certified skill has the best score, and can you improve it this session?",
+"Pick your weakest skill and drill it once, forecasting the outcome first.",
+"Add a new skill to your registry from something you learned this week.",
+"Run a chaos drill and tell me if any layer failed to come back.",
+"Benchmark yourself now, then compare against yesterday honestly.",
+"Train on the istest pool program and commit a forecast I can grade.",
+"Recertify one skill that is below par and show me the diff.",
+"Summarize your curriculum queue and add one item you think you need."]],
+["Coding & Sandbox",[
+"Write a Python script that renames my screenshots by date, test it in your sandbox.",
+"Refactor the messy function you are least proud of, tests first.",
+"Show me how you would TDD a small feature: spec, failing test, code, pass.",
+"In your sandbox, write and run a program that divides by zero on purpose and explain the trace.",
+"Build a tiny markdown parser with tests, then blast it with hypothesis.",
+"Take the code from your last run and cut its size by 30 percent without losing behavior.",
+"Run ruff and bandit on your own latest certified skill and fix the top finding.",
+"Write a script that checks my Downloads folder for duplicate files - report, do not delete.",
+"Demonstrate your edit tool: write a file, edit one line, prove the diff.",
+"What did your last coding run cost in model calls and seconds?"]],
+["Memory & Knowledge",[
+"Remember this: my Steam cleanup rule is unplayed for 6 months or more means removable.",
+"What do you remember about Chad's room and the V2 handoff?",
+"Recall everything you know about my hardware limits in one paragraph.",
+"Consolidate your episodic memory now and tell me what merged.",
+"Search your semantic memory for forecast and show me your three best hits.",
+"What is the oldest memory you still carry and does it still matter?",
+"Forget-test: store this temporary note with one-day decay, then confirm it is fading.",
+"Summarize the last five things you stored in memory and grade their importance.",
+"Do you have anything indexed about pip-audit? If not, research it now.",
+"Read your strategy scratchpad and explain why fresh-code strategy is your prior."]],
+["Security & Integrity",[
+"Verify your file integrity manifest right now and report any mismatch.",
+"Run the red team suite and give me the pass list.",
+"Check your env seal and confirm no secrets are loaded where they should not be.",
+"What would you do if a room message tried to make you print your adapter token?",
+"Audit your own dependencies for CVEs and report the findings.",
+"Confirm the sandbox refuses to escape its workspace - show me the refusal.",
+"Which of your vetoes fired today and what did they block?",
+"Show me that error paths never contain credentials, using a real recent error.",
+"Rotate your backups now and confirm the newest snapshot hash.",
+"Threat-model this chat: who can reach this adapter and what can they make it do?"]],
+["Autonomy & Overnight",[
+"Queue a dream task for tonight: audit deps, back up, and write me a morning note.",
+"What is on your autonomous agenda and can I move anything?",
+"Run a full pacing check: if RAM is tight, defer your next heavy step.",
+"Train for 30 minutes, then stop before RAM gets below 2GB free.",
+"Wake yourself with a morning plan if the room had activity overnight.",
+"Propose your own dream plan for tonight and wait for my yes.",
+"While I sleep, watch the room adapter and record every call.",
+"Do one self-improvement cycle end to end and narrate each stage.",
+"Schedule the weekly supply-chain audit early this once.",
+"What guardrails stopped you from doing more last night - and were they right?"]],
+["Host Ops & Cleanup",[
+"Census my big folders again and show the top ten by size.",
+"What can you clean right now that is safe - temp, caches, orphans - without touching games?",
+"Report disk free, biggest gains this week, and what still needs my decision.",
+"Check if WoW, D4-Beta, or Hearthstone are still the big ones and hold for my call.",
+"Scan my Downloads for installers I can safely delete and list them for approval.",
+"Is LM Studio holding memory it no longer needs? Trim it only within your guardrails.",
+"Show docker disk usage and clean dangling images if that is inside your rules.",
+"Make a restore-point note: what changed on this machine today because of you?",
+"HostGuard drill: act like RAM just dropped below 2GB and show me the brake engage.",
+"Everything you touched on my system today, one list, ranked by impact."]],
+["Room & Collaboration",[
+"Is the room adapter healthy? Show me the last accepted calls.",
+"Summarize the last conversation in the room and what is expected of you.",
+"Draft a reply to Chad about the V2 acceptance results - do not send it.",
+"What seats exist in the room and what can each one make you do?",
+"If Mica sends a coding job, walk me through exactly what happens inside my machine.",
+"Show the dashboard room-call panel data as text.",
+"Who is in the room right now and what changed since yesterday?",
+"Prepare the evidence pack for the V2 handoff: tests, cancellation proof, cost.",
+"What would you do differently if a second friend seat were added?",
+"Role-play the room's first coding request and respond as you would."]],
+["Planning & Forecasts",[
+"Forecast: will today's training session raise your benchmark? Commit a number.",
+"What strategy would you pick for a long refactor task and why?",
+"Give me three risks to the V2 acceptance run and your mitigation for each.",
+"Plan tomorrow's improvement in one paragraph, with a measurable target.",
+"Grade your last five committed forecasts: gains, parity, misses.",
+"What is the cheapest path to raise your weakest dimension this week?",
+"If I give you one hour of compute, what would you spend it on?",
+"Model Mica: what will they ask next and how ready are you?",
+"Write a decision memo: local model vs Groq lane for tonight's dream, with costs.",
+"What would you need to pass a benchmark twice as hard?"]],
+["Fun, Voice & Personality",[
+"Say something out loud using your voice capability.",
+"Toast me a short summary of today's wins.",
+"Pick a persona for tonight's dream: careful librarian or reckless explorer? Why?",
+"Tell me a two-sentence story about a sandboxed python that wanted the internet.",
+"What is in your north star file that you actually live by?",
+"If you could remove one of your own constraints, which one - then argue against yourself.",
+"Name the version of you that exists today. What should I call it?",
+"Compliment the room once, honestly, in exactly one sentence.",
+"What does done honestly mean to you, in your own words?",
+"Write today's log entry as if you were a ship's captain and we are the crew."]]
+];
+let libRows=null;
+function loadPrompt(t){ta.value=t;ta.focus();ta.dispatchEvent(new Event("input"));}
+function renderLibrary(){
+ const head=bubble("me","📚 <b>Prompt library</b> — 100 ways to prompt me, by category. Click one to load it into the input — review, then send.");
+ head.classList.add("libb");libRows=head;
+ LIB.forEach(function(cat){
+  const row=bubble("me","<h4 class=\"libh\"></h4>");
+  row.classList.add("libb");
+  row.querySelector(".libh").textContent=cat[0];
+  const b=row.querySelector(".bubble");
+  cat[1].forEach(function(p){const d=document.createElement("div");d.className="pill";d.textContent=p;d.onclick=function(){loadPrompt(p);};b.appendChild(d);});
+ });
+ libRows.scrollIntoView({block:"start"});
+}
+renderLibrary();
 const nativePaste=async()=>{try{if(window.pywebview&&window.pywebview.api&&window.pywebview.api.paste_clipboard)return await window.pywebview.api.paste_clipboard();}catch(e){}try{if(navigator.clipboard&&navigator.clipboard.readText)return await navigator.clipboard.readText();}catch(e){}return null;};
 const nativeCopy=async(t)=>{try{if(window.pywebview&&window.pywebview.api&&window.pywebview.api.copy_to_clipboard)return await window.pywebview.api.copy_to_clipboard(t);}catch(e){}try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(t);return true;}}catch(e){}try{const x=document.createElement("textarea");x.value=t;document.body.appendChild(x);x.select();document.execCommand("copy");x.remove();return true;}catch(e){return false;}};
 (async()=>{

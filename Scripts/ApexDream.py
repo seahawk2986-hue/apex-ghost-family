@@ -132,6 +132,18 @@ def main():
                 trend = f"{'IMPROVING' if t > 0.02 else 'STAGNANT' if t > -0.02 else 'DECLINING'} ({_was:.2f} -> {_now:.2f})"
     except Exception:
         pass
+    # Security-ops round: supply-chain audit, backup rotation, disk pressure
+    sec_ops = {}
+    try:
+        sys.path.insert(0, R)
+        sys.path.insert(0, os.path.join(R, "Scripts"))
+        from ApexSecurityOps import supply_chain_audit, backup_rotation, disk_metric
+        sec_ops["audit"] = supply_chain_audit()
+        sec_ops["backup"] = backup_rotation()
+        sec_ops["disk"] = disk_metric()
+    except Exception as _e0:
+        sec_ops = {"error": str(_e0)[:80]}
+
     weakest = bench.get("weakest_dimension", "unknown")
     # Security posture, measured right now (feeds the overnight note honestly)
     sec_status = "integrity manifest OK; secrets sealed"
@@ -194,6 +206,7 @@ def main():
         "certified_skills": len(skills),
         "semantic_records": semantic_records,
         "capability_trend": trend,
+        "security_ops": {"vulns": ((sec_ops.get("audit") or {}).get("vulnerabilities")), "backup": sec_ops.get("backup"), "disk_free_gb": (sec_ops.get("disk") or {}).get("disk_free_gb")},
         
         "recertification": _recert,
         "benchmark": {k: bench.get(k) for k in (

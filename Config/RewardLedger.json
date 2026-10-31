@@ -2,11 +2,11 @@
  "ApexIPCEngine.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 12,
+  "attempts": 15,
   "successes": 1,
   "streak": 0,
-  "parity_total": 14,
-  "parity_hits": 14
+  "parity_total": 17,
+  "parity_hits": 17
  },
  "apexpacing.py": {
   "best": 105.0,
@@ -16,5 +16,29 @@
   "streak": 1,
   "parity_total": 1,
   "parity_hits": 1
+ },
+ "ApexPacing.py": {
+  "best": 103.0,
+  "best_base": 90.0,
+  "attempts": 1,
+  "successes": 1,
+  "streak": 1,
+  "ok_full": 1
+ },
+ "ApexInstaller.py": {
+  "best": 0.0,
+  "best_base": 0.0,
+  "attempts": 1,
+  "successes": 0,
+  "streak": 0,
+  "parity_total": 1,
+  "parity_hits": 1
+ },
+ "test_reward.py": {
+  "best": 0.0,
+  "best_base": 0.0,
+  "attempts": 1,
+  "successes": 0,
+  "streak": 0
  }
 }
