@@ -41,9 +41,9 @@ def log(lyr, msg):
     try:
         if os.path.exists(path) and os.path.getsize(path) > 5 * 1024 * 1024:
             os.replace(path, path + ".1")   # bounded logs: rotate at 5MB
+        with open(path, "a", encoding="utf-8") as f: f.write(f"[{time.strftime('%H:%M:%S')}] {msg}\n")
     except OSError:
-        pass
-    with open(path, "a", encoding="utf-8") as f: f.write(f"[{time.strftime('%H:%M:%S')}] {msg}\n")
+        pass  # logging must never crash the loop
 
 def query_ds(p):
     try:
@@ -52,6 +52,9 @@ def query_ds(p):
             choices = r.json().get("choices", [])
             if choices and isinstance(choices, list):
                 return choices[0].get("message", {}).get("content", "").strip()
+        # non-200 (model unloaded/unloaded mid-call) is a drop too - never silent
+        log("system", f"DeepSeek HTTP {r.status_code} - bursting planner thought to cloud lanes")
+        if cloud_ask: return cloud_ask(p, max_tokens=700)
     except Exception as e:
         log("system", f"DeepSeek drop: {e} - bursting planner thought to cloud lanes")
         if cloud_ask: return cloud_ask(p, max_tokens=700)
@@ -67,6 +70,8 @@ def query_qw(p, schema=False):
             choices = r.json().get("choices", [])
             if choices and isinstance(choices, list):
                 return choices[0].get("message", {}).get("content", "").strip()
+        log("system", f"Qwen HTTP {r.status_code} - bursting coding task to cloud lanes")
+        if cloud_ask: return cloud_ask(p, max_tokens=1600)
     except Exception as e:
         log("system", f"Qwen drop: {e} - bursting coding task to cloud lanes")
         if cloud_ask: return cloud_ask(p, max_tokens=1600)
@@ -219,6 +224,16 @@ def sandbox(fn, c):
         log("reward", f"Sandbox did not complete cleanly: {e}")
         return {"status": "CRASHED", "error": f"Sandbox failure: {e}", "output": ""}
 
+def _set_strategy(text):
+    """Deliberative scratchpad: carry working intent across cycles."""
+    try:
+        os.makedirs(os.path.join(R, "Config"), exist_ok=True)
+        with open(os.path.join(R, "Config", "ApexStrategy.json"), "w", encoding="utf-8") as f:
+            json.dump({"strategy": text[:220], "updated": time.strftime("%Y-%m-%d %H:%M:%S")}, f)
+    except Exception:
+        pass
+
+
 def heal(fn, intent, code, minimal=False):
     ex = os.path.splitext(fn)[1].strip().lower()
     # Predecessor behavior baseline (computed ONCE - the live file is the
@@ -272,6 +287,7 @@ def heal(fn, intent, code, minimal=False):
                     _snapshot(fn, msg=f"evolution: {fn} reward {scr:.0f}")
                 if _distill:
                     _distill(fn, intent, scr)  # certify as a skill
+                _set_strategy(f"continue {fn} (success streak {(_streak or 0) + 1}); keep changes surgical; verify output parity")
             except Exception:
                 pass
             _bump_ledger(fn, {k: m.get(k, 0) for k in ("syntax", "safety", "runtime", "output")}, scr, True)
@@ -284,6 +300,7 @@ def heal(fn, intent, code, minimal=False):
             f"Fix the bugs completely. Keep the working parts intact. "
             f"Output ONLY the full corrected file in a single ```{fence} fenced block."), ex)
     _bump_ledger(fn, None, None, False)
+    _set_strategy("switch to a different file; use smaller surgical changes; verify behavior parity against the ledger best")
     try:
         MEM.remember(f"Failure lesson: {fn} rejected after 3 repair passes. Last error: {str((res or {}).get('error') or (res or {}).get('output') or 'unknown')[:160]}. Next time: smaller, surgical change.", kind="lesson")
     except Exception: pass
@@ -296,7 +313,9 @@ def plan():
     # Only .py files: the scorer (ast.parse) can't evaluate .ps1 targets, so
     # proposing them wastes an entire cycle every time.
     try: all_f = [f for f in os.listdir(R) if f.lower().endswith('.py') and f.lower() not in CORE_MODULES]
-    except: return False
+    except OSError as e:
+        log("system", f"Workspace listing failed: {e}")
+        return False
     mem_hist = "None yet."
     try:
         _rows = MEM.recall("workspace optimization lessons errors decisions", k=4, min_similarity=0.20)
@@ -313,6 +332,14 @@ def plan():
         if _tops: ledger_hist = "; ".join(f"{k}: best {v.get('best', 0):.0f}, streak {v.get('streak', 0)}" for k, v in _tops)
     except Exception: pass
     # Editing-strategy calibration: is Apex's world model accurate?
+    # Working strategy carried from the last cycle (deliberative scratchpad)
+    strat = "none recorded yet"
+    try:
+        with open(os.path.join(R, "Config", "ApexStrategy.json"), "r", encoding="utf-8") as f:
+            _sj = json.load(f)
+        strat = _sj.get("strategy", "")[:200] or strat
+    except Exception:
+        pass
     # Self-issued curriculum: proposals from real evidence (bandit + failures + human queue)
     curric = "none"
     try:
@@ -355,10 +382,11 @@ def plan():
                 f"Reflection on recent cycles:\n{reflect}\n"
                 f"Self-model (identity, engines, limits):\n{selfcard}\n"
                 f"Self-issued curriculum (proposed objectives):\n{curric}\n"
+                f"Working strategy from last cycle:\n{strat}\n"
                 "Rules: do NOT target core modules, do NOT propose destructive code.\n"
                 "Return ONLY strict JSON (no code, no explanation): {\n  \"target_file\": \"filename.ext\",\n  \"task_intent\": \"one-sentence goal\",\n  \"change_brief\": \"2-3 sentences on the exact change to make\"\n}")
-    if not o: return False
-    if not o: return False
+    if not o:
+        return False
 
     def _parse_plan(raw):
         cleaned = raw.split("</think>")[-1].strip()
@@ -393,40 +421,142 @@ def plan():
         log("planner", f"Plan rejected (invalid target: {tf or 'none'})")
         return False
 
-    # Ensemble planning: a second opinion from the Groq burst lane. Agreement
-    # raises confidence; disagreement makes the coder conservative.
+    # Self-consistency planning: modal target wins the vote (DeepSeek + 2 Groq
+    # ballots, confidence-weighted). Majority agreement = proceed confidently;
+    # split votes = conservative coding.
     _ensemble = ""
     try:
         if cloud_ask:
-            _box = {}
+            _votes = [tf]
+            _results = {}
 
-            def _gp():
+            def _vote(i):
                 try:
-                    _box["v"] = cloud_ask(
-                        "Second-opinion planner. Choose ONE file from [" + ", ".join(all_f[:12]) +
+                    _v = cloud_ask(
+                        "Planning vote. Choose ONE file from [" + ", ".join(all_f[:12]) +
                         "] to optimize. Reply ONLY strict JSON: {\"target_file\": \"a.py\", "
-                        "\"task_intent\": \"...\", \"change_brief\": \"...\"}. History: " + hist[-260:],
+                        "\"task_intent\": \"...\", \"change_brief\": \"...\", "
+                        "\"confidence\": 0.0-1.0}. History: " + hist[-240:],
                         max_tokens=250)
+                    if _v and "{" in _v and "}" in _v:
+                        _j = json.loads(_v[_v.find("{"): _v.rfind("}") + 1])
+                        _results[i] = (str(_j.get("target_file", "")).strip(),
+                                       float(_j.get("confidence", 0.5) or 0.5))
                 except Exception:
                     pass
 
-            _tt = threading.Thread(target=_gp, daemon=True)
-            _tt.start()
-            _tt.join(timeout=28)
-            _gplan = (_box.get("v") or "").strip()
-            if "{" in _gplan and "}" in _gplan:
-                _gj = json.loads(_gplan[_gplan.find("{"): _gplan.rfind("}") + 1])
-                _gf = str(_gj.get("target_file", "")).strip()
-                if _gf:
-                    if _gf.lower() == tf.lower():
-                        _ensemble = "second planner (Groq) AGREES with this target"
-                    else:
-                        _ensemble = (f"second planner (Groq) proposed {_gf} (DISAGREEMENT) - "
-                                     "implement conservatively, keep changes surgical")
+            _vts = [threading.Thread(target=_vote, args=(i,), daemon=True) for i in range(2)]
+            for _t in _vts:
+                _t.start()
+            for _t in _vts:
+                _t.join(timeout=26)
+            _votes.extend(r[0] for r in _results.values() if r[0])
+            _confid = [r[1] for r in _results.values()]
+            _counts = {}
+            for _v in _votes:
+                _k = _v.lower()
+                _counts[_k] = _counts.get(_k, 0) + 1
+            _modal = max(_counts.items(), key=lambda kv: kv[1])[0]
+            _agree = sum(1 for _v in _votes if _v.lower() == _modal)
+            if _modal != tf.lower():
+                _ensemble = (f"planning votes {dict(_counts)}: modal target '{_modal}' DISAGREES "
+                             "with DeepSeek - implement conservatively, changes surgical")
+            elif _agree < len(_votes):
+                _ensemble = f"planning votes {dict(_counts)}: majority agrees, {_agree}/{len(_votes)}"
+            else:
+                _ensemble = f"planning votes: unanimous ({len(_votes)}/{len(_votes)} agree)"
+            if _confid:
+                _ensemble += f" | vote confidences: {[round(c, 2) for c in _confid]}"
     except Exception:
         _ensemble = ""
     if _ensemble:
-        log("planner", f"Ensemble: {_ensemble[:100]}")
+        log("planner", f"Ensemble: {_ensemble[:130]}")
+
+    # Perception upgrade: detect NEW files since last cycle (an evolving agent
+    # should notice its environment changing - including files it creates).
+    _perception = ""
+    try:
+        _kp = os.path.join(R, "Config", "known_files.json")
+        _known = []
+        try:
+            with open(_kp, "r", encoding="utf-8") as f:
+                _known = json.load(f).get("files", [])
+        except Exception:
+            _known = []
+        _new = [f for f in all_f if f not in _known]
+        if _new:
+            _perception = f"NEW FILE(S) DETECTED since last cycle: {', '.join(_new[:4])} - exploring them enriches experience"
+            log("planner", f"Perception: {_perception}")
+        os.makedirs(os.path.dirname(_kp), exist_ok=True)
+        with open(_kp, "w", encoding="utf-8") as f:
+            json.dump({"files": sorted(all_f), "updated": time.strftime("%Y-%m-%d %H:%M:%S")}, f)
+    except Exception:
+        pass
+
+    # Adaptive edit strategy: minimal-diff vs full-rewrite weighted by the
+    # agent's MEASURED parity-prediction accuracy (world model feedback loop).
+    _prefer_minimal = True
+    try:
+        _th = sum(v.get("parity_hits", 0) for v in _lg.values())
+        _tt = sum(v.get("parity_total", 0) for v in _lg.values())
+        if _tt >= 3:
+            _rate = _th / _tt
+            _prefer_minimal = _rate >= 0.7
+            log("planner", f"Edit-strategy: minimal-diff parity {_th}/{_tt} ({100 * _rate:.0f}%) -> "
+                           f"{'minimal-diff preferred' if _prefer_minimal else 'full-rewrite preferred'}")
+    except Exception:
+        pass
+    if _perception:
+        log("planner", f"Perception: {_perception[:100]}")
+
+    # Critical thinking: SOCRATIC interrogation of the plan BEFORE any code
+    # is written. Assumptions get surfaced, pre-mortem failures become coder
+    # guards, and 'abort' verdicts self-reject the plan outright.
+    _think, _shrink, _guards = None, False, []
+    try:
+        if cloud_ask:
+            sys.path.insert(0, os.path.join(R, "Scripts"))
+            from ApexThink import review as _think_review
+            _think = _think_review(
+                f"Optimize {tf}: {intent}. Brief: {brief}",
+                f"History: {hist[-280:]} | Ledger bests: {ledger_hist} | Calibration: {calib}",
+                cloud_ask)
+    except Exception:
+        _think = None
+    if _think:
+        try:
+            MEM.record_event("thinking", f"{tf}: socratic verdict={_think.get('verdict')} "
+                                        f"assumptions={len(_think.get('assumptions', []) or [])} "
+                                        f"pre-mortem factors={len(_think.get('pre_mortem', []) or [])}")
+        except Exception:
+            pass
+        _verdict = str(_think.get("verdict", "proceed"))
+        if _verdict == "abort":
+            # Abort double-check: one confirmation review prevents over-stalls.
+            _reason0 = str(_think.get("reason", ""))[:200]
+            try:
+                from ApexThink import confirm_abort
+                if not confirm_abort(f"{tf}: {intent}", _reason0, cloud_ask):
+                    _verdict = "shrink"
+                    log("planner", "Abort downgraded to SHRINK after confirmation review")
+            except Exception:
+                pass
+        if _verdict == "abort":
+            _reason = str(_think.get("reason", ""))[:200]
+            log("planner", f"CRITICAL REVIEW ABORTED the plan (confirmed): {_reason}")
+            try:
+                MEM.record_event("error", f"Plan for {tf} self-aborted by critical review: {_reason}")
+                MEM.remember(f"Failure lesson: the plan for {tf} was self-aborted by critical "
+                             f"thinking. Reason: {_reason}", kind="lesson")
+            except Exception:
+                pass
+            return False
+        if _verdict == "shrink":
+            _shrink = True
+            log("planner", "Critical review SHRANK the plan - conservative mode engaged")
+        _guards = ([str(g) for g in (_think.get("pre_mortem") or [])[:4]]
+                   + [f"re-check: {g}" for g in (_think.get("falsifiers") or [])[:3]])
+    _guard_line = ("CRITICAL-THINKING GUARDS (must not violate): " + "; ".join(_guards)) if _guards else ""
 
     # --- Phase 2: Qwen2.5-coder EDITS (minimal-diff first, full-file fallback) -
     log("planner", f"Locked onto: {tf}. DeepSeek plan: {brief[:120]}")
@@ -437,10 +567,14 @@ def plan():
     ex = os.path.splitext(tf)[1].strip().lower()
     code = None
     _minimal = False
-    patch_out = query_qw(
+    patch_out = None
+    if _prefer_minimal:
+        patch_out = query_qw(
         f"You are Apex's expert coding unit. Apply the requested change with MINIMAL edits.\n"
         f"Target file: {tf}\nIntent: {intent}\nChange brief: {brief}\n"
-        f"Second-opinion check: {(_ensemble or 'none')}\n\n"
+        f"Second-opinion check: {(_ensemble or 'none')}\n"
+        f"{_guard_line}\n"
+        f"Conservative mode: {('YES - smallest possible change; assume unvalidated assumptions are false' if _shrink else 'no')}\n\n"
         f"[CURRENT FILE CONTENT]:\n{cur_full[:6000]}\n\n"
         "Output ONLY one or more edit blocks in exactly this format (no fences, no commentary):\n"
         "<<<<<<< SEARCH\n<exact lines to find in the file>\n=======\n<replacement lines>\n>>>>>>> REPLACE\n"
@@ -455,7 +589,9 @@ def plan():
         log("planner", "Minimal-diff unusable; falling back to full-file rewrite")
         code_out = query_qw(
             f"You are Apex's expert coding unit. Implement the following change.\n"
-            f"Target file: {tf}\nIntent: {intent}\nChange brief: {brief}\n\n"
+            f"Target file: {tf}\nIntent: {intent}\nChange brief: {brief}\n"
+            f"{_guard_line}\n"
+            f"Conservative mode: {('YES - smallest possible change; assume unvalidated assumptions are false' if _shrink else 'no')}\n\n"
             f"[CURRENT FILE CONTENT]:\n{cur_full[:6000]}\n\n"
             f"Rewrite the complete file with the change applied. Keep the valid, working, non-destructive parts of the "
             f"existing structure intact; only make the requested improvement. Output ONLY the full file content "
@@ -499,6 +635,34 @@ def plan():
     except Exception:
         pass
 
+    # Reasoning Best-of-2: a Groq-written alternate races the Qwen candidate in
+    # the sandbox; the candidate with better observable behavior wins.
+    try:
+        if cloud_ask:
+            _alt_raw = cloud_ask(
+                "Write the complete replacement for this file implementing the same change.\n"
+                f"Target file: {tf}\nIntent: {intent}\nChange brief: {brief}\n"
+                f"{_guard_line}\n\nCURRENT FILE:\n{cur_full[:4000]}\n\n"
+                f"Output ONLY the full file in a single ```{fence} fenced block.", max_tokens=1400)
+            _alt = ext_code(_alt_raw or "", os.path.splitext(tf)[1].strip().lower())
+            if _alt and len(_alt) > 30 and _alt.strip() != code.strip():
+                _resA = sandbox(tf, code)
+                _resB = sandbox(tf, _alt)
+
+                def _qs(r):
+                    return (20 if r.get("status") == "SUCCESS" else 0) + \
+                           (15 if (r.get("output") or "").strip() else 0)
+
+                if _qs(_resB) > _qs(_resA):
+                    code = _alt
+                    log("planner", "Best-of-2 selection: Groq alternate outperformed in sandbox")
+                    try:
+                        MEM.record_event("thinking", f"{tf}: Groq alternate won the sandbox race (parity-gated write remains)")
+                    except Exception:
+                        pass
+    except Exception:
+        pass
+
     # --- Phase 3: build the queue payload in Python (never ask a model for JSON)
     payload = json.dumps({"target_file": tf, "task_intent": intent, "proposed_code": code, "minimal_diff": bool(_minimal)})
     with open(Q, "w", encoding="utf-8") as f: f.write(payload)
@@ -535,6 +699,7 @@ def talk_page():
         "<button onclick='send()'>SEND</button>"
         "<script>const log=document.getElementById('log');"
         "function add(cls,t){const d=document.createElement('div');d.className=cls;d.textContent=t;log.appendChild(d);}"
+        "fetch('/notes').then(r=>r.json()).then(j=>{(j.notes||[]).slice(-1).forEach(n=>{const d=document.createElement('div');d.style.color='#d29922';d.textContent='['+n.ts+'] APEX (overnight dream): '+n.note;log.appendChild(d);});}).catch(()=>{});"
         "async function send(){const i=document.getElementById('msg');const t=i.value.trim();if(!t)return;"
         "i.value='';add('you','YOU: '+t);"
         "const m=add('me','APEX: thinking...');"
@@ -581,6 +746,15 @@ def talk_api(t: TalkMsg):
                                "be active. Try again in a minute."),
             "recall": [{"text": l["text"][:140]} for l in lessons]}
 
+@app.get("/notes")
+def notes_api():
+    """Apex's overnight notes - the dream cycle speaks first."""
+    try:
+        with open(os.path.join(R, "Config", "ApexNotes.json"), "r", encoding="utf-8") as f:
+            return {"notes": json.load(f)}
+    except Exception:
+        return {"notes": []}
+
 @app.get("/")
 def dashboard():
     """The brain's live status page: ledger, memory stream, self-state."""
@@ -613,15 +787,18 @@ def execution_loop():
             if not os.path.exists(Q) or os.path.getsize(Q) == 0: plan()
             else:
                 with open(Q, "r", encoding="utf-8") as f: d = json.load(f)
-                if d.get("target_file") and d.get("proposed_code"): log("loop", f"Running: {d['target_file']}"); heal(d["target_file"], d.get("task_intent", "Evolve"), d["proposed_code"])
+                if d.get("target_file") and d.get("proposed_code"): log("loop", f"Running: {d['target_file']}"); heal(d["target_file"], d.get("task_intent", "Evolve"), d["proposed_code"], bool(d.get("minimal_diff", False)))
                 with open(Q, "w", encoding="utf-8") as f: f.write("")
             try:
                 if _HG: _HG.enforce_limits()   # self-RAM governor: gc flush on breach
                 if PACER: PACER.sleep_between_cycles(15)
                 else: time.sleep(15)
             except Exception: time.sleep(15)
-        except KeyboardInterrupt: break
-        except: time.sleep(5)
+        except KeyboardInterrupt:
+            break
+        except Exception as e:
+            log("system", f"Loop cycle error: {type(e).__name__}: {e}")
+            time.sleep(5)
 
 if __name__ == "__main__":
     # Single-instance guard v2: PID REGISTRY (no enumeration - hang-proof).
