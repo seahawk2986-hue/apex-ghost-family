@@ -140,6 +140,19 @@ def mark_used(skill_id, injected_text=None):
         pass
 
 
+def mark_win(skill_id):
+    """Win telemetry: injections that led to a reward-gated successful write."""
+    try:
+        reg = _load(REG, {})
+        v = reg.get(skill_id)
+        if v is None: return
+        v["wins"] = int(v.get("wins", 0)) + 1
+        v["last_win"] = time.strftime("%Y-%m-%d %H:%M:%S")
+        _save(REG, reg)
+    except Exception:
+        pass
+
+
 def recertify(max_n=5, sandbox_fn=None):
     """Re-run each newest N skill's SOURCE through the sandbox (dream-time).
     CRASHED sources demote the skill before it can mislead the planner.

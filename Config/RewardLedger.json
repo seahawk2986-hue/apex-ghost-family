@@ -2,11 +2,11 @@
  "ApexIPCEngine.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 7,
+  "attempts": 8,
   "successes": 1,
   "streak": 0,
-  "parity_total": 12,
-  "parity_hits": 12
+  "parity_total": 13,
+  "parity_hits": 13
  },
  "apexpacing.py": {
   "best": 105.0,
