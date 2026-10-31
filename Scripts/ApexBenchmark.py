@@ -69,6 +69,17 @@ def run(include_cloud=True):
     th = sum((v or {}).get("parity_hits", 0) for v in lg.values())
     tt = sum((v or {}).get("parity_total", 0) for v in lg.values())
     out["reasoning_calibration"] = round(th / tt, 2) if tt else None
+    # Reasoning v2: score over the full prediction-vs-outcome sample set
+    try:
+        m = ApexMemory()
+        _ev = m.recent_events(60, kind="calibration")
+        if _ev:
+            _good = sum(1 for e in _ev
+                        if (e.get("meta") or {}).get("predicted") == (e.get("meta") or {}).get("actual"))
+            out["reasoning_calibration"] = round(_good / len(_ev), 2)
+            out["reasoning_samples"] = len(_ev)
+    except Exception:
+        pass
 
     # -- supervision: inspector latency + correctness on both layers
     try:

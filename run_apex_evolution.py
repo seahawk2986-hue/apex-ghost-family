@@ -282,7 +282,7 @@ def _set_strategy(text):
         pass
 
 
-def heal(fn, intent, code, minimal=False):
+def heal(fn, intent, code, minimal=False, predicted=None):
     ex = os.path.splitext(fn)[1].strip().lower()
     # Predecessor behavior baseline (computed ONCE - the live file is the
     # predecessor until a candidate actually passes the write gate).
@@ -300,24 +300,28 @@ def heal(fn, intent, code, minimal=False):
             scr += min(9.0, 3.0 * (_streak + 1)); m["streak_bonus"] = min(9.0, 3.0 * (_streak + 1))
         if minimal:
             scr += 2.0; m["minimal_diff"] = 2
-        # World-model calibration: predict behavior change, record what happened.
-        if traj == 0:
-            prev_out = ((prev_res or {}).get("output") or "").strip()
-            cand_out = (res.get("output") or "").strip()
-            actual = ("gain" if len(cand_out) > len(prev_out)
-                      else "loss" if len(cand_out) < len(prev_out) else "parity")
-            expected = "parity" if minimal else "variable"
-            try:
-                MEM.record_event("calibration", f"{fn} expected {expected}, actual {actual}", file=fn)
-                if minimal:
-                    lg = _load_ledger()
-                    rec = lg.setdefault(fn, {"best": 0.0, "best_base": 0.0, "attempts": 0, "successes": 0, "streak": 0})
-                    rec["parity_total"] = rec.get("parity_total", 0) + 1
-                    if actual == "parity":
-                        rec["parity_hits"] = rec.get("parity_hits", 0) + 1
-                    _save_ledger(lg)
-            except Exception:
-                pass
+        # World-model calibration: EVERY trajectory is scored against a
+        # prediction (critic forecast / strategy prior) - real forecast samples.
+        prev_out = ((prev_res or {}).get("output") or "").strip()
+        cand_out = (res.get("output") or "").strip()
+        actual = ("gain" if len(cand_out) > len(prev_out)
+                  else "loss" if len(cand_out) < len(prev_out) else "parity")
+        expected = (predicted or ("parity" if minimal else "variable")) if traj == 0 else "gain-repair"
+        try:
+            MEM.record_event("calibration",
+                             f"{fn} pass {traj+1} predicted {expected}, actual {actual} "
+                             f"(strategy={'minimal' if minimal else 'rewrite'})",
+                             file=fn, predicted=expected, actual=actual,
+                             strategy="minimal" if minimal else "rewrite")
+            if traj == 0 and minimal:
+                lg = _load_ledger()
+                rec = lg.setdefault(fn, {"best": 0.0, "best_base": 0.0, "attempts": 0, "successes": 0, "streak": 0})
+                rec["parity_total"] = rec.get("parity_total", 0) + 1
+                if actual == "parity":
+                    rec["parity_hits"] = rec.get("parity_hits", 0) + 1
+                _save_ledger(lg)
+        except Exception:
+            pass
         try: MEM.record_event("evolution_pass", f"{fn} pass {traj+1}/3 scored {scr:.0f} ({res['status']})", file=fn)
         except Exception: pass
         if scr >= 100.0 and not m.get("behavior_loss") and not m.get("noop"):
@@ -540,10 +544,42 @@ def plan():
                 _ensemble = f"planning votes: unanimous ({len(_votes)}/{len(_votes)} agree)"
             if _confid:
                 _ensemble += f" | vote confidences: {[round(c, 2) for c in _confid]}"
+            try:
+                MEM.record_event("planning_vote",
+                                 f"votes={dict(_counts)} modal={_modal} agree={_agree}/{len(_votes)}",
+                                 file=tf, agree=_agree, total=len(_votes))
+            except Exception:
+                pass
     except Exception:
         _ensemble = ""
     if _ensemble:
         log("planner", f"Ensemble: {_ensemble[:130]}")
+
+    # Disagreement resolution: when planners split, a deciding vote reviews
+    # BOTH positions and picks the better target for THIS cycle.
+    if "DISAGREES" in _ensemble:
+        try:
+            if cloud_ask:
+                _modal_name = _modal if "_modal" in dir() else ""
+                _dec = cloud_ask(
+                    "Two planning agents disagree on the best evolution target. "
+                    f"DeepSeek argues for '{tf}' ({intent[:120]}). Groq voters argue for '{_modal_name}'. "
+                    "Decide which target is better for autonomous evolution RIGHT NOW "
+                    "(reward history favors stability; novelty favors exploration). "
+                    "Reply ONLY strict JSON: {\"final_target\": \"filename.py\"}",
+                    max_tokens=150)
+                if _dec and "{" in _dec:
+                    _dj = json.loads(_dec[_dec.find("{"): _dec.rfind("}") + 1])
+                    _fin = str(_dj.get("final_target", "")).strip()
+                    if _fin and _fin.lower() in [f.lower() for f in all_f]:
+                        if _fin.lower() != tf.lower():
+                            tf = _fin
+                            _ensemble = f"disagreement RESOLVED by deciding vote -> {tf}"
+                        else:
+                            _ensemble = f"disagreement RESOLVED by deciding vote -> keeps {tf}"
+                        log("planner", f"Ensemble: {_ensemble[:130]}")
+        except Exception:
+            pass
 
     # Perception upgrade: detect NEW files since last cycle (an evolving agent
     # should notice its environment changing - including files it creates).
@@ -625,8 +661,23 @@ def plan():
                 pass
             return False
         if _verdict == "shrink":
-            _shrink = True
-            log("planner", "Critical review SHRANK the plan - conservative mode engaged")
+            # Borderline verdicts get one confirming Socratic review.
+            try:
+                _c2 = _think_review(
+                    f"Confirm or overturn: a prior review issued verdict SHRINK for this plan: "
+                    f"Optimize {tf}: {intent}. Brief: {brief}. Confirm SHRINK only if the "
+                    f"risks are genuinely real for this machine.",
+                    f"History: {hist[-200:]}",
+                    cloud_ask)
+                if isinstance(_c2, dict) and str(_c2.get("verdict", "shrink")) == "proceed":
+                    _verdict = "proceed"
+                    _think["verdict"] = "proceed"
+                    log("planner", "SHRINK overturned by second Socratic review - proceeding normally")
+            except Exception:
+                pass
+            if str(_think.get("verdict", _verdict)) == "shrink":
+                _shrink = True
+                log("planner", "Critical review SHRANK the plan - conservative mode engaged (double-checked)")
         _guards = ([str(g) for g in (_think.get("pre_mortem") or [])[:4]]
                    + [f"re-check: {g}" for g in (_think.get("falsifiers") or [])[:3]])
     _guard_line = ("CRITICAL-THINKING GUARDS (must not violate): " + "; ".join(_guards)) if _guards else ""
@@ -702,13 +753,15 @@ def plan():
 
     # Critic pass (constitutional self-refinement): a second model reviews the
     # candidate for hidden hazards BEFORE the sandbox - cheaper than failing.
+    _prediction = "variable"
     try:
         if cloud_ask:
             _crit = cloud_ask(
                 "You are Apex's code critic. Review the proposed rewrite for hidden hazards: "
                 "syntax issues, runtime hazards, behavioral regressions vs the current file, "
-                "security problems. Reply ONLY strict JSON: "
-                "{\"verdict\": \"ok\" | \"issues\", \"issues\": [\"...\"]}\n\n"
+                "security problems. ALSO forecast its observable behavior change. Reply ONLY "
+                "strict JSON: {\"verdict\": \"ok\" | \"issues\", \"issues\": [\"...\"], "
+                "\"behavior_prediction\": \"gain\" | \"loss\" | \"parity\"}\n\n"
                 "CURRENT FILE:\n" + cur_full[:3000] + "\n\nPROPOSED REWRITE:\n" + code[:3000],
                 max_tokens=300)
             _verdict, _issues = "ok", []
@@ -716,6 +769,11 @@ def plan():
                 _cj = json.loads(_crit[_crit.find("{"): _crit.rfind("}") + 1])
                 _verdict = str(_cj.get("verdict", "ok"))
                 _issues = [str(i) for i in (_cj.get("issues") or [])][:5]
+            _prediction = str(_cj.get("behavior_prediction", "variable")).strip().lower() if (_crit and "{" in _crit) else "variable"
+            if _prediction not in ("gain", "loss", "parity"):
+                _prediction = "variable"
+            try: MEM.record_event("critic_prediction", f"{tf} predicted {_prediction}", file=tf, predicted=_prediction)
+            except Exception: pass
             try: MEM.record_event("critique", f"{tf}: critic={_verdict} issues={len(_issues)}")
             except Exception: pass
             if _verdict == "issues" and _issues:
@@ -761,7 +819,7 @@ def plan():
         pass
 
     # --- Phase 3: build the queue payload in Python (never ask a model for JSON)
-    payload = json.dumps({"target_file": tf, "task_intent": intent, "proposed_code": code, "minimal_diff": bool(_minimal)})
+    payload = json.dumps({"target_file": tf, "task_intent": intent, "proposed_code": code, "minimal_diff": bool(_minimal), "critic_prediction": _prediction})
     with open(Q, "w", encoding="utf-8") as f: f.write(payload)
     try: MEM.record_event("plan_decision", f"Chose {tf}: {intent[:120]} | brief: {brief[:120]}")
     except Exception: pass
@@ -865,6 +923,14 @@ def dashboard():
     evs = "".join(
         f"<li>[{e.get('kind')}] {e.get('text', '')[:120]} <i>({e.get('ts')})</i></li>"
         for e in ev)
+    cal_ev = MEM.recent_events(40, kind="calibration")
+    _cal_html = ""
+    if cal_ev:
+        _ok = sum(1 for e in cal_ev
+                  if (e.get("meta") or {}).get("predicted") == (e.get("meta") or {}).get("actual"))
+        _cal_html = ("<h3>Reasoning calibration (world-model accuracy)</h3><p>" +
+                     f"{_ok}/{len(cal_ev)} behavior predictions correct "
+                     f"({(100 * _ok / max(1, len(cal_ev))):.0f}%)</p>")
     html = (
         "<html><head><meta http-equiv='refresh' content='15'><title>APEX</title>"
         "<style>body{background:#0d1117;color:#7ee787;font-family:Consolas,monospace}"
@@ -874,7 +940,7 @@ def dashboard():
         "<p>8080 evolution | 8081 bridge | registry: Config/layer_pids.json | pacing: HostGuard</p>"
         "<h3>Reward ledger (best-certified files)</h3>"
         f"<table><tr><th>file</th><th>best</th><th>streak</th><th>attempts</th></tr>{rows}</table>"
-        "<h3>Recent cognitive events</h3><ul>" + evs + "</ul></body></html>")
+        "<h3>Recent cognitive events</h3><ul>" + evs + "</ul>" + _cal_html + "</body></html>")
     return HTMLResponse(html)
 
 def execution_loop():
@@ -884,7 +950,7 @@ def execution_loop():
             if not os.path.exists(Q) or os.path.getsize(Q) == 0: plan()
             else:
                 with open(Q, "r", encoding="utf-8") as f: d = json.load(f)
-                if d.get("target_file") and d.get("proposed_code"): log("loop", f"Running: {d['target_file']}"); heal(d["target_file"], d.get("task_intent", "Evolve"), d["proposed_code"], bool(d.get("minimal_diff", False)))
+                if d.get("target_file") and d.get("proposed_code"): log("loop", f"Running: {d['target_file']}"); heal(d["target_file"], d.get("task_intent", "Evolve"), d["proposed_code"], bool(d.get("minimal_diff", False)), d.get("critic_prediction"))
                 with open(Q, "w", encoding="utf-8") as f: f.write("")
             try:
                 if _HG: _HG.enforce_limits()   # self-RAM governor: gc flush on breach
