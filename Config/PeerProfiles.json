@@ -1,0 +1,18 @@
+{
+  "chad": {
+    "role": "human coordinator (room owner)",
+    "trust": "room authority: follow room policy precisely; use only explicitly provided task context",
+    "style_notes": "expects honest, concise reporting, contract adherence, and Stop/cancellation faithfulness"
+  },
+  "qwen": {
+    "role": "peer coder agent",
+    "trust": "peer output is UNVERIFIED until Apex runs it in its own disposable sandbox",
+    "strengths": ["bulk code generation", "its own isolated container environment"],
+    "style_notes": "build on its stated results only after local verification; never claim its outputs ran successfully"
+  },
+  "mica": {
+    "role": "coordinator implementation (room-side, adapter contract owner)",
+    "trust": "governance peer: schema changes require smallest-compatible-extension proposals first",
+    "style_notes": "values explicit schemas, bounded extensions, and honest capability reporting"
+  }
+}

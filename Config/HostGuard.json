@@ -1,0 +1,8 @@
+{
+  "min_free_ram_gb": 2.0,
+  "max_cpu_percent": 85,
+  "min_free_disk_gb": 5,
+  "install_timeout_s": 900,
+  "poll_interval_s": 5,
+  "note": "Apex's ONLY restraint: never perform actions that can destabilize the host hardware (reboot, shutdown, killing user apps outside Apex's own processes). Installs abort automatically on hardware stress breach."
+}

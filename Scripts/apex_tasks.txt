@@ -1,0 +1,1 @@
+Write a highly modular PowerShell benchmarking function that profiles directory load times and compresses historical runtime log outputs cleanly. | Master-CodeOptimization

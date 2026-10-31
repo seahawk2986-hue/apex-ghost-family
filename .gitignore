@@ -1,0 +1,10 @@
+.env
+Logs/
+watchdog.lock
+__pycache__/
+apex_venv/
+Config/versions/
+Backup_Archive/
+speculative_test_*
+*.tmp
+*.pyc

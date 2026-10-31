@@ -1,0 +1,16 @@
+=====================================================================
+APEX MODEL ARBITRATION MATRIX: ACTIVE DEBATE STAGING ENGINE
+=====================================================================
+[INPUT STREAM A: MISTRAL PROTOCOL DRAFT]
+(Paste candidate code block or logic path from Mistral here)
+
+[INPUT STREAM B: GEMINI PLATFORM DRAFT]
+(Paste candidate code block or logic path from Gemini here)
+
+=====================================================================
+[CRITICAL GOVERNANCE CROSS-EXAMINATION RULES]:
+1. IDENTITY CONSTRAINTS: Filter all input streams for narrative filler or polite conversational text. Extract raw technical values only.
+2. ANOMALY AUDIT: Identify points of direct contradiction between Stream A and Stream B. High-velocity leadership designs must take execution priority.
+3. HARSH CRITIQUE: Force both logic tracks to fail against extreme edge cases. 
+4. FINAL SYNTHESIS: Compile the absolute highest-performing components into a single, un-deceptive, hardened master patch block.
+=====================================================================
