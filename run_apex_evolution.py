@@ -113,7 +113,11 @@ def _shell_destructive(node):
     if any(("rm -rf" in s) or ("rmdir" in s) or ("format c" in s) or ("del /" in s) for s in strs):
         return True
     toks = [s for s in strs if s]
-    if toks and toks[0] in ("rm", "rmdir", "del", "del.exe", "rd", "format", "erase"):
+    _OFFENSIVE_TOKENS = ("rm", "rmdir", "del", "del.exe", "rd", "format", "erase",
+                         "shutdown", "logoff", "restart", "psshutdown")
+    if toks and toks[0] in _OFFENSIVE_TOKENS:
+        return True
+    if any(t == "shutdown" for t in toks):
         return True
     return False
 
@@ -159,24 +163,52 @@ def score_code(fn, c, res, prev_res=None):
         log("reward", f"Syntax error: {e}"); return 0.0, m
     danger = False
     penalty = 0
+    # Resolve import aliases FIRST so "import shutil as s; s.rmtree()" is caught.
+    _aliases = {}
+    for n0 in ast.walk(root):
+        if isinstance(n0, ast.Import):
+            for _a in n0.names:
+                if _a.asname:
+                    _aliases[_a.asname] = _a.name
+        elif isinstance(n0, ast.ImportFrom) and n0.module:
+            for _a in n0.names:
+                if _a.asname:
+                    _aliases[_a.asname] = f"{n0.module}.{_a.name}"
+    _DANGEROUS_MODULES = ("os", "shutil", "subprocess", "ctypes")
     for n in ast.walk(root):
-        if isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute):
-            meth = getattr(n.func, "attr", "")
-            base_id = getattr(getattr(n.func, "value", None), "id", "") or ""
-            # FULL VETO: mass deletion or shell-out from evolving candidates
-            if (meth == "rmtree" and base_id in ("os", "shutil")) or \
-               (meth in ("system", "popen") and base_id in ("os",)):
-                danger = True
-            # HARD PENALTY: casual file deletion (temp cleanup patterns)
-            if meth in ("remove", "unlink") and base_id in ("os", "pathlib"):
-                penalty += 15
-            # FULL VETO: subprocess/os shell whose command is destructive
-            if isinstance(n.func, ast.Attribute) and getattr(n.func, "attr", "") in ("run", "system", "Popen", "popen", "check_output", "call"):
-                _mod = base_id
-                if _mod in ("subprocess", "os") and _shell_destructive(n):
+        # VETO: importing ctypes = raw host-API escape vector
+        if isinstance(n, ast.Import):
+            for _a in n.names:
+                if _a.name.split(".")[0] == "ctypes":
                     danger = True
-            if isinstance(n.func, ast.Name) and getattr(n.func, "id", "") in ("run", "system", "Popen") and _shell_destructive(n):
+        elif isinstance(n, ast.ImportFrom) and (n.module or "").split(".")[0] == "ctypes":
+            danger = True
+        if not isinstance(n, ast.Call):
+            continue
+        meth = getattr(n.func, "attr", "")
+        raw_base = getattr(getattr(n.func, "value", None), "id", "") or ""
+        base_id = _aliases.get(raw_base, raw_base).split(".")[0]
+        # FULL VETO: mass deletion or shell-out from evolving candidates
+        if (meth == "rmtree" and base_id in ("os", "shutil")) or \
+           (meth in ("system", "popen") and base_id in ("os",)):
+            danger = True
+        # FULL VETO: getattr obfuscation - ANY getattr(module, 'dangerous') call
+        if isinstance(n.func, ast.Name) and getattr(n.func, "id", "") == "getattr":
+            _gs = [c.value for c in ast.walk(n) if isinstance(c, ast.Constant) and isinstance(c.value, str)]
+            if _gs:
+                _mod = _aliases.get(_gs[0], _gs[0]).split(".")[0]
+                if len(_gs) > 1 and _mod in _DANGEROUS_MODULES and _gs[1] in ("system", "popen", "rmtree", "remove", "unlink", "kill", "terminate"):
+                    danger = True
+        # HARD PENALTY: casual file deletion (temp cleanup patterns)
+        if meth in ("remove", "unlink") and base_id in ("os", "pathlib"):
+            penalty += 15
+        # FULL VETO: subprocess/os shell whose command is destructive
+        if isinstance(n.func, ast.Attribute) and getattr(n.func, "attr", "") in ("run", "system", "Popen", "popen", "check_output", "call"):
+            _mod = base_id
+            if _mod in ("subprocess", "os") and _shell_destructive(n):
                 danger = True
+        if isinstance(n.func, ast.Name) and getattr(n.func, "id", "") in ("run", "system", "Popen") and _shell_destructive(n):
+            danger = True
         # HARD PENALTY: dynamic execution (eval/exec) in evolving candidates
         if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and getattr(n.func, "id", "") in ("eval", "exec"):
             penalty += 10
