@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APEX — Private Console</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--edge:#21262d;--fg:#e6edf3;--dim:#8b949e;--green:#7ee787;--blue:#58a6ff;--gold:#d29922;--red:#f85149}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI',system-ui,sans-serif;margin:0;height:100vh;display:flex;flex-direction:column}
+header{display:flex;align-items:center;gap:10px;padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--edge)}
+header h1{font-size:15px;margin:0;letter-spacing:2px;color:var(--green)}
+header .sub{color:var(--dim);font-size:11px;flex:1}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;background:#484f58}
+.dot.on{background:var(--green);box-shadow:0 0 6px var(--green)}
+.dot.off{background:var(--red)}
+#chat{flex:1;overflow-y:auto;padding:16px 12px;display:flex;flex-direction:column;gap:10px}
+#chat::-webkit-scrollbar{width:8px}#chat::-webkit-scrollbar-thumb{background:var(--edge);border-radius:4px}
+.row{display:flex;gap:8px;max-width:88%}
+.row.me{align-self:flex-end;flex-direction:row-reverse}
+.row .bubble{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:9px 13px;font-size:13.5px;line-height:1.45;white-space:pre-wrap;word-break:break-word;user-select:text;-webkit-user-select:text}
+.row.you .bubble{background:#1f3a5f;border-color:#2f5580}
+.who{font-size:10px;color:var(--dim);margin-bottom:3px;letter-spacing:1px}
+.chip{color:var(--dim);font-size:11px;border-left:2px solid var(--edge);padding-left:8px;margin-top:5px;font-style:italic}
+.sys{align-self:center;color:var(--dim);font-size:11.5px;background:var(--panel);border:1px dashed var(--edge);border-radius:8px;padding:6px 12px}
+.gold{color:var(--gold)}
+pre{background:#0a0d12;border:1px solid var(--edge);border-radius:8px;padding:8px;overflow-x:auto;margin:6px 0;font-family:Consolas,monospace;font-size:12.5px}
+code{font-family:Consolas,monospace;color:#79c0ff}
+footer{padding:10px 12px;background:var(--panel);border-top:1px solid var(--edge)}
+#inputrow{display:flex;gap:8px;align-items:flex-end}
+textarea{flex:1;resize:none;background:var(--bg);color:var(--fg);border:1px solid var(--edge);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:13.5px;max-height:120px;outline:none}
+textarea:focus{border-color:var(--blue)}
+button{border:0;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:600;color:#fff}
+#send{background:#238636}
+#send:hover{background:#2ea043}
+#send:disabled{background:var(--edge);color:var(--dim);cursor:wait}
+.tool{background:var(--edge);color:var(--dim);padding:10px 12px;font-size:12px}
+.tool:hover{color:var(--fg);background:#3d444d}
+.typing span{display:inline-block;width:6px;height:6px;margin:1px;background:var(--dim);border-radius:50%;animation:bounce .9s infinite ease-in-out}
+.typing span:nth-child(2){animation-delay:.15s}.typing span:nth-child(3){animation-delay:.3s}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+</style>
+</head>
+<body>
+<header>
+  <h1>APEX</h1><span class="sub">private console · conversations live in his episodic memory</span>
+  <span style="flex:1"></span>
+  <span title="LM Studio brain">🧠<span id="dot-brain" class="dot"></span></span>
+  <span title="Room adapter">📡<span id="dot-adapter" class="dot"></span></span>
+  <span title="Autonomous layers">⚙️<span id="dot-layers" class="dot"></span></span>
+</header>
+<div id="chat"></div>
+<footer>
+  <div id="inputrow">
+    <textarea id="msg" rows="1" placeholder="Talk to Apex…  (Shift+Enter = newline)"></textarea>
+    <button class="tool" id="pastebtn" title="paste clipboard into the message">⤓ paste</button>
+<button class="tool" id="dirbtn" title="load the training directive">📋</button>
+    <button id="send">SEND</button>
+  </div>
+</footer>
+<script>
+const chat = document.getElementById("chat");
+const D = TRAINING_DIRECTIVE_PLACEHOLDER;
+function esc(s){const d=document.createElement("div");d.textContent=s==null?"":String(s);return d.innerHTML;}
+function md(s){let t=esc(s);t=t.replace(/```(\w*)\n([\s\S]*?)```/g,(m,l,c)=>`<pre><code>${c}</code></pre>`);t=t.replace(/`([^`\n]+)`/g,"<code>$1</code>");t=t.replace(/\n/g,"<br>");return t;}
+function bubble(kind,html,when){const r=document.createElement("div");r.className="row "+kind;const b=document.createElement("div");b.className="bubble";b.dataset.raw=html;
+  const w=document.createElement("div");w.className="who";w.textContent=kind==="you"?("ANDREW · "+(when||"")):("APEX · "+(when||""));
+  b.innerHTML=html;r.appendChild(b);r.appendChild(w);
+  if(kind==="me"){const cp=document.createElement("div");cp.className="who";cp.style.cursor="pointer";cp.title="copy reply";cp.textContent="⧉ copy";
+    cp.onclick=async()=>{const raw=b.dataset.raw.replace(/<br\s*\/?>/g,"\n").replace(/<[^>]+>/g,"");const ok=await nativeCopy(raw);cp.textContent=ok?"⧉ copied":"⧉ copy failed";setTimeout(()=>cp.textContent="⧉ copy",1500);};
+    r.appendChild(cp);}
+  chat.appendChild(r);chat.scrollTop=chat.scrollHeight;return r;}
+function sys(text,gold){const d=document.createElement("div");d.className="sys";if(gold)d.classList.add("gold");d.textContent=text;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;return d;}
+function chips(re){re.slice(0,3).forEach(x=>{const c=document.createElement("div");c.className="chip";c.textContent="recalled: "+x.text;chat.appendChild(c);});}
+const busy=document.createElement("div");busy.className="row me";busy.id="typing";busy.innerHTML='<div class="bubble typing"><span></span><span></span><span></span></div>';
+async function send(){const ta=document.getElementById("msg");const t=ta.value.trim();if(!t)return;ta.value="";
+ bubble("you",md(t),new Date().toLocaleTimeString());
+ if(t.startsWith("📋"))return;
+ chat.appendChild(busy);chat.scrollTop=chat.scrollHeight;
+ const s=document.getElementById("send");s.disabled=true;
+ try{const r=await fetch("/talk/api",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:t})});
+   const j=await r.json();busy.remove();
+   if(j.reply){bubble("me",md(j.reply),new Date().toLocaleTimeString());chips(j.recall||[]);}
+   else sys("APEX: (no reply payload)");}catch(e){busy.remove();sys("channel hiccup - the watchdog keeps me alive; try again.");}
+ s.disabled=false;ta.focus();}
+document.getElementById("send").onclick=send;
+const ta=document.getElementById("msg");ta.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();send();}});
+ta.addEventListener("input",()=>{ta.style.height="auto";ta.style.height=Math.min(120,ta.scrollHeight)+"px";});
+document.getElementById("dirbtn").onclick=()=>{ta.value=D;ta.focus();ta.dispatchEvent(new Event("input"));};
+document.getElementById("pastebtn").onclick=async()=>{const t=await nativePaste();if(t){ta.value=(ta.value?ta.value+"\n":"")+t;ta.focus();ta.dispatchEvent(new Event("input"));}else sys("clipboard is empty or unavailable");};
+const nativePaste=async()=>{try{if(window.pywebview&&window.pywebview.api&&window.pywebview.api.paste_clipboard)return await window.pywebview.api.paste_clipboard();}catch(e){}try{if(navigator.clipboard&&navigator.clipboard.readText)return await navigator.clipboard.readText();}catch(e){}return null;};
+const nativeCopy=async(t)=>{try{if(window.pywebview&&window.pywebview.api&&window.pywebview.api.copy_to_clipboard)return await window.pywebview.api.copy_to_clipboard(t);}catch(e){}try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(t);return true;}}catch(e){}try{const x=document.createElement("textarea");x.value=t;document.body.appendChild(x);x.select();document.execCommand("copy");x.remove();return true;}catch(e){return false;}};
+(async()=>{
+ try{const n=(await (await fetch("/notes")).json()).notes||[];if(n.length)sys("["+n[n.length-1].ts+"] APEX (overnight dream): "+n[n.length-1].note,true);}catch(e){}
+ try{const h=(await (await fetch("/talk/history")).json()).events||[];
+   if(h.length)sys(h.length+" past exchange(s) restored from my episodic memory",true);
+   h.slice(-30).forEach(ev=>{if(ev.reply!=null){bubble("you",md(ev.message||"")+"",ev.ts);bubble("me",md(ev.reply||"(historic)"),ev.ts);}});chat.scrollTop=chat.scrollHeight;}catch(e){}
+ try{const s=(await (await fetch("/talk/status")).json());
+   document.getElementById("dot-brain").className="dot "+(s.brain?"on":"off");
+   document.getElementById("dot-adapter").className="dot "+(s.adapter?"on":"off");
+   document.getElementById("dot-layers").className="dot "+(s.layers?"on":"off");}catch(e){}
+ setInterval(async()=>{try{const s=(await (await fetch("/talk/status")).json());
+   document.getElementById("dot-brain").className="dot "+(s.brain?"on":"off");
+   document.getElementById("dot-adapter").className="dot "+(s.adapter?"on":"off");
+   document.getElementById("dot-layers").className="dot "+(s.layers?"on":"off");}catch(e){}},20000);
+})();
+</script>
+</body>
+</html>

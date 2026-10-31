@@ -1,83 +1,83 @@
 {
  "run_apex_evolution.py": {
-  "sha256": "f79c495fd4655177fe6eeb33ee55c3ac5c39278a72f07d1c205c82f1a7dc044b",
-  "ts": "2026-10-31 03:35:19"
+  "sha256": "4f02e160d3589b387c64509792cf47ab3f856975893305ff863a027ebda456d4",
+  "ts": "2026-10-31 03:50:48"
  },
  "optimized_agent.py": {
   "sha256": "52228da0c6c91d516f5bd2e33a22030ea1f16f11c3030376711002dfb8e80a07",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "ApexMemory.py": {
   "sha256": "6ab8aea95ecc676b6ec467b0c8a25a287818f6132887a031417e47b2b50d639e",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "Config\\ApexSelf.json": {
   "sha256": "ce7cdac1bb3e991a6c13e51af98c4163121b3aa4a689c14e2e3c8fd8ca765029",
-  "ts": "2026-10-31 03:30:11"
+  "ts": "2026-10-31 03:45:52"
  },
  "Config\\HostGuard.json": {
   "sha256": "9cd71cd3820d78d4190c16348efe8dea53e5511a5df8260f1005ef392ef4df5e",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "ApexPacing.py": {
   "sha256": "7ed87785f6735dd734e06ac0ab69ccad19422974ac720679b43f226769083f70",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "ApexInstaller.py": {
   "sha256": "fc95f29c05bd2a1d6a90b400a0dee2cbb815aa9c749009d07986f57cb8afa160",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "ApexChat.pyw": {
-  "sha256": "a2eab430d3be35cbed85c0afaf7cd17967a73fd568475d6f1903b5791f2a1113",
-  "ts": "2026-10-31 03:42:41"
+  "sha256": "74cb1dc37423e8720e089c7785e3622c66f2f14c702795928a4ec63fcebb3b16",
+  "ts": "2026-10-31 03:45:52"
  },
  "Scripts\\ApexVersions.py": {
   "sha256": "c3ec5ac5302a2d9526fb634b4f29efe408c4f16cc44a304b49b31ea207782fd4",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "Scripts\\ApexSkills.py": {
   "sha256": "53ce2c141ca5b27380f86b4808395d961b0f183ea81555b0effa21ed387558a9",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "Scripts\\ApexThink.py": {
   "sha256": "28d5f0f834358bc68cc5841c8e53e6dd53d986e941651b49315cfc16d86eb639",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "Scripts\\ApexCollab.py": {
   "sha256": "903b7c4ec158d3c7737e7f84a61090de9d8604af45e2a7bae001dd52f805f316",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "Scripts\\ApexResearch.py": {
   "sha256": "072304a89c2d3e3b15d4b202dfba0b2e80d4c536ed14d8b0aa2f24eb2d65e4ea",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "Scripts\\ApexRedTeam.py": {
   "sha256": "a05947f3fdd0883e1e948c13fa8664d87ac44ba321ff638d8fbe8c16c42eacbe",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "Scripts\\ApexBenchmark.py": {
   "sha256": "12b37d923bece4a6af448faf40a9ec4e4cd865006a8e02cddff20ee1fdc24f78",
-  "ts": "2026-10-31 03:42:44"
+  "ts": "2026-10-31 03:45:52"
  },
  "Scripts\\ApexDream.py": {
   "sha256": "914709c6db49c01481cad9b0b85e27719577af2efd3b054df69801ce88e3ea73",
-  "ts": "2026-10-31 03:43:28"
+  "ts": "2026-10-31 03:45:52"
  },
  "Scripts\\ApexGuard.py": {
   "sha256": "87aa89f359bf66eef456635f1ed71bbea0b2a2d915ca9918d2e7c2f966c549af",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "Scripts\\HardwareGovernor.py": {
   "sha256": "2bc6b3b4e8fee11e6cb7e6acbde197dae041c4562146539eed7cbed3364d2afb",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "Scripts\\proc_check.py": {
   "sha256": "0f5e0a811d81af4f8aaa48c81f7c28eda71feea55e17fabdbcc6ec194287a648",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "Config\\SESSION_HANDOFF.md": {
   "sha256": "58c6f16c9b45a337fe28aaca994f556e71e7d1ab4c23ae4147845dd7523f312b",
-  "ts": "2026-10-31 03:28:35"
+  "ts": "2026-10-31 03:45:52"
  },
  "apexpacing.py": {
   "sha256": "7ed87785f6735dd734e06ac0ab69ccad19422974ac720679b43f226769083f70",
@@ -86,5 +86,9 @@
  "Config\\GI_Attributes.md": {
   "sha256": "49aa4c52b0ec6fb6e6cff2ce517fc7643992b00d735c3da2c0aedc06e7226856",
   "ts": "2026-10-31 03:18:48"
+ },
+ "ApexChatPage.html": {
+  "sha256": "1853c4fe9ad2e90cfec039b73efe5360935aae7aa89c7e5c5ba5d7510e04c9aa",
+  "ts": "2026-10-31 03:49:13"
  }
 }
