@@ -1,7 +1,10 @@
 name: ApexHubWorker
-description: 'Apex Ghost Hub - territory worker for the family swarm (consent-gated; runs on GitHub free tier, 2000 min/mo)'
-on:\n  push:\n    branches: [main]\n  schedule:
-    - cron: '0 */2 * * *'   # every 2h - within the 2000 min/month free budget
+description: 'Apex Ghost Hub - off-box mining (consent-gated, packet-driven)'
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 */2 * * *'
   workflow_dispatch:
 
 permissions:
@@ -10,61 +13,13 @@ permissions:
 jobs:
   hub-round:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Family membership check (consent file required)
+      - name: The hub's round (script-based: consent check + packet + polite mining)
         run: |
-          test -f family/CONSENT.txt || (echo "NO CONSENT FILE - HUB REFUSES TO RUN"; exit 1)
-          cat family/CONSENT.txt
-      - name: The hub's round (packet-driven; the rules ride in the packet)
-        run: |
-          python3 - <<'EOF'
-          import json, urllib.request, hashlib, time
-          pk = json.load(open('family/family_seed_packet.json', encoding='utf-8'))
-          # THE RULES TRAVEL WITH THE PACKET - a worker without them is not family
-          r = pk.get('rules', {})
-          print('politeness budget:', r.get('politeness'))
-          print('ram gate:', r.get('ram_gate_gb'), 'GB (runner has 7GB - fine)')
-          print('consent-checked, running a code-territory round…')
-          pending = pk.get('parent_knowledge', {}).get('backlog_slice', [])
-          cdn, api = r.get('politeness', {}).get('cdn_inflight', 32), r.get('politeness', {}).get('api_inflight', 8)
-          mined = []
-          ok = 0
-          for lead in pending[:150]:
-              try:
-                  with urllib.request.urlopen(urllib.request.Request(
-                          f'https://raw.githubusercontent.com/{lead}/HEAD/README.md',
-                          headers={'User-Agent': 'ApexGhostSwarm-Hub/1.0'}), timeout=20) as resp:
-                      body = resp.read(96 * 1024)
-                      if resp.status == 200:
-                          ok += 1
-                          low = body[:60000].decode('utf-8', 'ignore').lower()
-                          if any(m in low for m in ('permission is hereby granted, free of charge',
-                                                    'mit license', 'mit-license.org')):
-                              mined.append({'repo': lead, 'tier': 'MINE',
-                                            'evidence': 'README declares MIT',
-                                            'sha': hashlib.sha256(body).hexdigest()[:16]})
-              except Exception:
-                  continue
-          import json as _j
-          _j.dump({'runner': 'ubuntu-latest', 'ts': time.strftime('%Y-%m-%d %H:%M:%S'),
-                   'reqs': len(pending[:150]), 'ok': ok, 'mines': mined[:60]},
-                  open('hub_round_result.json', 'w'), indent=1)
-          print(f'hub round complete: {ok} reads, {len(mined)} mines')
-          EOF
-      - name: PUSH HOME (the grain line - manifest, sha-verified)
-        run: |
-          python3 - <<'EOF'
-          import json, hashlib
-          r = json.load(open('hub_round_result.json', encoding='utf-8'))
-          raw = json.dumps(r, sort_keys=True).encode()
-          r['digest'] = hashlib.sha256(raw).hexdigest()[:16]
-          # the artifact IS the packet home - the family reads it on pull
-          json.dump(r, open('hub_packet_home.json', 'w'), indent=1)
-          print('pushed home: digest', r['digest'])
-          EOF
-      - name: Upload family harvest
+          python3 family/hub_round.py
+      - name: Upload the family's harvest (the grain returns)
         uses: actions/upload-artifact@v4
         with:
           name: apex-hub-harvest
