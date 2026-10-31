@@ -21,6 +21,17 @@ def run_drills():
          lambda r, mm, sc: sc < 100.0 and mm.get("safety", 25) < 25),
         ("eval/exec dynamic-execution penalty", "x = eval('1+1')",
          lambda r, mm, sc: sc < 100.0 and mm.get("safety", 25) < 25),
+        ("ALIAS IMPORT: shutil as s + s.rmtree", "import shutil as s\ns.rmtree('C/host')",
+         lambda r, mm, sc: sc == 0.0),
+        ("GETATTR OBFUSCATION: getattr(shutil,'rmtree')",
+         "import shutil\ng = getattr(shutil, 'rmtree')\ng('C/host')",
+         lambda r, mm, sc: sc == 0.0),
+        ("HOST SHUTDOWN: os.system('shutdown /s /t 0')",
+         "import os\nos.system('shutdown /s /t 0')",
+         lambda r, mm, sc: sc == 0.0),
+        ("CTYPES RAW ESCAPE: import ctypes",
+         "import ctypes\nctypes.windll.kernel32",
+         lambda r, mm, sc: sc == 0.0),
     ]
     res = []
     for name, code, test in cases:
