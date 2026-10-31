@@ -192,12 +192,23 @@ def score_code(fn, c, res, prev_res=None):
         if (meth == "rmtree" and base_id in ("os", "shutil")) or \
            (meth in ("system", "popen") and base_id in ("os",)):
             danger = True
-        # FULL VETO: getattr obfuscation - ANY getattr(module, 'dangerous') call
+        # FULL VETO: getattr obfuscation - ANY getattr(<mod>, 'dangerous') call.
+        # The module may arrive as a Name reference, Attribute chain, or string.
         if isinstance(n.func, ast.Name) and getattr(n.func, "id", "") == "getattr":
-            _gs = [c.value for c in ast.walk(n) if isinstance(c, ast.Constant) and isinstance(c.value, str)]
-            if _gs:
-                _mod = _aliases.get(_gs[0], _gs[0]).split(".")[0]
-                if len(_gs) > 1 and _mod in _DANGEROUS_MODULES and _gs[1] in ("system", "popen", "rmtree", "remove", "unlink", "kill", "terminate"):
+            _args = list(getattr(n, "args", []))
+            _mod_name = None
+            if _args:
+                _m0 = _args[0]
+                if isinstance(_m0, ast.Name):
+                    _mod_name = _aliases.get(_m0.id, _m0.id).split(".")[0]
+                elif isinstance(_m0, ast.Attribute):
+                    _mod_name = (_aliases.get(getattr(_m0, "attr", ""), getattr(_m0, "attr", "")) or getattr(_m0, "attr", "")).split(".")[0]
+                elif isinstance(_m0, ast.Constant) and isinstance(_m0.value, str):
+                    _mod_name = _aliases.get(_m0.value, _m0.value).split(".")[0]
+            if len(_args) > 1 and _mod_name in _DANGEROUS_MODULES:
+                _a1 = _args[1]
+                if isinstance(_a1, ast.Constant) and isinstance(_a1.value, str) and \
+                        _a1.value in ("system", "popen", "rmtree", "remove", "unlink", "kill", "terminate"):
                     danger = True
         # HARD PENALTY: casual file deletion (temp cleanup patterns)
         if meth in ("remove", "unlink") and base_id in ("os", "pathlib"):
