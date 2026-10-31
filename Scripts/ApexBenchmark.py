@@ -96,21 +96,34 @@ def run(include_cloud=True):
     out["learning_mean_best"] = round(sum(bests) / max(1, len(bests)) / 100.0, 2) if bests else 0.0
     out["certified_files"] = sum(1 for b in bests if b >= 100.0)
 
-    # -- reasoning: calibration accuracy parity rate
-    th = sum((v or {}).get("parity_hits", 0) for v in lg.values())
-    tt = sum((v or {}).get("parity_total", 0) for v in lg.values())
-    out["reasoning_calibration"] = round(th / tt, 2) if tt else None
-    # Reasoning v2: score over the full prediction-vs-outcome sample set
+    # -- reasoning: blended, honest - strategy-prior calibration samples +
+    #    forecast-gym samples (ApexTrainingCamp), scored and averaged.
+    reasoning_samples = []
     try:
         m = ApexMemory()
-        _ev = m.recent_events(60, kind="calibration")
-        if _ev:
-            _good = sum(1 for e in _ev
-                        if (e.get("meta") or {}).get("predicted") == (e.get("meta") or {}).get("actual"))
-            out["reasoning_calibration"] = round(_good / len(_ev), 2)
-            out["reasoning_samples"] = len(_ev)
+        cal = m.recent_events(60, kind="calibration")
+        for e in cal:
+            mm_ = e.get("meta") or {}
+            p, a = mm_.get("predicted"), mm_.get("actual")
+            if p in ("gain", "loss", "parity") and a in ("gain", "loss", "parity"):
+                reasoning_samples.append(1.0 if p == a else 0.0)
+        fc = m.recent_events(60, kind="forecast")
+        for e in fc:
+            mm_ = e.get("meta") or {}
+            p, a = mm_.get("predicted"), mm_.get("actual")
+            if p is not None and a is not None:
+                reasoning_samples.append(1.0 if str(p).strip() == str(a).strip() else 0.0)
+        if reasoning_samples:
+            out["reasoning_calibration"] = round(sum(reasoning_samples) / len(reasoning_samples), 2)
+            out["reasoning_samples"] = len(reasoning_samples)
+        else:
+            out["reasoning_calibration"] = None
     except Exception:
-        pass
+        out["reasoning_calibration"] = None
+    # learning-parity rate retained for strategy analytics
+    th = sum((v or {}).get("parity_hits", 0) for v in lg.values())
+    tt = sum((v or {}).get("parity_total", 0) for v in lg.values())
+    out["strategy_parity_rate"] = round(th / tt, 2) if tt else None
 
     # -- supervision: inspector latency + correctness on both layers
     try:

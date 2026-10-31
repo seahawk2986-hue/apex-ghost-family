@@ -1,0 +1,119 @@
+{
+ "mut_default": {
+  "attempts": 1,
+  "wrong": 0
+ },
+ "negfloor": {
+  "attempts": 1,
+  "wrong": 0
+ },
+ "boolmath": {
+  "attempts": 1,
+  "wrong": 0
+ },
+ "closureloop": {
+  "attempts": 1,
+  "wrong": 0
+ },
+ "dupdict": {
+  "attempts": 1,
+  "wrong": 0
+ },
+ "slicealias": {
+  "attempts": 1,
+  "wrong": 0
+ },
+ "_sessions": [
+  {
+   "ts": "2026-10-31 03:39:22",
+   "exercises": 6,
+   "hits": 6,
+   "accuracy": 1.0,
+   "forecast": [
+    {
+     "id": "mut_default",
+     "hit": true,
+     "pred": "[1]\n[1, 2]",
+     "truth": "[1]\n[1, 2]",
+     "via_model": true
+    },
+    {
+     "id": "negfloor",
+     "hit": true,
+     "pred": "-4\n-4",
+     "truth": "-4\n-4",
+     "via_model": true
+    },
+    {
+     "id": "boolmath",
+     "hit": true,
+     "pred": "2\n0",
+     "truth": "2\n0",
+     "via_model": true
+    },
+    {
+     "id": "closureloop",
+     "hit": true,
+     "pred": "2 2",
+     "truth": "2 2",
+     "via_model": true
+    },
+    {
+     "id": "dupdict",
+     "hit": true,
+     "pred": "{2: 4, 3: 9}",
+     "truth": "{2: 4, 3: 9}",
+     "via_model": true
+    },
+    {
+     "id": "slicealias",
+     "hit": true,
+     "pred": "[1, 2, 3] [1, 2, 3, 4]",
+     "truth": "[1, 2, 3] [1, 2, 3, 4]",
+     "via_model": true
+    }
+   ]
+  },
+  {
+   "ts": "2026-10-31 03:39:55",
+   "exercises": 3,
+   "hits": 3,
+   "accuracy": 1.0,
+   "forecast": [
+    {
+     "id": "formatprec",
+     "hit": true,
+     "pred": "0.33\n0",
+     "truth": "0.33\n0",
+     "via_model": true
+    },
+    {
+     "id": "swap",
+     "hit": true,
+     "pred": "2 3",
+     "truth": "2 3",
+     "via_model": true
+    },
+    {
+     "id": "exflow",
+     "hit": true,
+     "pred": "a\nc\ne",
+     "truth": "a\nc\ne",
+     "via_model": true
+    }
+   ]
+  }
+ ],
+ "formatprec": {
+  "attempts": 1,
+  "wrong": 0
+ },
+ "swap": {
+  "attempts": 1,
+  "wrong": 0
+ },
+ "exflow": {
+  "attempts": 1,
+  "wrong": 0
+ }
+}

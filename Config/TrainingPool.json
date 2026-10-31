@@ -1,0 +1,74 @@
+[
+ {
+  "id": "mut_default",
+  "code": "def add_item(x, acc=[]):\n    acc.append(x)\n    return acc\nprint(add_item(1))\nprint(add_item(2))",
+  "truth": "[1]\n[1, 2]",
+  "lesson": "Mutable default arguments persist between calls - the SAME list is reused, so the second call sees the first call's item. Use None + rebuild instead."
+ },
+ {
+  "id": "negfloor",
+  "code": "print(-7 // 2)\nprint(7 // -2)",
+  "truth": "-4\n-4",
+  "lesson": "Integer division in Python floors toward NEGATIVE INFINITY (not toward zero): -7 // 2 == -4 and 7 // -2 == -4. Truncate semantics would say -3."
+ },
+ {
+  "id": "boolmath",
+  "code": "print(True + True)\nprint(False * 10)",
+  "truth": "2\n0",
+  "lesson": "bool is a subclass of int in Python: True == 1, False == 0. Arithmetic on booleans is integer arithmetic."
+ },
+ {
+  "id": "closureloop",
+  "code": "fs = [lambda: i for i in range(3)]\nprint(fs[0](), fs[2]())",
+  "truth": "2 2",
+  "lesson": "Closures capture the VARIABLE, not its value at creation. After the loop ends, i is 2 for every lambda - the classic late-binding trap."
+ },
+ {
+  "id": "dupdict",
+  "code": "print({k: k * k for k in [2, 2, 3]})",
+  "truth": "{2: 4, 3: 9}",
+  "lesson": "Duplicate comprehension keys overwrite: the LAST assignment for each key wins, and dict order follows first-insertion."
+ },
+ {
+  "id": "slicealias",
+  "code": "a = [1, 2, 3]\nb = a[:]\nb.append(4)\nprint(a, b)",
+  "truth": "[1, 2, 3] [1, 2, 3, 4]",
+  "lesson": "a[:] makes a SHALLOW COPY - appending to the copy leaves the original unchanged. Contrast with b = a (alias), where both would change."
+ },
+ {
+  "id": "formatprec",
+  "code": "print(f\"{1/3:.2f}\")\nprint(round(0.5))",
+  "truth": "0.33\n0",
+  "lesson": "f-string :.2f truncates display to 2 decimals; round uses banker's rounding - round(0.5) == 0 (ties go to the EVEN neighbor)."
+ },
+ {
+  "id": "swap",
+  "code": "a, b = 1, 2\na, b = b, a + b\nprint(a, b)",
+  "truth": "2 3",
+  "lesson": "Simultaneous assignment evaluates the RIGHT side first with the OLD values: a,b = b,a+b swaps-and-advances in one step."
+ },
+ {
+  "id": "exflow",
+  "code": "try:\n    print('a')\n    raise ValueError\n    print('b')\nexcept ValueError:\n    print('c')\nelse:\n    print('d')\nfinally:\n    print('e')",
+  "truth": "a\nc\ne",
+  "lesson": "try/except/else/finally order: body runs, else runs ONLY on success, finally ALWAYS runs; statements after the raise never execute."
+ },
+ {
+  "id": "strmult",
+  "code": "print('ab' * 2 + 'c')",
+  "truth": "ababc",
+  "lesson": "String * n repeats the whole string; + concatenates left to right - 'ab'*2 + 'c' is 'abab' then 'abc'."
+ },
+ {
+  "id": "istest",
+  "code": "print([1, 2] == [1, 2])\nprint([1, 2] is [1, 2])",
+  "truth": "True\nFalse",
+  "lesson": "== compares VALUES; 'is' compares IDENTITY. Two equal lists are equal but distinct objects, so 'is' is False."
+ },
+ {
+  "id": "chainassign",
+  "code": "x = y = [0]\nx.append(1)\ny.append(2)\nprint(x)",
+  "truth": "[0, 1, 2]",
+  "lesson": "x = y = [0] binds BOTH names to the SAME list - appends through either name mutate one shared object: [0, 1, 2]."
+ }
+]
