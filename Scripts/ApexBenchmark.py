@@ -98,18 +98,24 @@ def run(include_cloud=True):
         except Exception as e:
             out["lane_ok"] = 0.0
 
-    # -- weakest dimension (drives curriculum)
-    dims = {
-        "security": out.get("security", 0.0),
-        "memory": out.get("memory_recall_hit", 0.0),
-        "learning": out.get("learning_mean_best", 0.0),
-        "reasoning": out.get("reasoning_calibration") or 0.0,
-        "supervision": out.get("supervision_ok", 0.0),
-        "lanes": out.get("lane_ok", 0.0),
+    # -- weakest dimension: computed over MEASURED dimensions only (no data -> excluded)
+    _all_dims = {
+        "security": out.get("security"),
+        "memory": out.get("memory_recall_hit"),
+        "learning": out.get("learning_mean_best"),
+        "reasoning": out.get("reasoning_calibration"),
+        "supervision": out.get("supervision_ok"),
+        "lanes": out.get("lane_ok") if include_cloud else None,
     }
-    weakest = min(dims.items(), key=lambda kv: kv[1])
-    out["weakest_dimension"] = weakest[0]
-    out["weakest_score"] = weakest[1]
+    dims = {k: v for k, v in _all_dims.items() if v is not None}
+    out["unmeasured"] = [k for k, v in _all_dims.items() if v is None]
+    if dims:
+        weakest = min(dims.items(), key=lambda kv: kv[1])
+        out["weakest_dimension"] = weakest[0]
+        out["weakest_score"] = weakest[1]
+    else:
+        out["weakest_dimension"] = "unknown (no measured dimensions)"
+        out["weakest_score"] = None
     out["dimensions"] = dims
 
     try:
