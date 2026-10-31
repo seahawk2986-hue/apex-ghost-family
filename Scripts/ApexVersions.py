@@ -14,7 +14,9 @@ def _vdir(fn):
 
 def snapshot(fn, msg=None):
     """Capture the just-written file into Config/versions/<fn>/<ts><ext>,
-    plus (once) a real git history so every evolution is diffable."""
+    plus (once) a real git history so every evolution is diffable.
+    Also re-seals the file in the integrity manifest - legitimate writers
+    (heal + developer commits through this path) never trip tamper alerts."""
     src = os.path.join(R, fn)
     if not os.path.exists(src):
         return None
@@ -31,6 +33,15 @@ def snapshot(fn, msg=None):
                     os.remove(os.path.join(d, old))
                 except OSError:
                     pass
+    except Exception:
+        pass
+    try:
+        import subprocess
+        sys_path = os.path.join(R, "Scripts")
+        if sys_path not in sys.path:
+            sys.path.insert(0, sys_path)
+        from ApexGuard import seal_file as _seal
+        _seal(fn)
     except Exception:
         pass
     # REAL version history: git commit per evolution (diffable, revertable).
