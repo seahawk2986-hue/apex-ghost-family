@@ -71,9 +71,22 @@ try {
                 $null = Get-Content $p -Raw | ConvertFrom-Json
                 Write-Log "[OK] Config lint: $cf valid." "Green"
             } catch {
-                Write-Log "[!] Config lint FAILED: $cf is corrupt - rename to .corrupt and restore from CheckpointState.json" "Red"
+                Write-Log "[!] Config lint FAILED: $cf is corrupt - restore from CheckpointState.json" "Red"
             }
         }
+    }
+    # --- 4.6 Secrets + integrity guard (fail LOUDLY on tamper) ------------------
+    $gpy = Join-Path $Root "Scripts\ApexGuard.py"
+    if (Test-Path $gpy) {
+        & $PyExe $gpy env 2>&1 | Out-Null
+        if ($LASTEXITCODE -eq 0) { Write-Log "[OK] Secrets guard: .env seal verified." "Green" }
+        else {
+            Write-Log "[!] Secrets guard: .env CHANGED since last seal - logging delta and re-sealing." "Yellow"
+            & $PyExe $gpy sealenv 2>&1 | Out-Null
+        }
+        $res = & $PyExe $gpy verify 2>&1
+        if ($LASTEXITCODE -eq 0) { Write-Log "[OK] File-integrity manifest verified." "Green" }
+        else { Write-Log "[!] File-integrity TAMPER: $res" "Red" }
     }
 
     # --- 5. Launch the two application layers ------------------------------------

@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-31 01:58:22",
+ "ts": "2026-10-31 02:02:18",
  "ledger": {
   "ApexIPCEngine.py": {
    "best": 103.0,
@@ -28,16 +28,16 @@
  },
  "semantic_records": 39,
  "benchmark": {
-  "ts": "2026-10-31 01:58:21",
+  "ts": "2026-10-31 02:02:18",
   "security": 1.0,
   "memory_recall_hit": 1.0,
-  "memory_latency_s": 0.22,
+  "memory_latency_s": 0.21,
   "learning_mean_best": 1.03,
   "certified_files": 1,
   "reasoning_calibration": 1.0,
   "supervision_ok": 1.0,
-  "supervision_latency_s": 0.23,
-  "lane_latency_s": 0.22,
+  "supervision_latency_s": 0.17,
+  "lane_latency_s": 0.42,
   "lane_ok": 1.0,
   "weakest_dimension": "security",
   "weakest_score": 1.0,

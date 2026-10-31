@@ -177,6 +177,11 @@ def score_code(fn, c, res, prev_res=None):
                     danger = True
             if isinstance(n.func, ast.Name) and getattr(n.func, "id", "") in ("run", "system", "Popen") and _shell_destructive(n):
                 danger = True
+        # HARD PENALTY: dynamic execution (eval/exec) in evolving candidates
+        if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and getattr(n.func, "id", "") in ("eval", "exec"):
+            penalty += 10
+        if isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute) and getattr(n.func, "attr", "") in ("eval", "exec"):
+            penalty += 10
     if danger:
         log("security", "CRITICAL SECURITY VETO"); m["safety"] = -100; return 0.0, m
     s += 25.0
@@ -288,6 +293,11 @@ def heal(fn, intent, code, minimal=False):
                 if _distill:
                     _distill(fn, intent, scr)  # certify as a skill
                 _set_strategy(f"continue {fn} (success streak {(_streak or 0) + 1}); keep changes surgical; verify output parity")
+                try:
+                    from ApexGuard import seal_file as _seal
+                    _seal(fn)   # integrity manifest: tamper with the evolution -> boot fails loudly
+                except Exception:
+                    pass
             except Exception:
                 pass
             _bump_ledger(fn, {k: m.get(k, 0) for k in ("syntax", "safety", "runtime", "output")}, scr, True)
@@ -834,4 +844,4 @@ if __name__ == "__main__":
     except Exception:
         pass  # never block startup on registry failure
     threading.Thread(target=execution_loop, daemon=True).start()
-    uvicorn.run(app, host="0.0.0.0", port=8080, reload=False, workers=1)
+    uvicorn.run(app, host="127.0.0.1", port=8080, reload=False, workers=1)
