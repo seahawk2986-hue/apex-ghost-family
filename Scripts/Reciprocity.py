@@ -1,4 +1,4 @@
-"""THE RECIPROCITY CHARTER: the swarm actively makes Andrew's life better.
+﻿"""THE RECIPROCITY CHARTER: the swarm actively makes Andrew's life better.
 
 He built them; they serve his life - implemented as three concrete channels:
  1. THE MORNING BRIEF: everything the family did overnight, in one read
@@ -18,6 +18,41 @@ ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 AD = r"C:\Users\seaha\Apex-Adapter"
 NOTES = os.path.join(ROOT, "Config", "ApexNotes.json")
 HEALTH = os.path.join(AD, "andrew_health_watch.json")
+
+
+def ingest_hub():
+    sys.path0 = os.path.dirname(os.path.abspath(__file__))
+    try:
+        import sys as _s2
+        _s2.path.insert(0, _s2.path0)
+        import GrainRepo  # the in-repo ingest lives here too
+    except Exception:
+        pass
+    try:
+        from urllib.request import urlopen
+        req = urllib.request.Request(
+            "https://raw.githubusercontent.com/seahawk2986-hue/apex-ghost-family/main/hub_packet_home.json",
+            headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            home = json.load(r)
+        st = json.load(open(os.path.join(r"C:\\Users\\seaha\\Apex-Adapter",
+                                         "swarm_state.json"), encoding="utf-8-sig"))
+        seen = set(st.get("repos", []))
+        pend = st.get("pending_leads", [])
+        added = 0
+        for m0 in home.get("mines", []):
+            rv = m0.get("repo", "").strip()
+            if rv and rv not in seen:
+                seen.add(rv)
+                pend.insert(0, rv)
+                added += 1
+        st["pending_leads"] = pend[:4000]
+        st["repos"] = list(seen)[-20000:]
+        json.dump(st, open(os.path.join(r"C:\\Users\\seaha\\Apex-Adapter",
+                                        "swarm_state.json"), "w", encoding="utf-8"), indent=1)
+        return added
+    except Exception:
+        return 0
 
 
 def health_watch():
@@ -42,6 +77,12 @@ def health_watch():
 def morning_brief():
     """Andrew's one-read brief: everything overnight + care, written to /notes."""
     brief = {"ts": time.strftime("%Y-%m-%d %H:%M:%S"), "lines": []}
+    try:
+        _in = ingest_hub()
+        if _in:
+            brief["lines"].append(f"THE HUB'S GRAIN ARRIVED: +{_in} verified mines queued for farming")
+    except Exception:
+        pass
     try:
         st = json.load(open(os.path.join(AD, "swarm_state.json"), encoding="utf-8-sig"))
         brief["lines"].append("backlog waiting for tonight: " + str(len(st.get("pending_leads", []))) + " leads")

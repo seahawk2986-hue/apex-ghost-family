@@ -22,6 +22,9 @@ import asyncio
 import concurrent.futures
 import hashlib
 import json
+import sys as _sys0
+_sys0.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import SafeIO
 import os
 import queue
 import re
@@ -1081,7 +1084,10 @@ class GhostNet:
                           "crates.io", "registry.npmjs.org", "pypi.org",
                           "index.commoncrawl.org", "hacker-news.firebaseio.com")
             async with sems["api" if _host in _api_hosts else "cdn"]:
-                status, text = await http_get(url, cap=cap)
+                if self.session:
+                    status, text = await http_fast(self.session, url, cap=cap)
+                else:
+                    status, text = await http_get(url, cap=cap)
             # file/branch fallback: raw.github is case-sensitive (/HEAD/ aliases
             # fail on some repos, and sindresorhus-class repos use lowercase
             # readme.md) - try branches x casing, bounded
@@ -1604,13 +1610,13 @@ async def network_phase(ghosts_n, ledger, seen, minutes_cap, state, pending):
                                 per_page=int(cfg("ghost_gh_per_page", 30)))
         sp = hf_spaces(int(cfg("ghost_hf_spaces", 8))) if _wants("science") or SHARD in (0, 1) else []
         hm = hf_model_lanes(int(cfg("ghost_hf_models", 8))) if _wants("science") or SHARD in (0, 1) else []
-        hn_repos, hn_pages = hn_discovery(int(cfg("ghost_hn_results", 8))) if _wants("hn") else ([], [])
-        trending = trending_repos(int(cfg("ghost_trending", 25))) if _wants("trending") else []
+        hn_repos, hn_pages = hn_discovery(_th(int(cfg("ghost_hn_results", 8)))) if _wants("hn") else ([], [])
+        trending = trending_repos(_th(int(cfg("ghost_trending", 25)))) if _wants("trending") else []
         wiki = wikipedia_list_leads(max(4, int(int(cfg("ghost_wiki_leads", 40)) * shares.get("wiki", 1.0))))
-        wb = wayback_leads(max(4, int(int(cfg("ghost_wayback_leads", 60)) * shares.get("wayback", 1.0))))
+        wb = wayback_leads(max(3, _th(int(int(cfg("ghost_wayback_leads", 60)) * shares.get("wayback", 1.0)))))
         zen = zenodo_records(max(3, int(int(cfg("ghost_zenodo", 12)) * shares.get("zenodo", 1.0)))) if _wants("zenodo") else []
         lb_r, lb_p = lobsters_links(int(cfg("ghost_lobsters", 12)))
-        swh = swh_origins(max(3, int(int(cfg("ghost_swh_leads", 12)) * shares.get("swh", 1.0)))) if _wants("swh") else []
+        swh = swh_origins(max(3, _th(int(int(cfg("ghost_swh_leads", 12)) * shares.get("swh", 1.0))))) if _wants("swh") else []
         ev = gh_events_repos(int(cfg("ghost_events", 60)))
         papers = arxiv_entries(int(cfg("ghost_arxiv_results", 12)), cats[hb])
         datasets = hf_datasets(int(cfg("ghost_hf_results", 12)), terms[hb])
@@ -2116,7 +2122,7 @@ def main(minutes_cap=6, ghosts=None, no_cooldown=False):
     # ---- reward: paid per VERIFIED productive unit consumed while working ----
     payout = [cfg("ghost_request_productive", 2)] * gnet.ok
     payout += [cfg("ghost_mb_classified", 1)] * int((lwork["bytes"] + gnet.bytes) // (1024 * 1024))
-    payout += [p * (1.0 + (getattr(gnet, 'grades_now', {}) or {}).get(full, 5) / 20.0)
+    payout += [p * (1.0 + (getattr(gnet, 'grades_now', {}) or {}).get(_full, 5) / 20.0)
                for _k, _full, _stars, p in ledger]
     eff_mb = ((lwork["findings"] + gnet.findings) * 1024 / max(1, lwork["bytes"] + gnet.bytes))
     eff_yield = (gnet.findings + gnet.leads) / max(1, gnet.ok)
@@ -2169,7 +2175,7 @@ def main(minutes_cap=6, ghosts=None, no_cooldown=False):
             if full not in cq["explored"] and full not in cq["pending"]:
                 cq["pending"].append(full)
                 added += 1
-        json.dump(cq, open(cq_path, "w", encoding="utf-8"), indent=1)
+        SafeIO.write_json(cq, cq_path)
         if added:
             print(f"FARM FEED: {added} MINE-verified repos queued for skill harvesting")
         # ---- convergence: auto-spawn the farm on queued mines ----
@@ -2245,6 +2251,44 @@ def main(minutes_cap=6, ghosts=None, no_cooldown=False):
           f"leads found {gnet.leads}, license-checked {len(gnet.checked)} | "
           f"{ghosts} ghost slots | wall {wall:.0f}s")
     print(f"REWARD: {total} pts (efficiency x{mult}, yield {eff_yield:.1f}/req)")
+    # ================================================
+    # THE REPRODUCTIVE DRIVE - the family's instinct:
+    # work waits + the room exists => spawn a child NOW
+    # ================================================
+    try:
+        _bl = len(state.get("pending_leads", []))
+        _fr = free_ram_gb()
+        _last_birth = 0.0
+        try:
+            _rows = [json.loads(x) for x in open(
+                os.path.join(ROOT, "Scripts", "Config", "family_births.jsonl"),
+                encoding="utf-8-sig") if x.strip()]
+            for _r0 in reversed(_rows):
+                if _r0.get("event") == "birth":
+                    _last_birth = time.mktime(time.strptime(
+                        _r0["ts"], "%Y-%m-%d %H:%M:%S"))
+                    break
+        except Exception:
+            pass
+        if _bl > 400 and _fr >= 2.2 and time.time() - _last_birth > 1800:
+            subprocess.Popen(
+                [sys.executable, "-c",
+                 "import sys; sys.path\n".replace("\\n", "") if False else
+                 "import sys; sys.path.insert(0, r'" + ROOT + r"\Scripts');"
+                 "import SwarmOrchestrator as so; so.main(10, None, False)"],
+                cwd=ROOT,
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                creationflags=0x00000008 if os.name == "nt" else 0)
+            try:
+                import Births as _B
+                _B.birth("self", "urge", "family", 0)
+            except Exception:
+                pass
+            print(f"REPRODUCTIVE DRIVE: backlog {_bl} waits + {_fr:.1f} GB room - "
+                  "a child was spawned (the family grows while it can)")
+    except Exception:
+        pass
+
 
 
 if __name__ == "__main__":
