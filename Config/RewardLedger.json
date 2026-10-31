@@ -5,8 +5,8 @@
   "attempts": 5,
   "successes": 1,
   "streak": 0,
-  "parity_total": 10,
-  "parity_hits": 10
+  "parity_total": 11,
+  "parity_hits": 11
  },
  "apexpacing.py": {
   "best": 105.0,
