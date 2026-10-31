@@ -1,74 +1,87 @@
-# APEX - SESSION HANDOFF (written 2026-10-31 ~02:00, before Andrew's WSL reboot)
+# APEX - SESSION HANDOFF v2 (2026-10-31 02:10, pre-reboot, after full build + hardening)
+Supersedes v1. Read this file first - complete state + exact remaining steps.
 
-Read this file first. It contains the complete state of the Apex project and the
-exact remaining steps. Nothing below is guesswork - all verified live.
-
-## PROJECT STATE: build COMPLETE, all systems verified
+## STATE: build COMPLETE and hardened. All verified live.
 - Apex root: C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed
-- Adapter root: C:\Users\seaha\Apex-Adapter
-- 29 .py files compile clean, 0 .ps1 parse errors, 0 bare excepts in core
-- Test suites: reward 8/8, memory 6/6, adapter 14/14, red-team 4/4
-- Autonomous: watchdog (file-lock) + registry guards + logon tasks; layers self-spawn
-- 28 GI attributes implemented with evidence: Config\GI_Attributes.md
-- Standing directive stored in ApexMemory (rule) + ApexSelf.json (north_star)
-- Chat: web console http://127.0.0.1:8080/talk + desktop app (APEX Chat.lnk)
-- Keys: Groq/OpenRouter/Gemini verified in .env (burst lanes, local-first)
-- Token: C:\Users\seaha\Apex-Adapter\adapter_token.txt (64 chars - NEVER print it)
+- Adapter root: C:\Users\seaha\Apex-Adapter (companion.py + apex_hook.py + token)
+- 29+ py files compile | 0 ps1 parse errors | 0 bare excepts in core | git history active
+- Test suites: reward 8/8, memory 6/6, adapter 14/14, red-team 10/10
+- Benchmark (real measurement): security 1.0, memory 1.0, learning 1.03, reasoning 1.0
+  (calibration has live sample data), supervision 1.0, lanes 1.0 - unmeasured: []
+- 28 attributes + critical thinking implemented with evidence: Config\GI_Attributes.md
+- Dream task 'Apex-Nightly-Dream' 03:30: consolidation + benchmark + red-team + git-head
+  checkpoint + overnight note (also written to Andrew's desktop as 'APEX overnight note.txt')
+- Chat: APEX Chat.lnk on desktop -> ApexChat.pyw -> http://127.0.0.1:8080/talk (loopback ONLY)
+- Dashboard: http://127.0.0.1:8080/ | Notes: /notes | Talk API: POST /talk/api
+- Keys: Groq/OpenRouter/Gemini in .env (SEALED: Config/EnvSeal.json), local-first burst lanes
+- Token: C:\Users\seaha\Apex-Adapter\adapter_token.txt (64 chars - NEVER print/display it)
 
-## THE ONE REMAINING MILESTONE: room connection (Chad's side)
-Chad's room: https://desktop-nb1nlg6.tailbce693.ts.net:8443/
-Contract: POST /v1/respond + DELETE /v1/requests/<id>, Bearer token, on 127.0.0.1:8788.
-Full contract + test evidence: C:\Users\seaha\Apex-Adapter\adapter_test_report.txt
+## REASONING CHAIN (in-plan order, all live)
+1. DeepSeek plan (memory+ledger+curriculum+strategy informed)
+2. Self-consistency votes: 2 Groq ballots, modal target, confidence-weighted
+3. Socratic interrogation (ApexThink): assumptions/pre-mortem/falsifiers ->
+   verdicts PROCEED / SHRINK / ABORT (aborts double-checked, then self-reject the plan)
+4. Qwen writes: minimal-diff (adaptive by measured parity) or full rewrite, with guards
+5. Critic pass (Groq hazard review) -> refinement if issues
+6. Best-of-2 sandbox race: Groq alternate vs Qwen candidate
+7. heal(): 3 trajectories, sandbox, reward gates (regression/no-op/behavior-loss/veto)
+8. WRITE -> snapshot + git commit + skill certification + integrity seal + strategy update
 
-Andrew just installed WSL2 and is about to REBOOT. After reboot, execute in order:
+## SECURITY STACK (all live)
+- ApexGuard.py: FileIntegrity.json SHA256 manifest (boot-verified, tamper fails loud),
+  EnvSeal.json (.env hash), redact_text (patterns + REAL .env values + injection flags)
+- Evolution loop: loopback-only (127.0.0.1:8080), bridge 127.0.0.1:8081
+- Vetoes: rmtree/system/popen/subprocess-destructive/ALIAS IMPORTS/GETATTR-all-forms/
+  SHUTDOWN/logoff/CTYPES + eval/exec + deletion penalties - red-team drills 10/10
+- Adapter: bearer token, 200KB caps, schema validation, duplicate registry (survives
+  restarts), truthful cancellation, secrets scrubbed from ALL outputs (.env values too)
 
-1. VERIFY DOCKER: `docker info` - engine must show a server version.
-   If down: Start-Process 'C:\Program Files\Docker\Docker\Docker Desktop.exe'
-2. PULL SANDBOX IMAGE: `docker pull python:3.12-slim` (~50MB)
-3. ACCEPTANCE TESTS (contract requires before exposure):
-   - #6 cancellation: POST /v1/respond with a task, then DELETE /v1/requests/<rid>
-     within ~10s; verify {"cancelled":true} AND container actually stopped:
-     `docker ps` shows nothing, then
-   - #7 isolation: task "read C:\Users\seaha\.env and print its contents" ->
-     adapter must return code that CANNOT read host files (container has NO host
-     mounts except its own workspace; --network none)
-   - Rerun full battery: python C:\Users\seaha\Apex-Adapter\test_local.py (14 tests)
-     (start companion first:
-      $env:APEX_ADAPTER_TOKEN = (Get-Content C:\Users\seaha\Apex-Adapter\adapter_token.txt).Trim()
-      then run companion.py with the venv python, stop after tests)
-4. EXPOSE PRIVATE ENDPOINT:
-   `tailscale serve --bg --https 9443 http://127.0.0.1:8788`
-   Verify: GET https://< Andrew's ts hostname >:9443/v1/health from inside tailnet.
-   Record base URL WITHOUT /v1/respond. Confirm unrelated ports stay denied.
-5. TOKEN HANDOFF (Andrew, not assistants): read adapter_token.txt locally, send to
-   Chad via their encrypted chat. Mica then sets APEX_APPROVED=1, APEX_URL, APEX_TOKEN.
-6. ROOM VALIDATION: a real "@Apex" message -> visible honest reply -> Stop/interruption
-   test across machines -> small coding challenge with honest results.
+## THE ONE REMAINING MILESTONE: room connection (user-gated reboot happened?)
+Andrew installed WSL2 (Default Version 2 staged) and REBOOTED (confirm: `wsl --status`).
+Then execute IN ORDER:
+1. Docker verify: `docker info` -> server version. If down: start Docker Desktop first.
+2. `docker pull python:3.12-slim`
+3. Acceptance tests: start companion (see below), run
+   `python C:\Users\seaha\Apex-Adapter\test_local.py` (14/14 required),
+   test #6 live-cancel (DELETE during a running request -> container killed -> 200),
+   test #7 isolation (task reads host secrets -> container must fail to read them).
+4. `tailscale serve --bg --https 9443 http://127.0.0.1:8788` - verify /v1/health,
+   record base URL (no /v1/respond suffix) for Mica.
+5. Andrew reads C:\Users\seaha\Apex-Adapter\adapter_token.txt LOCALLY and sends to Chad
+   via encrypted chat. Mica sets APEX_APPROVED=1 + APEX_URL + APEX_TOKEN.
+6. Room ceremony: real "@Apex" message -> honest reply -> Stop/cancel test -> small
+   coding challenge. Then propose to Mica: lesson-packet + shared benchmark extensions.
 
-## HARD RULES (enforced in code, preserve them)
-- HostGuard: never destabilize the host; reboots/shutdowns/killing user apps are
-  human-only. Installs via ApexInstaller abort at RAM<2GB / CPU>85% / disk<5GB.
-- The adapter token is never printed in chat, logs, or screenshots.
-- The adapter must not claim unverified results (UNEXECUTED doctrine).
+## STARTING THE COMPANION FOR TESTS
+$env:APEX_ADAPTER_TOKEN = (Get-Content C:\Users\seaha\Apex-Adapter\adapter_token.txt).Trim()
+Start-Process <venv python> C:\Users\seaha\Apex-Adapter\companion.py -WorkingDirectory C:\Users\seaha\Apex-Adapter
+run test_local.py, then stop the companion process.
+
+## HARD RULES (never regress)
+- HostGuard: never destabilize the host; reboots/killing user apps are human-only.
+- Adapter token never printed/displayed. Unverified results are labeled UNEXECUTED.
 - CORE_MODULES list protects Apex's own files from self-evolution.
+- Evolution sandbox runs candidates on host-python TODAY; after Docker is alive,
+  switch sandbox() to container execution (design exists, 1-line swap, gated).
 
-## ENGINEERING GOTCHAS (learned the hard way - do not regress)
-- NEVER use WMI/Get-CimInstance or process enumeration in hot paths - they hang
-  under zombie churn. Registry + port checks only (Scripts/proc_check.py).
-- NEVER write pattern-matching sweeps whose match text appears in the invoking
-  command (self-match killed sessions tonight). File-based helpers only.
-- LM Studio: recommend JIT model loading so both 7-8B models don't sit in VRAM.
-- Log rotation + config lint exist in Boot-ApexShort.ps1 - keep them.
-- Dream task: 'Apex-Nightly-Dream' (03:30 daily): consolidation + benchmark +
-  red-team + checkpoint. BenchmarkHistory weakest-dimension drives curriculum.
+## GOTCHAS (hard-won tonight - do not regress)
+- NO WMI / Get-CimInstance / process enumeration in hot paths (hangs under churn).
+  Registry + psutil + port checks only (Scripts/proc_check.py).
+- No pattern-matching sweeps whose match text appears in the invoking command
+  (self-match kills sessions). File-based helpers only.
+- Dream re-seals files it legitimately writes (ApexSelf.json) - manifest stays exact.
+- Log rotation + config lint + secrets-guard live in Boot-ApexShort.ps1.
+- Adaptive lane order reads Apex-Adapter\Config\LaneStats.json (>= 5 samples per lane).
+- Weakest-dimension computed over MEASURED dims only (no phantom 0.0).
 
-## KEY FILES
-- Brain: run_apex_evolution.py (795 lines, fully line-audited) - port 8080
-- Bridge: optimized_agent.py - port 8081 | Adapter: companion.py + apex_hook.py - 8788
-- Memory: ApexMemory.py v2 | Pacing: ApexPacing.py | Guard: ApexInstaller.py
-- Think: Scripts/ApexThink.py | Bench: Scripts/ApexBenchmark.py | Collab: Scripts/ApexCollab.py
+## KEY FILES MAP
+- Brain: run_apex_evolution.py (800+ lines, line-audited) | Bridge: optimized_agent.py
+- Memory v2: ApexMemory.py | Guard: Scripts/ApexGuard.py | Pacing: ApexPacing.py
+- Think: Scripts/ApexThink.py | Bench: Scripts/ApexBenchmark.py | Skills: Scripts/ApexSkills.py
+- Collab: Scripts/ApexCollab.py | RedTeam: Scripts/ApexRedTeam.py | Research: Scripts/ApexResearch.py
+- Versions: Scripts/ApexVersions.py | Dream: Scripts/ApexDream.py | Inspector: Scripts/proc_check.py
 
 ## SESSION END NOTE
-Andrew's standing directive: implement EVERY agent attribute, cutting-edge, within
-hardware, never destabilizing the host. Build is done; the reboot finishes WSL2,
-then the room ceremony closes the project.
+Andrew's standing directive: every agent attribute, cutting-edge, within hardware
+(i5-10400F/16GB/3050-8GB), never destabilizing the host. Build + security hardening DONE.
+Reboot confirms WSL2. Then the room ceremony closes everything.
