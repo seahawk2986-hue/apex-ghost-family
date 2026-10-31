@@ -15,6 +15,7 @@ Supersedes v1. Read this file first - complete state + exact remaining steps.
 - Dashboard: http://127.0.0.1:8080/ | Notes: /notes | Talk API: POST /talk/api
 - Keys: Groq/OpenRouter/Gemini in .env (SEALED: Config/EnvSeal.json), local-first burst lanes
 - Token: C:\Users\seaha\Apex-Adapter\adapter_token.txt (64 chars - NEVER print/display it)
+  DELIVERED to Chad via encrypted chat 2026-10-31. Room watcher armed (room_watcher.py, 6h).
 
 ## REASONING CHAIN (in-plan order, all live)
 1. DeepSeek plan (memory+ledger+curriculum+strategy informed)
