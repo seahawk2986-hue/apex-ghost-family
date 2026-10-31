@@ -260,9 +260,44 @@ def board_update(trait, match):
     return e
 
 
+def d_harvest():
+    """HARVEST-FED drill (self-play on our own mined corpus): predict what a
+    mined, vetted skill module does - STATIC ground truth from its registered
+    metadata + docstring; the program is never executed (vet rules hold)."""
+    import importlib.util as _ilu
+    truth_lines, name = [], None
+    try:
+        lib = json.load(open(os.path.join(REPO, "Config", "SkillLibrary.json"),
+                             encoding="utf-8-sig"))
+        sk = random.choice(lib["skills"])
+        name = sk.get("skill", "")
+        truth_lines = [ln for ln in (sk.get("first_line", ""), sk.get("summary", ""))
+                       if ln]
+        # the module's docstring line (if any) is static truth
+        try:
+            path = os.path.join(STAGE, sk.get("source_repo", "").replace("/", "_") + "__" +
+                                sk.get("source_file", "").replace("/", "__"))
+            head = open(path, encoding="utf-8", errors="ignore").read(1200)
+            doc = re.findall(r'"""(.{5,140})"""', head, re.S)
+            if doc:
+                truth_lines += [" ".join(doc[0].split())[:140]]
+        except Exception:
+            pass
+    except Exception:
+        pass
+    if not truth_lines:
+        # None-tolerance: fall back to an arithmetic drill, never break a round
+        return d_arith()
+    q = (f"HARVEST drill: a mined module '{name}' from the skill library does what? "
+         f"Reply in 1-2 short lines naming its core behavior.")
+    truth = " | ".join(_t[:120].lower() for _t in truth_lines[:2])
+    return (q, truth, "harvest self-play: mined = material")
+
+
 GENS = {"reasoning": d_reasoning, "flaw-spot": d_flaw, "arith": d_arith,
         "calibration": d_calibration, "selfmodel": d_selfmodel, "vuln-spot": d_vuln,
-        "recall": d_recall, "planning": d_planning, "communicate": d_communicate}
+        "recall": d_recall, "planning": d_planning, "communicate": d_communicate,
+        "harvest": d_harvest}
 
 
 LEADERBOARD_PATH = os.path.join(REPO, "Config", "GymLeaderboard.json")
@@ -457,7 +492,7 @@ if __name__ == "__main__":
             if len(traits) < 3:
                 traits += [t for t in list(GENS) if t not in traits][:3 - len(traits)]
         except Exception:
-            traits = ["reasoning", "flaw-spot", "arith"]
+            traits = ["reasoning", "flaw-spot", "arith", "harvest"]
     else:
         traits = [t.strip() for t in a.traits.split(",") if t.strip() in GENS] or ["reasoning"]
     run(min(a.minutes, 45), traits)

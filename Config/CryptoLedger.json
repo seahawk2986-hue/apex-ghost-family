@@ -1,0 +1,32 @@
+{
+ "earned": 0.0,
+ "spent": 0.0,
+ "rows": [
+  {
+   "ts": "2026-10-31 14:17:51",
+   "kind": "test_run",
+   "earned": 0.0,
+   "bounties_found": 10,
+   "note": "keyless earn scan; conversion rails await custody setup"
+  },
+  {
+   "ts": "2026-10-31 14:55:50",
+   "kind": "earn",
+   "amount": 1.0,
+   "source": "demo/announcement-test",
+   "note": "money-announce verification"
+  },
+  {
+   "ts": "2026-10-31 14:56:51",
+   "kind": "honest_reset",
+   "note": "demo dollar removed; the ledger only holds truth"
+  }
+ ],
+ "updated": "2026-10-31 14:55:50",
+ "payout_destination": {
+  "rail": "paypal",
+  "address": "[REDACTED-PAYPAL]",
+  "holder": "Andrew Hike (family earnings route only)",
+  "set": "2026-10-31 15:15:23"
+ }
+}

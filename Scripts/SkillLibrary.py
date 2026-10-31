@@ -47,9 +47,33 @@ def load():
 
 
 def save(lib):
-    lib["built"] = time.strftime("%Y-%m-%d %H:%M:%S")
-    with open(LIB_PATH, "w", encoding="utf-8") as f:
-        json.dump(lib, f, indent=1, ensure_ascii=False)
+    """ATOMIC + cross-process locked write: the farm's 12 workers + Sentry's
+    rounds used to race load->append->save with no lock - lost updates and
+    converging garbage collapsed the store (233 -> 84 tonight). The lock file
+    + temp-replace makes every write single-writer and never half-visible."""
+    import msvcrt
+    lock_path = LIB_PATH + ".lock"
+    lockf = open(lock_path, "w")
+    deadline = time.time() + 30
+    while True:
+        try:
+            msvcrt.locking(lockf.fileno(), msvcrt.LK_LOCK, 1)
+            break
+        except OSError:
+            if time.time() > deadline:
+                lockf.close()
+                return False
+            time.sleep(0.1)
+    try:
+        lib["built"] = time.strftime("%Y-%m-%d %H:%M:%S")
+        tmp = LIB_PATH + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(lib, f, indent=1, ensure_ascii=False)
+        os.replace(tmp, LIB_PATH)
+        return True
+    finally:
+        msvcrt.locking(lockf.fileno(), msvcrt.LK_UNLCK, 1)
+        lockf.close()
 
 
 def vet(path):
@@ -173,11 +197,105 @@ def harvest(repo, per_source):
                    "first_line": content.splitlines()[0][:120],
                    "imports": sorted(set(re.findall(r"^\s*import\s+(\w+)", content, re.M)))[:8],
                    "registered": time.strftime("%Y-%m-%d %H:%M:%S")}
+            _before = len(lib["skills"])
             lib["skills"].append(doc)
-            save(lib)
+            ok_saved = save(lib)
             picked += 1
-            _library_reward(15, "HARVEST: registered verified skill " + doc["skill"]
+            # reward fuse: pay ONLY on a verified net-grow of the store - a
+            # collapsed-overwrite pays nothing (honest economy)
+            if ok_saved and len(lib["skills"]) > _before:
+                _library_reward(15, "HARVEST: registered verified skill " + doc["skill"]
+                                + " from " + repo + ".", milestone=(picked % 10 == 0))
+
+
+
+def harvest_tarball(repo, per_source=12):
+    """CDN tarball harvest: no auth, no API quota - one codeload request yields
+    the whole repo; every picked .py file runs the SAME vet gates and appends
+    via the SAME locked atomic save + reward fuse as the API path."""
+    import gzip
+    import io as _io
+    import tarfile
+    import urllib.request as _ur
+    os.makedirs(STAGE, exist_ok=True)
+    try:
+        req = _ur.Request(f"https://codeload.github.com/{repo}/tar.gz/refs/heads/HEAD",
+                          headers={"User-Agent": "ApexGhostSwarm/3.0"})
+        with _ur.urlopen(req, timeout=60) as r:
+            blob = r.read(3 * 1024 * 1024)
+    except Exception:
+        blob = b""
+    if len(blob) < 1000:
+        for br in ("main", "master", "develop"):   # HEAD aliases 404 on codeload
+            try:
+                req = _ur.Request(
+                    f"https://codeload.github.com/{repo}/tar.gz/refs/heads/{br}",
+                    headers={"User-Agent": "ApexGhostSwarm/3.0"})
+                with _ur.urlopen(req, timeout=60) as r:
+                    blob = r.read(3 * 1024 * 1024)
+                if len(blob) > 1000:
+                    break
+            except Exception:
+                continue
+    if len(blob) < 1000:
+        return 0
+    try:
+        dobj = __import__("zlib").decompressobj(16 + __import__("zlib").MAX_WBITS)
+        raw = dobj.decompress(blob, 32 * 1024 * 1024)
+        tf = tarfile.open(fileobj=_io.BytesIO(raw), mode="r:")
+    except Exception:
+        return 0
+    lib = load()
+    picked = 0
+    while picked < per_source:
+        try:
+            m = tf.next()
+        except Exception:
+            break
+        if m is None:
+            break
+        if not (m.isfile() and (m.name.endswith(".py")) and m.size > 200
+                and m.size < 12000 and "/" in m.name):
+            continue
+        if any(x in m.name.lower() for x in ("test", "setup", "example_", "game")):
+            continue
+        rel = m.name.split("/", 1)[-1]
+        if any((x.get("source_file") == rel and x.get("source_repo") == repo)
+               for x in lib["skills"]):
+            continue
+        try:
+            content = tf.extractfile(m).read(12000).decode("utf-8", "ignore")
+        except Exception:
+            continue
+        tmp = os.path.join(STAGE, repo.replace("/", "_") + "__" + rel.replace("/", "__"))
+        try:
+            with open(tmp, "w", encoding="utf-8") as f:
+                f.write(content)
+        except Exception:
+            continue
+        ok, reason = vet(tmp)
+        if not ok:
+            continue
+        _before = len(lib["skills"])
+        doc = {"skill": os.path.basename(rel)[:-3], "source_file": rel,
+               "source_repo": repo, "summary": content.splitlines()[0][:110],
+               "license": "permissive (fetched)", "sha256": __import__("hashlib").sha256(content.encode()).hexdigest(),
+               "lines": len(content.splitlines()),
+               "first_line": content.splitlines()[0][:100] if content.splitlines() else "",
+               "imports": sorted(set(__import__("re").findall(r"^\s*import\s+(\w+)", content, __import__("re").M)))[:8],
+               "registered": time.strftime("%Y-%m-%d %H:%M:%S")}
+        lib["skills"].append(doc)
+        ok_saved = save(lib)
+        lib = load()
+        picked += 1
+        if ok_saved and len(lib["skills"]) > _before:
+            _library_reward(15, "HARVEST-TAR: registered verified skill " + doc["skill"]
                             + " from " + repo + ".", milestone=(picked % 10 == 0))
+    try:
+        tf.close()
+    except Exception:
+        pass
+    return picked
 
 
 def harvest_all(per_source=MAX_FILES_PER_SOURCE):

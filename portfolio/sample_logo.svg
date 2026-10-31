@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#57e389"/><stop offset="1" stop-color="#2c5f40"/></linearGradient></defs>
+<circle cx="60" cy="60" r="34" fill="url(#g)" opacity="0.92"/>
+<circle cx="88" cy="52" r="22" fill="#9fd8b8" opacity="0.7"/>
+<circle cx="108" cy="66" r="14" fill="#2c5f40" opacity="0.55"/>
+<text x="132" y="66" font-family="Segoe UI" font-size="20" fill="#dfe9e4">ghosts</text>
+</svg>

@@ -1,0 +1,198 @@
+{
+ "timestamp": "2026-10-31 11:40:56",
+ "apex_python_footprint_mb": 335,
+ "free_ram_gb": 6.6,
+ "total_ram_gb": 15.9,
+ "trimmable_total_mb": 2984,
+ "trimmable_processes": [
+  {
+   "name": "chrome",
+   "pid": 26732,
+   "ram_mb": 458,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "chrome",
+   "pid": 9536,
+   "ram_mb": 305,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "steamwebhelper",
+   "pid": 20012,
+   "ram_mb": 300,
+   "note": "Steam UI - close Steam if not gaming"
+  },
+  {
+   "name": "chrome",
+   "pid": 6960,
+   "ram_mb": 282,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "chrome",
+   "pid": 28312,
+   "ram_mb": 163,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "msedge",
+   "pid": 9896,
+   "ram_mb": 159,
+   "note": "close me"
+  },
+  {
+   "name": "chrome",
+   "pid": 8620,
+   "ram_mb": 149,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "steamwebhelper",
+   "pid": 3676,
+   "ram_mb": 148,
+   "note": "Steam UI - close Steam if not gaming"
+  },
+  {
+   "name": "chrome",
+   "pid": 30040,
+   "ram_mb": 129,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "chrome",
+   "pid": 11340,
+   "ram_mb": 103,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "chrome",
+   "pid": 24732,
+   "ram_mb": 96,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "steamwebhelper",
+   "pid": 15840,
+   "ram_mb": 94,
+   "note": "Steam UI - close Steam if not gaming"
+  },
+  {
+   "name": "steam",
+   "pid": 19932,
+   "ram_mb": 84,
+   "note": "Steam client"
+  },
+  {
+   "name": "chrome",
+   "pid": 23932,
+   "ram_mb": 73,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "chrome",
+   "pid": 12296,
+   "ram_mb": 62,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "steamwebhelper",
+   "pid": 10372,
+   "ram_mb": 55,
+   "note": "Steam UI - close Steam if not gaming"
+  },
+  {
+   "name": "chrome",
+   "pid": 15352,
+   "ram_mb": 52,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "msedge",
+   "pid": 2012,
+   "ram_mb": 51,
+   "note": "close me"
+  },
+  {
+   "name": "msedge",
+   "pid": 29344,
+   "ram_mb": 44,
+   "note": "close me"
+  },
+  {
+   "name": "chrome",
+   "pid": 10496,
+   "ram_mb": 42,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "chrome",
+   "pid": 26800,
+   "ram_mb": 42,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "steamwebhelper",
+   "pid": 19888,
+   "ram_mb": 31,
+   "note": "Steam UI - close Steam if not gaming"
+  },
+  {
+   "name": "chrome",
+   "pid": 23020,
+   "ram_mb": 31,
+   "note": "close tabs / use Memory Saver"
+  },
+  {
+   "name": "msedge",
+   "pid": 27512,
+   "ram_mb": 31,
+   "note": "close me"
+  }
+ ],
+ "unknown_heavy": [
+  {
+   "name": "eacefsubprocess",
+   "ram_mb": 275
+  },
+  {
+   "name": "memcompression",
+   "ram_mb": 269
+  },
+  {
+   "name": "lm studio",
+   "ram_mb": 226
+  },
+  {
+   "name": "windowsterminal",
+   "ram_mb": 209
+  },
+  {
+   "name": "ace",
+   "ram_mb": 192
+  },
+  {
+   "name": "eadesktop",
+   "ram_mb": 145
+  },
+  {
+   "name": "llama-server",
+   "ram_mb": 139
+  },
+  {
+   "name": "msedgewebview2",
+   "ram_mb": 134
+  }
+ ],
+ "disk_free_gb": 454.1,
+ "recommendations": {
+  "1_immediate": "Close Chrome + Steam = +2984 MB RAM instantly",
+  "2_visual_effects": "sysdm.cpl > Advanced > Performance > Best Performance (~300 MB saved)",
+  "3_defender_exclusion": "Add Apex dirs to Defender exclusions (saves ~370 MB scanning overhead)",
+  "4_lmstudio_ttl": "LM Studio Settings > Model Load > Auto-unload after 5 min idle (saves 4-9 GB)",
+  "5_startup_disable": "Task Manager > Startup tab: disable Steam, Chrome, anything not needed",
+  "6_pagefile_fixed": "Set pagefile to fixed 4-8 GB on NVMe (prevents dynamic growth stutter)",
+  "7_services_manual": "SysMain > Manual, DiagTrack > Disabled, WSearch > Manual (on SSD)",
+  "8_steam_gpu_accel": "Steam Settings > Interface > disable GPU-accelerated rendering"
+ }
+}

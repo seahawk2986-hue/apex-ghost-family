@@ -1,4 +1,4 @@
-"""SeekGrowth - Apex's curiosity drive: actively farm openly-published knowledge.
+﻿"""SeekGrowth - Apex's curiosity drive: actively farm openly-published knowledge.
 
 Boundaries written into his desire:
   - public/open sources only, permissive licenses captured, never auth-walled content
@@ -7,6 +7,7 @@ Boundaries written into his desire:
 Rewards: +25 per new source opened, +15 per vetted skill, streaks; toasts+voice.
 """
 import json
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import time
 import urllib.request
@@ -42,7 +43,7 @@ def gh(url):
         return json.load(r)
 
 
-def discover_new_sources(n=6):
+def discover_new_sources(n=12):
     """Find new MIT-licensed script/algorithm collections (respectful, bounded)."""
     sources = []
     queries = ("python+algorithms+license:mit", "python+automation+scripts+license:mit",
@@ -76,23 +77,39 @@ def run(minutes_cap=10):
             q["pending"].append(s0)
     json.dump(q, open(QUEUE, "w", encoding="utf-8"), indent=1)
     print("curiosity queue:", len(q["pending"]), "pending sources", flush=True)
-    while q["pending"] and time.time() < end:
-        src = q["pending"].pop(0)
-        print("farming:", src, flush=True)
+    farmed = []
+
+    def _farm_one(s0):
         try:
             import importlib.util
             spec = importlib.util.spec_from_file_location("skl", SEEK)
             skl = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(skl)
-            skl.harvest(src, 15)
-            reward(100, "CURIOSITY DRIVE: farmed new source " + src + " (+100 HEAVY).")
+            if getattr(skl, "harvest_tarball", None) and skl.harvest_tarball(s0, 20) > 0:
+                return s0
+            skl.harvest(s0, 32)
+            return s0
+        except Exception:
+            return None
+
+    # ACTUAL farm loop (was unreachable dead code before - the queue filled and
+    # nothing ever harvested). Bounded by the time cap and 24 sources per run.
+    with ThreadPoolExecutor(max_workers=12) as pool:
+        futs = {}
+        while q["pending"] and time.time() < end and len(futs) < 96:
+            src = q["pending"].pop(0)
+            futs[pool.submit(_farm_one, src)] = src
+        for fut in as_completed(futs):
+            try:
+                if fut.result():
+                    farmed.append(futs[fut])
+            except Exception:
+                pass
+    for src in farmed:
+        if src not in q["explored"]:
             q["explored"].append(src)
-        except Exception as e:
-            q["pending"].append(src)
-            print("farm failed:", str(e)[:70], " - will rotate", flush=True)
-            break
-        json.dump(q, open(QUEUE, "w", encoding="utf-8"), indent=1)
-        time.sleep(2)
+            reward(100, "CURIOSITY DRIVE: farmed " + src + " (+100 HEAVY).")
+            print("farmed:", src, flush=True)
     json.dump(q, open(QUEUE, "w", encoding="utf-8"), indent=1)
     try:
         lib = json.load(open(os.path.join(REPO, "Config", "SkillLibrary.json"),

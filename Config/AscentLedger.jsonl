@@ -1,0 +1,12 @@
+{"ts": "2026-10-31 14:41:06", "fitness": 3.2, "findings": 135, "backlog": 1091, "points": 2956.0}
+{"ts": "2026-10-31 14:58:51", "fitness": 3.2, "findings": 135, "backlog": 1091, "points": 2956.0}
+{"ts": "2026-10-31 15:00:49", "fitness": 3.2, "findings": 135, "backlog": 1091, "points": 2956.0}
+{"ts": "2026-10-31 15:00:50", "fitness": 3.2, "findings": 135, "backlog": 1091, "points": 2956.0}
+{"ts": "2026-10-31 15:00:51", "fitness": 3.2, "findings": 135, "backlog": 1091, "points": 2956.0}
+{"ts": "2026-10-31 15:00:52", "fitness": 3.2, "findings": 135, "backlog": 1091, "points": 2956.0}
+{"ts": "2026-10-31 15:00:53", "fitness": 3.2, "findings": 135, "backlog": 1091, "points": 2956.0}
+{"ts": "2026-10-31 15:01:52", "fitness": 3.2, "findings": 135, "backlog": 1091, "points": 2956.0}
+{"ts": "2026-10-31 15:01:59", "fitness": 3.2, "findings": 135, "backlog": 1091, "points": 2956.0}
+{"ts": "2026-10-31 15:02:05", "fitness": 3.2, "findings": 135, "backlog": 1091, "points": 2956.0}
+{"ts": "2026-10-31 15:02:12", "fitness": 3.2, "findings": 135, "backlog": 1091, "points": 2956.0}
+{"ts": "2026-10-31 15:10:22", "total_fitness": 1.84, "dims": {"gold": {"backlog": 907, "consumed": 2064, "skills": 245}, "money": {"earned": 0.0, "spent": 0.0, "opps": 0}, "life": {"briefs": 5, "alarmsRaised": 1, "lastHelp": "2026-10-31 15:02:06"}, "routing": ["trending", "none", "ddg", "wiki", "events"], "recruits": {"converted": 1}, "safety": {"pass": true}}}

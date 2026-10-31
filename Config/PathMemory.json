@@ -1,0 +1,42 @@
+{
+ "trending": {},
+ "none": {
+  "reqs": 1,
+  "mines": 2
+ },
+ "ddg": {
+  "reqs": 1,
+  "mines": 17
+ },
+ "wiki": {
+  "reqs": 1,
+  "mines": 5
+ },
+ "events": {
+  "reqs": 1,
+  "mines": 16
+ },
+ "andrew_help": {
+  "briefs": 5,
+  "alarmsRaised": 1,
+  "lastHelp": "2026-10-31 15:02:06"
+ },
+ "finance": {
+  "ts": "2026-10-31 15:00:53",
+  "opportunities": [],
+  "total_ev": 0,
+  "best_action": "none this cycle - the honest zero; widen lanes/token tomorrow",
+  "kit": {
+   "readme": true,
+   "issue_drafts": 3,
+   "plan": {
+    "rung_1": "file the 3 issue drafts (issue_drafts.md) from your GitHub - 20 min; builds the public track record",
+    "rung_2": "publish this repo public + enable Sponsors (the README is written: README.md) - 10 min",
+    "rung_3": "post the pitch (family_pitch.md) where you have real communities - 10 min",
+    "rung_4": "take ONE catalog job via the room (@Apex) - the V2 pipeline delivers; 80% cap; announced in chat",
+    "the_math": "sponsors ($3-5/mo x a few) + one $40-150 page build = the first $100",
+    "the_family_does": "scans, drafts, verifies, converts, briefs - you sign, submit, decide"
+   }
+  }
+ }
+}

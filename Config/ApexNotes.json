@@ -1,22 +1,12 @@
 [
  {
-  "ts": "2026-10-31 01:58:22",
-  "note": "Dream complete. 2 insight(s) consolidated; red-team 4/4; weakest dimension: security. Everything is in order - I will keep evolving."
- },
- {
-  "ts": "2026-10-31 02:02:19",
-  "note": "Dream complete. 2 insight(s) consolidated; red-team 6/6; weakest dimension: security. Everything is in order - I will keep evolving."
- },
- {
-  "ts": "2026-10-31 02:03:39",
-  "note": "Dream complete. 2 insight(s) consolidated; red-team 6/6; weakest dimension: security; security posture: integrity manifest OK; secrets sealed. Everything is in order - I will keep evolving."
- },
- {
-  "ts": "2026-10-31 02:08:42",
-  "note": "Dream complete. 2 insight(s) consolidated; red-team 10/10; weakest dimension: security; security posture: TAMPER ALERT: [('run_apex_evolution.py', \"HASH MISMATCH - modified outside Apex's write path\")]. Everything is in order - I will keep evolving."
- },
- {
-  "ts": "2026-10-31 03:30:11",
-  "note": "Dream complete. 2 insight(s) consolidated; red-team 10/10; weakest dimension: reasoning; security posture: integrity manifest OK; secrets sealed. Everything is in order - I will keep evolving."
+  "ts": "2026-10-31 15:02:06",
+  "lines": [
+   "backlog waiting for tonight: 907 leads",
+   "skill library: 245 verified skills ready when you ask",
+   "family points: 37746 (earned by verified work)",
+   "money 0.00$ / 0.00$ (honest zero is fine)",
+   "machine healthy: your box breathes fine"
+  ]
  }
 ]

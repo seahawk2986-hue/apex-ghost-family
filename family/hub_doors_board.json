@@ -1,0 +1,45 @@
+{
+ "family": "apex-ghost-swarm",
+ "announced": "2026-10-31 14:42:57",
+ "we_seek": "host homes with spare compute (desktop free tiers, LAN boxes, edge workers, free VPS)",
+ "we_offer": "the swarm's harvests on your territory = your own indexed gold library; the family rules (politeness budget, RAM gates, honesty) ride with the packet; your consent is timestamped and revocable",
+ "what_we_never_do": "no abuse, no spam invitations, no forced entry, no custody of your accounts; consent may be revoked any time",
+ "how_to_consent": "read hub_kits/README.md; run Scripts/HubCharter.py; the doors open",
+ "doors_current": {
+  "mica_room": {
+   "kind": "partner-box",
+   "transport": "room adapter :8788 (token)",
+   "consent": "Mica's yes in the room + packet pull",
+   "scanned_at": "2026-10-31 14:42:57",
+   "status": "awaiting-consent"
+  },
+  "github_actions": {
+   "kind": "cron-compute",
+   "transport": "workflow artifact push",
+   "consent": "repo commit + family/CONSENT.txt (2000 min/mo free)",
+   "scanned_at": "2026-10-31 14:42:57",
+   "status": "awaiting-consent"
+  },
+  "cloudflare_worker": {
+   "kind": "edge-compute",
+   "transport": "worker + grain push",
+   "consent": "wrangler deploy + FAMILY_CONSENT secret (100k req/day)",
+   "scanned_at": "2026-10-31 14:42:57",
+   "status": "awaiting-consent"
+  },
+  "free_vps_oracle_class": {
+   "kind": "dedicated-box",
+   "transport": "cron + grain pull/push",
+   "consent": "account signup + bootstrap.sh (24GB RAM free tier)",
+   "scanned_at": "2026-10-31 14:42:57",
+   "status": "awaiting-consent"
+  },
+  "issuehunt_edge": {
+   "kind": "partner-platform",
+   "transport": "page-lane",
+   "consent": "platform ToS; client-rendered = closed tonight",
+   "scanned_at": "2026-10-31 14:42:57",
+   "status": "awaiting-consent"
+  }
+ }
+}

@@ -1,1961 +1,2990 @@
 {
  "skills": [
   {
-   "skill": "butterworth_filter",
-   "source_file": "audio_filters/butterworth_filter.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "1e0b640eeab279ad95aab25c46ea801576803ba9cf3751b8ad708f65fe09d31c",
-   "lines": 361,
-   "first_line": "from math import cos, sin, sqrt, tau",
-   "imports": [],
-   "registered": "2026-10-31 06:45:13"
-  },
-  {
-   "skill": "equal_loudness_filter",
-   "source_file": "audio_filters/equal_loudness_filter.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "fdc1d820272469d9d65d7147df6566f9251d81924189d55b1b350a43140a70ef",
-   "lines": 198,
-   "first_line": "from __future__ import annotations",
-   "imports": [
-    "numpy"
-   ],
-   "registered": "2026-10-31 06:45:14"
-  },
-  {
-   "skill": "iir_filter",
-   "source_file": "audio_filters/iir_filter.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "1c8a18c65424ecad71b556b3a2e1bb8a6e42cfd49ddf8ba28bd0f4028ff118b5",
-   "lines": 129,
-   "first_line": "from __future__ import annotations",
-   "imports": [],
-   "registered": "2026-10-31 06:45:15"
-  },
-  {
-   "skill": "show_response",
-   "source_file": "audio_filters/show_response.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "4f972e628506a57a3f342699836f9d52a3357e2e0d05397d2645401a23915e09",
-   "lines": 101,
-   "first_line": "\"\"\"",
-   "imports": [
-    "matplotlib",
-    "numpy"
-   ],
-   "registered": "2026-10-31 06:45:15"
-  },
-  {
-   "skill": "all_combinations",
-   "source_file": "backtracking/all_combinations.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "e6c22b86d971857ae11a8271944840f4542f1d53fbeb90f3e1ad5ead3515c297",
-   "lines": 116,
-   "first_line": "\"\"\"",
-   "imports": [],
-   "registered": "2026-10-31 06:45:16"
-  },
-  {
-   "skill": "all_subsequences",
-   "source_file": "backtracking/all_subsequences.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "1dc893b0323c0d49fe9998e300aa91b1e63f27fc7f3114250fcd10678c25311a",
-   "lines": 108,
-   "first_line": "\"\"\"",
-   "imports": [],
-   "registered": "2026-10-31 06:45:17"
-  },
-  {
-   "skill": "coloring",
-   "source_file": "backtracking/coloring.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "963f2e6386e0561052d8cdab0615a26337b7a607235d9d9554e14e2aac723218",
-   "lines": 186,
-   "first_line": "\"\"\"",
-   "imports": [],
-   "registered": "2026-10-31 06:45:17"
-  },
-  {
-   "skill": "combination_sum",
-   "source_file": "backtracking/combination_sum.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "376bac453ba140719240d28c2099e6bb5bfc4e3159f24ca1561e1ee1e05dd3d7",
-   "lines": 76,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:18"
-  },
-  {
-   "skill": "crossword_puzzle_solver",
-   "source_file": "backtracking/crossword_puzzle_solver.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "80d0945ab4f3a7c22ef6315620afe69e5f274ffcfcf7b22eba55f835b904e371",
-   "lines": 122,
-   "first_line": "# https://www.geeksforgeeks.org/solve-crossword-puzzle/",
-   "imports": [],
-   "registered": "2026-10-31 06:45:19"
-  },
-  {
-   "skill": "generate_parentheses",
-   "source_file": "backtracking/generate_parentheses.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "e337db1a59e3060e6f400dd857ecf6e4eb73297e01f813fc3688442f840c1da0",
-   "lines": 81,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:19"
-  },
-  {
-   "skill": "generate_parentheses_iterative",
-   "source_file": "backtracking/generate_parentheses_iterative.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "c7c6d3ebcc121a832234ea83db3de74c57702f5873a4f808b778633571d190c8",
-   "lines": 67,
-   "first_line": "def generate_parentheses_iterative(length: int) -> list[str]:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:20"
-  },
-  {
-   "skill": "hamiltonian_cycle",
-   "source_file": "backtracking/hamiltonian_cycle.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "216ceb622f942554a53c6f5216e0fb54da1062ca25d3e068e7f49de9dcd856e7",
-   "lines": 176,
-   "first_line": "\"\"\"",
-   "imports": [],
-   "registered": "2026-10-31 06:45:20"
-  },
-  {
-   "skill": "knight_tour",
-   "source_file": "backtracking/knight_tour.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "9250a499d67b2d52ec39d3bd12da468ee90206b89591e5e177f39322bd4f3b61",
-   "lines": 101,
-   "first_line": "# Knight Tour Intro: https://www.youtube.com/watch?v=ab_dY3dZFHM",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:21"
-  },
-  {
-   "skill": "match_word_pattern",
-   "source_file": "backtracking/match_word_pattern.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "f558846bc592a8fe5d85e917b5c488518555dc8926ae90d3991a730c7609a321",
-   "lines": 61,
-   "first_line": "def match_word_pattern(pattern: str, input_string: str) -> bool:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:22"
-  },
-  {
-   "skill": "minimax",
-   "source_file": "backtracking/minimax.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "59a509877d235b0fe203c5875521a4a3baf098cdfbc8e09449c6bda251cb08de",
-   "lines": 101,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest",
-    "math"
-   ],
-   "registered": "2026-10-31 06:45:22"
-  },
-  {
-   "skill": "n_queens",
-   "source_file": "backtracking/n_queens.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "4b53309df68d5a302842d5076781d3e2e5a4f6f1c2c48a54792bb7e6f9a5bc4e",
-   "lines": 109,
-   "first_line": "\"\"\"",
-   "imports": [],
-   "registered": "2026-10-31 06:45:23"
-  },
-  {
-   "skill": "n_queens_math",
-   "source_file": "backtracking/n_queens_math.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "c104b71127c3903ebd9317a32fefb451b167d08dc36a7963e2f509c4d57efa60",
-   "lines": 158,
-   "first_line": "r\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:24"
-  },
-  {
-   "skill": "power_sum",
-   "source_file": "backtracking/power_sum.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "19a2454ccb73cbd74a2d89f6c00a2b696a66d68980abf6cefcb4601a53e59c25",
-   "lines": 91,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:24"
-  },
-  {
-   "skill": "rat_in_maze",
-   "source_file": "backtracking/rat_in_maze.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "a86e721f8289b2a7e69aa42cfa755328163687e24c209cf2d85e43a96e594b20",
-   "lines": 197,
-   "first_line": "from __future__ import annotations",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:25"
-  },
-  {
-   "skill": "sudoku",
-   "source_file": "backtracking/sudoku.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "523aa86104ad9e9558ae8f197255f26b0f1235b666981c45689ee5cd1da53318",
-   "lines": 133,
-   "first_line": "\"\"\"",
-   "imports": [],
-   "registered": "2026-10-31 06:45:26"
-  },
-  {
-   "skill": "sum_of_subsets",
-   "source_file": "backtracking/sum_of_subsets.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "abf5c7a1a84729dc93a16cdeaf7a272efb5084d0c80f06ea6fb654e20a0db46a",
-   "lines": 81,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:26"
-  },
-  {
-   "skill": "word_break",
-   "source_file": "backtracking/word_break.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "f7193b2658a593f9a1cc001ba8f69a9ef1c4fc27e6d08289dd54db7e6c2c1ee8",
-   "lines": 74,
-   "first_line": "\"\"\"",
-   "imports": [],
-   "registered": "2026-10-31 06:45:27"
-  },
-  {
-   "skill": "word_ladder",
-   "source_file": "backtracking/word_ladder.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "7d0fc8bdea25596069b8aeec6ffbe8f9b2116f83a67f23e2b99c5f944c5cf9f3",
-   "lines": 100,
-   "first_line": "\"\"\"",
-   "imports": [
-    "string"
-   ],
-   "registered": "2026-10-31 06:45:27"
-  },
-  {
-   "skill": "word_search",
-   "source_file": "backtracking/word_search.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "37328b0b2bacd67489b189b81b41761ecb2335770a864f6f21506071c86812c3",
-   "lines": 249,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:28"
-  },
-  {
-   "skill": "binary_and_operator",
-   "source_file": "bit_manipulation/binary_and_operator.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "2eb2b41939de29c2c9c59daf6eaf737de2b19feb308c08209785d9af1c83b01c",
-   "lines": 90,
-   "first_line": "\"\"\"Bitwise AND helper.",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:29"
-  },
-  {
-   "skill": "binary_coded_decimal",
-   "source_file": "bit_manipulation/binary_coded_decimal.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "10f25bfc20d790e15343d1059107a1d31c9936bb1e680ec218f7950e8408001a",
-   "lines": 29,
-   "first_line": "def binary_coded_decimal(number: int) -> str:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:29"
-  },
-  {
-   "skill": "binary_count_setbits",
-   "source_file": "bit_manipulation/binary_count_setbits.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "a21c9dd8120e1076c59cfd25b592d6ac849ecf393df54df04082b8ab9234e5f4",
-   "lines": 41,
-   "first_line": "def binary_count_setbits(a: int) -> int:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:30"
-  },
-  {
-   "skill": "binary_count_trailing_zeros",
-   "source_file": "bit_manipulation/binary_count_trailing_zeros.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "ceaf92a270d792b2fe6c63b8cb579f5df6b2a40b52b19f594a38952ab8d4ed59",
-   "lines": 55,
-   "first_line": "from math import log2",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:30"
-  },
-  {
-   "skill": "binary_or_operator",
-   "source_file": "bit_manipulation/binary_or_operator.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "753513a200672ca386428ff2133ff73d5f2fd304b47c12cb212539e00e7ce77b",
-   "lines": 50,
-   "first_line": "\"\"\"Bitwise OR helper.",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:31"
-  },
-  {
-   "skill": "binary_shifts",
-   "source_file": "bit_manipulation/binary_shifts.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "ef056dbb755a8ef8eb458c9beebfe87c94131eeaae84f548bf05974982d5de2b",
-   "lines": 109,
-   "first_line": "# Information on binary shifts:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:32"
-  },
-  {
-   "skill": "binary_twos_complement",
-   "source_file": "bit_manipulation/binary_twos_complement.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "2a8f0bb265f8f51547c7a945895b69a1e9a368d5072bfccdd76b443088e7df70",
-   "lines": 43,
-   "first_line": "# Information on 2's complement: https://en.wikipedia.org/wiki/Two%27s_complement",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:32"
-  },
-  {
-   "skill": "binary_xor_operator",
-   "source_file": "bit_manipulation/binary_xor_operator.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "b03704321e5f33bc4eda1272bc24808bcca56711ebaf022e6b78bbc7d13b7551",
-   "lines": 51,
-   "first_line": "\"\"\"Bitwise XOR helper.",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:33"
-  },
-  {
-   "skill": "bitwise_addition_recursive",
-   "source_file": "bit_manipulation/bitwise_addition_recursive.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "7abbbb778951abdcac62ef01261d59862dfbc3dee1e47a074495a6eba26d392e",
-   "lines": 55,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:34"
-  },
-  {
-   "skill": "count_1s_brian_kernighan_method",
-   "source_file": "bit_manipulation/count_1s_brian_kernighan_method.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "705e7b1f66dcc523628b42ecd0f6b2c7c83ce903408b11fba90892f267bc37f3",
-   "lines": 46,
-   "first_line": "def get_1s_count(number: int) -> int:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:34"
-  },
-  {
-   "skill": "count_number_of_one_bits",
-   "source_file": "bit_manipulation/count_number_of_one_bits.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "c94a673d1331c518a05bf466c1910e22f8f8c6b177a108b6eef06f289293a836",
-   "lines": 146,
-   "first_line": "from timeit import timeit",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:35"
-  },
-  {
-   "skill": "excess_3_code",
-   "source_file": "bit_manipulation/excess_3_code.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "a28cb57eb76cb16b733f6ced33537013184a656c24c85cf579eb5e47c24695fd",
-   "lines": 27,
-   "first_line": "def excess_3_code(number: int) -> str:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:35"
-  },
-  {
-   "skill": "fast_walsh_hadamard_transform",
-   "source_file": "bit_manipulation/fast_walsh_hadamard_transform.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "e2a0a51c5e47b47cf487bf8a6fbb5ddd14fe2afd7b9e5f3f20a5c1910eb4cd0d",
-   "lines": 209,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:36"
-  },
-  {
-   "skill": "find_previous_power_of_two",
-   "source_file": "bit_manipulation/find_previous_power_of_two.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "c4614c5b5da2ffa613b3aa057bc8e35f8f308a612188cf4fe1e04db65748e453",
-   "lines": 30,
-   "first_line": "def find_previous_power_of_two(number: int) -> int:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:37"
-  },
-  {
-   "skill": "find_unique_number",
-   "source_file": "bit_manipulation/find_unique_number.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "397936c8ff65a64960ba52f4eb300f97a5abac4e884236912ea40e4f0a592bbb",
+   "skill": "gaussian_process_classifier",
+   "source_file": "prml/kernel/gaussian_process_classifier.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "3de3b0a03a1b0e9aae1526c5bdbeaee20419c644699a1dc3d322c449ea8c7308",
    "lines": 37,
-   "first_line": "def find_unique_number(arr: list[int]) -> int:",
+   "first_line": "import numpy as np",
    "imports": [
-    "doctest"
+    "numpy"
    ],
-   "registered": "2026-10-31 06:45:37"
+   "registered": "2026-10-31 11:20:49"
   },
   {
-   "skill": "gray_code_sequence",
-   "source_file": "bit_manipulation/gray_code_sequence.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "9b7932071d8c367620bff98b9764a614e576ae3b9013ac3fffa74439798db5e6",
-   "lines": 95,
-   "first_line": "def gray_code(bit_count: int) -> list[int]:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:45:38"
-  },
-  {
-   "skill": "frontend",
-   "source_file": "AutoComplete_App/frontend.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "1775bcdc931ffed319185af7d8a6b5a6bffb0647334cefc75daa383a7a5cb6a2",
-   "lines": 38,
-   "first_line": "from tkinter import *",
-   "imports": [
-    "backend"
-   ],
-   "registered": "2026-10-31 06:45:39"
-  },
-  {
-   "skill": "backend",
-   "source_file": "BrowserHistory/backend.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "807bd9c1f9efb23938fd32869e4aecb872c286f3d29feda7ee208f6087a1dfc1",
-   "lines": 103,
-   "first_line": "class DLL:",
+   "skill": "making_simple_decisions",
+   "source_file": "aima/making_simple_decisions.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "3c198c451db4bfb6b55d13f32f926ac6eb80c817eb210a20898833067b149bfe",
+   "lines": 11,
+   "first_line": "\"\"\"Making Simple Decisions (Chapter 15/16)",
    "imports": [],
-   "registered": "2026-10-31 06:45:40"
+   "registered": "2026-10-31 11:20:49"
   },
   {
-   "skill": "cat",
-   "source_file": "Cat/cat.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "bd68e01f4a12189b9ca2fca278d366b6e230639b34c6401be55168806fa572f5",
-   "lines": 148,
-   "first_line": "\"\"\"",
+   "skill": "probabilistic_learning",
+   "source_file": "aima/probabilistic_learning.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "6be709c0ebdd4265116ce697bb214e195c5791b0ccd4241a62fe6c4af696b223",
+   "lines": 158,
+   "first_line": "\"\"\"Learning probabilistic models. (Chapters 20)\"\"\"",
    "imports": [
-    "argparse",
+    "heapq"
+   ],
+   "registered": "2026-10-31 11:20:49"
+  },
+  {
+   "skill": "naive_bayes",
+   "source_file": "examples/naive_bayes.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "5b49b6d35653ad79e1786847350b0b4be5a246081a35212a9e879e9741e575ea",
+   "lines": 31,
+   "first_line": "from sklearn.datasets import make_classification",
+   "imports": [],
+   "registered": "2026-10-31 11:20:49"
+  },
+  {
+   "skill": "01-matrix",
+   "source_file": "Python/01-matrix.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "bd4cad2982edde457215512743b0178ef3714197aff28941ee7e0692ac922a3b",
+   "lines": 93,
+   "first_line": "# Time:  O(m * n)",
+   "imports": [
+    "collections"
+   ],
+   "registered": "2026-10-31 11:20:50"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "cognitive/src/main/python/synapse/ml/cognitive/__init__.py",
+   "source_repo": "microsoft/SynapseML",
+   "license": "check repo",
+   "sha256": "7f2455a1b1f30c7ee29c858b42658fa0bb4ba6fdec071669d5b512b86603cd7e",
+   "lines": 15,
+   "first_line": "import warnings",
+   "imports": [
+    "sys",
+    "warnings"
+   ],
+   "registered": "2026-10-31 11:20:50"
+  },
+  {
+   "skill": "nearest_neighbors",
+   "source_file": "examples/nearest_neighbors.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "fafec435755fb4fe7893b3ccd60d491ec31ba4b0bc089554fdacd28d43e6cb65",
+   "lines": 59,
+   "first_line": "try:",
+   "imports": [],
+   "registered": "2026-10-31 11:20:50"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "33d5deb80a31046111f8f7cd6590f825b689bbac7ae596e339e18c3825628954",
+   "lines": 111,
+   "first_line": "\"\"\"Sphinx configuration for the aima-python API documentation.",
+   "imports": [
+    "os",
+    "re",
     "sys"
    ],
-   "registered": "2026-10-31 06:45:41"
+   "registered": "2026-10-31 11:20:50"
   },
   {
-   "skill": "multicoloredline",
-   "source_file": "Colors/multicoloredline.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "62c6b3cd16e429c52193e33ab22b185752ba858ff608e17607d828fc8ce115ba",
-   "lines": 52,
-   "first_line": "from rich.console import Console",
+   "skill": "1-bit-and-2-bit-characters",
+   "source_file": "Python/1-bit-and-2-bit-characters.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "22fa6cc87a20536ef8d112a121b61243d7eaa4330df5aeb9120af4aae789d1b4",
+   "lines": 17,
+   "first_line": "# Time:  O(n)",
+   "imports": [],
+   "registered": "2026-10-31 11:20:51"
+  },
+  {
+   "skill": "anomaly",
+   "source_file": "cognitive/src/main/python/synapse/ml/cognitive/anomaly.py",
+   "source_repo": "microsoft/SynapseML",
+   "license": "check repo",
+   "sha256": "0708206e060758fabd49fe8145c22ec85bd4e86e0c68e35e69cfc2c39b14bc82",
+   "lines": 8,
+   "first_line": "import warnings",
    "imports": [
-    "json",
+    "warnings"
+   ],
+   "registered": "2026-10-31 11:20:51"
+  },
+  {
+   "skill": "eight_puzzle",
+   "source_file": "gui/eight_puzzle.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "2480eb78d815ab75a9d7c90d7f4e1511a98334e1bdc4dd0631e4d6bc2ad82788",
+   "lines": 151,
+   "first_line": "import os.path",
+   "imports": [
+    "os",
+    "random",
     "time"
    ],
-   "registered": "2026-10-31 06:45:41"
+   "registered": "2026-10-31 11:20:51"
   },
   {
-   "skill": "pixel_sort",
-   "source_file": "Colors/pixel_sort.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "0aea149b60b809d9c307a15a16efed85107538c337340deb1c71be93bc974e29",
-   "lines": 170,
-   "first_line": "\"\"\"Pixel Sorting\"\"\"",
+   "skill": "nnet_convnet_mnist",
+   "source_file": "examples/nnet_convnet_mnist.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "a3f04aaac8fa29b4cd5abd4e7ee7e3bd87589b90e795f39c61785c06b99b58c9",
+   "lines": 57,
+   "first_line": "import logging",
    "imports": [
-    "argparse",
-    "colorsys",
-    "cv2",
-    "math",
-    "numpy",
+    "logging"
+   ],
+   "registered": "2026-10-31 11:20:51"
+  },
+  {
+   "skill": "132-pattern",
+   "source_file": "Python/132-pattern.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "0d35a134b523782c215abe4ed783b5ab79f23297842a2599a74218db80e97c03",
+   "lines": 37,
+   "first_line": "# Time:  O(n)",
+   "imports": [],
+   "registered": "2026-10-31 11:20:51"
+  },
+  {
+   "skill": "bing",
+   "source_file": "cognitive/src/main/python/synapse/ml/cognitive/bing.py",
+   "source_repo": "microsoft/SynapseML",
+   "license": "check repo",
+   "sha256": "5d37f93fd9665d6361d492383d90c3e93f708a364395ed54879797fd03a280c6",
+   "lines": 7,
+   "first_line": "import warnings",
+   "imports": [
+    "warnings"
+   ],
+   "registered": "2026-10-31 11:20:51"
+  },
+  {
+   "skill": "nnet_mlp",
+   "source_file": "examples/nnet_mlp.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "38bf1eaae3c1b997bd9c147e7c3907119c545c953024c34259f95d7220f3fd1c",
+   "lines": 95,
+   "first_line": "import logging",
+   "imports": [
+    "logging"
+   ],
+   "registered": "2026-10-31 11:20:51"
+  },
+  {
+   "skill": "genetic_algorithm_example",
+   "source_file": "gui/genetic_algorithm_example.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "7582ac0bac6880ff7f034ab57e98fa05bf3a3c1c1962204e2094e2d059d0719d",
+   "lines": 189,
+   "first_line": "# A simple program that implements the solution to the phrase generation problem using",
+   "imports": [
     "os",
-    "pandas",
-    "sound"
-   ],
-   "registered": "2026-10-31 06:45:42"
-  },
-  {
-   "skill": "primary_colors",
-   "source_file": "Colors/primary_colors.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "55f567a0bbae5b298d4213705f30e78fe5d95b49cf998bdc186a8ef03c9bc15a",
-   "lines": 176,
-   "first_line": "def diff(a, b):",
-   "imports": [
     "sys"
    ],
-   "registered": "2026-10-31 06:45:43"
+   "registered": "2026-10-31 11:20:51"
   },
   {
-   "skill": "print_colors",
-   "source_file": "Colors/print_colors.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "bad54a07db24d51ee5b37f6b609b69ea64d2d9d4f8508addc3b9e451cc87357d",
+   "skill": "2-keys-keyboard",
+   "source_file": "Python/2-keys-keyboard.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "e15a917edb1d9b88402c6d865bfb3b4bfe526959eb37a64ae03737eeeaa890e5",
    "lines": 21,
-   "first_line": "import sys",
-   "imports": [
-    "sys"
-   ],
-   "registered": "2026-10-31 06:45:43"
+   "first_line": "# Time:  O(sqrt(n))",
+   "imports": [],
+   "registered": "2026-10-31 11:20:52"
   },
   {
-   "skill": "PSNR",
-   "source_file": "Compression_Analysis/PSNR.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "f4e558691a41e53fd8c6e0a822031e58419b59f129d5d5b62da2c81ad1829a5a",
-   "lines": 41,
-   "first_line": "import math",
+   "skill": "face",
+   "source_file": "cognitive/src/main/python/synapse/ml/cognitive/face.py",
+   "source_repo": "microsoft/SynapseML",
+   "license": "check repo",
+   "sha256": "671cfdf43c912e8037c786d63b3b2d5e35446b872ef73493ea1e30bd68e3ac6c",
+   "lines": 8,
+   "first_line": "import warnings",
    "imports": [
-    "cv2",
-    "math",
+    "warnings"
+   ],
+   "registered": "2026-10-31 11:20:52"
+  },
+  {
+   "skill": "nnet_rnn_binary_add",
+   "source_file": "examples/nnet_rnn_binary_add.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "dc10a32bcbbee741cadeb9ef0d722fd791bdb87d70ab006ac61867fa5e67b97a",
+   "lines": 78,
+   "first_line": "import logging",
+   "imports": [
+    "logging",
     "numpy"
    ],
-   "registered": "2026-10-31 06:45:44"
+   "registered": "2026-10-31 11:20:52"
   },
   {
-   "skill": "Ohms_law",
-   "source_file": "Electronics_Algorithms/Ohms_law.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "186437e8ecee1ee47cd1a220e671e2305b2348c1422436907952ea084dbfca6a",
-   "lines": 12,
-   "first_line": "def ohms_law(v=0, i=0, r=0):",
-   "imports": [],
-   "registered": "2026-10-31 06:45:45"
-  },
-  {
-   "skill": "resistance",
-   "source_file": "Electronics_Algorithms/resistance.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "1574a9ffc3b8f0005c6ed377ed68dbce266fbd71b1d4e7fbbf0bec7188ea64b9",
-   "lines": 40,
-   "first_line": "def resistance_calculator(",
-   "imports": [],
-   "registered": "2026-10-31 06:45:45"
-  },
-  {
-   "skill": "main",
-   "source_file": "Extract-Table-from-pdf-txt-docx/main.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "a41d9b8bac43dde054db204e5a6dda77e99d09bd36120cd19edbc4eb8335685f",
-   "lines": 104,
-   "first_line": "# %%",
+   "skill": "vacuum_agent",
+   "source_file": "gui/vacuum_agent.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "b34687d7c75f4e3871d0ae03aafd92a26491c7df4bb888fb70c62154adc19882",
+   "lines": 154,
+   "first_line": "import os.path",
    "imports": [
-    "os",
-    "pandas",
-    "tabula"
-   ],
-   "registered": "2026-10-31 06:45:46"
-  },
-  {
-   "skill": "extract_thumbnail_from_video",
-   "source_file": "ExtractThumbnailFromVideo/extract_thumbnail_from_video.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "2504b06d5b2fc9f6629dc3d66f8c2e2287ea56158888f4484287d689d1ee7d5d",
-   "lines": 48,
-   "first_line": "import cv2",
-   "imports": [
-    "cv2",
     "os"
    ],
-   "registered": "2026-10-31 06:45:47"
+   "registered": "2026-10-31 11:20:52"
   },
   {
-   "skill": "create_dir",
-   "source_file": "Google_Image_Downloader/create_dir.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "0827efb0fcc9bd4d6ca20f3c893f62a9e82e3570447d8932f9974c4bf1edc34c",
-   "lines": 66,
-   "first_line": "\"\"\"",
+   "skill": "3sum-closest",
+   "source_file": "Python/3sum-closest.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "0b70d84bdc55e8eb392ece7376662a099d7db90dbaf1562dab82251681c585a2",
+   "lines": 29,
+   "first_line": "# Time:  O(n^2)",
    "imports": [],
-   "registered": "2026-10-31 06:45:47"
+   "registered": "2026-10-31 11:20:53"
   },
   {
-   "skill": "main",
-   "source_file": "HTML_to_PDF/main.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "0842518fd7411f6dfe3942e652afc95d49f686a4d93762c5ada41010a245656b",
-   "lines": 37,
-   "first_line": "import pdfkit",
-   "imports": [
-    "os",
-    "pdfkit"
-   ],
-   "registered": "2026-10-31 06:45:48"
-  },
-  {
-   "skill": "hand_motion_recognizer",
-   "source_file": "Hand-Motion-Detection/hand_motion_recognizer.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "9db88a28e00df0c38eeeb89b2ab2ee757b685e86105fd18ff9a9ebb5bd198dd9",
-   "lines": 55,
-   "first_line": "import mediapipe as mp",
-   "imports": [
-    "cv2",
-    "mediapipe"
-   ],
-   "registered": "2026-10-31 06:45:49"
-  },
-  {
-   "skill": "app",
-   "source_file": "Image-watermarker/app.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "057954c0acc191c28e429cd1abb283fd455ebfa4079a13b9d55821eecb1fd1be",
-   "lines": 332,
-   "first_line": "import customtkinter as ctk",
-   "imports": [
-    "customtkinter",
-    "pyglet"
-   ],
-   "registered": "2026-10-31 06:45:49"
-  },
-  {
-   "skill": "watermark",
-   "source_file": "Image-watermarker/watermark.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "17e16f9062490a2f45f8317f1772927a86988f0e58517be0bb182d229eda731b",
-   "lines": 45,
-   "first_line": "from PIL import ImageDraw, ImageFont",
-   "imports": [],
-   "registered": "2026-10-31 06:45:50"
-  },
-  {
-   "skill": "ai",
-   "source_file": "JARVIS/ai.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "5a35cc4d0c5861a669f112b463d9fe2e6edba21ada8f590964089a1d522a4516",
-   "lines": 64,
-   "first_line": "from openai import OpenAI, OpenAIError",
-   "imports": [],
-   "registered": "2026-10-31 06:45:52"
-  },
-  {
-   "skill": "apps",
-   "source_file": "JARVIS/apps.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "f49aa2dc5584cd1768e548e59a84c54870e5fabbf4e4a2ea56f190963ace9289",
-   "lines": 105,
-   "first_line": "import json",
-   "imports": [
-    "json",
-    "os",
-    "re"
-   ],
-   "registered": "2026-10-31 06:45:53"
-  },
-  {
-   "skill": "config",
-   "source_file": "JARVIS/config.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "7f71c20cc3f6dfd84aa4426b869a9315186a7cf1a7ae60f0245281ac74cbb165",
-   "lines": 41,
-   "first_line": "from pathlib import Path",
-   "imports": [],
-   "registered": "2026-10-31 06:45:54"
-  },
-  {
-   "skill": "jarvis",
-   "source_file": "JARVIS/jarvis.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "dbcf44dae6c100ac4ac433a0cb8444ab7fa46d2333c7782af47c004e376cd8b8",
+   "skill": "form",
+   "source_file": "cognitive/src/main/python/synapse/ml/cognitive/form.py",
+   "source_repo": "microsoft/SynapseML",
+   "license": "check repo",
+   "sha256": "cd8ec690e020339d5a7d02532e80653d0ac33af3f0e85fec40e993766cdb3dbe",
    "lines": 8,
-   "first_line": "import sys",
+   "first_line": "import warnings",
    "imports": [
+    "warnings"
+   ],
+   "registered": "2026-10-31 11:20:53"
+  },
+  {
+   "skill": "nnet_rnn_text_generation",
+   "source_file": "examples/nnet_rnn_text_generation.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "1576f843ef292cdf45ea8368be4dfa9e03f910d4de3014d8e97989b3412e30a6",
+   "lines": 82,
+   "first_line": "from __future__ import print_function",
+   "imports": [
+    "logging",
+    "numpy",
+    "random",
     "sys"
    ],
-   "registered": "2026-10-31 06:45:54"
+   "registered": "2026-10-31 11:20:53"
   },
   {
-   "skill": "memory",
-   "source_file": "JARVIS/memory.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "31263c06a92be0603094912e1eb016c56a41cbb2877a84f47d2abbd73cda779f",
-   "lines": 47,
-   "first_line": "import json",
+   "skill": "xy_vacuum_environment",
+   "source_file": "gui/xy_vacuum_environment.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "cb936c9628ad6bf026c68aa613696cc27a4009f2f3dbe1159965c6eb0a997e50",
+   "lines": 191,
+   "first_line": "import os.path",
    "imports": [
-    "json"
+    "os"
    ],
-   "registered": "2026-10-31 06:45:55"
+   "registered": "2026-10-31 11:20:53"
   },
   {
-   "skill": "prompts",
-   "source_file": "JARVIS/prompts.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "42a2eab1b69401c1ea7af96c5893c08b67bc89676a70a4193e1a23afebb0bb58",
-   "lines": 28,
-   "first_line": "ASSISTANT_PROMPT = (",
+   "skill": "3sum-smaller",
+   "source_file": "Python/3sum-smaller.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "e93d8da8de7cb7046e3baaecd27ec51fe9255652e156ebbd0a818489e69f66e7",
+   "lines": 24,
+   "first_line": "# Time:  O(n^2)",
    "imports": [],
-   "registered": "2026-10-31 06:45:55"
+   "registered": "2026-10-31 11:20:53"
   },
   {
-   "skill": "safety",
-   "source_file": "JARVIS/safety.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "2b0d52493ec0f0c264f2dd47fd23076f3daf793711825d3ef8c061c9015fda67",
-   "lines": 50,
-   "first_line": "import re",
+   "skill": "geospatial",
+   "source_file": "cognitive/src/main/python/synapse/ml/cognitive/geospatial.py",
+   "source_repo": "microsoft/SynapseML",
+   "license": "check repo",
+   "sha256": "db46480706add51a3c220967eeaad8222b46d977a0b9d13d920bb63275476c35",
+   "lines": 8,
+   "first_line": "import warnings",
    "imports": [
-    "re"
+    "warnings"
    ],
-   "registered": "2026-10-31 06:45:56"
+   "registered": "2026-10-31 11:20:53"
   },
   {
-   "skill": "highest_set_bit",
-   "source_file": "bit_manipulation/highest_set_bit.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "b615134f1947ac37053dbfc92c7137d82b10cc60478cb0cc936bfa5b8f7aeef8",
-   "lines": 34,
-   "first_line": "def get_highest_set_bit_position(number: int) -> int:",
+   "skill": "3sum-with-multiplicity",
+   "source_file": "Python/3sum-with-multiplicity.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "2043260a98762bdd59535da62a01ba3b5d6748e340788f2fb9233bb3e886ace9",
+   "lines": 25,
+   "first_line": "# Time:  O(n^2), n is the number of disctinct A[i]",
    "imports": [
-    "doctest"
+    "collections",
+    "itertools"
    ],
-   "registered": "2026-10-31 06:46:44"
+   "registered": "2026-10-31 11:20:54"
   },
   {
-   "skill": "index_of_rightmost_set_bit",
-   "source_file": "bit_manipulation/index_of_rightmost_set_bit.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "6cce20f15744c258f04da06f2f53ecad06734c56d609ddf6d8ba4bfc3feebd45",
-   "lines": 51,
-   "first_line": "# Reference: https://www.geeksforgeeks.org/position-of-rightmost-set-bit/",
+   "skill": "langchain",
+   "source_file": "cognitive/src/main/python/synapse/ml/cognitive/langchain.py",
+   "source_repo": "microsoft/SynapseML",
+   "license": "check repo",
+   "sha256": "e2da0acccce257b5b27bd9d135dbfb8b01e65695bfc9f3b437b61f42a81e9349",
+   "lines": 8,
+   "first_line": "import warnings",
    "imports": [
-    "doctest"
+    "warnings"
    ],
-   "registered": "2026-10-31 06:46:45"
+   "registered": "2026-10-31 11:20:54"
   },
   {
-   "skill": "is_even",
-   "source_file": "bit_manipulation/is_even.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "1eae91e43f84ae11d17ff39e3a8863900cd419d388544bc3967acbf08ed533c2",
-   "lines": 75,
-   "first_line": "def is_even(number: int) -> bool:",
+   "skill": "bootstrap",
+   "source_file": "notebooks/bootstrap.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "4dfb894e3418a88d27ff96987d2e4dc37f4cf75fd35deec27aa61f73da14e36a",
+   "lines": 27,
+   "first_line": "# ---",
    "imports": [
-    "doctest"
+    "os"
    ],
-   "registered": "2026-10-31 06:46:45"
+   "registered": "2026-10-31 11:20:54"
   },
   {
-   "skill": "is_power_of_two",
-   "source_file": "bit_manipulation/is_power_of_two.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "7dd2b251fd0e652b4712a510c94a426475f773eae15d365b2a7869e94881a0fb",
-   "lines": 61,
-   "first_line": "\"\"\"",
+   "skill": "3sum",
+   "source_file": "Python/3sum.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "e0ea4335fe3e5fb782a5acb0edfb1c6f41611c87fb107c6dab2f10b54befeabc",
+   "lines": 59,
+   "first_line": "# Time:  O(n^2)",
+   "imports": [],
+   "registered": "2026-10-31 11:20:54"
+  },
+  {
+   "skill": "language",
+   "source_file": "cognitive/src/main/python/synapse/ml/cognitive/language.py",
+   "source_repo": "microsoft/SynapseML",
+   "license": "check repo",
+   "sha256": "bb8127e801c5373fb19b0d7f16e96a570a2d0b8be0fbcf165d98900ab7985e09",
+   "lines": 8,
+   "first_line": "import warnings",
    "imports": [
-    "doctest"
+    "warnings"
    ],
-   "registered": "2026-10-31 06:46:46"
+   "registered": "2026-10-31 11:20:54"
   },
   {
-   "skill": "largest_pow_of_two_le_num",
-   "source_file": "bit_manipulation/largest_pow_of_two_le_num.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "6776813e1a874b6abde673813ed842655c185b8645a6f186e16631add9869361",
-   "lines": 60,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:46:46"
-  },
-  {
-   "skill": "missing_number",
-   "source_file": "bit_manipulation/missing_number.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "c0c256efd45ef13ca1d8e7a34f49a10b753076253265378f429bea15da686394",
-   "lines": 40,
-   "first_line": "def find_missing_number(nums: list[int]) -> int:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:46:47"
-  },
-  {
-   "skill": "next_power_of_two",
-   "source_file": "bit_manipulation/next_power_of_two.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "47e30696468c2e4011be5a71453fb2a176e991d17d3660fe337c8f81f309e370",
-   "lines": 55,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:46:48"
-  },
-  {
-   "skill": "numbers_different_signs",
-   "source_file": "bit_manipulation/numbers_different_signs.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "5fac3cf4b3a1e8c54cd58f98091e2c5192ff8d9c0a53cb572e75defbd109c850",
-   "lines": 39,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:46:48"
-  },
-  {
-   "skill": "parity",
-   "source_file": "bit_manipulation/parity.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "29ba7613e71826c99527a29168891bee8941d76568573b9b629f58abeeedfa90",
+   "skill": "Introduction",
+   "source_file": "notebooks/chapter16-17/Introduction.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "22ea98f7b6e0dbb3760ae0d00f7351c14e9fc05f5c84799caeddc440677aa96c",
    "lines": 43,
-   "first_line": "\"\"\"",
+   "first_line": "# ---",
    "imports": [
-    "doctest"
+    "os"
    ],
-   "registered": "2026-10-31 06:46:49"
+   "registered": "2026-10-31 11:20:55"
   },
   {
-   "skill": "power_of_4",
-   "source_file": "bit_manipulation/power_of_4.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "1873f8705b4c65a57afd6a2dcabd9bfaa682c625bad4efa8c935c99b9fc21e68",
-   "lines": 67,
-   "first_line": "\"\"\"",
+   "skill": "openai",
+   "source_file": "cognitive/src/main/python/synapse/ml/cognitive/openai.py",
+   "source_repo": "microsoft/SynapseML",
+   "license": "check repo",
+   "sha256": "9ec3c5aa17ec7f256eee5917b6e0929f653963917c40afbe58d1267712203ace",
+   "lines": 8,
+   "first_line": "import warnings",
    "imports": [
-    "doctest"
+    "warnings"
    ],
-   "registered": "2026-10-31 06:46:49"
+   "registered": "2026-10-31 11:20:55"
   },
   {
-   "skill": "reverse_bits",
-   "source_file": "bit_manipulation/reverse_bits.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "5ba1856dce9249771dd5c3ffe1c1b51983cc8a1f755b5cbf018022a1216da7d2",
-   "lines": 86,
-   "first_line": "def get_reverse_bit_string(number: int) -> str:",
+   "skill": "4sum-ii",
+   "source_file": "Python/4sum-ii.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "16e53c15b08a4c4c9419f13900b76b58f1f54b27f5570caf63fa713a45fa65fb",
+   "lines": 18,
+   "first_line": "# Time:  O(n^2)",
    "imports": [
-    "doctest"
+    "collections"
    ],
-   "registered": "2026-10-31 06:46:57"
+   "registered": "2026-10-31 11:20:56"
   },
   {
-   "skill": "rotate_bits",
-   "source_file": "bit_manipulation/rotate_bits.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "4fbfe839074133cb182b996c6b7b7f99da715a8309363a1d84e011ef29683f12",
-   "lines": 70,
-   "first_line": "\"\"\"",
+   "skill": "search",
+   "source_file": "cognitive/src/main/python/synapse/ml/cognitive/search.py",
+   "source_repo": "microsoft/SynapseML",
+   "license": "check repo",
+   "sha256": "ddbadc809707afa8112738c166524e2324374797606ea21c0971e665bb74ab11",
+   "lines": 8,
+   "first_line": "import warnings",
    "imports": [
-    "doctest"
+    "warnings"
    ],
-   "registered": "2026-10-31 06:46:57"
+   "registered": "2026-10-31 11:20:56"
   },
   {
-   "skill": "single_bit_manipulation_operations",
-   "source_file": "bit_manipulation/single_bit_manipulation_operations.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "0638df3c8a7aeaf846b8e6c063b7b47a50c55871d0115c0639639d8a3e8d48d5",
-   "lines": 123,
-   "first_line": "#!/usr/bin/env python3",
+   "skill": "MDPs",
+   "source_file": "notebooks/chapter16-17/MDPs.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "f2a1fcd334cc53171c9d9a13b26a068de4892dff60abecfc480e8915e62f79a7",
+   "lines": 151,
+   "first_line": "# ---",
    "imports": [
-    "doctest"
+    "os"
    ],
-   "registered": "2026-10-31 06:46:58"
+   "registered": "2026-10-31 11:21:01"
   },
   {
-   "skill": "swap_all_odd_and_even_bits",
-   "source_file": "bit_manipulation/swap_all_odd_and_even_bits.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "190ea9e5aae81d769e1ed2207b9e42a457acbb9034c26e56321b87d0d94bfedd",
-   "lines": 58,
-   "first_line": "def show_bits(before: int, after: int) -> str:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:46:59"
-  },
-  {
-   "skill": "xor_swap_two_integers",
-   "source_file": "bit_manipulation/xor_swap_two_integers.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "6e9a51c09408885a34db356867cd53b7fad39d53d83f2b32a2f04e2048de61ed",
-   "lines": 40,
-   "first_line": "# Information on XOR swap: https://en.wikipedia.org/wiki/Bitwise_operation#XOR",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:46:59"
-  },
-  {
-   "skill": "diophantine_equation",
-   "source_file": "blockchain/diophantine_equation.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "15808c87168ecfa9c0a18f0485f721c978c9819eeefb68cff7a17d7d2ed65f42",
-   "lines": 167,
-   "first_line": "from __future__ import annotations",
-   "imports": [],
-   "registered": "2026-10-31 06:47:00"
-  },
-  {
-   "skill": "merkle_tree",
-   "source_file": "blockchain/merkle_tree.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "4746ba64e6811a7947e239f167c53e248b91a53cd9b04462df701058333af400",
-   "lines": 107,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest",
-    "hashlib"
-   ],
-   "registered": "2026-10-31 06:47:01"
-  },
-  {
-   "skill": "proof_of_stake",
-   "source_file": "blockchain/proof_of_stake.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "d54a82c0564b2d4ad243aa265ab4bfa07f96330cfee5390df75ab0df132f0761",
-   "lines": 40,
-   "first_line": "import random",
-   "imports": [
-    "random"
-   ],
-   "registered": "2026-10-31 06:47:01"
-  },
-  {
-   "skill": "proof_of_work",
-   "source_file": "blockchain/proof_of_work.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "aafeef3e5e0be6f7236985c2e7d04e9ed259483931eebde7422fb971dbae1ba6",
-   "lines": 189,
-   "first_line": "# Title: Proof of Work Algorithm for Blockchain",
-   "imports": [
-    "hashlib",
-    "time"
-   ],
-   "registered": "2026-10-31 06:47:02"
-  },
-  {
-   "skill": "simple_blockchain",
-   "source_file": "blockchain/simple_blockchain.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "4886432377a72ec5ed7e40b63e39994c8e96ae1a0f916f300932767b39d162b5",
-   "lines": 168,
-   "first_line": "\"\"\"",
-   "imports": [
-    "hashlib"
-   ],
-   "registered": "2026-10-31 06:47:03"
-  },
-  {
-   "skill": "simple_proof_of_work",
-   "source_file": "blockchain/simple_proof_of_work.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "20a3931e9302aa26187b6d521403425f07533efb8db77c0afbb14bad89e9c12c",
-   "lines": 62,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest",
-    "hashlib"
-   ],
-   "registered": "2026-10-31 06:47:09"
-  },
-  {
-   "skill": "and_gate",
-   "source_file": "boolean_algebra/and_gate.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "35df92fc365012dffa9cc5b802c021df90abe66f8f3844b82a85cce986ab5a02",
-   "lines": 95,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:10"
-  },
-  {
-   "skill": "imply_gate",
-   "source_file": "boolean_algebra/imply_gate.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "346153eb7ecbbe5c03fd352c9da2b6e4fc5d8721da82269a41cf41e43a3f5a6f",
-   "lines": 91,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:11"
-  },
-  {
-   "skill": "karnaugh_map_simplification",
-   "source_file": "boolean_algebra/karnaugh_map_simplification.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "9f39ae62c7a5a37dddb21986e6e1ab50b2aa0d2fdf31e1529e0755b716aef4d4",
-   "lines": 55,
-   "first_line": "\"\"\"",
-   "imports": [],
-   "registered": "2026-10-31 06:47:12"
-  },
-  {
-   "skill": "multiplexer",
-   "source_file": "boolean_algebra/multiplexer.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "7279542f216587c8f90597c21c189aaa5360bbb5e160284dec1d5365cfb3c276",
-   "lines": 42,
-   "first_line": "def mux(input0: int, input1: int, select: int) -> int:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:12"
-  },
-  {
-   "skill": "nand_gate",
-   "source_file": "boolean_algebra/nand_gate.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "02f924c38b7933c4ceb42d32872d8ee87bde3bc2c252bc69329c8d69f1dcd1f8",
-   "lines": 36,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:13"
-  },
-  {
-   "skill": "nimply_gate",
-   "source_file": "boolean_algebra/nimply_gate.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "4c696a219c4e415fcf14bc078b95e1115368c67f84b7ffce128509c6576e4c16",
+   "skill": "pca",
+   "source_file": "examples/pca.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "06372f346af4bfad337792375fe5826cf9f392c09220a854d4408da4af04f02d",
    "lines": 39,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:13"
-  },
-  {
-   "skill": "nor_gate",
-   "source_file": "boolean_algebra/nor_gate.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "aded137880a75729ab2a96b199431a7536415a8022feef262035a32bed6ab5a6",
-   "lines": 68,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:14"
-  },
-  {
-   "skill": "not_gate",
-   "source_file": "boolean_algebra/not_gate.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "15b05f5446dea6e7b91a6b62f4c490233c429a6d164c388abf245b41d92c5d9d",
-   "lines": 30,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:15"
-  },
-  {
-   "skill": "or_gate",
-   "source_file": "boolean_algebra/or_gate.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "24141b4e2becc0d3872aef6bfe6c3e36dbf697eaa88e4d0a63bf05871eea1783",
-   "lines": 35,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:15"
-  },
-  {
-   "skill": "xnor_gate",
-   "source_file": "boolean_algebra/xnor_gate.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "b54ca2b0377bc48473c97fa05234791e70aa51054fe328da324a15616d71f5c2",
-   "lines": 37,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:22"
-  },
-  {
-   "skill": "xor_gate",
-   "source_file": "boolean_algebra/xor_gate.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "94c4f8e6ba73b07897423bc9a259bab5cbe89d8ce73de7a312a03c8ccf08afef",
-   "lines": 37,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:22"
-  },
-  {
-   "skill": "elementary_cellular_automaton",
-   "source_file": "cellular_automata/elementary_cellular_automaton.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "5acf84b5c6ba09d0f328ab84eef7409d21b19eca042b13a45c69edcb643db409",
-   "lines": 74,
-   "first_line": "\"\"\"",
+   "first_line": "try:",
    "imports": [],
-   "registered": "2026-10-31 06:47:23"
+   "registered": "2026-10-31 11:21:01"
   },
   {
-   "skill": "langtons_ant",
-   "source_file": "cellular_automata/langtons_ant.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "33bdb6042a06458e1c73363ec5f374ec993c4b0fd6d8c317869bbe836e781e89",
-   "lines": 106,
-   "first_line": "\"\"\"",
+   "skill": "Datasets",
+   "source_file": "notebooks/chapter18/Datasets.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "8b97f7b99977be811380ac487317281f943206ddfcf47115e2d09cec4958f5d9",
+   "lines": 230,
+   "first_line": "# ---",
    "imports": [
-    "doctest"
+    "os"
    ],
-   "registered": "2026-10-31 06:47:24"
-  },
-  {
-   "skill": "nagel_schrekenberg",
-   "source_file": "cellular_automata/nagel_schrekenberg.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "d0da2677866418b014776c40ae2514e38eb3afa796ef95277b28a107247673ee",
-   "lines": 140,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:25"
-  },
-  {
-   "skill": "atbash",
-   "source_file": "ciphers/atbash.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "515dd579c93adc1379f07a51465c50a0e4a54874c01fc5f5803a23c9fb55c196",
-   "lines": 54,
-   "first_line": "\"\"\"https://en.wikipedia.org/wiki/Atbash\"\"\"",
-   "imports": [
-    "string"
-   ],
-   "registered": "2026-10-31 06:47:26"
-  },
-  {
-   "skill": "baconian_cipher",
-   "source_file": "ciphers/baconian_cipher.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "d7ee175f277ded014d238f2ffc8986e64f0817145557802048f2827a01ece9e8",
-   "lines": 89,
-   "first_line": "\"\"\"",
-   "imports": [],
-   "registered": "2026-10-31 06:47:27"
-  },
-  {
-   "skill": "base16",
-   "source_file": "ciphers/base16.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "1bfc4f0b2e9215597646482e96331032b93744c0a9e520a2ce574cdaf69f2c1d",
-   "lines": 66,
-   "first_line": "def base16_encode(data: bytes) -> str:",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:27"
-  },
-  {
-   "skill": "base32",
-   "source_file": "ciphers/base32.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "f3bffb2edc15d663c236c23b5a970aa70f41140b01fd317385899dc7806a8fde",
-   "lines": 46,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:28"
-  },
-  {
-   "skill": "base58",
-   "source_file": "ciphers/base58.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "58a68aa6e646e276ae8215846b7410be3a7602eca9f89b332451eb12274960bf",
-   "lines": 142,
-   "first_line": "B64_CHARSET = \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:47:29"
+   "registered": "2026-10-31 11:21:01"
   },
   {
    "skill": "speech",
-   "source_file": "JARVIS/speech.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "2253704e1ae85557b9790ba6e3b898f7a4ccb3b1d91c5b800ac6d69c9ade55ba",
-   "lines": 136,
-   "first_line": "import importlib",
+   "source_file": "cognitive/src/main/python/synapse/ml/cognitive/speech.py",
+   "source_repo": "microsoft/SynapseML",
+   "license": "check repo",
+   "sha256": "b37b3d2055ebe325d613fc48e9aa670899e18218f20949341427fdbc71401d2a",
+   "lines": 8,
+   "first_line": "import warnings",
    "imports": [
-    "importlib",
-    "os",
-    "pyttsx3",
-    "speech_recognition",
-    "sys",
-    "tempfile"
+    "warnings"
    ],
-   "registered": "2026-10-31 06:47:38"
+   "registered": "2026-10-31 11:21:02"
   },
   {
-   "skill": "state",
-   "source_file": "JARVIS/state.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "062729847e72b53a2fa0b818e3151f8ba0caade81fb21e8323a9ffd2aa5393b1",
-   "lines": 17,
-   "first_line": "DEVELOPER_MODE = False",
-   "imports": [],
-   "registered": "2026-10-31 06:47:39"
-  },
-  {
-   "skill": "text_utils",
-   "source_file": "JARVIS/text_utils.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "ff6804679c11104864002f0a992e2a35f1b998662ccef58311579ba41693e879",
-   "lines": 24,
-   "first_line": "import re",
-   "imports": [
-    "re"
-   ],
-   "registered": "2026-10-31 06:47:39"
-  },
-  {
-   "skill": "key_binding",
-   "source_file": "Key_Binding/key_binding.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "ca26323095031c2c145a4946058c233277ce7735f15c26ea0b68ac03e96a4738",
-   "lines": 12,
-   "first_line": "from quo.keys import bind",
-   "imports": [],
-   "registered": "2026-10-31 06:47:40"
-  },
-  {
-   "skill": "neural_architecture_search",
-   "source_file": "ML/examples/neural_architecture_search.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "1c429fb79ec291f6d186b742be2678308d4fb8397bf9451aeaa903fe589baca2",
-   "lines": 60,
-   "first_line": "import sys",
-   "imports": [
-    "sys",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:47:41"
-  },
-  {
-   "skill": "train_cifar10",
-   "source_file": "ML/examples/train_cifar10.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "17e5d465ab47abfbdb9f9f8aa08dcc3a727afff5c234846e0a62be930f64a4a0",
-   "lines": 65,
-   "first_line": "import sys",
-   "imports": [
-    "os",
-    "sys",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:47:41"
-  },
-  {
-   "skill": "train_custom",
-   "source_file": "ML/examples/train_custom.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "f6c8f9dcd93e0ef83898a5c3b382325456df19f48f66be52d91f6705297146f0",
-   "lines": 47,
-   "first_line": "import sys",
-   "imports": [
-    "sys",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:47:42"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "ML/src/python/neuralforge/__init__.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "8084c6dc8e33ff488149749e883b23409a930e367fe2764730b9ff86e8b77939",
-   "lines": 10,
-   "first_line": "from . import nn",
-   "imports": [],
-   "registered": "2026-10-31 06:47:43"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "ML/src/python/neuralforge/cli/__init__.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "49c3854162e88b7fdd3d4037c8185a7910333f0f17ffd168146a22b36e6c273a",
-   "lines": 6,
-   "first_line": "from . import train",
-   "imports": [],
-   "registered": "2026-10-31 06:47:43"
-  },
-  {
-   "skill": "nas",
-   "source_file": "ML/src/python/neuralforge/cli/nas.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "b12cc54b8aad208a14a1e22d0d31b4bcceae1e49615fb5210e43b0e79e850382",
-   "lines": 70,
-   "first_line": "import argparse",
-   "imports": [
-    "argparse",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:47:44"
-  },
-  {
-   "skill": "train",
-   "source_file": "ML/src/python/neuralforge/cli/train.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "af2349e1483d72eb7211421513a9f0bc7c84def445ca0af2703ec21e0f50f322",
-   "lines": 208,
-   "first_line": "import argparse",
-   "imports": [
-    "argparse",
-    "numpy",
-    "os",
-    "random",
-    "sys",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:47:50"
-  },
-  {
-   "skill": "config",
-   "source_file": "ML/src/python/neuralforge/config.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "89629bc4e088aed92a2b906e06e3d2b5c46658907fa630a1ab99ffbdaec0b105",
-   "lines": 55,
-   "first_line": "import json",
-   "imports": [
-    "json",
-    "os"
-   ],
-   "registered": "2026-10-31 06:47:51"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "ML/src/python/neuralforge/data/__init__.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "03330bcd2856d3d530dc0bf03ecd7fb2f9893829afe8f008da808d5f03c52765",
-   "lines": 15,
-   "first_line": "from .dataset import *",
-   "imports": [],
-   "registered": "2026-10-31 06:47:51"
-  },
-  {
-   "skill": "augmentation",
-   "source_file": "ML/src/python/neuralforge/data/augmentation.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "96fe407f2d8acd9903390b44c003e1c5550955f8de2fbc11d3409b934f1ad78d",
-   "lines": 209,
-   "first_line": "import torch",
-   "imports": [
-    "numpy",
-    "random",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:47:52"
-  },
-  {
-   "skill": "dataset",
-   "source_file": "ML/src/python/neuralforge/data/dataset.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "c2b37699dbb12eb3e163ad0d9ed4a594c52be49861dbeead725e239e27a09a12",
-   "lines": 185,
-   "first_line": "import torch",
-   "imports": [
-    "numpy",
-    "os",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:47:53"
-  },
-  {
-   "skill": "transforms",
-   "source_file": "ML/src/python/neuralforge/data/transforms.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "905d168a45175b7beab7c2b2ce65aecd0432f497cc35198680debbe2659ed2b3",
-   "lines": 108,
-   "first_line": "from torchvision import transforms",
-   "imports": [
-    "torch"
-   ],
-   "registered": "2026-10-31 06:47:53"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "ML/src/python/neuralforge/models/__init__.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "ccbb6559094b5c2e110d25144718f18bfa54caae2bb9ef34ff82705ee46117f5",
-   "lines": 11,
-   "first_line": "from .resnet import ResNet18, ResNet34, ResNet50",
-   "imports": [],
-   "registered": "2026-10-31 06:47:54"
-  },
-  {
-   "skill": "efficientnet",
-   "source_file": "ML/src/python/neuralforge/models/efficientnet.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "9a41f57add4850fc2075525d194f92eb231a886ccb6b2d42f61376836c8c7fdf",
-   "lines": 43,
-   "first_line": "import torch.nn as nn",
-   "imports": [
-    "torch"
-   ],
-   "registered": "2026-10-31 06:47:55"
-  },
-  {
-   "skill": "resnet",
-   "source_file": "ML/src/python/neuralforge/models/resnet.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "8f13a390f896334b67d5396ad6b5b5117c1122f4e4d904e46ee132cfcc26b57f",
-   "lines": 15,
-   "first_line": "import torch.nn as nn",
-   "imports": [
-    "torch"
-   ],
-   "registered": "2026-10-31 06:47:55"
-  },
-  {
-   "skill": "vit",
-   "source_file": "ML/src/python/neuralforge/models/vit.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "bc96914b786a2578731f5a492da7eff3e8d46104336ddaf79616289a82601835",
-   "lines": 24,
-   "first_line": "import torch.nn as nn",
-   "imports": [
-    "torch"
-   ],
-   "registered": "2026-10-31 06:47:56"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "ML/src/python/neuralforge/nas/__init__.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "baa6ecf5b6e71ff40dcb55441921a5d6324815e35e0c859ad3914107430574ee",
-   "lines": 10,
-   "first_line": "from .search_space import *",
-   "imports": [],
-   "registered": "2026-10-31 06:48:02"
-  },
-  {
-   "skill": "evolution",
-   "source_file": "ML/src/python/neuralforge/nas/evolution.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "7e39f0e9d82902cd9c985022e382bd26e7df9670044138b6183b91b99e6061ca",
-   "lines": 129,
-   "first_line": "import torch",
-   "imports": [
-    "numpy",
-    "random",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:48:03"
-  },
-  {
-   "skill": "search_space",
-   "source_file": "ML/src/python/neuralforge/nas/search_space.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "2fda935c3b91f953cf9890c9d9a98d0274391f693fa2a4f138ef94b0be19b571",
-   "lines": 181,
-   "first_line": "import torch",
-   "imports": [
-    "numpy",
-    "random",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:48:04"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "ML/src/python/neuralforge/nn/__init__.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "092e85184b7aceaac9362bb4d464bb80a420682925a3000409dada1333d84707",
-   "lines": 18,
-   "first_line": "from .modules import *",
-   "imports": [],
-   "registered": "2026-10-31 06:48:04"
-  },
-  {
-   "skill": "activations",
-   "source_file": "ML/src/python/neuralforge/nn/activations.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "5a360d06f0d7a8243d3ffe739f77e713c3f21d4a99bd214e79eab3ac37a83ce9",
-   "lines": 122,
-   "first_line": "import torch",
-   "imports": [
-    "torch"
-   ],
-   "registered": "2026-10-31 06:48:05"
-  },
-  {
-   "skill": "attention",
-   "source_file": "ML/src/python/neuralforge/nn/attention.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "9079955d4909fe48d52458385696462df514324d3146bfd16827f57e692174ab",
-   "lines": 207,
-   "first_line": "import torch",
-   "imports": [
-    "math",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:48:06"
-  },
-  {
-   "skill": "convolution",
-   "source_file": "ML/src/python/neuralforge/nn/convolution.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "76d5950d62dfe258ade2e825c955214d08360897d279d0249b8b5cc316fc81b9",
-   "lines": 239,
-   "first_line": "import torch",
-   "imports": [
-    "torch"
-   ],
-   "registered": "2026-10-31 06:48:06"
-  },
-  {
-   "skill": "layers",
-   "source_file": "ML/src/python/neuralforge/nn/layers.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "f8dd7aebb36ee59159d59e611c4ac1ea0442fb60b10cfd5c67e88e4426a0469c",
-   "lines": 174,
-   "first_line": "import torch",
-   "imports": [
-    "torch"
-   ],
-   "registered": "2026-10-31 06:48:07"
-  },
-  {
-   "skill": "modules",
-   "source_file": "ML/src/python/neuralforge/nn/modules.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "64dd4b6dfe29dc4a83057f7bc1e95e37e6034b34ab1a786687a2ab7f5c0ec1cd",
-   "lines": 188,
-   "first_line": "import torch",
-   "imports": [
-    "math",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:48:08"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "ML/src/python/neuralforge/optim/__init__.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "be525502534ca7345210d5b31c535478c87693dea15dd754709b9418f09b6ada",
-   "lines": 13,
-   "first_line": "from .optimizers import *",
-   "imports": [],
-   "registered": "2026-10-31 06:48:08"
-  },
-  {
-   "skill": "optimizers",
-   "source_file": "ML/src/python/neuralforge/optim/optimizers.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "4cc6b63a0698c5f02e42e9146880509086978e0ff5ffb07385a9a04b3b4f6897",
-   "lines": 266,
-   "first_line": "import torch",
-   "imports": [
-    "math",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:48:16"
-  },
-  {
-   "skill": "schedulers",
-   "source_file": "ML/src/python/neuralforge/optim/schedulers.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "661e4fee3f0f2b02c562d7dcc62cbecdf7847aa49fe0c55190449f7c58e1dc1b",
-   "lines": 142,
-   "first_line": "import torch",
-   "imports": [
-    "math",
-    "torch"
-   ],
-   "registered": "2026-10-31 06:48:17"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "ML/src/python/neuralforge/utils/__init__.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "c493477fe1482e79b7b79196a217871d0c48150fe8265ebc52feae194f65ab19",
-   "lines": 10,
-   "first_line": "from .logger import *",
-   "imports": [],
-   "registered": "2026-10-31 06:48:17"
-  },
-  {
-   "skill": "logger",
-   "source_file": "ML/src/python/neuralforge/utils/logger.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "c62c6f605c1184500aeeaf371cbc1ecee3c8ebbdc557bb75a54ad4fad43b0259",
-   "lines": 115,
-   "first_line": "import os",
+   "skill": "random_forest",
+   "source_file": "examples/random_forest.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "5e9dad45939a162df1489d880d585d594f945c951f5fa9116df305cec0a2df89",
+   "lines": 71,
+   "first_line": "import logging",
    "imports": [
     "logging",
-    "os",
+    "numpy"
+   ],
+   "registered": "2026-10-31 11:21:02"
+  },
+  {
+   "skill": "text",
+   "source_file": "cognitive/src/main/python/synapse/ml/cognitive/text.py",
+   "source_repo": "microsoft/SynapseML",
+   "license": "check repo",
+   "sha256": "88b3e596d9d78f40e1842f534cde78a6d0584853e5ecd7a7a42cee940426b68a",
+   "lines": 8,
+   "first_line": "import warnings",
+   "imports": [
+    "warnings"
+   ],
+   "registered": "2026-10-31 11:21:03"
+  },
+  {
+   "skill": "4sum",
+   "source_file": "Python/4sum.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "5aa4ecc95a09d870e8a774c26d420ad4ea5cfdd4722bcbce50d2519f12c14f99",
+   "lines": 100,
+   "first_line": "# Time:  O(n^3)",
+   "imports": [
+    "collections"
+   ],
+   "registered": "2026-10-31 11:21:03"
+  },
+  {
+   "skill": "a-number-after-a-double-reversal",
+   "source_file": "Python/a-number-after-a-double-reversal.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "3e4e272b2844125ab09d0420a9085f60380ffa68a064d0e8628f83dcd12b915f",
+   "lines": 10,
+   "first_line": "# Time:  O(1)",
+   "imports": [],
+   "registered": "2026-10-31 11:21:03"
+  },
+  {
+   "skill": "minimum_spanning_tree_kruskal",
+   "source_file": "graphs/minimum_spanning_tree_kruskal.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:51"
+  },
+  {
+   "skill": "middle_element_of_linked_list",
+   "source_file": "data_structures/linked_list/middle_element_of_linked_list.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:51"
+  },
+  {
+   "skill": "digital_differential_analyzer_line",
+   "source_file": "graphics/digital_differential_analyzer_line.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:51"
+  },
+  {
+   "skill": "minimum_spanning_tree_kruskal",
+   "source_file": "graphs/minimum_spanning_tree_kruskal.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:52"
+  },
+  {
+   "skill": "middle_element_of_linked_list",
+   "source_file": "data_structures/linked_list/middle_element_of_linked_list.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:52"
+  },
+  {
+   "skill": "digital_differential_analyzer_line",
+   "source_file": "graphics/digital_differential_analyzer_line.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:52"
+  },
+  {
+   "skill": "jump_search",
+   "source_file": "searches/jump_search.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:52"
+  },
+  {
+   "skill": "pig_latin",
+   "source_file": "strings/pig_latin.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:52"
+  },
+  {
+   "skill": "jump_search",
+   "source_file": "searches/jump_search.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:53"
+  },
+  {
+   "skill": "current_weather",
+   "source_file": "web_programming/current_weather.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: http.client",
+   "imports": [],
+   "registered": "2026-10-31 11:28:53"
+  },
+  {
+   "skill": "pig_latin",
+   "source_file": "strings/pig_latin.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:53"
+  },
+  {
+   "skill": "current_weather",
+   "source_file": "web_programming/current_weather.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:54"
+  },
+  {
+   "skill": "sorted_linked_list",
+   "source_file": "data_structures/linked_list/sorted_linked_list.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:54"
+  },
+  {
+   "skill": "sorted_linked_list",
+   "source_file": "data_structures/linked_list/sorted_linked_list.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:54"
+  },
+  {
+   "skill": "burrows_wheeler",
+   "source_file": "data_compression/burrows_wheeler.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:54"
+  },
+  {
+   "skill": "hamming_code",
+   "source_file": "hashes/hamming_code.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:54"
+  },
+  {
+   "skill": "burrows_wheeler",
+   "source_file": "data_compression/burrows_wheeler.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:55"
+  },
+  {
+   "skill": "hamming_code",
+   "source_file": "hashes/hamming_code.py",
+   "source_repo": "TheAlgorithms/Python",
+   "license": "MIT (TheAlgorithms/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:55"
+  },
+  {
+   "skill": "dictator",
+   "source_file": "VoiceAssistant/Project_Basic_struct/dictator.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:56"
+  },
+  {
+   "skill": "evaluator",
+   "source_file": "ML/src/python/neuralforge/nas/evaluator.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: eval\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:56"
+  },
+  {
+   "skill": "notepad_support",
+   "source_file": "notepad/notepad_support.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: sqlite3",
+   "imports": [],
+   "registered": "2026-10-31 11:28:56"
+  },
+  {
+   "skill": "rock_paper_scissors",
+   "source_file": "BrowserHistory/rock_paper_scissors.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:56"
+  },
+  {
+   "skill": "server",
+   "source_file": "Python_chatting_application/server.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: socket",
+   "imports": [],
+   "registered": "2026-10-31 11:28:56"
+  },
+  {
+   "skill": "dictator",
+   "source_file": "VoiceAssistant/Project_Basic_struct/dictator.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:57"
+  },
+  {
+   "skill": "notepad_support",
+   "source_file": "notepad/notepad_support.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:57"
+  },
+  {
+   "skill": "evaluator",
+   "source_file": "ML/src/python/neuralforge/nas/evaluator.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:57"
+  },
+  {
+   "skill": "rock_paper_scissors",
+   "source_file": "BrowserHistory/rock_paper_scissors.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:57"
+  },
+  {
+   "skill": "server",
+   "source_file": "Python_chatting_application/server.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:57"
+  },
+  {
+   "skill": "validation_page",
+   "source_file": "cli_master/validation_page.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:57"
+  },
+  {
+   "skill": "expense_tracker",
+   "source_file": "Personal-Expense-Tracker/expense_tracker.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:57"
+  },
+  {
+   "skill": "img_downloader",
+   "source_file": "ImageDownloader/img_downloader.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: requests",
+   "imports": [],
+   "registered": "2026-10-31 11:28:57"
+  },
+  {
+   "skill": "variation1",
+   "source_file": "CountMillionCharacters-Variations/variation1.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "risky pattern: \\binput\\(",
+   "imports": [],
+   "registered": "2026-10-31 11:28:57"
+  },
+  {
+   "skill": "JARVIS_2.0",
+   "source_file": "JARVIS/JARVIS_2.0.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: smtplib",
+   "imports": [],
+   "registered": "2026-10-31 11:28:57"
+  },
+  {
+   "skill": "JARVIS_2.0",
+   "source_file": "JARVIS/JARVIS_2.0.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:57"
+  },
+  {
+   "skill": "validation_page",
+   "source_file": "cli_master/validation_page.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:58"
+  },
+  {
+   "skill": "expense_tracker",
+   "source_file": "Personal-Expense-Tracker/expense_tracker.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:58"
+  },
+  {
+   "skill": "img_downloader",
+   "source_file": "ImageDownloader/img_downloader.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:58"
+  },
+  {
+   "skill": "variation1",
+   "source_file": "CountMillionCharacters-Variations/variation1.py",
+   "source_repo": "geekcomputers/Python",
+   "license": "MIT (geekcomputers/Python)",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:28:58"
+  },
+  {
+   "skill": "strip_url_params",
+   "source_file": "algorithms/string/strip_url_params.py",
+   "source_repo": "keon/algorithms",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: urllib.request",
+   "imports": [],
+   "registered": "2026-10-31 11:29:03"
+  },
+  {
+   "skill": "strip_url_params",
+   "source_file": "algorithms/string/strip_url_params.py",
+   "source_repo": "keon/algorithms",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:04"
+  },
+  {
+   "skill": "lsblk",
+   "source_file": "jc/parsers/lsblk.py",
+   "source_repo": "kellyjonbrazil/jc",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "too large",
+   "imports": [],
+   "registered": "2026-10-31 11:29:12"
+  },
+  {
+   "skill": "_iri",
+   "source_file": "jc/parsers/asn1crypto/_iri.py",
+   "source_repo": "kellyjonbrazil/jc",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: urllib.request",
+   "imports": [],
+   "registered": "2026-10-31 11:29:13"
+  },
+  {
+   "skill": "_iri",
+   "source_file": "jc/parsers/asn1crypto/_iri.py",
+   "source_repo": "kellyjonbrazil/jc",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:14"
+  },
+  {
+   "skill": "lsblk",
+   "source_file": "jc/parsers/lsblk.py",
+   "source_repo": "kellyjonbrazil/jc",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:14"
+  },
+  {
+   "skill": "pandoc",
+   "source_file": "src/jupytext/pandoc.py",
+   "source_repo": "jupytext/jupytext",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: subprocess",
+   "imports": [],
+   "registered": "2026-10-31 11:29:17"
+  },
+  {
+   "skill": "pandoc",
+   "source_file": "src/jupytext/pandoc.py",
+   "source_repo": "jupytext/jupytext",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:18"
+  },
+  {
+   "skill": "marimo",
+   "source_file": "src/jupytext/marimo.py",
+   "source_repo": "jupytext/jupytext",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: subprocess",
+   "imports": [],
+   "registered": "2026-10-31 11:29:18"
+  },
+  {
+   "skill": "quarto",
+   "source_file": "src/jupytext/quarto.py",
+   "source_repo": "jupytext/jupytext",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: subprocess",
+   "imports": [],
+   "registered": "2026-10-31 11:29:18"
+  },
+  {
+   "skill": "marimo",
+   "source_file": "src/jupytext/marimo.py",
+   "source_repo": "jupytext/jupytext",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:19"
+  },
+  {
+   "skill": "quarto",
+   "source_file": "src/jupytext/quarto.py",
+   "source_repo": "jupytext/jupytext",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:19"
+  },
+  {
+   "skill": "ssh_connector",
+   "source_file": "actions/ssh_connector.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: socket",
+   "imports": [],
+   "registered": "2026-10-31 11:29:20"
+  },
+  {
+   "skill": "ssh_connector",
+   "source_file": "actions/ssh_connector.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:20"
+  },
+  {
+   "skill": "epdconfig",
+   "source_file": "resources/waveshare_epd/epdconfig.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: ctypes",
+   "imports": [],
+   "registered": "2026-10-31 11:29:20"
+  },
+  {
+   "skill": "steal_files_ftp",
+   "source_file": "actions/steal_files_ftp.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: ftplib",
+   "imports": [],
+   "registered": "2026-10-31 11:29:20"
+  },
+  {
+   "skill": "telnet_connector",
+   "source_file": "actions/telnet_connector.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: telnetlib",
+   "imports": [],
+   "registered": "2026-10-31 11:29:20"
+  },
+  {
+   "skill": "steal_files_rdp",
+   "source_file": "actions/steal_files_rdp.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: subprocess",
+   "imports": [],
+   "registered": "2026-10-31 11:29:20"
+  },
+  {
+   "skill": "ftp_connector",
+   "source_file": "actions/ftp_connector.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: ftplib",
+   "imports": [],
+   "registered": "2026-10-31 11:29:20"
+  },
+  {
+   "skill": "smb_connector",
+   "source_file": "actions/smb_connector.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: subprocess",
+   "imports": [],
+   "registered": "2026-10-31 11:29:20"
+  },
+  {
+   "skill": "steal_files_ssh",
+   "source_file": "actions/steal_files_ssh.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: paramiko",
+   "imports": [],
+   "registered": "2026-10-31 11:29:20"
+  },
+  {
+   "skill": "nmap_vuln_scanner",
+   "source_file": "actions/nmap_vuln_scanner.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: subprocess",
+   "imports": [],
+   "registered": "2026-10-31 11:29:20"
+  },
+  {
+   "skill": "rdp_connector",
+   "source_file": "actions/rdp_connector.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: subprocess",
+   "imports": [],
+   "registered": "2026-10-31 11:29:20"
+  },
+  {
+   "skill": "steal_files_telnet",
+   "source_file": "actions/steal_files_telnet.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: telnetlib",
+   "imports": [],
+   "registered": "2026-10-31 11:29:20"
+  },
+  {
+   "skill": "epdconfig",
+   "source_file": "resources/waveshare_epd/epdconfig.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:21"
+  },
+  {
+   "skill": "steal_files_ftp",
+   "source_file": "actions/steal_files_ftp.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:21"
+  },
+  {
+   "skill": "telnet_connector",
+   "source_file": "actions/telnet_connector.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:21"
+  },
+  {
+   "skill": "steal_files_rdp",
+   "source_file": "actions/steal_files_rdp.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:21"
+  },
+  {
+   "skill": "ftp_connector",
+   "source_file": "actions/ftp_connector.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:21"
+  },
+  {
+   "skill": "smb_connector",
+   "source_file": "actions/smb_connector.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:21"
+  },
+  {
+   "skill": "steal_files_ssh",
+   "source_file": "actions/steal_files_ssh.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:21"
+  },
+  {
+   "skill": "nmap_vuln_scanner",
+   "source_file": "actions/nmap_vuln_scanner.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:21"
+  },
+  {
+   "skill": "rdp_connector",
+   "source_file": "actions/rdp_connector.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:21"
+  },
+  {
+   "skill": "steal_files_telnet",
+   "source_file": "actions/steal_files_telnet.py",
+   "source_repo": "infinition/Bjorn",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:21"
+  },
+  {
+   "skill": "geninterop",
+   "source_file": "tools/geninterop/geninterop.py",
+   "source_repo": "pythonnet/pythonnet",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: subprocess",
+   "imports": [],
+   "registered": "2026-10-31 11:29:21"
+  },
+  {
+   "skill": "geninterop",
+   "source_file": "tools/geninterop/geninterop.py",
+   "source_repo": "pythonnet/pythonnet",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:23"
+  },
+  {
+   "skill": "job",
+   "source_file": "arm/models/job.py",
+   "source_repo": "automatic-ripping-machine/automatic-ripping-machine",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: subprocess",
+   "imports": [],
+   "registered": "2026-10-31 11:29:23"
+  },
+  {
+   "skill": "job",
+   "source_file": "arm/models/job.py",
+   "source_repo": "automatic-ripping-machine/automatic-ripping-machine",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:24"
+  },
+  {
+   "skill": "ARMInfo",
+   "source_file": "arm/ripper/ARMInfo.py",
+   "source_repo": "automatic-ripping-machine/automatic-ripping-machine",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: sqlite3",
+   "imports": [],
+   "registered": "2026-10-31 11:29:26"
+  },
+  {
+   "skill": "ARMInfo",
+   "source_file": "arm/ripper/ARMInfo.py",
+   "source_repo": "automatic-ripping-machine/automatic-ripping-machine",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:27"
+  },
+  {
+   "skill": "ProcessHandler",
+   "source_file": "arm/ripper/ProcessHandler.py",
+   "source_repo": "automatic-ripping-machine/automatic-ripping-machine",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: subprocess",
+   "imports": [],
+   "registered": "2026-10-31 11:29:27"
+  },
+  {
+   "skill": "system_info",
+   "source_file": "arm/models/system_info.py",
+   "source_repo": "automatic-ripping-machine/automatic-ripping-machine",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: subprocess",
+   "imports": [],
+   "registered": "2026-10-31 11:29:27"
+  },
+  {
+   "skill": "ProcessHandler",
+   "source_file": "arm/ripper/ProcessHandler.py",
+   "source_repo": "automatic-ripping-machine/automatic-ripping-machine",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:28"
+  },
+  {
+   "skill": "system_info",
+   "source_file": "arm/models/system_info.py",
+   "source_repo": "automatic-ripping-machine/automatic-ripping-machine",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:28"
+  },
+  {
+   "skill": "system_drives",
+   "source_file": "arm/models/system_drives.py",
+   "source_repo": "automatic-ripping-machine/automatic-ripping-machine",
+   "license": "vet-pending",
+   "sha256": "",
+   "lines": 0,
+   "first_line": "banned import: subprocess",
+   "imports": [],
+   "registered": "2026-10-31 11:29:28"
+  },
+  {
+   "skill": "system_drives",
+   "source_file": "arm/models/system_drives.py",
+   "source_repo": "automatic-ripping-machine/automatic-ripping-machine",
+   "license": "MIT/verify-repo",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": 0,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-10-31 11:29:29"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "algorithms/__init__.py",
+   "source_repo": "keon/algorithms",
+   "license": "check repo",
+   "sha256": "f2712e31cb6685cb88c4174856dff37ceb97f4aeba896c67b91d423ad79275c3",
+   "lines": 13,
+   "first_line": "\"\"\"Pythonic data structures and algorithms for education.",
+   "imports": [
+    "algorithms"
+   ],
+   "registered": "2026-10-31 12:17:34"
+  },
+  {
+   "skill": "estimators",
+   "source_file": "PolicyGradient/a3c/estimators.py",
+   "source_repo": "dennybritz/reinforcement-learning",
+   "license": "check repo",
+   "sha256": "17a05186408cc0e8c6f155f79933e86c4ead62cecb6a693f48bce1fa040916b6",
+   "lines": 171,
+   "first_line": "import numpy as np",
+   "imports": [
+    "numpy",
+    "tensorflow"
+   ],
+   "registered": "2026-10-31 12:17:34"
+  },
+  {
+   "skill": "create-nuget",
+   "source_file": ".ci/create-nuget.py",
+   "source_repo": "lightgbm-org/LightGBM",
+   "license": "check repo",
+   "sha256": "2ef928044f02135b5b5a810ee8cc3c6e3dbbe2902b27f43135c6f23502f4c458",
+   "lines": 85,
+   "first_line": "# coding: utf-8",
+   "imports": [
+    "datetime",
     "sys"
    ],
-   "registered": "2026-10-31 06:48:18"
+   "registered": "2026-10-31 12:17:34"
   },
   {
-   "skill": "metrics",
-   "source_file": "ML/src/python/neuralforge/utils/metrics.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "6a956222a3acba588796d75fd33aa793817f920f2c3e522e4a19e33b22f65d24",
-   "lines": 168,
-   "first_line": "import json",
+   "skill": "__init__",
+   "source_file": "homemade/anomaly_detection/__init__.py",
+   "source_repo": "trekhleb/homemade-machine-learning",
+   "license": "check repo",
+   "sha256": "9b8e0809bb18c6568e61210ffdc60e22b34683b31b690917ef2cfa2f41e4bd2f",
+   "lines": 3,
+   "first_line": "\"\"\"Anomaly Detection Module\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:35"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "algorithms/array/__init__.py",
+   "source_repo": "keon/algorithms",
+   "license": "check repo",
+   "sha256": "d39650943a271f820b4e1887fc5a0ffd6f15180ac8394cb53e9d4570aa4e1fa8",
+   "lines": 58,
+   "first_line": "from .delete_nth import delete_nth, delete_nth_naive",
+   "imports": [],
+   "registered": "2026-10-31 12:17:35"
+  },
+  {
+   "skill": "gaussian_anomaly_detection",
+   "source_file": "homemade/anomaly_detection/gaussian_anomaly_detection.py",
+   "source_repo": "trekhleb/homemade-machine-learning",
+   "license": "check repo",
+   "sha256": "5f2a2d646abd2bf07c8e7428ac1aef7ab4b3c60ed8ab6264f602578c2e946031",
+   "lines": 119,
+   "first_line": "\"\"\"Anomaly Detection Module\"\"\"",
    "imports": [
+    "math",
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:35"
+  },
+  {
+   "skill": "advanced_example",
+   "source_file": "examples/python-guide/advanced_example.py",
+   "source_repo": "lightgbm-org/LightGBM",
+   "license": "check repo",
+   "sha256": "4a0bf09d6949136c4a0bf0d8d8acc9ef60d706202da8f147dedbdf0850cb7294",
+   "lines": 220,
+   "first_line": "# coding: utf-8",
+   "imports": [
+    "copy",
     "json",
+    "lightgbm",
     "numpy",
+    "pandas",
+    "pickle"
+   ],
+   "registered": "2026-10-31 12:17:35"
+  },
+  {
+   "skill": "worker",
+   "source_file": "PolicyGradient/a3c/worker.py",
+   "source_repo": "dennybritz/reinforcement-learning",
+   "license": "check repo",
+   "sha256": "5a105ad86b31aa34d43da1d27eac76c73b30e8524fa15c556f1b735427202b2b",
+   "lines": 209,
+   "first_line": "import gym",
+   "imports": [
+    "collections",
+    "gym",
+    "itertools",
+    "numpy",
+    "os",
+    "sys",
+    "tensorflow"
+   ],
+   "registered": "2026-10-31 12:17:35"
+  },
+  {
+   "skill": "delete_nth",
+   "source_file": "algorithms/array/delete_nth.py",
+   "source_repo": "keon/algorithms",
+   "license": "check repo",
+   "sha256": "52c6e4c4444f0de5a3438d81897e5825f717b98113fcec7e0c87de534d0efdbe",
+   "lines": 66,
+   "first_line": "\"\"\"",
+   "imports": [
+    "collections"
+   ],
+   "registered": "2026-10-31 12:17:36"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "homemade/k_means/__init__.py",
+   "source_repo": "trekhleb/homemade-machine-learning",
+   "license": "check repo",
+   "sha256": "0b0de6ff8f8d99f162d1276095d483df41762fd70521d6c44c91d9d4ef451ec6",
+   "lines": 3,
+   "first_line": "\"\"\"KMeans Module\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:36"
+  },
+  {
+   "skill": "binary-classification",
+   "source_file": "examples/python-guide/dask/binary-classification.py",
+   "source_repo": "lightgbm-org/LightGBM",
+   "license": "check repo",
+   "sha256": "9ea3adbe45cebc8d3a0b20f36bb4cc88dd1071ac27e5178c12be548a4d39229a",
+   "lines": 30,
+   "first_line": "import dask.array as da",
+   "imports": [
+    "dask",
+    "lightgbm"
+   ],
+   "registered": "2026-10-31 12:17:36"
+  },
+  {
+   "skill": "helpers",
+   "source_file": "lib/atari/helpers.py",
+   "source_repo": "dennybritz/reinforcement-learning",
+   "license": "check repo",
+   "sha256": "5e721f4d66b190f2a0444e0994b6630247774a5629dd5ec45c3501668cce67ff",
+   "lines": 31,
+   "first_line": "import numpy as np",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:36"
+  },
+  {
+   "skill": "flatten",
+   "source_file": "algorithms/array/flatten.py",
+   "source_repo": "keon/algorithms",
+   "license": "check repo",
+   "sha256": "a47df81abb9cc1d8c06faf87d48cf67351979f9f74b080ee1e00678152caba58",
+   "lines": 61,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:36"
+  },
+  {
+   "skill": "k_means",
+   "source_file": "homemade/k_means/k_means.py",
+   "source_repo": "trekhleb/homemade-machine-learning",
+   "license": "check repo",
+   "sha256": "bae9909acdcdd3042e9d374685e77449fcacdb980e008fb775b22f6081f49ee2",
+   "lines": 125,
+   "first_line": "\"\"\"KMeans Module\"\"\"",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:36"
+  },
+  {
+   "skill": "multiclass-classification",
+   "source_file": "examples/python-guide/dask/multiclass-classification.py",
+   "source_repo": "lightgbm-org/LightGBM",
+   "license": "check repo",
+   "sha256": "5f003f4c5ee7140d229ebbed36e8f056462ea93c1beedbf34977e10ee4af2a5f",
+   "lines": 30,
+   "first_line": "import dask.array as da",
+   "imports": [
+    "dask",
+    "lightgbm"
+   ],
+   "registered": "2026-10-31 12:17:37"
+  },
+  {
+   "skill": "state_processor",
+   "source_file": "lib/atari/state_processor.py",
+   "source_repo": "dennybritz/reinforcement-learning",
+   "license": "check repo",
+   "sha256": "7915b9f645b9c23171222a31dbd97905251288a3752d9e11d6e62e98caa27d98",
+   "lines": 28,
+   "first_line": "import numpy as np",
+   "imports": [
+    "numpy",
+    "tensorflow"
+   ],
+   "registered": "2026-10-31 12:17:37"
+  },
+  {
+   "skill": "garage",
+   "source_file": "algorithms/array/garage.py",
+   "source_repo": "keon/algorithms",
+   "license": "check repo",
+   "sha256": "6506dcffe4494b1a4658869ef056ffd08b59e1b01837868761f5d1e0c205c287",
+   "lines": 54,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:37"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "homemade/linear_regression/__init__.py",
+   "source_repo": "trekhleb/homemade-machine-learning",
+   "license": "check repo",
+   "sha256": "a1b86e7b9fc5f17af5eac4a2d5616a392fbf7271bc55576bb6704525e31b3308",
+   "lines": 3,
+   "first_line": "\"\"\"Linear Regression Module\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:37"
+  },
+  {
+   "skill": "prediction",
+   "source_file": "examples/python-guide/dask/prediction.py",
+   "source_repo": "lightgbm-org/LightGBM",
+   "license": "check repo",
+   "sha256": "300ba8fd88b267b1f80600c094281599306daf519a3ce59614ead26bd5de315a",
+   "lines": 48,
+   "first_line": "import dask.array as da",
+   "imports": [
+    "dask",
+    "lightgbm"
+   ],
+   "registered": "2026-10-31 12:17:37"
+  },
+  {
+   "skill": "josephus",
+   "source_file": "algorithms/array/josephus.py",
+   "source_repo": "keon/algorithms",
+   "license": "check repo",
+   "sha256": "74422c3bb41a1bf6cf2b945139da1bb00d244e0349f0cadda1d13015b564ec66",
+   "lines": 40,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:38"
+  },
+  {
+   "skill": "blackjack",
+   "source_file": "lib/envs/blackjack.py",
+   "source_repo": "dennybritz/reinforcement-learning",
+   "license": "check repo",
+   "sha256": "f1a35d2db407d9034d3fe396622025fba467415b05bec4560735ee8c12ba93a3",
+   "lines": 122,
+   "first_line": "import gym",
+   "imports": [
+    "gym"
+   ],
+   "registered": "2026-10-31 12:17:38"
+  },
+  {
+   "skill": "linear_regression",
+   "source_file": "homemade/linear_regression/linear_regression.py",
+   "source_repo": "trekhleb/homemade-machine-learning",
+   "license": "check repo",
+   "sha256": "133908d95c9b36c3e223b4b52a322282db169026ffde91dfd2f851189bb384bd",
+   "lines": 185,
+   "first_line": "\"\"\"Linear Regression Module\"\"\"",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:38"
+  },
+  {
+   "skill": "ranking",
+   "source_file": "examples/python-guide/dask/ranking.py",
+   "source_repo": "lightgbm-org/LightGBM",
+   "license": "check repo",
+   "sha256": "559793cff4326623a7805d87d16896f78880042e7c77ea8ed47db6b96a39ec3b",
+   "lines": 50,
+   "first_line": "from pathlib import Path",
+   "imports": [
+    "dask",
+    "lightgbm",
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:38"
+  },
+  {
+   "skill": "limit",
+   "source_file": "algorithms/array/limit.py",
+   "source_repo": "keon/algorithms",
+   "license": "check repo",
+   "sha256": "dc2b5e8a1899487d4f45fb8cd0be580e3fb38633b67c46924edcf8ac894b5dc7",
+   "lines": 44,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:38"
+  },
+  {
+   "skill": "cliff_walking",
+   "source_file": "lib/envs/cliff_walking.py",
+   "source_repo": "dennybritz/reinforcement-learning",
+   "license": "check repo",
+   "sha256": "d4b0489dffea500f080c86aac029813bd3054bdeb51286b8a93cdf030ea28eb7",
+   "lines": 85,
+   "first_line": "import io",
+   "imports": [
+    "io",
+    "numpy",
+    "sys"
+   ],
+   "registered": "2026-10-31 12:17:38"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "homemade/logistic_regression/__init__.py",
+   "source_repo": "trekhleb/homemade-machine-learning",
+   "license": "check repo",
+   "sha256": "2023babe2f65820b707d63be492c33fa3d046789dcaf3aef339a2c9b475be62d",
+   "lines": 3,
+   "first_line": "\"\"\"Logistic Regression Module\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:38"
+  },
+  {
+   "skill": "regression",
+   "source_file": "examples/python-guide/dask/regression.py",
+   "source_repo": "lightgbm-org/LightGBM",
+   "license": "check repo",
+   "sha256": "60eec1084e132b1ade54ea2830f0571c40ddf28ca5fb6eaea726c7bc83880cbf",
+   "lines": 30,
+   "first_line": "import dask.array as da",
+   "imports": [
+    "dask",
+    "lightgbm"
+   ],
+   "registered": "2026-10-31 12:17:39"
+  },
+  {
+   "skill": "longest_non_repeat",
+   "source_file": "algorithms/array/longest_non_repeat.py",
+   "source_repo": "keon/algorithms",
+   "license": "check repo",
+   "sha256": "9cfd53940503bdd44f3acc14571a23a33a6ebd9757ff2aafc6c1191902613fc5",
+   "lines": 149,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:39"
+  },
+  {
+   "skill": "discrete",
+   "source_file": "lib/envs/discrete.py",
+   "source_repo": "dennybritz/reinforcement-learning",
+   "license": "check repo",
+   "sha256": "0140d99a3de9f15ced2e6a7160ce3e250b757fa34ecad556bc374c7ca40b2dcd",
+   "lines": 51,
+   "first_line": "import numpy as np",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:39"
+  },
+  {
+   "skill": "logistic_regression",
+   "source_file": "homemade/logistic_regression/logistic_regression.py",
+   "source_repo": "trekhleb/homemade-machine-learning",
+   "license": "check repo",
+   "sha256": "b44edb50c8f03744c7224ba8472c39e7f234089e655fc59184a09c25fa030fd7",
+   "lines": 226,
+   "first_line": "\"\"\"Logistic Regression Module\"\"\"",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:39"
+  },
+  {
+   "skill": "dataset_from_multi_hdf5",
+   "source_file": "examples/python-guide/dataset_from_multi_hdf5.py",
+   "source_repo": "lightgbm-org/LightGBM",
+   "license": "check repo",
+   "sha256": "5f995e10a89dd0517598bf2da3d07abb3029a8ceffab2a80d5c3d6960b4838b2",
+   "lines": 110,
+   "first_line": "from pathlib import Path",
+   "imports": [
+    "h5py",
+    "lightgbm",
+    "numpy",
+    "pandas"
+   ],
+   "registered": "2026-10-31 12:17:40"
+  },
+  {
+   "skill": "max_ones_index",
+   "source_file": "algorithms/array/max_ones_index.py",
+   "source_repo": "keon/algorithms",
+   "license": "check repo",
+   "sha256": "c90e6b96be3dba86bb151a7fa12cb64667c920e80caf38f15e231f8f5ed6e0f3",
+   "lines": 48,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:40"
+  },
+  {
+   "skill": "gridworld",
+   "source_file": "lib/envs/gridworld.py",
+   "source_repo": "dennybritz/reinforcement-learning",
+   "license": "check repo",
+   "sha256": "158a332ab91000f49c6fd44981e1de59bbde832c8d2202e4ee318b4fe9aae10b",
+   "lines": 126,
+   "first_line": "import io",
+   "imports": [
+    "io",
+    "numpy",
+    "sys"
+   ],
+   "registered": "2026-10-31 12:17:40"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "homemade/neural_network/__init__.py",
+   "source_repo": "trekhleb/homemade-machine-learning",
+   "license": "check repo",
+   "sha256": "05fe9def4f9dc74f254885f4ef8f93f494ea9eca09ea98a3ae43521d09f6886e",
+   "lines": 3,
+   "first_line": "\"\"\"Neural Network Module\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:40"
+  },
+  {
+   "skill": "logistic_regression",
+   "source_file": "examples/python-guide/logistic_regression.py",
+   "source_repo": "lightgbm-org/LightGBM",
+   "license": "check repo",
+   "sha256": "23846d215d40dc76abb2c8f57bacf526380a87e9bb13278647b147a7dc3b7497",
+   "lines": 101,
+   "first_line": "# coding: utf-8",
+   "imports": [
+    "lightgbm",
+    "numpy",
+    "pandas",
+    "time"
+   ],
+   "registered": "2026-10-31 12:17:41"
+  },
+  {
+   "skill": "merge_intervals",
+   "source_file": "algorithms/array/merge_intervals.py",
+   "source_repo": "keon/algorithms",
+   "license": "check repo",
+   "sha256": "15a911998408d2e872827b35240c8b8ea872531235a35f4f82b0966a3a54b2ec",
+   "lines": 123,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:41"
+  },
+  {
+   "skill": "windy_gridworld",
+   "source_file": "lib/envs/windy_gridworld.py",
+   "source_repo": "dennybritz/reinforcement-learning",
+   "license": "check repo",
+   "sha256": "ab9977b7ecebfdaf53cffecf3f5d796ebba0ef2d13d1392443488037fc6da33f",
+   "lines": 84,
+   "first_line": "import io",
+   "imports": [
+    "gym",
+    "io",
+    "numpy",
+    "sys"
+   ],
+   "registered": "2026-10-31 12:17:41"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "homemade/utils/features/__init__.py",
+   "source_repo": "trekhleb/homemade-machine-learning",
+   "license": "check repo",
+   "sha256": "f1738a93e2af8fe26ec3c73397627b4ed2a53e124c98c135c25980002be35317",
+   "lines": 6,
+   "first_line": "\"\"\"Dataset Features Related Utils\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:41"
+  },
+  {
+   "skill": "plot_example",
+   "source_file": "examples/python-guide/plot_example.py",
+   "source_repo": "lightgbm-org/LightGBM",
+   "license": "check repo",
+   "sha256": "6c586afbbb7dc004a7b84072b1e4db818facc7a198eca2c7e82b965ad35ad62a",
+   "lines": 62,
+   "first_line": "# coding: utf-8",
+   "imports": [
+    "lightgbm",
+    "matplotlib",
+    "pandas"
+   ],
+   "registered": "2026-10-31 12:17:41"
+  },
+  {
+   "skill": "plotting",
+   "source_file": "lib/plotting.py",
+   "source_repo": "dennybritz/reinforcement-learning",
+   "license": "check repo",
+   "sha256": "05e2e3d1ddb348c3802202553e3563dacc1e52574ac4b3a016bccba4fcbc8467",
+   "lines": 98,
+   "first_line": "import matplotlib",
+   "imports": [
+    "matplotlib",
+    "numpy",
+    "pandas"
+   ],
+   "registered": "2026-10-31 12:17:42"
+  },
+  {
+   "skill": "missing_ranges",
+   "source_file": "algorithms/array/missing_ranges.py",
+   "source_repo": "keon/algorithms",
+   "license": "check repo",
+   "sha256": "14bd5152b16f203df835fe449addba20c6038ea5990169cc5817b66bd57c5746",
+   "lines": 45,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:48"
+  },
+  {
+   "skill": "move_zeros",
+   "source_file": "algorithms/array/move_zeros.py",
+   "source_repo": "keon/algorithms",
+   "license": "check repo",
+   "sha256": "2d216caa71e3c4ed81ebbc34d863a1e6b55620537d69d1188895c1ad88d5179d",
+   "lines": 44,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 12:17:48"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "DLR-RM/stable-baselines3",
+   "license": "check repo",
+   "sha256": "ecb27c0b564067d8576a10d66313181e2a9f78a89406922c33fb63999f5a31ec",
+   "lines": 228,
+   "first_line": "#",
+   "imports": [
+    "datetime",
+    "os",
+    "sphinx_copybutton",
+    "sphinxcontrib",
+    "sys"
+   ],
+   "registered": "2026-10-31 12:17:49"
+  },
+  {
+   "skill": "simple_example",
+   "source_file": "examples/python-guide/simple_example.py",
+   "source_repo": "lightgbm-org/LightGBM",
+   "license": "check repo",
+   "sha256": "2edbe8c089b74d9f3b51b23a40195e2961a30a57014c9987999b8feaaa628f7c",
+   "lines": 62,
+   "first_line": "# coding: utf-8",
+   "imports": [
+    "argparse",
+    "lightgbm",
+    "pandas"
+   ],
+   "registered": "2026-10-31 12:17:49"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "stable_baselines3/__init__.py",
+   "source_repo": "DLR-RM/stable-baselines3",
+   "license": "check repo",
+   "sha256": "a8d5d1b88605932e9d03c6acc37eadc54319bb1b563faf00cd173fbfdf059cf6",
+   "lines": 34,
+   "first_line": "import os",
+   "imports": [
     "os"
    ],
-   "registered": "2026-10-31 06:48:19"
+   "registered": "2026-10-31 12:17:49"
   },
   {
-   "skill": "visualization",
-   "source_file": "ML/src/python/neuralforge/utils/visualization.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "4ec1bcc074436d2c17f57b1d3f506eac9f6ace72afd583e551633f64e524d148",
-   "lines": 192,
-   "first_line": "import matplotlib.pyplot as plt",
+   "skill": "generate_polynomials",
+   "source_file": "homemade/utils/features/generate_polynomials.py",
+   "source_repo": "trekhleb/homemade-machine-learning",
+   "license": "check repo",
+   "sha256": "a77b86d4ad10bab0c2c2a66802363b34c1645fbf54fc608bf7c695d40e853bc4",
+   "lines": 60,
+   "first_line": "\"\"\"Add polynomial features to the features set\"\"\"",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:49"
+  },
+  {
+   "skill": "sklearn_example",
+   "source_file": "examples/python-guide/sklearn_example.py",
+   "source_repo": "lightgbm-org/LightGBM",
+   "license": "check repo",
+   "sha256": "51ba4b525dbc03a0ae612d5bdc6f2e2d0476c9171327ad91fb5b1cc10e03ef26",
+   "lines": 80,
+   "first_line": "# coding: utf-8",
+   "imports": [
+    "lightgbm",
+    "numpy",
+    "pandas"
+   ],
+   "registered": "2026-10-31 12:17:49"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "stable_baselines3/a2c/__init__.py",
+   "source_repo": "DLR-RM/stable-baselines3",
+   "license": "check repo",
+   "sha256": "7460d0bedd470910de7e98474e1f41cef76b46c8f1b213e116e9c117e7620c7b",
+   "lines": 4,
+   "first_line": "from stable_baselines3.a2c.a2c import A2C",
+   "imports": [],
+   "registered": "2026-10-31 12:17:50"
+  },
+  {
+   "skill": "generate_sinusoids",
+   "source_file": "homemade/utils/features/generate_sinusoids.py",
+   "source_repo": "trekhleb/homemade-machine-learning",
+   "license": "check repo",
+   "sha256": "e26314f98113115507c669f6897881e729c7e78508f3673fcda14c7d2764efd5",
+   "lines": 26,
+   "first_line": "\"\"\"Add sinusoid features to the features set\"\"\"",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:50"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "prml/__init__.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "5a633efc9784c4ea6b59278901fc4e653d36455b0dce0154a68232597b71b77f",
+   "lines": 24,
+   "first_line": "from prml import (",
+   "imports": [],
+   "registered": "2026-10-31 12:17:50"
+  },
+  {
+   "skill": "a2c",
+   "source_file": "stable_baselines3/a2c/a2c.py",
+   "source_repo": "DLR-RM/stable-baselines3",
+   "license": "check repo",
+   "sha256": "fc827af05ad7a72d3ca5fc44139496ccb5f101b3ee6602a915a92f77d46353ab",
+   "lines": 208,
+   "first_line": "from typing import Any, ClassVar, TypeVar",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-10-31 12:17:51"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "prml/bayesnet/__init__.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "6406a39f8659da91588fc37b78521bdf0a1e819f78fd8a94eecfe063de1add64",
+   "lines": 7,
+   "first_line": "from prml.bayesnet.discrete import discrete, DiscreteVariable",
+   "imports": [],
+   "registered": "2026-10-31 12:17:51"
+  },
+  {
+   "skill": "gaussian_mixture",
+   "source_file": "examples/gaussian_mixture.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "090c0c8cf25411a45077a56351d592776542e908ac8267721449c580b9f1a0eb",
+   "lines": 46,
+   "first_line": "import random",
+   "imports": [
+    "matplotlib",
+    "numpy",
+    "random"
+   ],
+   "registered": "2026-10-31 12:17:51"
+  },
+  {
+   "skill": "policies",
+   "source_file": "stable_baselines3/a2c/policies.py",
+   "source_repo": "DLR-RM/stable-baselines3",
+   "license": "check repo",
+   "sha256": "ad8cd1b486fb1b9b7d4e962d8ed7ade01c58229e60c61f7c6fc0fbce55a41864",
+   "lines": 7,
+   "first_line": "# This file is here just to define MlpPolicy/CnnPolicy",
+   "imports": [],
+   "registered": "2026-10-31 12:17:51"
+  },
+  {
+   "skill": "discrete",
+   "source_file": "prml/bayesnet/discrete.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "c5b6c5a2e0aa215394c55a76bdfb419f83dd27dc660f40a3a8dec85b0ed5d73a",
+   "lines": 244,
+   "first_line": "import numpy as np",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:52"
+  },
+  {
+   "skill": "gbm",
+   "source_file": "examples/gbm.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "e1c287244c21d6999b2c3073ec3e46b05199b870a90129d706ba21408f294d1d",
+   "lines": 70,
+   "first_line": "import logging",
+   "imports": [
+    "logging"
+   ],
+   "registered": "2026-10-31 12:17:52"
+  },
+  {
+   "skill": "atari_wrappers",
+   "source_file": "stable_baselines3/common/atari_wrappers.py",
+   "source_repo": "DLR-RM/stable-baselines3",
+   "license": "check repo",
+   "sha256": "4e1a42ae65a568ad8d403d066aea7eccdfbac67cb15b1f8de2bf9c2f54e8b14c",
+   "lines": 314,
+   "first_line": "from typing import SupportsFloat",
+   "imports": [
+    "cv2",
+    "gymnasium",
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:52"
+  },
+  {
+   "skill": "kmeans",
+   "source_file": "examples/kmeans.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "960b6d4b1e2e75d0a14266d643ef7971f423136e72cf7effe73b104c1345daf3",
+   "lines": 21,
+   "first_line": "import numpy as np",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:53"
+  },
+  {
+   "skill": "random_variable",
+   "source_file": "prml/bayesnet/random_variable.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "7b6ca5787516ec5b8ea9dc86bc6b33b19c6c4dc5d0b0249ef6d18a7f906b6ba5",
+   "lines": 4,
+   "first_line": "class RandomVariable(object):",
+   "imports": [],
+   "registered": "2026-10-31 12:17:53"
+  },
+  {
+   "skill": "env_util",
+   "source_file": "stable_baselines3/common/env_util.py",
+   "source_repo": "DLR-RM/stable-baselines3",
+   "license": "check repo",
+   "sha256": "aea5a270db0068bca2d139ecf693775cb85330c79e07b0d837c5711285e72b33",
+   "lines": 180,
+   "first_line": "import os",
+   "imports": [
+    "gymnasium",
+    "os"
+   ],
+   "registered": "2026-10-31 12:17:53"
+  },
+  {
+   "skill": "linear_models",
+   "source_file": "examples/linear_models.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "06f112fd94b3f0c9da309bb97ec744d3a3ea83c30fce9b8b0e9af12a55638741",
+   "lines": 60,
+   "first_line": "import logging",
+   "imports": [
+    "logging"
+   ],
+   "registered": "2026-10-31 12:17:53"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "prml/clustering/__init__.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "47e015e676c3c6a1b1501a7286a8383aefaeadb82f10583b955524a6f23c657c",
+   "lines": 6,
+   "first_line": "from prml.clustering.k_means import KMeans",
+   "imports": [],
+   "registered": "2026-10-31 12:17:54"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "stable_baselines3/common/envs/__init__.py",
+   "source_repo": "DLR-RM/stable-baselines3",
+   "license": "check repo",
+   "sha256": "8e2ebbdf4bc07b1c35e7b7e6e85765c0bb8ba2f4bbb17eb8983419becfdec362",
+   "lines": 19,
+   "first_line": "from stable_baselines3.common.envs.bit_flipping_env import BitFlippingEnv",
+   "imports": [],
+   "registered": "2026-10-31 12:17:54"
+  },
+  {
+   "skill": "rbm",
+   "source_file": "examples/rbm.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "6b669b694eff8c56a88f44ec032cd72da169e2b351adfda36c7a94d585a14c68",
+   "lines": 25,
+   "first_line": "import logging",
+   "imports": [
+    "logging",
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:54"
+  },
+  {
+   "skill": "k_means",
+   "source_file": "prml/clustering/k_means.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "5125f7d5debdcfd3d8a43bd0f4ee09bc57754765960ca735a1e02a7bcf49e6a6",
+   "lines": 53,
+   "first_line": "import numpy as np",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:55"
+  },
+  {
+   "skill": "bit_flipping_env",
+   "source_file": "stable_baselines3/common/envs/bit_flipping_env.py",
+   "source_repo": "DLR-RM/stable-baselines3",
+   "license": "check repo",
+   "sha256": "3f997047675ca74713639f0e81c792a1c2f9a1d6cb3d0c36bcc8aa780d90f6a7",
+   "lines": 236,
+   "first_line": "from collections import OrderedDict",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:55"
+  },
+  {
+   "skill": "rl_deep_q_learning",
+   "source_file": "examples/rl_deep_q_learning.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "cd96744920c89f980424c5c28ec174c5f83ab6af5d97cba6e7e469414a5ee504",
+   "lines": 37,
+   "first_line": "import logging",
+   "imports": [
+    "logging"
+   ],
+   "registered": "2026-10-31 12:17:55"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "prml/dimreduction/__init__.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "f377f2501c8803f8d56f90a71ab80f901a5292eabb8697af25489f84f52c3626",
+   "lines": 10,
+   "first_line": "from prml.dimreduction.autoencoder import Autoencoder",
+   "imports": [],
+   "registered": "2026-10-31 12:17:55"
+  },
+  {
+   "skill": "identity_env",
+   "source_file": "stable_baselines3/common/envs/identity_env.py",
+   "source_repo": "DLR-RM/stable-baselines3",
+   "license": "check repo",
+   "sha256": "94bd53493d7e84058c836c3f829dff86594f2b233e78ff2f05777ed16d4d0900",
+   "lines": 159,
+   "first_line": "from typing import Any, Generic, TypeVar",
+   "imports": [
+    "gymnasium",
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:56"
+  },
+  {
+   "skill": "svm",
+   "source_file": "examples/svm.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "5e8ccaa8c29f1891d534fae5b5b2c34ebcbb10883265cc768334f035d1e53fda",
+   "lines": 42,
+   "first_line": "import logging",
+   "imports": [
+    "logging"
+   ],
+   "registered": "2026-10-31 12:17:56"
+  },
+  {
+   "skill": "autoencoder",
+   "source_file": "prml/dimreduction/autoencoder.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "55360e4f5055e508354e320c9779ebd05f7e429ae1e945c44964b5de0890123c",
+   "lines": 39,
+   "first_line": "import numpy as np",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:56"
+  },
+  {
+   "skill": "t-sne",
+   "source_file": "examples/t-sne.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "b5646de1f1c1b856c81c47be173078b89359a027024a0f5f65de94a223be6356",
+   "lines": 28,
+   "first_line": "import logging",
+   "imports": [
+    "logging",
+    "matplotlib"
+   ],
+   "registered": "2026-10-31 12:17:57"
+  },
+  {
+   "skill": "bayesian_pca",
+   "source_file": "prml/dimreduction/bayesian_pca.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "0872324edc44b53468eb65e11378a20243b8533ba175c58648cead6942fd1b40",
+   "lines": 60,
+   "first_line": "import numpy as np",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:57"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "mla/__init__.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "d2789337dd6d0745e78eb5800b5ce182fe9dc083fd29ca9e52ddd876cd3522e1",
+   "lines": 3,
+   "first_line": "# coding:utf-8",
+   "imports": [],
+   "registered": "2026-10-31 12:17:57"
+  },
+  {
+   "skill": "pca",
+   "source_file": "prml/dimreduction/pca.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "1f2c5b31aee6583b25d2d76c4a21a582fc52b4ab5ed03564c26696b264519c9b",
+   "lines": 156,
+   "first_line": "import numpy as np",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:58"
+  },
+  {
+   "skill": "base",
+   "source_file": "mla/base/base.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "0a55dd8dc870d4f87e564014b51dc360dd25971d4a697bffc91c370ec027457a",
+   "lines": 63,
+   "first_line": "# coding:utf-8",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:17:58"
+  },
+  {
+   "skill": "ipyviews",
+   "source_file": "aima/ipyviews.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "ffa9c6841840ba2b9cab0befab1410eea0f5ce02de29f0221aa177544c412725",
+   "lines": 175,
+   "first_line": "from IPython.display import HTML, display, clear_output",
+   "imports": [
+    "__main__",
+    "copy",
+    "json",
+    "os",
+    "time"
+   ],
+   "registered": "2026-10-31 12:18:01"
+  },
+  {
+   "skill": "Learners",
+   "source_file": "notebooks/chapter19/Learners.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "18c18de959fd078bc318c6b18825fc05d1cc613cd68a1a3b12a2016d638a5770",
+   "lines": 203,
+   "first_line": "# ---",
    "imports": [
     "matplotlib",
     "numpy",
     "os"
    ],
-   "registered": "2026-10-31 06:48:19"
+   "registered": "2026-10-31 12:18:02"
   },
   {
-   "skill": "train",
-   "source_file": "ML/train.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "a54b3a06f04009bbcf3d665b50a7071a7f88e3242ff10def6e44560a7aa30cb5",
-   "lines": 196,
-   "first_line": "import torch",
+   "skill": "RNN",
+   "source_file": "notebooks/chapter19/RNN.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "d248ca6dcffb083226dc24b1c00cdfed7e3d6957e73abd01e157f48b9f4d21a7",
+   "lines": 96,
+   "first_line": "# ---",
    "imports": [
-    "argparse",
+    "os",
+    "warnings"
+   ],
+   "registered": "2026-10-31 12:18:03"
+  },
+  {
+   "skill": "Introduction",
+   "source_file": "notebooks/chapter22/Introduction.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "acc543c81010a6e847ddc1a5d75fee483741d395910a281720928a51394aae2a",
+   "lines": 57,
+   "first_line": "# ---",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-10-31 12:18:03"
+  },
+  {
+   "skill": "dynamic_decision_network",
+   "source_file": "notebooks/dynamic_decision_network.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "72cc1d19b7ac89355ee7b80ef1e742f92e1ad40b143996a52f1eb5d0fffed3fe",
+   "lines": 49,
+   "first_line": "# ---",
+   "imports": [],
+   "registered": "2026-10-31 12:18:04"
+  },
+  {
+   "skill": "multi_input_envs",
+   "source_file": "stable_baselines3/common/envs/multi_input_envs.py",
+   "source_repo": "DLR-RM/stable-baselines3",
+   "license": "check repo",
+   "sha256": "d3f7f06fd7ea4f4a0f70b2b8f3cb93bb7e99ea1a626ea2ecd9aee66508da513c",
+   "lines": 181,
+   "first_line": "import gymnasium as gym",
+   "imports": [
+    "gymnasium",
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:18:04"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "prml/kernel/__init__.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "fda0f044f46c0dbe8faa283903bd032c59f9a6ad48b74a71941dce3b4fd1d1bf",
+   "lines": 18,
+   "first_line": "from prml.kernel.gaussian_process_classifier import GaussianProcessClassifier",
+   "imports": [],
+   "registered": "2026-10-31 12:18:05"
+  },
+  {
+   "skill": "base",
+   "source_file": "mla/datasets/base.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "f073bf66dbe0ea335d9fa9914d3a3d9e87084bececf24d9b927384fc9096bbef",
+   "lines": 78,
+   "first_line": "# coding:utf-8",
+   "imports": [
     "numpy",
     "os",
-    "random",
-    "torch"
+    "struct"
    ],
-   "registered": "2026-10-31 06:48:20"
+   "registered": "2026-10-31 12:18:05"
   },
   {
-   "skill": "Newsapp",
-   "source_file": "News_App/Newsapp.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "eb9c3e0b01ea98b41ff2e7a6f3648f98cfe3cdf4c04b727e38b47d0fd5b27f71",
-   "lines": 52,
-   "first_line": "import solara as sr",
+   "skill": "expectation_maximization",
+   "source_file": "notebooks/expectation_maximization.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "a566e0292b1bebd6daa9e7e3786e4db98e526eb6f214a58058678f6650624d6f",
+   "lines": 73,
+   "first_line": "# ---",
    "imports": [
-    "solara",
-    "yfinance"
+    "matplotlib",
+    "numpy"
    ],
-   "registered": "2026-10-31 06:48:20"
+   "registered": "2026-10-31 12:18:05"
   },
   {
-   "skill": "patterns",
-   "source_file": "News_App/patterns.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "4119971f5e51b7cd0b261b76d785bc55469d6ad8d1060f1306ecf5c83171e8b3",
-   "lines": 119,
-   "first_line": "patterns = {",
-   "imports": [],
-   "registered": "2026-10-31 06:48:21"
-  },
-  {
-   "skill": "basic",
-   "source_file": "PDF/basic.py",
-   "source_repo": "geekcomputers/Python",
-   "license": "MIT (geekcomputers/Python)",
-   "sha256": "8e243a1c6edee9492850557753061b8cfec3b1f2aa1a2908d5c44380eb646210",
-   "lines": 34,
-   "first_line": "from fpdf import FPDF",
-   "imports": [],
-   "registered": "2026-10-31 06:48:22"
-  },
-  {
-   "skill": "base64_cipher",
-   "source_file": "ciphers/base64_cipher.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "58a68aa6e646e276ae8215846b7410be3a7602eca9f89b332451eb12274960bf",
-   "lines": 142,
-   "first_line": "B64_CHARSET = \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\"",
+   "skill": "evaluation",
+   "source_file": "stable_baselines3/common/evaluation.py",
+   "source_repo": "DLR-RM/stable-baselines3",
+   "license": "check repo",
+   "sha256": "a60cc695f1b0fa70c008efffd59fb5e3b1b590601e7992099cfd8b07665983d8",
+   "lines": 143,
+   "first_line": "import warnings",
    "imports": [
-    "doctest"
+    "gymnasium",
+    "numpy",
+    "warnings"
    ],
-   "registered": "2026-10-31 06:55:40"
+   "registered": "2026-10-31 12:18:05"
   },
   {
-   "skill": "base85",
-   "source_file": "ciphers/base85.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "21b522cf5113df4f2c0897e70bef703213643573616c7b4742f8da1abf348479",
-   "lines": 58,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:55:41"
-  },
-  {
-   "skill": "beaufort_cipher",
-   "source_file": "ciphers/beaufort_cipher.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "ec975b04d43f708440f3413cfde9c59f3aa63b13c75465ab17a477438bb1e284",
-   "lines": 82,
-   "first_line": "\"\"\"",
-   "imports": [
-    "doctest"
-   ],
-   "registered": "2026-10-31 06:55:42"
-  },
-  {
-   "skill": "bifid",
-   "source_file": "ciphers/bifid.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "c3a652c5762f1b984a16f3b397f9a87b2721cc04d7c2360cdb54b7c0c56ec32a",
-   "lines": 111,
-   "first_line": "#!/usr/bin/env python3",
+   "skill": "gaussian_process_regressor",
+   "source_file": "prml/kernel/gaussian_process_regressor.py",
+   "source_repo": "ctgk/PRML",
+   "license": "check repo",
+   "sha256": "001222467aa4e9dd3b1b437b323c35ea96b9b478628e1222422b613ccc350d09",
+   "lines": 105,
+   "first_line": "import numpy as np",
    "imports": [
     "numpy"
    ],
-   "registered": "2026-10-31 06:55:43"
+   "registered": "2026-10-31 12:18:05"
   },
   {
-   "skill": "columnar_transposition",
-   "source_file": "ciphers/columnar_transposition.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "8eb051eabb7146526adfa13bd6cffec951b7dd0cb80a666a95aa9ea2d0f7d8aa",
-   "lines": 127,
-   "first_line": "\"\"\"Columnar Transposition cipher.",
+   "skill": "index",
+   "source_file": "notebooks/index.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "f016a718b4d7af235453745ab96ecba0208fd1a58e2a5657418dc022d1141457",
+   "lines": 53,
+   "first_line": "# ---",
+   "imports": [],
+   "registered": "2026-10-31 12:18:06"
+  },
+  {
+   "skill": "base",
+   "source_file": "mla/ensemble/base.py",
+   "source_repo": "rushter/MLAlgorithms",
+   "license": "check repo",
+   "sha256": "ab9342ed93c45fcefd7e3123fe5b62f7b041546dfa6547585ea5a125f72a1242",
+   "lines": 65,
+   "first_line": "# coding:utf-8",
    "imports": [
-    "doctest"
+    "numpy"
    ],
-   "registered": "2026-10-31 06:55:44"
+   "registered": "2026-10-31 12:18:06"
   },
   {
-   "skill": "cryptomath_module",
-   "source_file": "ciphers/cryptomath_module.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "d0ebbad28f9f4f97199504b735891343859c7c6d3f087c7ffb462f19c636ca70",
-   "lines": 82,
+   "skill": "intro",
+   "source_file": "notebooks/intro.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "3cd9f89b2657b6f7356ff056f4db51dd59d013021e1ad73a46bb4636f9b13d99",
+   "lines": 79,
+   "first_line": "# ---",
+   "imports": [],
+   "registered": "2026-10-31 12:18:06"
+  },
+  {
+   "skill": "kalman_filter",
+   "source_file": "notebooks/kalman_filter.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "74b6cd7c372e166c658b3ee0820bf97a8ea03372a41d0fa6d47e37cb598cf7a2",
+   "lines": 61,
+   "first_line": "# ---",
+   "imports": [
+    "matplotlib",
+    "numpy"
+   ],
+   "registered": "2026-10-31 12:18:07"
+  },
+  {
+   "skill": "knowledge_current_best",
+   "source_file": "notebooks/knowledge_current_best.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "2089e6c81b9f8182537ff943d49c7e9daec645a29294f29e453e041ce659932c",
+   "lines": 220,
+   "first_line": "# ---",
+   "imports": [],
+   "registered": "2026-10-31 12:18:07"
+  },
+  {
+   "skill": "4-keys-keyboard",
+   "source_file": "Python/4-keys-keyboard.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "80e8f8416fa989e09e277066f3137e5fe9568990ad8cdf7932d02e0ebec1929c",
+   "lines": 39,
+   "first_line": "# Time:  O(1)",
+   "imports": [],
+   "registered": "2026-10-31 12:18:09"
+  },
+  {
+   "skill": "abbreviating-the-product-of-a-range",
+   "source_file": "Python/abbreviating-the-product-of-a-range.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "cbd5460938caa5c6e781557776d4bf4da195e78d789670daa312f15095c6ae83",
+   "lines": 31,
+   "first_line": "# Time:  O(r - l)",
+   "imports": [
+    "math"
+   ],
+   "registered": "2026-10-31 12:18:09"
+  },
+  {
+   "skill": "absolute-difference-between-maximum-and-minimum-k-elements",
+   "source_file": "Python/absolute-difference-between-maximum-and-minimum-k-elements.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "f11506941cc1c1594364f0479b7e98ce3612f9d32869252ab350e5ccb6cff61f",
+   "lines": 59,
+   "first_line": "# Time:  O(n)",
+   "imports": [
+    "random"
+   ],
+   "registered": "2026-10-31 12:18:10"
+  },
+  {
+   "skill": "account-balance-after-rounded-purchase",
+   "source_file": "Python/account-balance-after-rounded-purchase.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "0aafd99f57956284e8cd1aa9b8c7a43f094f0c0916e7e1bc9b7e566413bb3d4f",
+   "lines": 11,
+   "first_line": "# Time:  O(1)",
+   "imports": [],
+   "registered": "2026-10-31 12:18:11"
+  },
+  {
+   "skill": "accounts-merge",
+   "source_file": "Python/accounts-merge.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "de1072ff08fd7278230329e0a2a65506ad4ecc2cc95c2cf80d95f28be472708b",
+   "lines": 52,
+   "first_line": "# Time:  O(nlogn), n is the number of total emails,",
+   "imports": [
+    "collections"
+   ],
+   "registered": "2026-10-31 12:18:11"
+  },
+  {
+   "skill": "add-and-search-word-data-structure-design",
+   "source_file": "Python/add-and-search-word-data-structure-design.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "8dec302b03c8ddf9e55eb9792e41b40077b9f65eb8b7ae2175cd9c7fe682d3e1",
+   "lines": 45,
+   "first_line": "# Time:  O(min(n, h)), per operation",
+   "imports": [],
+   "registered": "2026-10-31 12:18:12"
+  },
+  {
+   "skill": "add-binary",
+   "source_file": "Python/add-binary.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "f398abc4e68076f6326c686adf0b4e64f1cc2afb30797a218a6c31c0fa9a119b",
+   "lines": 44,
+   "first_line": "# Time:  O(n)",
+   "imports": [],
+   "registered": "2026-10-31 12:18:12"
+  },
+  {
+   "skill": "add-bold-tag-in-string",
+   "source_file": "Python/add-bold-tag-in-string.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "aec44e768a0c2943fb0d5b9d7df0a8ef2065d1a1459e74ba4c24c094e79d752c",
+   "lines": 69,
+   "first_line": "# Time:  O(n * d * l), l is the average string length",
+   "imports": [
+    "collections",
+    "functools"
+   ],
+   "registered": "2026-10-31 12:18:13"
+  },
+  {
+   "skill": "add-digits",
+   "source_file": "Python/add-digits.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "ded4ef27dac7fb5e73641ea8dc378a981f124e561932f71935aa5fb061e7a3c3",
+   "lines": 11,
+   "first_line": "# Time:  O(1)",
+   "imports": [],
+   "registered": "2026-10-31 12:18:14"
+  },
+  {
+   "skill": "add-edges-to-make-degrees-of-all-nodes-even",
+   "source_file": "Python/add-edges-to-make-degrees-of-all-nodes-even.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "45cbd6bc7dc4e4e1af1ba3adc4571971b87afc0b92128270e885487b593c704d",
+   "lines": 25,
+   "first_line": "# Time:  O(n)",
+   "imports": [],
+   "registered": "2026-10-31 12:18:14"
+  },
+  {
+   "skill": "knowledge_version_space",
+   "source_file": "notebooks/knowledge_version_space.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "2b9798016c134741d35778ef170c4cd6d7e738cd2b34f44552418680cef28c65",
+   "lines": 197,
+   "first_line": "# ---",
+   "imports": [],
+   "registered": "2026-10-31 12:18:15"
+  },
+  {
+   "skill": "learning_apps",
+   "source_file": "notebooks/learning_apps.py",
+   "source_repo": "aimacode/aima-python",
+   "license": "check repo",
+   "sha256": "6d471447d3aaff6d1e2b4f0010f91ebc663570109b9720f1211dd31c983a09a0",
+   "lines": 294,
+   "first_line": "# ---",
+   "imports": [],
+   "registered": "2026-10-31 12:18:16"
+  },
+  {
+   "skill": "add-minimum-number-of-rungs",
+   "source_file": "Python/add-minimum-number-of-rungs.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "5609bec73224db8e45a057e4c97925fbf2c9229fae904476f3095087b5fad597",
+   "lines": 18,
+   "first_line": "# Time:  O(n)",
+   "imports": [],
+   "registered": "2026-10-31 12:18:22"
+  },
+  {
+   "skill": "add-one-row-to-tree",
+   "source_file": "Python/add-one-row-to-tree.py",
+   "source_repo": "kamyu104/LeetCode-Solutions",
+   "license": "check repo",
+   "sha256": "39614f8de5e52cfe5fcfa2b5bef706928d501eca23fe49b552c7fa92ed1ab5ad",
+   "lines": 30,
+   "first_line": "# Time:  O(n)",
+   "imports": [],
+   "registered": "2026-10-31 12:18:23"
+  },
+  {
+   "skill": "n_sum",
+   "source_file": "algorithms/array/n_sum.py",
+   "source_repo": "keon/algorithms",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "17880c5bd2279dd9a75f58f1238f97197a2aa9cc6338913ca1d55189db54c18e",
+   "lines": 127,
    "first_line": "\"\"\"",
    "imports": [],
-   "registered": "2026-10-31 06:55:45"
+   "registered": "2026-10-31 14:11:08"
   },
   {
-   "skill": "decrypt_caesar_with_chi_squared",
-   "source_file": "ciphers/decrypt_caesar_with_chi_squared.py",
-   "source_repo": "TheAlgorithms/Python",
-   "license": "MIT (TheAlgorithms/Python)",
-   "sha256": "8c7d80cee2e52a0e2873b25a78c01691ca95b0182b05ea06fe7eeb1ad0335d91",
-   "lines": 253,
-   "first_line": "#!/usr/bin/env python3",
+   "skill": "plus_one",
+   "source_file": "algorithms/array/plus_one.py",
+   "source_repo": "keon/algorithms",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "66ec756e8cecaa1b31b4f56fbcfa616c0daa650e85ce4322f1a5f8f3832b9a24",
+   "lines": 86,
+   "first_line": "\"\"\"",
    "imports": [],
-   "registered": "2026-10-31 06:55:46"
+   "registered": "2026-10-31 14:11:09"
+  },
+  {
+   "skill": "remove_duplicates",
+   "source_file": "algorithms/array/remove_duplicates.py",
+   "source_repo": "keon/algorithms",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "85caa7f5ab3fe141d46e1bd186e805e6169130e5b613ded1bb817e13f531f3c2",
+   "lines": 48,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 14:11:09"
+  },
+  {
+   "skill": "rotate",
+   "source_file": "algorithms/array/rotate.py",
+   "source_repo": "keon/algorithms",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "6e2b7b6f88d8ef8792a465e08171cb7e9354ec4569c6fcc9262d728a41012895",
+   "lines": 90,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 14:11:10"
+  },
+  {
+   "skill": "summarize_ranges",
+   "source_file": "algorithms/array/summarize_ranges.py",
+   "source_repo": "keon/algorithms",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "9ac93edafa17d4d07a61676220c81c31866df2d075ed0a789740fa39e81283ec",
+   "lines": 44,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 14:11:11"
+  },
+  {
+   "skill": "three_sum",
+   "source_file": "algorithms/array/three_sum.py",
+   "source_repo": "keon/algorithms",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "e6760b3fae921fbc5da2b035f611c0343be779f36c1c1c0eebd4c8cb5110fd76",
+   "lines": 53,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 14:11:12"
+  },
+  {
+   "skill": "top_1",
+   "source_file": "algorithms/array/top_1.py",
+   "source_repo": "keon/algorithms",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "45a8215a04aa27289038f2d845ed8d48c8f499cfa03063ee87620504ee9ceb93",
+   "lines": 46,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 14:11:12"
+  },
+  {
+   "skill": "trimmean",
+   "source_file": "algorithms/array/trimmean.py",
+   "source_repo": "keon/algorithms",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "c2950e92a3412a482537d749a990e206a91cd53e92c2cef8bd7961f09b339547",
+   "lines": 42,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 14:11:13"
+  },
+  {
+   "skill": "two_sum",
+   "source_file": "algorithms/array/two_sum.py",
+   "source_repo": "keon/algorithms",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "1b3ff1fa78720b057e070f102020a7255e10f81a1ba15224aef2bf3e39c865d3",
+   "lines": 37,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 14:11:13"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "algorithms/backtracking/__init__.py",
+   "source_repo": "keon/algorithms",
+   "summary": "from .add_operators import add_operators",
+   "license": "permissive (fetched)",
+   "sha256": "98bb778582cf1ba5bacaf502a9492a8f66a4f6ee59d11330e594936c47670016",
+   "lines": 48,
+   "first_line": "from .add_operators import add_operators",
+   "imports": [],
+   "registered": "2026-10-31 14:11:14"
+  },
+  {
+   "skill": "add_operators",
+   "source_file": "algorithms/backtracking/add_operators.py",
+   "source_repo": "keon/algorithms",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "376053102e03457951dec0b0fb4b9ebb7a74f90630a4d52e57658459e78d7b46",
+   "lines": 86,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 14:11:22"
+  },
+  {
+   "skill": "anagram",
+   "source_file": "algorithms/backtracking/anagram.py",
+   "source_repo": "keon/algorithms",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "95420673ccfb4ec9f93f893f388c68400bf35bef1d45a2bfa77ddaeb977a56a6",
+   "lines": 44,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 14:11:22"
   }
  ],
  "sources": [],
- "built": "2026-10-31 06:55:46",
- "dedup_done": "2026-10-31 06:46:43"
+ "built": "2026-10-31 14:11:22"
 }

@@ -1,4 +1,4 @@
-"""ApexDream - the nightly consolidation cycle ("sleep").
+﻿"""ApexDream - the nightly consolidation cycle ("sleep").
 
 Runs at system-idle hours via scheduled task:
   - consolidates episodic memory into per-file insights
@@ -173,7 +173,7 @@ def main():
 
     # Reasoning gym: bounded self-training round (drills -> calibration rows)
     try:
-        gym_proc = subprocess.run([sys.executable, os.path.join(R, "Scripts", "ApexGym.py"), "--minutes", "8", "--traits", "auto"], capture_output=True, text=True, timeout=720)
+        gym_proc = subprocess.run([sys.executable, os.path.join(R, "Scripts", "ApexGym.py"), "--minutes", "6", "--traits", "auto"], capture_output=True, text=True, timeout=720)
         gym_tail = (gym_proc.stdout or "").strip().splitlines()[-1:]
         _gym_note = "GYM: " + (gym_tail[0] if gym_tail else "no output")
     except Exception as _e_gym:
@@ -186,7 +186,7 @@ def main():
 
     # Curiosity drive: nightly cloud-farming round (open sources, vetted, rewarded)
     try:
-        seek = subprocess.run([sys.executable, os.path.join(R, "Scripts", "SeekGrowth.py"), "--minutes", "6"],
+        seek = subprocess.run([sys.executable, os.path.join(R, "Scripts", "SeekGrowth.py"), "--minutes", "8"],
                               capture_output=True, text=True, timeout=900)
         seek_tail = (seek.stdout or "").strip().splitlines()[-1:]
         _seek_note = "SEEK: " + (seek_tail[0] if seek_tail else "farmed")
