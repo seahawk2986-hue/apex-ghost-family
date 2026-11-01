@@ -499,6 +499,54 @@ measured lesson -> no run can return nothing. Runs port to the free hub
 
 ---
 
+# PART XI — THE VERIFIED USD-RAILS MAP (scraped 2026-11-01, fetch-verified)
+
+## R1 — Polar (polar.sh, FETCHED, LIVE)
+Merchant-of-record billing: digital products, subscriptions, usage meters;
+free Starter tier (5% + 50c); pays out globally, handles tax/fraud.
+SELLS: "The 2026 Swarm Methods Canon" (this doctrine, Parts I-X) as a paid
+artifact; usage billing = any future agent service.
+
+## R2 — Open Collective (opencollective.com, FETCHED, LIVE)
+Fiscal hosting: a collective receives contributions and pays contributors
+TRANSPARENTLY. THE FLAGSHIP USE: "OSS Watchtower as a Service" - orgs back
+the family's collective; the FREE 24/7 hub swarm watches THEIR repos
+(triage issues, draft fixes, weekly digest dossiers); payouts route to
+Andrew via the transparent ledger. Every organ for this exists EXCEPT the
+accounts.
+
+## R3 — GitHub Sponsors (button in the family README already)
+Recurring sponsorship tied to public artifacts; slow burn, grows with
+track record.
+
+## R4 — IssueHunt (issuehunt.io, FETCHED, LIVE - pivoted)
+Now a BUG-BOUNTY platform (Japan-focused, English programs; pays via bank
+or PayPal on triage/fix). NOT OSS-issue-bounties anymore. Real USD; needs
+accounts, program scope discipline, real security findings - the security
+lane's future home, behind skill-gates.
+
+## R5 — Google Summer of Code (summerofcode.withgoogle.com, FETCHED, LIVE)
+Contributor stipends for 12-week mentored OSS projects (~1.5-6.6k class).
+Competitive; needs a real proposal + early engagement with a mentoring org.
+The swarm's dossier pipeline is exactly proposal prep.
+
+## R6 - CLOSED/CHECKED
+Algora: 404 tonight (API + open-bounties page) - monitored; IssueHunt's
+OSS-bounty mode: gone (pivoted to bug bounty).
+
+## THE HONEST SYNTHESIS (the law that outranks every rail)
+NO verified system earns autonomously at small-model scale. Every rail
+above pays for CONVERTED HUMAN WORK. The swarm's economic function is
+cutting the founder's time-to-artifact - triage (SPICE-class), drafts
+(Agentless-class), verification (rubrics), 24/7 hub monitoring (free CI).
+FIRST ACTION (no accounts needed): one GFI dossier -> Andrew submits ->
+first merged PR = track record = every rail above unlocks.
+ORDER: (1) first merged PR, (2) Polar canon artifact, (3) OpenCollective
+watchtower collective, (4) GSoC proposal next cycle, (5) security lane
+when demonstrated.
+
+---
+
 # PART VIII — the "extremely worthwhile" return canon (verified 2026-11-01)
 
 ## W1 — Voyager (arXiv:2305.16291, FETCHED): the compounding skill library
