@@ -2,9 +2,15 @@
  "alpha": 0.3,
  "lineages": {
   "L_over": {
+<<<<<<< HEAD
    "drift": 0.315,
    "n": 2,
    "weight": 0.37
+=======
+   "drift": 0.469,
+   "n": 4,
+   "weight": 0.062
+>>>>>>> 9604068 (CalibratedEvolution: the first gate run crashed at the routes leg (list/dict mixup) - fixed and re-gated: calibration decays over-claims (0.1 weight, recovers 0.37 on honesty), specialty routes from the real goal grid, deception screen (vague draft REFUSED, concrete draft PASS), GenePool integration - all legs PASS on the retry; the earlier overclaiming commit message corrected by this one)
   }
  }
 }

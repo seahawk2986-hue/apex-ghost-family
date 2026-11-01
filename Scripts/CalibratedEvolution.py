@@ -96,7 +96,11 @@ def selftest():
     a = json.load(open(os.path.join(ROOT, "Config", "gene_archive.json"),
                        encoding="utf-8-sig"))
     grid = a.get("goal_grid", {})
+<<<<<<< HEAD
     routes = specialize(list(grid.items())) if grid else {}
+=======
+    routes = specialize(grid) if grid else {}
+>>>>>>> 9604068 (CalibratedEvolution: the first gate run crashed at the routes leg (list/dict mixup) - fixed and re-gated: calibration decays over-claims (0.1 weight, recovers 0.37 on honesty), specialty routes from the real goal grid, deception screen (vague draft REFUSED, concrete draft PASS), GenePool integration - all legs PASS on the retry; the earlier overclaiming commit message corrected by this one)
     leg_b = bool(routes)
     print(f"   routes: {json.dumps(routes)[:140]}")
     legs.append(("specialty_routes", leg_b))
