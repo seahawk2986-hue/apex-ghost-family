@@ -173,6 +173,31 @@ def read_state():
     except Exception:
         out["health"] = {"ram_free_gb": 0.0, "disk_free_gb": 0.0, "alarms": []}
     out["registry"] = {rel: os.path.exists(p) for rel, p in REGISTRY_ARTIFACTS.items()}
+    # jobs: the SIXTH doctrine dim - found asks + filed rungs
+    out["jobs"] = {"opps_inbox": _rowcount(os.path.join(AD, "jobs_inbox.json")),
+                   "rungs_filed": 0}
+    try:
+        jr = json.load(open(os.path.join(AD, "jobs_registry.json"),
+                            encoding="utf-8-sig"))
+        out["jobs"]["rungs_filed"] = len(jr.get("jobs") or jr.get("checkpoints") or [])
+    except Exception:
+        pass
+    # proactive: the FinancialBrain flywheel (EV-graded, honest inputs)
+    fin = ((pm.get("finance") or {}) if isinstance(pm, dict) else {})
+    out["proactive"] = {"opps_scanned": len(fin.get("opportunities") or []),
+                        "total_ev": float(fin.get("total_ev") or 0.0),
+                        "best_action": str(fin.get("best_action") or "")[:80]}
+    # the founder's DIRECT mission queue (apex_tasks.txt): whatever he writes
+    # becomes an active objective - the most direct goals instrument there is
+    try:
+        qt = open(os.path.join(os.path.dirname(os.path.join(
+            os.path.dirname(os.path.abspath(__file__)))), "apex_tasks.txt"),
+            encoding="utf-8-sig")
+        qlines = [l for l in qt.read().splitlines() if l.strip()]
+        out["directives"] = {"queue_depth": len(qlines),
+                             "head": qlines[0][:80] if qlines else ""}
+    except Exception:
+        out["directives"] = {"queue_depth": 0, "head": ""}
     try:
         import psutil
         ram_free = psutil.virtual_memory().available / 2 ** 30
@@ -375,8 +400,53 @@ def git_restore(rel, dst=None):
         return 0
 
 
-# ---- THE GOALS: evolution is judged on ANDREW'S five goals, nothing else ----
-GOAL_KEYS = ("gold", "money", "life", "recruits", "safety")
+# ---- THE GOAL GENEALOGY (every goal Apex has EVER had, from the start) ----
+# Sources: the active organs, the doctrine cards, and the Attic (the past's
+# own words, preserved). Statuses: active (measured every tick) | flow
+# (measured as a flow law) | folded (its essence lives in another dim) |
+# dormant (awaits a condition to matter again) | archived (Attic doctrine).
+GOAL_REGISTRY = {
+    "gold":        {"origin": "ApplyTriGenome: MAXIMIZE YIELD (mines/req - the original fitness)",
+                    "status": "active", "projection": "gold"},
+    "money":       {"origin": "UsdLane: 'the packet's purpose gains the USD cause'",
+                    "status": "active", "projection": "money"},
+    "andrew_life": {"origin": "FinancialBrain: the swarm's OVERARCHING goal - improve Andrew Hike's life FINANCIALLY, proactively",
+                    "status": "active", "projection": "life"},
+    "recruits":    {"origin": "Recruiter/OpenDoorHunter/RecruitmentDoor: consent-gated onboarding; the handshake",
+                    "status": "active", "projection": "recruits"},
+    "jobs":        {"origin": "FounderKit: 'filed issues = the reputation ladder's first rungs + sponsor visibility'",
+                    "status": "active", "projection": "jobs"},
+    "safety":      {"origin": "EthicAudit (Attic) + the card's laws (fail-closed, print-first, digest-evidenced)",
+                    "status": "active", "projection": "safety"},
+    "upward_evo":  {"origin": "the standing directive: better each generation at EVERY goal, upward-only",
+                    "status": "active", "projection": "ascent+genes"},
+    "speed":       {"origin": "the standing hardware law: evolve as fast as the box honestly allows",
+                    "status": "active", "projection": "hardware_gate"},
+    "sovereignty": {"origin": "SeedPacket + hub transport: keyless commit-rooted git+files, publish on OUR turf",
+                    "status": "active", "projection": "transport+registry"},
+    "backlog_drain": {"origin": "Campaign100: 'THE BACKLOG IS DRAINED - the gold goal reached early' (10 waves x 10 shifts)",
+                      "status": "flow", "projection": "backlog_alarm"},
+    "tri_genome":  {"origin": "ApplyTriGenome: yield x (help_the_founder + recruits)",
+                    "status": "folded", "projection": None,
+                    "note": "its three legs are exactly gold + life + recruits today"},
+    "elections":   {"origin": "Persuasion (Attic): family elections; fitness voted; a name in the ledger",
+                    "status": "folded", "projection": None,
+                    "note": "the vote became the measured calibration EMA - claims cannot outvote receipts"},
+    "throne":      {"origin": "HubCharter: hubs compete for the champion throne by measured fitness",
+                    "status": "dormant", "projection": None,
+                    "note": "measures when domiciled hubs exist; the charter refuses all but the operator-signed"},
+    "sleep":       {"origin": "ApexDream + ApexSkills recertify: nightly consolidation; stale skills DEMOTE",
+                    "status": "folded", "projection": "skills_lib",
+                    "note": "the demotion gate keeps the library honest between sleeps"},
+}
+
+# ---- THE GOALS: evolution is judged on ANDREW'S goals, nothing else ----
+# The FULL doctrine set (TotalEvolution's six + the FinancialBrain telos):
+# gold, money, life (Andrew's, the OVERARCHING goal - "improve Andrew Hike's
+# life FINANCIALLY, proactively"), recruits, jobs (the 6th dim: found asks +
+# filed rungs), safety. The founder's DIRECT queue (apex_tasks.txt) is the
+# mission inbox every goal serves - recorded every tick.
+GOAL_KEYS = ("gold", "money", "life", "recruits", "jobs", "safety")
 STALL_S = 6 * 3600      # a goal stalled >6h alarms (money's hint is honest)
 GOAL_COMPONENTS = {
     "gold":     lambda s: (sum(float((v or {}).get("mines", 0) or 0) for v in (s.get("knowledge") or {}).values()),
@@ -387,6 +457,9 @@ GOAL_COMPONENTS = {
                            float((s.get("help") or {}).get("alarmsRaised") or 0)),
     "recruits": lambda s: (float((s.get("doors") or {}).get("count") or 0),
                            float((s.get("converts") or {}).get("count") or 0)),
+    "jobs":     lambda s: (float((s.get("jobs") or {}).get("opps_inbox") or 0),
+                           float((s.get("jobs") or {}).get("rungs_filed") or 0),
+                           float((s.get("proactive") or {}).get("opps_scanned") or 0)),
     "safety":   lambda s: (1.0 if (s.get("integrity") or {}).get("ok") else 0.0,
                            1.0 if not (s.get("economy") or {}).get("corrupt") else 0.0),
 }
@@ -445,8 +518,10 @@ def brain_state():
 
 
 def goal_projection(state):
-    """Map EVERY measured subsystem onto the five goals - evolution may only
-    claim upward movement in a goal if a component of THAT GOAL moved."""
+    """Map EVERY measured subsystem onto the SIX doctrine goals - evolution
+    may only claim upward movement in a goal if a component of THAT GOAL
+    moved. (gold, money, life, recruits, jobs, safety - full genealogy in
+    GOAL_REGISTRY.)"""
     out = {}
     for g, comps_fn in GOAL_COMPONENTS.items():
         try:
@@ -558,6 +633,8 @@ def tick(manifest_path=MANIFEST):
                     "law)" if g == "money" else
                     " (needs a window with a loaded brain)" if g == "gold"
                     and not cur.get("brain") else
+                    " (needs the inbox triaged - a brain window serves)" if g
+                    == "jobs" else
                     " (no external claims yet - the door stands open)")
             alarms.append(f"goal '{g}' stalled "
                           f"{int((now - prog.get(g, now)) / 60)}min{hint}")
@@ -622,6 +699,7 @@ def tick(manifest_path=MANIFEST):
                      for g in GOAL_KEYS},
            "goal_progress": {g: prog.get(g, now) for g in GOAL_KEYS},
            "gi_score": gi,
+           "goal_genealogy": {g: GOAL_REGISTRY[g] for g in GOAL_REGISTRY},
            "hardware_history": (prev_hist + [{"ts": time.strftime("%H:%M:%S"),
                                               "ms": tick_ms,
                                               "ram": hw.get("ram_free_gb")}])[-8:],
@@ -657,6 +735,11 @@ def tick(manifest_path=MANIFEST):
     chat = list(br.get("lmstudio_chat") or br.get("ollama_chat") or [])[:2]
     brain_str = ("chat-ready: " + ", ".join(chat)) if chat \
         else "no CHAT brain loaded (honest state; embeds don't count)"
+    gen_active = sum(1 for v in GOAL_REGISTRY.values() if v["status"] == "active")
+    gen_other = len(GOAL_REGISTRY) - gen_active
+    print(f"[apex-upward] GOAL GENEALOGY: {len(GOAL_REGISTRY)} goals from the "
+          f"beginning ({gen_active} active, {gen_other} folded/dormant/flow) "
+          f"| direct queue: {cur['directives']['queue_depth']}")
     print(f"[apex-upward] GOALS " + " | ".join(
         f"{g} {man['goals'][g]['score']} (delta {man['goals'][g]['delta']:+.3f}, "
         f"idle {man['goals'][g]['progress_age_min']}m)" for g in GOAL_KEYS)
@@ -827,12 +910,14 @@ def selftest():
     print(f"   hardware gate tiers @7/3.5/2.5/1.0 GB: {tiers} | "
           f"starvation alarm: {leg_j}")
     legs.append(("hardware_gate_law", leg_j))
-    # (k) THE GOALS: every subsystem projects onto Andrew's five goals (pure)
+    # (k) THE GOALS: every subsystem projects onto Andrew's SIX goals (pure)
     st = {"knowledge": {"trending": {"mines": 12, "reqs": 5}},
           "mining": {"findings": 3}, "board": {"repos_consumed": 10},
           "economy": {"earned": 0.0, "rows": 0, "corrupt": False},
           "help": {"briefs": 1, "alarmsRaised": 2},
           "doors": {"count": 7}, "converts": {"count": 4},
+          "jobs": {"opps_inbox": 12, "rungs_filed": 4},
+          "proactive": {"opps_scanned": 6, "total_ev": 0.0, "best_action": ""},
           "integrity": {"bad": [], "ok": True},
           "skills": {"verified_count": 3}, "skills_lib": {"count": 40},
           "canon": {"papers_2026": 100, "papers_evolution": 421},
@@ -844,10 +929,25 @@ def selftest():
              and gp["money"]["score"] == 0.0
              and gp["life"]["score"] == 3
              and gp["recruits"]["score"] == 11
+             and gp["jobs"]["score"] == 12 + 4 + 6
              and gp["safety"]["score"] == 2)
     print(f"   goal projection: " + " | ".join(
         f"{g}={gp[g]['score']}" for g in GOAL_KEYS) + f" (complete: {leg_k})")
     legs.append(("goal_projection", leg_k))
+    # (k2) THE GENEALOGY: every goal from the beginning, with origin+status
+    leg_k2 = (len(GOAL_REGISTRY) >= 12
+              and all("origin" in v and "status" in v
+                      for v in GOAL_REGISTRY.values())
+              and all(any(g in val.get("projection", "")
+                          for val in GOAL_REGISTRY.values())
+                      for g in GOAL_KEYS if g != "safety")
+              and any(v["status"] == "folded" and v.get("note")
+                      for v in GOAL_REGISTRY.values())
+              and any(v["status"] == "dormant" for v in GOAL_REGISTRY.values()))
+    print(f"   genealogy: {len(GOAL_REGISTRY)} goals recorded "
+          f"(active {sum(1 for v in GOAL_REGISTRY.values() if v['status'] == 'active')}) "
+          f"(complete+traced: {leg_k2})")
+    legs.append(("goal_genealogy", leg_k2))
     # (l) GI index: a lesson-bank increase must RAISE the index (monotone-in)
     gi1 = gi_score(st)
     st["lessons"]["count"] = 5

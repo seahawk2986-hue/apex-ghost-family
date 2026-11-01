@@ -180,6 +180,22 @@
    "wins": 0,
    "mines": 0,
    "reqs": 0
+  },
+  "g9_0": {
+   "params": {
+    "ghost_cc_leads": 156,
+    "ghost_events": 66,
+    "ghost_trending": 36,
+    "ghost_wiki_leads": 64,
+    "ghost_wayback_leads": 100,
+    "ghost_queue_mines_to_farm": 25,
+    "ghost_min_stars": 303
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev2_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
   }
  },
  "family": {
@@ -202,7 +218,7 @@
   "recruit_bonus": 1.0
  },
  "upward": {
-  "ts": "2026-11-01 09:03:22",
+  "ts": "2026-11-01 09:05:43",
   "alarms": 0,
   "genes_front": [
    "base"
@@ -219,6 +235,7 @@
    "money": 0.0,
    "life": 129.0,
    "recruits": 6.0,
+   "jobs": 213.0,
    "safety": 2.0
   },
   "ascent_last": 3.987
