@@ -171,10 +171,10 @@ class ApexMemory:
                     st[k] += 1
                 st["last"] = e.get("text", "")[:140]
                 if k == "lesson":
-                    lessons.append(txt[:180])
-                if e.get("meta", {}).get("gym") or txt.startswith("GYM["):
+                    lessons.append(e.get("text", "")[:180])
+                if e.get("meta", {}).get("gym") or (e.get("text", "")).startswith("GYM["):
                     gym_stats["drills"] += 1
-                    gym_stats["gains"] += 1 if "gain" in txt else 0
+                    gym_stats["gains"] += 1 if "gain" in (e.get("text", "")) else 0
                 order.append(fn)
             made = 0
             if gym_stats["drills"]:

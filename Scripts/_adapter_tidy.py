@@ -12,9 +12,11 @@ AD = r"C:\Users\seaha\Apex-Adapter"
 SCRATCH = os.path.join(AD, "Scratch")
 os.makedirs(SCRATCH, exist_ok=True)
 PAT = re.compile(
-    r"^(apply_|fix_|wire_|diag_|probe_|patch_|check_|remove_|restore_|repair_|update_|finish_|close_|flip_|stop_|test_|the_|print_|sample_|spawn_|light_|bulletproof_|cancel_|frontier_|hub_|skills_|pf_|disk_|build_|delivery_|closure|cleanup_|chat_v2|fetch_|v2_|agency_|apex_v2|birth_|scrape_|run_|unwrap_|slim_|template_|economy_|money_|first_training|training_|shift_|isolation_|lane_|import_|system_|vram_|evolution_|final_|restart_watchdog|audit|game_inv)", re.I)
+    r"^(apply_|fix_|wire_|diag_|probe_|patch_|check_|remove_|restore_|repair_|update_|finish_|close_|flip_|stop_|test_|the_|print_|sample_|spawn_|light_|bulletproof_|cancel_|frontier_|hub_|skills_|pf_|disk_|build_|delivery_|closure|cleanup_|chat_v2|fetch_|v2_|agency_|apex_v2|birth_|scrape_|run_|unwrap_|slim_|template_|economy_|money_|first_training|training_|shift_|isolation_|lane_|import_|system_|vram_|evolution_|final_|restart_watchdog|audit|game_inv|sandbox_l|test_r)", re.I)
 LIVE_GUARD = {"v2_job_engine.py", "v2_job_engine_FINAL_audit.py",
-              "wire_heavy_rewards.py", "player_scan.py"}
+              "wire_heavy_rewards.py", "player_scan.py",
+              "ApexWebScraper.py", "run_apex_evolution.py",
+              "PublishMcp.py", "ScanMechanisms.py"}
 moved, kept = 0, 0
 for fn in sorted(os.listdir(AD)):
     p = os.path.join(AD, fn)

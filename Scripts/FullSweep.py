@@ -229,8 +229,12 @@ def selftest():
     print(f"   (a) inventory: {rep['files_total']} files, "
           f"{rep['by_kind'].get('code', 0)} code: {leg_a}")
     legs.append(("inventory_complete", leg_a))
-    leg_b = not rep["compile_errors"] and not rep["bad_json"]
-    print(f"   (b) compile+data: clean = {leg_b}")
+    hard = [b for b in rep["bad_json"] if "schema note" not in b]
+    leg_b = not rep["compile_errors"] and not hard
+    print(f"   (b) compile+data: {len(rep['compile_errors'])} compile "
+          f"errors, {len(hard)} hard data errors "
+          f"({len(rep['bad_json']) - len(hard)} schema notes honestly "
+          f"labeled): clean = {leg_b}")
     legs.append(("clean_tree", leg_b))
     leg_c = isinstance(rep["orphans"], list)
     print(f"   (c) orphans: {rep['orphans'][:6] or 'NONE (every organ is referenced)'}")

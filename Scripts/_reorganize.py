@@ -73,8 +73,14 @@ for fn in sorted(os.listdir(S)):
 # the ROOT-level one-shots
 ROOT_ONESHOTS = {"apply_triple.py", "game_inventory.py", "template_calc.py",
                  "sample_scraper.py"}
+# THE LIVE GUARD (learned the hard way tonight: the pattern caught the LIVE
+# chat server - these ROOT files are NEVER scratch):
+LIVE_ROOT = {"run_apex_evolution.py", "test_reward.py", "ApexInstaller.py",
+             "ApexIPCEngine.py", "ApexMemory.py", "ApexNetScraper.py",
+             "ApexPacing.py", "ApexWebScraper.py", "optimized_agent.py",
+             "TrainingCalc.py", "TrainingLogParser.py", "TrainingMinStack.py"}
 for fn in sorted(os.listdir(ROOT)):
-    if not fn.endswith(".py"):
+    if not fn.endswith(".py") or fn in LIVE_ROOT:
         continue
     low = fn.lower()
     if fn in ROOT_ONESHOTS or re.match(r"^2026\d{4}_", fn) \
