@@ -1,0 +1,13 @@
+{
+ "seeded": "2026-10-31 21:50:02",
+ "alpha": 0.3,
+ "ev": {
+  "archive_pull": 0.553,
+  "upgrader": 0.6,
+  "conversion": 0.3,
+  "gauntlet": 0.45,
+  "reflexion": 0.4,
+  "mining": 0.15
+ },
+ "updated": "2026-10-31 21:51:03"
+}
