@@ -1547,11 +1547,9 @@ def talk_api(t: TalkMsg):
         sys.path.insert(0, os.path.join(R, "Scripts"))
         import CrossBrain as _XB
         reply = _XB.ask(prompt, task_class="chat", max_tokens=800)
-        if reply:
-            log("system", "chat served by: gpt-oss-120b (groq)")
-        else:
-            log("system", "chat served by: the FALLBACK floor (the "
-                          "groq's rate-moment = the honest candor)")
+        log("system", "chat served by: " + ("gpt-oss-120b (groq)" if reply
+                                            else "the FALLBACK floor (the "
+                                            "groq's rate-moment)"))
     except Exception as _e:
         log("system", f"chat-lock drop: {str(_e)[:70]} (the qwen-floor)")
     if not reply:

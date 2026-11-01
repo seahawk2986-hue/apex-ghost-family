@@ -550,3 +550,5 @@
 {"id": "04ad19019bd7", "ts": "2026-11-01 14:30:06", "kind": "evolution_pass", "text": "ApexPacing.py pass 1/3 scored 95 (SUCCESS)", "meta": {"file": "ApexPacing.py"}, "imp": 0.8333333333333334}
 {"id": "f5099d13578d", "ts": "2026-11-01 14:30:20", "kind": "calibration", "text": "ApexPacing.py pass 2 predicted gain, actual loss (strategy=minimal)", "meta": {"file": "ApexPacing.py", "predicted": "gain", "actual": "loss", "strategy": "minimal"}, "imp": 0.8333333333333334}
 {"id": "110b0dff2cc3", "ts": "2026-11-01 14:30:20", "kind": "evolution_pass", "text": "ApexPacing.py pass 2/3 scored 2 (CRASHED)", "meta": {"file": "ApexPacing.py"}, "imp": 0.8333333333333334}
+{"id": "af61f90912d9", "ts": "2026-11-01 14:30:33", "kind": "calibration", "text": "ApexPacing.py pass 3 predicted gain, actual loss (strategy=minimal)", "meta": {"file": "ApexPacing.py", "predicted": "gain", "actual": "loss", "strategy": "minimal"}, "imp": 0.8333333333333334}
+{"id": "c1a130d30317", "ts": "2026-11-01 14:30:33", "kind": "evolution_pass", "text": "ApexPacing.py pass 3/3 scored 2 (CRASHED)", "meta": {"file": "ApexPacing.py"}, "imp": 0.8333333333333334}
