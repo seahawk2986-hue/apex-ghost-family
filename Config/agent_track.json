@@ -1,8 +1,8 @@
 {
  "local-coder": {
-  "delivered": 20,
+  "delivered": 24,
   "failed": 1,
-  "rate": 0.95
+  "rate": 0.96
  },
  "local-fast": {
   "delivered": 1,

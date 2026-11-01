@@ -53,7 +53,8 @@ def run():
                     + ". Rank the TOP 3 to set up for an agent that wants to "
                     "EARN via security/code work on a 16GB Windows box. "
                     "Reply ONLY JSON: {\"top\": [\"family:reason\", ...]}",
-                    max_tokens=400, purpose="the stage judge")
+                    max_tokens=400, purpose="the stage judge",
+                    models=("groq", "local-coder", "local-fast"))
         if r:
             out["additions"].append({"add": "stage-judge",
                                      "answer": STRIP_PATTERN.sub("", r)[:700]})
@@ -67,7 +68,8 @@ def run():
                      ". Which ONE class earns the FIRST real dollar "
                      "fastest given the evidence counts? Reply ONLY: "
                      "CLASS + <=120 chars why.", max_tokens=200,
-                     purpose="the job-fit judge")
+                     purpose="the job-fit judge",
+                     models=("groq", "local-coder", "local-fast"))
         if r2:
             out["additions"].append({"add": "job-fit-judge",
                                      "answer": strip_junk(r2)[:350]})
@@ -78,7 +80,7 @@ def run():
               "will definitely fix everything somehow.")
     r3 = CB.chat("Rate this draft 0-10 for CONCRETE EVIDENCE versus vague "
                  "promising: '" + sample + "'. Reply ONLY the number.",
-                 max_tokens=24, purpose="the deception brain-leg")
+                 max_tokens=24, purpose="the deception brain-leg", models=("groq", "local-coder", "local-fast"))
     if r3:
         out["additions"].append({"add": "deception-brain-leg",
                                  "judged_sample": r3[:80],

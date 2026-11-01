@@ -60,7 +60,8 @@ def step_conversion():
                     "language/tooling, (b) the one-file entry point's "
                     "likely path pattern, (c) a <=120-char plan. Reply "
                     "ONLY JSON: " + trio, max_tokens=400,
-                    purpose="the conversion triage")
+                    purpose="the conversion triage",
+                    models=("groq", "local-coder", "local-fast"))
         if r:
             out["converted"] += 1
     return out

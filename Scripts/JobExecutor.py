@@ -122,7 +122,8 @@ def translate_job(repo, issue_no, tok):
                      f"keep placeholders/format specifiers intact; output "
                      f"ONLY JSON (the same key structure, translated "
                      f"values):\n{text[:7000]}",
-                     max_tokens=4000, purpose="the translation")
+                     max_tokens=4000, purpose="the translation",
+                      models=("groq", "local-coder", "local-fast"))
         if not r2:
             continue
         t2 = STRIP.sub("", r2).strip().strip("`")

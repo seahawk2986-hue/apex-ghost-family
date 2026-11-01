@@ -87,7 +87,7 @@ def run():
                  "buttons/messages/titles) from the code. Reply ONLY "
                  'JSON: {"strings": [{"key": "snake_case_id", "en": "the '
                  'exact current text"}]} — max 50 strings:\n' + code,
-                 max_tokens=3000, purpose="the strings-extract")
+                 max_tokens=3000, purpose="the strings-extract", models=("groq", "local-coder", "local-fast"))
     if not r3:
         return None
     strings = []
@@ -106,7 +106,7 @@ def run():
     r4 = CB.chat("Translate to Brazilian Portuguese (pt-BR); keep keys: "
                  + json.dumps(en, ensure_ascii=False)[:5000] +
                  " Reply ONLY the JSON table.", max_tokens=3500,
-                 purpose="the translate")
+                 purpose="the translate", models=("groq", "local-coder", "local-fast"))
     if r4:
         m2 = re.search(r"\{[\s\S]*\}", STRIP.sub("", r4))
         try:

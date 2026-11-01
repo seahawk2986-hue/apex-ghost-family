@@ -101,7 +101,9 @@ def run():
               "targets, EXACTLY matching the shapes in the files shown. "
               "Reply ONLY JSON: {\"files\": {\"<path>\": \"<schema "
               "content>\"}} (2-4 schemas).")
-    r2 = CB.chat(prompt, max_tokens=3500, purpose="schema-draft")
+    r2 = CB.chat(prompt, max_tokens=3500, purpose="schema-draft",
+                 models=("groq", "local-coder", "local-fast"),
+                 resp_json=True)
     if not r2:
         return None
     t2 = STRIP.sub("", r2).strip().strip("`")

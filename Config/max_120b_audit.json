@@ -1,0 +1,28 @@
+{
+ "ts": "2026-11-01 13:18:09",
+ "domains": {
+  "code_review": {
+   "ok": true,
+   "latency_s": 3.41,
+   "note": "```json\n{\n  \"ship\": true,\n  \"why\": \"The diff improves error handling by raising a FileNotFoundError "
+  },
+  "schema_judge": {
+   "ok": true,
+   "latency_s": 3.23,
+   "note": "```json\n{\n  \"sound\": false,\n  \"why\": \"The pattern only allows numeric strings, but it does not enfor"
+  },
+  "claim_ambiguity": {
+   "ok": true,
+   "latency_s": 3.29,
+   "note": "```json\n{\n  \"skip\": true,\n  \"why\": \"The author promised to fix this next week.\"\n}\n```"
+  },
+  "copy_check": {
+   "ok": true,
+   "latency_s": 15.34,
+   "note": "```json\n{\n  \"honest\": false,\n  \"why\": \"The marketing line suggests instant payment, but the family d"
+  }
+ },
+ "lived": 4,
+ "verdict": "MAX-UTILIZED",
+ "cost": "$0.00"
+}
