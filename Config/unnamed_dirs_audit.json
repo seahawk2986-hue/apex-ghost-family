@@ -1,0 +1,96 @@
+{
+ "ts": "2026-11-01",
+ "dirs": {
+  "edge_hub": {
+   "exists": true,
+   "files": 1,
+   "data_ok": 0,
+   "data_bad": [],
+   "py_ok": 0,
+   "py_bad": [],
+   "sample": [
+    "worker.js"
+   ]
+  },
+  "portfolio": {
+   "exists": true,
+   "files": 3,
+   "data_ok": 0,
+   "data_bad": [],
+   "py_ok": 1,
+   "py_bad": [],
+   "sample": [
+    "sample_logo.svg",
+    "sample_scraper.py",
+    "sample_webpage.html"
+   ]
+  },
+  "hub_kits": {
+   "exists": true,
+   "files": 2,
+   "data_ok": 0,
+   "data_bad": [],
+   "py_ok": 0,
+   "py_bad": [],
+   "sample": [
+    "HUBS_WANTED.md",
+    "README.md"
+   ]
+  },
+  "skills": {
+   "exists": true,
+   "files": 2,
+   "data_ok": 0,
+   "data_bad": [],
+   "py_ok": 1,
+   "py_bad": [],
+   "sample": [
+    "template_calc.py",
+    "template_calc.cpython-314.pyc"
+   ]
+  },
+  "swarm_cache": {
+   "exists": true,
+   "files": 0,
+   "data_ok": 0,
+   "data_bad": [],
+   "py_ok": 0,
+   "py_bad": [],
+   "sample": []
+  },
+  "strategic_vault": {
+   "exists": true,
+   "files": 2,
+   "data_ok": 0,
+   "data_bad": [],
+   "py_ok": 0,
+   "py_bad": [],
+   "sample": [
+    "meta_directive.txt",
+    "onboarding_handshake.txt"
+   ]
+  },
+  "swarm_debates": {
+   "exists": true,
+   "files": 1,
+   "data_ok": 0,
+   "data_bad": [],
+   "py_ok": 0,
+   "py_bad": [],
+   "sample": [
+    "debate_template.txt"
+   ]
+  },
+  "SkillLibrary": {
+   "exists": true,
+   "files": 1,
+   "data_ok": 0,
+   "data_bad": [],
+   "py_ok": 0,
+   "py_bad": [],
+   "sample": [
+    "proven_methods.txt"
+   ]
+  }
+ }
+}

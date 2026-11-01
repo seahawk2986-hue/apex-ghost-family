@@ -205,10 +205,15 @@ def everything(files):
             text = open(p, encoding="utf-8-sig", errors="replace").read()
         except Exception:
             continue
+        fn = os.path.basename(f["path"]).lower()
+        if fn in (".env", ".env.example"):
+            # THE SECRETS LAW (the sweep's honest bug fixed): env files are
+            # NEVER read into the scanner's memory - presence-tracked only;
+            # contents stay unread, keys never touched.
+            text = ""
         for k, pat in CR.CLASSES.items():
             if pat.search(text):
                 cls_files[k].append(f["path"])
-        fn = os.path.basename(f["path"]).lower()
         if f["kind"] == "stage-artifact":
             parts = f["path"].replace("\\", "/").split("/")
             if "skill_stage" in parts:
