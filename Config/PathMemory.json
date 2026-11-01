@@ -196,6 +196,38 @@
    "wins": 0,
    "mines": 0,
    "reqs": 0
+  },
+  "g10_2": {
+   "params": {
+    "ghost_cc_leads": 196,
+    "ghost_events": 71,
+    "ghost_trending": 53,
+    "ghost_wiki_leads": 52,
+    "ghost_wayback_leads": 65,
+    "ghost_queue_mines_to_farm": 28,
+    "ghost_min_stars": 350
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev2_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g11_0": {
+   "params": {
+    "ghost_cc_leads": 236,
+    "ghost_events": 51,
+    "ghost_trending": 44,
+    "ghost_wiki_leads": 71,
+    "ghost_wayback_leads": 104,
+    "ghost_queue_mines_to_farm": 27,
+    "ghost_min_stars": 238
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev2_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
   }
  },
  "family": {
@@ -218,7 +250,7 @@
   "recruit_bonus": 1.0
  },
  "upward": {
-  "ts": "2026-11-01 09:30:28",
+  "ts": "2026-11-01 09:39:35",
   "alarms": 0,
   "genes_front": [
    "base"
