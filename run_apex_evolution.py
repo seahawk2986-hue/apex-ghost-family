@@ -1538,9 +1538,14 @@ def talk_api(t: TalkMsg):
         "remember something, acknowledge it plainly.\n\n"
         f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n\nLIBRARY SKILLS:{skill_hits}\n\n"
         f"ANDREW SAYS:\n{msg}\n\nREPLY:")
-    reply = query_qw(prompt)
-    if not reply and cloud_ask:
-        reply = cloud_ask(prompt, max_tokens=700)
+    # THE FOUNDER'S CHAT-LOCK (the blind-eval's #1 = the 120b-first):
+    try:
+        import CrossBrain as _XB
+        reply = _XB.ask(prompt, task_class="chat", max_tokens=800)
+    except Exception:
+        reply = query_qw(prompt)
+        if not reply and cloud_ask:
+            reply = cloud_ask(prompt, max_tokens=700)
     try:
         MEM.record_event("conversation", f"Andrew: {msg[:150]} | Apex replied ({len(reply or '')} chars)",
                          talk=True, message=msg[:800], reply=(reply or "")[:3000])

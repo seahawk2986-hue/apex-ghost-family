@@ -3,7 +3,7 @@ import time
 import urllib.request
 
 for attempt in range(3):
-    time.sleep(60)
+    time.sleep(90)
     try:
         r = urllib.request.urlopen(
             "https://seahawk2986-hue.github.io/apex-ghost-family/",
