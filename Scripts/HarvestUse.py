@@ -21,9 +21,16 @@ INDEX = os.path.join(ROOT, "Config", "HarvestIndex.jsonl")
 PATHMEM = os.path.join(ROOT, "Config", "PathMemory.json")
 UA = {"Content-Type": "application/json"}
 EMB_MODEL = "text-embedding-nomic-embed-text-v1.5"
+_EMB_STATE = {"ok": None, "ts": 0.0}
 
 
 def embed(texts, cap=8):
+    """Embeddings with a circuit breaker: when the embedder is down (model
+    not loaded), it must not tax EVERY consult with a 30s dead wait - try
+    again at most once per 10 min, then degrade honestly (None vectors)."""
+    now = time.time()
+    if _EMB_STATE["ok"] is False and now - _EMB_STATE["ts"] < 600:
+        return [None] * min(len(texts), cap)
     out = []
     for i in range(0, min(len(texts), cap), 6):
         chunk = [t[:1500] for t in texts[i:i + 6]]
@@ -32,11 +39,18 @@ def embed(texts, cap=8):
                 "http://127.0.0.1:1234/v1/embeddings",
                 data=json.dumps({"model": EMB_MODEL, "input": chunk}).encode(),
                 headers=UA)
-            with urllib.request.urlopen(req, timeout=30) as r:
+            with urllib.request.urlopen(req, timeout=8) as r:
                 data = json.loads(r.read().decode("utf-8", "ignore"))
-            out += [d["embedding"] for d in data.get("data", [])]
+            got = [d["embedding"] for d in data.get("data", [])]
+            out += got
+            while len(out) < len(chunk):   # short reply: pad so zip stays aligned
+                out.append(None)
         except Exception:
             out += [None] * len(chunk)
+    if out and all(v is None for v in out):
+        _EMB_STATE.update({"ok": False, "ts": time.time()})
+    elif any(v is not None for v in out):
+        _EMB_STATE.update({"ok": True, "ts": time.time()})
     return out
 
 

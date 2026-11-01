@@ -41,4 +41,6 @@ json.dump(pkt, open(PKT, "w", encoding="utf-8"), indent=1)
 log.append("OK   packet-payout-door")
 
 print("\n".join(log))
-print("PAYOUT RAIL LIVE: every earned dollar announces in the chat + routes to [REDACTED-PAYPAL]")
+print("PAYOUT RAIL (DESIGN ONLY): destination RECORDED in ledger/packet; NO payment rail is implemented; "
+      "nothing moves money (verified by repo grep); earned tally currently $"
+      + f"{0.0:.2f} by design until real external value lands.")

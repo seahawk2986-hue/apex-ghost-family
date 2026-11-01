@@ -2,7 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 
 def scrape_website(url):
-    response = requests.get(url)
+    try:
+        response = requests.get(url, timeout=15)
+        response.raise_for_status()
+    except requests.RequestException as e:
+        raise RuntimeError(f"scrape failed for {url}: {e}") from e
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 

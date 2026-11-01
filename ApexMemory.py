@@ -72,7 +72,7 @@ def _recency(ts_str):
 class ApexMemory:
     def __init__(self):
         self.memory = {}  # Tier 1: working memory
-        self._lock = threading.Lock()
+        self._lock = threading.RLock()
         self._embed_ok = None
         # Instance-level paths (tests/other hosts can redirect safely)
         self.episodic_path = EPISODIC_PATH
@@ -214,17 +214,23 @@ class ApexMemory:
 
     # ------------------------------------------------------------------ T3
     def _embed(self, text):
+        # circuit breaker: a dead embedder must not tax EVERY call with a
+        # dead wait - retry at most once per 10 min, degrade to keyword-only
+        if getattr(self, "_embed_ok", None) is False and time.time() - getattr(self, "_embed_failed_at", 0.0) < 600:
+            return None
         try:
             r = requests.post(EMBED_URL, json={"model": EMBED_MODEL, "input": text[:4000]},
-                              timeout=20)
+                              timeout=8)
             if r.status_code == 200:
                 data = r.json().get("data", [])
                 if data and isinstance(data, list):
                     self._embed_ok = True
                     return data[0].get("embedding")
             self._embed_ok = False
+            self._embed_failed_at = time.time()
         except requests.RequestException:
             self._embed_ok = False
+            self._embed_failed_at = time.time()
         return None
 
     def _load_semantic(self):
@@ -253,18 +259,25 @@ class ApexMemory:
         vec = self._embed(rec["text"])
         if vec:
             rec["vec"] = vec
-            # Deduplication pass
-            for row in self._load_semantic():
-                if "vec" in row and _cosine(vec, row["vec"]) >= DEDUP_SIM:
-                    row["ts"] = rec["ts"]          # refresh recency
-                    row["acc"] = row.get("acc", 0) + 1
-                    self._persist(self._load_semantic())
-                    return row["id"]
-        rows = self._load_semantic()
-        rows.append(rec)
-        rows = rows[-MAX_SEMANTIC_RECORDS:]
-        self._persist(rows)
-        return rec["id"]
+        hit_id = None
+        with self._lock:                   # RLock + single writer: the concurrent-
+            if vec:                        # chats lost-update race dies here
+                # Deduplication pass
+                rows_for_dedup = self._load_semantic()
+                for row in rows_for_dedup:
+                    if "vec" in row and _cosine(vec, row["vec"]) >= DEDUP_SIM:
+                        row["ts"] = rec["ts"]          # refresh recency
+                        row["acc"] = row.get("acc", 0) + 1
+                        self._persist(rows_for_dedup)  # persist the MUTATED rows
+                        hit_id = row["id"]             # (old code re-loaded + lost it)
+                        break
+            if hit_id is None:
+                rows = self._load_semantic()
+                rows.append(rec)
+                rows = rows[-MAX_SEMANTIC_RECORDS:]
+                self._persist(rows)
+                hit_id = rec["id"]
+        return hit_id
 
     def _persist(self, rows):
         try:
@@ -279,9 +292,8 @@ class ApexMemory:
         """Hybrid retrieval: cosine + keyword + importance + recency fusion.
         `min_similarity` applies to the vector-cosine truth channel; keyword-
         only rows (embeddings offline) fall back to overlap filtering."""
-        rows = self._load_semantic()
-        if kind:
-            rows = [r for r in rows if r.get("kind") == kind]
+        full_rows = self._load_semantic()          # NEVER persist a filtered view
+        rows = full_rows if not kind else [r for r in full_rows if r.get("kind") == kind]
         if not rows:
             return []
         qvec = self._embed(query)
@@ -305,9 +317,9 @@ class ApexMemory:
                         "meta": r.get("meta", {})})
         if out:
             try:
-                self._persist(self._load_semantic())
-            except Exception:
-                pass
+                self._persist(full_rows)   # persist the mutated ORIGINALS (the old
+            except Exception:              # code re-loaded a fresh copy and lost
+                pass                       # every reinforcement silently)
         return out
 
 

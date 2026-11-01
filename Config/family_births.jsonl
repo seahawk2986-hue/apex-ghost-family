@@ -1,0 +1,7 @@
+{"ts": "2026-10-31 16:53:21", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-10-31 16:53:24", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-10-31 16:53:27", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-10-31 17:53:24", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-10-31 18:53:21", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-10-31 18:53:24", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-10-31 18:53:27", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}

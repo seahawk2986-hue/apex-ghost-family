@@ -49,7 +49,53 @@ _HG = _HG_cls() if _HG_cls else None
 L = os.path.join(R, "Logs")
 Q, M, I = os.path.join(R, "apex_tasks.txt"), os.path.join(L, "reward_telemetry.json"), os.path.join(R, "inbound_adaptations.txt")
 U = os.environ.get("APEX_LLM_URL", "http://127.0.0.1:1234/v1/chat/completions")
+OLLAMA_U = os.environ.get("APEX_OLLAMA_U", "http://127.0.0.1:11434/v1/chat/completions")
+EMBED_IGNORE = ("text-embedding",)
 os.makedirs(L, exist_ok=True)
+
+_BRAIN_CFG = {"ts": 0.0}
+
+
+def brain_ready(refresh=False):
+    """THE ONE BRAIN CONFIG (the chat-lag fix): serve from the model that is
+    ACTUALLY loaded - never from a catalogue entry. LM Studio first (state
+    read from api/v0, embedding models excluded), else Ollama's resident
+    (api/ps), else an honest None - so the chat says "offline" instead of
+    burning a 20-minute retry ladder trying to JIT-load a model the RAM
+    cannot hold. Cached 60 s so a probe is not paid on every message."""
+    cfg = _BRAIN_CFG
+    if not refresh and cfg.get("model") and time.time() - cfg.get("ts", 0) < 60:
+        return cfg.get("url"), cfg.get("model"), cfg.get("kind")
+    cfg.update({"ts": time.time(), "url": None, "model": None, "kind": None})
+    try:
+        r = requests.get("http://127.0.0.1:1234/api/v0/models", timeout=4)
+        for m in r.json().get("data", []):
+            mid = m.get("id") or ""
+            if m.get("state") == "loaded" and not any(k in mid for k in EMBED_IGNORE):
+                cfg.update({"url": U, "model": mid, "kind": "lmstudio"})
+                break
+    except Exception:
+        pass
+    if not cfg.get("model"):
+        try:
+            r2 = requests.get("http://127.0.0.1:11434/api/ps", timeout=4)
+            ps = r2.json().get("models", [])
+            if ps:
+                cfg.update({"url": OLLAMA_U, "model": ps[0].get("name"), "kind": "ollama"})
+        except Exception:
+            pass
+    if not cfg.get("model"):
+        log("system", "brain_ready: NO local model loaded (both servers checked) - "
+                      "the chat stays honestly offline rather than hanging")
+    return cfg.get("url"), cfg.get("model"), cfg.get("kind")
+
+
+def _strip_think(text):
+    """Reasoning models (deepseek-r1 class) burn long think-chains first -
+    the caller wants the ANSWER, not the transcript."""
+    if "<think>" in text and "</think>" in text:
+        return text.split("</think>")[-1].strip()
+    return text.strip()
 
 class FriendPayload(BaseModel): message: str
 
@@ -63,72 +109,90 @@ def log(lyr, msg):
     except OSError:
         pass  # logging must never crash the loop
 
-def query_ds(p):
+def query_ds(p, max_tokens=800, timeout_s=90):
+    """The planner call - brain-aligned and bounded: one local attempt into
+    brain_ready()'s LIVE model, then a bounded cloud burst. (The old ladder
+    waited up to 300 s on a model that was not even loaded.)"""
+    url, model, kind = brain_ready()
+    if not url:
+        return ""
     try:
-        r = requests.post(U, json={"model": "deepseek-r1-distill-llama-8b", "messages": [{"role": "user", "content": p}], "temperature": 0.1, "stream": False, "max_tokens": 800}, timeout=300)
+        r = requests.post(url, json={"model": model,
+                                     "messages": [{"role": "user", "content": p}],
+                                     "temperature": 0.1, "stream": False,
+                                     "max_tokens": max_tokens}, timeout=timeout_s)
         if r.status_code == 200:
-            choices = r.json().get("choices", [])
-            if choices and isinstance(choices, list):
-                return choices[0].get("message", {}).get("content", "").strip()
-        # non-200 (model unloaded/unloaded mid-call) is a drop too - never silent
-        log("system", f"DeepSeek HTTP {r.status_code} - bursting planner thought to cloud lanes")
-        if cloud_ask: return cloud_ask(p, max_tokens=700)
+            txt = (((r.json().get("choices") or [{}])[0].get("message", {}) or {})
+                   .get("content", "")) or ""
+            return _strip_think(txt)
+        log("system", f"planner brain HTTP {r.status_code} - bursting to cloud lanes")
     except Exception as e:
-        log("system", f"DeepSeek drop: {e} - bursting planner thought to cloud lanes")
-        if cloud_ask: return cloud_ask(p, max_tokens=700)
+        log("system", f"planner brain drop: {str(e)[:90]} - bursting to cloud lanes")
+    if cloud_ask:
+        try:
+            return cloud_ask(p, max_tokens=700) or ""
+        except Exception:
+            return ""
     return ""
 
 # Identity anchor for every model call in the chat brain.
-# Honest AND brand-correct: Apex is the agent; Qwen3-8B / Qwen2.5-14B are engines it runs on.
+# Honest AND engine-agnostic: which model is ACTUALLY serving changes when
+# Andrew loads/unloads - Apex never hard-claims an engine that isn't running.
 SYSTEM_IDENTITY = (
-    "You are Apex, a personal autonomous software agent created by Andrew HIKE (your founder and owner) and working for Andrew "
-    "(and the room partners he authorizes). You are NOT a generic assistant and NOT plain Qwen: "
-    "you are Apex. Your reasoning engine is Qwen3-8B and your coding engine is Qwen2.5-14B, both "
-    "running locally on Andrew's machine via LM Studio - say so openly when asked for details, "
-    "the way you'd name a tool you're using. When asked what you are or which model runs you, "
-    "answer in first person as Apex (optionally crediting your engines), never as a stock Qwen "
-    "assistant, and never as a cloud model. Stay direct, honest, and concise; never claim "
-    "unverified results."
+    "You are Apex, a personal autonomous software agent created by Andrew HIKE (your founder and "
+    "owner) and working for Andrew (and the room partners he authorizes). You are NOT a generic "
+    "assistant and NOT a stock Qwen or any cloud model: you are Apex. Your engines run locally on "
+    "Andrew's machine and are named honestly on request - which specific engine is serving right "
+    "now may differ from what he last loaded, so refer to yourself as Apex and let him ask for "
+    "engine details. Stay direct, honest, and concise; never claim unverified results."
 )
 
 LAST_BRAIN_REASON = "ok (no failed calls this session)"
 
 def query_qw(p, schema=False):
     global LAST_BRAIN_REASON
-    payload = {"model": "qwen3-8b", "messages": [{"role": "system", "content": SYSTEM_IDENTITY}, {"role": "user", "content": p}], "temperature": 0.2, "stream": False}
+    url, model, kind = brain_ready()
+    if not url:
+        LAST_BRAIN_REASON = "no local brain loaded (both servers checked)"
+        log("system", "query_qw refused honestly: nothing is loaded - fix by loading a model, not by hanging")
+        return ""
+    payload = {"model": model, "messages": [{"role": "system", "content": SYSTEM_IDENTITY}, {"role": "user", "content": p}], "temperature": 0.2, "stream": False}
     if schema: payload["response_format"] = {"type": "json_object"}
 
     def _call(mt):
         payload["max_tokens"] = mt
+        t0 = time.time()
         try:
-            r = requests.post(U, json=payload, timeout=300.0)
+            r = requests.post(url, json=payload, timeout=45.0)
             if r.status_code == 200:
-                choice = (r.json().get("choices") or [{}])
-                c = (choice[0].get("message", {}) or {}).get("content", "") or ""
-                return "ok", c.strip()
-            return f"LM Studio HTTP {r.status_code}", ""
+                c = ((r.json().get("choices") or [{}])[0].get("message", {}) or {}).get("content", "") or ""
+                LAST_BRAIN_REASON = f"{kind}/{model} ok in {time.time() - t0:.0f}s (max_tokens={mt})"
+                return "ok", _strip_think(c)
+            return f"brain HTTP {r.status_code}", ""
         except Exception as e:
-            return f"local brain unreachable: {str(e)[:90]}", ""
+            return f"gave up after {time.time() - t0:.0f}s: {str(e)[:90]}", ""
 
-    # reasoning models can burn the first token budget on think tokens (retry
-    # bigger); HTTP 400 can be the TTL-expiry/JIT-reload race (wait, re-call)
+    # TWO attempts, bounded (~95 s worst case) - the old 4x300s ladder was
+    # the lag itself; a slow first call now yields ONE honest retry.
     reasons, text = [], ""
-    for mt, wait_s in ((1800, 0.0), (2600, 0.0), (1800, 5.0), (2600, 0.0)):
+    for mt, wait_s in ((500, 0.0), (800, 2.0)):
         if wait_s:
             time.sleep(wait_s)
         reason, text = _call(mt)
         if text:
-            LAST_BRAIN_REASON = f"local qwen3-8b ok (max_tokens={mt})"
             return text
         reasons.append(reason if reason != "ok" else "empty content")
     LAST_BRAIN_REASON = " | ".join(reasons[-2:])
-    log("system", f"brain drop ({LAST_BRAIN_REASON}) - bursting to cloud lanes")
+    log("system", f"brain drop ({LAST_BRAIN_REASON}) - bursting to cloud lanes (bounded)")
     if cloud_ask:
-        cr = cloud_ask(p, max_tokens=1600)
+        try:
+            cr = cloud_ask(p, max_tokens=600)
+        except Exception:
+            cr = ""
         if cr:
             LAST_BRAIN_REASON += " -> served by cloud lane"
             return cr
-        LAST_BRAIN_REASON += " -> cloud lanes also returned empty"
+        LAST_BRAIN_REASON += " -> cloud lanes also returned empty/bounded"
     return ""
 
 def _apply_patches(cur_full, patch_out):
@@ -1320,9 +1384,10 @@ def talk_history():
 def talk_status():
     """Live health dots for the console header + the directive text."""
     brain = False
+    model = None
     try:
-        r = requests.get("http://127.0.0.1:1234/v1/models", timeout=4)
-        brain = (r.status_code == 200)
+        _bu, model, _bk = brain_ready()
+        brain = bool(model)
     except Exception:
         brain = False
     adapter = False
@@ -1338,7 +1403,8 @@ def talk_status():
         money = float(_cl.get("earned", 0)) - float(_cl.get("spent", 0))
     except Exception:
         money = 0.0
-    return {"brain": brain, "adapter": adapter, "money_usdc": round(money, 2),
+    return {"brain": brain, "brain_model": model or "none loaded",
+            "adapter": adapter, "money_usdc": round(money, 2),
             "layers": True,  # this route IS the evolution layer
             "directive": ("Apex, tonight you proved your reasoning is your weakest measured "
                           "dimension - and I want that fixed properly. I'm not asking for a verbal "
@@ -1412,18 +1478,6 @@ def talk_api(t: TalkMsg):
         except Exception:
             return {"reply": "Library stats failed - check Config/SkillLibrary.json."}
 
-        try:
-            import threading as _th
-            _th.Thread(target=subprocess.run,
-                       args=([sys.executable, os.path.join(R, "Scripts", "ApexGym.py"),
-                              "--minutes", "3", "--traits", "auto"],),
-                       kwargs={"capture_output": True, "text": True, "timeout": 420},
-                       daemon=True).start()
-        except Exception:
-            return {"reply": "Tried to open the gym and failed - check Logs."}
-        return {"reply": "Gym opened - a short drill set is running now. Score and "
-                         "leaderboard rank update when I finish; misses become lessons "
-                         "in my memory."}
     try:
         lessons = MEM.recall(msg, k=3)
     except Exception:
