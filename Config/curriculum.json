@@ -1,5 +1,48 @@
 {
- "ts": "2026-10-31 21:35:32",
- "verified_count": 0,
- "items": []
+ "ts": "2026-10-31 21:39:40",
+ "verified_count": 5,
+ "items": [
+  {
+   "skill": "gaussian_process_classifier",
+   "repo": "ctgk/PRML",
+   "file": "prml/kernel/gaussian_process_classifier.py",
+   "imports": [
+    "numpy"
+   ],
+   "lines": 37
+  },
+  {
+   "skill": "making_simple_decisions",
+   "repo": "aimacode/aima-python",
+   "file": "aima/making_simple_decisions.py",
+   "imports": [],
+   "lines": 11
+  },
+  {
+   "skill": "naive_bayes",
+   "repo": "rushter/MLAlgorithms",
+   "file": "examples/naive_bayes.py",
+   "imports": [],
+   "lines": 31
+  },
+  {
+   "skill": "01-matrix",
+   "repo": "kamyu104/LeetCode-Solutions",
+   "file": "Python/01-matrix.py",
+   "imports": [
+    "collections"
+   ],
+   "lines": 93
+  },
+  {
+   "skill": "__init__",
+   "repo": "microsoft/SynapseML",
+   "file": "cognitive/src/main/python/synapse/ml/cognitive/__init__.py",
+   "imports": [
+    "sys",
+    "warnings"
+   ],
+   "lines": 15
+  }
+ ]
 }

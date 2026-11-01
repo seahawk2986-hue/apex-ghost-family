@@ -661,3 +661,13 @@
 {"id": "3538d56f9c5c", "ts": "2026-10-31 21:35:11", "kind": "error", "text": "Coder failed on TrainingLogParser.py: empty/blocked output", "meta": {}, "imp": 0.75}
 {"id": "52e5b12c8667", "ts": "2026-10-31 21:35:11", "kind": "error", "text": "Hardware pacing: host under strain (RAM guard: 1.90GB free < 2.0GB); Apex is pacing itself down.", "meta": {}, "imp": 0.75}
 {"id": "048a724113de", "ts": "2026-10-31 21:35:59", "kind": "success", "text": "GHOST SWARM: 194 points for verified productive work.", "meta": {"ghost_points": 194, "total": 103268.5}, "imp": 0.7}
+{"id": "2cf7097da0e4", "ts": "2026-10-31 21:36:39", "kind": "planning_vote", "text": "votes={'traininglogparser.py': 1, 'apexpacing.py': 1, 'apexinstaller.py': 1} modal=traininglogparser.py agree=1/3", "meta": {"file": "TrainingLogParser.py", "agree": 1, "total": 3}, "imp": 0.8333333333333334}
+{"id": "ccbecc50e4d9", "ts": "2026-10-31 21:36:47", "kind": "success", "text": "GHOST SWARM: 330 points for verified productive work.", "meta": {"ghost_points": 330, "total": 103598.5}, "imp": 0.7}
+{"id": "d31dbb1e8a15", "ts": "2026-10-31 21:36:58", "kind": "error", "text": "Coder failed on TrainingLogParser.py: empty/blocked output", "meta": {}, "imp": 0.75}
+{"id": "3c549d5af906", "ts": "2026-10-31 21:37:16", "kind": "success", "text": "GHOST SWARM: 170 points for verified productive work.", "meta": {"ghost_points": 170, "total": 103768.5}, "imp": 0.7}
+{"id": "7a0a4b86ce0e", "ts": "2026-10-31 21:37:50", "kind": "planning_vote", "text": "votes={'traininglogparser.py': 1} modal=traininglogparser.py agree=1/1", "meta": {"file": "TrainingLogParser.py", "agree": 1, "total": 1}, "imp": 0.8333333333333334}
+{"id": "c31c9d4e7f12", "ts": "2026-10-31 21:37:52", "kind": "success", "text": "GHOST SWARM: 170 points for verified productive work.", "meta": {"ghost_points": 170, "total": 103938.5}, "imp": 0.7}
+{"id": "0a614421b8af", "ts": "2026-10-31 21:38:10", "kind": "error", "text": "Coder failed on TrainingLogParser.py: empty/blocked output", "meta": {}, "imp": 0.75}
+{"id": "f4563c98e0e6", "ts": "2026-10-31 21:38:49", "kind": "success", "text": "GHOST SWARM: 186 points for verified productive work.", "meta": {"ghost_points": 186, "total": 104124.5}, "imp": 0.7}
+{"id": "5ec7674b037c", "ts": "2026-10-31 21:39:06", "kind": "planning_vote", "text": "votes={'traininglogparser.py': 1, 'apexpacing.py': 1} modal=traininglogparser.py agree=1/2", "meta": {"file": "TrainingLogParser.py", "agree": 1, "total": 2}, "imp": 0.8333333333333334}
+{"id": "d504f72b5453", "ts": "2026-10-31 21:39:47", "kind": "success", "text": "GHOST SWARM: 186 points for verified productive work.", "meta": {"ghost_points": 186, "total": 104310.5}, "imp": 0.7}
