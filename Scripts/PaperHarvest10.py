@@ -12,7 +12,8 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 
-ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
+ROOT = os.environ.get("APEX_ROOT",
+                      r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed")
 OUT = os.path.join(ROOT, "Config", "papers_2026_tech10.jsonl")
 NS = "{http://www.w3.org/2005/Atom}"
 TARGET = 200
