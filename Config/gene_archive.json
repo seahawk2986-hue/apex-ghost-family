@@ -340,6 +340,42 @@
    "reqs": 0,
    "parent": "base",
    "born": "2026-11-01 10:26:10"
+  },
+  "g18_0": {
+   "genes": {
+    "ghost_cc_leads": 303,
+    "ghost_events": 72,
+    "ghost_trending": 30,
+    "ghost_wiki_leads": 73,
+    "ghost_wayback_leads": 71,
+    "ghost_queue_mines_to_farm": 24,
+    "ghost_min_stars": 343
+   },
+   "fitness": 0.0,
+   "descriptor": "cc6_ev2_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 10:30:19"
+  },
+  "g19_0": {
+   "genes": {
+    "ghost_cc_leads": 278,
+    "ghost_events": 108,
+    "ghost_trending": 38,
+    "ghost_wiki_leads": 73,
+    "ghost_wayback_leads": 110,
+    "ghost_queue_mines_to_farm": 26,
+    "ghost_min_stars": 302
+   },
+   "fitness": 0.0,
+   "descriptor": "cc5_ev4_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 10:30:45"
   }
  },
  "cells": {
@@ -414,10 +450,18 @@
   "cc6_ev3_tr2": {
    "vid": "g17_2",
    "fitness": 0.0
+  },
+  "cc6_ev2_tr1": {
+   "vid": "g18_0",
+   "fitness": 0.0
+  },
+  "cc5_ev4_tr1": {
+   "vid": "g19_0",
+   "fitness": 0.0
   }
  },
  "champion": "base",
- "gen": 18,
+ "gen": 20,
  "pareto_front": [
   "base"
  ],
@@ -459,7 +503,7 @@
  "calibration": {
   "L_test": {
    "drift": 0.203,
-   "n": 64,
+   "n": 72,
    "weight": 0.594
   }
  },

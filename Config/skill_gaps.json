@@ -1,32 +1,27 @@
 {
- "ts": "2026-11-01 10:26:49",
+ "ts": "2026-11-01 10:30:58",
  "needs": 12,
  "library": 322,
  "asks_scanned": 12,
  "canon_titles": 100,
  "gaps": [
   {
-   "term": "dojo",
-   "source": "jobs_inbox x11",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "issues",
+   "term": "first",
    "source": "jobs_inbox x12",
    "serves": "skill_omnivore"
   },
   {
    "term": "lingdojo",
-   "source": "jobs_inbox x11",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "kana",
-   "source": "jobs_inbox x11",
+   "source": "jobs_inbox x10",
    "serves": "skill_omnivore"
   },
   {
    "term": "hacktoberfest",
+   "source": "jobs_inbox x10",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "wanted",
    "source": "jobs_inbox x11",
    "serves": "skill_omnivore"
   },
@@ -36,27 +31,32 @@
    "serves": "skill_omnivore"
   },
   {
-   "term": "wanted",
+   "term": "help",
+   "source": "jobs_inbox x11",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "issues",
    "source": "jobs_inbox x12",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "community",
+   "source": "jobs_inbox x9",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "kana",
+   "source": "jobs_inbox x10",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "dojo",
+   "source": "jobs_inbox x10",
    "serves": "skill_omnivore"
   },
   {
    "term": "https",
-   "source": "jobs_inbox x12",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "false",
-   "source": "jobs_inbox x12",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "first",
-   "source": "jobs_inbox x12",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "help",
    "source": "jobs_inbox x12",
    "serves": "skill_omnivore"
   },
@@ -66,22 +66,17 @@
    "serves": "skill_omnivore"
   },
   {
-   "term": "community",
-   "source": "jobs_inbox x10",
+   "term": "false",
+   "source": "jobs_inbox x12",
    "serves": "skill_omnivore"
   },
   {
    "term": "issu",
-   "source": "jobs_inbox x4",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "japanese",
    "source": "jobs_inbox x3",
    "serves": "skill_omnivore"
   },
   {
-   "term": "quote",
+   "term": "japanese",
    "source": "jobs_inbox x2",
    "serves": "skill_omnivore"
   },

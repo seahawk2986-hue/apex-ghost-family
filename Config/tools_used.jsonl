@@ -54,3 +54,9 @@
 {"ts": "2026-11-01 10:25:53", "run": "paper_tools", "tool": "ruff", "purpose": "canon-adopted (0 papers cite it)"}
 {"ts": "2026-11-01 10:25:53", "run": "paper_tools", "tool": "pytest", "purpose": "canon-adopted (0 papers cite it)"}
 {"ts": "2026-11-01 10:25:53", "run": "paper_tools", "tool": "ast", "purpose": "canon-adopted (83 papers cite it)"}
+{"ts": "2026-11-01 10:30:01", "run": "paper_tools", "tool": "tree-sitter", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 10:30:01", "run": "paper_tools", "tool": "pyflakes", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 10:30:01", "run": "paper_tools", "tool": "bandit", "purpose": "canon-adopted (3 papers cite it)"}
+{"ts": "2026-11-01 10:30:01", "run": "paper_tools", "tool": "ruff", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 10:30:01", "run": "paper_tools", "tool": "pytest", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 10:30:01", "run": "paper_tools", "tool": "ast", "purpose": "canon-adopted (83 papers cite it)"}

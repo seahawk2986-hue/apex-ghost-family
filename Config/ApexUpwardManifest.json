@@ -1,9 +1,9 @@
 {
- "ts": "2026-11-01 10:26:44",
- "ms": 4115.2,
+ "ts": "2026-11-01 10:30:53",
+ "ms": 4096.4,
  "state": {
   "genes": {
-   "gen": 18,
+   "gen": 20,
    "champion": "base",
    "front": [
     "base"
@@ -82,6 +82,14 @@
      "m_rounds": 0
     },
     "g17_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g18_0": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g19_0": {
      "fitness": 0.0,
      "m_rounds": 0
     }
@@ -167,7 +175,7 @@
    "head": ""
   },
   "hardware": {
-   "ram_free_gb": 7.43,
+   "ram_free_gb": 7.51,
    "tier": "brain-window",
    "allowed": [
     "brain-load+conversion",
@@ -189,7 +197,7 @@
   },
   "digest": {
    "present": true,
-   "age_min": 22.6
+   "age_min": 26.8
   },
   "brain": {},
   "integrity": {
@@ -215,47 +223,47 @@
   "gold": {
    "score": 2205.0,
    "delta": 0.0,
-   "progress_age_min": 22.2
+   "progress_age_min": 26.3
   },
   "money": {
    "score": 0.0,
    "delta": 0.0,
-   "progress_age_min": 87.6
+   "progress_age_min": 91.7
   },
   "life": {
    "score": 129.0,
    "delta": 0.0,
-   "progress_age_min": 42.5
+   "progress_age_min": 46.7
   },
   "recruits": {
    "score": 6.0,
    "delta": 0.0,
-   "progress_age_min": 42.5
+   "progress_age_min": 46.7
   },
   "jobs": {
    "score": 213.0,
    "delta": 0.0,
-   "progress_age_min": 42.5
+   "progress_age_min": 46.7
   },
   "coding": {
    "score": 325.0,
    "delta": 0.0,
-   "progress_age_min": 0.6
+   "progress_age_min": 4.7
   },
   "omnivore": {
    "score": 350.0,
    "delta": 0.0,
-   "progress_age_min": 0.6
+   "progress_age_min": 4.7
   },
   "efficiency": {
    "score": 526.0,
    "delta": 0.0,
-   "progress_age_min": 42.5
+   "progress_age_min": 46.7
   },
   "safety": {
    "score": 2.0,
    "delta": 0.0,
-   "progress_age_min": 42.5
+   "progress_age_min": 46.7
   }
  },
  "goal_progress": {
@@ -444,21 +452,6 @@
  },
  "hardware_history": [
   {
-   "ts": "09:59:47",
-   "ms": 4098.6,
-   "ram": 7.08
-  },
-  {
-   "ts": "09:59:56",
-   "ms": 4084.7,
-   "ram": 6.77
-  },
-  {
-   "ts": "10:00:16",
-   "ms": 4090.0,
-   "ram": 6.91
-  },
-  {
    "ts": "10:04:02",
    "ms": 4115.4,
    "ram": 1.89
@@ -482,6 +475,21 @@
    "ts": "10:26:44",
    "ms": 4115.2,
    "ram": 7.43
+  },
+  {
+   "ts": "10:30:18",
+   "ms": 4142.4,
+   "ram": 7.49
+  },
+  {
+   "ts": "10:30:27",
+   "ms": 4151.9,
+   "ram": 7.52
+  },
+  {
+   "ts": "10:30:53",
+   "ms": 4096.4,
+   "ram": 7.51
   }
  ],
  "speed": {

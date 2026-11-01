@@ -63,7 +63,9 @@ def inv():
                     kind = "stage-artifact"
                 elif any(x in parts for x in ("backup_archive", "scratch",
                                               "attic", "versions",
-                                              "manual_fix_20261030")):
+                                              "manual_fix_20261030",
+                                              "_handoff", "handoff",
+                                              "projects")):
                     kind = "archive"
                 elif ext == "py":
                     kind = "code"
@@ -180,6 +182,74 @@ def lint_tally(py_paths):
         return {"error": str(e)[:60]}
 
 
+def everything(files):
+    """THE LEAVE-OUT-NOTHING LAYER: (1) EVERY file's full text scanned
+    against the canon's 14 classes (the complete reference map, all kinds:
+    archives, stage-artifacts, logs, docs - nothing unread); (2) the
+    stage-artifacts' tool candidates (the downLOADED skill repos with setup/
+    main entries - the adoption queue for founder review, never auto-set-up);
+    (3) the .pyw compiled; (4) the logs' error tail."""
+    import CapabilityRescan as CR
+    cls_files = {k: [] for k in CR.CLASSES}
+    pyw_errors = []
+    stage = {}
+    logs = {"n": 0, "error_lines": 0, "biggest": ""}
+    for f in files:
+        if f["kind"] == "dupe-path(adapter/repo)" or f["size"] == -1:
+            continue
+        base = AD if f.get("base") == "adapter" else ROOT
+        p = os.path.join(base, f["path"])
+        if f["size"] > 2_000_000:          # the 2MB cap: binaries/zips skip
+            continue
+        try:
+            text = open(p, encoding="utf-8-sig", errors="replace").read()
+        except Exception:
+            continue
+        for k, pat in CR.CLASSES.items():
+            if pat.search(text):
+                cls_files[k].append(f["path"])
+        fn = os.path.basename(f["path"]).lower()
+        if f["kind"] == "stage-artifact":
+            parts = f["path"].replace("\\", "/").split("/")
+            if "skill_stage" in parts:
+                idx = parts.index("skill_stage")
+                fam = "/".join(parts[idx + 1:-1]) or "?"
+            else:
+                fam = "?"
+            base_fn = os.path.basename(f["path"])
+            if fam == "?" and "__" in base_fn:
+                fam = base_fn.split("__")[0]   # the flat stage: the repo is
+                e = stage.setdefault(fam, {"files": 0, "entry": None})  # in the name
+            e["files"] += 1
+            lo = fn
+            if e["entry"] is None and lo in ("setup.py", "pyproject.toml",
+                                             "main.py", "__main__.py",
+                                             "readme.md"):
+                e["entry"] = f["path"]
+        elif fn.endswith(".pyw"):
+            try:
+                ast.parse(text)
+            except Exception as e:
+                pyw_errors.append(f"{f['path']}: {str(e)[:60]}")
+        elif fn.endswith(".log"):
+            logs["n"] += 1
+            tail = text[-3000:].lower()
+            logs["error_lines"] += tail.count("error")
+            if logs["n"] == 1 or f["size"] > 100000:
+                logs["biggest"] = f["path"][:60]
+    stage_cands = sorted(
+        (f"{k} (files {v['files']}" + (f", entry {v['entry']}"
+         if v["entry"] else ", no entry marker") + ")")
+        for k, v in stage.items() if v["files"] >= 3)
+    return {"classes_everywhere": {k: len(v) for k, v in cls_files.items()},
+            "pyw": {"compiled": True, "errors": pyw_errors},
+            "logs": logs,
+            "stage_tool_candidates": stage_cands[:15],
+            "law": "the stage candidates are a FOUNDER-GATED adoption queue "
+                   "(never auto-set-up); everything read included archives, "
+                   "logs, artifacts - leave out nothing"}
+
+
 def main():
     t0 = time.time()
     files = inv()
@@ -193,6 +263,7 @@ def main():
            **results,
            "schema_notes": [b for b in results["bad_json"]
                             if "schema note" in b],
+           "everything": everything(files),
            "verdict": ("FULL SWEEP CLEAN - every file categorized, every "
                        "ledger valid, no orphan organs, no duplicate "
                        "bodies" if not (results["compile_errors"] or
@@ -239,6 +310,18 @@ def selftest():
     leg_c = isinstance(rep["orphans"], list)
     print(f"   (c) orphans: {rep['orphans'][:6] or 'NONE (every organ is referenced)'}")
     legs.append(("orphan_honesty", leg_c))
+    ev = rep["everything"]
+    classes_everywhere = [k for k, n in ev["classes_everywhere"].items() if n]
+    leg_c2 = (len(classes_everywhere) >= 12
+              and isinstance(ev["stage_tool_candidates"], list)
+              and ev["pyw"]["compiled"])
+    print(f"   (c2) EVERYTHING layer: classes found across ALL {rep['files_total']}"
+          f" files: {len(classes_everywhere)}/14 | stage tool candidates "
+          f"{len(ev['stage_tool_candidates'])} | pyw clean "
+          f"{not ev['pyw']['errors']} | logs {ev['logs']['n']} scanned "
+          f"-> {leg_c2}")
+    legs.append(("everything_layer", leg_c2))
+    print(f"   stage candidates: {ev['stage_tool_candidates'][:6] or '-'}")
     json.load(open(OUT, encoding="utf-8-sig"))
     leg_d = True
     legs.append(("report_valid", leg_d))

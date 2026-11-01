@@ -20,3 +20,7 @@
 {"ts": "2026-11-01 10:26:23", "skill": "synthetic-broken", "executed": false, "ms": 98.0, "evidence": "rc=1: al\\Temp\\apex_runtime_probe.py\", line 1\n    def broken(:\n               ^\nSyntaxError: invalid syntax", "rc": 1}
 {"ts": "2026-11-01 10:26:49", "skill": "synthetic-good", "executed": true, "ms": 46.4, "evidence": "probe-ok", "rc": 0}
 {"ts": "2026-11-01 10:26:49", "skill": "synthetic-broken", "executed": false, "ms": 91.3, "evidence": "rc=1: al\\Temp\\apex_runtime_probe.py\", line 1\n    def broken(:\n               ^\nSyntaxError: invalid syntax", "rc": 1}
+{"ts": "2026-11-01 10:30:32", "skill": "synthetic-good", "executed": true, "ms": 50.0, "evidence": "probe-ok", "rc": 0}
+{"ts": "2026-11-01 10:30:32", "skill": "synthetic-broken", "executed": false, "ms": 92.0, "evidence": "rc=1: al\\Temp\\apex_runtime_probe.py\", line 1\n    def broken(:\n               ^\nSyntaxError: invalid syntax", "rc": 1}
+{"ts": "2026-11-01 10:30:58", "skill": "synthetic-good", "executed": true, "ms": 53.0, "evidence": "probe-ok", "rc": 0}
+{"ts": "2026-11-01 10:30:58", "skill": "synthetic-broken", "executed": false, "ms": 90.2, "evidence": "rc=1: al\\Temp\\apex_runtime_probe.py\", line 1\n    def broken(:\n               ^\nSyntaxError: invalid syntax", "rc": 1}
