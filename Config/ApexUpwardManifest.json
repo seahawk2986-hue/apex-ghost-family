@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-01 09:05:43",
- "ms": 4098.6,
+ "ts": "2026-11-01 09:07:26",
+ "ms": 4095.5,
  "state": {
   "genes": {
    "gen": 10,
@@ -133,7 +133,7 @@
    "head": ""
   },
   "hardware": {
-   "ram_free_gb": 6.8,
+   "ram_free_gb": 6.75,
    "tier": "brain-window",
    "allowed": [
     "brain-load+conversion",
@@ -142,7 +142,7 @@
     "genes"
    ],
    "starved": false,
-   "proc_rss_mb": 33.0,
+   "proc_rss_mb": 32.8,
    "gpu_note": "no GPU loads for swarm work (the 3050 stays idle-capable)"
   },
   "lessons": {
@@ -155,7 +155,7 @@
   },
   "digest": {
    "present": true,
-   "age_min": 2.8
+   "age_min": 4.5
   },
   "brain": {},
   "integrity": {
@@ -186,7 +186,7 @@
   "money": {
    "score": 0.0,
    "delta": 0.0,
-   "progress_age_min": 6.5
+   "progress_age_min": 8.3
   },
   "life": {
    "score": 129.0,
@@ -210,12 +210,12 @@
   }
  },
  "goal_progress": {
-  "gold": 1793541943.615646,
+  "gold": 1793542046.8948095,
   "money": 1793541551.1543214,
-  "life": 1793541943.615646,
-  "recruits": 1793541943.615646,
-  "jobs": 1793541943.615646,
-  "safety": 1793541943.615646
+  "life": 1793542046.8948095,
+  "recruits": 1793542046.8948095,
+  "jobs": 1793542046.8948095,
+  "safety": 1793542046.8948095
  },
  "gi_score": 385.7,
  "goal_genealogy": {
@@ -292,6 +292,36 @@
    "status": "folded",
    "projection": "skills_lib",
    "note": "the demotion gate keeps the library honest between sleeps"
+  },
+  "first_external_value": {
+   "origin": "the opening directive: directed toward FIRST EXTERNAL VALUE (filed issue / merged PR) - all money-gated steps end at the founder's review",
+   "status": "active",
+   "projection": "money+recruits+jobs (the $0.00 tally)",
+   "note": "only a human-founded file/PR/listing moves it - the telos of the other three"
+  },
+  "discovery_harvest": {
+   "origin": "the opening directive: make the swarm MAXIMALLY EFFECTIVE at discovery/harvest",
+   "status": "active",
+   "projection": "gold",
+   "note": "gold is this directive's measured instrument (mines/req)"
+  },
+  "test_first": {
+   "origin": "the standing method rule: test first, implement if pass, else self-shelve",
+   "status": "active",
+   "projection": "the gates themselves (RepeatTest)",
+   "note": "every organ ships with its own gate; failures iterate openly"
+  },
+  "reproducible": {
+   "origin": "'repeat the test with the same parameters' - a gate that passes once is not proven",
+   "status": "active",
+   "projection": "RepeatTest's two-pass ledger",
+   "note": "organs ship only when BOTH identical passes are green"
+  },
+  "compare_to_canon": {
+   "origin": "'source the papers from the web; compare the swarm to the most successful documented 2026 cases'",
+   "status": "folded",
+   "projection": "canon (521 papers)",
+   "note": "the canon became the court's authority and the design canon - measured in state.canon"
   }
  },
  "hardware_history": [
@@ -324,6 +354,11 @@
    "ts": "09:05:43",
    "ms": 4098.6,
    "ram": 6.8
+  },
+  {
+   "ts": "09:07:26",
+   "ms": 4095.5,
+   "ram": 6.75
   }
  ],
  "speed": {
