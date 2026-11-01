@@ -30,8 +30,10 @@ def union_jsonl(p):
     return len(rows)
 
 
-def merge_json(p):
-    theirs = None
+def merge_json(p, encoding="strict"):
+    # the honest: parse the blocks; merge the keys; theirs = the freshest
+    t = open(p, encoding="utf-8", errors=encoding if encoding != "strict"
+             else None).read()
 
     def side(text, name):
         out = []
@@ -94,19 +96,19 @@ def merge_json(p):
 
 def run():
     resolved = []
-    for p in glob.glob(r"Config\**\*", recursive=True):
-        if os.path.isfile(p):
+    for p in glob.glob(r"Config\**\*", recursive=True) + \
+            glob.glob(r"Config\*.json"):
+        if not os.path.isfile(p):
+            continue
+        try:
             t = open(p, encoding="utf-8", errors="replace").read()
-            if "<<<<<<<" in t:
-                if p.endswith(".jsonl"):
-                    resolved.append((p, f"{union_jsonl(p)} rows"))
-                else:
-                    resolved.append((p, merge_json(p)))
-                subprocess.run(["git", "add", p])
-    for p in glob.glob(r"Config\*.json"):
-        t = open(p, encoding="utf-8", errors="replace").read()
+        except Exception:
+            continue  # the unreadable = skip (the honest)
         if "<<<<<<<" in t:
-            resolved.append((p, merge_json(p)))
+            if p.endswith(".jsonl"):
+                resolved.append((p, f"{union_jsonl(p)} rows"))
+            else:
+                resolved.append((p, merge_json(p, encoding="replace")))
             subprocess.run(["git", "add", p])
     print(f"[resolver] {resolved}")
     r = subprocess.run(["git", "-c", "core.editor=true", "rebase",
