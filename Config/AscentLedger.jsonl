@@ -170,3 +170,4 @@
 {"ts": "2026-11-01 11:52:50", "kind": "upward", "what": "earn-loop-beat", "beat": 2, "unclaimed": 6, "filed": false}
 {"ts": "2026-11-01 11:55:51", "kind": "upward_alarm", "text": "knowledge lane 'events.mines' regressed 54 -> 42 (PathMemory clobber suspected)"}
 {"ts": "2026-11-01 12:08:15", "kind": "upward", "what": "earn-loop-beat", "beat": 3, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 12:16:19", "kind": "upward", "what": "SHOP-LIVE-WIRED: the 3 buy-links in the card/catalog/doors/README"}

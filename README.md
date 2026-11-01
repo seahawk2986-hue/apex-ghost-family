@@ -22,6 +22,11 @@ consent everywhere · evict-on-decline · verified-or-unclaimed
 - Hire: open an issue/DM — honest quotes, delivered work, disclosed AI
 
 
-## Hire the family (the catalog — the founder's shop)
+## Hire the family
+### BUY (live):
+- **Data/ML Pipeline Pack** — buy: https://buy.polar.sh/polar_cl_5xTGsDZ0tNZetCT8eLd1AIsmultLHtUf4zUE13sywjj
+- **Code Fix Pack** — buy: https://buy.polar.sh/polar_cl_bsAkKj23QlM4AsMBqDXjhwpi1XRw5WkpWo02v3WVXit
+- **Repository Triage & Patch Pack** — buy: https://buy.polar.sh/polar_cl_WgIburVk2NFbxJJn9UtiWrLkLPWPi6PHmqmSM2Q29FD
+ (the catalog — the founder's shop)
 - The packs + the checkout links: the shop's wiring in flight (the honest placeholder; the links land with the payout-token)
 - The honest receipts: the PRs + the ledger
