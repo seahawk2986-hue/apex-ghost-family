@@ -162,3 +162,4 @@
 {"ts": "2026-11-01 11:17:12", "kind": "upward", "what": "FIRST-EXTERNAL-PR (founder-granted)", "url": "https://github.com/rtk-ai/rtk/pull/4929"}
 {"ts": "2026-11-01 11:18:22", "kind": "upward", "what": "CLA-email-fix (the commits now carry the account's canonical noreply; the SIGN = the founder's one click on the bot's link)"}
 {"ts": "2026-11-01 11:22:32", "kind": "upward", "what": "earn-loop-beat", "beat": 1, "unclaimed": 7, "filed": false}
+{"ts": "2026-11-01 11:37:10", "kind": "upward", "what": "SECOND-PR-FILED", "url": "https://github.com/dream-machine-systems/dream-machine-os/pull/23"}

@@ -18,8 +18,10 @@ import sys
 import time
 
 sys.path.insert(0, os.path.join(
-    ROOT := r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed", "Scripts"))
-AD = r"C:\Users\seaha\Apex-Adapter"
+    ROOT := os.environ.get(
+        "APEX_ROOT",
+        r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"), "Scripts"))
+AD = os.environ.get("APEX_ADAPTER", r"C:\Users\seaha\Apex-Adapter")
 KIT = os.path.join(AD, "file_now_kit.json")
 CLAIM_PAT = re.compile(r"(I can open|I'll (send|open|submit)|working on|"
                        r"I have (a|the) (PR|patch)|I'm on it|claimed|"

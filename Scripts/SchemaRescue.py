@@ -48,7 +48,7 @@ def run():
         print("[rescue] no receipts")
         return None
     raw = (rows[-1].get("body") or "") + "\n" + \
-        (rows[-2].get("body") if len(rows) > 1 else (""))[:2000]
+        ((rows[-2].get("body") or "")[:2000] if len(rows) > 1 else "")
     raw = STRIP.sub("", raw)
     try:
         import jsonschema

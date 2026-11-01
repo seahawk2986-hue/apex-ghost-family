@@ -19,8 +19,9 @@ import re
 import sys
 import time
 
-ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
-AD = r"C:\Users\seaha\Apex-Adapter"
+ROOT = os.environ.get("APEX_ROOT",
+                      r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed")
+AD = os.environ.get("APEX_ADAPTER", r"C:\Users\seaha\Apex-Adapter")
 CANON = os.path.join(ROOT, "Config", "papers_2026_earning.jsonl")
 BUGS = os.path.join(AD, "gh_archive_bugs.jsonl")
 OUT = os.path.join(ROOT, "Config", "earn_lane_matrix.json")
