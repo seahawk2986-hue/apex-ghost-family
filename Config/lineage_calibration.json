@@ -1,8 +1,12 @@
 {
  "alpha": 0.3,
  "lineages": {
+<<<<<<< HEAD
   "L_over": {
 <<<<<<< HEAD
+=======
+  "L_test": {
+>>>>>>> cfece1a (CalibratedEvolution CLEAN: the marker-laden commit repaired; the gate PASSED fully - calibrated confidence (stateful EMA: over-claim drift 0.6->0.42, honest recovers), per-goal specialty routes from the real grid, deception screen (vague draft REFUSED, concrete-evidence draft PASS), GenePool publish integration; the two crashed attempts + this repair = the honest ledger)
    "drift": 0.315,
    "n": 2,
    "weight": 0.37
