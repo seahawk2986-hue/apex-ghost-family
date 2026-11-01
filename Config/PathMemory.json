@@ -5,19 +5,19 @@
  },
  "use": {
   "lessons_written": 0,
-  "recruit_bonus": 0.094
+  "recruit_bonus": 0.047
  },
  "events": {
-  "reqs": 0.98,
-  "mines": 94.08
+  "reqs": 0.9603999999999999,
+  "mines": 92.19839999999999
  },
  "wiki": {
-  "reqs": 0.98,
-  "mines": 18.62
+  "reqs": 0.9603999999999999,
+  "mines": 18.247600000000002
  },
  "hf_space": {
-  "reqs": 0.1720216365928735,
-  "mines": 0.1720216365928735
+  "reqs": 0.16858120386101602,
+  "mines": 0.16858120386101602
  },
  "trending": {},
  "variants": {
@@ -395,7 +395,7 @@
   "champion": "base"
  },
  "andrew_help": {
-  "briefs": 146,
+  "briefs": 147,
   "alarmsRaised": 6,
   "lastHelp": "2026-10-31 22:18:04",
   "earn_briefs": [
@@ -490,6 +490,10 @@
    {
     "ts": "2026-11-01 15:43:59",
     "text": "EarnLoop beat 17: the top unclaimed = Primeteumm/Screenshot-Enhancer; filed=False"
+   },
+   {
+    "ts": "2026-11-01 15:59:23",
+    "text": "EarnLoop beat 18: the top unclaimed = Primeteumm/Screenshot-Enhancer; filed=False"
    }
   ]
  },
@@ -500,8 +504,8 @@
   "best_action": "none this cycle - the honest zero; widen lanes/token tomorrow"
  },
  "none": {
-  "reqs": 0.5646733123551133,
-  "mines": 163.75526058298283,
+  "reqs": 0.5420863798609088,
+  "mines": 157.2050501596635,
   "recruit_bonus": 1.0
  },
  "upward": {
@@ -557,8 +561,8 @@
   }
  },
  "ddg": {
-  "reqs": 0.96,
-  "mines": 24.96,
+  "reqs": 0.9216,
+  "mines": 23.9616,
   "recruit_bonus": 1.0
  }
 }

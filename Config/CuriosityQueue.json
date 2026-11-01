@@ -132,7 +132,14 @@
   "jsdelivr/data.jsdelivr.com",
   "github/github-mcp-server",
   "f/prompts.chat",
-  "philliphoff/EncDotNet.S100"
+  "philliphoff/EncDotNet.S100",
+  "alronz/Awesome-Auto-GPT",
+  "alronz/awesome-ai-talking-heads",
+  "alronz/awesome-stable-diffusion-webui",
+  "ashlrai/morphkit",
+  "ashlrai/ashlrcode",
+  "ashlrai/lexicon",
+  "ashlrai/phantom"
  ],
  "pending": [],
  "rotated": "2026-10-31"

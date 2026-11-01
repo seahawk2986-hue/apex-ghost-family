@@ -1,5 +1,8 @@
 """DEEPCOMB v3: the FULL-TREE comb (the founder's law: EVERY file and
 folder, with PROOF of coverage).
+THE LAW (amended by the founder 2026-11-01): repeat until STABLE-ZERO -
+3 consecutive clean full-tree passes = CERTIFIED (the historical
+10-times law = superseded; the comb = re-runnable always).
 The coverage-census = each file classed:
   LIVE-CLASS     = everything we own and run (root-organs, Scripts, Config,
                    family, edge_hub, portfolio, hub_kits, skills,

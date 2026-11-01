@@ -194,3 +194,4 @@
 {"ts": "2026-11-01 15:54:46", "kind": "upward_alarm", "text": "goal 'jobs' stalled 370min (needs the inbox triaged - a brain window serves)"}
 {"ts": "2026-11-01 15:54:46", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 370min (outputs are earned inside the hardware gate)"}
 {"ts": "2026-11-01 15:54:46", "kind": "upward_alarm", "text": "goal 'safety' stalled 370min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-01 15:59:23", "kind": "upward", "what": "earn-loop-beat", "beat": 18, "unclaimed": 6, "filed": false}

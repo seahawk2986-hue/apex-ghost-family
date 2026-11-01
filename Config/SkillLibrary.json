@@ -5191,7 +5191,79 @@
     "sys"
    ],
    "registered": "2026-11-01 13:55:10"
+  },
+  {
+   "skill": "harness",
+   "source_file": "eval/leak-rate/harness.py",
+   "source_repo": "ashlrai/phantom-secrets",
+   "license": "check repo",
+   "sha256": "00f3a964c594ce01b8e732705ff11ee5b63773154b3374b5ef59b36d6c26aa35",
+   "lines": 200,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "base64"
+   ],
+   "registered": "2026-11-01 15:57:45"
+  },
+  {
+   "skill": "claude_recovery",
+   "source_file": "scripts/bridge/claude_recovery.py",
+   "source_repo": "ashlrai/phantom",
+   "license": "check repo",
+   "sha256": "91e71d0ed3b2a164c9941c14e47b556d8bff45b3a17cc0abbe77077eaa1068f2",
+   "lines": 73,
+   "first_line": "\"\"\"Recovery seam for an operator-owned Claude bridge; never acknowledges queue jobs.",
+   "imports": [
+    "time"
+   ],
+   "registered": "2026-11-01 15:57:45"
+  },
+  {
+   "skill": "precheck",
+   "source_file": "scripts/bridge/precheck.py",
+   "source_repo": "ashlrai/phantom",
+   "license": "check repo",
+   "sha256": "7cad4a46e05c0211b9cc345021ab0dd4e2cca90f77b0e6a4040763c44000f90d",
+   "lines": 45,
+   "first_line": "\"\"\"Dispatcher queue transition for a completed precheck (no subprocess or I/O).",
+   "imports": [
+    "re"
+   ],
+   "registered": "2026-11-01 15:57:45"
+  },
+  {
+   "skill": "build-webfonts",
+   "source_file": "src/web-ui/design/fonts/build-webfonts.py",
+   "source_repo": "ashlrai/phantom",
+   "license": "check repo",
+   "sha256": "54684013d6a0edb52b51de38680dada01b670e1a92ec605686ebba2fffcfc324",
+   "lines": 83,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [],
+   "registered": "2026-11-01 15:57:51"
+  },
+  {
+   "skill": "recovery",
+   "source_file": "staging/RQ-LANERECOVERQ8/recovery.py",
+   "source_repo": "ashlrai/phantom",
+   "license": "check repo",
+   "sha256": "a9d08c50b57bbf21dba38dd72248bbffc61c55d27f75573582f7d41ed94b1443",
+   "lines": 64,
+   "first_line": "\"\"\"Offline dispatchd transition; caller persists the returned queue under its lock.",
+   "imports": [],
+   "registered": "2026-11-01 15:57:57"
+  },
+  {
+   "skill": "lane_route",
+   "source_file": "staging/RQ-LANEROUTEQ8/lane_route.py",
+   "source_repo": "ashlrai/phantom",
+   "license": "check repo",
+   "sha256": "8db499bbb7dbb9ee81709e91a58873a7a4d1613d12d916504f93413e8378d9fd",
+   "lines": 109,
+   "first_line": "\"\"\"Offline dispatchd lane selection; caller persists the returned queue under its lock.",
+   "imports": [],
+   "registered": "2026-11-01 15:57:58"
   }
  ],
- "built": "2026-11-01 13:55:10"
+ "built": "2026-11-01 15:57:58"
 }
