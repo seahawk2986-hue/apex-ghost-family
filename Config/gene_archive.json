@@ -1,0 +1,90 @@
+{
+ "lineages": {
+  "base": {
+   "genes": {
+    "ghost_cc_leads": 205,
+    "ghost_events": 80,
+    "ghost_trending": 42,
+    "ghost_wiki_leads": 65,
+    "ghost_wayback_leads": 85,
+    "ghost_queue_mines_to_farm": 27,
+    "ghost_min_stars": 315
+   },
+   "fitness": 0.259,
+   "descriptor": "cc4_ev3_tr2",
+   "wins": 0,
+   "mines": 1121,
+   "reqs": 0
+  },
+  "g0_0": {
+   "genes": {
+    "ghost_cc_leads": 199,
+    "ghost_events": 92,
+    "ghost_trending": 44,
+    "ghost_wiki_leads": 53,
+    "ghost_wayback_leads": 101,
+    "ghost_queue_mines_to_farm": 19,
+    "ghost_min_stars": 318
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev3_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-10-31 22:19:07"
+  },
+  "g1_1": {
+   "genes": {
+    "ghost_cc_leads": 217,
+    "ghost_events": 86,
+    "ghost_trending": 45,
+    "ghost_wiki_leads": 42,
+    "ghost_wayback_leads": 73,
+    "ghost_queue_mines_to_farm": 26,
+    "ghost_min_stars": 361
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev3_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-10-31 22:19:07"
+  },
+  "g2_2": {
+   "genes": {
+    "ghost_cc_leads": 236,
+    "ghost_events": 35,
+    "ghost_trending": 47,
+    "ghost_wiki_leads": 55,
+    "ghost_wayback_leads": 94,
+    "ghost_queue_mines_to_farm": 22,
+    "ghost_min_stars": 351
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev1_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-10-31 22:19:07"
+  }
+ },
+ "cells": {
+  "cc3_ev3_tr2": {
+   "vid": "g0_0",
+   "fitness": 0.0
+  },
+  "cc4_ev3_tr2": {
+   "vid": "g1_1",
+   "fitness": 0.0
+  },
+  "cc4_ev1_tr2": {
+   "vid": "g2_2",
+   "fitness": 0.0
+  }
+ },
+ "champion": "base",
+ "gen": 3
+}
