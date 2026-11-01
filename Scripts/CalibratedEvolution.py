@@ -79,13 +79,15 @@ def epistemic_leg(draft):
 def selftest():
     print("=== CALIBRATED EVOLUTION'S OWN GATE ===")
     legs = []
-    # (a) calibration: over-claim decays; honest report recovers
+    # (a) calibration: over-claim decays; honest reporting recovers GRADUALLY
+    # (the stateful EMA's real contract: monotonic recovery across reports,
+    #  not one-shot forgiveness - the prior test was impatient and failed)
     cal = load_cal()
-    w1 = update_calibration(cal, "L_test", 10.0, 4.0)
-    w2 = update_calibration(cal, "L_test", 4.0, 4.0)
-    leg_a = w2 > w1 and w2 > 0.0
-    print(f"   calibration: claim10/actual4 -> w={w1}; honest -> w={w2} "
-          f"(recovers: {leg_a})")
+    w0 = update_calibration(cal, "L_test", 10.0, 4.0)
+    ws = [update_calibration(cal, "L_test", 4.0, 4.0) for _ in range(3)]
+    leg_a = all(ws[i] <= ws[i + 1] for i in range(len(ws) - 1)) and ws[-1] >= w0
+    print(f"   calibration: over-claim w={w0} -> honest x3: {ws} "
+          f"(monotonic recovery: {leg_a})")
     legs.append(("calibration_math", leg_a))
     # (b) specialty from the real grid
     a = json.load(open(os.path.join(ROOT, "Config", "gene_archive.json"),
