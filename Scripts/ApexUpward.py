@@ -501,6 +501,32 @@ GOAL_REGISTRY = {
         "origin": "derived goal (best agents are USED, not admired): an external system can discover and employ Apex",
         "status": "active", "projection": "registry",
         "note": "agent card + MCP bundle + ladder + doors, measured every tick - the door stands open"},
+    # ---- PAPER-DERIVED GOALS (from the SOURCED canon: the 100 fresh best-
+    # agent papers + the 521 prior; the founder's law: goals only ADDED) ----
+    "runtime_verification": {
+        "origin": "canon cluster verification_runtime (17/100 papers; e.g. 2610.38800 'Runtime-Aware Context for AI Coding Agents'): skills verified by EXECUTION AT USE, not static compile alone",
+        "status": "queued", "projection": "coding",
+        "note": "first step: gauntlet verifies against real invocations; next window"},
+    "long_horizon_specs": {
+        "origin": "canon cluster long_horizon (7/100; e.g. 2610.40256 'Scaling Long-Horizon Coding via Interdependent Specifications'): big work = EXPLICIT interdependent sub-specs",
+        "status": "queued", "projection": "jobs+coding",
+        "note": "first step: board tasks enter as contract-chunked sub-specs"},
+    "gap_scouting": {
+        "origin": "canon cluster skill_library (frontier agents maintain libraries; 2610.05300-class harnesses): scout gaps vs REAL demand",
+        "status": "implemented", "projection": "omnivore",
+        "note": "SkillGapScout live tonight: 20 canon-cluster gaps + inbox asks flagged - SKILL GAP SCOUT'S OWN GATE PASSED 4/4"},
+    "consolidation_cadence": {
+        "origin": "canon cluster memory_lifelong (8/100): consolidate LESSONS (directives), not raw logs - ApexDream's sleep refocused",
+        "status": "queued", "projection": "efficiency",
+        "note": "first step: dream-time writes the directive genome from banked lessons"},
+    "budgeted_context": {
+        "origin": "canon cluster context_engineering (10/100): context ranked by MEASURED yield within bounded budgets",
+        "status": "implemented", "projection": "efficiency",
+        "note": "bounded reads are law everywhere; the PathMemory lanes already rank by yield (the 22s-window chat obeys)"},
+    "benchmark_honesty": {
+        "origin": "canon cluster benchmark_driven (22/100 - the LARGEST): measured against the 2026 leaders HONESTLY (we cannot run their suites on this box; their numbers are receipts, ours are measured on OUR gates)",
+        "status": "queued", "projection": "coding+canon",
+        "note": "first step: the comparison card prints their published results beside our locally-measured equivalents, labeled"},
 }
 
 # ---- THE GOALS: evolution is judged on ANDREW'S goals, nothing else ----
