@@ -60,6 +60,8 @@ DEMANDS = {           # ALL 30 goals (aliases honor their measured successors)
     "capability_rescan": {"cpu_serial": 0.1, "fs_trust": 1.0},
     "bounded_planner": {"cpu_serial": 0.1, "fs_trust": 1.0},
     "reward_integrity": {"cpu_serial": 0.05, "fs_trust": 1.0},
+    "earn_lane_matrix": {"cpu_serial": 0.1, "human_attention": 1.0,
+                         "fs_trust": 1.0},
     "tri_genome": {}, "elections": {}, "throne": {}, "sleep": {},
 }
 
@@ -81,7 +83,7 @@ TIERS = {
                    "backlog_drain", "discovery_harvest", "serviceable",
                    "sovereignty", "compare_to_canon",
                    "capability_rescan", "bounded_planner",
-                   "reward_integrity"],
+                   "reward_integrity", "earn_lane_matrix"],
          "ram": 2.4, "cpu": 0.95},
         {"goals": ["life", "money", "recruits", "first_external_value"],
          "ram": 2.4, "cpu": 0.6}]},
@@ -128,6 +130,9 @@ TENSIONS = [
      "(bytes-verified); its alarms never edit anything"),
     ("bounded_planner", "gold", "the plan allocates the REQS budget by "
      "measured lane yield"),
+    ("earn_lane_matrix", "money", "the drafter + the sim prepare everything; "
+     "the FOUNDER'S HAND stays the gate between drafts and the world (the "
+     "money-law is enforced inside the organ: drafts are born filed=False)"),
 ]
 
 # THE SYNERGY MAP - how goals POWER each other (named mechanisms)

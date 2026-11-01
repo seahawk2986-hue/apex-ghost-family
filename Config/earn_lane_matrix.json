@@ -1,0 +1,133 @@
+{
+ "ts": "2026-11-01 10:45:41",
+ "canon": {
+  "n": 100,
+  "lanes": {
+   "trading": 62,
+   "bounty": 21,
+   "marketplace": 4,
+   "commerce": 8,
+   "economy-sim": 5
+  },
+  "top_documented": [
+   {
+    "id": "2610.24973v1",
+    "title": "Improved Approximation and Tight Competition for Simple Auctions",
+    "published": "2026-10-18",
+    "categories": [
+     "cs.GT",
+     "econ.TH"
+    ],
+    "abstract": "We study simple auctions for one additive buyer whose values for $m$ items are independent. Write $\\mathrm{REV}$ for optimal revenue, $\\mathrm{SREV}$ and $\\mathrm{BREV}$ for the revenues from separate selling and grand bundling, and $\\mathrm{BSPA}_2$ for grand-bundle second-price revenue with two independent bidders. For independent regular items, we prove $\\mathrm{REV}\\le\\mathrm{BSPA}_2\\le2\\mathrm{BREV}$. This establishes tight approximation and competition guarantees for bundling under regularity and answers an open question from Beyhaghi et al. (EC 2025). For general independent items, we prove $\\mathrm{REV} \\le \\mathrm{SREV} + \\frac{\u03c0^2}{6}\\mathrm{BREV} \\le 2.645 \\max\\{\\mathrm{SREV}, \\mathrm{BREV}\\}$. This improves the previous approximation factors of $6$ from Babaioff, Immorlica, Luc",
+    "money_score": 24.28,
+    "source_url": "https://arxiv.org/abs/2610.24973v1",
+    "lane_class": "trading"
+   },
+   {
+    "id": "2607.06197v1",
+    "title": "Slack and Budget Breaking in Threshold Team Production",
+    "published": "2026-07-07",
+    "categories": [
+     "cs.GT"
+    ],
+    "abstract": "A threshold system completes a public task only after $\u03ba$ verifiable shares are publicly committed. If the honest schedule creates \\( \\Nstar=\u03ba+\u0394\\) share opportunities by deadline $t^\\star$, then $\u0394$ shares are slack such that a coalition delays completion if and only if it withholds at least $\u0394+1$ shares. The incentive problem is therefore to price the cheapest sabotage set. Agents receive a direct fee $f$ per committed share. A delaying coalition may also obtain delay value at most $L$, and may earn additional fee revenue during recovery after the deadline. Let $R_1^+$ be a pathwise upper bound on the coalition's incremental fee revenue in a recovery slot that completes the task, including any same-slot overshoot. The principal can post a nonnegative completion bounty that depends only on",
+    "money_score": 23.39,
+    "source_url": "https://arxiv.org/abs/2607.06197v1",
+    "lane_class": "bounty"
+   },
+   {
+    "id": "2610.06773v1",
+    "title": "The Hardness of Dominant Strategy Mechanism Design, Revisited",
+    "published": "2026-10-05",
+    "categories": [
+     "cs.GT"
+    ],
+    "abstract": "We study the communication complexity of \\emph{dominant-strategy incentive-compatible} (DSIC) mechanisms for combinatorial auctions. For $\u03b3\\in [\\log m, m]$, let $\\mathsf{DSIC_{GEN}}(m, \u03b3)$, $\\mathsf{DSIC_{XOS}}(m, \u03b3)$, and $\\mathsf{DSIC_{GS}}(m, \u03b3)$ denote the best approximation ratio attainable by a deterministic, individually rational, no-negative-transfers, DSIC mechanism using at most $2^\u03b3$ communication over $m$ items, for general monotone, XOS, and gross substitutes (GS) valuations, respectively. We give a unified proof that shows $\\mathsf{DSIC_{GEN}}(m, \u03b3) = \u03a9(m/\u03b3)$, $\\mathsf{DSIC_{XOS}}(m, \u03b3) = \u03a9((m/\u03b3)^{1/5})$, and $\\mathsf{DSIC_{GS}}(m, \u03b3) = \u03a9((m/\u03b3)^{1/7})$. The GS lower bound answers an open question of~\\cite{DobzinskiRV22}: although poly-communication welfare maximization for GS",
+    "money_score": 20.88,
+    "source_url": "https://arxiv.org/abs/2610.06773v1",
+    "lane_class": "trading"
+   },
+   {
+    "id": "2610.24901v1",
+    "title": "Coarse Revenue Guarantee in First Price Auction and Beyond",
+    "published": "2026-10-17",
+    "categories": [
+     "econ.TH"
+    ],
+    "abstract": "I study the coarse revenue guarantee (CRG) of the single-unit first-price auction with common values. The CRG is the minimum expected revenue over all information structures and all Bayes coarse correlated equilibria (BCCE), the equilibrium notion to which no-regret learning leads. Identical play, in which all bidders submit the same bid, attains the worst-case revenue, and this reduction yields a closed-form characterization. The coarse guarantee is positive and increases with the number of bidders $N$. It lies strictly below the revenue guarantee of Bergemann, Brooks and Morris (2017) at every finite $n$, and the gap between the two closes at rate $\\log N / N$. I extend the analysis to reserve prices, symmetric and asymmetric priors, other standard auctions, and an unknown value distribu",
+    "money_score": 19.79,
+    "source_url": "https://arxiv.org/abs/2610.24901v1",
+    "lane_class": "trading"
+   },
+   {
+    "id": "2610.00920v3",
+    "title": "A Faster Auction Algorithm for Weighted Matroid Intersection",
+    "published": "2026-10-01",
+    "categories": [
+     "cs.DS"
+    ],
+    "abstract": "We consider the weighted matroid intersection problem in the independence-oracle model. A sequence of works by Huang--Kakimura--Kamiyama~[SODA'16 \\& Math. Program'19], Chekuri--Quanrud~[SODA'16], Quanrud~[ICALP'24], and Dudeja--Grilnberger~[IPCO'26] has developed efficient $(1-\\varepsilon)$-approximation algorithms for this problem. We present a simple deterministic auction algorithm that, given two matroids on a common ground set of size $n$, computes a $(1-\\varepsilon)$-approximate maximum-weight common independent set using $O(n \\varepsilon^{-2} \\log^2(n))$ independence-oracle queries. This is the first deterministic $(1-\\varepsilon)$-approximation algorithm for the weighted matroid intersection problem whose query complexity is nearly linear in $n$ and polynomial in $1/\\varepsilon$. Ou",
+    "money_score": 16.26,
+    "source_url": "https://arxiv.org/abs/2610.00920v3",
+    "lane_class": "trading"
+   },
+   {
+    "id": "2610.22718v1",
+    "title": "Improved Pass Complexity for Semi-Streaming Matching in General Graphs via Budgeted Price Approach",
+    "published": "2026-10-15",
+    "categories": [
+     "cs.DS"
+    ],
+    "abstract": "We present a simple deterministic semi-streaming algorithm that computes a $(1-\\varepsilon)$-approximate maximum matching in general graphs in $O(1/\\varepsilon^{2})$ passes. This matches the pass complexity of the auction algorithm of Assadi, Liu, and Tarjan~[SOSA'21] for bipartite graphs, and answers Open Question~2 of Assadi~[SOSA'24 \\& TheoretiCS'25]. Our approach, which we call the \\emph{budgeted price approach}, is very different from the previous $\\mathrm{poly}(1/\\varepsilon)$-pass semi-streaming algorithms for $(1-\\varepsilon)$-approximation of matching in general graphs and improves their pass complexity. All previous approaches are augmenting-path-based and use $O(1/\\varepsilon^{19})$ passes by Fischer, Mitrovi\u0107, and Uitto~[STOC'22], $O(1/\\varepsilon^{6})$ passes by Mitrovi\u0107, Mukh",
+    "money_score": 15.57,
+    "source_url": "https://arxiv.org/abs/2610.22718v1",
+    "lane_class": "trading"
+   }
+  ]
+ },
+ "our_machinery": [
+  {
+   "lane": "bounty-candidates (gh-archive gfi)",
+   "n": 18,
+   "status": "REAL (candidates; not yet drafted/verified)"
+  },
+  {
+   "lane": "jobs marketplace asks",
+   "n": 12,
+   "status": "REAL inbox (EV-graded via FinancialBrain)"
+  },
+  {
+   "lane": "service catalog (doors offer)",
+   "n": 6,
+   "status": "REAL (channels listed; checkout = founder-gated)"
+  },
+  {
+   "lane": "payout rail",
+   "n": 1,
+   "status": "DESIGN-ONLY destination recorded; NO rail exists (the $0.00 law - honest)"
+  },
+  {
+   "lane": "the honest ledger",
+   "n": 3,
+   "status": "earned $0.0 (truth)"
+  }
+ ],
+ "gap_matrix": {
+  "bounty": "candidates exist; the DRAFTER now bridges candidates -> founder-gated advisories",
+  "marketplace": "EV-graded asks exist; acceptance-rate calibration awaits OUR rung history (honest: none paid yet)",
+  "_trading": "SOURCE-ONLY: the documented methods read; OUR RAIL LAW: trading = design-only, never wired",
+  "commerce": "the service catalog lists the doors' services; checkout = founder-gated",
+  "economy_sim": "the sim lane runs (labeled SIMULATION)"
+ },
+ "sim": {
+  "label": "SIMULATION (not earned; the rail = design-only)",
+  "bounty_lane_ev_per_filed_verified_bug": 50.0,
+  "marketplace_lane_ev_per_completed_rung": 25.0,
+  "candidates": 18,
+  "asks": 12,
+  "theoretical_ceiling_usd_if_all_verified_and_filed": 1200.0,
+  "honest": "a ceiling, not a forecast; verification + the founder's filing are the gates between theory and the tally"
+ },
+ "money_law": "NOTHING auto-files; the founder's hand is the gate between drafts and the world",
+ "drafts": 2
+}

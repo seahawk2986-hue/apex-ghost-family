@@ -24,6 +24,7 @@ OUT = os.path.join(ROOT, "Config", "rescan_master.json")
 CHAIN = [
     ("capability_rescan", "CapabilityRescan.py"),
     ("paper_tools", "PaperTools.py"),
+    ("earn_lane_matrix", "EarnLaneMatrix.py"),
     ("code_profiler", "CodeProfiler.py"),
     ("full_sweep", "FullSweep.py"),
     ("bounded_planner", "BoundedPlanner.py"),

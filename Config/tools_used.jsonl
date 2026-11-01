@@ -60,3 +60,7 @@
 {"ts": "2026-11-01 10:30:01", "run": "paper_tools", "tool": "ruff", "purpose": "canon-adopted (0 papers cite it)"}
 {"ts": "2026-11-01 10:30:01", "run": "paper_tools", "tool": "pytest", "purpose": "canon-adopted (0 papers cite it)"}
 {"ts": "2026-11-01 10:30:01", "run": "paper_tools", "tool": "ast", "purpose": "canon-adopted (83 papers cite it)"}
+{"ts": "2026-11-01 10:45:34", "run": "harvest5", "tool": "arxiv-export-api", "purpose": "the earning-canon source endpoint (9 money-class queries)"}
+{"ts": "2026-11-01 10:45:34", "run": "harvest5", "tool": "python-urllib+xml", "purpose": "fetch + ATOM (stdlib)"}
+{"ts": "2026-11-01 10:45:34", "run": "harvest5", "tool": "money-recognizer", "purpose": "the COIN regex ranks each paper's money-documentation density"}
+{"ts": "2026-11-01 10:45:34", "run": "harvest5", "tool": "lane-classifier", "purpose": "bounty/marketplace/trading/commerce/economy-sim tags per row"}
