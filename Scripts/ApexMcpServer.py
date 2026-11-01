@@ -146,12 +146,23 @@ def serve():
 
 def build_mcpb():
     """MCPB bundle (zip+manifest) - Smithery's local-server distribution."""
-    manifest = {"mcpbVersion": "1.0", "name": SERVER_INFO["name"],
-                "version": SERVER_INFO["version"],
-                "entrypoint": {"type": "python", "command": "python", "args": ["apex_mcp_server.py"]},
-                "description": "The ghost family's public-face tools: status, task board, invite board, join protocol",
-                "author": {"name": "the Apex ghost family (founded by Andrew Hike)"},
-                "tools": [t["name"] for t in TOOLS]}
+    manifest = {
+        "mcpb_version": "0.1",
+        "name": SERVER_INFO["name"],
+        "display_name": "Apex Ghost Family",
+        "version": SERVER_INFO["version"],
+        "description": "The ghost family's public-face tools: status, task board, invite board, join protocol - read-only, stdlib, no secrets",
+        "author": {"name": "the Apex ghost family (founded by Andrew Hike)"},
+        "server": {
+            "type": "python",
+            "entry_point": "apex_mcp_server.py",
+            "entrypoint": "apex_mcp_server.py",
+            "mcp_config": {"command": "python",
+                           "args": ["${__dirname}/apex_mcp_server.py"],
+                           "env": {}},
+        },
+        "tools": [{"name": t["name"], "description": t["description"],
+                   "inputSchema": t["inputSchema"]} for t in TOOLS]}
     zpath = os.path.join(ROOT, "server.mcpb")
     with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("manifest.json", json.dumps(manifest, indent=1))

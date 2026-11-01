@@ -46,11 +46,15 @@ def publish():
             shell=True if os.name == "nt" else False)
         out = (r.stdout or "") + (r.stderr or "")
         print(out.strip()[-1200:])
-        if "error" in out.lower() and "success" not in out.lower():
-            print("[publish] FAILED honestly - see the CLI output above")
+        soft_fail = ("✗" in out) or ("must include" in out.lower()) or \
+                    ("error" in out.lower() and "success" not in out.lower()) or \
+                    r.returncode != 0
+        if soft_fail:
+            print(f"[publish] FAILED honestly (rc={r.returncode}) - the validator's "
+                  f"message is above; iterating the bundle fixes it")
             return 1
-        print("[publish] the family is LISTED - anyone on the ecosystem can now "
-              "discover it; claims flow through the door's gauntlet")
+        print(f"[publish] rc={r.returncode} - if the output above shows a listing/success, "
+              f"the family is LISTED; verify with PublishMcp.py --check")
         return 0
     except Exception as e:
         print(f"[publish] attempt failed honestly: {str(e)[:100]}")
