@@ -1,0 +1,120 @@
+{
+ "ts": "2026-11-01 09:18:08",
+ "canon": "Config/papers_2026_agents.jsonl (100 papers, deduped vs 521)",
+ "their_goal_clusters": {
+  "verification_runtime": {
+   "n": 17,
+   "reps": [
+    "2610.38800v1 When Relevant Code Is Wrong: Runtime-Aware Context for AI Co",
+    "2610.38799v1 CARI: Cross-Boundary Adversarial Runtime Injection in Coding",
+    "2610.38332v1 MUSE: Multi-Level Memory with Selective Runtime Injection fo"
+   ]
+  },
+  "long_horizon": {
+   "n": 7,
+   "reps": [
+    "2610.40256v1 When Requirements Interact: Scaling Long-Horizon Coding via ",
+    "2610.37224v1 Spine: Compiling Subtask Trees into Structured Context for L",
+    "2610.31778v1 Benchmarks Are Surprisingly Compaction-Friendly"
+   ]
+  },
+  "context_engineering": {
+   "n": 10,
+   "reps": [
+    "2610.38800v1 When Relevant Code Is Wrong: Runtime-Aware Context for AI Co",
+    "2610.38332v1 MUSE: Multi-Level Memory with Selective Runtime Injection fo",
+    "2610.36153v1 Stratum: Repository Memory for Coding Agents Beyond the Cont"
+   ]
+  },
+  "memory_lifelong": {
+   "n": 8,
+   "reps": [
+    "2610.38521v1 Security Impact of Coding Agent's Memory Files",
+    "2610.38332v1 MUSE: Multi-Level Memory with Selective Runtime Injection fo",
+    "2610.37459v1 M4Bench: Evaluating Procedural Specification for Clinical EH"
+   ]
+  },
+  "skill_library": {
+   "n": 3,
+   "reps": [
+    "2610.32648v1 StateMirror: Pre-Execution Detection of Hallucinated Tool Ca",
+    "2610.36469v1 CoHARL: Co-Evolving Agent Policies and Executable Harnesses ",
+    "2610.28612v1 TraceLite: Efficient Trace Reduction for SWE Agents via Opti"
+   ]
+  },
+  "autonomy_selfimprove": {
+   "n": 7,
+   "reps": [
+    "2610.39620v1 Letting AI Formulate the Research Question: Autonomous Resea",
+    "2610.35971v1 Continue or Restart? The Limits of Early Failure Prediction ",
+    "2610.33588v1 Developers as Managers of AI Agents: A Workplace Shadowing S"
+   ]
+  },
+  "benchmark_driven": {
+   "n": 22,
+   "reps": [
+    "2610.38617v1 How Deterministic SAST and AI Security Agents Divide the Wor",
+    "2610.37434v1 FeatureArc: Benchmarking Coding Agents on Evolving Features",
+    "2610.37283v1 BenchMeUp: Building Software Engineering Benchmarks from Nat"
+   ]
+  },
+  "efficiency_constraint": {
+   "n": 15,
+   "reps": [
+    "2610.36405v1 kw-bench: Breaking Frontier Harnesses on Real-World Tasks",
+    "2610.36153v1 Stratum: Repository Memory for Coding Agents Beyond the Cont",
+    "2610.34967v1 Rivet: Utility-Preserving Context Control for Repository-Lev"
+   ]
+  }
+ },
+ "our_goals": [
+  "gold",
+  "money",
+  "life",
+  "recruits",
+  "jobs",
+  "coding",
+  "omnivore",
+  "efficiency",
+  "safety"
+ ],
+ "adopt": [
+  {
+   "cluster": "verification_runtime",
+   "adopt": "runtime-aware verification: our gauntlet verifies at test-time; add EXECUTION-AT-USE receipts (skills verified against real invocations, not just static compile)",
+   "serves": "coding",
+   "feasible_now": true
+  },
+  {
+   "cluster": "long_horizon",
+   "adopt": "spec-splitting for work units: big tasks enter the board as interdependent sub-specs (the gauntlet already chunks; make the chunks EXPLICIT contracts)",
+   "serves": "jobs+coding",
+   "feasible_now": true
+  },
+  {
+   "cluster": "skill_library",
+   "adopt": "skill-gap scouting (built tonight: SkillGapScout) - the canon's agents maintain libraries; gaps are scouted vs real demand (the jobs inbox), never imagined",
+   "serves": "omnivore",
+   "feasible_now": true
+  },
+  {
+   "cluster": "memory_lifelong",
+   "adopt": "consolidation cadence: ApexDream's sleep already runs; the canon's lesson - consolidate LESSONS (directives) not logs",
+   "serves": "efficiency",
+   "feasible_now": true
+  },
+  {
+   "cluster": "context_engineering",
+   "adopt": "budgeted context: bounded reads everywhere (already law); rank context by measured yield (PathMemory lanes already do)",
+   "serves": "efficiency",
+   "feasible_now": true
+  },
+  {
+   "cluster": "autonomy_selfimprove",
+   "adopt": "the closed loop exists (court+sync+prestage); keep Human-Gates on irreversible steps",
+   "serves": "upward_evo",
+   "feasible_now": true
+  }
+ ],
+ "law": "nothing deleted - every current goal stands; additions only"
+}

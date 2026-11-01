@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-01 09:07:26",
- "ms": 4095.5,
+ "ts": "2026-11-01 09:18:43",
+ "ms": 4094.1,
  "state": {
   "genes": {
    "gen": 10,
@@ -97,7 +97,9 @@
    "papers_evolution": 421
   },
   "skills_lib": {
-   "count": 302
+   "count": 302,
+   "coding": 302,
+   "categories": 24
   },
   "board": {
    "backlog": 1455,
@@ -133,7 +135,7 @@
    "head": ""
   },
   "hardware": {
-   "ram_free_gb": 6.75,
+   "ram_free_gb": 6.86,
    "tier": "brain-window",
    "allowed": [
     "brain-load+conversion",
@@ -142,7 +144,7 @@
     "genes"
    ],
    "starved": false,
-   "proc_rss_mb": 32.8,
+   "proc_rss_mb": 33.5,
    "gpu_note": "no GPU loads for swarm work (the 3050 stays idle-capable)"
   },
   "lessons": {
@@ -155,7 +157,7 @@
   },
   "digest": {
    "present": true,
-   "age_min": 4.5
+   "age_min": 15.8
   },
   "brain": {},
   "integrity": {
@@ -186,7 +188,7 @@
   "money": {
    "score": 0.0,
    "delta": 0.0,
-   "progress_age_min": 8.3
+   "progress_age_min": 19.5
   },
   "life": {
    "score": 129.0,
@@ -203,6 +205,21 @@
    "delta": 213.0,
    "progress_age_min": 0.0
   },
+  "coding": {
+   "score": 305.0,
+   "delta": 305.0,
+   "progress_age_min": 0.0
+  },
+  "omnivore": {
+   "score": 329.0,
+   "delta": 329.0,
+   "progress_age_min": 0.0
+  },
+  "efficiency": {
+   "score": 526.0,
+   "delta": 526.0,
+   "progress_age_min": 0.0
+  },
   "safety": {
    "score": 2.0,
    "delta": 2.0,
@@ -210,12 +227,15 @@
   }
  },
  "goal_progress": {
-  "gold": 1793542046.8948095,
+  "gold": 1793542723.7329578,
   "money": 1793541551.1543214,
-  "life": 1793542046.8948095,
-  "recruits": 1793542046.8948095,
-  "jobs": 1793542046.8948095,
-  "safety": 1793542046.8948095
+  "life": 1793542723.7329578,
+  "recruits": 1793542723.7329578,
+  "jobs": 1793542723.7329578,
+  "coding": 1793542723.7329578,
+  "omnivore": 1793542723.7329578,
+  "efficiency": 1793542723.7329578,
+  "safety": 1793542723.7329578
  },
  "gi_score": 385.7,
  "goal_genealogy": {
@@ -322,19 +342,39 @@
    "status": "folded",
    "projection": "canon (521 papers)",
    "note": "the canon became the court's authority and the design canon - measured in state.canon"
+  },
+  "efficiency_evolve": {
+   "origin": "GOAL: 'Evolve upwards as efficiently as possible while keeping hardware constraints in mind'",
+   "status": "active",
+   "projection": "efficiency (outputs earned INSIDE the RAM-tier gate; the gate binds always)",
+   "note": "measured by verified skills + banked lessons + canon growth - receipts per hardware window, never a wasted mutation (the court pre-stages best-of-N)"
+  },
+  "coding_mastery": {
+   "origin": "GOAL: 'Become as good at coding as the current best coding agents, hardware constraints kept'",
+   "status": "active",
+   "projection": "coding (executable-verified artifacts; the 2026 benchmark leaders = the comparison class)",
+   "note": "tonight: coding-category library entries + executable-verified count; the fresh canon harvest builds the benchmark-comparison instrument"
+  },
+  "skill_omnivore": {
+   "origin": "GOAL: 'Try to learn every skill that you can, source the web to see what is missing, maximize each skill; innovative workarounds; download any program or tool that helps'",
+   "status": "active",
+   "projection": "omnivore (library depth x breadth; gaps scouted vs the jobs inbox + the canon)",
+   "note": "nothing claimed that is not INSTALLED; the gap-scout prints what is missing honestly"
+  },
+  "self_knowledge": {
+   "origin": "derived goal (the 2026 canon's calibrating agents): know what it can and cannot do, measured",
+   "status": "folded",
+   "projection": "calibration EMA",
+   "note": "claim-vs-measured drift already sinks over-claimers; honest recovery is monotone"
+  },
+  "serviceable": {
+   "origin": "derived goal (best agents are USED, not admired): an external system can discover and employ Apex",
+   "status": "active",
+   "projection": "registry",
+   "note": "agent card + MCP bundle + ladder + doors, measured every tick - the door stands open"
   }
  },
  "hardware_history": [
-  {
-   "ts": "08:59:11",
-   "ms": 4179.1,
-   "ram": 6.66
-  },
-  {
-   "ts": "09:02:51",
-   "ms": 8151.2,
-   "ram": 2.36
-  },
   {
    "ts": "09:03:09",
    "ms": 4111.7,
@@ -359,6 +399,21 @@
    "ts": "09:07:26",
    "ms": 4095.5,
    "ram": 6.75
+  },
+  {
+   "ts": "09:16:12",
+   "ms": 4096.3,
+   "ram": 6.77
+  },
+  {
+   "ts": "09:16:24",
+   "ms": 4079.7,
+   "ram": 6.95
+  },
+  {
+   "ts": "09:18:43",
+   "ms": 4094.1,
+   "ram": 6.86
   }
  ],
  "speed": {

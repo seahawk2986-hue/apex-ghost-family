@@ -218,7 +218,7 @@
   "recruit_bonus": 1.0
  },
  "upward": {
-  "ts": "2026-11-01 09:05:43",
+  "ts": "2026-11-01 09:18:43",
   "alarms": 0,
   "genes_front": [
    "base"
@@ -236,6 +236,9 @@
    "life": 129.0,
    "recruits": 6.0,
    "jobs": 213.0,
+   "coding": 305.0,
+   "omnivore": 329.0,
+   "efficiency": 526.0,
    "safety": 2.0
   },
   "ascent_last": 3.987

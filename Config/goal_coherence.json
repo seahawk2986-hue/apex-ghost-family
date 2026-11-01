@@ -1,0 +1,78 @@
+{
+ "ts": "2026-11-01 09:18:08",
+ "budget": {
+  "ram_free_gb": 7.0,
+  "cpu_serial": 1.0,
+  "money": 0.0,
+  "human_attention": 1.0,
+  "fs_trust": 1.0
+ },
+ "demands": {
+  "gold": {
+   "ram_free_gb": 2.5,
+   "cpu_serial": 1.0,
+   "money": 0.0,
+   "human_attention": 0.0,
+   "fs_trust": 1.0
+  },
+  "money": {
+   "ram_free_gb": 0.3,
+   "cpu_serial": 0.0,
+   "money": 0.0,
+   "human_attention": 1.0,
+   "fs_trust": 1.0
+  },
+  "life": {
+   "ram_free_gb": 0.5,
+   "cpu_serial": 0.2,
+   "money": 0.0,
+   "human_attention": 1.0,
+   "fs_trust": 1.0
+  },
+  "recruits": {
+   "ram_free_gb": 0.5,
+   "cpu_serial": 0.1,
+   "money": 0.0,
+   "human_attention": 1.0,
+   "fs_trust": 1.0
+  },
+  "jobs": {
+   "ram_free_gb": 1.0,
+   "cpu_serial": 0.2,
+   "money": 0.0,
+   "human_attention": 0.5,
+   "fs_trust": 1.0
+  },
+  "coding": {
+   "ram_free_gb": 3.0,
+   "cpu_serial": 1.0,
+   "money": 0.0,
+   "human_attention": 0.2,
+   "fs_trust": 1.0
+  },
+  "omnivore": {
+   "ram_free_gb": 1.0,
+   "cpu_serial": 0.3,
+   "money": 0.0,
+   "human_attention": 0.2,
+   "fs_trust": 1.0
+  },
+  "efficiency": {
+   "ram_free_gb": 0.5,
+   "cpu_serial": 0.1,
+   "money": 0.0,
+   "human_attention": 0.1,
+   "fs_trust": 1.0
+  },
+  "safety": {
+   "ram_free_gb": 0.3,
+   "cpu_serial": 0.0,
+   "money": 0.0,
+   "human_attention": 0.1,
+   "fs_trust": 1.0
+  }
+ },
+ "tensions_guarded": 8,
+ "clashes": [],
+ "law": "goals are only ADDED; the guard - never the goal - is removed"
+}
