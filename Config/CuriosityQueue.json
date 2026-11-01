@@ -108,6 +108,8 @@
   "crslade/crslade.github.io",
   "asafamos/stock-scout"
  ],
- "pending": [],
+ "pending": [
+  "PulseSRE/pulse-ui"
+ ],
  "rotated": "2026-10-31"
 }

@@ -20,11 +20,11 @@
  "ApexPacing.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 32,
+  "attempts": 42,
   "successes": 1,
   "streak": 0,
   "ok_full": 1,
-  "parity_total": 15,
+  "parity_total": 16,
   "parity_hits": 12
  },
  "ApexInstaller.py": {
@@ -80,5 +80,5 @@
   "streak": 2,
   "attempts": 295
  },
- "Scripts/SwarmOrchestrator.py": 108971.0
+ "Scripts/SwarmOrchestrator.py": 118022.5
 }

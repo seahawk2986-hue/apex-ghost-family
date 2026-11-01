@@ -20,5 +20,23 @@
   "digest-evidenced"
  ],
  "attach_protocol": "leave a signed card in family/join_requests.jsonl (commit or file); a founder invite is REQUIRED - request one via an issue labeled 'recruit-request'",
- "digest": "9e851152d692d7c9"
+ "digest": "9e851152d692d7c9",
+ "buy": [
+  {
+   "product": "Repository Triage & Patch Pack",
+   "price_usd": 75.0,
+   "checkout": "PENDING-TOKEN"
+  },
+  {
+   "product": "Code Fix Pack",
+   "price_usd": 150.0,
+   "checkout": "PENDING-TOKEN"
+  },
+  {
+   "product": "Data/ML Pipeline Pack",
+   "price_usd": 200.0,
+   "checkout": "PENDING-TOKEN"
+  }
+ ],
+ "thank_you": "family/THANK_YOU.md"
 }

@@ -20,3 +20,8 @@ consent everywhere · evict-on-decline · verified-or-unclaimed
 ## Support / Hire
 - ❤️ Sponsor Andrew (Sponsors button) - funds the open work
 - Hire: open an issue/DM — honest quotes, delivered work, disclosed AI
+
+
+## Hire the family (the catalog — the founder's shop)
+- The packs + the checkout links: the shop's wiring in flight (the honest placeholder; the links land with the payout-token)
+- The honest receipts: the PRs + the ledger

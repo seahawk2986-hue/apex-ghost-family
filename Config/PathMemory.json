@@ -5,19 +5,19 @@
  },
  "use": {
   "lessons_written": 0,
-  "recruit_bonus": 0.75
+  "recruit_bonus": 0.375
  },
  "events": {
   "reqs": 0.98,
-  "mines": 21.56
+  "mines": 54
  },
  "wiki": {
-  "reqs": 0.18276997317537075,
-  "mines": 1.096619839052224
+  "reqs": 0.98,
+  "mines": 6.859999999999999
  },
  "hf_space": {
-  "reqs": 0.18276997317537075,
-  "mines": 0.18276997317537075
+  "reqs": 0.17911457371186332,
+  "mines": 0.17911457371186332
  },
  "trending": {},
  "variants": {
@@ -31,12 +31,12 @@
     "ghost_queue_mines_to_farm": 27,
     "ghost_min_stars": 315
    },
-   "fitness": 3.7933,
+   "fitness": 2.4904,
    "descriptor": "cc4_ev3_tr2",
-   "wins": 1,
-   "mines": 1138,
-   "reqs": 300,
-   "rounds": 4
+   "wins": 2,
+   "mines": 1173,
+   "reqs": 471,
+   "rounds": 5
   },
   "g0_0": {
    "params": {
@@ -363,7 +363,7 @@
   "champion": "base"
  },
  "andrew_help": {
-  "briefs": 128,
+  "briefs": 130,
   "alarmsRaised": 6,
   "lastHelp": "2026-10-31 22:18:04",
   "earn_briefs": [
@@ -386,6 +386,14 @@
    {
     "ts": "2026-11-01 11:39:53",
     "text": "EarnLoop beat 1: the top unclaimed = Primeteumm/Screenshot-Enhancer; filed=False"
+   },
+   {
+    "ts": "2026-11-01 11:52:50",
+    "text": "EarnLoop beat 2: the top unclaimed = Primeteumm/Screenshot-Enhancer; filed=False"
+   },
+   {
+    "ts": "2026-11-01 12:08:15",
+    "text": "EarnLoop beat 3: the top unclaimed = Primeteumm/Screenshot-Enhancer; filed=False"
    }
   ]
  },
@@ -396,31 +404,31 @@
   "best_action": "none this cycle - the honest zero; widen lanes/token tomorrow"
  },
  "none": {
-  "reqs": 0.6382393305518408,
-  "mines": 185.0894058600338,
+  "reqs": 0.6127097573297672,
+  "mines": 177.68582962563244,
   "recruit_bonus": 1.0
  },
  "upward": {
-  "ts": "2026-11-01 10:30:53",
-  "alarms": 0,
+  "ts": "2026-11-01 11:55:51",
+  "alarms": 1,
   "genes_front": [
    "base"
   ],
   "skills_verified": 3,
-  "skills_lib": 322,
+  "skills_lib": 404,
   "canon": {
    "papers_2026": 100,
    "papers_evolution": 421
   },
-  "gi_score": 389.3,
+  "gi_score": 413.3,
   "goals": {
-   "gold": 2205.0,
+   "gold": 2243.0,
    "money": 0.0,
-   "life": 129.0,
+   "life": 135.0,
    "recruits": 6.0,
    "jobs": 213.0,
-   "coding": 325.0,
-   "omnivore": 350.0,
+   "coding": 405.0,
+   "omnivore": 433.0,
    "efficiency": 526.0,
    "safety": 2.0
   },
@@ -451,5 +459,10 @@
     "tries": 0
    }
   }
+ },
+ "ddg": {
+  "reqs": 0.96,
+  "mines": 16.32,
+  "recruit_bonus": 0.75
  }
 }

@@ -73,3 +73,6 @@
 {"ts": "2026-11-01 09:53:14", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
 {"ts": "2026-11-01 09:53:14", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
 {"ts": "2026-11-01 09:53:14", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-11-01 11:55:54", "event": "birth", "child_pid": 0, "shard": "self", "variant": "urge", "territory": "family"}
+{"ts": "2026-11-01 11:55:58", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-11-01 11:55:58", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
