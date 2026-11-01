@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-01 09:18:43",
- "ms": 4094.1,
+ "ts": "2026-11-01 09:21:35",
+ "ms": 4082.3,
  "state": {
   "genes": {
    "gen": 10,
@@ -135,7 +135,7 @@
    "head": ""
   },
   "hardware": {
-   "ram_free_gb": 6.86,
+   "ram_free_gb": 7.06,
    "tier": "brain-window",
    "allowed": [
     "brain-load+conversion",
@@ -157,7 +157,7 @@
   },
   "digest": {
    "present": true,
-   "age_min": 15.8
+   "age_min": 18.7
   },
   "brain": {},
   "integrity": {
@@ -188,7 +188,7 @@
   "money": {
    "score": 0.0,
    "delta": 0.0,
-   "progress_age_min": 19.5
+   "progress_age_min": 22.4
   },
   "life": {
    "score": 129.0,
@@ -227,15 +227,15 @@
   }
  },
  "goal_progress": {
-  "gold": 1793542723.7329578,
+  "gold": 1793542895.6859818,
   "money": 1793541551.1543214,
-  "life": 1793542723.7329578,
-  "recruits": 1793542723.7329578,
-  "jobs": 1793542723.7329578,
-  "coding": 1793542723.7329578,
-  "omnivore": 1793542723.7329578,
-  "efficiency": 1793542723.7329578,
-  "safety": 1793542723.7329578
+  "life": 1793542895.6859818,
+  "recruits": 1793542895.6859818,
+  "jobs": 1793542895.6859818,
+  "coding": 1793542895.6859818,
+  "omnivore": 1793542895.6859818,
+  "efficiency": 1793542895.6859818,
+  "safety": 1793542895.6859818
  },
  "gi_score": 385.7,
  "goal_genealogy": {
@@ -372,19 +372,45 @@
    "status": "active",
    "projection": "registry",
    "note": "agent card + MCP bundle + ladder + doors, measured every tick - the door stands open"
+  },
+  "runtime_verification": {
+   "origin": "canon cluster verification_runtime (17/100 papers; e.g. 2610.38800 'Runtime-Aware Context for AI Coding Agents'): skills verified by EXECUTION AT USE, not static compile alone",
+   "status": "queued",
+   "projection": "coding",
+   "note": "first step: gauntlet verifies against real invocations; next window"
+  },
+  "long_horizon_specs": {
+   "origin": "canon cluster long_horizon (7/100; e.g. 2610.40256 'Scaling Long-Horizon Coding via Interdependent Specifications'): big work = EXPLICIT interdependent sub-specs",
+   "status": "queued",
+   "projection": "jobs+coding",
+   "note": "first step: board tasks enter as contract-chunked sub-specs"
+  },
+  "gap_scouting": {
+   "origin": "canon cluster skill_library (frontier agents maintain libraries; 2610.05300-class harnesses): scout gaps vs REAL demand",
+   "status": "implemented",
+   "projection": "omnivore",
+   "note": "SkillGapScout live tonight: 20 canon-cluster gaps + inbox asks flagged - SKILL GAP SCOUT'S OWN GATE PASSED 4/4"
+  },
+  "consolidation_cadence": {
+   "origin": "canon cluster memory_lifelong (8/100): consolidate LESSONS (directives), not raw logs - ApexDream's sleep refocused",
+   "status": "queued",
+   "projection": "efficiency",
+   "note": "first step: dream-time writes the directive genome from banked lessons"
+  },
+  "budgeted_context": {
+   "origin": "canon cluster context_engineering (10/100): context ranked by MEASURED yield within bounded budgets",
+   "status": "implemented",
+   "projection": "efficiency",
+   "note": "bounded reads are law everywhere; the PathMemory lanes already rank by yield (the 22s-window chat obeys)"
+  },
+  "benchmark_honesty": {
+   "origin": "canon cluster benchmark_driven (22/100 - the LARGEST): measured against the 2026 leaders HONESTLY (we cannot run their suites on this box; their numbers are receipts, ours are measured on OUR gates)",
+   "status": "queued",
+   "projection": "coding+canon",
+   "note": "first step: the comparison card prints their published results beside our locally-measured equivalents, labeled"
   }
  },
  "hardware_history": [
-  {
-   "ts": "09:03:09",
-   "ms": 4111.7,
-   "ram": 2.14
-  },
-  {
-   "ts": "09:03:22",
-   "ms": 4083.4,
-   "ram": 1.82
-  },
   {
    "ts": "09:05:26",
    "ms": 4122.1,
@@ -414,6 +440,16 @@
    "ts": "09:18:43",
    "ms": 4094.1,
    "ram": 6.86
+  },
+  {
+   "ts": "09:21:23",
+   "ms": 4084.1,
+   "ram": 7.05
+  },
+  {
+   "ts": "09:21:35",
+   "ms": 4082.3,
+   "ram": 7.06
   }
  ],
  "speed": {
