@@ -58,13 +58,30 @@ for cyc in range(1, 101):
                          capture_output=True, text=True, timeout=240)
     tra = subprocess.run([PY, ROOT + r"\Scripts\GrainLine.py"],
                          capture_output=True, text=True, timeout=180)
-    # the mining attempt (honest gates!)
+    # the mining attempt (honest gates!) - criterion UPGRADED (the audited gap):
+    # a round counts as MINED only if stdout says it ran AND external evidence
+    # moved - register growth, backlog drain, heartbeat findings, or a fresh
+    # round-done flag. A stdout marker alone was printing theater.
     ram = psutil.virtual_memory().available / 1024 ** 3
     mined = False
     if ram >= 2.2:
+        def _ev():
+            try:
+                s0 = json.load(open(AD + r"\swarm_state.json", encoding="utf-8-sig"))
+            except Exception:
+                s0 = {}
+            try:
+                hb = json.load(open(AD + r"\ghost_heartbeat.json", encoding="utf-8-sig"))
+            except Exception:
+                hb = {}
+            return (len(s0.get("repos", [])), len(s0.get("pending_leads", [])),
+                    bool(hb.get("round_done")), int(hb.get("findings", 0) or 0))
+        c0, b0, rd0, f0 = _ev()
         p1 = subprocess.run([PY, AD + r"\run_swarm_probe.py"], capture_output=True,
                             text=True, timeout=700, cwd=ROOT)
-        mined = "SWARM:" in (p1.stdout or "")
+        c1, b1, rd1, f1 = _ev()
+        mined = ("SWARM:" in (p1.stdout or "")) and (c1 > c0 or b1 < b0
+                                                     or f1 > f0 or (rd1 and not rd0))
         if mined:
             runs_had_mining += 1
     else:
