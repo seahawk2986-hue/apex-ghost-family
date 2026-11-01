@@ -57,6 +57,25 @@ def estimate_cost(token_count, provider):
     return token_count / 1e6 * PRICE_PER_1M.get(provider, 0.3)
 
 
+def track(agent, delivered):
+    """THE USEFULNESS LAW: every agent's track record of ACTUALLY-DELIVERED
+    answers (the roster demotes agents whose answers don't produce usable
+    work - an answer-agent is not worth a roster seat)."""
+    p = os.path.join(ROOT, "Config", "agent_track.json")
+    try:
+        t = json.load(open(p, encoding="utf-8-sig"))
+    except Exception:
+        t = {}
+    e = t.setdefault(agent, {"delivered": 0, "failed": 0})
+    e["delivered" if delivered else "failed"] += 1
+    e["rate"] = round(e["delivered"] / max(1, e["delivered"] + e["failed"]), 2)
+    tmp = p + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(t, f, indent=1)
+    os.replace(tmp, p)
+    return e["rate"]
+
+
 def chat(prompt, max_tokens=512, purpose="", models=()):
     """The spend-gated chat: the ollama cloud first (if the key exists),
     then the other keys. THE GATE: refuses at/over the session cap."""
@@ -70,38 +89,70 @@ def chat(prompt, max_tokens=512, purpose="", models=()):
               f"${g['session_cap_usd']:.2f} - the drain protection held")
         return None
     keys = env_keys()
-    cands = list(models) or [
-        ("ollama", "https://ollama.com/v1/chat/completions",
-         "gpt-oss:20b", keys.get("OLLAMA_API_KEY", ""),
-         {"Authorization": "Bearer " + keys.get("OLLAMA_API_KEY", "")}),
-        ("openrouter", "https://openrouter.ai/api/v1/chat/completions",
-         "meta-llama/llama-3.2-3b-instruct:free",
-         keys.get("OPENROUTER_API_KEY", ""),
-         {"Authorization": "Bearer " + keys.get("OPENROUTER_API_KEY", "")}),
-        ("groq", "https://api.groq.com/openai/v1/chat/completions",
-         "llama-3.3-70b-versatile", keys.get("GROQ_API_KEY", ""),
-         {"Authorization": "Bearer " + keys.get("GROQ_API_KEY", "")}),
+    cloud_allowed = os.environ.get("CLOUD_ALLOWED") == "1"   # the founder's
+    cands = list(models) or [                                 # opt-in only
+        # THE FREE-ONLY ROSTER (the founder's law: only free agents run by
+        # default; the CLOUD tier (his credits) sleeps behind CLOUD_ALLOWED=1)
+        ("local-coder", "http://localhost:11434/api/chat",
+         "qwen2.5-coder:7b", "local-no-key", {}),
+        ("local-fast", "http://localhost:11434/api/chat",
+         "qwen2.5-coder:3b", "local-no-key", {}),
     ]
+    if cloud_allowed:
+        cands += [
+            # the DORMANT-BY-DEFAULT cloud set (Andrew's ollama credits +
+            # the others' keys; each ledgered; the cap always enforced)
+            ("ollama", "https://ollama.com/v1/chat/completions",
+             "gpt-oss:120b", keys.get("OLLAMA_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("OLLAMA_API_KEY", "")}),
+            ("openrouter", "https://openrouter.ai/api/v1/chat/completions",
+             "meta-llama/llama-3.2-3b-instruct:free",
+             keys.get("OPENROUTER_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("OPENROUTER_API_KEY", "")}),
+            ("groq", "https://api.groq.com/openai/v1/chat/completions",
+             "llama-3.3-70b-versatile", keys.get("GROQ_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("GROQ_API_KEY", "")}),
+        ]
     for name, url, model, keyv, hdrs in cands:
-        if not keyv:
+        is_local = name.startswith("local")
+        if not keyv and not is_local:
             continue
         try:
+            if is_local:
+                body = {"model": model, "stream": False,
+                        "messages": [{"role": "user",
+                                      "content": prompt[:6000]}],
+                        "options": {"num_predict": max(max_tokens, 512),
+                                    "temperature": 0}}
+                if os.environ.get("CB_FORMAT_JSON") == "1":
+                    body["format"] = "json"
+            else:
+                body = {"model": model,
+                        "messages": [{"role": "user",
+                                      "content": prompt[:6000]}],
+                        "max_tokens": max(max_tokens, 512) if name.startswith(
+                            ("ollama", "openrouter", "groq")) else
+                        max_tokens,
+                        "temperature": 0}
             req = urllib.request.Request(
-                url, data=json.dumps({
-                    "model": model,
-                    "messages": [{"role": "user", "content": prompt[:6000]}],
-                    "max_tokens": max_tokens, "temperature": 0}).encode(),
+                url, data=json.dumps(body).encode(),
                 headers={**hdrs, "Content-Type": "application/json"})
             with urllib.request.urlopen(req, timeout=90) as r:
                 d = json.loads(r.read().decode())
             txt = (d.get("choices", [{}])[0].get("message", {})
-                   .get("content", ""))
+                   .get("content", "")) if not is_local else \
+                d.get("message", {}).get("content", "")
             if txt and txt.strip():
+                track(name, True)
+                if is_local:
+                    # THE FREE LAW: the local brain costs $0.00 - it is
+                    # NEVER billed in the spend ledger (the honest drain
+                    # reporting; the earlier version billed free calls -
+                    # false drain-fear, fixed here).
+                    print(f"[cloud-brain] '{name}/{model}' answered "
+                          f"({purpose}); cost $0.00 (the free tier)")
+                    return txt
                 g["calls"] += 1
-                try:
-                    real_out = len(txt) / 4
-                except Exception:
-                    real_out = 0
                 g["spent_usd"] = round(g["spent_usd"] + est, 6)
                 save_gate(g)
                 print(f"[cloud-brain] '{name}/{model}' answered ({purpose}); "
@@ -109,6 +160,7 @@ def chat(prompt, max_tokens=512, purpose="", models=()):
                       f"${g['session_cap_usd']:.2f}")
                 return txt
         except Exception as e:
+            track(name, False)
             print(f"[cloud-brain] {name}: {str(e)[:60]}")
             continue
     g["refusals"] += 1
