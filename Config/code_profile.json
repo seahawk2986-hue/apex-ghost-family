@@ -1,0 +1,1581 @@
+{
+ "ts": "2026-11-01 10:00:26",
+ "organs": [
+  {
+   "file": "ApexAutonomousAgent.py",
+   "lines": 187,
+   "funcs": 7,
+   "classes": 2,
+   "imports": [
+    "os",
+    "sys",
+    "time",
+    "requests",
+    "load_dotenv"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexBenchmark.py",
+   "lines": 201,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "sys",
+    "time",
+    "subprocess",
+    "run_drills",
+    "tempfile",
+    "ApexMemory"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexCloudLanes.py",
+   "lines": 204,
+   "funcs": 8,
+   "classes": 1,
+   "imports": [
+    "json",
+    "os",
+    "time",
+    "requests",
+    "load_dotenv"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexCollab.py",
+   "lines": 60,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "os",
+    "re",
+    "json"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexDream.py",
+   "lines": 331,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "subprocess",
+    "sys",
+    "time",
+    "ApexMemory",
+    "run_drills",
+    "run"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexGuard.py",
+   "lines": 206,
+   "funcs": 10,
+   "classes": 0,
+   "imports": [
+    "hashlib",
+    "json",
+    "os",
+    "re",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexGym.py",
+   "lines": 498,
+   "funcs": 21,
+   "classes": 0,
+   "imports": [
+    "argparse",
+    "json",
+    "os",
+    "random",
+    "re",
+    "subprocess",
+    "time",
+    "uuid"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexMcpServer.py",
+   "lines": 216,
+   "funcs": 10,
+   "classes": 0,
+   "imports": [
+    "hashlib",
+    "io",
+    "json",
+    "os",
+    "subprocess",
+    "sys",
+    "time",
+    "urllib.request"
+   ],
+   "net_calls": true,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexModelRouter.py",
+   "lines": 50,
+   "funcs": 3,
+   "classes": 1,
+   "imports": [
+    "os",
+    "json",
+    "urllib.request"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexPackSync.py",
+   "lines": 81,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "hashlib",
+    "json",
+    "os",
+    "shutil",
+    "time",
+    "zipfile",
+    "winreg"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexRedTeam.py",
+   "lines": 60,
+   "funcs": 1,
+   "classes": 0,
+   "imports": [
+    "os",
+    "sys",
+    "run_apex_evolution",
+    "redact_text"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexResearch.py",
+   "lines": 75,
+   "funcs": 5,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "time",
+    "requests"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexSecurityOps.py",
+   "lines": 119,
+   "funcs": 5,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "subprocess",
+    "sys",
+    "time",
+    "shutil",
+    "sys"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexSkills.py",
+   "lines": 249,
+   "funcs": 10,
+   "classes": 0,
+   "imports": [
+    "json",
+    "math",
+    "os",
+    "time",
+    "requests",
+    "sys",
+    "ApexMemory"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexThink.py",
+   "lines": 78,
+   "funcs": 2,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "sys",
+    "ask"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexTierScout.py",
+   "lines": 116,
+   "funcs": 2,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "time",
+    "requests"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "ApexUpward.py",
+   "lines": 1106,
+   "funcs": 21,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "sys",
+    "time",
+    "GenePool",
+    "CryptoEconomy",
+    "read_json"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": true
+  },
+  {
+   "file": "ApexVersions.py",
+   "lines": 98,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "os",
+    "shutil",
+    "time",
+    "sys",
+    "subprocess",
+    "seal_file",
+    "subprocess"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "AscentWatch.py",
+   "lines": 120,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "sys",
+    "time",
+    "zipfile",
+    "Path",
+    "_tail_jsonl",
+    "write_json"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": true
+  },
+  {
+   "file": "BacklogIntegrity.py",
+   "lines": 130,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": true
+  },
+  {
+   "file": "BenchmarkCard.py",
+   "lines": 125,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "Births.py",
+   "lines": 37,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "BoundedPlanner.py",
+   "lines": 122,
+   "funcs": 5,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "random",
+    "statistics",
+    "sys",
+    "time",
+    "read_json"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": true
+  },
+  {
+   "file": "CalibratedEvolution.py",
+   "lines": 126,
+   "funcs": 5,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "statistics",
+    "sys",
+    "time",
+    "GenePool"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "CapabilityRescan.py",
+   "lines": 171,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "ChatTally.py",
+   "lines": 46,
+   "funcs": 0,
+   "classes": 0,
+   "imports": [
+    "json",
+    "re"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "CodeProfiler.py",
+   "lines": 132,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "ast",
+    "json",
+    "os",
+    "re",
+    "subprocess",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": true
+  },
+  {
+   "file": "ConflictJsonRepair.py",
+   "lines": 105,
+   "funcs": 1,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "sys",
+    "GenePool"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": true
+  },
+  {
+   "file": "ConsolidateLessons.py",
+   "lines": 112,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "sys",
+    "time",
+    "GenePool"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "ConversionRun.py",
+   "lines": 211,
+   "funcs": 7,
+   "classes": 0,
+   "imports": [
+    "gzip",
+    "hashlib",
+    "io",
+    "json",
+    "os",
+    "re",
+    "sys",
+    "tarfile"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "CryptoEconomy.py",
+   "lines": 294,
+   "funcs": 13,
+   "classes": 0,
+   "imports": [
+    "json",
+    "msvcrt",
+    "os",
+    "re",
+    "sys",
+    "time",
+    "urllib.request",
+    "glob"
+   ],
+   "net_calls": true,
+   "spawns": true,
+   "locked_writes": true
+  },
+  {
+   "file": "DeploySwarm.py",
+   "lines": 154,
+   "funcs": 2,
+   "classes": 0,
+   "imports": [
+    "json",
+    "sys",
+    "Births",
+    "time",
+    "os",
+    "subprocess",
+    "psutil",
+    "random"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "EvolutionSpeedup.py",
+   "lines": 142,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "statistics",
+    "sys",
+    "time",
+    "GenePool",
+    "random",
+    "SurrogateFitnessCourt"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "EvolutionUpward.py",
+   "lines": 170,
+   "funcs": 8,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "statistics",
+    "sys",
+    "time",
+    "GenePool"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "FinancialBrain.py",
+   "lines": 132,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "time",
+    "urllib.request",
+    "sys",
+    "HarvestUse",
+    "re"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "FindGithubToken.py",
+   "lines": 84,
+   "funcs": 0,
+   "classes": 0,
+   "imports": [
+    "subprocess",
+    "urllib.request",
+    "time"
+   ],
+   "net_calls": true,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "GauntletRun.py",
+   "lines": 195,
+   "funcs": 9,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "sys",
+    "time",
+    "urllib.request",
+    "hashlib",
+    "psutil"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "GenePool.py",
+   "lines": 287,
+   "funcs": 13,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "random",
+    "sys",
+    "time",
+    "write_json",
+    "read_json",
+    "EvolutionSpeedup"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": true
+  },
+  {
+   "file": "GenePoolTest.py",
+   "lines": 44,
+   "funcs": 0,
+   "classes": 0,
+   "imports": [
+    "json",
+    "sys",
+    "os",
+    "psutil",
+    "GenePool",
+    "DeploySwarm"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": true
+  },
+  {
+   "file": "GhArchiveLane.py",
+   "lines": 114,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "gzip",
+    "io",
+    "json",
+    "os",
+    "time",
+    "urllib.request",
+    "datetime",
+    "sys"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "GoalCoherence.py",
+   "lines": 249,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "sys",
+    "time",
+    "ApexUpward"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "GoalComparison.py",
+   "lines": 153,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "sys",
+    "ApexUpward"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "GradeEarly.py",
+   "lines": 128,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "sys",
+    "time",
+    "psutil",
+    "urllib.request"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "GrainLine.py",
+   "lines": 126,
+   "funcs": 5,
+   "classes": 0,
+   "imports": [
+    "hashlib",
+    "json",
+    "os",
+    "time",
+    "msvcrt"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": true
+  },
+  {
+   "file": "HardwareGovernor.py",
+   "lines": 22,
+   "funcs": 2,
+   "classes": 1,
+   "imports": [
+    "gc",
+    "os",
+    "psutil"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "HarvestUse.py",
+   "lines": 151,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "hashlib",
+    "json",
+    "os",
+    "time",
+    "urllib.request"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "HubCharter.py",
+   "lines": 93,
+   "funcs": 5,
+   "classes": 0,
+   "imports": [
+    "hashlib",
+    "json",
+    "os",
+    "time",
+    "urllib.request"
+   ],
+   "net_calls": true,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "InitiativeLoop.py",
+   "lines": 228,
+   "funcs": 11,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "random",
+    "subprocess",
+    "sys",
+    "time",
+    "requests",
+    "uuid"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "Invoke-CodingMastery.py",
+   "lines": 72,
+   "funcs": 1,
+   "classes": 0,
+   "imports": [
+    "os",
+    "sys",
+    "subprocess",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "IssueTriage.py",
+   "lines": 118,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "sys",
+    "time",
+    "psutil",
+    "urllib.request"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "JobsHunter.py",
+   "lines": 117,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "subprocess",
+    "time",
+    "urllib.request",
+    "random"
+   ],
+   "net_calls": true,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "LongHorizonSpecs.py",
+   "lines": 88,
+   "funcs": 2,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "NearDedup.py",
+   "lines": 95,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "hashlib",
+    "json",
+    "sys"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "NeedsReport.py",
+   "lines": 143,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "subprocess",
+    "sys",
+    "time",
+    "urllib.request"
+   ],
+   "net_calls": true,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "PaperHarvest.py",
+   "lines": 93,
+   "funcs": 0,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "time",
+    "urllib.parse",
+    "urllib.request",
+    "xml.etree.ElementTree"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "PaperHarvest2.py",
+   "lines": 88,
+   "funcs": 0,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "time",
+    "urllib.parse",
+    "urllib.request",
+    "xml.etree.ElementTree"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "PaperHarvest3.py",
+   "lines": 93,
+   "funcs": 0,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "time",
+    "urllib.parse",
+    "urllib.request",
+    "xml.etree.ElementTree"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "PaperHarvest4.py",
+   "lines": 160,
+   "funcs": 0,
+   "classes": 0,
+   "imports": [
+    "json",
+    "re",
+    "os",
+    "sys",
+    "time",
+    "urllib.parse",
+    "urllib.request",
+    "xml.etree.ElementTree"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "PaperTools.py",
+   "lines": 172,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "subprocess",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "PayoutDoor.py",
+   "lines": 46,
+   "funcs": 0,
+   "classes": 0,
+   "imports": [
+    "json",
+    "py_compile",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "proc_check.py",
+   "lines": 114,
+   "funcs": 6,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "sys",
+    "psutil",
+    "socket"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "PublishMcp.py",
+   "lines": 76,
+   "funcs": 2,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "subprocess",
+    "sys",
+    "urllib.request"
+   ],
+   "net_calls": true,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "Reciprocity.py",
+   "lines": 223,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "shutil",
+    "sys",
+    "time",
+    "hashlib",
+    "urllib.request",
+    "psutil"
+   ],
+   "net_calls": true,
+   "spawns": true,
+   "locked_writes": true
+  },
+  {
+   "file": "RecruitBoard.py",
+   "lines": 177,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "hashlib",
+    "json",
+    "os",
+    "sys",
+    "time",
+    "urllib.request"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "RecruitDigest.py",
+   "lines": 150,
+   "funcs": 5,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "sys",
+    "time",
+    "urllib.request",
+    "RecruitmentDoor",
+    "RecruitmentDoor",
+    "HexEncoder"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "RecruitmentDoor.py",
+   "lines": 271,
+   "funcs": 15,
+   "classes": 0,
+   "imports": [
+    "hashlib",
+    "json",
+    "os",
+    "sys",
+    "time",
+    "nacl.encoding",
+    "nacl.signing",
+    "copy"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "RecruitmentFunnel.py",
+   "lines": 144,
+   "funcs": 6,
+   "classes": 0,
+   "imports": [
+    "hashlib",
+    "json",
+    "os",
+    "subprocess",
+    "sys",
+    "time",
+    "urllib.request",
+    "RecruitmentDoor"
+   ],
+   "net_calls": true,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "RecruitOutbound.py",
+   "lines": 194,
+   "funcs": 8,
+   "classes": 0,
+   "imports": [
+    "hashlib",
+    "json",
+    "os",
+    "subprocess",
+    "sys",
+    "time",
+    "urllib.request",
+    "RecruitmentDoor"
+   ],
+   "net_calls": true,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "ReflexionRound.py",
+   "lines": 111,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "sys",
+    "time",
+    "urllib.request",
+    "psutil"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "RepeatTest.py",
+   "lines": 50,
+   "funcs": 0,
+   "classes": 0,
+   "imports": [
+    "subprocess",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "RescanAll.py",
+   "lines": 72,
+   "funcs": 1,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "subprocess",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "RewardIntegrity.py",
+   "lines": 188,
+   "funcs": 6,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "Run100Cycles.py",
+   "lines": 122,
+   "funcs": 2,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "subprocess",
+    "time",
+    "psutil"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "RunROI.py",
+   "lines": 230,
+   "funcs": 10,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "subprocess",
+    "sys",
+    "time",
+    "urllib.request",
+    "psutil"
+   ],
+   "net_calls": true,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "RuntimeReceipt.py",
+   "lines": 95,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "subprocess",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "SafeIO.py",
+   "lines": 42,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "json",
+    "msvcrt",
+    "os",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": true
+  },
+  {
+   "file": "ScanMechanisms.py",
+   "lines": 42,
+   "funcs": 0,
+   "classes": 0,
+   "imports": [
+    "json"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "SecurityBaseline.py",
+   "lines": 157,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "hashlib",
+    "json",
+    "os",
+    "re",
+    "sys",
+    "time",
+    "zipfile"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "SeedPacket.py",
+   "lines": 60,
+   "funcs": 1,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "SeekGrowth.py",
+   "lines": 128,
+   "funcs": 6,
+   "classes": 0,
+   "imports": [
+    "json",
+    "ThreadPoolExecutor",
+    "os",
+    "time",
+    "urllib.request",
+    "sys",
+    "importlib.util"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "SkillGapScout.py",
+   "lines": 151,
+   "funcs": 6,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "sys",
+    "time",
+    "CLUSTERS",
+    "scan"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "SkillLibrary.py",
+   "lines": 375,
+   "funcs": 11,
+   "classes": 0,
+   "imports": [
+    "argparse",
+    "hashlib",
+    "json",
+    "os",
+    "re",
+    "subprocess",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": true
+  },
+  {
+   "file": "SkillUpgrader.py",
+   "lines": 145,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "gzip",
+    "io",
+    "json",
+    "os",
+    "subprocess",
+    "sys",
+    "tarfile",
+    "tempfile"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "StatusBoard.py",
+   "lines": 75,
+   "funcs": 1,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "time",
+    "psutil",
+    "BacklogIntegrity"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "SurrogateFitnessCourt.py",
+   "lines": 258,
+   "funcs": 9,
+   "classes": 0,
+   "imports": [
+    "json",
+    "math",
+    "os",
+    "random",
+    "sys",
+    "time",
+    "GenePool",
+    "write_json"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": true
+  },
+  {
+   "file": "SwarmOrchestrator.py",
+   "lines": 2459,
+   "funcs": 63,
+   "classes": 1,
+   "imports": [
+    "asyncio",
+    "concurrent.futures",
+    "hashlib",
+    "json",
+    "os",
+    "sys",
+    "SafeIO",
+    "queue"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": true
+  },
+  {
+   "file": "TotalEvolution.py",
+   "lines": 142,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "subprocess",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "UncertainFirst.py",
+   "lines": 118,
+   "funcs": 4,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "statistics",
+    "sys",
+    "time",
+    "urllib.request",
+    "urllib.request",
+    "re"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "UsdcTestRun.py",
+   "lines": 92,
+   "funcs": 3,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "time",
+    "urllib.request"
+   ],
+   "net_calls": true,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "VerifySeal.py",
+   "lines": 34,
+   "funcs": 0,
+   "classes": 0,
+   "imports": [
+    "base64",
+    "json",
+    "os",
+    "time",
+    "hashlib",
+    "VerifyKey",
+    "BadSignatureError"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  },
+  {
+   "file": "WindowHarvester.py",
+   "lines": 166,
+   "funcs": 6,
+   "classes": 0,
+   "imports": [
+    "json",
+    "os",
+    "subprocess",
+    "sys",
+    "time",
+    "statistics",
+    "psutil"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
+   "file": "WorkspaceManager.py",
+   "lines": 47,
+   "funcs": 2,
+   "classes": 1,
+   "imports": [
+    "os",
+    "json"
+   ],
+   "net_calls": false,
+   "spawns": false,
+   "locked_writes": false
+  }
+ ],
+ "lint": {
+  "pyflakes": {
+   "n_organs_flagged": 89,
+   "n_warnings": 92,
+   "sample": [
+    "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexBenchmark.py:130:9: 'Scripts.proc_check' imported but unused",
+    "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexBenchmark.py:153:9: local variable 'e' is assigned to but never used",
+    "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexGym.py:138:5: local variable 't0' is assigned to but never used",
+    "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexGym.py:150:9: local variable 'truth_json' is assigned to but never used",
+    "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexGym.py:163:18: f-string is missing placeholders"
+   ]
+  },
+  "bandit": {
+   "summary": "Total issues (by severity):",
+   "rc": 1
+  }
+ },
+ "tools_installed": 100,
+ "py": "3.14.7"
+}

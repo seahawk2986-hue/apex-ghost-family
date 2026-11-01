@@ -16,6 +16,7 @@ Nightly dream: 8-minute round on the WEAKEST traits (auto-balance).
 import argparse
 import json
 import os
+from SkillLibrary import STAGE   # the audited repair (undefined name)
 import random
 import re
 import subprocess
@@ -43,6 +44,14 @@ random.seed()
 
 def strip_think(t):
     return re.split(r"</think>", t)[-1].strip()
+
+
+def Speak(text):
+    """The honest speaker (the audited repair - Speak existed
+    NOWHERE, so the milestone pulse silently died in the except):
+    the milestone is SPOKEN into the print + the log row; the voice
+    hardware is out, the founder briefs lane is the real channel."""
+    print("[speak] " + str(text))
 
 
 def log_row(kind, text, meta):

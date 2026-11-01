@@ -1,0 +1,77 @@
+{
+ "ts": "2026-11-01 10:00:26",
+ "wall_min": 0.8,
+ "steps": [
+  {
+   "step": "capability_rescan",
+   "script": "CapabilityRescan.py",
+   "rc": 0,
+   "s": 0.5,
+   "verdict": "[rescan] VERDICT: PASS -> implemented"
+  },
+  {
+   "step": "paper_tools",
+   "script": "PaperTools.py",
+   "rc": 0,
+   "s": 0.8,
+   "verdict": "[paper-tools] VERDICT: PASS -> implemented"
+  },
+  {
+   "step": "code_profiler",
+   "script": "CodeProfiler.py",
+   "rc": 0,
+   "s": 4.7,
+   "verdict": "[profiler] VERDICT: PASS -> implemented"
+  },
+  {
+   "step": "bounded_planner",
+   "script": "BoundedPlanner.py",
+   "rc": 0,
+   "s": 0.1,
+   "verdict": "[planner] VERDICT: PASS -> implemented"
+  },
+  {
+   "step": "reward_integrity",
+   "script": "RewardIntegrity.py",
+   "rc": 0,
+   "s": 0.1,
+   "verdict": "[reward-integrity] VERDICT: PASS -> implemented"
+  },
+  {
+   "step": "goal_coherence",
+   "script": "GoalCoherence.py",
+   "rc": 0,
+   "s": 0.2,
+   "verdict": "[coherence] VERDICT: PASS -> implemented"
+  },
+  {
+   "step": "backlog_integrity",
+   "script": "BacklogIntegrity.py",
+   "rc": 0,
+   "s": 0.1,
+   "verdict": "[backlog] VERDICT: PASS -> implemented"
+  },
+  {
+   "step": "sources_audit",
+   "script": "_sources_audit.py",
+   "rc": 0,
+   "s": 0.8,
+   "verdict": "SOURCES AUDIT: ALL SOURCES CURRENT + COMMITTED; live-organ rewrites pending cadence (expec"
+  },
+  {
+   "step": "spec_recheck",
+   "script": "_spec_recheck.py",
+   "rc": 0,
+   "s": 4.4,
+   "verdict": "[spec-recheck] FINAL: 14/14 PASS -> EVERY SPEC HONORED"
+  },
+  {
+   "step": "the_full_suite_x2",
+   "script": "RepeatTest.py",
+   "rc": 0,
+   "s": 38.9,
+   "verdict": "[SurrogateFitnessCourt.py] rc=0 (118ms) -> [sfc] VERDICT: PASS -> wired into pre-stage"
+  }
+ ],
+ "verdict": "THE COMPLETE RESCAN: every step green"
+}

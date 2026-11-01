@@ -1,0 +1,128 @@
+{
+ "ts": "2026-11-01 09:59:37",
+ "canon_rows": 721,
+ "tools_named_in_canon": {
+  "ast": 83,
+  "repl": 23,
+  "bandit": 3,
+  "mbpp": 2,
+  "swe-bench": 4,
+  "livecodebench": 2,
+  "vllm": 2,
+  "humaneval": 2
+ },
+ "adopted": {
+  "tree-sitter": [
+   "already-resident",
+   true
+  ],
+  "pyflakes": [
+   "already-resident",
+   true
+  ],
+  "bandit": [
+   "already-resident",
+   true
+  ],
+  "ruff": [
+   "already-resident",
+   true
+  ],
+  "pytest": [
+   "already-resident",
+   true
+  ],
+  "ast": [
+   "stdlib-resident",
+   true
+  ]
+ },
+ "skipped": [
+  {
+   "tool": "SWE-bench",
+   "papers": 4,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "SWE-Gym",
+   "papers": 0,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "HumanEval",
+   "papers": 2,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "MBPP",
+   "papers": 2,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "Terminal-Bench",
+   "papers": 0,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "OSWorld",
+   "papers": 0,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "WebArena",
+   "papers": 0,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "GAIA",
+   "papers": 0,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "LiveCodeBench",
+   "papers": 2,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "REPL",
+   "papers": 23,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "Docker",
+   "papers": 0,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "AutoGen",
+   "papers": 0,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "LangChain",
+   "papers": 0,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "DSPy",
+   "papers": 0,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "vLLM",
+   "papers": 2,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "lm-evaluation-harness",
+   "papers": 0,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  },
+  {
+   "tool": "inspect-ai",
+   "papers": 0,
+   "reason": "harness/framework/GPU-class: docker suites or GPU inference - heavy for this 16GB/$0 box; kept as receipts + the benchmark-honesty card's labels"
+  }
+ ],
+ "law": "adopt = pip-installable + $0 + CPU-legal + light; the harnesses are receipts for benchmark_honesty's labeled comparisons"
+}

@@ -1,4 +1,4 @@
-﻿"""Swarm Orchestrator v3 - Ghost Scout swarm: massive, ultra-light, gold-hungry.
+"""Swarm Orchestrator v3 - Ghost Scout swarm: massive, ultra-light, gold-hungry.
 
 Ghost scouts are asyncio coroutines, not threads: 4-10x more scouts at near-zero
 RAM/CPU (I/O waits cost nothing). Local disk uses lazy walker threads + a bounded
@@ -591,6 +591,17 @@ def extract_main(html):
 
 
 _CFG_CACHE = {"ts": 0.0, "data": None}
+
+
+def _th(n, cap=400):
+    """THE AUDITED REPAIR: _th was CALLED 4x in the wave builder (hn/trending/
+    wayback/swh counts) but NEVER DEFINED - the whole PHASE-2 wave construction
+    NameError'd into the round's silent except = the network lanes' 0-ok
+    signature. Bounded count helper: max 1, clamp 400 (ghost politeness)."""
+    try:
+        return max(1, min(int(n), cap))
+    except Exception:
+        return 1
 
 
 def cfg(key, default):
@@ -2019,22 +2030,35 @@ async def network_phase(ghosts_n, ledger, seen, minutes_cap, state, pending):
     if wave3 and time.time() < deadline:
         await run_wave(wave3, 6)
     # DIRECTIVE pulse: mid-round RAM crisis -> all ghosts duck, queue flushes
-    try:
-        _fr = free_ram_gb()
-        if _fr < 1.5:
-            gnet.paused = True
-            flushed = 0
-            while True:
-                try:
-                    url, kind, meta = wave_q.get_nowait()
-                except asyncio.QueueEmpty:
-                    break
-                if kind == "readme" and meta:
+    # (THE AUDITED REPAIR: wave_q/pending_append were NEVER DEFINED - the
+    # whole block NameError'd into the silent except and the DUCK NEVER
+    # FLUSHED (targets LOST, never re-queued - a real loss channel). The
+    # repair: the unconsumed wave-2 targets are re-queued into the adapter's
+    # pending_leads (the same file + 4000 cap Reciprocity/GrainLine use).)
+    if free_ram_gb() < 1.5:
+        gnet.paused = True
+        flushed = 0
+        try:
+            _sp = os.path.join(r"C:\Users\seaha\Apex-Adapter",
+                               "swarm_state.json")
+            _st = json.load(open(_sp, encoding="utf-8-sig"))
+            _pend = list(_st.get("pending_leads") or [])
+            _have = set(_pend)
+            for _t in (wave2 if "wave2" in dir() else []):
+                _k, _m = _t[1], _t[2]
+                if _k == "readme" and _m and _m not in gnet.mined_repos \
+                        and _m not in _have:
+                    _pend.append(_m)
                     flushed += 1
-                    pending_append(meta)
-            print(f"DIRECTIVE: RAM {_fr:.1f} GB - swarm ducked, {flushed} targets flushed to backlog")
-    except Exception:
-        pass
+            _st["pending_leads"] = _pend[:4000]
+            _tmp = _sp + ".tmp"
+            with open(_tmp, "w", encoding="utf-8") as _f:
+                json.dump(_st, _f, indent=1)
+            os.replace(_tmp, _sp)
+        except Exception as _e:
+            print(f"[duck] flush failed honestly: {str(_e)[:70]}")
+        print(f"DIRECTIVE: RAM {free_ram_gb():.1f} GB - swarm ducked, "
+              f"{flushed} targets flushed to backlog")
 
     # FAILURE-RESEED: one bounded retry for the most persistent failures
     # (host-level: one target per failed URL shape, using leftover capacity)
@@ -2062,7 +2086,7 @@ async def network_phase(ghosts_n, ledger, seen, minutes_cap, state, pending):
             pass
         for lane, mines in getattr(gnet, "lane_mines", {}).items():
             e = pm.setdefault(lane, {})
-            e["reqs"] = int(e.get("reqs", 0)) + max(1, self._lane_reqs if False else 1)
+            e["reqs"] = int(e.get("reqs", 0)) + 1
             e["mines"] = int(e.get("mines", 0)) + int(mines)
         e = pm.setdefault("trending", {})
         pathmem_store(pm)

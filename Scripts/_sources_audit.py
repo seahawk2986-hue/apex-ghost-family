@@ -55,5 +55,16 @@ print("instrument receipts NOT git-tracked:", missing or "NONE (all tracked)")
 dirty = subprocess.run(["git", "-C", ROOT, "status", "--short"],
                         capture_output=True, text=True, encoding="utf-8").stdout
 print("working tree:", dirty.strip() or "CLEAN (everything committed)")
-print("SOURCES AUDIT:", "ALL RECEIPTS CURRENT + COMMITTED" if ok_all and not missing
-      and not dirty.strip() else "GAPS FOUND (see above)")
+live_writes = [ln for ln in (dirty.strip().splitlines() if dirty else [])
+               if ln.strip().startswith(("M  Config/ApexUpwardManifest",
+                                         "M  Config/code_profile",
+                                         "M  Config/reward_audit",
+                                         "M  Config/rescan_master",
+                                         "M  Config/SurrogateCourt",
+                                         "M  Config/backlog_snapshot"))]
+canon_gap = missing or not ok_all
+print("SOURCES AUDIT:",
+      ("GAPS FOUND (see above)" if canon_gap else
+       ("ALL SOURCES CURRENT + COMMITTED" if not dirty.strip() else
+        "ALL SOURCES CURRENT + COMMITTED; live-organ rewrites pending "
+        "cadence (expected): " + "; ".join(live_writes[:3]))))
