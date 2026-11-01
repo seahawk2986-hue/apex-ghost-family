@@ -1,23 +1,19 @@
 {
- "ts": "2026-11-01 09:18:08",
+ "ts": "2026-11-01 09:23:52",
+ "goals_total": 30,
+ "goals_measured": 9,
  "budget": {
   "ram_free_gb": 7.0,
   "cpu_serial": 1.0,
-  "money": 0.0,
-  "human_attention": 1.0,
-  "fs_trust": 1.0
+  "money": 0.0
  },
  "demands": {
   "gold": {
    "ram_free_gb": 2.5,
    "cpu_serial": 1.0,
-   "money": 0.0,
-   "human_attention": 0.0,
    "fs_trust": 1.0
   },
   "money": {
-   "ram_free_gb": 0.3,
-   "cpu_serial": 0.0,
    "money": 0.0,
    "human_attention": 1.0,
    "fs_trust": 1.0
@@ -25,54 +21,220 @@
   "life": {
    "ram_free_gb": 0.5,
    "cpu_serial": 0.2,
-   "money": 0.0,
    "human_attention": 1.0,
    "fs_trust": 1.0
   },
   "recruits": {
    "ram_free_gb": 0.5,
    "cpu_serial": 0.1,
-   "money": 0.0,
    "human_attention": 1.0,
    "fs_trust": 1.0
   },
   "jobs": {
    "ram_free_gb": 1.0,
    "cpu_serial": 0.2,
-   "money": 0.0,
    "human_attention": 0.5,
    "fs_trust": 1.0
   },
   "coding": {
    "ram_free_gb": 3.0,
    "cpu_serial": 1.0,
-   "money": 0.0,
-   "human_attention": 0.2,
    "fs_trust": 1.0
   },
   "omnivore": {
    "ram_free_gb": 1.0,
    "cpu_serial": 0.3,
-   "money": 0.0,
-   "human_attention": 0.2,
    "fs_trust": 1.0
   },
   "efficiency": {
-   "ram_free_gb": 0.5,
    "cpu_serial": 0.1,
-   "money": 0.0,
-   "human_attention": 0.1,
    "fs_trust": 1.0
   },
   "safety": {
-   "ram_free_gb": 0.3,
-   "cpu_serial": 0.0,
-   "money": 0.0,
+   "fs_trust": 1.0
+  },
+  "upward_evo": {
+   "cpu_serial": 0.1,
+   "fs_trust": 1.0
+  },
+  "speed": {
+   "cpu_serial": 0.05
+  },
+  "sovereignty": {
+   "fs_trust": 1.0
+  },
+  "first_external_value": {
+   "human_attention": 1.0,
+   "fs_trust": 1.0
+  },
+  "discovery_harvest": {
+   "cpu_serial": 0.1,
+   "fs_trust": 1.0
+  },
+  "test_first": {
+   "cpu_serial": 0.05,
+   "fs_trust": 1.0
+  },
+  "reproducible": {
+   "cpu_serial": 0.05,
+   "fs_trust": 1.0
+  },
+  "compare_to_canon": {
+   "cpu_serial": 0.05,
+   "fs_trust": 1.0
+  },
+  "self_knowledge": {
+   "cpu_serial": 0.02
+  },
+  "serviceable": {
+   "cpu_serial": 0.02,
+   "fs_trust": 1.0
+  },
+  "backlog_drain": {
+   "cpu_serial": 0.02
+  },
+  "runtime_verification": {
+   "ram_free_gb": 3.0,
+   "cpu_serial": 0.5,
    "human_attention": 0.1,
    "fs_trust": 1.0
+  },
+  "long_horizon_specs": {
+   "ram_free_gb": 1.0,
+   "cpu_serial": 0.3
+  },
+  "gap_scouting": {
+   "cpu_serial": 0.05,
+   "fs_trust": 1.0
+  },
+  "consolidation_cadence": {
+   "ram_free_gb": 0.5,
+   "cpu_serial": 0.2
+  },
+  "budgeted_context": {
+   "cpu_serial": 0.02,
+   "fs_trust": 1.0
+  },
+  "benchmark_honesty": {
+   "cpu_serial": 0.05,
+   "human_attention": 0.2
+  },
+  "tri_genome": {},
+  "elections": {},
+  "throne": {},
+  "sleep": {}
+ },
+ "tiers": {
+  "brain-window": {
+   "base": 2.0,
+   "phases": [
+    {
+     "goals": [
+      "gold"
+     ],
+     "ram": 2.5,
+     "cpu": 1.0
+    },
+    {
+     "goals": [
+      "coding"
+     ],
+     "ram": 3.0,
+     "cpu": 1.0
+    },
+    {
+     "goals": [
+      "runtime_verification"
+     ],
+     "ram": 3.0,
+     "cpu": 0.5
+    }
+   ]
+  },
+  "chain-window": {
+   "base": 2.0,
+   "phases": [
+    {
+     "goals": [
+      "gold"
+     ],
+     "ram": 2.5,
+     "cpu": 1.0
+    },
+    {
+     "goals": [
+      "jobs",
+      "omnivore"
+     ],
+     "ram": 2.0,
+     "cpu": 0.5
+    },
+    {
+     "goals": [
+      "long_horizon_specs"
+     ],
+     "ram": 1.0,
+     "cpu": 0.3
+    },
+    {
+     "goals": [
+      "consolidation_cadence"
+     ],
+     "ram": 0.5,
+     "cpu": 0.2
+    }
+   ]
+  },
+  "bubble-fill": {
+   "base": 2.0,
+   "phases": [
+    {
+     "goals": [
+      "test_first",
+      "reproducible",
+      "gap_scouting",
+      "budgeted_context",
+      "benchmark_honesty",
+      "efficiency",
+      "safety",
+      "upward_evo",
+      "speed",
+      "self_knowledge",
+      "backlog_drain",
+      "discovery_harvest",
+      "serviceable",
+      "sovereignty",
+      "compare_to_canon"
+     ],
+     "ram": 2.4,
+     "cpu": 0.95
+    },
+    {
+     "goals": [
+      "life",
+      "money",
+      "recruits",
+      "first_external_value"
+     ],
+     "ram": 2.4,
+     "cpu": 0.6
+    }
+   ]
   }
  },
- "tensions_guarded": 8,
+ "tensions_guarded": 16,
+ "synergies": [
+  "gold+omnivore: mined material IS the skill source: harvest feeds the library",
+  "gold+coding: every triaged lead is an exercise: the backlog trains",
+  "jobs+coding: inbox asks are REAL demand: exercises with stakes",
+  "coding+efficiency: verified skills compound: every window pays forever after",
+  "omnivore+jobs: more skills = more of the world's asks we can honor",
+  "recruits+jobs: converts take rungs off the board: the ladder works",
+  "life+money: the briefs carry best_action: the flywheel's advice lane (and the human gate keeps it honest)",
+  "safety+safety: the gate binds EVERY window (the precondition synergy)",
+  "efficiency+recruits: manifest + digest + registry make joining cheap",
+  "upward_evo+upward_evo: every goal's movement feeds the fitness: the loop closes on all nine"
+ ],
  "clashes": [],
- "law": "goals are only ADDED; the guard - never the goal - is removed"
+ "law": "goals are only ADDED; the guard - never the goal - is removed; synergies are named mechanisms, not vibes"
 }
