@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-01 10:27:01",
+ "ts": "2026-11-01 10:31:11",
  "wall_min": 1.2,
  "steps": [
   {
@@ -20,14 +20,14 @@
    "step": "code_profiler",
    "script": "CodeProfiler.py",
    "rc": 0,
-   "s": 4.4,
+   "s": 4.5,
    "verdict": "[profiler] VERDICT: PASS -> implemented"
   },
   {
    "step": "full_sweep",
    "script": "FullSweep.py",
    "rc": 0,
-   "s": 6.9,
+   "s": 7.2,
    "verdict": "[sweep] VERDICT: PASS -> implemented"
   },
   {
@@ -69,15 +69,15 @@
    "step": "spec_recheck",
    "script": "_spec_recheck.py",
    "rc": 0,
-   "s": 4.4,
+   "s": 4.5,
    "verdict": "[spec-recheck] FINAL: 14/14 PASS -> EVERY SPEC HONORED"
   },
   {
    "step": "the_full_suite_x2",
    "script": "RepeatTest.py",
    "rc": 0,
-   "s": 51.8,
-   "verdict": "[SurrogateFitnessCourt.py] rc=0 (102ms) -> [sfc] VERDICT: PASS -> wired into pre-stage"
+   "s": 52.3,
+   "verdict": "[SurrogateFitnessCourt.py] rc=0 (117ms) -> [sfc] VERDICT: PASS -> wired into pre-stage"
   }
  ],
  "verdict": "THE COMPLETE RESCAN: every step green"

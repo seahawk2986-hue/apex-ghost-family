@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-01 10:26:50",
+ "ts": "2026-11-01 10:31:10",
  "canon_unique": 721,
  "live_organs_scanned": 93,
  "class_counts": {
@@ -90,5 +90,6 @@
   ]
  },
  "GAPS_RANKED": [],
- "law": "implement in canon-mass order, hardware-legal, test-first, clash-checked"
+ "law": "implement in canon-mass order, hardware-legal, test-first, clash-checked",
+ "live_lines_scanned": 16428
 }

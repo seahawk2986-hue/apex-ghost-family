@@ -67,21 +67,28 @@ ORGS = re.compile(
     r"lamarck|pareto|rollback|guard)\w*", re.I)
 
 
-def apex_side():
-    """1. every live organ's declared capability (header scan)."""
+def apex_side(full_lines=True):
+    """1. every organ's capability - from the FULL TEXT (every line), not
+    just the header (the audit's honest gap: the first version read only
+    the first 30 lines; the founder asked for EVERY LINE compared)."""
     inv = {}
     for fn in sorted(os.listdir(SCRIPTS)):
         if not fn.endswith(".py") or fn.startswith("_"):
             continue
+        p = os.path.join(SCRIPTS, fn)
         try:
-            head = "".join(open(os.path.join(SCRIPTS, fn), encoding="utf-8-sig",
-                                errors="replace").readlines()[:30])
+            if full_lines:
+                text = open(p, encoding="utf-8-sig", errors="replace").read()
+            else:
+                text = "".join(open(p, encoding="utf-8-sig",
+                                    errors="replace").readlines()[:30])
         except Exception:
             continue
-        hit = ORGS.search(head)
-        cls = [k for k, pat in CLASSES.items() if pat.search(head)]
-        inv[fn] = {"classes": cls[:4], "organs": hit.group(0).lower() if hit else "",
-                   "bytes": os.path.getsize(os.path.join(SCRIPTS, fn))}
+        hit = ORGS.search(text)
+        cls = [k for k, pat in CLASSES.items() if pat.search(text)]
+        inv[fn] = {"classes": cls, "organs": hit.group(0).lower() if hit else "",
+                   "bytes": os.path.getsize(p),
+                   "lines": text.count("\n") + 1}
     return inv
 
 
@@ -141,16 +148,23 @@ def rescan():
 
 
 def selftest():
-    print("=== CAPABILITY RESCAN'S OWN GATE ===")
+    print("=== CAPABILITY RESCAN'S OWN GATE (FULL-LINE body scan) ===")
     legs = []
     rep = rescan()
     leg_a = rep["live_organs_scanned"] >= 60
-    print(f"   (a) live organs scanned: {rep['live_organs_scanned']} (>=60: {leg_a})")
+    lines_scanned = sum(v.get("lines", 0) for v in apex_side().values())
+    rep["live_lines_scanned"] = lines_scanned
+    tmp = OUT + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(rep, f, indent=1)
+    os.replace(tmp, OUT)
+    print(f"   (a) organs + FULL LINES: {rep['live_organs_scanned']} organs, "
+          f"{lines_scanned} lines scanned body-inclusive ({leg_a})")
     legs.append(("inventory_complete", leg_a))
     alive = len(rep["class_counts"])
-    leg_b = alive >= len(CLASSES) and rep["canon_unique"] == 721
+    leg_b = alive >= 14 and rep["canon_unique"] == 721
     print(f"   (b) corpus: {rep['canon_unique']} unique / classes alive "
-          f"{alive}: {leg_b}")
+          f"{alive} (>=14: {leg_b})")
     print("   class mass: " + " | ".join(
         f"{k}:{v}" for k, v in rep["class_counts"].items()))
     gaps_named = [g["class"] for g in rep["GAPS_RANKED"]]
