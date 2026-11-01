@@ -753,3 +753,5 @@
 {"id": "11d6ebcf4b0f", "ts": "2026-10-31 22:17:41", "kind": "success", "text": "GHOST SWARM: 175 points for verified productive work.", "meta": {"ghost_points": 175, "total": 111550.5}, "imp": 0.7}
 {"id": "ce1557aee66a", "ts": "2026-10-31 22:17:58", "kind": "success", "text": "GHOST SWARM: 195 points for verified productive work.", "meta": {"ghost_points": 195, "total": 111745.5}, "imp": 0.7}
 {"id": "843d04a0dd76", "ts": "2026-10-31 22:18:29", "kind": "success", "text": "GHOST SWARM: 195 points for verified productive work.", "meta": {"ghost_points": 195, "total": 111940.5}, "imp": 0.7}
+{"id": "34fb40de094e", "ts": "2026-10-31 22:20:24", "kind": "planning_vote", "text": "votes={'traininglogparser.py': 1, 'apexpacing.py': 1} modal=traininglogparser.py agree=1/2", "meta": {"file": "TrainingLogParser.py", "agree": 1, "total": 2}, "imp": 0.8333333333333334}
+{"id": "811e9a07a894", "ts": "2026-10-31 22:20:26", "kind": "error", "text": "Coder failed on TrainingLogParser.py: empty/blocked output", "meta": {}, "imp": 0.75}

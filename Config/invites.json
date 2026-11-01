@@ -1,0 +1,14 @@
+{
+ "84cb1ad658c1af88": {
+  "invite_id": "84cb1ad658c1af88",
+  "issued": "selftest",
+  "expires_at": 1793503705.5118039,
+  "capabilities": [
+   "mine",
+   "triage"
+  ],
+  "single_use": true,
+  "sig_hex": "def4ab2dbb27a7da88c5f3b3116cb3baf337cc44c909b6f52e1f0199958a44abdf6b0ea661db7cb5b5125395a1de7fc4d115086adda4bbd1f1352aac9660430a",
+  "used": true
+ }
+}
