@@ -695,3 +695,5 @@
 {"id": "56ae3bd8b850", "ts": "2026-10-31 21:50:06", "kind": "success", "text": "GHOST SWARM: 194 points for verified productive work.", "meta": {"ghost_points": 194, "total": 106134.5}, "imp": 0.7}
 {"id": "102dace6b40d", "ts": "2026-10-31 21:50:54", "kind": "error", "text": "Coder failed on TrainingLogParser.py: empty/blocked output", "meta": {}, "imp": 0.75}
 {"id": "e88977c59f62", "ts": "2026-10-31 21:51:07", "kind": "success", "text": "GHOST SWARM: 210 points for verified productive work.", "meta": {"ghost_points": 210, "total": 106344.5}, "imp": 0.7}
+{"id": "aa2362e4842d", "ts": "2026-10-31 21:51:44", "kind": "success", "text": "GHOST SWARM: 338 points for verified productive work.", "meta": {"ghost_points": 338, "total": 106682.5}, "imp": 0.7}
+{"id": "1e1b4147bb33", "ts": "2026-10-31 21:52:26", "kind": "success", "text": "GHOST SWARM: 194 points for verified productive work.", "meta": {"ghost_points": 194, "total": 106876.5}, "imp": 0.7}
