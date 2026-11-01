@@ -80,7 +80,8 @@ def self_consistency(ask, k=3, expect=None, ram_free_gb=None):
     import CloudBrain as CB
     votes = {}
     for _ in range(k):
-        r = CB.chat(ask, max_tokens=200, purpose="the self-consistency vote")
+        r = CB.chat(ask, max_tokens=200, purpose="the self-consistency vote",
+                    models=("groq", "local-coder", "local-fast"))
         if not r:
             continue
         t = r.strip().strip("`")

@@ -1,41 +1,45 @@
 {
- "ts": "2026-11-01 13:12:38",
- "model": "openai/gpt-oss-120b",
- "price": "0.00 (the free tier; no card attached)",
- "local_ram_gb": 0.0,
- "runs": [
-  {
-   "verdict": true,
-   "chars": 134,
-   "sample": "{\"ship\": true, \"why\": \"Fix meets issue by raising FileNotFoundError on missing file; no syntax or logic errors"
-  },
-  {
-   "verdict": true,
-   "chars": 98,
-   "sample": "{\"ship\": true, \"why\": \"Implements loud failure on missing file, no errors, fits style and scope.\"}"
-  },
-  {
-   "verdict": false,
-   "chars": 8,
-   "sample": "{\"n\": 1}"
-  },
-  {
-   "verdict": false,
-   "chars": 8,
-   "sample": "{\"n\": 2}"
-  },
-  {
-   "verdict": false,
-   "chars": 8,
-   "sample": "{\"n\": 3}"
+ "ts": "2026-11-01 13:15:12",
+ "retest": {
+  "gate_reviews": [
+   {
+    "stage": "brain-review",
+    "ok": true,
+    "note": "The change addresses the issue by raising a FileNotFoundError when the file is missing, ensuring the load() function fails loudly. There are no obvious errors, ",
+    "ladder": [
+     {
+      "try": 1,
+      "verdict": "reviewed:True"
+     }
+    ],
+    "held": false
+   },
+   {
+    "stage": "brain-review",
+    "ok": true,
+    "note": "The change addresses the issue by raising a FileNotFoundError when the file is missing, ensuring the load() function fails loudly. There are no obvious errors, ",
+    "ladder": [
+     {
+      "try": 1,
+      "verdict": "reviewed:True"
+     }
+    ],
+    "held": false
+   }
+  ],
+  "ensemble": {
+   "verdict": "CONSENSUS",
+   "k": 3,
+   "agree": 1.0,
+   "winner": "{\"sum\": 7}",
+   "votes": {
+    "{\"sum\": 7}": 3
+   },
+   "verified": true
   }
- ],
- "ok_json": 2,
- "latency_s": [
-  0.78,
-  0.53,
-  0.29,
-  0.52,
-  0.32
- ]
+ },
+ "verdict": "UTILIZED-2/2",
+ "model": "groq/openai/gpt-oss-120b",
+ "local_ram_gb": 0.0,
+ "cost": "$0.00"
 }

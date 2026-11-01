@@ -103,7 +103,14 @@ def stage_lint(changed, wd):
 
 
 def stage_brain_review(diff_text, issue_body, purpose):
-    """The brain-REVIEW: correctness/scope/style/disclosure."""
+    """The brain-REVIEW: the never-skip ladder (DualReview: the
+    gpt-oss-120b judges FIRST at $0/the locals as the guaranteed floor/
+    HELD-not-skipped on a total outage)."""
+    try:
+        import DualReview as DR
+        return DR.stage3(diff_text, issue_body, purpose)
+    except Exception:
+        pass  # the honest fallback: the legacy direct path below
     import CloudBrain as CB
     r = CB.chat("Review this automated contribution BEFORE it ships. "
                 "ISSUE:\n" + issue_body[:1500] + "\n\nDIFF:\n" +
