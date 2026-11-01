@@ -1,0 +1,87 @@
+{
+ "ts": "2026-11-01 10:54:15",
+ "ranked": [
+  {
+   "class": "code_fix",
+   "rate": 150.0,
+   "papers": 13,
+   "cap": 322
+  },
+  {
+   "class": "ml_data",
+   "rate": 200.0,
+   "papers": 5,
+   "cap": 4
+  },
+  {
+   "class": "security",
+   "rate": 500.0,
+   "papers": 86,
+   "cap": 0
+  },
+  {
+   "class": "unclassified",
+   "rate": 0.0,
+   "papers": 18,
+   "cap": 0
+  }
+ ],
+ "added_to_catalog": [
+  {
+   "name": "code_fix work (agent-executed; founder-gated delivery)",
+   "kls": "code_fix",
+   "documented_rate_band": "$150+ (the canon's band)",
+   "capability": 322,
+   "evidence_papers": [
+    "2610.34633v1",
+    "2610.19368v1",
+    "2609.12464v1"
+   ],
+   "fulfillment": "apex executes; the checkout + the acceptance = the founder's clicks",
+   "checkout": "FOUNDER-GATED (no rail; the destination recorded: [REDACTED-PAYPAL])"
+  },
+  {
+   "name": "ml_data work (agent-executed; founder-gated delivery)",
+   "kls": "ml_data",
+   "documented_rate_band": "$200+ (the canon's band)",
+   "capability": 4,
+   "evidence_papers": [
+    "2606.27601v1",
+    "2608.13854v1",
+    "2605.05282v1"
+   ],
+   "fulfillment": "apex executes; the checkout + the acceptance = the founder's clicks",
+   "checkout": "FOUNDER-GATED (no rail; the destination recorded: [REDACTED-PAYPAL])"
+  },
+  {
+   "name": "security work (agent-executed; founder-gated delivery)",
+   "kls": "security",
+   "documented_rate_band": "$500+ (the canon's band)",
+   "capability": 0,
+   "evidence_papers": [
+    "2610.38621v1",
+    "2610.37797v1",
+    "2610.33756v1",
+    "2607.06197v1",
+    "2610.12948v1",
+    "2610.31165v1"
+   ],
+   "fulfillment": "apex executes; the checkout + the acceptance = the founder's clicks",
+   "checkout": "FOUNDER-GATED (no rail; the destination recorded: [REDACTED-PAYPAL])"
+  },
+  {
+   "name": "unclassified work (agent-executed; founder-gated delivery)",
+   "kls": "unclassified",
+   "documented_rate_band": "$0+ (the canon's band)",
+   "capability": 0,
+   "evidence_papers": [
+    "2609.26234v1",
+    "2610.34841v1",
+    "2610.31152v1"
+   ],
+   "fulfillment": "apex executes; the checkout + the acceptance = the founder's clicks",
+   "checkout": "FOUNDER-GATED (no rail; the destination recorded: [REDACTED-PAYPAL])"
+  }
+ ],
+ "law": "nothing real until the founder's clicks (checkout + acceptance); the rates are DOCUMENTED bands, not promises"
+}

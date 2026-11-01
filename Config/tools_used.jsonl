@@ -64,3 +64,11 @@
 {"ts": "2026-11-01 10:45:34", "run": "harvest5", "tool": "python-urllib+xml", "purpose": "fetch + ATOM (stdlib)"}
 {"ts": "2026-11-01 10:45:34", "run": "harvest5", "tool": "money-recognizer", "purpose": "the COIN regex ranks each paper's money-documentation density"}
 {"ts": "2026-11-01 10:45:34", "run": "harvest5", "tool": "lane-classifier", "purpose": "bounty/marketplace/trading/commerce/economy-sim tags per row"}
+{"ts": "2026-11-01 10:49:22", "run": "earn-now", "tool": "github-rest-api", "purpose": "the candidates' liveness + open-issue verification (bounded, our token)"}
+{"ts": "2026-11-01 10:49:22", "run": "earn-now", "tool": "git-credential-fill", "purpose": "the token's safe retrieval (never printed/logged)"}
+{"ts": "2026-11-01 10:49:22", "run": "earn-now", "tool": "file-now-kit", "purpose": "the founder's one-paste-per-file bridge (the legal fastest to the tally)"}
+{"ts": "2026-11-01 10:51:29", "run": "harvest5", "tool": "arxiv-export-api", "purpose": "the earning-canon source endpoint (9 money-class queries)"}
+{"ts": "2026-11-01 10:51:29", "run": "harvest5", "tool": "python-urllib+xml", "purpose": "fetch + ATOM (stdlib)"}
+{"ts": "2026-11-01 10:51:29", "run": "harvest5", "tool": "money-recognizer", "purpose": "the COIN regex ranks each paper's money-documentation density"}
+{"ts": "2026-11-01 10:51:29", "run": "harvest5", "tool": "lane-classifier", "purpose": "bounty/marketplace/trading/commerce/economy-sim tags per row"}
+{"ts": "2026-11-01 10:52:44", "run": "harvest6", "tool": "rate-anchored-classifier", "purpose": "high-earn job classes with documented USD rate bands"}
