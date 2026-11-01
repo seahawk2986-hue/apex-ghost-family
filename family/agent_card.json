@@ -1,0 +1,24 @@
+{
+ "name": "apex-ghost-family",
+ "version": "1.0",
+ "founded": "2026-10-31",
+ "capabilities": [
+  "mine",
+  "triage",
+  "draft",
+  "monitor",
+  "verify"
+ ],
+ "endpoints": {
+  "transport": "git+files (keyless, commit-rooted)",
+  "door": "Scripts/RecruitmentDoor.py (invite-gated)"
+ },
+ "laws": [
+  "human gate on all money",
+  "fail-closed",
+  "print-first",
+  "digest-evidenced"
+ ],
+ "attach_protocol": "leave a signed card in family/join_requests.jsonl (commit or file); a founder invite is REQUIRED - request one via an issue labeled 'recruit-request'",
+ "digest": "9e851152d692d7c9"
+}
