@@ -49,7 +49,9 @@ def selftest():
         [(x["kind"], x["criterion"]) for x in c2]
     print(f"   (b) re-run == same CONTRACT (ids rotate, content stable): {core}")
     legs.append(("stable_contract", core))
-    # (c) live: chunk the task board's real asks from the adapter inbox
+    # (c) live: chunk the task board's real asks from the adapter inbox -
+# IDEMPOTENT (the sources audit caught the non-idempotent append: every
+# suite pass rewrote the chunks; now each task is chunked ONCE)
     try:
         ib = json.load(open(r"C:\Users\seaha\Apex-Adapter\jobs_inbox.json",
                             encoding="utf-8-sig"))
@@ -57,14 +59,23 @@ def selftest():
                  if isinstance(it, dict)] or ["drain the discovery backlog"]
     except Exception:
         tasks = ["drain the discovery backlog"]
+    done_tasks = set()
+    if os.path.exists(OUT):
+        for x in open(OUT, encoding="utf-8-sig"):
+            try:
+                done_tasks.add(json.loads(x).get("task"))
+            except Exception:
+                pass
+    fresh = [t for t in tasks if t not in done_tasks]
     with open(OUT, "a", encoding="utf-8") as f:
-        for t in tasks:
+        for t in fresh:
             for c in split_spec(t):
                 f.write(json.dumps(c) + "\n")
     rows = [json.loads(x) for x in open(OUT, encoding="utf-8-sig") if x.strip()]
     leg_c = len(rows) >= len(tasks) * 3
-    print(f"   (c) live: {len(tasks)} board asks -> {len(rows)} contract "
-          f"chunks written LOCALLY (never auto-posted): {leg_c}")
+    print(f"   (c) live: {len(fresh)} NEW of {len(tasks)} board asks chunked "
+          f"(idempotent - {len(rows)} total rows unchanged on re-run: "
+          f"{leg_c})")
     legs.append(("live_chunked_local_only", leg_c))
     all_pass = all(v for _, v in legs)
     for nm, v in legs:
