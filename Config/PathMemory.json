@@ -7,25 +7,25 @@
   "lessons_written": 0
  },
  "events": {
-  "reqs": 0.884736,
-  "mines": 23.003136
+  "reqs": 0.782757789696,
+  "mines": 20.351702532096
  },
  "wiki": {
-  "reqs": 0.884736,
-  "mines": 5.308415999999999
+  "reqs": 0.782757789696,
+  "mines": 4.696546738175999
  },
  "hf_space": {
-  "reqs": 0.884736,
-  "mines": 0.884736
+  "reqs": 0.782757789696,
+  "mines": 0.782757789696
  },
  "trending": {},
  "variants": {
   "base": {
-   "wins": 1,
-   "rounds": 1,
-   "mines": 33,
-   "reqs": 188,
-   "fitness": 0.1755
+   "wins": 2,
+   "rounds": 2,
+   "mines": 1117,
+   "reqs": 1906,
+   "fitness": 0.586
   }
  },
  "family": {
@@ -41,5 +41,9 @@
   "opportunities": [],
   "total_ev": 0,
   "best_action": "none this cycle - the honest zero; widen lanes/token tomorrow"
+ },
+ "none": {
+  "reqs": 0.884736,
+  "mines": 959.0538239999997
  }
 }

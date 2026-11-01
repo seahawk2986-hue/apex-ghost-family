@@ -5,3 +5,7 @@
 {"ts": "2026-10-31 18:53:21", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
 {"ts": "2026-10-31 18:53:24", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
 {"ts": "2026-10-31 18:53:27", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-10-31 20:54:43", "event": "birth", "child_pid": 0, "shard": "self", "variant": "urge", "territory": "family"}
+{"ts": "2026-10-31 20:55:06", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-10-31 20:55:06", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-10-31 20:55:06", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
