@@ -153,3 +153,8 @@
 {"ts": "2026-11-01 09:02:47", "kind": "upward_alarm", "text": "knowledge lane 'events.mines' regressed 5 -> 4 (PathMemory clobber suspected)"}
 {"ts": "2026-11-01 09:02:51", "kind": "upward_alarm", "text": "knowledge lane 'events.mines' regressed 5 -> 4 (PathMemory clobber suspected)"}
 {"ts": "2026-11-01 09:44:09", "kind": "upward_alarm", "text": "knowledge lane 'events.mines' regressed 5 -> 4 (PathMemory clobber suspected)"}
+{"ts": "2026-11-01 09:53:41", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
+{"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
+{"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
+{"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
+{"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
