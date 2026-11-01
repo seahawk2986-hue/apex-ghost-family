@@ -8,7 +8,14 @@ import time
 PY = sys.executable
 SCRIPTS = sys.prefix and r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed\Scripts"
 ORGS = ("SurrogateFitnessCourt.py", "GenePoolTest.py",
-        "EvolutionSpeedup.py", "ApexUpward.py", "CalibratedEvolution.py")
+        "EvolutionSpeedup.py", "ApexUpward.py", "CalibratedEvolution.py",
+        "RuntimeReceipt.py", "LongHorizonSpecs.py", "ConsolidateLessons.py",
+        "BenchmarkCard.py", "SkillGapScout.py", "GoalComparison.py",
+        "GoalCoherence.py", "BacklogIntegrity.py")
+# Run-on-demand ledger organs kept OUT of the automated double-pass:
+# ConflictJsonRepair (a repair tool; re-running mutates gen counters) and
+# PaperHarvest2/PaperHarvest3 (web fetchers, politeness-costly). Their own
+# gates cover them; the suite covers every state-safe organ.
 ROUND = 2
 verdicts = {}
 for rep in (1, 2):
