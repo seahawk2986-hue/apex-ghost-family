@@ -120,7 +120,7 @@ def individual_issues(post=False):
     file only - the up-for-grabs directory listing requires a PR to their repo,
     which is an EXTERNAL action reserved for the founder)."""
     draft = os.path.join(AD, "up_for_grabs_draft")
-    os.makedirs(draft, exist_ok=True)
+    os.makedirs(os.path.join(draft, "projects"), exist_ok=True)
     with open(os.path.join(draft, "projects", "apex-ghost-family.yaml"), "w",
               encoding="utf-8") as f:
         json.dump({"site": "https://github.com/" + REPO,
