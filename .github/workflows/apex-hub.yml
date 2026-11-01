@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '0 * * * *'   # HOURLY: the outsource-max (a public repo = the
+                          # unlimited free minutes; the honest pacing)
   workflow_dispatch:
 
 permissions:

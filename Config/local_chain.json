@@ -1,0 +1,26 @@
+{
+ "ts": "2026-11-01 11:40:12",
+ "steps": [
+  {
+   "step": "upgrader",
+   "candidates": 3,
+   "code_bearing": 0,
+   "note": "the curriculum's verified set ready (the compile checks = SkillUpgrader's own gate)"
+  },
+  {
+   "step": "conversion",
+   "converted": 0
+  },
+  {
+   "step": "gauntlet",
+   "graded": 0
+  }
+ ],
+ "synced": [],
+ "fitness_measured_lineages": [
+  "base"
+ ],
+ "front": [
+  "base"
+ ]
+}

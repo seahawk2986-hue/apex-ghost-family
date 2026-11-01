@@ -1,0 +1,30 @@
+{
+ "ts": "2026-11-01 11:40:13",
+ "prs": [
+  {
+   "repo": "rtk-ai/rtk",
+   "pr": 4929,
+   "state": "open",
+   "mergeable_state": "blocked",
+   "comments": 3,
+   "labels": [
+    "enhancement",
+    "hooks",
+    "needs-review",
+    "security-sensitive"
+   ],
+   "new_activity": true,
+   "founder_action": "read the maintainer's comment and answer (the loop can draft the response on your word)"
+  },
+  {
+   "repo": "dream-machine-systems/dream-machine-os",
+   "pr": 23,
+   "state": "open",
+   "mergeable_state": "blocked",
+   "comments": 1,
+   "labels": [],
+   "new_activity": true,
+   "founder_action": "read the maintainer's comment and answer (the loop can draft the response on your word)"
+  }
+ ]
+}

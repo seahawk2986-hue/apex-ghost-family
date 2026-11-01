@@ -63,3 +63,24 @@ Say the word (or run the commands in the kit) and I will:
 
 *Money-law standing: the machine never files/spends; the tally moves only
 when a human hand acts — that's why every route above ends in YOUR click.*
+
+## ROUTE F — THE FREE COMPUTE MULTIPLIERS (the outsource-max; all $0)
+The system already outsources to **GitHub Actions** (199+ runs, all
+success — now HOURLY + the earn-beat + the audits + the mining on their
+machines). The three remaining free multipliers, each = a one-time signup:
+1. **Cloudflare Workers** (100,000 requests/day free — the EDGE hub's
+   home; our `edge_hub/worker.js` is code-ready):
+   a. https://dash.cloudflare.com/sign-up (free plan)
+   b. `npm install -g wrangler` && `wrangler login`
+   c. `wrangler secret put FAMILY_CONSENT` (set your own value)
+   d. `wrangler deploy edge_hub/worker.js` (+ the cron-trigger config
+      free: 5 schedules/worker)
+   → the hub's doors + the backlog-mining run at THE EDGE, off the box.
+2. **Hugging Face Spaces** (free vCPU machine + 16GB RAM — the round
+   runner): https://huggingface.co/new-space (the Space = our organ + an
+   endpoint the Actions' cron pings hourly → the rounds run on HF's
+   machine).
+3. **Polar** (https://polar.sh) — the products/services' listing (the
+   fastest real dollar; the machine supplies the catalog).
+
+*The box stays light: the machines' free minutes do the heavy lifting.*
