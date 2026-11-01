@@ -12,7 +12,8 @@ ORGS = ("SurrogateFitnessCourt.py", "GenePoolTest.py",
         "RuntimeReceipt.py", "LongHorizonSpecs.py", "ConsolidateLessons.py",
         "BenchmarkCard.py", "SkillGapScout.py", "GoalComparison.py",
         "GoalCoherence.py", "BacklogIntegrity.py",
-        "CapabilityRescan.py", "BoundedPlanner.py", "RewardIntegrity.py")
+        "CapabilityRescan.py", "BoundedPlanner.py", "RewardIntegrity.py",
+        "CodeProfiler.py")
 # Run-on-demand ledger organs kept OUT of the automated double-pass:
 # ConflictJsonRepair (a repair tool; re-running mutates gen counters) and
 # PaperHarvest2/PaperHarvest3 (web fetchers, politeness-costly). Their own
