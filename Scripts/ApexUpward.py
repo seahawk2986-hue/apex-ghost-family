@@ -716,7 +716,9 @@ def tick(manifest_path=MANIFEST):
     # ---- THE GOALS: per-goal projection, deltas, stall alarms + the GI ----
     goals = goal_projection(cur)
     gi = gi_score(cur)
-    goals_prev = (prev.get("goals_projection") or {})
+    goals_prev = (prev.get("goals") or {})   # the writer's key (was
+    # 'goals_projection' - a reader/writer key mismatch that kept every
+    # tick labeling itself 'baseline'; the gate-less print hid it: fixed)
     now = time.time()
     prog = {g: float(t) for g, t in (prev.get("goal_progress") or {}).items()}
     first_tick = not goals_prev
@@ -796,9 +798,10 @@ def tick(manifest_path=MANIFEST):
            "floors_restored": restored_floors, "git_restored": restored_git,
            "alarms": alarms,
            "goals": {g: {"score": goals[g]["score"],
-                         "delta": round(goals[g]["score"]
-                                        - float((goals_prev.get(g) or {}).get("score") or 0),
-                                        3),
+                         "delta": (None if first_tick else
+                                   round(goals[g]["score"]
+                                         - float((goals_prev.get(g) or {})
+                                                 .get("score") or 0), 3)),
                          "progress_age_min": round((now - prog.get(g, now)) / 60, 1)}
                      for g in GOAL_KEYS},
            "goal_progress": {g: prog.get(g, now) for g in GOAL_KEYS},
@@ -845,8 +848,12 @@ def tick(manifest_path=MANIFEST):
           f"beginning ({gen_active} active, {gen_other} folded/dormant/flow) "
           f"| direct queue: {cur['directives']['queue_depth']}")
     print(f"[apex-upward] GOALS " + " | ".join(
-        f"{g} {man['goals'][g]['score']} (delta {man['goals'][g]['delta']:+.3f}, "
-        f"idle {man['goals'][g]['progress_age_min']}m)" for g in GOAL_KEYS)
+        f"{g} {man['goals'][g]['score']} "
+        + ("(baseline - the first tick establishes the floor; no movement "
+           "claimed yet)"
+           if man["goals"][g]["delta"] is None else
+           f"(delta {man['goals'][g]['delta']:+.3f}")
+        + f", idle {man['goals'][g]['progress_age_min']}m)" for g in GOAL_KEYS)
         + f" | GI {gi} | brain {brain_str}")
     if not alarms:
         print(f"[apex-upward] ALL SUBSYSTEMS UPWARD-OK: skills "

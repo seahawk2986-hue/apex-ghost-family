@@ -7,16 +7,16 @@
   "lessons_written": 0
  },
  "events": {
-  "reqs": 0.19030609451829525,
+  "reqs": 0.18649997262792933,
   "mines": 5
  },
  "wiki": {
-  "reqs": 0.19030609451829525,
-  "mines": 1.1418365671097708
+  "reqs": 0.18649997262792933,
+  "mines": 1.1189998357675754
  },
  "hf_space": {
-  "reqs": 0.19030609451829525,
-  "mines": 0.19030609451829525
+  "reqs": 0.18649997262792933,
+  "mines": 0.18649997262792933
  },
  "trending": {},
  "variants": {
@@ -30,12 +30,12 @@
     "ghost_queue_mines_to_farm": 27,
     "ghost_min_stars": 315
    },
-   "fitness": 12.1848,
+   "fitness": 9.0403,
    "descriptor": "cc4_ev3_tr2",
    "wins": 0,
    "mines": 1121,
-   "reqs": 92,
-   "rounds": 2
+   "reqs": 124,
+   "rounds": 3
   },
   "g0_0": {
    "params": {
@@ -245,12 +245,12 @@
   "best_action": "none this cycle - the honest zero; widen lanes/token tomorrow"
  },
  "none": {
-  "reqs": 0.6925339958244802,
-  "mines": 200.83485878909917,
+  "reqs": 0.6648326359915009,
+  "mines": 192.8014644375352,
   "recruit_bonus": 1.0
  },
  "upward": {
-  "ts": "2026-11-01 09:39:35",
+  "ts": "2026-11-01 09:44:47",
   "alarms": 0,
   "genes_front": [
    "base"
@@ -263,7 +263,7 @@
   },
   "gi_score": 385.7,
   "goals": {
-   "gold": 2149.0,
+   "gold": 2166.0,
    "money": 0.0,
    "life": 129.0,
    "recruits": 6.0,
