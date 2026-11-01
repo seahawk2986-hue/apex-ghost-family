@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-01 09:21:35",
- "ms": 4082.3,
+ "ts": "2026-11-01 09:30:28",
+ "ms": 4070.0,
  "state": {
   "genes": {
    "gen": 10,
@@ -135,7 +135,7 @@
    "head": ""
   },
   "hardware": {
-   "ram_free_gb": 7.06,
+   "ram_free_gb": 6.83,
    "tier": "brain-window",
    "allowed": [
     "brain-load+conversion",
@@ -144,7 +144,7 @@
     "genes"
    ],
    "starved": false,
-   "proc_rss_mb": 33.5,
+   "proc_rss_mb": 33.4,
    "gpu_note": "no GPU loads for swarm work (the 3050 stays idle-capable)"
   },
   "lessons": {
@@ -157,7 +157,7 @@
   },
   "digest": {
    "present": true,
-   "age_min": 18.7
+   "age_min": 27.5
   },
   "brain": {},
   "integrity": {
@@ -188,7 +188,7 @@
   "money": {
    "score": 0.0,
    "delta": 0.0,
-   "progress_age_min": 22.4
+   "progress_age_min": 31.3
   },
   "life": {
    "score": 129.0,
@@ -227,15 +227,15 @@
   }
  },
  "goal_progress": {
-  "gold": 1793542895.6859818,
+  "gold": 1793543428.0429409,
   "money": 1793541551.1543214,
-  "life": 1793542895.6859818,
-  "recruits": 1793542895.6859818,
-  "jobs": 1793542895.6859818,
-  "coding": 1793542895.6859818,
-  "omnivore": 1793542895.6859818,
-  "efficiency": 1793542895.6859818,
-  "safety": 1793542895.6859818
+  "life": 1793543428.0429409,
+  "recruits": 1793543428.0429409,
+  "jobs": 1793543428.0429409,
+  "coding": 1793543428.0429409,
+  "omnivore": 1793543428.0429409,
+  "efficiency": 1793543428.0429409,
+  "safety": 1793543428.0429409
  },
  "gi_score": 385.7,
  "goal_genealogy": {
@@ -375,15 +375,15 @@
   },
   "runtime_verification": {
    "origin": "canon cluster verification_runtime (17/100 papers; e.g. 2610.38800 'Runtime-Aware Context for AI Coding Agents'): skills verified by EXECUTION AT USE, not static compile alone",
-   "status": "queued",
+   "status": "implemented",
    "projection": "coding",
-   "note": "first step: gauntlet verifies against real invocations; next window"
+   "note": "RuntimeReceipt: the append-only execution ledger (exec-ok and honest-fail both = evidence), bounded 10s, monotone - GATE PASSED x2"
   },
   "long_horizon_specs": {
    "origin": "canon cluster long_horizon (7/100; e.g. 2610.40256 'Scaling Long-Horizon Coding via Interdependent Specifications'): big work = EXPLICIT interdependent sub-specs",
-   "status": "queued",
+   "status": "implemented",
    "projection": "jobs+coding",
-   "note": "first step: board tasks enter as contract-chunked sub-specs"
+   "note": "LongHorizonSpecs: locate/change/verify contract chunks with exits + dep edges - the 12 board asks became 36 local contract chunks; posting stays FOUNDER-GATED - GATE PASSED x2"
   },
   "gap_scouting": {
    "origin": "canon cluster skill_library (frontier agents maintain libraries; 2610.05300-class harnesses): scout gaps vs REAL demand",
@@ -393,9 +393,9 @@
   },
   "consolidation_cadence": {
    "origin": "canon cluster memory_lifelong (8/100): consolidate LESSONS (directives), not raw logs - ApexDream's sleep refocused",
-   "status": "queued",
+   "status": "implemented",
    "projection": "efficiency",
-   "note": "first step: dream-time writes the directive genome from banked lessons"
+   "note": "ConsolidateLessons: dedup+cap directive from the banked lessons, folded HERITABLE into the gene archive (2 live lessons -> the genome) - GATE PASSED x2"
   },
   "budgeted_context": {
    "origin": "canon cluster context_engineering (10/100): context ranked by MEASURED yield within bounded budgets",
@@ -405,22 +405,12 @@
   },
   "benchmark_honesty": {
    "origin": "canon cluster benchmark_driven (22/100 - the LARGEST): measured against the 2026 leaders HONESTLY (we cannot run their suites on this box; their numbers are receipts, ours are measured on OUR gates)",
-   "status": "queued",
+   "status": "implemented",
    "projection": "coding+canon",
-   "note": "first step: the comparison card prints their published results beside our locally-measured equivalents, labeled"
+   "note": "BenchmarkCard: 621-canon scanned (3 benchmark references; 0 numbered - the honest note PRINTED: abstracts are method-first), our side 302-code-entry library + 3 exec-verified; directional, never inflated - GATE PASSED x2"
   }
  },
  "hardware_history": [
-  {
-   "ts": "09:05:26",
-   "ms": 4122.1,
-   "ram": 6.89
-  },
-  {
-   "ts": "09:05:43",
-   "ms": 4098.6,
-   "ram": 6.8
-  },
   {
    "ts": "09:07:26",
    "ms": 4095.5,
@@ -450,6 +440,16 @@
    "ts": "09:21:35",
    "ms": 4082.3,
    "ram": 7.06
+  },
+  {
+   "ts": "09:30:15",
+   "ms": 4110.3,
+   "ram": 6.79
+  },
+  {
+   "ts": "09:30:28",
+   "ms": 4070.0,
+   "ram": 6.83
   }
  ],
  "speed": {

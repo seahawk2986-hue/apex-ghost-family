@@ -505,28 +505,28 @@ GOAL_REGISTRY = {
     # agent papers + the 521 prior; the founder's law: goals only ADDED) ----
     "runtime_verification": {
         "origin": "canon cluster verification_runtime (17/100 papers; e.g. 2610.38800 'Runtime-Aware Context for AI Coding Agents'): skills verified by EXECUTION AT USE, not static compile alone",
-        "status": "queued", "projection": "coding",
-        "note": "first step: gauntlet verifies against real invocations; next window"},
+        "status": "implemented", "projection": "coding",
+        "note": "RuntimeReceipt: the append-only execution ledger (exec-ok and honest-fail both = evidence), bounded 10s, monotone - GATE PASSED x2"},
     "long_horizon_specs": {
         "origin": "canon cluster long_horizon (7/100; e.g. 2610.40256 'Scaling Long-Horizon Coding via Interdependent Specifications'): big work = EXPLICIT interdependent sub-specs",
-        "status": "queued", "projection": "jobs+coding",
-        "note": "first step: board tasks enter as contract-chunked sub-specs"},
+        "status": "implemented", "projection": "jobs+coding",
+        "note": "LongHorizonSpecs: locate/change/verify contract chunks with exits + dep edges - the 12 board asks became 36 local contract chunks; posting stays FOUNDER-GATED - GATE PASSED x2"},
     "gap_scouting": {
         "origin": "canon cluster skill_library (frontier agents maintain libraries; 2610.05300-class harnesses): scout gaps vs REAL demand",
         "status": "implemented", "projection": "omnivore",
         "note": "SkillGapScout live tonight: 20 canon-cluster gaps + inbox asks flagged - SKILL GAP SCOUT'S OWN GATE PASSED 4/4"},
     "consolidation_cadence": {
         "origin": "canon cluster memory_lifelong (8/100): consolidate LESSONS (directives), not raw logs - ApexDream's sleep refocused",
-        "status": "queued", "projection": "efficiency",
-        "note": "first step: dream-time writes the directive genome from banked lessons"},
+        "status": "implemented", "projection": "efficiency",
+        "note": "ConsolidateLessons: dedup+cap directive from the banked lessons, folded HERITABLE into the gene archive (2 live lessons -> the genome) - GATE PASSED x2"},
     "budgeted_context": {
         "origin": "canon cluster context_engineering (10/100): context ranked by MEASURED yield within bounded budgets",
         "status": "implemented", "projection": "efficiency",
         "note": "bounded reads are law everywhere; the PathMemory lanes already rank by yield (the 22s-window chat obeys)"},
     "benchmark_honesty": {
         "origin": "canon cluster benchmark_driven (22/100 - the LARGEST): measured against the 2026 leaders HONESTLY (we cannot run their suites on this box; their numbers are receipts, ours are measured on OUR gates)",
-        "status": "queued", "projection": "coding+canon",
-        "note": "first step: the comparison card prints their published results beside our locally-measured equivalents, labeled"},
+        "status": "implemented", "projection": "coding+canon",
+        "note": "BenchmarkCard: 621-canon scanned (3 benchmark references; 0 numbered - the honest note PRINTED: abstracts are method-first), our side 302-code-entry library + 3 exec-verified; directional, never inflated - GATE PASSED x2"},
 }
 
 # ---- THE GOALS: evolution is judged on ANDREW'S goals, nothing else ----
