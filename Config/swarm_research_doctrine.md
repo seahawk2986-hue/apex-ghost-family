@@ -198,3 +198,142 @@ monitorability cost above applies. Noted so the door is not re-opened blindly.
 Orchestrators that learn from INTERMEDIATE trajectories (not just final scores)
 produce self-evolving systems. Validates the family's round-ledgers + lessons
 as the right substrate; D5's synthesis is the bounded version.
+
+---
+
+# PART IV — the labs' proven runs AND their tools/programs (scraped 2026-11-01)
+
+## V1 — Microsoft: Magentic-One (arXiv:2411.04468)
+SOTA-competitive on GAIA/AssistantBench/WebArena with NO per-task tuning.
+Proven mechanics: an Orchestrator with a double loop - a TASK LEDGER (facts,
+guesses, plan) and a PROGRESS LEDGER (per-step state) - plus a STALL RULE:
+no progress for enough steps -> rebuild the Task Ledger and re-plan.
+AutoGenBench: evaluation with REPETITION + ISOLATION controls.
+TOOLS: AutoGen is now **ARCHIVED** (README banner: "no longer maintained...
+advise against production use") -> successor = Microsoft Agent Framework.
+FAMILY VERDICT: adopt the double-ledger + stall-replan pattern in stdlib
+(the round ledger exists; add stall-detection -> lane rotation); ADOPT the
+repetition+isolation eval discipline (the marathon IS repetition); REFUSE
+AutoGen and MAF (installing a framework violates D1 without break-even).
+
+## V2 — Anthropic: multi-agent research system (engineering post, Part II P1)
++90.2% over the best single agent on research evals; delegation-quality +
+effort-scaling + filesystem-artifacts + LLM-judge/human evals. Tools: Claude
+API + MCP server ecosystem. FAMILY VERDICT: patterns adopted (D5, artifact
+rule); MCP REFUSED for now (family tools are local scripts/HTTP; a protocol
+server adds moving parts for zero current need).
+
+## V3 — OpenAI: Agents SDK (openai-agents-python) + practical agents guide
+Cannonical patterns: agents with handoffs, agents-as-tools, GUARDRAILS at
+boundaries, human-in-the-loop, sessions, TRACING built-in, sandbox agents.
+FAMILY VERDICT: the concepts map 1:1 onto family organs (master switch =
+guardrail; earn gate = HITL; heartbeat+round-ledger = tracing); the SDK
+itself REFUSED (OpenAI-API-shaped, new deps, D1 break-even unmet).
+
+## V4 — Manus: context engineering from production ("Stochastic Graduate
+Descent", 2025-07): (1) KV-cache hit rate is THE production metric - keep
+prompt prefixes STABLE (a timestamp at the top kills the cache); (2) mask,
+don't remove: never mutate mid-run toolsets; (3) FILE SYSTEM AS CONTEXT -
+restorable compression only; (4) todo-recitation: rewrite the goal at the
+END of context each step to fight lost-in-the-middle; (5) KEEP ERRORS IN
+CONTEXT - erasing failure removes evidence; (6) don't few-shot yourself
+into a rut - add structured variation.
+FAMILY VERDICT: mostly already family-native (file-artifacts, honest error
+prints, lane rotation). NEW ADOPTIONS: (a) keep SYSTEM_IDENTITY and payload
+prefixes byte-stable across brain calls (local qwen3-8b honors prefix cache);
+(b) recite the mission into each cycle's first line (the heartbeat/round
+banner carries a 1-line goal - the marathon prints already do this).
+
+## V5 — Google: A2A protocol (Linux Foundation; Agent Cards, task lifecycle,
+opacity - Part III C2) + the AI co-scientist line (generate->reflect->rank->
+evolve->tournament over hypotheses; the abstract fetch failed this pass -
+pattern cited from the published system description, honestly marked
+part-unverified). TOOLS: a2a-sdk (python/go/js). FAMILY VERDICT: lifecycle
+states + capability-card alignment at the packet's next schema rev; SDKs
+deferred.
+
+## V6 — Cognition/Devin: single-threaded linear agent + a dedicated
+COMPRESSOR model for long-horizon context; subagents answer questions, never
+edit in parallel (Part II P2). FAMILY VERDICT: the read-only lane swarm +
+digest-gated merging is the compliant architecture; a compressor pass for
+the semantic store is already ApexMemory's job.
+
+## TOOLS-AND-PROGRAMS LEDGER (install / implement / refuse)
+| Tool (owner)              | Verdict  | Why |
+|---------------------------|----------|-----|
+| AutoGen (Microsoft)       | REFUSE   | ARCHIVED - archived deps are unpatched risk |
+| MS Agent Framework (MAF)  | WATCH    | successor; re-evaluate ONLY if D1 break-even |
+| openai-agents SDK (OpenAI)| REFUSE (patterns only) | OpenAI-shaped, adds deps |
+| MCP servers               | DEFER    | zero current need; revisit for hub tooling |
+| A2A SDKs (Google/LF)      | DEFER    | adoption thin (HN); git+files still wins |
+| LangGraph/CrewAI          | NOT-EVAL | not fetched this pass (honest gap) |
+| AutoGenBench-style harness| IMPLEMENT in stdlib | repetition (marathon) + isolation |
+| Magentic double-ledger    | IMPLEMENT in stdlib | stall -> replan = lane rotation |
+| Manus context rules       | IMPLEMENT | stable prefixes + goal recitation |
+| A2A/Agent-Card schema     | IMPLEMENT at packet rev | capability card + lifecycle |
+
+Sources: microsoft.com/research (Magentic-One + archived-AutoGen README),
+openai.github.io/openai-agents-python README, modelcontextprotocol README,
+manus.im blog, arxiv abs/2411.04468. arXiv API rate-limited (429) mid-pass
+and hn.algolia query returned 0 - noted; co-scientist pattern marked
+part-unverified. Scraped 2026-11-01.
+
+---
+
+# PART V — kin systems (repo-harvest swarms) + missing harvest resources
+
+Scraped 2026-11-01: arxiv abs hits/misses recorded honestly below; gharchive.org
+full page; allenai/s2orc README. HONEST MISSES: two recall'd paper IDs landed
+on unrelated papers (2402.04165=GDP nowcasting, 2406.05665=balanced truncation)
+- those two systems (The Stack v2, FineWeb) are cited FROM KNOWLEDGE and marked
+part-unverified.
+
+## K1 — OctoPack/CommitPack (arXiv:2308.07124, FETCHED - direct kin)
+Harvested **4 TB of Git commits across 350 languages** using commit STRUCTURE
+(a commit pairs a code change with a human-written instruction). With strict
+filters (permissive license detection, near-dedup, language balance) it
+fine-tuned StarCoder to SOTA among permissive models (46.2% HumanEval pass@1).
+MAX-OUT LESSONS for the family: (1) commits are instruction-paired harvests -
+better than raw READMEs for SKILL extraction; (2) license filter + dedup +
+language balancing are the yield multipliers; (3) structure beats dumps.
+
+## K2 — The Stack v2 / StarCoder2 (part-unverified - fetch missed)
+The canonical repo->corpus line: Software Heritage as provenance backbone
+(every file traced to the origin repo commit), go-license-detector for the
+permissive filter, MinHash near-dedup, 619 languages. Kin method: provenance
++ license + dedup = the three filters that made a 6TB+ dump trustworthy.
+FAMILY MAPPING: SWH lane + license-sha fast-path already mirror this; add
+MinHash-class near-dedup for skills (sha exact-match only today).
+
+## K3 — Quality-ladder lineage: CCNet -> C4 -> FineWeb (part-unverified)
+Proven max-out: exact-dedup -> MinHash fuzzy-dedup -> language ID -> heuristics
+-> classifier-scored quality (FineWeb-Edu beat FineWeb by CLASSIFIER-selected
+subset alone). Lesson: a small scoring model that RANKS harvest candidates
+beats bigger dumps - the family's grade/rank step is this pattern; wire it
+ EARLIER (grade the backlog, not only mined READMEs).
+
+## K4 — GH Archive (FETCHED - the missing lane, ranked #1)
+data.gharchive.org: the ENTIRE public GitHub timeline since 2011 as hourly
+JSON.GZ files, plain wget, NO key, NO rate-limit page, also on BigQuery
+(githubarchive). 15+ event types incl. PushEvent/WatchEvent/IssuesEvent.
+For a lane-poor hour the archive beats the live Events API by orders of
+magnitude in yield. Proposed lane (post-marathon): pull yesterday's 24h
+archive -> filter PushEvent repos by size/owner-diversity -> feed backlog
+(commits are OctoPack's unit - K1 synergy). Also visible there: OSS Insight,
+GFI-Bot (ML good-first-issue finder - directly feeds the bug lane), DevStats.
+
+## K5 — S2ORC (FETCHED) - 136M papers, machine-readable full text via the
+Semantic Scholar "Bulk Dataset" API. ODC-By 1.0. NOT keyless: needs a free
+API key (x-api-key). FAMILY VERDICT: candidate lane ONLY with Andrew's
+consent for a free key in .env; until then the arXiv/OpenAlex lanes stand.
+
+## K6 - missing-resource shortlist (ranked for OUR lanes, from this pass)
+1. GH Archive hourly dumps (keyless, bulk, exactly our events lane's twin)
+2. GFI-Bot / good-first-issue mining (bug-lane feed; evidence-first)
+3. SourceForge / GNU Savannah / Gitea-Forgejo instances (vintage, sparse-
+   clustered repos - the foraging regime that pays per arXiv:2610.24865)
+4. SPDX license catalog (feeds the license-sha fast-path deterministically)
+5. Crossref + DBLP APIs (paper metadata beyond arXiv's slice)
+6. Wikidata / Google Dataset Search / Kaggle (dataset discovery lanes)
+7. S2 bulk (K5) and Software Heritage full dumps (K2) - the heavy tiers,
+   each with a key/pragmatics gate to clear with the founder's consent.

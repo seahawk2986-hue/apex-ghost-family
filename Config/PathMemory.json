@@ -7,43 +7,44 @@
   "lessons_written": 0
  },
  "events": {
-  "reqs": 0.782757789696,
-  "mines": 20.351702532096
+  "reqs": 0.7517605812240384,
+  "mines": 19.545775111824994
  },
  "wiki": {
-  "reqs": 0.782757789696,
-  "mines": 4.696546738175999
+  "reqs": 0.7517605812240384,
+  "mines": 4.510563487344229
  },
  "hf_space": {
-  "reqs": 0.782757789696,
-  "mines": 0.782757789696
+  "reqs": 0.7517605812240384,
+  "mines": 0.7517605812240384
  },
  "trending": {},
  "variants": {
   "base": {
-   "wins": 2,
-   "rounds": 2,
-   "mines": 1117,
-   "reqs": 1906,
-   "fitness": 0.586
+   "wins": 4,
+   "rounds": 4,
+   "mines": 1121,
+   "reqs": 1995,
+   "fitness": 0.5619
   }
  },
  "family": {
   "champion": "base"
  },
  "andrew_help": {
-  "briefs": 23,
-  "alarmsRaised": 2,
-  "lastHelp": "2026-10-31 16:25:16"
+  "briefs": 33,
+  "alarmsRaised": 4,
+  "lastHelp": "2026-10-31 21:07:33"
  },
  "finance": {
-  "ts": "2026-10-31 16:25:17",
+  "ts": "2026-10-31 21:07:34",
   "opportunities": [],
   "total_ev": 0,
   "best_action": "none this cycle - the honest zero; widen lanes/token tomorrow"
  },
  "none": {
-  "reqs": 0.884736,
-  "mines": 959.0538239999997
+  "reqs": 0.96,
+  "mines": 887.04,
+  "recruit_bonus": 1.0
  }
 }

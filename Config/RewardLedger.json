@@ -66,17 +66,17 @@
  "TrainingLogParser.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 34,
+  "attempts": 35,
   "successes": 1,
   "streak": 0,
   "ok_full": 1,
-  "parity_total": 24,
-  "parity_hits": 24
+  "parity_total": 25,
+  "parity_hits": 25
  },
  "Scripts/ApexGym.py": {
   "best": 110,
   "streak": 4,
   "attempts": 269
  },
- "Scripts/SwarmOrchestrator.py": 73413.5
+ "Scripts/SwarmOrchestrator.py": 75067.5
 }
