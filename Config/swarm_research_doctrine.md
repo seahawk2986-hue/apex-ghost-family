@@ -145,3 +145,56 @@ family's pheromone shares and the D5 synthesis rule.
 Sources: export.arxiv.org API (2 queries, 14 papers), anthropic.com/engineering
 (production post), cognition.ai/blog (counterpoint), hn.algolia.com (practitioner
 signals). All scraped 2026-11-01 keyless; Semantic Scholar still 429 (skipped).
+
+---
+
+# PART III — lightweight inter-agent communication (scraped 2026-11-01)
+
+## C1 — Proof-Carrying Messages (PCM, arXiv:2610.39109) - THE transport upgrade
+Every claim carries its evidence from an append-only log the agent CANNOT write,
+with inclusion proofs signed by an attester outside the agent's control.
+Receivers verify offline (~1 ms) and grade claims proven / unproven / failed -
+a claim resting on the sender's own report is NEVER proven. Benchmark: 926 real
+messages (712 lies in 16 classes): PCM accepted 10 (all stale evidence, 1.4%);
+plain A2A accepted ALL 712; six deployed protocols accepted 504-712. Authority
+travels as grant chains rooted in human approval; chains only narrow.
+ADOPT: the hub's grain digest is a SELF-hash today (GrainLine audit: forgeable).
+The fix is PCM-shaped and cheap: root the packet in the git commit itself - the
+hub's COMMITS are the append-only log the writer cannot rewrite after the fact;
+the family verifies the blob at that immutable commit hash, not at 'main'.
+
+## C2 — Task lifecycle + capability cards (A2A protocol, Linux Foundation)
+JSON-RPC task envelopes with lifecycle states; Agent Cards publish capabilities;
+agents collaborate WITHOUT exposing internal state or memory (opacity).
+ADOPT: grain packets gain explicit lifecycle states (queued/running/done/failed)
+at their next schema rev; the seed packet becomes the family's Agent Card.
+DO NOT ADOPT the full A2A runtime stack - file+git transport stays (HN: "is
+anyone using A2A?" with 45 comments = production adoption still thin).
+
+## C3 — Store-and-forward for offline agents (ATP, arXiv:2610.38398)
+Domain-mediated relay keeps stable entries, saves messages until the receiver
+returns, signs whole envelopes for post-hoc verification. The hub->family
+return leg ALREADY IS this pattern (commits wait for the next brief) - now
+validated by the literature rather than by accident.
+
+## C4 — Message geometry matters more than volume (arXiv:2609.23310, Part II P9)
+Changing only message ORIENTATION moved accuracy 72.6% -> 91.2% or -> 65.9%.
+Broadcasts must carry facts + direction, never bare news.
+
+## C5 — Never let the family evolve private language (emergent-communication results)
+Learned protocols save tokens but the oversight literature shows they become
+unmonitorable (NLA explainers identify without discriminating; ASRD exists
+precisely because emergent codes resist audit). The family's law - schema-typed,
+terse, human-readable channels - is a security property, not a style choice.
+Collusion research (strategic vagueness) adds: VAGUENESS in agent messages is
+a red flag to log, not a convenience to allow.
+
+## C6 — Latent-state communication (SelectKV/HyLaMAS, arXiv:2610.37779): 53-80%
+fewer decoded tokens, 1.16-2.78x speedup via KV-cache transfer. REFUSED for
+the family: mixed engines + served models cannot exchange KV state - and the
+monitorability cost above applies. Noted so the door is not re-opened blindly.
+
+## C7 — Execution-grounded refinement (MAS-Loop, arXiv:2610.38946)
+Orchestrators that learn from INTERMEDIATE trajectories (not just final scores)
+produce self-evolving systems. Validates the family's round-ledgers + lessons
+as the right substrate; D5's synthesis is the bounded version.

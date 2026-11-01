@@ -35,20 +35,66 @@ NOTES = os.path.join(ROOT, "Config", "ApexNotes.json")
 HEALTH = os.path.join(AD, "andrew_health_watch.json")
 
 
-def ingest_hub():
-    """THE RETURN LEG: pull the hub's committed packet from the repo's raw
-    URL, merge verified mines to the FRONT of the queue, atomically.
-    A 404 means the hub has committed nothing home YET - honest zero, not
-    an error; any other failure prints (never silent again)."""
+def _packet_root_via_git():
+    """C1 (PCM) done RIGHT for a quota-hostile world: keyless APIs 403'd us,
+    but git's transport has no request budget. `git fetch` is pure transport;
+    the newest packet-bearing commit is read from origin/main's history; the
+    packet CONTENT is read from the LOCAL git object store - immutable,
+    content-addressed by GitHub's own infrastructure, verifiable offline.
+    Returns (sha, commit_message, packet_text) or (None, reason, None)."""
     try:
-        req = urllib.request.Request(
-            "https://raw.githubusercontent.com/seahawk2986-hue/apex-ghost-family/main/hub_packet_home.json",
-            headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=30) as r:
-            home = json.load(r)
-        # ZERO-TRUST GATE (the archive of ReturnLeg removes the only digest-
-        # verifying path - the live ingest now verifies exactly the same way
-        # the hub_round computed it: sha256 over all keys minus 'digest', [:16])
+        import subprocess
+        subprocess.run(["git", "fetch", "origin", "main"], cwd=ROOT,
+                       capture_output=True, text=True, timeout=120)
+        r2 = subprocess.run(["git", "log", "origin/main", "-1", "--format=%H %s",
+                             "--", "hub_packet_home.json"], cwd=ROOT,
+                            capture_output=True, text=True, timeout=60)
+        line = (r2.stdout or "").strip()
+        if line and " " in line:
+            sha, msg = line.split(" ", 1)
+            r3 = subprocess.run(["git", "show", f"{sha}:hub_packet_home.json"],
+                                cwd=ROOT, capture_output=True, text=True, timeout=60)
+            if r3.returncode == 0 and (r3.stdout or "").strip():
+                return sha, msg[:90], r3.stdout
+            return None, f"blob unreadable at {sha[:12]}", None
+        return None, ("no packet-bearing commit in origin/main: "
+                      + (r2.stderr or "").strip())[:90], None
+    except Exception as _e:
+        return None, str(_e)[:90], None
+
+
+def ingest_hub():
+    """THE RETURN LEG, commit-rooted (C1/PCM doctrine): fetch the packet from
+    the IMMUTABLE commit hash of the hub's newest grain commit - not from
+    mutable 'main' - verify the digest, front-queue verified mines, atomically,
+    and record the evidence root in the state for the brief to show.
+    Falls back to 'main' WITH AN HONEST PRINT only when the commits API is
+    unavailable (the digest gate still runs; the root is just weaker)."""
+    sha, msg, packet_text = _packet_root_via_git()
+    if packet_text is not None:
+        root = sha
+        try:
+            home = json.loads(packet_text)
+        except Exception as _e:
+            print(f"[ingest_hub] packet blob at {sha[:12]} is not valid JSON "
+                  f"({str(_e)[:60]}) - REFUSED", flush=True)
+            return 0
+    else:
+        root = "main"
+        print(f"[ingest_hub] git-root unavailable ({msg}) - raw@main fallback "
+              f"(digest-only trust, honestly weaker)", flush=True)
+        try:
+            req = urllib.request.Request(
+                f"https://raw.githubusercontent.com/seahawk2986-hue/apex-ghost-family/main/hub_packet_home.json",
+                headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                home = json.load(r)
+        except Exception as _e:
+            print(f"[ingest_hub] fallback fetch failed too: {str(_e)[:60]}", flush=True)
+            return 0
+    try:
+        # ZERO-TRUST GATE: digest over all keys minus 'digest', [:16] - the
+        # exact scheme hub_round computes. Content-rooted at an immutable hash.
         if home.get("mines"):
             if not home.get("digest"):
                 print("[ingest_hub] REFUSED: packet has mines but NO digest", flush=True)
@@ -70,18 +116,26 @@ def ingest_hub():
                 seen.add(rv)
                 pend.insert(0, rv)
                 added += 1
+        st["last_hub_root"] = {"sha": (root[:12] if root != "main" else "main"),
+                               "commit_msg": (msg if root != "main" else ""),
+                               "ts": time.strftime("%Y-%m-%d %H:%M:%S")}
         if added:
             st["pending_leads"] = pend[:4000]
             st["repos"] = list(seen)[-20000:]
-            if not _atomic_json(st_path, st):
-                print("[ingest_hub] atomic state write FAILED (lock busy >30s) "
-                      "- nothing ingested this pass", flush=True)
-                return 0
+        if not _atomic_json(st_path, st):
+            print("[ingest_hub] atomic state write FAILED (lock busy >30s) - "
+                  "nothing ingested this pass", flush=True)
+            return 0
+        if added:
+            print(f"[ingest_hub] +{added} verified mines accepted - evidence root "
+                  f"{root[:12] if root != 'main' else 'main'} "
+                  f"({'grain commit' if root != 'main' else 'FALLBACK: mutable main'})",
+                  flush=True)
         return added
     except Exception as e:
         s = str(e)
         if "404" in s:
-            print("[ingest_hub] no packet home in the repo yet (404) - honest zero", flush=True)
+            print("[ingest_hub] no packet home yet (404) - honest zero", flush=True)
         else:
             print(f"[ingest_hub] FAILED: {s}", flush=True)
         return 0

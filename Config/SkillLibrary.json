@@ -3405,8 +3405,30 @@
    "first_line": "\"\"\"Re-exports of version utilities from ``crewai_core.version``.",
    "imports": [],
    "registered": "2026-10-31 20:56:13"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "lib/crewai-core/src/crewai_core/auth/__init__.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "45ee86a7440b594196ed9578fa0346585184fb3d19b04ae248d2de9c529423dd",
+   "lines": 24,
+   "first_line": "\"\"\"OAuth2 authentication primitives — shared by crewai and crewai-cli.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:56:19"
+  },
+  {
+   "skill": "constants",
+   "source_file": "lib/crewai-core/src/crewai_core/auth/constants.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "089acd2c8f6508dc8541b3a881523d73e401948380b16009b31259b4cbfc53f2",
+   "lines": 8,
+   "first_line": "\"\"\"Authentication constants.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:56:20"
   }
  ],
  "sources": [],
- "built": "2026-10-31 20:56:13"
+ "built": "2026-10-31 20:56:20"
 }
