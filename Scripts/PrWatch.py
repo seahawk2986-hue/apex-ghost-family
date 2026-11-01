@@ -12,7 +12,9 @@ import sys
 import time
 
 sys.path.insert(0, os.path.join(
-    ROOT := r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed", "Scripts"))
+    ROOT := os.environ.get(
+        "APEX_ROOT",
+        r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"), "Scripts"))
 AD = r"C:\Users\seaha\Apex-Adapter"
 WATCH = os.path.join(ROOT, "Config", "pr_watch_state.json")
 OUR_PRS = [("rtk-ai/rtk", 4929), ("dream-machine-systems/dream-machine-os", 23)]
