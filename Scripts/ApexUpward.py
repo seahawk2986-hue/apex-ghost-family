@@ -438,6 +438,27 @@ GOAL_REGISTRY = {
     "sleep":       {"origin": "ApexDream + ApexSkills recertify: nightly consolidation; stale skills DEMOTE",
                     "status": "folded", "projection": "skills_lib",
                     "note": "the demotion gate keeps the library honest between sleeps"},
+    # ---- the SESSION'S OPENING DIRECTIVES (the very start of our work) ----
+    "first_external_value": {
+        "origin": "the opening directive: directed toward FIRST EXTERNAL VALUE (filed issue / merged PR) - all money-gated steps end at the founder's review",
+        "status": "active", "projection": "money+recruits+jobs (the $0.00 tally)",
+        "note": "only a human-founded file/PR/listing moves it - the telos of the other three"},
+    "discovery_harvest": {
+        "origin": "the opening directive: make the swarm MAXIMALLY EFFECTIVE at discovery/harvest",
+        "status": "active", "projection": "gold",
+        "note": "gold is this directive's measured instrument (mines/req)"},
+    "test_first": {
+        "origin": "the standing method rule: test first, implement if pass, else self-shelve",
+        "status": "active", "projection": "the gates themselves (RepeatTest)",
+        "note": "every organ ships with its own gate; failures iterate openly"},
+    "reproducible": {
+        "origin": "'repeat the test with the same parameters' - a gate that passes once is not proven",
+        "status": "active", "projection": "RepeatTest's two-pass ledger",
+        "note": "organs ship only when BOTH identical passes are green"},
+    "compare_to_canon": {
+        "origin": "'source the papers from the web; compare the swarm to the most successful documented 2026 cases'",
+        "status": "folded", "projection": "canon (521 papers)",
+        "note": "the canon became the court's authority and the design canon - measured in state.canon"},
 }
 
 # ---- THE GOALS: evolution is judged on ANDREW'S goals, nothing else ----
