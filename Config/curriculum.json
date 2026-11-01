@@ -1,48 +1,38 @@
 {
- "ts": "2026-10-31 21:39:40",
- "verified_count": 5,
+ "ts": "2026-10-31 21:51:09",
+ "verified_count": 4,
  "items": [
   {
-   "skill": "gaussian_process_classifier",
-   "repo": "ctgk/PRML",
-   "file": "prml/kernel/gaussian_process_classifier.py",
-   "imports": [
-    "numpy"
-   ],
-   "lines": 37
-  },
-  {
-   "skill": "making_simple_decisions",
+   "skill": "probabilistic_learning",
    "repo": "aimacode/aima-python",
-   "file": "aima/making_simple_decisions.py",
-   "imports": [],
-   "lines": 11
-  },
-  {
-   "skill": "naive_bayes",
-   "repo": "rushter/MLAlgorithms",
-   "file": "examples/naive_bayes.py",
-   "imports": [],
-   "lines": 31
-  },
-  {
-   "skill": "01-matrix",
-   "repo": "kamyu104/LeetCode-Solutions",
-   "file": "Python/01-matrix.py",
+   "file": "aima/probabilistic_learning.py",
    "imports": [
-    "collections"
+    "heapq"
    ],
-   "lines": 93
+   "lines": 158
   },
   {
-   "skill": "__init__",
+   "skill": "nearest_neighbors",
+   "repo": "rushter/MLAlgorithms",
+   "file": "examples/nearest_neighbors.py",
+   "imports": [],
+   "lines": 59
+  },
+  {
+   "skill": "1-bit-and-2-bit-characters",
+   "repo": "kamyu104/LeetCode-Solutions",
+   "file": "Python/1-bit-and-2-bit-characters.py",
+   "imports": [],
+   "lines": 17
+  },
+  {
+   "skill": "anomaly",
    "repo": "microsoft/SynapseML",
-   "file": "cognitive/src/main/python/synapse/ml/cognitive/__init__.py",
+   "file": "cognitive/src/main/python/synapse/ml/cognitive/anomaly.py",
    "imports": [
-    "sys",
     "warnings"
    ],
-   "lines": 15
+   "lines": 8
   }
  ]
 }

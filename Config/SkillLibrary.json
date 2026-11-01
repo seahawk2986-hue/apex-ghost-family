@@ -42,9 +42,9 @@
     "heapq"
    ],
    "registered": "2026-10-31 11:20:49",
-   "executable_verified": false,
-   "compiles": false,
-   "verified_at": "2026-10-31 21:39:35"
+   "executable_verified": true,
+   "compiles": true,
+   "verified_at": "2026-10-31 21:51:05"
   },
   {
    "skill": "naive_bayes",
@@ -102,7 +102,10 @@
    "lines": 59,
    "first_line": "try:",
    "imports": [],
-   "registered": "2026-10-31 11:20:50"
+   "registered": "2026-10-31 11:20:50",
+   "executable_verified": true,
+   "compiles": true,
+   "verified_at": "2026-10-31 21:51:07"
   },
   {
    "skill": "conf",
@@ -117,7 +120,10 @@
     "re",
     "sys"
    ],
-   "registered": "2026-10-31 11:20:50"
+   "registered": "2026-10-31 11:20:50",
+   "executable_verified": false,
+   "compiles": false,
+   "verified_at": "2026-10-31 21:51:07"
   },
   {
    "skill": "1-bit-and-2-bit-characters",
@@ -128,7 +134,10 @@
    "lines": 17,
    "first_line": "# Time:  O(n)",
    "imports": [],
-   "registered": "2026-10-31 11:20:51"
+   "registered": "2026-10-31 11:20:51",
+   "executable_verified": true,
+   "compiles": true,
+   "verified_at": "2026-10-31 21:51:08"
   },
   {
    "skill": "anomaly",
@@ -141,7 +150,10 @@
    "imports": [
     "warnings"
    ],
-   "registered": "2026-10-31 11:20:51"
+   "registered": "2026-10-31 11:20:51",
+   "executable_verified": true,
+   "compiles": true,
+   "verified_at": "2026-10-31 21:51:09"
   },
   {
    "skill": "eight_puzzle",
@@ -156,7 +168,10 @@
     "random",
     "time"
    ],
-   "registered": "2026-10-31 11:20:51"
+   "registered": "2026-10-31 11:20:51",
+   "executable_verified": false,
+   "compiles": false,
+   "verified_at": "2026-10-31 21:51:09"
   },
   {
    "skill": "nnet_convnet_mnist",
