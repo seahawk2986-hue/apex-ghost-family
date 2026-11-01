@@ -47,7 +47,7 @@ except Exception:
     _HG_cls = None
 _HG = _HG_cls() if _HG_cls else None
 L = os.path.join(R, "Logs")
-Q, M, I = os.path.join(R, "apex_tasks.txt"), os.path.join(L, "reward_telemetry.json"), os.path.join(R, "inbound_adaptations.txt")
+Q, M, I = os.path.join(R, "apex_tasks.txt"), os.path.join(L, "reward_telemetry.jsonl"), os.path.join(R, "inbound_adaptations.txt")
 U = os.environ.get("APEX_LLM_URL", "http://127.0.0.1:1234/v1/chat/completions")
 OLLAMA_U = os.environ.get("APEX_OLLAMA_U", "http://127.0.0.1:11434/v1/chat/completions")
 EMBED_IGNORE = ("text-embedding",)

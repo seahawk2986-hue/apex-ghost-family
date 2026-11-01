@@ -21,6 +21,7 @@ import os
 import subprocess
 import sys
 import time
+import urllib.request
 
 sys.path.insert(0, os.path.join(
     ROOT := r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed", "Scripts"))

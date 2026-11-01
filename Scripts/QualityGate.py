@@ -18,6 +18,7 @@ etiquette stage reads the repo's REAL CONTRIBUTING.md, (d) reproducible."""
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import time

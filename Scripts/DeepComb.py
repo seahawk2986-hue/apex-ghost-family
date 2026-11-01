@@ -1,57 +1,69 @@
-"""DEEPCOMB: the exhaustive-honest code-comb (the founder's 10-times law).
-Each pass = one independent bug-class hunted across the ENTIRE tree:
- P1  compile (py_compile, every .py)
- P2  ruff lint (E9,F = the substance: the syntax + the undefined/unused-name)
- P3  JSON-validate (every .json: parse-hard)
- P4  JSONL-validate (every .jsonl: per-line parse; the honest row-counts)
- P5  YAML/Workflow-validate (every yml: pyyaml + the on-key check = the
-     boolean-ghost lesson mechanized)
- P6  import-surface (every .py imported in isolation: the module-level
-     crashes caught)
- P7  cross-imports (every import X found = X exists)
- P8  undefined-names (the ast-walk: the Name-refs vs the defined, the
-     module-class)
- P9  runtime smoke (the SAFE-flagged organs: the deterministic-pure list =
-     run each; the honest SKIP = the windows/keys/serve-lanes)
- P10 the consensus re-run (the P1-P9 repeated once = the determinism's
-     = the = the = the) + the delta-report
-Each receipt = Config/comb_passes.jsonl (append = the pass-history);
-the verdict = PASS/pass-with-counts (the honest = never zero-free-claim:
-the = the = the = = the count)."""
+"""DEEPCOMB v2: the exhaustive-honest code-comb (the founder's 10-times law).
+HARDENED after the comb-combed lesson (the v1's own bugs, receipted):
+  P1  compile (in-memory = no nul-cfile warning-class, every .py in the
+      LIVE tree: apex_venv, .git, Lib\\, Attic, Config\\versions = excluded)
+  P2  ruff lint (E9,F821 = the substance: undefined-names = real bugs)
+  P3  JSON-validate (every .json)
+  P4  JSONL-validate (per-line parse; honest row-counts)
+  P5  YAML/Workflow-validate (pyyaml + the on-key boolean-ghost check)
+  P6  import-surface (COMPILE-ONLY - never executes the organ; every
+      top-level import must resolve: stdlib / installed / own-file)
+  P7  stdlib-shadow check (a module named like stdlib/installed that
+      shadows it = flagged - the Lib\\ lesson mechanized)
+  P8  ast-walk coverage count (the dataflow = the ruff's F821 lane)
+  P9  runtime smoke (Sanitizer only = the designed selftest)
+  P10 ledger-rotator (the 102MB lesson: the ledger capped at ~4MB,
+      the oldest rows = rotated out; the census-summary = re-derived)
+Each receipt = Config/comb_passes.jsonl. The verdict = counts, never
+a zero-claim."""
 import ast
 import glob
+import importlib.util
 import json
 import os
 import subprocess
 import sys
 import time
-import py_compile
 
 ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 PY = os.path.join(ROOT, "apex_venv", "Scripts", "python.exe")
 SCRIPTS = os.path.join(ROOT, "Scripts")
 LEDGER = os.path.join(ROOT, "Config", "comb_passes.jsonl")
-IMPORTS_DIR_SKIP = {"apex_venv", ".git", "Scripts\\Attic", "Scripts\\Attic\\"}
+LEDGER_CAP = 4 * 2 ** 20  # the 102MB lesson
+EXCLUDES = ("apex_venv", os.sep + ".git" + os.sep, os.sep + "Lib" + os.sep,
+            "Attic", os.sep + "versions" + os.sep)
+STDLIB_NAMES = set(sys.stdlib_module_names) if hasattr(
+    sys, "stdlib_module_names") else set()
+
+
+def ok_path(p):
+    return not any(x in p for x in EXCLUDES)
 
 
 def all_pys():
     return [p for p in glob.glob(os.path.join(ROOT, "**", "*.py"),
-                                 recursive=True)
-            if "apex_venv" not in p and "Attic" not in p]
+                                 recursive=True) if ok_path(p)]
 
 
 def all_files(ext):
     return [p for p in glob.glob(os.path.join(ROOT, "**", "*" + ext),
-                                 recursive=True)
-            if "apex_venv" not in p and "Attic" not in p]
+                                 recursive=True) if ok_path(p)]
+
+
+def read(p):
+    with open(p, "rb") as f:
+        return f.read()
 
 
 def p1_compile(files, found):
     for p in files:
         try:
-            py_compile.compile(p, doraise=True, cfile=os.devnull)
+            compile(read(p), p, "exec")
+        except SyntaxError as e:
+            found.append({"pass": "P1", "file": p, "bug":
+                          f"SyntaxError line {e.lineno}: {str(e.msg)[:90]}"})
         except Exception as e:
-            found.append({"pass": "P1", "file": p, "bug": str(e)[:120]})
+            found.append({"pass": "P1", "file": p, "bug": str(e)[:90]})
     return len(files)
 
 
@@ -59,33 +71,28 @@ def p2_ruff(files, found):
     ruff = os.path.join(os.path.dirname(PY), "ruff.exe")
     if not os.path.exists(ruff):
         return 0
+    n = 0
     for p in files:
         try:
-            r = subprocess.run([ruff, "check", "--select", "E9,F", p],
+            r = subprocess.run([ruff, "check", "--select", "E9,F821", p],
                                capture_output=True, text=True, timeout=30)
+            n += 1
             for ln in (r.stdout or "").splitlines():
-                if "F821" in ln or "F401" in ln.lower() is False:
-                    pass
-            if r.returncode != 0 and (r.stdout or "").strip():
-                for ln in (r.stdout or "").splitlines():
-                    if "F821" in ln:  # the undefined-name = the real bug
-                        found.append({"pass": "P2", "file": p,
-                                      "bug": ln.strip()[:150]})
+                if "F821" in ln:
+                    found.append({"pass": "P2", "file": p,
+                                  "bug": ln.strip()[:150]})
         except Exception as e:
             found.append({"pass": "P2", "file": p, "bug": str(e)[:100]})
-    return len(files)
+    return n
 
 
 def p3_json(files, found):
     for p in files:
         try:
             json.load(open(p, encoding="utf-8-sig", errors="strict"))
-        except Exception as e:
-            try:
-                json.load(open(p, encoding="utf-8", errors="replace"))
-            except Exception as e2:
-                found.append({"pass": "P3", "file": p, "bug":
-                              str(e2)[:110]})
+        except Exception:
+            found.append({"pass": "P3", "file": p, "bug":
+                          "the json = unparseable (strict)"})
     return len(files)
 
 
@@ -95,9 +102,7 @@ def p4_jsonl(files, found):
         n = 0
         for ln in open(p, encoding="utf-8-sig", errors="replace"):
             s = ln.strip()
-            if s and not s.startswith("{"):
-                bad += 1
-            elif s.startswith("{"):
+            if s:
                 try:
                     json.loads(s)
                     n += 1
@@ -116,7 +121,8 @@ def p5_yaml(files, found):
         return 0
     for p in files:
         try:
-            d = yaml.safe_load(open(p, encoding="utf-8"))
+            with open(p, encoding="utf-8") as f:
+                d = yaml.safe_load(f)
             if "workflows" in p and d and "on" not in d:
                 found.append({"pass": "P5", "file": p, "bug":
                               "the on-key = missing-or-boolean (the "
@@ -126,72 +132,72 @@ def p5_yaml(files, found):
     return len(files)
 
 
-def p6_import(files, found):
-    for p in files:
-        if os.path.basename(p).startswith("_"):
-            continue  # the one-shots = the side-effecty (the honest skip)
-        try:
-            r = subprocess.run([PY, "-c", f"import importlib.util as iu"
-                               f"; s = iu.spec_from_file_location('m', "
-                               f"r'{p}'); iu.module_from_spec(s) and "
-                               f"iu.module_from_spec(s) and exec(compile("
-                               f"open(r'{p}', encoding='utf-8').read(), "
-                               f"'{p}', 'exec'), {'{}'})"],
-                               capture_output=True, text=True, timeout=25,
-                               cwd=ROOT)
-            if r.returncode != 0 and "Error" in (r.stderr or ""):
-                found.append({"pass": "P6", "file": p, "bug":
-                              (r.stderr or "").strip().splitlines()[-1][:120]})
-        except Exception as e:
-            found.append({"pass": "P6", "file": p, "bug": str(e)[:100]})
-    return len(files)
+def top_imports(src):
+    """the top-level import-names (module-level only, no exec)."""
+    names = []
+    try:
+        tree = ast.parse(src)
+        for node in tree.body:
+            if isinstance(node, ast.Import):
+                names += [a.name.split(".")[0] for a in node.names]
+            elif isinstance(node, ast.ImportFrom) and node.module:
+                names.append(node.module.split(".")[0])
+    except Exception:
+        pass
+    return names
 
 
-def p7_cross_imports(files, found):
+def resolves(name):
+    if name in STDLIB_NAMES:
+        return True
+    try:
+        return importlib.util.find_spec(name) is not None
+    except Exception:
+        return True  # the honest: cannot-prove-missing = never a claim
+
+
+def p6_import_surface(files, found):
     own = {os.path.splitext(os.path.basename(p))[0] for p in files}
     n = 0
     for p in files:
         try:
-            tree = ast.walk(ast.parse(
-                open(p, encoding="utf-8-sig", errors="replace").read()))
-            for node in tree:
-                if isinstance(node, ast.Import):
-                    for a in node.names:
-                        n += 1
-                        if a.name.split(".")[0] in own and not os.path.exists(
-                                os.path.join(SCRIPTS, a.name + ".py")):
-                            found.append({"pass": "P7", "file": p,
-                                          "bug": f"import {a.name} = the "
-                                                 "module-missing"})
-                elif isinstance(node, ast.ImportFrom) and node.module:
-                    n += 1
-                    if node.module.split(".")[0] in own and not os.path.exists(
-                            os.path.join(SCRIPTS, node.module + ".py")):
-                        found.append({"pass": "P7", "file": p,
-                                      "bug": f"from {node.module} = "
-                                             "the module-missing"})
+            src = read(p).decode("utf-8-sig", "replace")
         except Exception:
             continue
+        for name in top_imports(src):
+            n += 1
+            if name in own or name in STDLIB_NAMES or resolves(name):
+                continue
+            found.append({"pass": "P6", "file": p, "bug":
+                          f"import {name} = the module-missing"})
     return n
 
 
-def p8_undefined(files, found):
+def p7_shadow(files, found):
+    """a repo-file named like stdlib = the shadow-bug (the Lib lesson)."""
+    n = 0
+    for p in files:
+        base = os.path.splitext(os.path.basename(p))[0]
+        n += 1
+        if base in STDLIB_NAMES:
+            found.append({"pass": "P7", "file": p, "bug":
+                          f"the file {os.path.basename(p)} = SHADOWS the "
+                          "stdlib name (the import-chaos risk)"})
+    return n
+
+
+def p8_walk(files):
     n = 0
     for p in files:
         try:
-            src = open(p, encoding="utf-8-sig", errors="replace").read()
-            tree = ast.parse(src)
+            ast.parse(read(p).decode("utf-8-sig", "replace"))
+            n += 1
         except Exception:
-            continue
-        n += 1
-    # the full dataflow-check = beyond a comb-pass (the honest: the
-    # ruff's-F821 = P2 = the dataflow's = the) — the count = the walked
+            pass
     return n
 
 
 def p9_smoke(found):
-    SAFE = [("Sanitizer", "selftest"), ("RebaseResolver", None),
-            ("receipt", None)]
     n = 0
     r = subprocess.run([PY, os.path.join(SCRIPTS, "Sanitizer.py")],
                        capture_output=True, text=True, timeout=60, cwd=ROOT)
@@ -200,6 +206,17 @@ def p9_smoke(found):
         found.append({"pass": "P9", "file": "Sanitizer.py", "bug":
                       (r.stdout or "").strip()[:120]})
     return n
+
+
+def rotate_ledger():
+    try:
+        if os.path.exists(LEDGER) and os.path.getsize(LEDGER) > LEDGER_CAP:
+            lines = open(LEDGER, encoding="utf-8", errors="replace"
+                         ).read().splitlines()
+            with open(LEDGER, "w", encoding="utf-8") as f:
+                f.write("\n".join(lines[-200:]) + "\n")
+    except Exception:
+        pass
 
 
 def one_pass(tag):
@@ -211,13 +228,13 @@ def one_pass(tag):
     counts["p3"] = p3_json(all_files(".json"), found)
     counts["p4"] = p4_jsonl(all_files(".jsonl"), found)
     counts["p5"] = p5_yaml(all_files(".yml") + all_files(".yaml"), found)
-    counts["p6"] = p6_import(pys, found)
-    counts["p7"] = p7_cross_imports(pys, found)
-    counts["p8"] = p8_undefined(pys, found)
+    counts["p6"] = p6_import_surface(pys, found)
+    counts["p7"] = p7_shadow(pys, found)
+    counts["p8"] = p8_walk(pys)
     counts["p9"] = p9_smoke(found)
     row = {"ts": time.strftime("%Y-%m-%d %H:%M:%S"), "pass_no": tag,
-           "scanned": counts, "bugs": found,
-           "bug_count": len(found)}
+           "scanned": counts, "bugs": found, "bug_count": len(found)}
+    rotate_ledger()
     with open(LEDGER, "a", encoding="utf-8") as f:
         f.write(json.dumps(row, ensure_ascii=False) + "\n")
     return row
