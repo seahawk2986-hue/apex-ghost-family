@@ -1,0 +1,10 @@
+{
+ "alpha": 0.3,
+ "lineages": {
+  "L_over": {
+   "drift": 0.315,
+   "n": 2,
+   "weight": 0.37
+  }
+ }
+}
