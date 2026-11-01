@@ -828,5 +828,15 @@
   ],
   "verified": true,
   "receipt": "{\"verified\": false}"
+ },
+ "RsaCloneRoute@20261101_132012": {
+  "source": "RsaCtfTool git-clone",
+  "class": "security",
+  "intent": "the CTF/crypto toolkit (the security-class capability)",
+  "reward": 0.5,
+  "best": 0.5,
+  "ts": "2026-11-01 13:20:12",
+  "verified": null,
+  "receipt": "{\"clone\": \"present\"}"
  }
 }

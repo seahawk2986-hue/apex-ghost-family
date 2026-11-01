@@ -37,7 +37,9 @@ def rate():
     at = rd("agent_track.json")
     lc = (at.get("local-coder") or {})
     g = rd("groq_120b_capability.json")
-    bump = 0.8 if g.get("ok_json", 0) >= 2 else 0.0
+    m = rd("max_120b_audit.json")
+    bump = 0.8 if (g.get("ok_json", 0) >= 2 or
+                   m.get("lived") == 4) else 0.0
     R.append(s("brain", min(10, 7 + 3 * lc.get("rate", 0) + bump),
                f"agent_track: {lc.get('delivered', 0)}D/{lc.get('failed', 0)}F"
                + (" + gpt-oss-120b 2/2 review-verdicts @0.3-0.8s $0 "

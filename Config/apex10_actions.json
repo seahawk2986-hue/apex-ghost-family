@@ -28,7 +28,10 @@
    "runner": "local",
    "ram_needed": 0.5,
    "capability": "security",
-   "why": "the queued clone-route: the security class's capability cap"
+   "why": "the queued clone-route: the security class's capability cap",
+   "done": true,
+   "ran_at": "2026-11-01 13:20:12",
+   "tail": "[rsa-route] {'clone': 'present'} -> the honest stop carries the retry"
   },
   {
    "id": "harvest10",

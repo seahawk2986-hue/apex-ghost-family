@@ -45,7 +45,7 @@ def drafts():
            '"<=2 short paras, honest"}, "reddit": {"sub": "r/opensource", '
            '"text": "the honest intro + the honest lines"}, "tweet": '
            '"<the short", "linkedin": "..."}.')
-    r = CB.chat(ask, max_tokens=1400, purpose="the marketing drafts")
+    r = CB.chat(ask, max_tokens=1400, purpose="the marketing drafts", models=("groq", "local-coder", "local-fast"))
     if not r:
         return None
     t = STRIP.sub("", r).strip().strip("`")

@@ -47,7 +47,7 @@ def run():
         r = CB.chat("Convert this to STRICT JSON (double-quoted keys, "
                     "escaped newlines in values). Output ONLY the JSON:\n"
                     + raw[:4500], max_tokens=4000,
-                    purpose="strict-json-correction")
+                    purpose="strict-json-correction", models=("groq", "local-coder", "local-fast"), resp_json=True)
         if not r:
             return None
         j = parse_lenient(r)

@@ -1,0 +1,29 @@
+{
+ "ts": "2026-11-01 13:20:11",
+ "model": "openai/gpt-oss-120b via groq (the no-card free tier; $0.00; 0GB local RAM; 0.3-15s latency; the 9k-char measured band)",
+ "laddered_sites": [
+  "DualReview.stage3",
+  "QualityGate.stage-3 (the delegate)",
+  "SkillForge.self_consistency (the threaded votes)",
+  "BrainUpgrades x4 (the judges)",
+  "DreamSchemaPr (the schema-draft)",
+  "I18nBuild x2 (the extract/translate)",
+  "JobExecutor (the translation)",
+  "LocalChain (the triage)",
+  "MarketingKit (the copy-drafts)",
+  "StrictCorrection (the JSON-fix, resp_json mode)"
+ ],
+ "local_by_design": {
+  "sites": [
+   "PatchLoop 1/3/4 (7 sites)",
+   "GosturdyPr",
+   "MuseProvider",
+   "PatchStep.patch-draft",
+   "AgentRoster (the roster-probe)",
+   "QualityGate.legacy-fallback"
+  ],
+  "rationale": "THE DRAFTER-CLASS: unlimited local votes (the rate-ceilings never strangle the patch-pipelines) + the code-tuned windows; the 120b GUARDS every draft via the gate's judge-ladder - the division = the honest maximum, not a limitation."
+ },
+ "resilience": "PROVEN: the minute-quota 429s skip the 120b and the local floor catches every call (the ensemble's 3/3, the domains' 4/4, the beats' runs)",
+ "cost": "$0.00 every lane (no card attached; the credits-tier still sleeps behind CREDITS_ALLOWED)"
+}
