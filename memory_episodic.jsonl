@@ -647,3 +647,17 @@
 {"id": "d444c06a7e3e", "ts": "2026-10-31 21:26:39", "kind": "thinking", "text": "TrainingLogParser.py: socratic verdict=shrink assumptions=4 pre-mortem factors=4", "meta": {}, "imp": 0.8333333333333334}
 {"id": "1cf7fa99ac05", "ts": "2026-10-31 21:26:46", "kind": "success", "text": "GHOST SWARM: 170 points for verified productive work.", "meta": {"ghost_points": 170, "total": 101242.5}, "imp": 0.7}
 {"id": "150e3ef8f3d8", "ts": "2026-10-31 21:27:47", "kind": "success", "text": "GHOST SWARM: 170 points for verified productive work.", "meta": {"ghost_points": 170, "total": 101412.5}, "imp": 0.7}
+{"id": "8a9370d06725", "ts": "2026-10-31 21:28:53", "kind": "success", "text": "GHOST SWARM: 354 points for verified productive work.", "meta": {"ghost_points": 354, "total": 101766.5}, "imp": 0.7}
+{"id": "3777c71da7de", "ts": "2026-10-31 21:29:57", "kind": "success", "text": "GHOST SWARM: 370 points for verified productive work.", "meta": {"ghost_points": 370, "total": 102136.5}, "imp": 0.7}
+{"id": "5c7cf53544c6", "ts": "2026-10-31 21:30:01", "kind": "error", "text": "Coder failed on TrainingLogParser.py: empty/blocked output", "meta": {}, "imp": 0.75}
+{"id": "14f09d64747e", "ts": "2026-10-31 21:30:50", "kind": "planning_vote", "text": "votes={'traininglogparser.py': 1, 'apexpacing.py': 1} modal=traininglogparser.py agree=1/2", "meta": {"file": "TrainingLogParser.py", "agree": 1, "total": 2}, "imp": 0.8333333333333334}
+{"id": "df5631e22727", "ts": "2026-10-31 21:31:27", "kind": "success", "text": "GHOST SWARM: 178 points for verified productive work.", "meta": {"ghost_points": 178, "total": 102314.5}, "imp": 0.7}
+{"id": "7e67d65879ef", "ts": "2026-10-31 21:32:28", "kind": "success", "text": "GHOST SWARM: 170 points for verified productive work.", "meta": {"ghost_points": 170, "total": 102484.5}, "imp": 0.7}
+{"id": "9e3831c2b758", "ts": "2026-10-31 21:32:41", "kind": "error", "text": "Coder failed on TrainingLogParser.py: empty/blocked output", "meta": {}, "imp": 0.75}
+{"id": "d1a159f10849", "ts": "2026-10-31 21:32:58", "kind": "success", "text": "GHOST SWARM: 250 points for verified productive work.", "meta": {"ghost_points": 250, "total": 102734.5}, "imp": 0.7}
+{"id": "114b599e6b49", "ts": "2026-10-31 21:33:22", "kind": "planning_vote", "text": "votes={'traininglogparser.py': 1, 'apexinstaller.py': 1, 'apexpacing.py': 1} modal=traininglogparser.py agree=1/3", "meta": {"file": "TrainingLogParser.py", "agree": 1, "total": 3}, "imp": 0.8333333333333334}
+{"id": "4923f0326865", "ts": "2026-10-31 21:33:29", "kind": "success", "text": "GHOST SWARM: 170 points for verified productive work.", "meta": {"ghost_points": 170, "total": 102904.5}, "imp": 0.7}
+{"id": "086d47381445", "ts": "2026-10-31 21:34:20", "kind": "success", "text": "GHOST SWARM: 170 points for verified productive work.", "meta": {"ghost_points": 170, "total": 103074.5}, "imp": 0.7}
+{"id": "3538d56f9c5c", "ts": "2026-10-31 21:35:11", "kind": "error", "text": "Coder failed on TrainingLogParser.py: empty/blocked output", "meta": {}, "imp": 0.75}
+{"id": "52e5b12c8667", "ts": "2026-10-31 21:35:11", "kind": "error", "text": "Hardware pacing: host under strain (RAM guard: 1.90GB free < 2.0GB); Apex is pacing itself down.", "meta": {}, "imp": 0.75}
+{"id": "048a724113de", "ts": "2026-10-31 21:35:59", "kind": "success", "text": "GHOST SWARM: 194 points for verified productive work.", "meta": {"ghost_points": 194, "total": 103268.5}, "imp": 0.7}

@@ -11,7 +11,10 @@
    "imports": [
     "numpy"
    ],
-   "registered": "2026-10-31 11:20:49"
+   "registered": "2026-10-31 11:20:49",
+   "executable_verified": false,
+   "compiles": false,
+   "verified_at": "2026-10-31 21:35:32"
   },
   {
    "skill": "making_simple_decisions",
@@ -22,7 +25,10 @@
    "lines": 11,
    "first_line": "\"\"\"Making Simple Decisions (Chapter 15/16)",
    "imports": [],
-   "registered": "2026-10-31 11:20:49"
+   "registered": "2026-10-31 11:20:49",
+   "executable_verified": false,
+   "compiles": false,
+   "verified_at": "2026-10-31 21:35:32"
   },
   {
    "skill": "probabilistic_learning",
@@ -35,7 +41,10 @@
    "imports": [
     "heapq"
    ],
-   "registered": "2026-10-31 11:20:49"
+   "registered": "2026-10-31 11:20:49",
+   "executable_verified": false,
+   "compiles": false,
+   "verified_at": "2026-10-31 21:35:32"
   },
   {
    "skill": "naive_bayes",
@@ -46,7 +55,10 @@
    "lines": 31,
    "first_line": "from sklearn.datasets import make_classification",
    "imports": [],
-   "registered": "2026-10-31 11:20:49"
+   "registered": "2026-10-31 11:20:49",
+   "executable_verified": false,
+   "compiles": false,
+   "verified_at": "2026-10-31 21:35:32"
   },
   {
    "skill": "01-matrix",
@@ -59,7 +71,10 @@
    "imports": [
     "collections"
    ],
-   "registered": "2026-10-31 11:20:50"
+   "registered": "2026-10-31 11:20:50",
+   "executable_verified": false,
+   "compiles": false,
+   "verified_at": "2026-10-31 21:35:32"
   },
   {
    "skill": "__init__",
@@ -73,7 +88,10 @@
     "sys",
     "warnings"
    ],
-   "registered": "2026-10-31 11:20:50"
+   "registered": "2026-10-31 11:20:50",
+   "executable_verified": false,
+   "compiles": false,
+   "verified_at": "2026-10-31 21:35:32"
   },
   {
    "skill": "nearest_neighbors",
@@ -3374,7 +3392,7 @@
    "license": "check repo",
    "sha256": "6bc9269df79f6c211a0c72816d3c4a29a8491f0202ac56506a6a0c97855db1a9",
    "lines": 22,
-   "first_line": "\"\"\"User-data helpers — re-exported from ``crewai_core.user_data``.\"\"\"",
+   "first_line": "\"\"\"User-data helpers \u2014 re-exported from ``crewai_core.user_data``.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:12"
   },
@@ -3413,7 +3431,7 @@
    "license": "check repo",
    "sha256": "45ee86a7440b594196ed9578fa0346585184fb3d19b04ae248d2de9c529423dd",
    "lines": 24,
-   "first_line": "\"\"\"OAuth2 authentication primitives — shared by crewai and crewai-cli.\"\"\"",
+   "first_line": "\"\"\"OAuth2 authentication primitives \u2014 shared by crewai and crewai-cli.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:19"
   },
@@ -3428,7 +3446,5 @@
    "imports": [],
    "registered": "2026-10-31 20:56:20"
   }
- ],
- "sources": [],
- "built": "2026-10-31 20:56:20"
+ ]
 }

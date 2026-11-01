@@ -452,3 +452,71 @@ quality ladder, now with the canonical citation.
 3. Bug-lane triage (Q4/Q5): SPICE-style clarity+effort score on GFI
    candidates; PAIChecker-style alignment check before any filing.
 4. Near-dedup at registration (H1's 40% rate, already measured: 55 clusters).
+
+---
+
+# PART VIII — the "extremely worthwhile" return canon (verified 2026-11-01)
+
+## W1 — Voyager (arXiv:2305.16291, FETCHED): the compounding skill library
+Autonomous curriculum + an EVER-GROWING LIBRARY OF EXECUTABLE CODE SKILLS +
+iterative prompting w/ environment feedback, execution errors, self-
+verification -> 3.3x unique items, 2.3x travel, 15.3x faster milestones -
+and the library TRANSFERS to new worlds. Skills are temporally extended,
+interpretable, COMPOSABLE - they compound and prevent catastrophic forgetting.
+FAMILY MAPPING: the skill store should hold executable, composable, indexed
+skills (not text summaries); GradeEarly IS the automatic curriculum; the
+store becomes functional capital that compounds per run.
+
+## W2 — Reflexion (arXiv:2303.11366, FETCHED): verbal reinforcement
+Reflect on feedback -> keep reflective text in episodic memory -> better next
+trials, NO weight updates: 91% HumanEval pass@1, surpassing GPT-4's 80%.
+FAMILY MAPPING: the round ledger + lessons are the episodic buffer; add one
+bounded reflection call after every failed round -> next round's mission
+brief (the D5 machinery already exists).
+
+## W3 — Agentless (arXiv:2407.01489, FETCHED): the cheapest conversion
+Localize -> repair -> validate, SINGLE-turn, no agent loops: 32% / 96 fixes
+on SWE-bench Lite at ~$0.70/instance - best performance AND lowest cost
+among open systems at release. PROVEN: complex agent frameworks are not
+required for worthwhile output. FAMILY VERDICT: the bug lane is
+Agentless-shaped (D1 confirmed on the SWE lane).
+
+## W4 — SWE-agent (arXiv:2405.15793, FETCHED): interfaces decide success
+A custom agent-computer interface (ACI) took a 12.5% pass@1 on SWE-bench -
+the interface, not the model, was the lever. FAMILY VERDICT: the family's
+tools (digest manifests, GradeEarly output, gates) ARE the ACI - keep making
+them ergonomic, never assume the model compensates.
+
+## W5 — Kimi-Dev (arXiv:2509.23045, FETCHED): 60.4% workflow SOTA
+Agentless TRAINING builds transferable skill priors: localization, code-edit,
+self-reflection -> agents reach Claude-3.5-Sonnet-class performance.
+FAMILY MAPPING: the skill store should classify and grow those three skill
+types explicitly.
+
+## W6 — SWE-Edit (arXiv:2604.26102, FETCHED): small models CAN edit
+Viewer/Editor decomposition: +2.1pp resolve, -17.9% cost; a GRPO-trained
+QWEN3-8B editor reaches GPT-5-nano PARITY on downstream resolve rate.
+FAMILY VERDICT: our 8B-class brain can hold the Editor role with the right
+decomposition - the heal path should split Viewer/Editor.
+
+## W7 — Agentic Rubrics (arXiv:2601.04171, FETCHED): verification without
+execution: an expert agent writes a context-grounded rubric checklist, then
+candidate patches score against it - no test sandbox needed (54.2% w/ TTS).
+FAMILY VERDICT: pre-filing verification for the bug lane without heavy
+sandboxing - fits the hardware law exactly.
+
+## W8 — phi-1 / phi-1.5 (arXiv:2306.11644, 2309.05463, FETCHED): curriculum
+quality beats scale: 1.3B params, 6B textbook-quality tokens -> 50.6%
+HumanEval; phi-1.5 hits 5x-larger-model performance with ZERO web data.
+FAMILY VERDICT: when training resumes (training_venv), textbook-grade
+curated corpora from OUR OWN verified skills are the resource - quality
+harvest compounds INTO training, not just into consults.
+
+## THE RANKED EARNING PATHS (all verified, hardware-legal)
+1. Agentless-shaped conversion: localize -> draft -> validate on triaged
+   candidates (W3+W7), human-gated, one verifiable artifact per run.
+2. Voyager-shaped store (W1): executable composable skills + automatic
+   curriculum (GradeEarly) + retrievable library.
+3. Reflexion after every failed round (W2): bounded, one call, D5 hardware.
+4. ACI discipline (W4): every tool output ergonomic and consumable.
+5. phi-class curation for the training tier (W8) when the GPU wakes.
