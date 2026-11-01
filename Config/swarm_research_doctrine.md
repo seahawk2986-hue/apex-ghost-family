@@ -444,14 +444,58 @@ teach output quality. MM-LIMA: a trainable SELECTOR filters low-quality data.
 PROVEN: grade-and-keep-the-top beats harvest-everything - doctrine H3/K3's
 quality ladder, now with the canonical citation.
 
-## FAMILY PRIORITY (all verified, all stdlib-wireable)
-1. Backlog grading EARLY (Q1/Q2/Q7): classifier-score the queue before
-   spending download requests - the grade organ exists, wire it upstream.
-2. Sampling-and-voting on ambiguous grades (Q6): 3 grades + majority, budget
-   the extra calls to RAM windows (D1).
-3. Bug-lane triage (Q4/Q5): SPICE-style clarity+effort score on GFI
-   candidates; PAIChecker-style alignment check before any filing.
-4. Near-dedup at registration (H1's 40% rate, already measured: 55 clusters).
+## THE RANKED EARNING PATHS (all verified, hardware-legal)
+1. Agentless-shaped conversion: localize -> draft -> validate on triaged
+   candidates (W3+W7), human-gated, one verifiable artifact per run.
+2. Voyager-shaped store (W1): executable composable skills + automatic
+   curriculum (GradeEarly) + retrievable library.
+3. Reflexion after every failed round (W2): bounded, one call, D5 hardware.
+4. ACI discipline (W4): every tool output ergonomic and consumable.
+5. phi-class curation for the training tier (W8) when the GPU wakes.
+
+---
+
+# PART IX — every proven swarm, compared (all fetched; scraped 2026-11-01)
+
+| System (id) | Architecture | Cost model | Verified outcome | Lesson for the family |
+|---|---|---|---|---|
+| MetaGPT (2308.00352) | SOP assembly-line roles, verified intermediate artifacts between roles | LLM-call cost, no exec env | coherent multi-role SW solutions vs chat-chains | SOPs + VERIFIED handoffs stop cascading hallucinations - our digest gates are this |
+| MoA (2406.04692) | layered heterogeneous agents, each sees prior layer | many calls | open models 65.1% vs GPT-4-Omni 57.5% (AlpacaEval 2.0) | HETEROGENEITY layers beat single-model depth - our lane mix is this |
+| AlphaEvolve (DeepMind blog) | LLM proposes + AUTOMATED EVALUATORS + evolutionary database | very large (Gemini fleet) | 0.7% of Google compute recovered (1yr production); 4x4 matmul 48-mults (beat Strassen 1969); 20% of 50 open problems IMPROVED | the flagship: evaluator-gated EVOLUTION makes runs worthwhile BY CONSTRUCTION - evolve STRATEGY WEIGHTS, not just candidates |
+| Anthropic Research (Part II P1) | orchestrator-worker, artifacts to filesystem | 15x tokens; value must pay | +90.2% single-agent; token spend = 80% variance | breadth-parallel with quality gates (already family shape) |
+| Magentic-One (2411.04468) | double-ledger orchestrator, stall>2 replan | heavy | SOTA-competitive GAIA/AssistantBench | ledger + stall-replan (queued post-marathon) |
+| Agentless (2407.01489) | 3-phase single-turn localize/repair/validate | ~$0.70|instance | 32% SWE-bench Lite, cheapest | THE conversion shape for an 8B box |
+| SWE-agent (2405.15793) | custom ACI | moderate | 12.5% pass@1 | interfaces > models |
+| Kimi-Dev (2509.23045) | agentless training -> skill priors | training-scale | 60.4% workflow SOTA | store 3 skill TYPES: localize/edit/reflect |
+| SWE-Edit (2604.26102) | Viewer/Editor split; GRPO on Qwen3-8B | moderate | 8B editor = GPT-5-nano parity | small-model Editor is proven |
+| Voyager (2305.16291) | curriculum + executable skill library | GPT-4 calls | 3.3x items; library TRANSFERS | skills must be executable+composable |
+| Reflexion (2303.11366) | verbal episodic memory | calls only | 91% HumanEval pass@1 | reflection beats weight updates at our scale |
+| AutoSwarm (2610.33048) | contribution-grounded formation + shared state | heavy | beats single+prior MAS | acceptance conditions per handoff |
+| MPT (2610.22322) | BIDS, self-orchestration, dropout-robust | training-scale | beats fixed orchestration | scheduling by bid (D7) |
+| SAT (2609.22682) | teams LEARN teamwork; demonstrability rho=.90 | 15-25 tasks | 66.7% vs 48.8% | only demonstrable lanes pay - bug lane rho-max |
+| AgentCue (2610.16621) | statistical summaries replace history readbacks | moderate | efficiency at 1000-agent scale | summaries over raw ledgers (pheromones) |
+| Fusion-MoA (2609.26080) | governed fleet, versioned profile, one Executor | serving | minority knowledge TRANSFERS across cells | promote/rollback discipline |
+| ClaimNov (2610.36511) | claim-level novelty gates | cheap | 97% catch at 1.5% false alarms | claim-level gates for artifacts |
+| DataSense-Bench (2610.12190) | agents pick training data | cheap | HONEST NEGATIVE: agents can't reliably rank data votes | our vote tier is a PRIOR, capped influence |
+| THE FAMILY (this repo) | foraging lanes + bid sems + digest-gated merging + foraging evolution + human gates | $0 | hub 126+ harvests, 5 executable-verified skills, 55-cluster audit, transport verified at 3k+ leads | unique: FREE-CI compute arena + proof-carrying champions - nobody runs this |
+
+## THE SYNTHESIS GAP (what nobody in the lineage does, that we uniquely can)
+Nobody converts a FREE CI FLEET into an evolutionary arena; nobody evolves
+STRATEGY WEIGHTS over real repo issues with proof-carrying champions and a
+human-approval grant chain. That combination is the novel mechanism below.
+
+## THE GAUNTLET (the novel mechanism, built tonight)
+One run = candidates x THREE HETEROGENEOUS STRATEGY DRAFTS (MoA-in-strategy:
+A minimal-patch / B test-first / C doc-or-issue-comment), each scored by the
+deterministic rubric (+ Q6 vote when RAM allows, capped influence per
+DataSense-Bench). Winner per candidate = CHAMPION with a digest and a
+human-approval grant chain (PCM roots). Strategy WIN COUNTS evolve the
+weights (AlphaEvolve-style: the run's return includes improved STRATEGY
+probabilities), losers feed Reflexion (W2). VALUE THRESHOLD gates the human
+queue (clarity x credibility x rubric >= bar) per ClaimNov discipline.
+CONSTRUCTION GUARANTEE: every run ends with EITHER a champion digest OR a
+measured lesson -> no run can return nothing. Runs port to the free hub
+(stdlib-only) post-marathon: the arena runs on Andrew's free CI minutes.
 
 ---
 
