@@ -1,21 +1,19 @@
 name: ApexWatchLane
-
-on:
+"on":
+  push:
+    branches: [main]
   schedule:
-    - cron: '*/5 * * * *'   # the 5-min watch lane: the claim-race cadence x3
-                            # + the client-care watch, ON GITHUB'S MACHINES
+    - cron: '*/5 * * * *'   # the 5-min watch (the claim-race cadence x3)
   workflow_dispatch:
-
 permissions:
-  contents: write   # the watch-state's grain returns via commit
-
+  contents: write
 jobs:
   watch:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: the watch beat (the client-care + the claim-lens, off-box)
+      - name: the watch beat (the claim-lens + the client-care, off-box)
         env:
           APEX_ROOT: ${{ github.workspace }}
           APEX_ADAPTER: ${{ github.workspace }}
@@ -23,20 +21,20 @@ jobs:
         run: |
           python3 Scripts/PrWatch.py || true
           python3 Scripts/ClaimCheck.py || true
-      - name: "the meta-loop's actions lane (runner=actions - the free off-box work)"
+      - name: "the meta-loop's actions lane (runner=actions - the free work)"
         env:
           APEX_ROOT: ${{ github.workspace }}
           APEX_RUNNER: actions
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 Scripts/Apex10Loop.py || true
-      - name: the watch-state's grain return (the sync home)
+      - name: the watch-grain returns (the sync home)
         run: |
           git config user.name "apex-watch-lane"
           git config user.email "actions@github.com"
           git pull --rebase || git rebase --abort || true
           git add -A Config/ 2>/dev/null || true
-          git commit -m "the watch-lane grain (off-box, 5-min cadence)" || true
+          git commit -m "the watch-lane grain (off-box cadence)" || true
           git push || true
       - name: the artifacts home
         uses: actions/upload-artifact@v4

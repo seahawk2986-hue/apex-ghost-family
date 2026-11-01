@@ -1,0 +1,23 @@
+{
+ "ts": "2026-11-01 13:22:42",
+ "verdict": "PASS",
+ "routes": [
+  "groq",
+  "local-coder",
+  "local-fast"
+ ],
+ "consensus": {
+  "verdict": "UNANIMOUS",
+  "lanes": [
+   "groq",
+   "local-coder",
+   "local-fast"
+  ],
+  "times": [
+   0.0,
+   9.33,
+   7.2
+  ]
+ },
+ "cost": "$0.00"
+}
