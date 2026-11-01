@@ -86,10 +86,14 @@ TIERS = {
                    "backlog_drain", "discovery_harvest", "serviceable",
                    "sovereignty", "compare_to_canon",
                    "capability_rescan", "bounded_planner",
-                   "reward_integrity", "earn_lane_matrix"],
+                   "reward_integrity", "earn_lane_matrix",
+                   "capability_evolution"],
          "ram": 2.4, "cpu": 0.95},
         {"goals": ["life", "money", "recruits", "first_external_value"],
          "ram": 2.4, "cpu": 0.6}]},
+    "coder-window": {"base": 2.0, "phases": [
+        {"goals": ["the_roster_agents", "capability_evolution"],
+         "ram": 4.4, "cpu": 0.8}]},
 }
 UNSCHEDULED_OK = {"tri_genome", "elections", "throne", "sleep"}  # folded/dormant
 
