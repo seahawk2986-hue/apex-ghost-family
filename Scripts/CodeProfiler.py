@@ -17,7 +17,8 @@ import subprocess
 import sys
 import time
 
-ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
+ROOT = os.environ.get(
+    "APEX_ROOT", r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed")
 S = os.path.join(ROOT, "Scripts")
 OUT = os.path.join(ROOT, "Config", "code_profile.json")
 TOOLS_OUT = os.path.join(ROOT, "Config", "tools_installed.json")

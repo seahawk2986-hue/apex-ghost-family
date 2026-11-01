@@ -18,11 +18,25 @@ jobs:
       - uses: actions/checkout@v4
       - name: mining round
         run: python3 family/hub_round.py
-      - name: grain home
+      - name: the earn-beat (the claim-audit + the kit on GITHUB's machines)
+        env:
+          APEX_ROOT: ${{ github.workspace }}
+          APEX_ADAPTER: ${{ github.workspace }}
+        run: |
+          python3 Scripts/EarnLaneMatrix.py || true
+      - name: the scheduled audits (the capability rescan + the profiler on GITHUB's machines)
+        env:
+          APEX_ROOT: ${{ github.workspace }}
+        run: |
+          python3 Scripts/CapabilityRescan.py || true
+          python3 Scripts/CodeProfiler.py || true
+      - name: the kit/audit artifacts home
         uses: actions/upload-artifact@v4
         with:
           name: apex-hub-harvest
-          path: hub_round_result.json
+          path: |
+            hub_round_result.json
+            earn_lane_matrix.json
       - name: ship the grain home (commit the harvest to the family)
         if: always()
         run: |

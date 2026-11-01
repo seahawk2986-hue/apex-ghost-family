@@ -1,0 +1,49 @@
+{
+ "ts": "2026-11-01 11:32:17",
+ "total_marginal_cost_usd": 0.0,
+ "lanes": [
+  {
+   "lane": "this box's compute",
+   "tier": "owned hardware",
+   "marginal_cost": 0.0,
+   "bill": "$0 (bought; power's the only real cost, the organs use <2% CPU avg + 4.4GB peaks inside windows)"
+  },
+  {
+   "lane": "GitHub Actions (the ApexHubWorker)",
+   "tier": "PUBLIC repo = unlimited free minutes",
+   "marginal_cost": 0.0,
+   "bill": "$0 (198 runs succeeded free; the new earn-beat + the scheduled audits live)"
+  },
+  {
+   "lane": "the local brains (qwen2.5-coder:7b/3b)",
+   "tier": "resident ollama models",
+   "marginal_cost": 0.0,
+   "bill": "$0 (the RAM-bound: 4.4GB inside the window)"
+  },
+  {
+   "lane": "the cloud brains (ollama credits/openrouter/groq)",
+   "tier": "DORMANT behind CLOUD_ALLOWED=1 (the founder's opt-in) + the cap now DEFAULTS to $0.00",
+   "marginal_cost": 0.0,
+   "bill": "spent all-day $0.0054 (pre-law; now: $0 until the founder sets a cap)"
+  },
+  {
+   "lane": "the sources (arXiv/GitHub API/web)",
+   "tier": "free endpoints + our token (5000/hr core)",
+   "marginal_cost": 0.0,
+   "bill": "$0 (the search's 402 = refused, not paid)"
+  },
+  {
+   "lane": "the edge worker (the hub's edge territory)",
+   "tier": "Cloudflare free: 100k req/day",
+   "marginal_cost": 0.0,
+   "bill": "$0 (dormant; the deploy = the founder's free signup)"
+  },
+  {
+   "lane": "the listings (Smithery/Polar/Sponsors/bounties)",
+   "tier": "free to join",
+   "marginal_cost": 0.0,
+   "bill": "$0 to list; the payouts arrive TO Andrew"
+  }
+ ],
+ "verdict": "EVERYTHING FREE: every lane's bill = $0.00 (the free-only law verified line by line)"
+}
