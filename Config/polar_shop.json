@@ -1,0 +1,21 @@
+{
+ "ts": "2026-11-01 12:15:11",
+ "environment": "prod",
+ "org": "http 403",
+ "products_created": [],
+ "checkout_links": [
+  {
+   "product": "Data/ML Pipeline Pack",
+   "link": "https://buy.polar.sh/polar_cl_5xTGsDZ0tNZetCT8eLd1AIsmultLHtUf4zUE13sywjj"
+  },
+  {
+   "product": "Code Fix Pack",
+   "link": "https://buy.polar.sh/polar_cl_bsAkKj23QlM4AsMBqDXjhwpi1XRw5WkpWo02v3WVXit"
+  },
+  {
+   "product": "Repository Triage & Patch Pack",
+   "link": "https://buy.polar.sh/polar_cl_WgIburVk2NFbxJJn9UtiWrLkLPWPi6PHmqmSM2Q29FD"
+  }
+ ],
+ "state": "SHOP-LIVE"
+}

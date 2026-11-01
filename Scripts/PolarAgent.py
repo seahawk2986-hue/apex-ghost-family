@@ -146,8 +146,11 @@ def main():
         if not pid:
             continue
         st6, ln = api("/v1/checkout-links/", tok, method="POST", payload={
+            "payment_processor": "stripe",
             "products": [pid],
             "label": p_new.get("name", "pack")[:60],
+            "allow_discount_codes": True,
+            "require_billing_address": False,
             "success_url": "https://github.com/seahawk2986-hue/"
                            "apex-ghost-family/blob/main/family/THANK_YOU.md"},
             base=base)
@@ -155,6 +158,10 @@ def main():
             links.append({"product": p_new.get("name", "?"), "link":
                           ln.get("url") or ("https://polar.sh/checkout/"
                                             + ln.get("id", ""))})
+        else:
+            print(f"[polar-agent] the checkout-link for "
+                  f"{p_new.get('name', '?')[:20]}: HTTP {st6} "
+                  f"{json.dumps(ln)[:150]}")
     doc["products_created"] = [p.get("name") for p in created]
     doc["checkout_links"] = links
     doc["state"] = "SHOP-LIVE" if links else "TOKEN-SCOPES-MISSING"
