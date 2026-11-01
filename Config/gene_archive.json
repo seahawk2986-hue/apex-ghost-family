@@ -124,5 +124,30 @@
   "directive_genome": "mine the backlog in graded windows; keep every claim evidence-backed; the human gate files.",
   "source": "ReflexionRound (Lamarckian)"
  },
- "evolved_at": "2026-11-01 08:34:40"
+ "evolved_at": "2026-11-01 08:34:40",
+ "calibration": {
+  "L_test": {
+   "drift": 0.315,
+   "n": 2,
+   "weight": 0.37
+  }
+ },
+ "routes": {
+  "base": {
+   "specialty": "gold",
+   "edge": 168.6
+  },
+  "g0_0": {
+   "specialty": "gold",
+   "edge": 0.0
+  },
+  "g1_1": {
+   "specialty": "gold",
+   "edge": 0.0
+  },
+  "g2_2": {
+   "specialty": "gold",
+   "edge": 0.0
+  }
+ }
 }
