@@ -17,7 +17,6 @@
 {"ts": "2026-10-31 15:33:34", "total_fitness": 1.84, "dims": {"gold": {"backlog": 1411, "consumed": 2066, "skills": 245}, "money": {"earned": 0.0, "spent": 0.0, "opps": 0}, "life": {"briefs": 5, "alarmsRaised": 1, "lastHelp": "2026-10-31 15:02:06"}, "routing": ["trending", "none", "ddg", "wiki", "events"], "recruits": {"converted": 1}, "safety": {"pass": true}}}
 {"ts": "2026-10-31 15:33:35", "total_fitness": 1.84, "dims": {"gold": {"backlog": 1411, "consumed": 2066, "skills": 245}, "money": {"earned": 0.0, "spent": 0.0, "opps": 0}, "life": {"briefs": 5, "alarmsRaised": 1, "lastHelp": "2026-10-31 15:02:06"}, "routing": ["trending", "none", "ddg", "wiki", "events"], "recruits": {"converted": 1}, "safety": {"pass": true}}}
 {"ts": "2026-10-31 15:33:36", "total_fitness": 1.84, "dims": {"gold": {"backlog": 1411, "consumed": 2066, "skills": 245}, "money": {"earned": 0.0, "spent": 0.0, "opps": 0}, "life": {"briefs": 5, "alarmsRaised": 1, "lastHelp": "2026-10-31 15:02:06"}, "routing": ["trending", "none", "ddg", "wiki", "events"], "recruits": {"converted": 1}, "safety": {"pass": true}}}
-{"ts": "2026-10-31 15:33:36", "total_fitness": 1.84, "dims": {"gold": {"backlog": 1411, "consumed": 2066, "skills": 245}, "money": {"earned": 0.0, "spent": 0.0, "opps": 0}, "life": {"briefs": 5, "alarmsRaised": 1, "lastHelp": "2026-10-31 15:02:06"}, "routing": ["trending", "none", "ddg", "wiki", "events"], "recruits": {"converted": 1}, "safety": {"pass": true}}}
 {"ts": "2026-10-31 15:33:37", "total_fitness": 1.84, "dims": {"gold": {"backlog": 1411, "consumed": 2066, "skills": 245}, "money": {"earned": 0.0, "spent": 0.0, "opps": 0}, "life": {"briefs": 5, "alarmsRaised": 1, "lastHelp": "2026-10-31 15:02:06"}, "routing": ["trending", "none", "ddg", "wiki", "events"], "recruits": {"converted": 1}, "safety": {"pass": true}}}
 {"ts": "2026-10-31 15:33:38", "total_fitness": 1.84, "dims": {"gold": {"backlog": 1411, "consumed": 2066, "skills": 245}, "money": {"earned": 0.0, "spent": 0.0, "opps": 0}, "life": {"briefs": 5, "alarmsRaised": 1, "lastHelp": "2026-10-31 15:02:06"}, "routing": ["trending", "none", "ddg", "wiki", "events"], "recruits": {"converted": 1}, "safety": {"pass": true}}}
 {"ts": "2026-10-31 16:16:09", "total_fitness": 1.715, "dims": {"gold": {"backlog": 1455, "consumed": 2098, "skills": 245}, "money": {"earned": 0.0, "spent": 0.0, "opps": 0}, "life": {"briefs": 1, "alarmsRaised": 0, "lastHelp": "2026-10-31 16:16:08"}, "routing": ["events", "wiki", "hf_space", "trending"], "recruits": {"converted": 1}, "safety": {"pass": true}}}
@@ -155,9 +154,6 @@
 {"ts": "2026-11-01 09:44:09", "kind": "upward_alarm", "text": "knowledge lane 'events.mines' regressed 5 -> 4 (PathMemory clobber suspected)"}
 {"ts": "2026-11-01 09:53:41", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
 {"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
-{"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
-{"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
-{"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
 {"ts": "2026-11-01 11:13:59", "kind": "upward", "what": "earn-loop-beat", "beat": 1, "unclaimed": 7}
 {"ts": "2026-11-01 11:17:12", "kind": "upward", "what": "FIRST-EXTERNAL-PR (founder-granted)", "url": "https://github.com/rtk-ai/rtk/pull/4929"}
 {"ts": "2026-11-01 11:18:22", "kind": "upward", "what": "CLA-email-fix (the commits now carry the account's canonical noreply; the SIGN = the founder's one click on the bot's link)"}
@@ -184,3 +180,4 @@
 {"ts": "2026-11-01 13:10:40", "kind": "upward", "what": "the free-model probes (the better-brain lanes)", "results": {"github_models": false, "gemini": false, "openrouter": false, "groq": false}}
 {"ts": "2026-11-01 13:18:49", "kind": "upward", "what": "receipt-fix: the wired-links restored + world-rows born"}
 {"ts": "2026-11-01 18:24:19", "kind": "upward", "what": "pr-watch", "states": ["blocked", "blocked"]}
+{"ts": "2026-11-01 13:25:19", "kind": "upward", "what": "earn-loop-beat", "beat": 8, "unclaimed": 6, "filed": false}

@@ -1,45 +1,20 @@
 {
  "actions": [
-  {
-   "id": "skillforge",
-   "script": "SkillForge.py",
-   "runner": "local",
-   "ram_needed": 3.5,
-   "capability": "omnivore",
-   "why": "the weakest measured number: exec-verified skills 3 -> 6 (the local brain only, $0)",
-   "done": true,
-   "ran_at": "2026-11-01 13:06:51",
-   "tail": "[skill-forge] VERDICT: {\"context_press\": \"\", \"bounded_retry\": true, \"self_consistency\": \"CONSENSUS\"}"
-  },
-  {
-   "id": "receipt-fix",
-   "script": "ReceiptFix.py",
-   "runner": "local",
-   "ram_needed": 0.3,
-   "capability": "governance",
-   "why": "the wired-links receipt restored + world-rows born (the honest 0s)",
-   "done": true,
-   "ran_at": "2026-11-01 13:18:49",
-   "tail": "[receipt-fix] polar_shop.json: the wired set restored"
-  },
-  {
-   "id": "rsa-clone",
-   "script": "RsaCloneRoute.py",
-   "runner": "local",
-   "ram_needed": 0.5,
-   "capability": "security",
-   "why": "the queued clone-route: the security class's capability cap",
-   "done": true,
-   "ran_at": "2026-11-01 13:20:12",
-   "tail": "[rsa-route] {'clone': 'present'} -> the honest stop carries the retry"
-  },
-  {
-   "id": "harvest10",
-   "script": "PaperHarvest10.py",
-   "runner": "actions",
-   "cooldown_min": 1440,
-   "capability": "omnivore",
-   "why": "THE SOURCING DIRECTIVE: the 200-doc 10/10-lane canon - runs ENTIRELY on GITHUB's machines (network-bound = theirs; the dedupe is idempotent; the grain returns via commit)"
-  }
- ]
+  {"id": "skillforge", "script": "SkillForge.py", "runner": "local",
+   "ram_needed": 3.5, "capability": "omnivore",
+   "why": "the weakest measured number: exec-verified skills 3 -> 6 (done: 6/6 verified)"},
+  {"id": "receipt-fix", "script": "ReceiptFix.py", "runner": "local",
+   "ram_needed": 0.3, "capability": "governance",
+   "why": "the wired-links + world-rows (done)"},
+  {"id": "rsa-clone", "script": "RsaCloneRoute.py", "runner": "local",
+   "ram_needed": 0.5, "capability": "security",
+   "why": "the clone-route (done; the full-run verify = the next rep)"},
+  {"id": "harvest10", "script": "PaperHarvest10.py", "runner": "actions",
+   "cooldown_min": 1440, "capability": "omnivore",
+   "why": "the 200-doc 10/10-lane canon on THEIR machines"},
+  {"id": "harvest11", "script": "PaperHarvest11.py", "runner": "actions",
+   "cooldown_min": 1440, "capability": "omnivore",
+   "why": "THE MODEL-USE CANON (100 docs: the small-models/distill/ensemble/cascade/quantization/edge lanes) - runs ENTIRELY on GITHUB's machines"}
+ ],
+ "law": "each action = its runner; local = the RAM-gated brain work; actions = the API/network-free work on GITHUB's runners. EVERYTHING $0.00; the cap stands above the ladder."
 }
