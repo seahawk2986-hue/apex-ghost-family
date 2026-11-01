@@ -12,3 +12,4 @@
 {"ts": "2026-10-31 21:26:13", "event": "birth", "child_pid": 0, "shard": "self", "variant": "urge", "territory": "family"}
 {"ts": "2026-10-31 21:53:14", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
 {"ts": "2026-10-31 21:56:42", "event": "birth", "child_pid": 0, "shard": "self", "variant": "urge", "territory": "family"}
+{"ts": "2026-10-31 22:19:11", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
