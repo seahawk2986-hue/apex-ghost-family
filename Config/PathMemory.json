@@ -309,6 +309,22 @@
    "wins": 0,
    "mines": 0,
    "reqs": 0
+  },
+  "g17_2": {
+   "params": {
+    "ghost_cc_leads": 341,
+    "ghost_events": 80,
+    "ghost_trending": 44,
+    "ghost_wiki_leads": 75,
+    "ghost_wayback_leads": 90,
+    "ghost_queue_mines_to_farm": 30,
+    "ghost_min_stars": 387
+   },
+   "fitness": 0.0,
+   "descriptor": "cc6_ev3_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
   }
  },
  "family": {
@@ -331,33 +347,33 @@
   "recruit_bonus": 1.0
  },
  "upward": {
-  "ts": "2026-11-01 10:04:34",
+  "ts": "2026-11-01 10:26:44",
   "alarms": 0,
   "genes_front": [
    "base"
   ],
   "skills_verified": 3,
-  "skills_lib": 302,
+  "skills_lib": 322,
   "canon": {
    "papers_2026": 100,
    "papers_evolution": 421
   },
-  "gi_score": 387.3,
+  "gi_score": 389.3,
   "goals": {
    "gold": 2205.0,
    "money": 0.0,
    "life": 129.0,
    "recruits": 6.0,
    "jobs": 213.0,
-   "coding": 305.0,
-   "omnivore": 329.0,
+   "coding": 325.0,
+   "omnivore": 350.0,
    "efficiency": 526.0,
    "safety": 2.0
   },
   "ascent_last": 3.987
  },
  "lane_plan": {
-  "ts": "2026-11-01 10:00:22",
+  "ts": "2026-11-01 10:26:50",
   "search": "bounded-best-first depth2 beam4",
   "lane_order": [
    "forge",

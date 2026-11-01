@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-01 10:00:20",
+ "ts": "2026-11-01 10:26:49",
  "law": "THEIR numbers = published receipts from suites we cannot run on this box (16GB, $0); OUR numbers = measured on OUR gates. Directional, never equivalent - and never inflated.",
  "honest_note": "numbered claims in the 621-canon: 0 - the abstracts are method-first; the canon carries no published score tables in abstracts; rows are directional references",
  "their_claims": [
@@ -21,8 +21,8 @@
  ],
  "our_measured": {
   "executable_verified_skills": 3,
-  "library_coding_entries": 302,
-  "library_total": 302
+  "library_coding_entries": 322,
+  "library_total": 322
  },
  "serves": "benchmark_honesty"
 }

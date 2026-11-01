@@ -1,9 +1,9 @@
 {
- "ts": "2026-11-01 10:04:34",
- "ms": 4096.6,
+ "ts": "2026-11-01 10:26:44",
+ "ms": 4115.2,
  "state": {
   "genes": {
-   "gen": 17,
+   "gen": 18,
    "champion": "base",
    "front": [
     "base"
@@ -80,6 +80,10 @@
     "g16_2": {
      "fitness": 0.0,
      "m_rounds": 0
+    },
+    "g17_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
     }
    }
   },
@@ -125,9 +129,9 @@
    "papers_evolution": 421
   },
   "skills_lib": {
-   "count": 302,
-   "coding": 302,
-   "categories": 24
+   "count": 322,
+   "coding": 322,
+   "categories": 25
   },
   "board": {
    "backlog": 1455,
@@ -163,7 +167,7 @@
    "head": ""
   },
   "hardware": {
-   "ram_free_gb": 7.0,
+   "ram_free_gb": 7.43,
    "tier": "brain-window",
    "allowed": [
     "brain-load+conversion",
@@ -172,7 +176,7 @@
     "genes"
    ],
    "starved": false,
-   "proc_rss_mb": 103.4,
+   "proc_rss_mb": 33.2,
    "gpu_note": "no GPU loads for swarm work (the 3050 stays idle-capable)"
   },
   "lessons": {
@@ -185,7 +189,7 @@
   },
   "digest": {
    "present": true,
-   "age_min": 0.5
+   "age_min": 22.6
   },
   "brain": {},
   "integrity": {
@@ -210,48 +214,48 @@
  "goals": {
   "gold": {
    "score": 2205.0,
-   "delta": 23.0,
-   "progress_age_min": 0.0
+   "delta": 0.0,
+   "progress_age_min": 22.2
   },
   "money": {
    "score": 0.0,
    "delta": 0.0,
-   "progress_age_min": 65.4
+   "progress_age_min": 87.6
   },
   "life": {
    "score": 129.0,
    "delta": 0.0,
-   "progress_age_min": 20.3
+   "progress_age_min": 42.5
   },
   "recruits": {
    "score": 6.0,
    "delta": 0.0,
-   "progress_age_min": 20.3
+   "progress_age_min": 42.5
   },
   "jobs": {
    "score": 213.0,
    "delta": 0.0,
-   "progress_age_min": 20.3
+   "progress_age_min": 42.5
   },
   "coding": {
-   "score": 305.0,
+   "score": 325.0,
    "delta": 0.0,
-   "progress_age_min": 20.3
+   "progress_age_min": 0.6
   },
   "omnivore": {
-   "score": 329.0,
+   "score": 350.0,
    "delta": 0.0,
-   "progress_age_min": 20.3
+   "progress_age_min": 0.6
   },
   "efficiency": {
    "score": 526.0,
    "delta": 0.0,
-   "progress_age_min": 20.3
+   "progress_age_min": 42.5
   },
   "safety": {
    "score": 2.0,
    "delta": 0.0,
-   "progress_age_min": 20.3
+   "progress_age_min": 42.5
   }
  },
  "goal_progress": {
@@ -260,12 +264,12 @@
   "life": 1793544253.5449352,
   "recruits": 1793544253.5449352,
   "jobs": 1793544253.5449352,
-  "coding": 1793544253.5449352,
-  "omnivore": 1793544253.5449352,
+  "coding": 1793546770.01382,
+  "omnivore": 1793546770.01382,
   "efficiency": 1793544253.5449352,
   "safety": 1793544253.5449352
  },
- "gi_score": 387.3,
+ "gi_score": 389.3,
  "goal_genealogy": {
   "gold": {
    "origin": "ApplyTriGenome: MAXIMIZE YIELD (mines/req - the original fitness)",
@@ -440,21 +444,6 @@
  },
  "hardware_history": [
   {
-   "ts": "09:57:05",
-   "ms": 4123.5,
-   "ram": 6.92
-  },
-  {
-   "ts": "09:57:14",
-   "ms": 4106.0,
-   "ram": 7.02
-  },
-  {
-   "ts": "09:57:34",
-   "ms": 4097.6,
-   "ram": 7.05
-  },
-  {
    "ts": "09:59:47",
    "ms": 4098.6,
    "ram": 7.08
@@ -478,6 +467,21 @@
    "ts": "10:04:34",
    "ms": 4096.6,
    "ram": 7.0
+  },
+  {
+   "ts": "10:26:10",
+   "ms": 4116.9,
+   "ram": 7.47
+  },
+  {
+   "ts": "10:26:18",
+   "ms": 4159.8,
+   "ram": 7.47
+  },
+  {
+   "ts": "10:26:44",
+   "ms": 4115.2,
+   "ram": 7.43
   }
  ],
  "speed": {

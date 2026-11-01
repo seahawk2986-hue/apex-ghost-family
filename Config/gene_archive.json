@@ -322,6 +322,24 @@
    "reqs": 0,
    "parent": "base",
    "born": "2026-11-01 09:57:25"
+  },
+  "g17_2": {
+   "genes": {
+    "ghost_cc_leads": 341,
+    "ghost_events": 80,
+    "ghost_trending": 44,
+    "ghost_wiki_leads": 75,
+    "ghost_wayback_leads": 90,
+    "ghost_queue_mines_to_farm": 30,
+    "ghost_min_stars": 387
+   },
+   "fitness": 0.0,
+   "descriptor": "cc6_ev3_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 10:26:10"
   }
  },
  "cells": {
@@ -392,10 +410,14 @@
   "cc5_ev4_tr2": {
    "vid": "g16_2",
    "fitness": 0.0
+  },
+  "cc6_ev3_tr2": {
+   "vid": "g17_2",
+   "fitness": 0.0
   }
  },
  "champion": "base",
- "gen": 17,
+ "gen": 18,
  "pareto_front": [
   "base"
  ],
@@ -437,7 +459,7 @@
  "calibration": {
   "L_test": {
    "drift": 0.203,
-   "n": 56,
+   "n": 64,
    "weight": 0.594
   }
  },

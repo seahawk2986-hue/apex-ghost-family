@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-01 10:00:26",
+ "ts": "2026-11-01 10:26:55",
  "organs": [
   {
    "file": "ApexAutonomousAgent.py",
@@ -104,18 +104,18 @@
   },
   {
    "file": "ApexGym.py",
-   "lines": 498,
-   "funcs": 21,
+   "lines": 507,
+   "funcs": 22,
    "classes": 0,
    "imports": [
     "argparse",
     "json",
     "os",
+    "STAGE",
     "random",
     "re",
     "subprocess",
-    "time",
-    "uuid"
+    "time"
    ],
    "net_calls": false,
    "spawns": true,
@@ -613,6 +613,25 @@
    "locked_writes": false
   },
   {
+   "file": "FullSweep.py",
+   "lines": 253,
+   "funcs": 5,
+   "classes": 0,
+   "imports": [
+    "ast",
+    "hashlib",
+    "json",
+    "os",
+    "re",
+    "subprocess",
+    "sys",
+    "time"
+   ],
+   "net_calls": false,
+   "spawns": true,
+   "locked_writes": false
+  },
+  {
    "file": "GauntletRun.py",
    "lines": 195,
    "funcs": 9,
@@ -800,7 +819,7 @@
   },
   {
    "file": "InitiativeLoop.py",
-   "lines": 228,
+   "lines": 229,
    "funcs": 11,
    "classes": 0,
    "imports": [
@@ -810,8 +829,8 @@
     "subprocess",
     "sys",
     "time",
-    "requests",
-    "uuid"
+    "uuid",
+    "requests"
    ],
    "net_calls": false,
    "spawns": true,
@@ -1192,7 +1211,7 @@
   },
   {
    "file": "RescanAll.py",
-   "lines": 72,
+   "lines": 73,
    "funcs": 1,
    "classes": 0,
    "imports": [
@@ -1240,7 +1259,7 @@
   },
   {
    "file": "RunROI.py",
-   "lines": 230,
+   "lines": 225,
    "funcs": 10,
    "classes": 0,
    "imports": [
@@ -1442,8 +1461,8 @@
   },
   {
    "file": "SwarmOrchestrator.py",
-   "lines": 2459,
-   "funcs": 63,
+   "lines": 2483,
+   "funcs": 64,
    "classes": 1,
    "imports": [
     "asyncio",
@@ -1561,14 +1580,14 @@
  ],
  "lint": {
   "pyflakes": {
-   "n_organs_flagged": 89,
-   "n_warnings": 92,
+   "n_organs_flagged": 80,
+   "n_warnings": 83,
    "sample": [
     "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexBenchmark.py:130:9: 'Scripts.proc_check' imported but unused",
     "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexBenchmark.py:153:9: local variable 'e' is assigned to but never used",
-    "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexGym.py:138:5: local variable 't0' is assigned to but never used",
-    "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexGym.py:150:9: local variable 'truth_json' is assigned to but never used",
-    "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexGym.py:163:18: f-string is missing placeholders"
+    "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexGym.py:147:5: local variable 't0' is assigned to but never used",
+    "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexGym.py:159:9: local variable 'truth_json' is assigned to but never used",
+    "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexGym.py:172:18: f-string is missing placeholders"
    ]
   },
   "bandit": {
