@@ -45,7 +45,8 @@ def stage3(diff_text, issue_body, purpose="the quality review", tries=3,
             time.sleep(delay if i < tries - 1 else 0)
             continue
         r = CB.chat(ask, max_tokens=250, purpose=purpose,
-                    models=("groq", "local-coder", "local-fast"))
+                    models=("groq", "local-coder", "local-fast"),
+                    resp_json=True)
         if r:
             import re as _re
             t = _re.sub(_re.escape("<" + "think") + r".*?" + _re.escape("</" + "think")

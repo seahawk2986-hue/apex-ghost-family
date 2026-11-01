@@ -1,0 +1,33 @@
+{
+ "ts": "2026-11-01 13:15:53",
+ "knobs": {
+  "k1_json_mode": {
+   "ok": true,
+   "note": "{\"ship\":false,\"why\":\"Insufficient context to evaluate the one-line docstring fix.\"}"
+  },
+  "k2_reasoning": {
+   "ok": false,
+   "latency_s": 1.22,
+   "note": ""
+  },
+  "k3_long": {
+   "ok": false,
+   "note": "HTTP Error 413: Payload Too Large"
+  },
+  "k4_threaded": {
+   "ok": true,
+   "wall_s": 0.45,
+   "sum_latencies": 1.56,
+   "lats": [
+    0.45,
+    0.23,
+    0.42,
+    0.22,
+    0.24
+   ],
+   "note": "the wall 0.45s vs the serial 1.6s"
+  }
+ },
+ "cost": "$0.00",
+ "verdict": "the wiring follows the winners"
+}

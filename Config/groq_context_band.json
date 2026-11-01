@@ -1,0 +1,10 @@
+{
+ "ts": "2026-11-01 13:16:11",
+ "band_sizes": {
+  "6000": "OK",
+  "9000": "OK",
+  "12000": "HTTPError 429",
+  "16000": "HTTPError 429"
+ },
+ "law": "the honest budget = the measured band, never the advertised maximum"
+}

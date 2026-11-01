@@ -77,7 +77,7 @@ def track(agent, delivered):
     return e["rate"]
 
 
-def chat(prompt, max_tokens=512, purpose="", models=()):
+def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
     """The spend-gated chat: the ollama cloud first (if the key exists),
     then the other keys. THE GATE: refuses at/over the session cap."""
     g = load_gate()
@@ -148,13 +148,18 @@ def chat(prompt, max_tokens=512, purpose="", models=()):
                 if os.environ.get("CB_FORMAT_JSON") == "1":
                     body["format"] = "json"
             else:
+                # the MEASURED band (the honest budget): groq = 9k (the
+                # free tier's per-minute quota-measured), the rest = 6k
+                budget = 9000 if name == "groq" else 6000
                 body = {"model": model,
                         "messages": [{"role": "user",
-                                      "content": prompt[:6000]}],
+                                      "content": prompt[:budget]}],
                         "max_tokens": max(max_tokens, 512) if name.startswith(
                             ("ollama", "openrouter", "groq")) else
                         max_tokens,
                         "temperature": 0}
+                if resp_json:
+                    body["response_format"] = {"type": "json_object"}
             req = urllib.request.Request(
                 url, data=json.dumps(body).encode(),
                 headers={**hdrs, "Content-Type": "application/json"})
