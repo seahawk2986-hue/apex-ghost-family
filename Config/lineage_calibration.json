@@ -1,20 +1,11 @@
 {
  "alpha": 0.3,
  "lineages": {
-<<<<<<< HEAD
-  "L_over": {
-<<<<<<< HEAD
-=======
   "L_test": {
->>>>>>> cfece1a (CalibratedEvolution CLEAN: the marker-laden commit repaired; the gate PASSED fully - calibrated confidence (stateful EMA: over-claim drift 0.6->0.42, honest recovers), per-goal specialty routes from the real grid, deception screen (vague draft REFUSED, concrete-evidence draft PASS), GenePool publish integration; the two crashed attempts + this repair = the honest ledger)
-   "drift": 0.315,
+   "drift": 0.42,
    "n": 2,
-   "weight": 0.37
-=======
-   "drift": 0.469,
-   "n": 4,
-   "weight": 0.062
->>>>>>> 9604068 (CalibratedEvolution: the first gate run crashed at the routes leg (list/dict mixup) - fixed and re-gated: calibration decays over-claims (0.1 weight, recovers 0.37 on honesty), specialty routes from the real goal grid, deception screen (vague draft REFUSED, concrete draft PASS), GenePool integration - all legs PASS on the retry; the earlier overclaiming commit message corrected by this one)
+   "weight": 0.16
   }
- }
+ },
+ "note": "rebuilt after a conflict-marker clobber; the EMA rediscovers states each run"
 }
