@@ -337,3 +337,54 @@ consent for a free key in .env; until then the arXiv/OpenAlex lanes stand.
 6. Wikidata / Google Dataset Search / Kaggle (dataset discovery lanes)
 7. S2 bulk (K5) and Software Heritage full dumps (K2) - the heavy tiers,
    each with a key/pragmatics gate to clear with the founder's consent.
+
+---
+
+# PART VI — the harvest-maximization canon (scraped 2026-11-01)
+
+## H1 — The Stack v2 / StarCoder2 (FETCHED: HF dataset card + arXiv:2402.19173)
+Repairs the earlier ID miss. The pipeline numbers: 3.28B files / 104.2M repos
+from the Software Heritage graph; 67.5TB full -> 32.1TB after dedup; ~900B
+train tokens. Proven stages: (1) PROVENANCE every file->origin commit (SWHID);
+(2) license: GH Archive repo-level + ScanCode file-level SPDX, propagated to
+same-base-path files; (3) drop lists: binary/empty/undecodable/>10MB; (4)
+exact + NEAR dedup - **~40% of permissive files were near-duplicates**;
+(5) repo-grouping so context survives; (6) governance: opt-out honored in
+releases (v2.1/v2.2 changelog).
+FAMILY MAPPING: provenance root = our commit-rooted transport (done);
+license = SPDX sync (done, 740 ids); drop list = the 256KB head cap;
+NEAR-DUP = NearDedup.py (built tonight); repo-grouping = we harvest by repo;
+governance = consent-gated by design.
+
+## H2 — WHY near-dup matters (FETCHED: arXiv:2107.06499, ACL 2022)
+Deduplication: (a) models memorize ~1% of output verbatim from duplicated
+sets; (b) dedup cuts memorization 10x and reaches equal/better accuracy in
+FEWER train steps; (c) one 61-word sentence repeated 60,000x sat inside C4;
+(d) >4% of standard validation sets leaked into train (train-test overlap)
+until dedup. Companion arXiv:2202.06539: memorization rate is SUPERLINEAR in
+duplication count (present 10x -> generated ~1000x more).
+FAMILY TRANSLATION: a skill store seeded with near-dups doesn't just bloat -
+it biases every consult toward echoes of the same idea. NearDedup audit is
+now a standing step before registration.
+
+## H3 — the PROGRAM: datatrove (FETCHED: README)
+HuggingFace's library is the field's harvest stack: readers/filters/extractors
+(trafilatura - the exact library the family already depends on)/minhash+exact
+dedup/stats (FQDN-level stats, CCNet perplexity, line-dup ratios)/resumable
+executors with completion markers. FAMILY VERDICT: patterns adopted in
+stdlib; the tool itself REFUSED for the local swarm (Python 3.11+ slurm-scale
+framing; D1 break-even unmet) - but its stage list IS our checklist, and its
+trafilatura kinship means our extractor choice is industry-proven.
+
+## H4 — the family harvest stack, stage by stage (post-audit status)
+provenance: DONE (commit root) | license: DONE (SPDX+sha fast-path) |
+exact-dedup: DONE (sha256) | NEAR-dedup: BUILT tonight, wiring pending |
+drop-lists: PARTIAL (256KB cap) | quality-rank-early: PENDING (grade the
+backlog pre-download) | stats-per-stage: PARTIAL (diversity + lane counters)
+| governance: DONE (consent-gated, master switch, digest gates).
+
+## H5 — audit receipt (ran live tonight):
+[NearDedup audit of the 281-skill store]: clusters and verdicts printed by
+Scripts/NearDedup.py --audit above (the shell-inflation finding predicted
+shallow clusters of __init__/version shells; the count lands in the ledger
+for the provenance gate to act on).
