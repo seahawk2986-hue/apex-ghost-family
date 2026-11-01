@@ -5164,7 +5164,34 @@
     "torch"
    ],
    "registered": "2026-11-01 11:39:48"
+  },
+  {
+   "skill": "build_marine_zones",
+   "source_file": "tools/cap/build_marine_zones.py",
+   "source_repo": "philliphoff/EncDotNet.S100",
+   "license": "check repo",
+   "sha256": "abc01a718e1b0ae8e892db6451c4d6a2cabff5be391f584246ea5235d179c364",
+   "lines": 117,
+   "first_line": "\"\"\"Builds the compact marine zone layer bundled with EncDotNet.S100.Datasets.Cap",
+   "imports": [
+    "json",
+    "shapefile"
+   ],
+   "registered": "2026-11-01 13:55:09"
+  },
+  {
+   "skill": "make_hatch_symbols",
+   "source_file": "tools/cap/make_hatch_symbols.py",
+   "source_repo": "philliphoff/EncDotNet.S100",
+   "license": "check repo",
+   "sha256": "512c2cf014b5809f78e1243edc192eb1eb184b7ea8d3a31b5ad58b0ba301f975",
+   "lines": 28,
+   "first_line": "\"\"\"Writes the CAP severity hatching symbols (CAPHATCH*.svg) into the directory",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-01 13:55:10"
   }
  ],
- "built": "2026-11-01 11:39:48"
+ "built": "2026-11-01 13:55:10"
 }

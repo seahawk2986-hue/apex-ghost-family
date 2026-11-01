@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-01 12:40:57",
- "ms": 4091.4,
+ "ts": "2026-11-01 13:54:32",
+ "ms": 4106.5,
  "state": {
   "genes": {
    "gen": 22,
@@ -10,8 +10,8 @@
    ],
    "lineages": {
     "base": {
-     "fitness": 2.4904,
-     "m_rounds": 5
+     "fitness": 1.6983,
+     "m_rounds": 6
     },
     "g0_0": {
      "fitness": 0.0,
@@ -121,11 +121,11 @@
   "knowledge": {
    "events": {
     "reqs": 0,
-    "mines": 54
+    "mines": 78
    },
    "wiki": {
     "reqs": 0,
-    "mines": 6
+    "mines": 17
    },
    "hf_space": {
     "reqs": 0,
@@ -137,7 +137,7 @@
    }
   },
   "help": {
-   "briefs": 132,
+   "briefs": 138,
    "alarmsRaised": 6
   },
   "canon": {
@@ -183,15 +183,16 @@
    "head": ""
   },
   "hardware": {
-   "ram_free_gb": 4.39,
-   "tier": "chain-window",
+   "ram_free_gb": 5.9,
+   "tier": "brain-window",
    "allowed": [
+    "brain-load+conversion",
     "chain",
     "bubbles",
     "genes"
    ],
    "starved": false,
-   "proc_rss_mb": 34.0,
+   "proc_rss_mb": 101.6,
    "gpu_note": "no GPU loads for swarm work (the 3050 stays idle-capable)"
   },
   "lessons": {
@@ -204,13 +205,9 @@
   },
   "digest": {
    "present": true,
-   "age_min": 45.2
+   "age_min": 0.0
   },
-  "brain": {
-   "ollama_chat": [
-    "qwen2.5-coder:7b"
-   ]
-  },
+  "brain": {},
   "integrity": {
    "bad": [],
    "ok": true
@@ -232,55 +229,55 @@
  "alarms": [],
  "goals": {
   "gold": {
-   "score": 2359.0,
-   "delta": 0.0,
-   "progress_age_min": 0.9
+   "score": 2394.0,
+   "delta": 11.0,
+   "progress_age_min": 0.0
   },
   "money": {
    "score": 0.0,
    "delta": 0.0,
-   "progress_age_min": 221.8
+   "progress_age_min": 295.4
   },
   "life": {
-   "score": 138.0,
+   "score": 144.0,
    "delta": 0.0,
-   "progress_age_min": 0.9
+   "progress_age_min": 0.0
   },
   "recruits": {
    "score": 6.0,
    "delta": 0.0,
-   "progress_age_min": 176.7
+   "progress_age_min": 250.3
   },
   "jobs": {
    "score": 68.0,
    "delta": 0.0,
-   "progress_age_min": 176.7
+   "progress_age_min": 250.3
   },
   "coding": {
    "score": 405.0,
    "delta": 0.0,
-   "progress_age_min": 45.2
+   "progress_age_min": 118.8
   },
   "omnivore": {
    "score": 433.0,
    "delta": 0.0,
-   "progress_age_min": 45.2
+   "progress_age_min": 118.8
   },
   "efficiency": {
    "score": 526.0,
    "delta": 0.0,
-   "progress_age_min": 176.7
+   "progress_age_min": 250.3
   },
   "safety": {
    "score": 2.0,
    "delta": 0.0,
-   "progress_age_min": 176.7
+   "progress_age_min": 250.3
   }
  },
  "goal_progress": {
-  "gold": 1793554804.2422295,
+  "gold": 1793559272.3946161,
   "money": 1793541551.1543214,
-  "life": 1793554804.2422295,
+  "life": 1793559271.0181108,
   "recruits": 1793544253.5449352,
   "jobs": 1793544253.5449352,
   "coding": 1793552142.9098723,
@@ -288,7 +285,7 @@
   "efficiency": 1793544253.5449352,
   "safety": 1793544253.5449352
  },
- "gi_score": 419.3,
+ "gi_score": 434.8,
  "goal_genealogy": {
   "gold": {
    "origin": "ApplyTriGenome: MAXIMIZE YIELD (mines/req - the original fitness)",
@@ -463,16 +460,6 @@
  },
  "hardware_history": [
   {
-   "ts": "10:30:18",
-   "ms": 4142.4,
-   "ram": 7.49
-  },
-  {
-   "ts": "10:30:27",
-   "ms": 4151.9,
-   "ram": 7.52
-  },
-  {
    "ts": "10:30:53",
    "ms": 4096.4,
    "ram": 7.51
@@ -501,15 +488,25 @@
    "ts": "12:40:57",
    "ms": 4091.4,
    "ram": 4.39
+  },
+  {
+   "ts": "13:54:31",
+   "ms": 4111.9,
+   "ram": 5.9
+  },
+  {
+   "ts": "13:54:32",
+   "ms": 4106.5,
+   "ram": 5.9
   }
  ],
  "speed": {
   "prestaged_genome": true,
   "prestage_parent": "base",
-  "tier": "chain-window",
+  "tier": "brain-window",
   "next_actions": [
    "genes: GenePool.run(3) pre-stages the next generation (CPU-only, gated-safe)",
-   "chain: RunROI-greenlit chain runs (no loaded brain needed; conversion honestly skips)",
+   "brain: RAM permits a loaded brain NOW - load qwen3-8b and run conversion MEASURED this window",
    "bubbles: pre-stage + manifests + gates fill every gated minute",
    "skills: SkillUpgrader consumes curriculum candidates in-window"
   ]

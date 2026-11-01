@@ -20,12 +20,13 @@
   "gpu": "RTX 3050 8GB"
  },
  "engines": {
-  "planner": "deepseek-r1-distill-llama-8b (LM Studio :1234) - thinking only, tiny JSON plans",
-  "coder": "qwen3-8b (Qwen3, LM Studio :1234) - chat + reasoning + JSON (grammar-capable) [updated 2026-10-31]",
-  "memory": "text-embedding-nomic-embed-text-v1.5 - semantic recall",
-  "bridge": "qwen3-8b via LM :1234 (bridge lane unified with chat) [updated 2026-10-31]",
-  "cloud_burst": "groq:qwen/qwen3.8-27b + openrouter:nemotron-3.5-lightning - approved $0 fallbacks [updated 2026-10-31]",
-  "coding_14b": "qwen2.5-14b-instruct (LM Studio :1234) - V2 job coding engine (8.99GB, resident) [updated 2026-10-31]"
+  "chat": "gpt-oss-120b via groq (the no-card free tier; the blind-eval #1; 0GB local RAM)",
+  "chat_fallback": "phi4-mini (local, 2.2GB windowed) then qwen2.5-coder-7b",
+  "planner": "deepseek-r1-7b / qwen3-8b (the LM-Studio reasoning windows, by design)",
+  "coder": "qwen2.5-coder:7b (the drafts; unlimited local) + qwen2.5-coder:3b (the floor)",
+  "arbiter": "gpt-oss-120b (the consensus-disagreements)",
+  "embed": "text-embedding-nomic-embed-text-v1.5",
+  "note": "the honest self-model (post the ChatEval blind-race: the 120b judged #1 in 3/3 asks)"
  },
  "capabilities": [
   "self-starting at logon (LM Studio, Ollama, watchdog)",

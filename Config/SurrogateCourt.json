@@ -7,12 +7,12 @@
  },
  "wins": {
   "territory_match": 19,
-  "lesson_coverage": 514,
+  "lesson_coverage": 520,
   "novelty_distance": 1
  },
  "trials": {
   "territory_match": 20,
-  "lesson_coverage": 515,
+  "lesson_coverage": 521,
   "novelty_distance": 2
  },
  "measured_pairs": 63
