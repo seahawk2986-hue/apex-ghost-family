@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-01 11:40:13",
+ "ts": "2026-11-01 11:44:56",
  "prs": [
   {
    "repo": "rtk-ai/rtk",
@@ -12,9 +12,7 @@
     "hooks",
     "needs-review",
     "security-sensitive"
-   ],
-   "new_activity": true,
-   "founder_action": "read the maintainer's comment and answer (the loop can draft the response on your word)"
+   ]
   },
   {
    "repo": "dream-machine-systems/dream-machine-os",
@@ -22,9 +20,7 @@
    "state": "open",
    "mergeable_state": "blocked",
    "comments": 1,
-   "labels": [],
-   "new_activity": true,
-   "founder_action": "read the maintainer's comment and answer (the loop can draft the response on your word)"
+   "labels": []
   }
  ]
 }

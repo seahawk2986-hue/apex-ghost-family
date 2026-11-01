@@ -81,13 +81,6 @@ def chat(prompt, max_tokens=512, purpose="", models=()):
     then the other keys. THE GATE: refuses at/over the session cap."""
     g = load_gate()
     est = (len(prompt) / 4 + max_tokens) / 1e6 * 0.2   # the HIGH-side estimate
-    if g["spent_usd"] + est > g["session_cap_usd"]:
-        g["refusals"] += 1
-        save_gate(g)
-        print(f"[cloud-brain] REFUSED (spend gate): spent "
-              f"${g['spent_usd']:.4f} + est ${est:.4f} > cap "
-              f"${g['session_cap_usd']:.2f} - the drain protection held")
-        return None
     keys = env_keys()
     cloud_allowed = os.environ.get("CLOUD_ALLOWED") == "1"   # the founder's
     cands = list(models) or [                                 # opt-in only
@@ -117,6 +110,13 @@ def chat(prompt, max_tokens=512, purpose="", models=()):
         is_local = name.startswith("local")
         if not keyv and not is_local:
             continue
+        # THE GATE LIVES PER CANDIDATE: the free tier ALWAYS serves; the
+        # cloud candidates skip individually when the cap is met (the
+        # local brain is never blocked by the spend law)
+        if not is_local:
+            g2 = load_gate()
+            if g2["spent_usd"] + est > g2["session_cap_usd"]:
+                continue
         try:
             if is_local:
                 body = {"model": model, "stream": False,
