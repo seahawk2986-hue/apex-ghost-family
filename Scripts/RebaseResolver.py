@@ -57,7 +57,7 @@ def merge_json(p, encoding="strict"):
         return out
 
     # the simpler honest: parse the conflict-blocks; merge the top-level keys
-    t = open(p, encoding="utf-8").read()
+    # (t = already-read above: the hardened-encoding's = the one-read)
     blocks = re.split(r"^(<<<<<<<.*|=======|>>>>>>>.*)$", t, flags=re.M)
     base, ours, theirs = [], [], []
     mode = "base"
