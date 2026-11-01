@@ -640,3 +640,10 @@
 {"id": "df0b458620d7", "ts": "2026-10-31 21:21:01", "kind": "success", "text": "GHOST SWARM: 218 points for verified productive work.", "meta": {"ghost_points": 218, "total": 100620.5}, "imp": 0.7}
 {"id": "1ea5d721c22e", "ts": "2026-10-31 21:21:12", "kind": "conversation", "text": "Andrew: Resume the training ladder for 20 minutes, then stop and report gains. | Apex replied (0 chars)", "meta": {"talk": true, "message": "Resume the training ladder for 20 minutes, then stop and report gains.", "reply": ""}, "imp": 0.8333333333333334}
 {"id": "5ab606fa5f55", "ts": "2026-10-31 21:22:01", "kind": "success", "text": "GHOST SWARM: 170 points for verified productive work.", "meta": {"ghost_points": 170, "total": 100790.5}, "imp": 0.7}
+{"id": "63ec0040c925", "ts": "2026-10-31 21:24:54", "kind": "error", "text": "Coder failed on TrainingLogParser.py: empty/blocked output", "meta": {}, "imp": 0.75}
+{"id": "709bedb724e2", "ts": "2026-10-31 21:24:54", "kind": "error", "text": "Hardware pacing: host under strain (RAM guard: 1.86GB free < 2.0GB); Apex is pacing itself down.", "meta": {}, "imp": 0.75}
+{"id": "ff4e6662381c", "ts": "2026-10-31 21:26:13", "kind": "success", "text": "GHOST SWARM: 282 points for verified productive work.", "meta": {"ghost_points": 282, "total": 101072.5}, "imp": 0.7}
+{"id": "62e22fd217a2", "ts": "2026-10-31 21:26:37", "kind": "planning_vote", "text": "votes={'traininglogparser.py': 1, 'apexpacing.py': 2} modal=apexpacing.py agree=2/3", "meta": {"file": "TrainingLogParser.py", "agree": 2, "total": 3}, "imp": 0.8333333333333334}
+{"id": "d444c06a7e3e", "ts": "2026-10-31 21:26:39", "kind": "thinking", "text": "TrainingLogParser.py: socratic verdict=shrink assumptions=4 pre-mortem factors=4", "meta": {}, "imp": 0.8333333333333334}
+{"id": "1cf7fa99ac05", "ts": "2026-10-31 21:26:46", "kind": "success", "text": "GHOST SWARM: 170 points for verified productive work.", "meta": {"ghost_points": 170, "total": 101242.5}, "imp": 0.7}
+{"id": "150e3ef8f3d8", "ts": "2026-10-31 21:27:47", "kind": "success", "text": "GHOST SWARM: 170 points for verified productive work.", "meta": {"ghost_points": 170, "total": 101412.5}, "imp": 0.7}

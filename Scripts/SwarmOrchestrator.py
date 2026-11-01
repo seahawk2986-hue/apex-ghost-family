@@ -2208,10 +2208,18 @@ def main(minutes_cap=6, ghosts=None, no_cooldown=False):
     finally:
         _HB_ON["flag"] = False
         try:
-            import json as _jj
-            _jj.dump({"round_done": True, "findings": locals().get('gnet', gnet).findings if 'gnet' in dir() else 0}, open(r"C:\\Users\\seaha\\Apex-Adapter\\ghost_heartbeat.json", "w", encoding="utf-8"))
+            # D8: the round-done trail goes through _hb_write so it carries the
+            # digest - the old bare dump bypassed the writer (the MISMATCH
+            # alarm caught this exact bypass path) and its eager
+            # `locals().get('gnet', gnet)` crashed when the round itself died.
+            _hb_write({"round_done": True,
+                       "findings": (gnet.findings if 'gnet' in dir() else 0)})
         except Exception:
-            pass
+            try:
+                _hb_write({"round_done": True, "findings": 0,
+                           "note": "gnet unbound - honest zero round-complete flag"})
+            except Exception:
+                pass
     wall = time.time() - t0
 
     # ---- reward: paid per VERIFIED productive unit consumed while working ----

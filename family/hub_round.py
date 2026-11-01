@@ -45,6 +45,7 @@ for lead in pending:
         continue
 
 out = {"hub": "actions-runner", "ts": time.strftime("%Y-%m-%d %H:%M:%S"),
+       "status": "done", "lifecycle": "done",   # C2 (A2A): explicit task lifecycle
        "requested": len(pending), "ok": ok, "mines": mined[:60],
        "rules_followed": bool(pk.get("rules"))}
 with open("hub_round_result.json", "w") as f:

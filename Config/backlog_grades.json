@@ -1,0 +1,10006 @@
+{
+ "ts": "2026-10-31 21:28:06",
+ "scored": 2000,
+ "rows": [
+  {
+   "repo": "thanhhoax701/To-Do-List",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "slavenf/sfl-library",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "actor-framework/actor-framework",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SparkyStudios/AmplitudeAudioSDK",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mattreecebentley/plf_list",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "B-Con/crypto-algorithms",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "grit-engine/grit-engine",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "OneLoneCoder/olcPixelGameEngine",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JeanPhilippeKernel/RendererEngine",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ezEngine/ezEngine",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "DiligentGraphics/DiligentEngine",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ajvb/awesome-tor",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rshipp/awesome-malware-analysis",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zardus/ctf-tools",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Gallopsled/pwntools",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rastating/wordpress-exploit-framework",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hslatman/awesome-industrial-control-system-security",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kaiiyer/awesome-vulnerable",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fabacab/awesome-lockpicking",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "caesar0301/awesome-pcaptools",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "quozd/awesome-dotnet",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ashishb/android-security-awesome",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bayandin/awesome-awesomeness",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fabacab/awesome-malware",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jakejarvis/awesome-shodan-queries",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "thehappydinoa/awesome-censys-queries",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "toniblyx/my-arsenal-of-aws-security-tools",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fabacab/awesome-cybersecurity-blueteam",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "apsdehal/awesome-ctf",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Cugu/awesome-forensics",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "carpedm20/awesome-hacking",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "paralax/awesome-honeypots",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "onlurking/awesome-infosec",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sorrycc/awesome-javascript",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vinta/awesome-python",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "yeyintminthuhtut/Awesome-Red-Teaming",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Sdogruyol/awesome-ruby",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "markets/awesome-ruby",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "danielmiessler/SecLists",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "PaulSec/awesome-sec-talks",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sbilly/awesome-security",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "puresec/awesome-serverless-security",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "alebcay/awesome-shell",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "InQuest/awesome-yara",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "doyensec/awesome-electronjs-hacking",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jivoi/awesome-osint",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "narkopolo/fb_friend_list_scraper",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "byt3bl33d3r/SprayingToolkit",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tylerha97/awesome-reversing",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "v2-dev/awesome-social-engineering",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "trustedsec/social-engineer-toolkit",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "internetwache/GitTools",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "stopdoublestandards/ECI58_CollectionData",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MayankTamakuwala/Image-Upscaler-and-Restoring-GFPGAN-Algorithm",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sklearn-docs/A_demo_of_the_Spectral_Bi-Clustering_algorithm",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "azizalto/vanilla-ml-algorithms",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sklearn-docs/A_demo_of_the_Spectral_Co-Clustering_algorithm",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "asigalov61/Algorithmic-Lyrics-Classifier",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jmlon/DataStructures_and_Algorithms",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "terryum/awesome-deep-learning-papers",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ZuzooVn/machine-learning-for-software-engineers",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ybayle/awesome-deep-learning-music",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "benedekrozemberczki/awesome-graph-embedding",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chihming/awesome-network-embedding",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AstraZeneca/awesome-polipharmacy-side-effect-prediction",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "VisualText/nlp-engine",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CAMeL-Lab/camel_tools",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fnielsen/awesome-danish",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "oroszgy/awesome-hungarian-nlp",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "anoopkunchukuttan/indic_nlp_library",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ksopyla/awesome-nlp-polish",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "asivokon/awesome-ukrainian-nlp",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Hannibal046/Awesome-LLM",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "steven2358/awesome-generative-ai",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Danielskry/Awesome-RAG",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "promptslab/Awesome-Prompt-Engineering",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "visenger/awesome-mlops",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "serwaabrown/ai-engineering-from-scratch",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "knadh/listmonk",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "phpList/phplist3",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hyperupcall/awesome-mastodon",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kiwix/kiwix-tools",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "django-oauth/django-oauth-toolkit",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dahlia/awesome-sqlalchemy",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MongoEngine/mongoengine",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tkem/cachetools",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "prompt-toolkit/python-prompt-toolkit",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "robotframework/robotframework",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "more-itertools/more-itertools",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pypa/setuptools",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zoidbergwill/awesome-ebpf",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ianstormtaylor/awesome-heroku",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "willianjusten/awesome-svg",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ramitsurana/awesome-kubernetes",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "0xnr/awesome-bigdata",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "emacs-tw/awesome-emacs",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "willianjusten/awesome-audio-visualization",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "drmonkeyninja/awesome-textpattern",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "heejkoo/Awesome-Diffusion-Models",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kayba-ai/agentic-context-engine",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "featuretools/featuretools",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "VojtechNovakk/ols-regression-engine",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rl-tools/rl-tools",
+   "score": 70.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "RPGM-Tools/tools",
+   "score": 65.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sponsors/explore",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sidooms/MovieTweetings",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bshmueli/ReactionGIF",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "linck2000/sheet-to-git",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fjordperfumerchopper/repo-d5fs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zingyq/Projects-",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "stake-dao/snapshot-helpers",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "BrillianceSpider/dgyi-i58",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lenkasacademy-pixel/elixir-live",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "artnc/dotfiles",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "intevoir/continental",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Hassansky5990/CineFrame",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TheSarKhan/cbarfrontend",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Renee-Lise/bellaia-mvp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jboone1989/EventGraph",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "earthlyhandsworkshop/earthlyhands.org",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gokimkh123/J-ourney",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Olbrasoft/lenka-pohanova-to-prehrajto",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "abdurrouuf/my-claude-bot",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "thierrynzaramba-stack/hotesmart",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "englisheyesahahills/english-quiz",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Maxhill1031/stock-monitor",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AxelPotato/magnum-opus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "BSVKey/name-index",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hanzcodereal/Moraliys",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nathanjohnpayne/mergepath",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "royletron/anton-uptime",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "joker977-cmd/gold-data",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Moamen0996/safira-admin-frontend",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "karafarin12800-del/Persian",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "inlinrhq/inlinr",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "adeqwatt/kaspi-prices",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "LFCTO/Dashbord",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JayanAXHF/JayanAXHF",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "abseil/abseil-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sogou/workflow",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ChunelFeng/CGraph",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sumeetchhetri/ffead-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Dobiasd/FunctionalPlus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebook/libphenom",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sourcey/libsourcey",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kala13x/libxutils",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "alibaba/PhotonLibOS",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scylladb/seastar",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Siv3D/OpenSiv3D",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jll63/yomm11",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ANNetGPGPU/ANNetGPGPU",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "0xeb/fastmcpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "codeplea/genann",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "apache/incubator-mxnet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pytorch/pytorch",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "recastnavigation/recastnavigation",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tiny-dnn/tiny-dnn",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "xhawk18/promise-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "wlgq2/uv-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mackron/dr_libs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "erikd/libsndfile",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "andrewrk/libsoundio",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "micknoise/Maximilian",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mackron/miniaudio",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NativeInstruments/ni-media",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "xiph/rnnoise",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jarikomppa/soloud",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lieff/minimp3",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rism-ch/verovio",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookresearch/wav2letter",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cmusphinx/pocketsphinx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "samtools/htslib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "arvidn/libtorrent",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rakshasa/libtorrent",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bittorrent/libutp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "d-SEAMS/seams-core",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gromacs/gromacs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "reaktoro/reaktoro",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lammps/lammps",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "m-a-d-n-e-s-s/madness",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "oir/barkeep",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "boostorg/program_options",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "evgenykislov/ctrl-c",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jarro2783/cxxopts",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "docopt/docopt.cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gansm/finalcut",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "p-ranav/indicators",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "antirez/linenoise",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "arangodb/linenoise-ng",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "wmcbrine/PDCurses",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AmokHuginnsson/replxx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "p-ranav/tabulate",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nsf/termbox",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "a-n-t-h-o-n-y/TermOx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Cubified/tuibox",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chewax/Ginseng",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/brotli",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ariya/FastLZ",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "atomicobject/heatshrink",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "flanglet/kanzi-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "libarchive/libarchive",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nmoinvaz/minizip",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zlib-ng/minizip-ng",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "welcome-to-the-sunny-side/misa77",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebook/openzl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mxmlnkn/rapidgzip",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zlib-ng/zlib-ng",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nemequ/LZSSE-SIMDe",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/zopfli",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ComputationalRadiationPhysics/alpaka",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "arrayfire/arrayfire",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Amanieu/asyncplusplus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "max0x7ba/atomic_queue",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "boostorg/compute",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bshoshany/thread-pool",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "andreiavrammsd/cpp-channel",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cameron314/concurrentqueue",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "eyalroz/cuda-api-wrappers",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "schlangster/cpp.react",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookincubator/dispenso",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "RichieSams/FiberTaskingLib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "GameTechDev/GTS-GamesTaskScheduler",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "intel/parallelstl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "preshing/junction",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vincent212/kaspar-hft",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kokkos/kokkos",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "khizmax/libcds",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "libclsph/libclsph",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sustrik/libdill",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "apple/swift-corelibs-libdispatch",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ConorWilliams/libfork",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sustrik/libmill",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "moderngpu/moderngpu",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "basiliscos/cpp-rotor",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Stiffstream/sobjectizer",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bloomberg/quantum",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cameron314/readerwriterqueue",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "stotko/stdgpu",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "taskflow/taskflow",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "progschj/ThreadPool",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tzcnt/TooManyCooks",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bloomen/transwarp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "David-Haim/concurrencpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NVIDIA/libcudacxx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "HewlettPackard/nvthreads",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Rookfighter/inifile-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SSARCandy/ini-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ndevilla/iniparser",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hyperrealm/libconfig",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "martinh/libconfuse",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "brofield/simpleini",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "marzer/tomlplusplus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ToruNiina/toml11",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "RoaringBitmap/CRoaring",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pinam45/dynamic_bitset",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "teslamotors/fixed-containers",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "skarupke/flat_hash_map",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "serge-sans-paille/frozen",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "goossaert/hashmap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Tessil/hat-trie",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Tessil/hopscotch-map",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "RSIA-LIESMARS-WHU/LSHBOX",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "s-yata/marisa-trie",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "greg7mdp/parallel-hashmap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gvinciguerra/PGM-index",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mattreecebentley/plf_colony",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mattreecebentley/plf_stack",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "martinmoene/ring-span-lite",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "martinus/robin-hood-hashing",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Tessil/robin-map",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "greg7mdp/sparsepp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bw-hro/sqlitemap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "erikerlandson/st_tree",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "martinus/svector",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kpeeters/tree.hh",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "martinus/unordered_dense",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nlohmann/fifo_map",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Tessil/ordered-map",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "weidai11/cryptopp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kerukuro/digestpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jedisct1/libsodium",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jedisct1/libhydrogen",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "libtom/libtomcrypt",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ARMmbed/mbedtls",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MaciejCzyzewski/retter",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cr-marcstevens/sha1collisiondetection",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mariusbancila/stduuid",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kokke/tiny-AES-c",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kokke/tiny-ECDH-c",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "QuasarApp/Qt-Secret",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kmackay/micro-ecc",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jedisct1/aes-stream",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "furfurylic/commata",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ashaduri/csv-parser",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ben-strasser/fast-cpp-csv-parser",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ashtum/lazycsv",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "d99kris/rapidcsv",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vincentlaucsb/csv-parser",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ClickHouse/clickhouse-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "crossdb-org/crossdb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dolthub/doltlite",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "paulftw/hiberlite",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "redis/hiredis",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "infiniflow/infinity",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "apache/incubator-kvrocks",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "LadybugDB/ladybug",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pganalyze/libpg_query",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jtv/libpqxx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bendiken/lmdbxx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "memgraph/mgclient",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mongodb/mongo-c-driver",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mongodb/mongo-cxx-driver",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mongodb/libbson",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nanodbc/nanodbc",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "luca3m/redis3m",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Restream/reindexer",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebook/rocksdb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SouravRoy-ETL/slothdb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "speedb-io/speedb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "getml/sqlgen",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SRombauts/SQLiteCpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SqliteModernCpp/sqlite_modern_cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fnc12/sqlite_orm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rbock/sqlpp11",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rbock/sqlpp23",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tidesdb/tidesdb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TileDB-Inc/TileDB",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "silverqx/TinyORM",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "symisc/unqlite",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kassane/tigerbeetle-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "trilogy-libraries/trilogy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "unum-cloud/ustore",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mkitzan/constexpr-sql",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ziotom78/gplotpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "alandefreitas/matplotplusplus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sebsjames/mathplot",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jimmyorourke/plotlypp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lava/matplotlib-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bombela/backward-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/benchmark",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "catchorg/Catch2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "DigitalInBlue/Celero",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "philip82148/cpp-dump",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chronoxor/CppBenchmark",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jeremy-rifkin/cpptrace",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "keithpotz/CrashCatch",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sharkdp/dbg-macro",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CobaltFusion/DebugViewPP",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "eranpeer/FakeIt",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dascandy/hippomocks",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "renatoGarcia/icecream-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "deplinenoise/ig-debugheap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jeremy-rifkin/libassert",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zorgnax/libtap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jonasmr/microprofile",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "siu/minunit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "martinus/nanobench",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mattreecebentley/plf_nanotimer",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "libnonius/nonius",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Celtoys/Remotery",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cschreib/snitch",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "trytouca/trytouca",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "KDE/heaptrack",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lawmurray/doxide",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "doxygen/doxygen",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vovkos/doxyrest",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NaturalDocs/NaturalDocs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sourcey/sourcey",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sphinx-doc/sphinx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vinniefalco/DSPFilters",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mborgerding/kissfft",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mreineck/pocketfft",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rafat/wavelib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "harfbuzz/harfbuzz",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tomolt/libschrift",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Tehreer/SheenBidi",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "orangeduck/Corange",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gameplay3d/GamePlay",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "amzeratul/halley",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ixray-team/ixray-1.6-stcop",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gongminmin/KlayGE",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "OpenXRay/xray-16",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "panda3d/panda3d",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ivansafrin/Polycode",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "quakeforge/quakeforge",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "raysan5/raylib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "spring/spring",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TorqueGameEngines/Torque2D",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TorqueGameEngines/Torque3D",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ZigRazor/CXXGraph",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cycfi/elements",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "epezent/implot",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mitsuba-renderer/nanogui",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "frang75/nappgui_src",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Immediate-Mode-UI/Nuklear",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "saucer/saucer",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "wxIshiko/wxCharts",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "idea4good/GuiLite",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "assimp/assimp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "blend2d/blend2d",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "walkerje/C-Turtle",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Microsoft/DirectXTK",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "janekb04/glfwpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "harfang3d/harfang3d",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kosua20/herebedragons",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "horde3d/Horde3D",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "libigl/libigl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sammycage/lunasvg",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mosra/magnum",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "meshinspector/meshlib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "micro-gl/micro-gl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "memononen/nanovg",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "PixarAnimationStudios/OpenSubdiv",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "wdas/partio",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "thorvg/thorvg",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "msteinbeck/tinyspline",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "urho3d/Urho3D",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "xelatihy/yocto-gl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tsoding/olive.c",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "baderouaich/BitmapPlusPlus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "agruzdev/FreeImageRe",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/jpegli",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "DanBloomberg/leptonica",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AOMediaCodec/libavif",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ShiqiYu/libfacedetection",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "libjpeg-turbo/libjpeg-turbo",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "libjxl/libjxl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pnggroup/libpng",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "randy408/libspng",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jcupitt/libvips",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lvandeve/lodepng",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mozilla/mozjpeg",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "uclouvain/openjpeg",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sammycage/plutofilter",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "syoyo/tinydng",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cdcseacave/TinyEXIF",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jkriege2/TinyTIFF",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ArashPartow/bitmap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "simdutf/simdutf",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "uni-algo/uni-algo",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sheredom/utf8.h",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JuliaStrings/utf8proc",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "boostorg/interprocess",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "capnproto/capnproto",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "eclipse-iceoryx/iceoryx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cinemast/libjson-rpc-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nanomsg/nanomsg",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rpclib/rpclib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pearu/simple-rpc-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "boostorg/property_tree",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "beached/daw_json_link",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cesanta/frozen",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "akheron/jansson",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jeaye/jeayeson",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jart/json.cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sheredom/json.h",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lcsmuller/json-build",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "json-c/json-c",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cSploit/android",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bad-antics/nullkia",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "skizap/dos-over-tor",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "brainfuckSec/kalitorify",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "paranoidninja/CarbonCopy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Mr-Un1k0d3r/UniByAv",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "v-p-b/peCloakCapstone",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ciphey/ciphey",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Ganapati/RsaCtfTool",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "0x00-0x00/shellpop",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "belane/CloudHunter",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "RhinoSecurityLabs/GCPBucketBrute",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "outflanknl/RedELK",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "trustedsec/trevorc2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "iagox86/dnscat2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ariary/QueenSono",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "h26forge/h26forge",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "trustedsec/unicorn",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "n00py/Hwacha",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "PenturaLabs/Linux_Exploit_Suggester",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "glv2/bruteforce-wallet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nil0x42/duplicut",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fireeye/gocrack",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "trustedsec/hate_crack",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lmammino/jwt-cracker",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pixel/hexedit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "klsecservices/s7scan",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kOaDT/oss-oopssec-store",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bkimminich/juice-shop",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "owasp/nodegoat",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Marten4n6/EvilOSX",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NullArray/AutoSploit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "stevenaldinger/decker",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "infobyte/faraday",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "byt3bl33d3r/CrackMapExec",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SpiderLabs/ikeforce",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "GoVanguard/legion",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SigPloiter/SigPloit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vanhauser-thc/thc-hydra",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/tsunami-security-scanner",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "elceef/dnstwist",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CoreSecurity/impacket",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "RedTeamOperations/PivotSuite",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "reverse-shell/routersploit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kpcyrd/rshijack",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rozgo/anevicon",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Balasys/dheater",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "649/Memcrashed-DDoS-Exploit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gkbrk/slowloris",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "epsylon/ufonet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cyberark/ACLight",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "michenriksen/aquatone",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "m0rtem/CloudFail",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "robertdavidgraham/masscan",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "johnnyxmas/ScanCannon",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fwaeytens/dnsenum",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "makefu/dnsmap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "darkoperator/dnsrecon",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mschwager/fierce",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "netdiscover-scanner/netdiscover",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chrislee35/passivedns-client",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gamelinux/passivedns",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rustscan/rustscan",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vesche/scanless",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ShawnDEvans/smbmap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TheRook/subbrute",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "projectdiscovery/subfinder",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "projectdiscovery/katana",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "USArmyResearchLab/Dshell",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "netzob/netzob",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "netsniff-ng/netsniff-ng",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kpcyrd/sniffglue",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "GyulyVGC/sniffnet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "snort3/snort3",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "puresec/lambda-proxy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "r00t-3xp10it/morpheus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jtesta/ssh-mitm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "iphelix/dnschef",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "infobyte/evilgrade",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "justmao945/mallory",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nametoolong/oregano",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fkie-cad/friTap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nabla-c0d3/sslyze",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "crackpkcs12/crackpkcs12",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "WestpointLtd/tls_prober",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jtesta/ssh-audit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "v1s1t0r1sh3r3/airgeddon",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MisterBianco/BoopSuite",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "joswr1ght/cowpatty",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "FluxionNetwork/fluxion",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "securingsam/krackdetector",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "soxrok2212/PSKracker",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "P0cL4bs/wifipumpkin3",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "derv82/wifite",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "entropy1337/infernal-twin",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vanhoefm/krackattacks-scripts",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "evilsocket/pwnagotchi",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "0x90/wifi-arsenal",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sethsec/celerystalk",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tijme/angularjs-csti-scanner",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "UltimateHackers/sqlmate",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "projectdiscovery/nuclei",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bountyyfi/lonkero",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "0x48piraj/jiraffe",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hahwul/dalfox",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "r0oth3x49/ghauri",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sundaysec/Android-Exploits",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "svaksha/pythonidae",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dreikanter/ruby-bookmarks",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "upgoingstar/datasploit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gyoisamurai/GyoiThon",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "xillwillx/skiptracer",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "1N3/Sn1per",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ilektrojohn/creepy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Nhoya/gOSINT",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ascribe/image-match",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lanmaster53/recon-ng",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kpcyrd/sn0int",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SpectralOps/keyscope",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aleff-github/wayparam",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vflame6/leaker",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kisom/surfraw",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Hood3dRob1n/BinGoo",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "utiso/dorkbot",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "techgaun/github-dorks",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "k3170makan/GooDork",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jgor/dork-cli",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "DanMcInerney/fast-recon",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "opsdisk/pagodo",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Smaash/snitch",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SimplySecurity/SimplyEmail",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Ekultek/WhatBreach",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "laramies/metagoofil",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "laramies/theHarvester",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lanrat/certgraph",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "melvinsh/vcsmap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ChrisTruncer/EyeWitness",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "codingo/VHostScan",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Ekultek/WhatWaf",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "urbanadventurer/WhatWeb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "EnableSecurity/wafw00f",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "maaaaz/webscreenshot",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "adi0x90/attifyos",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bad-antics/nullsec-linux",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ufrisk/pcileech",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hausec/ADAPE-Script",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rebootuser/LinEnum",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mbahadou/postenum",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pentestmonkey/unix-privesc-check",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SujalMeghwal/mcafee-xpass",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dafthack/DomainPasswordSpray",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "horsicq/Detect-It-Easy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NorthwaveNL/fridax",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "wisk/medusa",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Cisco-Talos/pyrebox",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "LongSoft/UEFITool",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "snare/voltron",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "devttys0/binwalk",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kpcyrd/boxxy-rs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "joelpx/plasma",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pwndbg/pwndbg",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jovanbulck/sgx-step",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vusec/trrespass",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ring0lab/catphish",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kgretzky/evilginx2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Raikia/FiercePhish",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "praetorian-inc/GitPhish",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "securestate/king-phisher",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "drk1wi/Modlishka",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fireeye/ReelPhish",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "UndeadSec/SocialFish",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ryhanson/phishery",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sophron/wifiphisher",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "presidentbeef/brakeman",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "designsecurity/progpilot",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jagracey/RegEx-DoS",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nccgroup/sobelow",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fkie-cad/cwe_checker",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "splx-ai/agentic-radar",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TryCatchHCF/Cloakify",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Paradoxis/StegCracker",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fuzzdb-project/fuzzdb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "evyatarmeged/Raccoon",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "espreto/wpsploit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kpcyrd/authoscope",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "OJ/gobuster",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "LeonardoNve/sslstrip2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "P0cL4bs/Kadimus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "D35m0nd142/LFISuite",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "commixproject/commix",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "codingo/NoSQLMap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "epinna/tplmap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "maurosoria/dirsearch",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "c-sto/recursebuster",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Ne0nd0g/merlin",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nil0x42/phpsploit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lukechilds/reverse-shell",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "antonioCoco/SharPyShell",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "epinna/weevely3",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kost/dvcs-ripper",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "arthaud/git-dumper",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "HightechSec/git-scanner",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fireeye/commando-vm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cobbr/Covenant",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "taviso/ctftool",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "byt3bl33d3r/DeathStar",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "BC-SECURITY/Empire",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rabbitstack/fibratus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Kevin-Robertson/Inveigh",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AlessandroZ/LaZagne",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dafthack/MailSniper",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "PowerShellMafia/PowerSploit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "trustedsec/ridenum",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SpiderLabs/Responder",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "GhostPack/Rubeus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nccgroup/SCOMDecrypt",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "GDSSecurity/Windows-Exploit-Suggester",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nccgroup/redsnarf",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SecureThisShit/WinPwn",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TheHiddenPandaDev/catastro_gps_mcp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lachy3433/contextfetch-mcp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "crawlbrulee/crawlbrulee-mcp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "EdgePlat/edgepedia-mcp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "github/github-mcp-server",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "monocrawl/monocrawl-mcp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scalekit-inc/scalekit-mcp-server",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sky-access/skyaccess-mcp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Vertisky/toolalize-mcp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "RAAAAAGEEEEE/vuntum-mcp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "davemachado/public-api",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "wh-iterabb-it/meowfacts",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "movebank/movebank-api-doc",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AniList/ApiV2-GraphQL-Docs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "RocktimSaikia/anime-chan",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cheatsnake/emojihub",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "harvardartmuseums/api-docs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Smithsonian/smithsonian-openaccess",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CrossRef/rest-api-doc",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "thundercomb/poetrydb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fawazahmed0/quran-api",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "egno/work-calendar",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "RealSinaSnp/FileUp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "binance/binance-spot-api-docs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "btcid/indodax-official-api-docs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fawazahmed0/currency-api",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "polarspetroll/ciprand",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fawazahmed0/cloudflare-trace-api",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "burhanuday/cors-proxy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hexpm/specifications",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jsdelivr/data.jsdelivr.com",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lukePeavey/quotable",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Cgboal/SonarSearch",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sameerkumar18/corporate-bs-generator-api",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "theIYD/NaMoMemes",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "beanboi7/yomomma-apiv2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "peppythegod/ToontownOnline",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vegastrike/Assets-Production",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "darthjee/pidgey",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ibepary-hub/-Vetro-posteriore-iPhon",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "robb1302/kickbase-ai",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "michael-yrao/progressive-overflow-content",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aykinooo/aykino_blog",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sycu8/pregnancy-meal-plan",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "digitalhauss/Web-Builder",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "DS-ann/D.S-Music2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aaryan359/tenantpulse",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bmd03024-code/BS-E-LEARNING-IT-ZONE",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "emiliaanna01/my-first",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "conda-forge/feedstock-outputs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "azizazizmantap07-dot/Sing-box",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fastpageson-cmyk/e_marketing",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vastcoral237329/how-to-launch-web3-arbitrage-bot-offchain-components",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "servicepos/api-docs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "anandkaranubc/gitgoblin",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zjq5p9sg6f-a11y/vitalkultur-site",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "eldrinDev23/hash_table",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hyeongseosss/MARKET_RADAR",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "1286451057-ux/red-pen-vocab",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SSUMC-11th-organization/PE_Web_B_FE",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Salvo1984/pl-radar",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "HairColonelTitle/pxlcvxns",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "yyy943761/img-bed",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Loadout-gg/backbeat-app",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vcntayala06/last-one-standing-west-coast",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "i9experts/noor-circles-backend",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "isakcmz/AI-Blog-Website",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JHoward02/archiv-app",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kudsoleze7544/how-to-configure-web3-arbitrage-bot-offchain-components",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AdrienChampion/cvc.lean",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rajabzadehalidip/iran-news",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kazuki0806/kpi-dashboard",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "LindaZollitsch/Licence",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "leenisha20/cordic-verilog",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MoneyInsight/blogger-auto",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MohammadFaizAlam/mdfaiz-portfolio",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gabrielaoliveranz/gabrielaoliveranz.github.io",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "krystianmd/rig-handover-s01e04",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Agostino1999/agostino-news-feed",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cloud-native-aixmarseille/meetup-event-automation",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kursattopall/paraOduluMiktari",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "devpoole2907/helldivers-api-cache",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "algorithmicsuperintelligence/prompt-optimizer",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "unsloth/Qwen-AgentWorld-35B-A3B-GGUF",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "InternScience/Agents-A1-4B-Q8_0-GGUF",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "agentionai/Qwen3.8-Flash-Next-AP-GGUF",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "huihui-ai/Huihui-Agents-A1-abliterated-GGUF",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "InternScience/Agents-A1-4B",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "karpathy/neuraltalk",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "josephmisiti/machine-learning-module",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Vict0rSch/deep_learning",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "guillaume-chevalier/LSTM-Human-Activity-Recognition",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "astorfi/TensorFlow-World",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MelAbgrall/HardwareforAI",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SauravMaheshkar/Fake-News-Classification",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SauravMaheshkar/CoxPH-Model-for-Primary-Biliary-Cirrhosis",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SauravMaheshkar/Cross-Matching-Methods-for-Astronomical-Catalogs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SauravMaheshkar/Named-Entity-Recognition-",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SauravMaheshkar/Flutter_Image-Recognition",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "deepmind/rc-data",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "openimages/dataset",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zalandoresearch/fashion-mnist",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "several27/FakeNewsCorpus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bupt-ai-cz/Meta-SelfLearning",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "annnyway/QA-for-Russian",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "karpathy/convnetjs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rasmusbergpalm/DeepLearnToolbox",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nitishsrivastava/deepnet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "andersbll/deeppy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ivan-vasilev/neuralnetworks",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pluskid/Mocha.jl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "guoding83128/OpenDL",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "denizyuret/Knet.jl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NVIDIA/DIGITS",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "karpathy/char-rnn",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vlfeat/matconvnet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dmlc/minerva",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "IDSIA/brainstorm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/skflow",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "PrincetonVision/marvin",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "amznlabs/amazon-dsstne",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "torchnet/torchnet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "baidu/paddle",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Lasagne/Lasagne",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dnouri/nolearn",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "deepmind/sonnet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SerpentAI/SerpentAI",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "caffe2/caffe2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "PAIR-code/deeplearnjs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "albu/albumentations",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Neuraxio/Neuraxle",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "catalyst-team/catalyst",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rlworkgroup/garage",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "alankbi/detecto",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "benedekrozemberczki/karateclub",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mrdimosthenis/Synapses",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "reinforceio/tensorforce",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "logicalclocks/hopsworks",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lightly-ai/lightly",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Quick-AI/quickvision",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chncwang/InsNet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nebuly-ai/nebullvm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tensorflow/tensorboard",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "microsoft/tensorwatch",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ml-tooling/ml-workspace",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "determined-ai/determined",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TorontoDeepLearning/convnet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "clementfarabet/gfx.js",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "erikbern/deep-pink",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kristjankorjus/Replicating-DeepMind",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "idio/wiki2vec",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kuz/DeepMind-Atari-Deep-Q-Learner",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/deepdream",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hexahedria/biaxial-rnn-music-composition",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cmusatyalab/openface",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "joeledenberg/DigitRecognition",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ethereon/caffe-tensorflow",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Rochester-NRT/AlphaGo",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "natanielruiz/dockerface",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Microsoft/Recommenders",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "divamgupta/ladder_network_keras",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "amitness/toolbox",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AMAI-GmbH/AI-Expert-Roadmap",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "oxford-cs-deepnlp-2017/lectures",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aws-samples/aws-machine-learning-university-accelerated-nlp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jacobeisenstein/gt-nlp-class",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "joosthub/PyTorchNLPBook",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "twitter/twitter-text",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "benhmoore/Knwl.js",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "spencermountain/compromise",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "synyi/poplar",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "huggingface/node-question-answering",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sloev/sentimental-onix",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "QData/TextAttack",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "clips/pattern",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chartbeat-labs/textacy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JasonKessler/scattertext",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dmlc/gluon-nlp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "allenai/allennlp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "PetrochukM/PyTorch-NLP",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "columbia-applied-data-science/rosetta",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "proycon/pynlpl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "proycon/foliapy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bigartm/bigartm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "snipsco/snips-nlu",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chakki-works/chazutsu",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gutfeeling/word_forms",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ArtificiAI/Multilingual-Latent-Dirichlet-Allocation-LDA",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NervanaSystems/nlp-architect",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "BrikerMan/Kashgari",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zaibacu/rita-dsl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "huggingface/tokenizers",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pytorch/fairseq",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gregversteeg/corex_topic",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "awslabs/sockeye",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "xhlulu/dl-translate",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "proycon/python-ucto",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zouharvi/pearmut",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "stanfordnlp/stanza",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "UKPLab/sentence-transformers",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "argilla-io/argilla",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "huggingface/datasets",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "huggingface/evaluate",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mjpost/sacrebleu",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "speedyk-005/yasbd-lib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "BLLIP/bllip-parser",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "proycon/colibri-core",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "LanguageMachines/libfolia",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookresearch/StarSpace",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "knowitall/reverb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "knowitall/openregex",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CogComp/cogcomp-nlp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "datquocnguyen/RDRPOSTagger",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pemistahl/lingua",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "meiblorn/kotidgy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Refefer/word2vec-scala",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JohnSnowLabs/spark-nlp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dselivanov/text2vec",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bmschmidt/wordVectors",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mimno/RMallet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "agoldst/dfr-browser",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "agoldst/dfrtopics",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kevincobain2000/sentiment_classifier",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kevincobain2000/jProcessing",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "juliasilge/tidytext",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "quanteda/spacyr",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cran-task-views/NaturalLanguageProcessing",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dakrone/clojure-opennlp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "r0man/inflections-clj",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fekr/postagga",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "yanyiwu/gojieba",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ikawaha/kagome",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rekurt/go-propisyu",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "diasks2/ruby-nlp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "arbox/nlp-with-ruby",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "greyblake/whatlang-rs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "guillaume-be/rust-bert",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "snipsco/snips-nlu-rs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JuliaText/CorpusLoaders.jl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JuliaText/Languages.jl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JuliaText/TextAnalysis.jl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JuliaText/TextModels.jl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JuliaText/WordTokenizers.jl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JuliaText/Word2Vec.jl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "watson-developer-cloud/natural-language-understanding-nodejs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "weitechen/anafora",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chakki-works/doccano",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AI4Bharat/Shoonya-Backend",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "HumanSignal/label-studio",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "davidjurgens/potato",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookresearch/fastText",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/sentencepiece",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ufal/udpipe",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aalto-speech/morfessor",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nlp-uoregon/trankit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lxucs/coref-hoi",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SapienzaNLP/maverick-coref",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "huggingface/setfit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "IBM/fastfit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MaartenGr/BERTopic",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ddangelov/Top2Vec",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "marian-nmt/marian",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookresearch/fairseq",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Tiiiger/bert_score",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "allenai/document-qa",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AkariAsai/OpenScholar",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dair-iitd/openie6",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "thunlp/DocRED",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fastino-ai/GLiNER2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "FlagOpen/FlagEmbedding",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookresearch/seamless_communication",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pnnbao97/VieNeu-TTS",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "niderhoff/nlp-datasets",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "RaRe-Technologies/gensim-data",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "huggingface/fineweb-2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vincentkoc/tiny_qa_benchmark_pp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "adobe/NLP-Cube",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mikahama/uralicNLP",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jhu-clsp/mmBERT",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookresearch/flores",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/BIG-bench",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "EleutherAI/lm-evaluation-harness",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "THUDM/LongBench",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sylinrl/TruthfulQA",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "shmsw25/FActScore",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "potsawee/selfcheckgpt",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "huggingface/text-generation-inference",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "yizhongw/self-instruct",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "allenai/natural-instructions",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "moinnadeem/StereoSet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nyu-mll/crows-pairs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "uclanlp/corefBias",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookresearch/ResponsibleNLP",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "allenai/real-toxicity-prompts",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "01walid/goarabic",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ejtaal/jsastem",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "amir-zeldes/RFTokenizer",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aub-mind/arabert",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CAMeL-Lab/CAMeLBERT",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hadyelsahar/large-arabic-sentiment-analysis-resouces",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mohataher/arabic-stop-words",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "isnowfy/snownlp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ymcui/Chinese-BERT-wwm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ymcui/MacBERT",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "THUDM/ChatGLM3",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "baichuan-inc/Baichuan2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "deepseek-ai/DeepSeek-V3",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fighting41love/funNLP",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "proycon/python-frog",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rfdj/SimpleNLG-NL",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rug-compling/alpino",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "opensource-spraakherkenning-nl/Kaldi_NL",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "adbar/German-NLP",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "goru001/nlp-for-hindi",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AtikRahman/Bangla_Datasets_ABSA",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Kyubyong/wordvectors",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "HIT-SCIR/ELMoForManyLangs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Saurav0074/mt-dma",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CalmDownKarm/sivareddydependencyparser",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AI4Bharat/IndicBERT",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AI4Bharat/IndicTrans2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kangfend/bahasa",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "galuhsahid/indonesian-word-embedding",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "har07/PySastrawi",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "indobenchmark/indonlu",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "indolem/indolem",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "IndoNLP/nusa-crowd",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sail-sg/sailor-llm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aisingapore/sealion",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "famrashel/idn-tagged-corpus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "famrashel/idn-treebank",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "UniversalDependencies/UD_Indonesian-GSD",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kata-ai/indosum",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SEACrowd/seacrowd-datahub",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SKTBrain/KoBERT",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "EleutherAI/polyglot",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "songys/Chatbot_data",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "akngs/petitions",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "j-min/korean-parallel-corpora",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ICTRC/Parsivar",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jonsafari/perstem",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NarimanN2/ParsiAnalyzer",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aziz/virastar",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hooshvare/parsbert",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "HaniehP/PersianNER",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Text-Mining/Persian-NER",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Text-Mining/Persian-Wikipedia-Corpus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ajdavidl/Portuguese-NLP",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "neuralmind-ai/portuguese-bert",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jfreddypuentes/spanlp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dav009/LatinamericanTextResources",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "josecannete/spanish-unannotated-corpora",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dccuchile/spanish-word-embeddings",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "BotCenter/spanishWordEmbeddings",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "BotCenter/spanishSent2Vec",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "PyThaiNLP/pythainlp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pucktada/cutkum",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "KenjiroAI/SynThai",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vistec-AI/thai2transformers",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Helsinki-NLP/UkrainianLT",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "urduhack/urduhack",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rajantripathi/soas-rag-evaluation",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "undertheseanlp/underthesea",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "phuonglh/vn.vitk",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vncorenlp/VnCoreNLP",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "VinAIResearch/PhoBERT",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "VinAIResearch/BARTpho",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "VinAIResearch/PhoGPT",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "UniversalDependencies/UD_Vietnamese-VTB",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "VinAIResearch/ViText2SQL",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "qhungngo/EVBCorpus",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kmike/pymorphy2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NLPH/NLPH_Resources",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ocampotiziano0-lang/Quizdefutbol",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "leondeutsch0034/german-learning",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "autonomous-ai/openharness",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MSKazemi/yazses",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "namolem-png/Training-Tracker",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "omnimux-ai/omnimux-ai",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vatsastitva/tds_week4",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "squwillsmith-ship-it/Hollowmere-0.2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hhhhhaaa-hash/FoundPhone-Studio",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "supersorteo/MetroFrontApp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "andrelair-platform/minicloud-gitops",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "glpi-network/.github",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CodeHub-Clients/CodeHub_Licenses",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hibi89/REA_Web",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Zaeem-Hassan/laravel_demo",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AlesiaSherstneva/event-driven-microservices-app",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "carlosgon-dev/projeto_angular",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bybarn/jellyfin-get-tvguide",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Timdebruijn/fanous",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "BINZEO369/JABIYEN-WEBSITE",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Winoren/AiNativeCRM",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sojw/icn-dashboard",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "raghavc/vision-bench",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "duelist-18/Photo-Stamp-Remover-Full-Version",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kich555/cask-festival",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MaxHalford/bike-sharing-history",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MOSA-github/power_outage_monitoring_system",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "milosgnjidicenquiries/cacilend-skupstina-fps",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vencent10004-droid/stock_price_prediction",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "a2f9f4b4-bd11-4d15-b922-8b260990d71f/quan-ly-sieu-thi",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kamihi-org/kamihi",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "oleenwang/scope-recall-hermes",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "transkatgirl/transkatgirl.github.io",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bluom7/post-app-frontend",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Naksh7Gupta/ThinkNet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cliwireee/tradelab-results",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "julianavillela/coleta-bike-rio",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Arkael-Dev/Spoofing-Game",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CelestialJudge/repo-l5eujrl8",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "s4nch1tt/CNCVerse-Bridge",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "singzhou/vllm-ascend",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "timwittke-jpg/wellenbrock-website",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "haotemans/CLIProxyAPI",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tagalogclark123-cmyk/SONARA-GITHUB",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "haoz19/world-tracing",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aalimas/MEMPTV1",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tzsailotrading04/ipscan",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "raihannurhidayat/delysa-project",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "geekysong/codex-model-at-capacity",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tyler-rich/shell-mcp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "worklinke73-cyber/azure-terraform-network-lab",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "igor-makarov/beetle-in-the-anthill",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "0MrCrazy0/pocketpal",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CelestialJudge/repo-zfon",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "joystudying/TanXinXiaoFu",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "faustoho/soull-studio",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fyuchafc/reep-player-database",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "longdat444/hotdeal-naxuatdu",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "WangWilly/OctopusBeak",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Takuetsu/codex-dd-astra",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "supremecoresnap/jzujnjyz",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ncraparo/andromeda-mirror",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "p27dff96428v8m9-pixel/auto-kabu-screener",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Alix1211/Wellness-RPG",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Sunrise150/Personal-website",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "oroszkristof/EYZWG9-SZAKDOLGOZATI-SZEMINARIUM-I",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "colhop93-dotcom/rain-board",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mayankaddte-sys/dtedataconnet-hostinger",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pitchafwa/delegation-hub",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "latentsig/Aramya_Fashion",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pasha2do-cyber/crypto-news",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JAEWOOKLEE1/smc-tally",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "metel-lang/metel-docs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kiarahanari/Focusnest",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ali-pervanoglu/cng-fuar-takip",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "IXD-System-Development/ixd-insights",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "souliliki-bot/razlomy-izmereniy2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rpauts2/phantom-proxy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "izgorodinnikolay/profdigital",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "maybery/matcha_mainland",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "brook-focus930321/how-to-configure-arbitrage-bot-deployment-steps",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Atomawayg/sian-reversi-ios-",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "DWR-debug/trading-agent-public",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookresearch/simmc2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AppImageCommunity/AppImageUpdate",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "switch87/snakebyte-overlay",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "storytold/photocraft",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "storytold/vectorcraft",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "storytold/filmcraft",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "storytold/lightcraft",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "storytold/pdfcraft",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "storytold/effectcraft",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "storytold/designcraft",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "storytold/wordcraft",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "patched-codes/patchwork",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "xjdr-alt/entropix",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "globaleaks/globaleaks-whistleblowing-software",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "binwiederhier/ntfy-android",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "onetimesecret/onetimesecret",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SAMA-Communications/sama-client",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "screego/server",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SpectrumIM/spectrum2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "element-hq/synapse",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Tiledesk/tiledesk",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "docker-mailserver/docker-mailserver",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "iredmail/iRedMail",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mail-in-a-box/mailinabox",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mailcow/mailcow-dockerized",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "modoboa/modoboa",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "postalserver/postal",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "stalwartlabs/stalwart",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zone-eu/wildduck",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cyrusimap/cyrus-imapd",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mguessan/davmail",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "OpenSMTPD/OpenSMTPD",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mautic/mautic",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "roundcube/roundcubemail",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "the-djmaze/snappymail",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "glowing-bear/glowing-bear",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "inspircd/inspircd",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kiwiirc/kiwiirc",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ngircd/ngircd",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "quassel/quassel",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "robustirc/robustirc",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "thelounge/thelounge",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "unrealircd/unrealircd",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "weechat/weechat",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "asterisk/asterisk",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "BelledonneCommunications/flexisip",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "signalwire/freeswitch",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fusionpbx/fusionpbx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kamailio/kamailio",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "OpenSIPS/opensips",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "apache/answer",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ArtalkJS/Artalk",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "buddypress/BuddyPress",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "diaspora/diaspora",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NuSkooler/enigma-bbs",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "friendica/friendica",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "carlnewton/habitat",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "humhub/humhub",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "loomio/loomio",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mastodon/mastodon",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rafalp/Misago",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "misskey-dev/misskey",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "opensource-socialnetwork/opensource-socialnetwork",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pixelfed/pixelfed",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "codidact/qpixel",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "redlib-org/redlib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "umputun/remark42",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Erudika/scoold",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jaywink/socialhome",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "debiki/talkyard",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bigbluebutton/bigbluebutton",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jech/galene",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "meetecho/janus-gateway",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jitsi/jitsi-meet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jitsi/jitsi-videobridge",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "miroslavpejic85/mirotalkc2c",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "miroslavpejic85/mirotalk",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "miroslavpejic85/mirotalksfu",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mynaparrot/plugNmeet-server",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "esl/MongooseIM",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "igniterealtime/Openfire",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "snikket-im/snikket-server",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tigase/tigase-server",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "conversejs/converse.js",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "csa-admin-org/csa-admin",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "foodcoopshop/foodcoopshop",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "foodcoops/foodsoft",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "juntagrico/juntagrico",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "openfoodfoundation/openfoodnetwork",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "OpenOlitor/openolitor-server",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "teikei/teikei",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CatoTH/antragsgruen",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pretalx/pretalx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Alfresco/alfresco-community-repo",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "marcantondahmen/automad",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "backdrop/backdrop",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "concretecms/concretecms",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "contao/contao",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CouchCMS/CouchCMS",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "elabftw/elabftw",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "thomas4019/expressa",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "joomla/joomla-cms",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Lessify/localess",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "modxcms/revolution",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "payloadcms/payload",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pimcore/pimcore",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "publify/publify",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Squidex/squidex",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "superdesk/superdesk",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "textpattern/textpattern",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "umbraco/Umbraco-CMS",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "wagtail/wagtail",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "WonderCMS/wondercms",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "WordPress/WordPress",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cortezaproject/corteza",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "DjangoCRM/django-crm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "espocrm/espocrm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "relaticle/relaticle",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SuiteCRM/SuiteCRM",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "twentyhq/twenty",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vrana/adminer",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bytebase/bytebase",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chartbrew/chartbrew",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chartdb/chartdb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dbeaver/cloudbeaver",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "securitybunker/databunker",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "simonw/datasette",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "drawdb-io/drawdb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "libredb/libredb-studio",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "limbas/limbas",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "stackrender/stackrender",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AdguardTeam/AdGuardHome",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "0xERR0R/blocky",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tanrax/maza-ad-blocking",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pi-hole/pi-hole",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TechnitiumSoftware/DnsServer",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "alam00000/bentopdf",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gman-au/bottle-rocket-server",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "eikek/docspell",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "documenso/documenso",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "docusealco/docuseal",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jonashellmann/everydocs-core",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gotenberg/gotenberg",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mkucej/i-librarian-free",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "opensignlabs/opensign",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "paperless-ngx/paperless-ngx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "papermerge/papermerge-core",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "24eme/signaturepdf",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "simpledms/simpledms",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "snapotter-hq/SnapOtter",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Stirling-Tools/Stirling-PDF",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Atsumeru-xyz/Atsumeru",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jarynclouatre/bindery",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Mozzo1000/booklogr",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "crocodilestick/Calibre-Web-Automated",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "janeczku/calibre-web",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kovidgoyal/calibre",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "grimmory-tools/grimmory",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Casvt/Kapowarr",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Kareadita/Kavita",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "DSpace/DSpace",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "eprints/eprints3.4",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "binwiederhier/ntfy-ios",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sponsors/binwiederhier",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dexie/Dexie.js",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "emersion/go-smtp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mattn/go-sqlite3",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "firebase/firebase-admin-go",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "github/gemoji",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bryanwoods/autolink-js",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SherClockHolmes/webpush-go",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pedroslopez/whatsapp-web.js",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "WhiskeySockets/Baileys",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Tecnativa/docker-socket-proxy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "smallwat3r/secretapi",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "smallwat3r/shhh-cli",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sponsors/simplex-chat",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "simplex-chat/simplexmq",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tinode/tindroid",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "FasterXML/jackson",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TooTallNate/Java-WebSocket",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "webmproject/libvpx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hqwrong/minitox",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cpplint/cpplint",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TokTok/hs-tokstyle",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "features/actions",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fuhsnn/slimcc",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "anonaddy/browser-extension",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "anonaddy/addy-android",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "anonaddy/addy-ios",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "anonaddy/docker",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "niftylettuce/forward-email",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scikit-learn/scikit-learn",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scikit-learn-contrib/imbalanced-learn",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mozillazg/python-pinyin",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "madmaze/pytesseract",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "django/django",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bottlepy/bottle",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Pylons/pyramid",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tornadoweb/tornado",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "python-restx/flask-restx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "marshmallow-code/flask-smorest",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pgjones/hypercorn",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Pylons/waitress",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "python-websockets/websockets",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "django/channels",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "miguelgrinberg/Flask-SocketIO",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "evansd/whitenoise",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jschneier/django-storages",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "django-compressor/django-compressor",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "oauthlib/oauthlib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pennersr/django-allauth",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dfunckt/django-rules",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sehmaschine/django-grappelli",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "django-cms/django-cms",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "getpelican/pelican",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "getnikola/nikola",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aio-libs/aiohttp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scrapy/scrapy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "matthewwithanm/python-markdownify",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kurtmckee/feedparser",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cole/aiosmtplib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "anymail/django-anymail",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sqlalchemy/sqlalchemy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "coleifer/peewee",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pynamodb/PynamoDB",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mongodb/django-mongodb-backend",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "farcepest/MySQLdb1",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "psycopg/psycopg",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MagicStack/asyncpg",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mymarilyn/clickhouse-driver",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mkleehammer/pyodbc",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "apache/cassandra-python-driver",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "duckdb/duckdb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "msiemens/tinydb",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "grantjenks/python-diskcache",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sqlalchemy/dogpile.cache",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jazzband/django-redis",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Suor/django-cacheops",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "opensearch-project/opensearch-py",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "django-haystack/django-haystack",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "marshmallow-code/marshmallow",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ranaroussi/yfinance",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pydantic/pydantic",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "python-jsonschema/jsonschema",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fivetran/great_expectations",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "xflr6/graphviz",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jazzband/geojson",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "biopython/biopython",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "astropy/astropy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "networkx/networkx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "shapely/shapely",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "colour-science/colour",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "grantjenks/python-sortedcontainers",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ipython/ipython",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "prompt-toolkit/ptpython",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "seddonym/import-linter",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "prospector-dev/prospector",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pre-commit/pre-commit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pylint-dev/pylint",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "PyCQA/flake8",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "PyCQA/bandit",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "microsoft/pyright",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "meta/pyrefly",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "getsentry/responses",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "adamchainz/time-machine",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "FactoryBoy/factory_boy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "coveragepy/coveragepy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "django-commons/django-debug-toolbar",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pallets-eco/flask-debugtoolbar",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pyinvoke/invoke",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zensical/zensical",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aws/aws-cli",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "googleapis/google-cloud-python",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aws/chalice",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "giampaolo/psutil",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Supervisor/supervisor",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mher/flower",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "joblib/joblib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mpi4py/mpi4py",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "celery/celery",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "eclipse-paho/paho.mqtt.python",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "agronholm/apscheduler",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dbader/schedule",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dagster-io/dagster",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tartley/colorama",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "peterbrittain/asciimatics",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dbcli/litecli",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "GNOME/pygobject",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "wxWidgets/Phoenix",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tomschimansky/customtkinter",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pygments/pygments",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pyparsing/pyparsing",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "avian2/unidecode",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pallets/markupsafe",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jmcnamara/XlsxWriter",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scanny/python-pptx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pdfminer/pdfminer.six",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Kozea/WeasyPrint",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Python-Markdown/markdown",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gorakhargosh/watchdog",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lincolnloop/python-qrcode",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "WhyNotHugo/python-barcode",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scikit-image/scikit-image",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "libvips/pyvips",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bastibe/python-soundfile",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "quodlibet/mutagen",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pygame-community/pygame-ce",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pygame/pygame",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "python/cpython",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cython/cython",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jab/bidict",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pytoolz/cytoolz",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MagicStack/uvloop",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gevent/gevent",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "python-greenlet/greenlet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "twisted/twisted",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dateutil/dateutil",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scrapinghub/dateparser",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "python-pendulum/pendulum",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pypa/virtualenv",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "python-poetry/poetry-core",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pyinstaller/pyinstaller",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Nuitka/Nuitka",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "marcelotduarte/cx_Freeze",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pydantic/pydantic-settings",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pyca/cryptography",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "inveniosoftware/invenio-app-rdm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "evergreen-library-system/Evergreen",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "coreshop/CoreShop",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "magento/magento2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pretix/pretix",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "thelia/thelia",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "woocommerce/woocommerce",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tontof/kriss_feed",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lemon24/reader",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rss2email/rss2email",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tt-rss/tt-rss",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cloudreve/cloudreve",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "opencloud-eu/opencloud",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "haiwen/seafile",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Sync-in/server",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Sync-in/desktop",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "qbittorrent/qBittorrent",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chibisafe/chibisafe",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "onionshare/onionshare",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SergiX44/XBackBone",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "maxogden/maintenance-modules",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "edobashira/speech-language-processing",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "papers-we-love/papers-we-love",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CompVis/latent-diffusion",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hojonathanho/diffusion",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pesser/pytorch_diffusion",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "yang-song/score_sde_pytorch",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "OpenNMT/CTranslate2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ggerganov/whisper.cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Purfview/whisper-standalone-win",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "snakers4/silero-vad",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "speaches-ai/speaches",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "m-bain/whisperX",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Softcatala/whisper-ctranslate2",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MahmoudAshraf97/whisper-diarization",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hedrergudene/asr-sd-pipeline",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zh-plus/Open-Lyrics",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "geekodour/wscribe",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "geekodour/wscribe-editor",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "BANDAS-Center/aTrain",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ufal/whisper_streaming",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "collabora/WhisperLive",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "BBC-Esq/ctranslate2-faster-whisper-transcriber",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "softcatala/open-dubbing",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "heimoshuiyu/whisper-fastapi",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "twitter/torch-autograd",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "HIPS/autograd",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pytorch/extension-cpp",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mozilla/sccache",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hughperkins/pytorch",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mattcunningham/naive-apl",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pjreddie/darknet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "GHamrouni/Recommender",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SeniorSA/hybrid-rs-trainner",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "siavashserver/neonrvm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "alrevuelta/cONNXr",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "xboot/libonnx",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "onnx/onnx-c",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ariannamethod/notorch",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "shyringo/qwen3.8-27b-in-c",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "VoxRT/voxrt-asr-linux",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cosmo-wander-ai/cosmo-edge",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CMU-Perceptual-Computing-Lab/openpose",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jkomiyama/banditlib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jolibrain/deepdetect",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ozguraslank/flexml",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "oneapi-src/oneDAL",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Microsoft/LightGBM",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookincubator/MCGrad",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cdslaborg/paramonte",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cnclabs/proNet-core",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pycaret/pycaret",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "shogun-toolbox/shogun",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "baidu-research/warp-ctc",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Xtra-Computing/thundergbm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Xtra-Computing/thundersvm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mosdeo/LKYDeepNN",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aksnzhy/xlearn",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Tyill/skynet",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "polyaxon/polyaxon",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nndeploy/nndeploy",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "alphacep/vosk-api",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "melisgl/mgl-gpr",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "melisgl/cl-libsvm",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "masatoi/cl-online-learning",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "masatoi/cl-random-forest",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scicloj/scicloj.ml",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "joshuaeckroth/clj-ml",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ptaoussanis/touchstone",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lspector/Clojush",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cloudkj/lambda-ml",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jimpil/enclog",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "clojurewerkz/statistiker",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "htm-community/clortex",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "htm-community/comportex",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "uncomplicate/deep-diamond",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hswick/jutsu.ai",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "originrose/cortex",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "yetanalytics/dl4clj",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "techascent/tech.ml.dataset",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scicloj/tablecloth",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "alanmarazzi/panthera",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Netflix/PigPen",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jsa-aerial/hanami",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "clojurewerkz/envision",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pink-gorilla/gorilla-notebook",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "clojupyter/clojupyter",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scicloj/notespace",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "datamechanics/delight",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "clj-python/libpython-clj",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scicloj/clojisr",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MastodonC/kixi.stats",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "generateme/fastmath",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "atisharma/matlib",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mathieulaporte/machine",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NeuraLegion/crystal-fann",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "danielcamposramos/Knowledge3D",
+   "score": 45.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gajimala/AED",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "VandeleyYYC/TMAN",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aisaf8873/Abc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "FiveTechSoft/hbide",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aui-framework/aui",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bloomberg/bde",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "idealvin/coost",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "davisking/dlib",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "electronicarts/EASTL",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebook/folly",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "iboB/itlib",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "julianstorer/JUCE",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Kigs-framework/kigs",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "koanlogic/libu",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MariadeAnton/MiLi",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TheNumbat/rpp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tboox/tbox",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "intent-garden/wui",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jll63/yomm2",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kunitoki/yup",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aigamedev/btsk",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rdabra/txeo",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Samsung/veles",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kaldi-asr/kaldi",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chriskohlhoff/asio",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "boostorg/asio",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ithewei/libhv",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aubio/aubio",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sahaRatul/sela",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TonicAudio/Tonic",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zeeev/wham",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jech/dht",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ValeevGroup/mpqc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "psi4/psi4",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "adishavit/argh",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "taywee/args",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mshenoda/argy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "daniele77/cli",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CLIUtils/CLI11",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "muellan/clipp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ArthurSonzogni/FTXUI",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ggerganov/imtui",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bfgroup/Lyra",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "s9w/oof",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "badaix/popl",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rikyoz/bit7z",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kspalaiologos/bzip3",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cwida/fsst",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lz4/lz4",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "avaneev/lzav",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lzfse/lzfse",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nemequ/lzmat",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "richgel999/miniz",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "antirez/smaz",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebook/zstd",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hellobertrand/zxc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "byronknoll/cmix",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "HSA-Libraries/Bolt",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "concurrencykit/ck",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mtmucha/coros",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NVlabs/cub",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ComputationalRadiationPhysics/cupla",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "STEllAR-GROUP/hpx",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/marl",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NVIDIA/nccl",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tidwall/neco",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ddemidov/vexcl",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "benhoyt/inih",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jtilly/inih",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mcmtroffaes/inipp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "metayeti/mINI",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mlyszczek/librb",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "awslabs/s2n",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/tink",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "primihub/HEhub",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "p-ranav/csv2",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "stephenberry/glaze",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "red0124/ssp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "liquidaty/zsv",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kuzudb/kuzu",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "LiveAsynchronousVisualizedArchitecture/simdb",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SOCI/soci",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookincubator/velox",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "alibaba/zvec",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cppalliance/NuDB",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "libcheck/check",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "meekrosoft/fff",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ThrowTheSwitch/Unity",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "boost-experimental/ut",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hdoc/hdoc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fastlib/fCWT",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "berndporr/iir1",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "caryll/otfcc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Equilibrium-Games/Acid",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "axmolengine/axmol",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dbartolini/crown",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "skypjack/entt",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "godotengine/godot",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TheCherno/Hazel",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jhasse/jngl",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nCine/nCine",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "o3de/o3de",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hugoam/toy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bobluppes/graaf",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AshampooSystems/boden",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "brisklib/brisk",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vczh-libraries/GacUI",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ocornut/imgui",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "andlabs/libui",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "MyGUI/mygui",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cnjinhao/nana",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mikke89/RmlUi",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "slint-ui/slint",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "texus/TGUI",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "webui-dev/webui",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "yue/yue",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lc-soft/LCUI",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bkaradzic/bgfx",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "glfw/glfw",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/ion",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "LukasBanana/LLGL",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/skia",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "avaneev/avir",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "boostorg/gil",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "richgel999/fpng",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "libgd/libgd",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "OpenImageIO/oiio",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "phoboslab/qoi",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "happy-sea-fox/sail",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ermig1979/Simd",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "matt-42/vpp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ukoethe/vigra",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "OpenImageDenoise/oidn",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "apache/brpc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "continental/ecal",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zeroc-ice/ice",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nanomsg/nng",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sogou/srpc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "DaveGamble/cJSON",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chrismanning/jbson",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zserge/jsmn",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nlohmann/json",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ByteSnipers/mobile-pentest-toolkit",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "GouveaHeitor/nipe",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "govolution/avet",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "EgeBalci/amber",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sensepost/DET",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "samyk/pwnat",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "longld/peda",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bwrsandman/Bless",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dark-lbp/isf",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kdaoudieh/Bella",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "n1nj4sec/pupy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "RUB-NDS/PRET",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Sab0tag3d/SIET",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hatRiot/zarp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NewEraCracker/LOIC",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "OWASP/Amass",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "evilsocket/xray",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "projectdiscovery/naabu",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "antirez/hping",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rafael-santiago/pig",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "secdev/scapy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "portantier/habu",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "byt3bl33d3r/MITMf",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Warxim/petep",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "future-architect/vuls",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TheM4hd1/JCS",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sullo/nikto",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "andresriancho/w3af",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ByteSnipers/awesome-pentest-cheat-sheets",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dloss/python-pentest-tools",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "beurtschipper/Depix",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "USSCltd/dorks",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Furduhlutur/yar",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "trustedsec/ptf",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "DominicBreuker/pspy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "0xd4d/dnSpy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fireeye/rVMI",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "WerWolv/ImHex",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "federicodotta/Brida",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kurobeats/fimap",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hvqzao/liffy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "beefproject/beef",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dotcppfile/DAws",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sensepost/ruler",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "blockvectra/mcp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "GurbaniNow/api",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gadael/icsdb",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Jaagrav/CodeX",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "galvicrt/ecal",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mm2d3d/lite",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nuntabanketband-byte/mbrc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "namma-indies/app",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "docker-hardened-images/log",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "misiti15/MCF",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "planetryan/qoa",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "theearththailand3-crypto/erp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "devskip/waves",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Plouuuf/ARGOS",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bupt-ai-cz/LLVIP",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hannes-brt/hebel",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NervanaSystems/neon",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "NervanaSystems/coach",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gojek/feast",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/trax",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/flax",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "enlite-ai/maze",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rlworkgroup/dowel",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "activeloopai/Hub",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebook/MemNN",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Ramaseshanr/anlp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sergioburdisso/pyss3",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "datquocnguyen/jPTDP",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zalandoresearch/flair",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "deepset-ai/FARM",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "obss/jury",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Unbabel/COMET",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mit-nlp/MITIE",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "LanguageMachines/ucto",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "LanguageMachines/frog",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "meta-toolkit/meta",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CogComp/saul",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ispras/atr4s",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ispras/tm",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dlwh/epic",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jdkato/prose",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "wit-ai/wit",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "proycon/flat",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "embeddings-benchmark/mteb",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "flairNLP/flair",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Babelscape/rebel",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookresearch/DrQA",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "coqui-ai/TTS",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "allenai/dolma",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebookresearch/XNLI",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "beir-cellar/beir",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "explodinggradients/ragas",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mohamedadaly/labr",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "FudanNLP/fnlp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hankcs/HanLP",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "HIT-SCIR/ltp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "QwenLM/Qwen3",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "01-ai/Yi",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ITUnlp/daner",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "alexandrainst/danlp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pnisarg/ABSA",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "goru001/inltk",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hyunwoongko/kss",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bab2min/Kiwi",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ongjin/garu",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "KLUE-benchmark/KLUE",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "e9t/nsmc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "roshan-research/hazm",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "AlirezaTheH/perke",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "crscardellino/sbwce",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dccuchile/beto",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hitz-zentroa/latxa",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "wittawatj/jtcc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mirfan899/Urdu",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "trungtv/pyvi",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cltk/cltk",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jorjor140900/husk",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "goro0803-droid/keiba",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "chuehnone/news",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sarthak3576/haraa",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "emilk/egui",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zulip/zulip",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "foxcpp/maddy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "simple-login/app",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dovecot/core",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "corecode/dma",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pentacent/keila",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sympa-community/sympa",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cypht-org/cypht",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ergochat/ergo",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "znc/znc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sipcapture/homer",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "coralproject/talk",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Elgg/Elgg",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "importantimport/hatsu",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "isso-comments/isso",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "LemmyNet/lemmy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "movim/movim",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mybb/mybb",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "phpbb/phpbb",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SimpleMachines/SMF",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "openSUSE/osem",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "bolt/core",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "omeka/Omeka",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "TYPO3/typo3",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "givanz/Vvveb",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "LaWebcapsule/d9",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "razvandimescu/numa",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "papra-hq/papra",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gotson/komga",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "urfave/cli",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Masterminds/sprig",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tinode/ios",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "unicode-org/icu",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "xiph/opus",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "facebook/infer",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "spotify/annoy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pallets/flask",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pallets/jinja",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sqlalchemy/mako",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jpadilla/pyjwt",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "odoo/odoo",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aio-libs/yarl",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "rogerbinns/apsw",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "geopy/geopy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "numpy/numpy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "scipy/scipy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "numba/numba",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hgrecco/pint",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "obspy/obspy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pymc-devs/pymc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "qutip/qutip",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "python-rope/rope",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tox-dev/tox",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "wntrblm/nox",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "kevin1024/vcrpy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "joke2k/faker",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gotcha/ipdb",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "inducer/pudb",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SCons/scons",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pydoit/doit",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mitmproxy/pdoc",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "boto/boto3",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "amoffat/sh",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dask/dask",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ray-project/ray",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "coleifer/huey",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pallets/click",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tqdm/tqdm",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "urwid/urwid",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "dbcli/pgcli",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "xonsh/xonsh",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tmux/tmux",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "python-babel/babel",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "python-parsy/parsy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "lxml/lxml",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "emcconville/wand",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jiaaro/pydub",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "beetbox/beets",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "renpy/renpy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pypy/pypy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cdgriffith/Box",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pytoolz/toolz",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Suor/funcy",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "agronholm/anyio",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "python-trio/trio",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pypa/pip",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pypa/hatch",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pypa/pipx",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pypa/flit",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "devpi/devpi",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pex-tool/pex",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "samvera/hyrax",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jaesivsm/JARR",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nkanaev/yarr",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Kinto/kinto",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "project-zot/zot",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nokonoko/uguu",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ermongroup/ddim",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "liuliu/ccv",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "BVLC/caffe",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "clab/dynet",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "FidoProject/Fido",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "srendle/libfm",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Agosillo/MiaIA",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "CEA-LIST/N2D2",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "comet-ml/opik",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pypl0/Ombre",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "auto-differentiation/XAD",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "ayoshiaki/tops",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nickgillian/grt",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "melisgl/mgl",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aria42/infer",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "vollmerm/fungp",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aria42/flare",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "zero-one-group/geni",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "jsa-aerial/saite",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "metasoarous/oz",
+   "score": 40.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "huyt16/Twitter100k",
+   "score": 35.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "martincitron/birthday2026",
+   "score": 35.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "HivemindOS-Agents/hivepunk-632",
+   "score": 35.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "snowerlyz/twc-bde2c10948",
+   "score": 35.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "PaulAnds/SoftwareArchitectureAndDesign2026B",
+   "score": 35.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cssidhu0001/cssidhu0001",
+   "score": 35.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "EgoDukePergola/repo-o22n456t",
+   "score": 35.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "shyringo/deepseek-v4-flash-0731-in-c",
+   "score": 35.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "acrossses/coupon-sales-test",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "Cyan4973/FiniteStateEntropy",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "tugglecore/attest",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "onqtam/doctest",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "cpputest/cpputest",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "google/googletest",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "unittest-cpp/unittest-cpp",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "sheredom/utest.h",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "waftester/waftester",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nixawk/pentest-wiki",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "juliocesarfort/public-pentesting-reports",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JANhaha/shipping-test",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "nlintz/TensorFlow-Tutorials",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pkmital/tensorflow_tutorials",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "aymericdamien/TensorFlow-Examples",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "SauravMaheshkar/Flax-Examples",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hb20007/hands-on-nltk-tutorial",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "yandexdataschool/nlp_course",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "fastai/course-nlp",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "JohnSnowLabs/langtest",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "gkamradt/LLMTest_NeedleInAHaystack",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "stdlib-js/www-test-code-coverage",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "discourse/discourse",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "score": 15.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "boostorg/test",
+   "score": 10.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "drwetter/testssl.sh",
+   "score": 10.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "mallorydanopayegoju/test",
+   "score": 10.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "hendrycks/test",
+   "score": 10.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "stretchr/testify",
+   "score": 10.0,
+   "mode": "heuristic"
+  },
+  {
+   "repo": "smit9132/assignment-w4-24it086",
+   "score": 5.0,
+   "mode": "heuristic"
+  }
+ ]
+}

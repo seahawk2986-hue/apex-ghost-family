@@ -103,8 +103,13 @@ def vet(path):
         return False, "compile failed"
     b = subprocess.run([sys_exec(), "-m", "bandit", "-q", "-f", "json", tmp],
                        capture_output=True, text=True, timeout=60)
+    if not b.stdout or '"metrics"' not in b.stdout:
+        # FAIL-CLOSED (audit HIGH): a missing/mute bandit used to parse as {}
+        # -> totals {} -> "verified" with NO scan run. Now: unverified, loudly.
+        return False, ("bandit unavailable or silent (rc=%s) - NOT verified"
+                       % b.returncode)
     try:
-        report = json.loads(b.stdout or "{}")
+        report = json.loads(b.stdout)
         totals = (report.get("metrics", {}) or {}).get("_totals", {})
         if totals.get("severity_high"):
             return False, "bandit HIGH-severity finding"
@@ -197,6 +202,28 @@ def harvest(repo, per_source):
                    "first_line": content.splitlines()[0][:120],
                    "imports": sorted(set(re.findall(r"^\s*import\s+(\w+)", content, re.M)))[:8],
                    "registered": time.strftime("%Y-%m-%d %H:%M:%S")}
+            # NEAR-DUP GATE (doctrine Part VII H1: The Stack v2 measured ~40%
+            # of permissive files near-duplicated; our own audit found 55
+            # clusters of shells in this store). Blocks registrations whose
+            # name+first-line is near-identical (>=0.85 - conservative: true
+            # algorithm variants pass, shells like __init__ vs __init__ block)
+            # - honest print, no pay, no store growth.
+            _dupe_of = None
+            try:
+                from NearDedup import near_ratio as _nr
+                _cand = (doc["skill"] + " " + doc.get("first_line", ""))[:600]
+                for _prev in lib["skills"]:
+                    _pv = (_prev.get("skill", "") + " "
+                           + _prev.get("first_line", ""))[:600]
+                    if _nr(_cand, _pv) >= 0.85:
+                        _dupe_of = _prev.get("skill", "?")[:50]
+                        break
+            except Exception:
+                pass
+            if _dupe_of:
+                print(f"[skill-vet] near-identical to existing '{_dupe_of}' - "
+                      f"NOT registered (near-dup gate)")
+                continue
             _before = len(lib["skills"])
             lib["skills"].append(doc)
             ok_saved = save(lib)

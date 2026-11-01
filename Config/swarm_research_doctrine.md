@@ -388,3 +388,67 @@ backlog pre-download) | stats-per-stage: PARTIAL (diversity + lane counters)
 Scripts/NearDedup.py --audit above (the shell-inflation finding predicted
 shallow clusters of __init__/version shells; the count lands in the ledger
 for the provenance gate to act on).
+
+---
+
+# PART VII — the quality-harvest canon, fully verified (scraped 2026-11-01)
+
+## Q1 — FineWeb (arXiv:2406.17557, FETCHED - now properly identified)
+15T tokens from 96 CommonCrawl snapshots; full ablations of every design
+choice, esp. LOCAL vs GLOBAL MinHash dedup. THE headline: FineWeb-Edu - 1.3T
+tokens selected by an 8B-parameter CLASSIFIER score - produces dramatically
+better MMLU/ARC models. PROVEN: a small classifier that ranks beats raw
+volume. (Earlier part-unverified entry now verified; the 2406.05665 ID miss
+is corrected to 2406.17557.)
+
+## Q2 — Dolma (arXiv:2402.00159, FETCHED) + Ultra-FineWeb (arXiv:2505.05427)
+Dolma: 3T tokens with a fully open curation toolkit (reproducibility as a
+feature). Ultra-FineWeb: efficient VERIFICATION strategy (rapid data-quality
+feedback with minimal compute) + a light fastText-class classifier -> 1T
+english + 120B chinese tokens, better benchmarks. PROVEN: cheap classifiers +
+fast verification loops fit exactly the family's 8B/2GB reality.
+
+## Q3 — SWE-Gym (arXiv:2412.21139, FETCHED) - the bug-lane blueprint
+2,438 REAL task instances harvested from GitHub: repo + executable env + unit
+tests + natural-language task. Training on them: +19% resolve rate; with
+verifiers: 32% on SWE-Bench Verified (open-weight SOTA at the time). PROVEN:
+issue->repo->tests is the harvestable unit for a software agent.
+FAMILY MAPPING: the GH Archive IssuesEvent/PushEvent lane is the discovery
+half; the farm (compile+tests) is the executable-env half. The bug lane is
+not theory - it is this pipeline with our signature on it.
+
+## Q4 — SPICE (arXiv:2507.09108, FETCHED) - triage before filing
+Automated labeling of issue-driven datasets: issue CLARITY, test COVERAGE,
+effort estimation via context-aware prompting + multi-pass consensus.
+Cost: 1,000 instances labeled for $5.10 vs ~$100,000 manual. PROVEN: machine
+triage of which issues are WORTH working, at near-free cost.
+FAMILY MAPPING: exactly the human-review gate the bug lane needs - score the
+6+ GFI candidates for clarity/effort before Andrew ever sees a draft.
+
+## Q5 — PAIChecker (arXiv:2607.28587, FETCHED) - alignment protection
+13.6% of SWE-bench-style PR<->issue pairs are MISALIGNED across 5 patterns;
+a multi-agent checker reaches 92% accuracy. PROVEN: never file an issue whose
+fix-pair is misaligned - reputational protection for the family's first
+external artifacts.
+
+## Q6 — More Agents Is All You Need (arXiv:2402.05120, FETCHED, TMLR)
+Sampling-and-voting ("Agent Forest"): LLM performance scales with agent
+COUNT, orthogonal to fancy methods, gain correlated with task difficulty.
+PROVEN + CHEAP for an 8B box: N samples + majority vote on ambiguous grades
+replaces a single judgment call.
+
+## Q7 — LIMA (arXiv:2305.11206, FETCHED) + MM-LIMA (2308.12067)
+1,000 CAREFULLY CURATED examples -> GPT-4-class parity in 43% of human evals;
+the lesson: almost all knowledge comes from pretraining, tiny curated sets
+teach output quality. MM-LIMA: a trainable SELECTOR filters low-quality data.
+PROVEN: grade-and-keep-the-top beats harvest-everything - doctrine H3/K3's
+quality ladder, now with the canonical citation.
+
+## FAMILY PRIORITY (all verified, all stdlib-wireable)
+1. Backlog grading EARLY (Q1/Q2/Q7): classifier-score the queue before
+   spending download requests - the grade organ exists, wire it upstream.
+2. Sampling-and-voting on ambiguous grades (Q6): 3 grades + majority, budget
+   the extra calls to RAM windows (D1).
+3. Bug-lane triage (Q4/Q5): SPICE-style clarity+effort score on GFI
+   candidates; PAIChecker-style alignment check before any filing.
+4. Near-dedup at registration (H1's 40% rate, already measured: 55 clusters).
