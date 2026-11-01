@@ -183,7 +183,8 @@ def round_run(pick=None):
     weakest = min((r for r in before
                    if r["cap"] not in ("earning", "founder")),
                   key=lambda r: r["score"], default=None)
-    a = act(pick or (weakest["cap"] if weakest else None))
+    a = act(pick)  # the ACTION-ids are what act() consumes
+    # the ACTION-ids are what act() consumes (the round-1 lesson)
     after = rate()
     hist = rd("apex10_loop.json")
     hist.setdefault("rounds", []).append({
