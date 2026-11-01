@@ -29,7 +29,7 @@ from dotenv import load_dotenv
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv(os.path.join(ROOT, ".env"))
 
-_GROQ_MODEL = "qwen/qwen3.8-27b"
+_GROQ_MODEL = "openai/gpt-oss-120b"  # the founder's chat-lock (the blind-eval's #1)
 _OR_MODEL = "nvidia/nemotron-3.5-lightning:free"   # verified live 2026-10-30
 _GEMINI_MODEL = "gemini-3.8-flash"
 _CEREBRAS_MODEL = os.getenv("CEREBRAS_MODEL", "llama-3.3-70b")
