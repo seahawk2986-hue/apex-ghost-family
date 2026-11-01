@@ -91,22 +91,17 @@ for k, url in KEYS.items():
              "regenerate/reauthorize at provider console, paste into .env, never chat")
 
 section("B. KEYLESS QUOTA STATE (what the swarm's no-key world looks like)")
-st, dt = http("https://api.github.com/rate_limit")
-if isinstance(st, int) and st == 200:
-    pass  # body parsed below for core/search remain
-    try:
-        with urllib.request.urlopen(urllib.request.Request(
-                "https://api.github.com/rate_limit", headers=UA), timeout=10) as r:
-            d = json.load(r)
-        core = d.get("resources", {}).get("core", {})
-        src = d.get("resources", {}).get("search", {})
-        print(f"  GitHub keyless: core {core.get('remaining')}/{core.get('limit')} "
-              f"remaining | search {src.get('remaining')}/{src.get('limit')} "
-              f"| resets {time.strftime('%H:%M:%S', time.localtime(core.get('reset', 0)))}")
-    except Exception as e:
-        print("  GitHub rate_limit parse:", str(e)[:60])
-else:
-    print("  GitHub keyless rate_limit:", st)
+try:
+    with urllib.request.urlopen(urllib.request.Request(
+            "https://api.github.com/rate_limit", headers=UA), timeout=10) as r:
+        d = json.load(r)
+    core = d.get("resources", {}).get("core", {})
+    src = d.get("resources", {}).get("search", {})
+    print(f"  GitHub keyless: core {core.get('remaining')}/{core.get('limit')} "
+          f"remaining | search {src.get('remaining')}/{src.get('limit')} "
+          f"| resets {time.strftime('%H:%M:%S', time.localtime(core.get('reset', 0)))}")
+except Exception as e:
+    print("  GitHub keyless rate_limit unreadable:", str(e)[:60])
 for url, label in (("https://data.gharchive.org/2026-10-31-20.json.gz", "GH Archive hourly"),
                    ("https://api.semanticscholar.org/graph/v1/paper/search?query=agents",
                     "S2 search unauth"),
@@ -118,10 +113,11 @@ section("C. TOOLS CENSUS (verification stack + app deps)")
 for tool in ("bandit", "ruff", "pytest"):
     r = subprocess.run([os.path.join(ROOT, "apex_venv", "Scripts", "python.exe"),
                         "-m", tool, "--version"], capture_output=True, text=True, timeout=60)
-    print(f"  {tool:8s} {'OK ' + (r.stdout or r.stderr).strip()[:40] if r.returncode == 0 else 'MISSING'}")
-r = subprocess.run([os.path.join(ROOT, "apex_venv", "Scripts", "python.exe"),
-                    "-m", "py_spy", "--version"], capture_output=True, text=True, timeout=60)
-print(f"  {'py-spy':8s} {'OK ' + (r.stdout or r.stderr).strip()[:40] if r.returncode == 0 else 'MISSING'}")
+    v = (r.stdout or r.stderr).strip().splitlines()
+    print(f"  {tool:8s} {'OK ' + (v[0] if v else '?')[:46] if r.returncode == 0 else 'MISSING'}")
+r = subprocess.run([os.path.join(ROOT, "apex_venv", "Scripts", "py-spy.exe"), "--version"],
+                   capture_output=True, text=True, timeout=60)
+print(f"  {'py-spy':8s} {'OK ' + (r.stdout or r.stderr).strip()[:46] if r.returncode == 0 else 'MISSING (exe absent)'}")
 for mod in ("aiohttp", "nacl", "yaml", "trafilatura", "psutil", "requests"):
     r = subprocess.run([os.path.join(ROOT, "apex_venv", "Scripts", "python.exe"), "-c", f"import {mod}"],
                        capture_output=True, text=True, timeout=30)
