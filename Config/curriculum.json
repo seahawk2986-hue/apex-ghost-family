@@ -1,38 +1,43 @@
 {
- "ts": "2026-10-31 21:51:09",
- "verified_count": 4,
+ "ts": "2026-11-01 08:51:36",
+ "verified_count": 3,
  "items": [
   {
-   "skill": "probabilistic_learning",
-   "repo": "aimacode/aima-python",
-   "file": "aima/probabilistic_learning.py",
+   "skill": "CheckLDAPStatus",
+   "repo": "CoreSecurity/impacket",
+   "file": "examples/CheckLDAPStatus.py",
    "imports": [
-    "heapq"
+    "argparse",
+    "logging",
+    "sys",
+    "traceback"
    ],
-   "lines": 158
+   "lines": 142
   },
   {
-   "skill": "nearest_neighbors",
-   "repo": "rushter/MLAlgorithms",
-   "file": "examples/nearest_neighbors.py",
-   "imports": [],
-   "lines": 59
-  },
-  {
-   "skill": "1-bit-and-2-bit-characters",
-   "repo": "kamyu104/LeetCode-Solutions",
-   "file": "Python/1-bit-and-2-bit-characters.py",
-   "imports": [],
-   "lines": 17
-  },
-  {
-   "skill": "anomaly",
-   "repo": "microsoft/SynapseML",
-   "file": "cognitive/src/main/python/synapse/ml/cognitive/anomaly.py",
+   "skill": "GetADComputers",
+   "repo": "CoreSecurity/impacket",
+   "file": "examples/GetADComputers.py",
    "imports": [
-    "warnings"
+    "argparse",
+    "dns",
+    "logging",
+    "sys",
+    "traceback"
    ],
-   "lines": 8
+   "lines": 236
+  },
+  {
+   "skill": "GetADUsers",
+   "repo": "CoreSecurity/impacket",
+   "file": "examples/GetADUsers.py",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "lines": 197
   }
  ]
 }

@@ -2097,6 +2097,15 @@ async def network_phase(ghosts_n, ledger, seen, minutes_cap, state, pending):
             if fit >= 0.1:
                 v["wins"] = int(v.get("wins", 0)) + 1
             pathmem_store(pmv)
+            # WHOLE-ORGANISM UPWARD LAW (Part XIII final): per measured round,
+            # fold fitness into the gene archive, enforce upward-only rollback,
+            # snapshot every subsystem, alarm on any unexplained regression.
+            try:
+                import ApexUpward as _AU
+                _AU.tick()
+            except Exception as _e:
+                print(f"[evolution] ApexUpward tick failed honestly: "
+                      f"{str(_e)[:80]} (round continues; alarm next tick)")
         except Exception:
             pass
     except Exception:
