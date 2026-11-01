@@ -33,8 +33,8 @@ jobs:
           git config user.name "apex-watch-lane"
           git config user.email "actions@github.com"
           git pull --rebase || git rebase --abort || true
-          git add -A Config/ 2>/dev/null || true
-          git commit -m "the watch-lane grain (off-box cadence)" || true
+          git add Config/pr_watch_state.json Config/claimed_skips.json Config/papers_2026_tech10.jsonl Config/papers_2026_modeluse.jsonl Config/papers_2026_chatmodels.jsonl Config/apex10_actions.json Config/apex10_loop.json 2>/dev/null || true
+          git commit -m "the watch-lane grain (the specific files = the no-collisions law)" || true
           git push || true
       - name: the artifacts home
         uses: actions/upload-artifact@v4

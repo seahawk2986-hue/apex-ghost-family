@@ -1,0 +1,28 @@
+{
+ "ts": "2026-11-01 13:28:55",
+ "verdict": "PASS",
+ "models": [
+  {
+   "model": "phi4-mini:latest",
+   "role": "the fast-general small (the copy/summarize lane)",
+   "served": true,
+   "load_cost_gb": 0.0,
+   "answer": "ok\n\n"
+  },
+  {
+   "model": "gemma3:4b",
+   "role": "the 2025-gen small-general (the alternate-general lane)",
+   "served": true,
+   "load_cost_gb": 0.96,
+   "answer": "ok\n\n"
+  },
+  {
+   "model": "deepseek-r1:7b",
+   "role": "the REASONING distill (the deep-judge window candidate; the thinking-tokens = slow)",
+   "served": true,
+   "load_cost_gb": 0.0,
+   "answer": "Thinking...\nAlright, I need to respond t"
+  }
+ ],
+ "law": "the disk-pull = free; the LOAD = RAM-gated + verified + auto-unloaded; never 2 loads; $0.00"
+}

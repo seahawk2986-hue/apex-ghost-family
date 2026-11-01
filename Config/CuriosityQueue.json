@@ -106,10 +106,9 @@
   "Ganapati/RsaCtfTool",
   "CoreSecurity/impacket",
   "crslade/crslade.github.io",
-  "asafamos/stock-scout"
- ],
- "pending": [
+  "asafamos/stock-scout",
   "PulseSRE/pulse-ui"
  ],
+ "pending": [],
  "rotated": "2026-10-31"
 }

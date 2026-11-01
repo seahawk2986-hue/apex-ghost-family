@@ -1,0 +1,21 @@
+{
+ "ts": "2026-11-01 13:30:11",
+ "ram_free_gb": 6.9,
+ "OFFBOX_lanes_verified": [
+  "the watch-lane */5 (the PrWatch + ClaimCheck + the actions-loop + the grain = ALL steps success)",
+  "the harvests 10/11/12 (the sourcing-compute = the arXiv-side + the runners)",
+  "the chat/catalog-sweeps (the catalog = the web-apis; the groq 120b = their LPUs)",
+  "the 120b-judge/copy/translate/arbiter lanes (0GB local RAM)"
+ ],
+ "LOCAL_by_law": [
+  "the ollama-models (the 5-model roster disk-pulled; the LOAD = the RAM-gated windows only)",
+  "the local-ledger/lock-writes (the disk = ours)",
+  "the schtasks-beats (the OS-persistence)"
+ ],
+ "the_last_big_shift": {
+  "lane": "the PR-file chain (30+ scripts -> the runners)",
+  "blocker": "the PR-create needs OUR full PAT as an ACTIONS-secret (the built-in token = the cross-repo-restricted)",
+  "founder_step": "one 30-sec paste of the PAT into the hub's Settings>Secrets (the machine-side = ready)"
+ },
+ "law": "the bloat = the bare-minimum: every CPU/network-heavy = theirs; every RAM-heavy = windowed + auto-unloaded"
+}

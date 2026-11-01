@@ -1,0 +1,323 @@
+{
+ "ts": "2026-11-01 13:29:34",
+ "sources": {
+  "ollama_library": {
+   "total_ids": 266,
+   "ids_all": [
+    "alfred",
+    "all-minilm",
+    "athene-v2",
+    "aya",
+    "aya-expanse",
+    "bakllava",
+    "beam",
+    "bespoke-minicheck",
+    "bge-large",
+    "bge-m3",
+    "bonsai-2",
+    "clef",
+    "clef-flash",
+    "codebooga",
+    "codegeex4",
+    "codegemma",
+    "codellama",
+    "codeqwen",
+    "codestral",
+    "codeup",
+    "cogito",
+    "cogito-2.1",
+    "command-a",
+    "command-r",
+    "command-r-plus",
+    "command-r7b",
+    "command-r7b-arabic",
+    "d1",
+    "d1-omni",
+    "d3",
+    "dbrx",
+    "deepcoder",
+    "deepscaler",
+    "deepseek-coder",
+    "deepseek-coder-v2",
+    "deepseek-llm",
+    "deepseek-ocr",
+    "deepseek-r1",
+    "deepseek-v2",
+    "deepseek-v2.5",
+    "deepseek-v3",
+    "deepseek-v3.1",
+    "deepseek-v4-pro",
+    "deepseek-v4.1-flash",
+    "devstral",
+    "devstral-2",
+    "devstral-small-2",
+    "dolphin-llama3",
+    "dolphin-mistral",
+    "dolphin-mixtral",
+    "dolphin-phi",
+    "dolphin3",
+    "dolphincoder",
+    "duckdb-nsql",
+    "embeddinggemma",
+    "embeddinggemma-2",
+    "everythinglm",
+    "exaone-deep",
+    "exaone3.5",
+    "falcon"
+   ],
+   "chat_class": [
+    "codegemma",
+    "deepseek-r1",
+    "dolphin-llama3",
+    "dolphin-mistral",
+    "dolphin-mixtral",
+    "dolphin-phi",
+    "dolphin3",
+    "dolphincoder",
+    "embeddinggemma",
+    "embeddinggemma-2",
+    "functiongemma",
+    "gemma",
+    "gemma2",
+    "gemma3",
+    "gemma3n",
+    "gemma4",
+    "gpt-oss",
+    "gpt-oss-safeguard",
+    "granite-code",
+    "granite-embedding",
+    "granite3-dense",
+    "granite3-guardian",
+    "granite3-moe",
+    "granite3.1-dense",
+    "granite3.1-moe",
+    "granite3.2",
+    "granite3.2-vision",
+    "granite3.3",
+    "granite4",
+    "granite4.1",
+    "granite4.1-guardian",
+    "granite4.2",
+    "llama3",
+    "llama3-chatqa",
+    "llama3-gradient",
+    "llama3-groq-tool-use",
+    "llama3.1",
+    "llama3.2",
+    "llama3.2-vision",
+    "llama3.3"
+   ]
+  },
+  "hf_trending": [
+   {
+    "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "downloads": 170353,
+    "likes": 4220
+   },
+   {
+    "id": "LiquidAI/LFM3-1.7B",
+    "downloads": 37568,
+    "likes": 671
+   },
+   {
+    "id": "Nanbeige/Nanbeige4.3-33B",
+    "downloads": 15795,
+    "likes": 964
+   },
+   {
+    "id": "XHToken/Spark-X2.6-4B",
+    "downloads": 16707,
+    "likes": 945
+   },
+   {
+    "id": "RecursiveSI/flint",
+    "downloads": 26703,
+    "likes": 1287
+   },
+   {
+    "id": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
+    "downloads": 2294642,
+    "likes": 534
+   },
+   {
+    "id": "Diffuspace/Clover-35B-A3B-Preview",
+    "downloads": 2352,
+    "likes": 201
+   },
+   {
+    "id": "AtomicChat/LFM3-1.7B-Uncensored-GGUF",
+    "downloads": 46155,
+    "likes": 173
+   },
+   {
+    "id": "LiquidAI/LFM3-1.7B-GGUF",
+    "downloads": 150260,
+    "likes": 167
+   },
+   {
+    "id": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+    "downloads": 83901,
+    "likes": 320
+   },
+   {
+    "id": "sensenova/SenseNova-Loop-9B-Preview",
+    "downloads": 927,
+    "likes": 136
+   },
+   {
+    "id": "AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF",
+    "downloads": 17384,
+    "likes": 131
+   },
+   {
+    "id": "divagr1925/Qwen3.5-4B-Qwenputer",
+    "downloads": 885,
+    "likes": 121
+   },
+   {
+    "id": "orcarouter/DeepSeek-V4.1-Flash-1017-abliterated-GGUF",
+    "downloads": 32156,
+    "likes": 401
+   },
+   {
+    "id": "OBLITERATUS/DeepSeek-V4.1-Flash-1017-obliterated",
+    "downloads": 520,
+    "likes": 119
+   },
+   {
+    "id": "XHToken/Spark-X2.6-4B-GGUF",
+    "downloads": 317709,
+    "likes": 264
+   },
+   {
+    "id": "dealignai/DeepSeek-V4.1-Flash-1017-UNCENSORED-FP8",
+    "downloads": 12117,
+    "likes": 516
+   },
+   {
+    "id": "LiquidAI/LFM3-1.7B-Base",
+    "downloads": 3934,
+    "likes": 102
+   },
+   {
+    "id": "BreezeBlue/Breeze-TTS-2",
+    "downloads": 21483,
+    "likes": 914
+   },
+   {
+    "id": "inclusionAI/Ling-3.1-flash-1019",
+    "downloads": 1651,
+    "likes": 87
+   },
+   {
+    "id": "HuggingFaceBio/Carbon-X",
+    "downloads": 3719,
+    "likes": 284
+   },
+   {
+    "id": "dealignai/GLM-5.3-CYBERSECURITY-FP8",
+    "downloads": 122601,
+    "likes": 823
+   },
+   {
+    "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "downloads": 2127615,
+    "likes": 4833
+   },
+   {
+    "id": "InternScience/Sage-A1.5",
+    "downloads": 13155,
+    "likes": 385
+   },
+   {
+    "id": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
+    "downloads": 2598773,
+    "likes": 1848
+   },
+   {
+    "id": "unsloth/flint-GGUF",
+    "downloads": 239139,
+    "likes": 352
+   },
+   {
+    "id": "jialinyyzz/humanizer",
+    "downloads": 264723,
+    "likes": 2218
+   },
+   {
+    "id": "XHToken/Spark-X2.6-1.7B",
+    "downloads": 1913,
+    "likes": 64
+   },
+   {
+    "id": "inclusionAI/Ming-3.0-tts-0.5B",
+    "downloads": 9030,
+    "likes": 188
+   },
+   {
+    "id": "meta-llama/Llama-3.1-8B-Instruct",
+    "downloads": 4501381,
+    "likes": 8733
+   }
+  ],
+  "groq_live": {
+   "err": "HTTP Error 403: Forbidden"
+  }
+ },
+ "shortlist": {
+  "in_ram_now": [
+   "qwen2.5-coder:7b (the drafts; the 4.4GB window)",
+   "qwen2.5-coder:3b (the floor)"
+  ],
+  "pull_candidates_chat": [
+   {
+    "model": "llama3.2:3b",
+    "class": "the chat/instruct",
+    "fit": "<=5GB = the window-legal (the verify = the load-proof)"
+   },
+   {
+    "model": "gemma3:4b",
+    "class": "the chat/instruct",
+    "fit": "<=5GB = the window-legal (the verify = the load-proof)"
+   },
+   {
+    "model": "phi4-mini:latest",
+    "class": "the chat/instruct",
+    "fit": "<=5GB = the window-legal (the verify = the load-proof)"
+   },
+   {
+    "model": "qwen3:4b",
+    "class": "the chat/instruct",
+    "fit": "<=5GB = the window-legal (the verify = the load-proof)"
+   },
+   {
+    "model": "smollm2:1.7b",
+    "class": "the chat/instruct",
+    "fit": "<=5GB = the window-legal (the verify = the load-proof)"
+   },
+   {
+    "model": "granite3.3:2b",
+    "class": "the chat/instruct",
+    "fit": "<=5GB = the window-legal (the verify = the load-proof)"
+   },
+   {
+    "model": "deepseek-r1:7b",
+    "class": "the chat/instruct",
+    "fit": "<=5GB = the window-legal (the verify = the load-proof)"
+   },
+   {
+    "model": "mistral-nemo",
+    "class": "the chat/instruct",
+    "fit": "<=5GB = the window-legal (the verify = the load-proof)"
+   },
+   {
+    "model": "gpt-oss:20b",
+    "class": "the chat/instruct",
+    "fit": "<=5GB = the window-legal (the verify = the load-proof)"
+   }
+  ],
+  "served_free_now": {
+   "err": "HTTP Error 403: Forbidden"
+  }
+ }
+}
