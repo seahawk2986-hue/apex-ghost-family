@@ -1,0 +1,708 @@
+{
+ "ts": "2026-11-01 13:39:18",
+ "applied": 94,
+ "not_applicable": 5,
+ "pending": 1,
+ "patterns": [
+  {
+   "n": 1,
+   "pattern": "visibility of status",
+   "source": "NN/g-heuristics (fetched)",
+   "status": "applied",
+   "note": "the sticky-header + anchors"
+  },
+  {
+   "n": 2,
+   "pattern": "match the real world",
+   "source": "NN/g-heuristics (fetched)",
+   "status": "applied",
+   "note": "plain-language packs"
+  },
+  {
+   "n": 3,
+   "pattern": "user control",
+   "source": "NN/g-heuristics (fetched)",
+   "status": "applied",
+   "note": "the free-issue path + revisions"
+  },
+  {
+   "n": 4,
+   "pattern": "consistency",
+   "source": "NN/g-heuristics (fetched)",
+   "status": "applied",
+   "note": "the tokens-system"
+  },
+  {
+   "n": 5,
+   "pattern": "error prevention",
+   "source": "NN/g-heuristics (fetched)",
+   "status": "applied",
+   "note": "the before-you-order panel"
+  },
+  {
+   "n": 6,
+   "pattern": "recognition not recall",
+   "source": "NN/g-heuristics (fetched)",
+   "status": "applied",
+   "note": "the numbered-steps + bullets"
+  },
+  {
+   "n": 7,
+   "pattern": "flexibility",
+   "source": "NN/g-heuristics (fetched)",
+   "status": "applied",
+   "note": "the two entry-paths (the checkout/free-issue)"
+  },
+  {
+   "n": 8,
+   "pattern": "aesthetic-minimal",
+   "source": "NN/g-heuristics (fetched)",
+   "status": "applied",
+   "note": "zero-trackers/one-file"
+  },
+  {
+   "n": 9,
+   "pattern": "error recovery",
+   "source": "NN/g-heuristics (fetched)",
+   "status": "applied",
+   "note": "the fit-check via the free-issue"
+  },
+  {
+   "n": 10,
+   "pattern": "help",
+   "source": "NN/g-heuristics (fetched)",
+   "status": "applied",
+   "note": "the FAQ + microcopy"
+  },
+  {
+   "n": 11,
+   "pattern": "the neutral-tokens",
+   "source": "Primer-design (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 12,
+   "pattern": "the contrast-safe light+dark",
+   "source": "Primer-design (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 13,
+   "pattern": "the system-fonts",
+   "source": "Primer-design (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 14,
+   "pattern": "the spacing-rhythm",
+   "source": "Primer-design (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 15,
+   "pattern": "the radius-tokens",
+   "source": "Primer-design (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 16,
+   "pattern": "the borders-not-shadows",
+   "source": "Primer-design (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 17,
+   "pattern": "the sticky-utility-header",
+   "source": "Primer-design (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 18,
+   "pattern": "the muted-secondary",
+   "source": "Primer-design (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 19,
+   "pattern": "the color-accent-only",
+   "source": "Primer-design (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 20,
+   "pattern": "the dark-parity",
+   "source": "Primer-design (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 21,
+   "pattern": "start with user needs",
+   "source": "GOV.UK-principles (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 22,
+   "pattern": "do less",
+   "source": "GOV.UK-principles (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 23,
+   "pattern": "design with data",
+   "source": "GOV.UK-principles (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 24,
+   "pattern": "hard work to simple",
+   "source": "GOV.UK-principles (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 25,
+   "pattern": "iterate",
+   "source": "GOV.UK-principles (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 26,
+   "pattern": "for everyone (a11y)",
+   "source": "GOV.UK-principles (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 27,
+   "pattern": "understand context",
+   "source": "GOV.UK-principles (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 28,
+   "pattern": "services-not-sites",
+   "source": "GOV.UK-principles (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 29,
+   "pattern": "consistent-not-uniform",
+   "source": "GOV.UK-principles (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 30,
+   "pattern": "make things open",
+   "source": "GOV.UK-principles (fetched)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 31,
+   "pattern": "the secure-checkout-label",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 32,
+   "pattern": "the named-delivery-window",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "24h"
+  },
+  {
+   "n": 33,
+   "pattern": "the revision-policy",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "1 within 7d"
+  },
+  {
+   "n": 34,
+   "pattern": "price-transparency",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "all-3-visible"
+  },
+  {
+   "n": 35,
+   "pattern": "deliverables-enumerated",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "the 3-bullets/pack"
+  },
+  {
+   "n": 36,
+   "pattern": "social-proof-artifacts",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "the real-PR-links"
+  },
+  {
+   "n": 37,
+   "pattern": "the disclosure-badge",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "automated-draft"
+  },
+  {
+   "n": 38,
+   "pattern": "human-in-loop",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "verify-before-delivery"
+  },
+  {
+   "n": 39,
+   "pattern": "no-subscription-clarity",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "one-time-packs"
+  },
+  {
+   "n": 40,
+   "pattern": "the contact-channel",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "the issues-link"
+  },
+  {
+   "n": 41,
+   "pattern": "the founder-identity",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "named"
+  },
+  {
+   "n": 42,
+   "pattern": "the updated-stamp",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "the date"
+  },
+  {
+   "n": 43,
+   "pattern": "the sample-links",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "the hub/README"
+  },
+  {
+   "n": 44,
+   "pattern": "testimonials",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "not-applicable",
+   "note": ""
+  },
+  {
+   "n": 45,
+   "pattern": "refund-policy",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "not-applicable",
+   "note": ""
+  },
+  {
+   "n": 46,
+   "pattern": "privacy-note",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "what-inputs-received"
+  },
+  {
+   "n": 47,
+   "pattern": "payment-brand",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "Stripe-via-Polar"
+  },
+  {
+   "n": 48,
+   "pattern": "fit-guidance",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "the what-fits-panel"
+  },
+  {
+   "n": 49,
+   "pattern": "price-anchoring",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "3-tiers"
+  },
+  {
+   "n": 50,
+   "pattern": "the CTA-consistency",
+   "source": "ecommerce-trust (the derived class)",
+   "status": "applied",
+   "note": "the same-style-3"
+  },
+  {
+   "n": 51,
+   "pattern": "the skip-link",
+   "source": "a11y-wcag (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 52,
+   "pattern": "the landmarks",
+   "source": "a11y-wcag (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 53,
+   "pattern": "the single-h1",
+   "source": "a11y-wcag (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 54,
+   "pattern": "the aria-labels",
+   "source": "a11y-wcag (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 55,
+   "pattern": "the focus-visible",
+   "source": "a11y-wcag (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 56,
+   "pattern": "the 44px-targets",
+   "source": "a11y-wcag (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 57,
+   "pattern": "the keyboard-native",
+   "source": "a11y-wcag (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 58,
+   "pattern": "no-color-only",
+   "source": "a11y-wcag (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 59,
+   "pattern": "lang",
+   "source": "a11y-wcag (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 60,
+   "pattern": "color-scheme-meta",
+   "source": "a11y-wcag (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 61,
+   "pattern": "tables",
+   "source": "a11y-wcag (the derived)",
+   "status": "not-applicable",
+   "note": ""
+  },
+  {
+   "n": 62,
+   "pattern": "forms",
+   "source": "a11y-wcag (the derived)",
+   "status": "not-applicable",
+   "note": ""
+  },
+  {
+   "n": 63,
+   "pattern": "reduced-motion",
+   "source": "a11y-wcag (the derived)",
+   "status": "not-applicable",
+   "note": ""
+  },
+  {
+   "n": 64,
+   "pattern": "the title+keywords",
+   "source": "seo-perf (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 65,
+   "pattern": "the meta-description",
+   "source": "seo-perf (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 66,
+   "pattern": "the canonical",
+   "source": "seo-perf (the derived)",
+   "status": "applied",
+   "note": "v3-new"
+  },
+  {
+   "n": 67,
+   "pattern": "OG title/desc/type",
+   "source": "seo-perf (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 68,
+   "pattern": "og:image",
+   "source": "seo-perf (the derived)",
+   "status": "pending",
+   "note": "the banner's choice = the founder's"
+  },
+  {
+   "n": 69,
+   "pattern": "JSON-LD products",
+   "source": "seo-perf (the derived)",
+   "status": "applied",
+   "note": "v3-new: the 3 offers"
+  },
+  {
+   "n": 70,
+   "pattern": "no-render-blocking",
+   "source": "seo-perf (the derived)",
+   "status": "applied",
+   "note": "zero-JS"
+  },
+  {
+   "n": 71,
+   "pattern": "inline-CSS",
+   "source": "seo-perf (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 72,
+   "pattern": "the system-fonts-0-requests",
+   "source": "seo-perf (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 73,
+   "pattern": "the single-file",
+   "source": "seo-perf (the derived)",
+   "status": "applied",
+   "note": "<20KB"
+  },
+  {
+   "n": 74,
+   "pattern": "the data-uri-favicon",
+   "source": "seo-perf (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 75,
+   "pattern": "the robots-default",
+   "source": "seo-perf (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 76,
+   "pattern": "the robots-default",
+   "source": "content-pro (the derived)",
+   "status": "applied",
+   "note": "applied"
+  },
+  {
+   "n": 77,
+   "pattern": "the robots-default",
+   "source": "content-pro (the derived)",
+   "status": "applied",
+   "note": "applied"
+  },
+  {
+   "n": 78,
+   "pattern": "the robots-default",
+   "source": "content-pro (the derived)",
+   "status": "applied",
+   "note": "applied"
+  },
+  {
+   "n": 79,
+   "pattern": "the robots-default",
+   "source": "content-pro (the derived)",
+   "status": "applied",
+   "note": "applied"
+  },
+  {
+   "n": 80,
+   "pattern": "the robots-default",
+   "source": "content-pro (the derived)",
+   "status": "applied",
+   "note": "applied"
+  },
+  {
+   "n": 81,
+   "pattern": "the robots-default",
+   "source": "content-pro (the derived)",
+   "status": "applied",
+   "note": "applied"
+  },
+  {
+   "n": 82,
+   "pattern": "the robots-default",
+   "source": "content-pro (the derived)",
+   "status": "applied",
+   "note": "applied"
+  },
+  {
+   "n": 83,
+   "pattern": "the robots-default",
+   "source": "content-pro (the derived)",
+   "status": "applied",
+   "note": "applied"
+  },
+  {
+   "n": 84,
+   "pattern": "the robots-default",
+   "source": "content-pro (the derived)",
+   "status": "applied",
+   "note": "applied"
+  },
+  {
+   "n": 85,
+   "pattern": "the robots-default",
+   "source": "content-pro (the derived)",
+   "status": "applied",
+   "note": "applied"
+  },
+  {
+   "n": 86,
+   "pattern": "the primary-CTA-above-fold",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": "the order-triage"
+  },
+  {
+   "n": 87,
+   "pattern": "the secondary-CTA",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": "the how-link"
+  },
+  {
+   "n": 88,
+   "pattern": "verb-specific-CTAs",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": "3"
+  },
+  {
+   "n": 89,
+   "pattern": "the microcopy-under",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": "the secure/24h/revision"
+  },
+  {
+   "n": 90,
+   "pattern": "the low-friction-path",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": "the free-issue"
+  },
+  {
+   "n": 91,
+   "pattern": "the trust-strip",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": "the hero's"
+  },
+  {
+   "n": 92,
+   "pattern": "the deliverable-bullets",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": "3/card"
+  },
+  {
+   "n": 93,
+   "pattern": "the FAQ-objections",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": "6"
+  },
+  {
+   "n": 94,
+   "pattern": "the risk-reducer",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": "the revision-included"
+  },
+  {
+   "n": 95,
+   "pattern": "the next-step-per-section",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 96,
+   "pattern": "the price-position",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": "the consistent"
+  },
+  {
+   "n": 97,
+   "pattern": "mobile-first",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": "the grid-reflow"
+  },
+  {
+   "n": 98,
+   "pattern": "the sticky-anchors",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 99,
+   "pattern": "one-action-per-card",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": ""
+  },
+  {
+   "n": 100,
+   "pattern": "the <1s-load",
+   "source": "conversion (the derived)",
+   "status": "applied",
+   "note": "the single-request"
+  }
+ ]
+}

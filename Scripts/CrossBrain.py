@@ -30,12 +30,24 @@ def routes():
 
 
 def ask(prompt, task_class="judge", max_tokens=400, resp_json=False):
-    """The class-routed chat: the route-map's order = the hybrid's decision."""
-    r = routes().get(task_class) or ROUTES_DEFAULT["judge"]
+    """The class-routed chat: the route-map's order = the hybrid's decision.
+    The chat-class = the GROQ-LOCKED (the founder's directive): 3 tries on
+    the first lane before the floor serves (the honest 429-handling)."""
+    r = list(routes().get(task_class) or ROUTES_DEFAULT["judge"])
     import CloudBrain as CB
-    out = CB.chat(prompt, max_tokens=max_tokens,
-                  purpose=f"the crossbrain {task_class}",
-                  models=tuple(r), resp_json=resp_json)
+    tries_first = 3 if task_class == "chat" else 1
+    out = None
+    for attempt in range(tries_first):
+        out = CB.chat(prompt, max_tokens=max_tokens,
+                      purpose=f"the crossbrain {task_class}",
+                      models=tuple(r), resp_json=resp_json)
+        if out:
+            if attempt:
+                print(f"[crossbrain] the chat-lane's {r[0]} served on "
+                      f"try {attempt + 1} (the rate-lane's patience)")
+            return out
+        print(f"[crossbrain] {task_class}: the lead-lane {r[0]} skipped "
+              f"(try {attempt + 1}) - the retry/honest-fallback follows")
     return out
 
 

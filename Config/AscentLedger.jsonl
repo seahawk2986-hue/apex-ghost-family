@@ -173,3 +173,4 @@
 {"ts": "2026-11-01 18:26:43", "kind": "upward", "what": "pr-watch", "states": ["blocked", "blocked"]}
 {"ts": "2026-11-01 18:27:01", "kind": "upward", "what": "pr-watch", "states": ["blocked", "blocked"]}
 {"ts": "2026-11-01 13:28:55", "kind": "upward", "what": "the model-sweep (the hybrid-expansion)", "served": ["phi4-mini:latest", "gemma3:4b", "deepseek-r1:7b"]}
+{"ts": "2026-11-01 13:37:01", "kind": "upward", "what": "demo-desk: the free-triage funnel live"}

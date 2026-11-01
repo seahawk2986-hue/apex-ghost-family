@@ -29,6 +29,11 @@ ASKS = [
 ]
 
 
+def ram_gb():
+    import psutil
+    return psutil.virtual_memory().available / 2**30
+
+
 def ask_local(model, prompt):
     r = subprocess.run(["ollama", "run", model, prompt],
                        capture_output=True, text=True, timeout=420,
@@ -60,6 +65,11 @@ def main():
     for ai, a in enumerate(ASKS):
         answers = {}
         for lane, model, kind in LANES:
+            if kind is None and ram_gb() < 2.2:
+                answers[lane] = ""
+                evalout.setdefault('errs', []).append(
+                    f'{lane}/ask{ai}: RAM-PAUSED (the honest gate)')
+                continue
             try:
                 answers[lane] = (ask_groq(a) if kind else
                                  ask_local(model, a))[:900]
