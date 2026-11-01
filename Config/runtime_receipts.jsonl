@@ -1,0 +1,2 @@
+{"ts": "2026-11-01 09:27:48", "skill": "synthetic-good", "executed": true, "ms": 65.7, "evidence": "probe-ok", "rc": 0}
+{"ts": "2026-11-01 09:27:48", "skill": "synthetic-broken", "executed": false, "ms": 137.8, "evidence": "rc=1: al\\Temp\\apex_runtime_probe.py\", line 1\n    def broken(:\n               ^\nSyntaxError: invalid syntax", "rc": 1}
