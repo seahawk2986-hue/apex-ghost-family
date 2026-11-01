@@ -17,7 +17,10 @@
    "runner": "local",
    "ram_needed": 0.3,
    "capability": "governance",
-   "why": "the wired-links + world-rows (done)"
+   "why": "the wired-links + world-rows (done)",
+   "done": true,
+   "ran_at": "2026-11-01 15:14:02",
+   "tail": "[receipt-fix] polar_shop.json: the wired set restored"
   },
   {
    "id": "rsa-clone",

@@ -11,8 +11,9 @@
 - The account's approved + the payout connected (the Visa ****8902 instant-eligible) + the identity verified - the products + links = API-verified live.
 
 ## 2b. The demo-repo's create (10 sec)
-- https://github.com/new - name: `open-triage-demo`, add-description: "the FREE triage tier", Public.
+- https://github.com/new - name: `open-triage-demo`, description: "The FREE triage tier", **Public**, ✔ "Add a README file" → green **Create repository**.
 - The machine's DemoDesk = watches + serves it (the token's create-scope = refused honestly; the manual-create = the same result).
+- Verify anytime: `python Scripts\_founder_gates.py` (the 2-gates + og-live checker).
 
 ## 3. The 4 paste-ready posts (60 sec each — any/all)
 - `C:\Users\seaha\Apex-Adapter\marketing_kit\` — SHOW_HN / REDDIT / X / LINKEDIN.

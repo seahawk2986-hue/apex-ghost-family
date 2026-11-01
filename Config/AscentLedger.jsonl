@@ -179,3 +179,7 @@
 {"ts": "2026-11-01 14:11:32", "kind": "upward", "what": "earn-loop-beat", "beat": 11, "unclaimed": 6, "filed": false}
 {"ts": "2026-11-01 14:26:57", "kind": "upward", "what": "earn-loop-beat", "beat": 12, "unclaimed": 6, "filed": false}
 {"ts": "2026-11-01 14:42:22", "kind": "upward", "what": "earn-loop-beat", "beat": 13, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 14:57:46", "kind": "upward", "what": "earn-loop-beat", "beat": 14, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 15:13:10", "kind": "upward", "what": "earn-loop-beat", "beat": 15, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 15:14:02", "kind": "upward", "what": "receipt-fix: the wired-links restored + world-rows born"}
+{"ts": "2026-11-01 15:28:35", "kind": "upward", "what": "earn-loop-beat", "beat": 16, "unclaimed": 6, "filed": false}
