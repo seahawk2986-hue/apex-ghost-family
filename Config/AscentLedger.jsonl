@@ -181,3 +181,4 @@
 {"ts": "2026-11-01 13:18:49", "kind": "upward", "what": "receipt-fix: the wired-links restored + world-rows born"}
 {"ts": "2026-11-01 18:24:19", "kind": "upward", "what": "pr-watch", "states": ["blocked", "blocked"]}
 {"ts": "2026-11-01 13:25:19", "kind": "upward", "what": "earn-loop-beat", "beat": 8, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 18:26:43", "kind": "upward", "what": "pr-watch", "states": ["blocked", "blocked"]}
