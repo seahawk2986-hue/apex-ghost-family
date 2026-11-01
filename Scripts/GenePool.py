@@ -137,8 +137,10 @@ def run(gen_mutations=3):
                                  "fitness": 0.259, "descriptor": descriptor(base_genes),
                                  "wins": 0, "mines": 1121, "reqs": 0}
         a["champion"] = "base"
-    parent_vid, parent = champion(a)
-    made = []
+    front = a.get("pareto_front") or [a["champion"]]
+    parent_vid = front[int(a.get("gen", 0)) % len(front)]   # EVOLVE FROM THE FRONT:
+    parent = a["lineages"][parent_vid]                      # parents rotate across the
+    made = []                                               # Pareto front per goal
     for i in range(gen_mutations):
         vid = f"g{a['gen']}_{i}"
         genes = mutate(parent["genes"], rng)
@@ -157,7 +159,7 @@ def run(gen_mutations=3):
     a["champion"] = champion(a)[0]
     save(a)
     print(f"[genepool] gen {a['gen']}: {len(made)} mutated lineages entered "
-          f"({', '.join(made) or 'none - all refused as non-novel'}); "
+          f"(from PARETO parent {parent_vid} - the front rotates); "
           f"archive now {len(a['lineages'])} lineages, champion {a['champion']}")
     return a
 

@@ -2,9 +2,9 @@
  "alpha": 0.3,
  "lineages": {
   "L_test": {
-   "drift": 0.42,
-   "n": 2,
-   "weight": 0.16
+   "drift": 0.521,
+   "n": 4,
+   "weight": 0.0
   }
  },
  "note": "rebuilt after a conflict-marker clobber; the EMA rediscovers states each run"
