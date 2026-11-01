@@ -62,6 +62,9 @@ DEMANDS = {           # ALL 30 goals (aliases honor their measured successors)
     "reward_integrity": {"cpu_serial": 0.05, "fs_trust": 1.0},
     "earn_lane_matrix": {"cpu_serial": 0.1, "human_attention": 1.0,
                          "fs_trust": 1.0},
+    "capability_evolution": {"cpu_serial": 0.1, "fs_trust": 1.0},
+    "the_roster_agents": {"cpu_serial": 0.1, "ram_free_gb": 4.4,
+                          "fs_trust": 1.0},
     "tri_genome": {}, "elections": {}, "throne": {}, "sleep": {},
 }
 
@@ -133,6 +136,11 @@ TENSIONS = [
     ("earn_lane_matrix", "money", "the drafter + the sim prepare everything; "
      "the FOUNDER'S HAND stays the gate between drafts and the world (the "
      "money-law is enforced inside the organ: drafts are born filed=False)"),
+    ("capability_evolution", "omnivore", "when a job is beyond the "
+     "capability: source -> adopt/synthesize -> re-test - the gap "
+     "EVOLVES INTO capability (the canon's acquisition loop)"),
+    ("the_roster_agents", "coding", "the local-coder brain works the repo "
+     "patch classes at $0 (the free tier powers the code-fix work)"),
 ]
 
 # THE SYNERGY MAP - how goals POWER each other (named mechanisms)

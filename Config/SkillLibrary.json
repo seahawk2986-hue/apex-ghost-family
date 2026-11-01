@@ -3407,7 +3407,7 @@
    "license": "check repo",
    "sha256": "6bc9269df79f6c211a0c72816d3c4a29a8491f0202ac56506a6a0c97855db1a9",
    "lines": 22,
-   "first_line": "\"\"\"User-data helpers — re-exported from ``crewai_core.user_data``.\"\"\"",
+   "first_line": "\"\"\"User-data helpers \u2014 re-exported from ``crewai_core.user_data``.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:12"
   },
@@ -3446,7 +3446,7 @@
    "license": "check repo",
    "sha256": "45ee86a7440b594196ed9578fa0346585184fb3d19b04ae248d2de9c529423dd",
    "lines": 24,
-   "first_line": "\"\"\"OAuth2 authentication primitives — shared by crewai and crewai-cli.\"\"\"",
+   "first_line": "\"\"\"OAuth2 authentication primitives \u2014 shared by crewai and crewai-cli.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:19"
   },
@@ -4109,6 +4109,26 @@
    "first_line": "from __future__ import annotations",
    "imports": [],
    "registered": "2026-11-01 10:04:51"
+  },
+  {
+   "skill": "apex_muse_check_11011123",
+   "source_file": "Config/SkillLibrary.json#apex_muse_check_11011123",
+   "source_repo": "apex-self",
+   "first_line": "# synthesized for the security class (the capability evolution; disclosed)",
+   "imports": [],
+   "lines": 6,
+   "sha256": "",
+   "license": "MIT"
+  },
+  {
+   "skill": "apex_muse_check_11011123",
+   "source_file": "Config/SkillLibrary.json#apex_muse_check_11011123",
+   "source_repo": "apex-self",
+   "first_line": "# synthesized for the security class (the capability evolution; disclosed)",
+   "imports": [],
+   "lines": 6,
+   "sha256": "",
+   "license": "MIT"
   }
  ],
  "built": "2026-11-01 10:04:51"

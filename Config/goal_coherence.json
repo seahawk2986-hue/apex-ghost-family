@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-01 10:45:18",
+ "ts": "2026-11-01 11:23:57",
  "goals_total": 30,
  "goals_measured": 9,
  "budget": {
@@ -136,6 +136,15 @@
    "human_attention": 1.0,
    "fs_trust": 1.0
   },
+  "capability_evolution": {
+   "cpu_serial": 0.1,
+   "fs_trust": 1.0
+  },
+  "the_roster_agents": {
+   "cpu_serial": 0.1,
+   "ram_free_gb": 4.4,
+   "fs_trust": 1.0
+  },
   "tri_genome": {},
   "elections": {},
   "throne": {},
@@ -243,7 +252,7 @@
    ]
   }
  },
- "tensions_guarded": 20,
+ "tensions_guarded": 22,
  "synergies": [
   "gold+omnivore: mined material IS the skill source: harvest feeds the library",
   "gold+coding: every triaged lead is an exercise: the backlog trains",
