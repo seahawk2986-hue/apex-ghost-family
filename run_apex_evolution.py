@@ -1539,11 +1539,20 @@ def talk_api(t: TalkMsg):
         f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n\nLIBRARY SKILLS:{skill_hits}\n\n"
         f"ANDREW SAYS:\n{msg}\n\nREPLY:")
     # THE FOUNDER'S CHAT-LOCK (the blind-eval's #1 = the 120b-first):
+    reply = None
     try:
+        sys.path.insert(0, os.path.join(R, "Scripts"))
         import CrossBrain as _XB
         reply = _XB.ask(prompt, task_class="chat", max_tokens=800)
-    except Exception:
-        reply = query_qw(prompt)
+        if reply:
+            log("system", "chat served by: gpt-oss-120b (groq)")
+    except Exception as _e:
+        log("system", f"chat-lock drop: {str(_e)[:70]} (the qwen-floor)")
+    if not reply:
+        try:
+            reply = query_qw(prompt)
+        except Exception:
+            reply = ""
         if not reply and cloud_ask:
             reply = cloud_ask(prompt, max_tokens=700)
     try:
