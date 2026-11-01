@@ -1,33 +1,40 @@
 {
- "ts": "2026-11-01 10:31:11",
- "wall_min": 1.2,
+ "ts": "2026-11-01 12:41:33",
+ "wall_min": 2.1,
  "steps": [
   {
    "step": "capability_rescan",
    "script": "CapabilityRescan.py",
    "rc": 0,
-   "s": 0.4,
+   "s": 1.6,
    "verdict": "[rescan] VERDICT: PASS -> implemented"
   },
   {
    "step": "paper_tools",
    "script": "PaperTools.py",
    "rc": 0,
-   "s": 0.8,
+   "s": 1.0,
    "verdict": "[paper-tools] VERDICT: PASS -> implemented"
+  },
+  {
+   "step": "earn_lane_matrix",
+   "script": "EarnLaneMatrix.py",
+   "rc": 0,
+   "s": 0.1,
+   "verdict": "[earn-matrix] VERDICT: PASS -> implemented"
   },
   {
    "step": "code_profiler",
    "script": "CodeProfiler.py",
    "rc": 0,
-   "s": 4.5,
+   "s": 5.7,
    "verdict": "[profiler] VERDICT: PASS -> implemented"
   },
   {
    "step": "full_sweep",
    "script": "FullSweep.py",
    "rc": 0,
-   "s": 7.2,
+   "s": 23.9,
    "verdict": "[sweep] VERDICT: PASS -> implemented"
   },
   {
@@ -48,7 +55,7 @@
    "step": "goal_coherence",
    "script": "GoalCoherence.py",
    "rc": 0,
-   "s": 0.1,
+   "s": 0.2,
    "verdict": "[coherence] VERDICT: PASS -> implemented"
   },
   {
@@ -62,7 +69,7 @@
    "step": "sources_audit",
    "script": "_sources_audit.py",
    "rc": 0,
-   "s": 0.7,
+   "s": 0.8,
    "verdict": "SOURCES AUDIT: ALL SOURCES CURRENT + COMMITTED; live-organ rewrites pending cadence (expec"
   },
   {
@@ -76,8 +83,8 @@
    "step": "the_full_suite_x2",
    "script": "RepeatTest.py",
    "rc": 0,
-   "s": 52.3,
-   "verdict": "[SurrogateFitnessCourt.py] rc=0 (117ms) -> [sfc] VERDICT: PASS -> wired into pre-stage"
+   "s": 89.3,
+   "verdict": "[SurrogateFitnessCourt.py] rc=0 (116ms) -> [sfc] VERDICT: PASS -> wired into pre-stage"
   }
  ],
  "verdict": "THE COMPLETE RESCAN: every step green"
