@@ -153,6 +153,7 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
                 body = {"model": model, "stream": False,
                         "messages": [{"role": "user",
                                       "content": prompt[:6000]}],
+                        "keep_alive": "1m",
                         "options": {"num_predict": max(max_tokens, 512),
                                     "temperature": 0}}
                 if os.environ.get("CB_FORMAT_JSON") == "1":
