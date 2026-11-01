@@ -13,6 +13,8 @@ import sys
 
 ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 CANON = os.path.join(ROOT, "Config", "papers_2026_agents.jsonl")
+PRIOR = os.path.join(ROOT, "Config", "papers_2026_evolution.jsonl")
+GENERAL = os.path.join(ROOT, "Config", "papers_2026.jsonl")
 REPORT = os.path.join(ROOT, "Config", "goal_comparison.json")
 sys.path.insert(0, os.path.join(ROOT, "Scripts"))
 import ApexUpward as AU
@@ -29,7 +31,7 @@ CLUSTERS = {
     "skill_library": re.compile(
         r"skill (library|acquisition|discover)|tool (use|making|creation)|mastery", re.I),
     "autonomy_selfimprove": re.compile(
-        r"self[- ]improv|autonomous|agentic (loop|workflow)|research agent", re.I),
+        r"self[- ](improv|evolv)|autonomous|agentic|research agent", re.I),
     "benchmark_driven": re.compile(
         r"SWE[- ]?bench|benchmark|leaderboard|pass@(\d+|k)", re.I),
     "efficiency_constraint": re.compile(
@@ -37,18 +39,31 @@ CLUSTERS = {
 }
 
 
-def scan():
-    papers = [json.loads(x) for x in open(CANON, encoding="utf-8-sig")
-              if x.strip()]
-    counts = {k: 0 for k in CLUSTERS}
+def scan(*paths):
+    """Full-corpus scan: reads EVERY ledger passed, dedupes by paper id,
+    counts each paper ONCE (the honest inventory)."""
+    seen, counts = set(), {k: 0 for k in CLUSTERS}
     reps = {k: [] for k in CLUSTERS}
-    for p in papers:
-        hay = p.get("title", "") + " " + p.get("abstract", "")
-        for k, pat in CLUSTERS.items():
-            if pat.search(hay):
-                counts[k] += 1
-                if len(reps[k]) < 3:
-                    reps[k].append(p["id"] + " " + p["title"][:60])
+    papers = []
+    canon_files = paths or [CANON]
+    for path in canon_files:
+        try:
+            rows = [json.loads(x) for x in open(path, encoding="utf-8-sig")
+                    if x.strip()]
+        except Exception:
+            continue
+        for p in rows:
+            pid = p.get("id")
+            if not pid or pid in seen:
+                continue
+            seen.add(pid)
+            papers.append(p)
+            hay = p.get("title", "") + " " + p.get("abstract", "")
+            for k, pat in CLUSTERS.items():
+                if pat.search(hay):
+                    counts[k] += 1
+                    if len(reps[k]) < 3:
+                        reps[k].append(pid + " " + p["title"][:60])
     return papers, counts, reps
 
 
@@ -89,21 +104,28 @@ def our_position(counts, reps):
 
 
 def selftest():
-    print("=== GOAL COMPARISON'S OWN GATE ===")
-    papers, counts, reps = scan()
-    leg_a = len(papers) == 100 and sum(counts.values()) > 5 and \
-        len([k for k, v in counts.items() if v]) >= 5
-    print(f"   canon scan: 100 papers -> clusters " +
+    print("=== GOAL COMPARISON'S OWN GATE (full 621-corpus) ===")
+    legs = []
+    papers, counts, reps = scan(CANON, PRIOR, GENERAL)
+    leg_a = len({p.get("id") for p in papers
+                 if isinstance(p, dict)}) >= 621 \
+        and sum(counts.values()) > 5 \
+        and len([k for k, v in counts.items() if v]) >= 5
+    print(f"   canon scan: {len({p.get('id') for p in papers if isinstance(p, dict)})} "
+          f"unique papers -> clusters " +
           " | ".join(f"{k}:{v}" for k, v in counts.items()))
     print(f"   clusters alive: {len([k for k, v in counts.items() if v])} (>=5: {leg_a})")
     adopt = our_position(counts, reps)
-    leg_b = all(x["serves"] and x["feasible_now"] is not None for x in adopt) and len(adopt) >= 5
+    leg_b = all(x["serves"] and x["feasible_now"] is not None for x in adopt) \
+        and len(adopt) >= 5
     goals_in = {g for x in adopt for g in x["serves"].split("+")}
     known = set(AU.GOAL_KEYS) | {"upward_evo"}
     leg_b = leg_b and goals_in <= known
-    print(f"   adopt-list: {len(adopt)} mechanisms, goals touched {sorted(goals_in)}")
+    print(f"   adopt-list: {len(adopt)} mechanisms, goals touched "
+          f"{sorted(goals_in)}")
     rep = {"ts": __import__("time").strftime("%Y-%m-%d %H:%M:%S"),
-           "canon": "Config/papers_2026_agents.jsonl (100 papers, deduped vs 521)",
+           "canon": "the FULL 621-corpus (100 general + 421 evolution + 100 "
+                    "agents) - deduped, each paper counted ONCE",
            "their_goal_clusters": {k: {"n": counts[k], "reps": reps[k]}
                                    for k in counts},
            "our_goals": list(AU.GOAL_KEYS),
@@ -114,8 +136,8 @@ def selftest():
         json.dump(rep, f, indent=1)
     os.replace(tmp, REPORT)
     leg_c = json.load(open(REPORT, encoding="utf-8-sig"))["ts"] == rep["ts"]
-    # reproducibility: rerun scan -> identical counts (pure text match)
-    _p2, c2, _r2 = scan()
+    # reproducibility: rerun the FULL-corpus scan -> identical counts
+    _p2, c2, _r2 = scan(CANON, PRIOR, GENERAL)
     leg_d = c2 == counts
     print(f"   report written + roundtrip {leg_c} | reproducible clusters: {leg_d}")
     legs = [("clusters_extracted", leg_a), ("adopt_list_valid", leg_b),
