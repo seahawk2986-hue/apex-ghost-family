@@ -12,9 +12,9 @@
     "numpy"
    ],
    "registered": "2026-10-31 11:20:49",
-   "executable_verified": false,
-   "compiles": false,
-   "verified_at": "2026-10-31 21:35:32"
+   "executable_verified": true,
+   "compiles": true,
+   "verified_at": "2026-10-31 21:39:35"
   },
   {
    "skill": "making_simple_decisions",
@@ -26,9 +26,9 @@
    "first_line": "\"\"\"Making Simple Decisions (Chapter 15/16)",
    "imports": [],
    "registered": "2026-10-31 11:20:49",
-   "executable_verified": false,
-   "compiles": false,
-   "verified_at": "2026-10-31 21:35:32"
+   "executable_verified": true,
+   "compiles": true,
+   "verified_at": "2026-10-31 21:39:35"
   },
   {
    "skill": "probabilistic_learning",
@@ -44,7 +44,7 @@
    "registered": "2026-10-31 11:20:49",
    "executable_verified": false,
    "compiles": false,
-   "verified_at": "2026-10-31 21:35:32"
+   "verified_at": "2026-10-31 21:39:35"
   },
   {
    "skill": "naive_bayes",
@@ -56,9 +56,9 @@
    "first_line": "from sklearn.datasets import make_classification",
    "imports": [],
    "registered": "2026-10-31 11:20:49",
-   "executable_verified": false,
-   "compiles": false,
-   "verified_at": "2026-10-31 21:35:32"
+   "executable_verified": true,
+   "compiles": true,
+   "verified_at": "2026-10-31 21:39:37"
   },
   {
    "skill": "01-matrix",
@@ -72,9 +72,9 @@
     "collections"
    ],
    "registered": "2026-10-31 11:20:50",
-   "executable_verified": false,
-   "compiles": false,
-   "verified_at": "2026-10-31 21:35:32"
+   "executable_verified": true,
+   "compiles": true,
+   "verified_at": "2026-10-31 21:39:38"
   },
   {
    "skill": "__init__",
@@ -89,9 +89,9 @@
     "warnings"
    ],
    "registered": "2026-10-31 11:20:50",
-   "executable_verified": false,
-   "compiles": false,
-   "verified_at": "2026-10-31 21:35:32"
+   "executable_verified": true,
+   "compiles": true,
+   "verified_at": "2026-10-31 21:39:40"
   },
   {
    "skill": "nearest_neighbors",

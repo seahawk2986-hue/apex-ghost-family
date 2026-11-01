@@ -84,15 +84,26 @@ def pick_candidate():
 
 
 def localize(repo, keywords):
-    """W3 phase 1: shallow tarball (keyless), stream files, keep excerpts whose
-    path or content matches issue keywords. Bounded: <=6 excerpts, <=4KB each."""
+    """W3 phase 1: shallow tarball (keyless, branch-fallback), stream files,
+    keep excerpts whose path or content matches issue keywords. Bounded."""
     ev, scanned = [], 0
+    raw = None
+    for suffix in ("refs/heads/HEAD", "", "refs/heads/master", "refs/heads/main"):
+        try:
+            url = f"https://codeload.github.com/{repo}/tar.gz"
+            if suffix:
+                url += "/" + suffix
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=60) as r:
+                raw = r.read()
+            break
+        except Exception as e:
+            print(f"[convert] fetch {repo} ({suffix or 'default'}) -> {str(e)[:50]}")
+            raw = None
+    if not raw:
+        print("[convert] localize failed honestly: all branches exhausted")
+        return ev, scanned
     try:
-        req = urllib.request.Request(
-            f"https://codeload.github.com/{repo}/tar.gz/refs/heads/HEAD",
-            headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=60) as r:
-            raw = r.read()
         tf = tarfile.open(fileobj=io.BytesIO(raw), mode="r:gz")
         kws = [k for k in re.split(r"\W+", (keywords or "").lower()) if len(k) > 3][:8]
         for m0 in tf.getmembers():
@@ -111,7 +122,7 @@ def localize(repo, keywords):
                 if len(ev) >= 6:
                     break
     except Exception as e:
-        print(f"[convert] localize failed honestly: {str(e)[:70]}")
+        print(f"[convert] localize parse failed honestly: {str(e)[:70]}")
     return ev, scanned
 
 
