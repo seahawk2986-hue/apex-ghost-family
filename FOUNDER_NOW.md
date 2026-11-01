@@ -6,9 +6,10 @@
 - Their bot posted the exact-request in the PR's comments: https://github.com/dream-machine-systems/dream-machine-os/pull/23
 - Open the CLA's text: https://github.com/dream-machine-systems/dream-machine-os/blob/main/CLA.md — post your attestation as the YOUR-comment (the legal-act = yours honestly).
 
-## 2. The Polar's go-live confirm (30 sec)
-- https://dashboard.polar.sh - if a red banner asks for the extra payout info = complete; then the "Go live" toggle.
-- The account's approved + the payout connected (the Visa ****8902 instant-eligible) + the identity verified - the products + links = API-verified live.
+## 2. ~~The Polar's go-live confirm~~ — ✅ DONE, VERIFIED LIVE (no click needed)
+- The 3 buy-links on the landing = all `buy.polar.sh` (the production checkout-domain; the sandbox-would-be = `sandbox.polar.sh`): **3 live / 0 sandbox** (`Scripts\_store_mode.py`, receipt 2026-11-01).
+- The Overview's $0s = zero SALES (the honest ledger), not zero readiness. The store accepts real money NOW.
+- The founder's dashboard = nothing to do here. First sale → the Visa ****8902 payout (instant-eligible).
 
 ## 2b. The demo-repo's create (10 sec)
 - https://github.com/new - name: `open-triage-demo`, description: "The FREE triage tier", **Public**, ✔ "Add a README file" → green **Create repository**.
