@@ -3,7 +3,7 @@
  "lineages": {
   "L_test": {
    "drift": 0.203,
-   "n": 24,
+   "n": 32,
    "weight": 0.594
   }
  },

@@ -1,9 +1,9 @@
 {
- "ts": "2026-11-01 09:18:08",
- "canon": "Config/papers_2026_agents.jsonl (100 papers, deduped vs 521)",
+ "ts": "2026-11-01 09:38:22",
+ "canon": "the FULL 621-corpus (100 general + 421 evolution + 100 agents) - deduped, each paper counted ONCE",
  "their_goal_clusters": {
   "verification_runtime": {
-   "n": 17,
+   "n": 67,
    "reps": [
     "2610.38800v1 When Relevant Code Is Wrong: Runtime-Aware Context for AI Co",
     "2610.38799v1 CARI: Cross-Boundary Adversarial Runtime Injection in Coding",
@@ -11,7 +11,7 @@
    ]
   },
   "long_horizon": {
-   "n": 7,
+   "n": 39,
    "reps": [
     "2610.40256v1 When Requirements Interact: Scaling Long-Horizon Coding via ",
     "2610.37224v1 Spine: Compiling Subtask Trees into Structured Context for L",
@@ -19,7 +19,7 @@
    ]
   },
   "context_engineering": {
-   "n": 10,
+   "n": 33,
    "reps": [
     "2610.38800v1 When Relevant Code Is Wrong: Runtime-Aware Context for AI Co",
     "2610.38332v1 MUSE: Multi-Level Memory with Selective Runtime Injection fo",
@@ -27,7 +27,7 @@
    ]
   },
   "memory_lifelong": {
-   "n": 8,
+   "n": 55,
    "reps": [
     "2610.38521v1 Security Impact of Coding Agent's Memory Files",
     "2610.38332v1 MUSE: Multi-Level Memory with Selective Runtime Injection fo",
@@ -35,7 +35,7 @@
    ]
   },
   "skill_library": {
-   "n": 3,
+   "n": 9,
    "reps": [
     "2610.32648v1 StateMirror: Pre-Execution Detection of Hallucinated Tool Ca",
     "2610.36469v1 CoHARL: Co-Evolving Agent Policies and Executable Harnesses ",
@@ -43,15 +43,15 @@
    ]
   },
   "autonomy_selfimprove": {
-   "n": 7,
+   "n": 233,
    "reps": [
     "2610.39620v1 Letting AI Formulate the Research Question: Autonomous Resea",
-    "2610.35971v1 Continue or Restart? The Limits of Early Failure Prediction ",
-    "2610.33588v1 Developers as Managers of AI Agents: A Workplace Shadowing S"
+    "2610.38244v1 Precedent or Intent? What Coding Agents Follow When Evolving",
+    "2610.35138v1 Co-Design Bench: Multimodal Collaborative Coding Evaluation "
    ]
   },
   "benchmark_driven": {
-   "n": 22,
+   "n": 62,
    "reps": [
     "2610.38617v1 How Deterministic SAST and AI Security Agents Divide the Wor",
     "2610.37434v1 FeatureArc: Benchmarking Coding Agents on Evolving Features",
@@ -59,7 +59,7 @@
    ]
   },
   "efficiency_constraint": {
-   "n": 15,
+   "n": 99,
    "reps": [
     "2610.36405v1 kw-bench: Breaking Frontier Harnesses on Real-World Tasks",
     "2610.36153v1 Stratum: Repository Memory for Coding Agents Beyond the Cont",
