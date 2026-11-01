@@ -6,14 +6,14 @@
   "novelty_distance": 0.5
  },
  "wins": {
-  "territory_match": 17,
-  "lesson_coverage": 447,
+  "territory_match": 19,
+  "lesson_coverage": 514,
   "novelty_distance": 1
  },
  "trials": {
-  "territory_match": 18,
-  "lesson_coverage": 448,
+  "territory_match": 20,
+  "lesson_coverage": 515,
   "novelty_distance": 2
  },
- "measured_pairs": 57
+ "measured_pairs": 63
 }

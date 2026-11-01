@@ -357,13 +357,45 @@
    "wins": 0,
    "mines": 0,
    "reqs": 0
+  },
+  "g20_0": {
+   "params": {
+    "ghost_cc_leads": 148,
+    "ghost_events": 104,
+    "ghost_trending": 36,
+    "ghost_wiki_leads": 72,
+    "ghost_wayback_leads": 98,
+    "ghost_queue_mines_to_farm": 27,
+    "ghost_min_stars": 333
+   },
+   "fitness": 0.0,
+   "descriptor": "cc2_ev4_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g21_1": {
+   "params": {
+    "ghost_cc_leads": 140,
+    "ghost_events": 89,
+    "ghost_trending": 46,
+    "ghost_wiki_leads": 52,
+    "ghost_wayback_leads": 71,
+    "ghost_queue_mines_to_farm": 25,
+    "ghost_min_stars": 271
+   },
+   "fitness": 0.0,
+   "descriptor": "cc2_ev3_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
   }
  },
  "family": {
   "champion": "base"
  },
  "andrew_help": {
-  "briefs": 130,
+  "briefs": 132,
   "alarmsRaised": 6,
   "lastHelp": "2026-10-31 22:18:04",
   "earn_briefs": [
@@ -394,6 +426,14 @@
    {
     "ts": "2026-11-01 12:08:15",
     "text": "EarnLoop beat 3: the top unclaimed = Primeteumm/Screenshot-Enhancer; filed=False"
+   },
+   {
+    "ts": "2026-11-01 12:23:40",
+    "text": "EarnLoop beat 4: the top unclaimed = Primeteumm/Screenshot-Enhancer; filed=False"
+   },
+   {
+    "ts": "2026-11-01 12:39:05",
+    "text": "EarnLoop beat 5: the top unclaimed = Primeteumm/Screenshot-Enhancer; filed=False"
    }
   ]
  },
@@ -409,8 +449,8 @@
   "recruit_bonus": 1.0
  },
  "upward": {
-  "ts": "2026-11-01 11:55:51",
-  "alarms": 1,
+  "ts": "2026-11-01 12:40:57",
+  "alarms": 0,
   "genes_front": [
    "base"
   ],
@@ -420,13 +460,13 @@
    "papers_2026": 100,
    "papers_evolution": 421
   },
-  "gi_score": 413.3,
+  "gi_score": 419.3,
   "goals": {
-   "gold": 2243.0,
+   "gold": 2359.0,
    "money": 0.0,
-   "life": 135.0,
+   "life": 138.0,
    "recruits": 6.0,
-   "jobs": 213.0,
+   "jobs": 68.0,
    "coding": 405.0,
    "omnivore": 433.0,
    "efficiency": 526.0,
@@ -435,7 +475,7 @@
   "ascent_last": 3.987
  },
  "lane_plan": {
-  "ts": "2026-11-01 10:30:59",
+  "ts": "2026-11-01 12:41:04",
   "search": "bounded-best-first depth2 beam4",
   "lane_order": [
    "forge",

@@ -1,9 +1,9 @@
 {
- "ts": "2026-11-01 11:55:51",
- "ms": 8175.2,
+ "ts": "2026-11-01 12:40:57",
+ "ms": 4091.4,
  "state": {
   "genes": {
-   "gen": 20,
+   "gen": 22,
    "champion": "base",
    "front": [
     "base"
@@ -92,6 +92,14 @@
     "g19_0": {
      "fitness": 0.0,
      "m_rounds": 0
+    },
+    "g20_0": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g21_1": {
+     "fitness": 0.0,
+     "m_rounds": 0
     }
    }
   },
@@ -129,7 +137,7 @@
    }
   },
   "help": {
-   "briefs": 129,
+   "briefs": 132,
    "alarmsRaised": 6
   },
   "canon": {
@@ -162,7 +170,7 @@
    "mcp.json": true
   },
   "jobs": {
-   "opps_inbox": 146,
+   "opps_inbox": 1,
    "rungs_filed": 67
   },
   "proactive": {
@@ -175,7 +183,7 @@
    "head": ""
   },
   "hardware": {
-   "ram_free_gb": 4.83,
+   "ram_free_gb": 4.39,
    "tier": "chain-window",
    "allowed": [
     "chain",
@@ -183,7 +191,7 @@
     "genes"
    ],
    "starved": false,
-   "proc_rss_mb": 101.5,
+   "proc_rss_mb": 34.0,
    "gpu_note": "no GPU loads for swarm work (the 3050 stays idle-capable)"
   },
   "lessons": {
@@ -196,7 +204,7 @@
   },
   "digest": {
    "present": true,
-   "age_min": 0.1
+   "age_min": 45.2
   },
   "brain": {
    "ollama_chat": [
@@ -208,9 +216,9 @@
    "ok": true
   },
   "mining": {
-   "net_reqs": 176,
-   "net_ok": 62,
-   "findings": 85
+   "net_reqs": 171,
+   "net_ok": 68,
+   "findings": 201
   },
   "transport": {
    "last_hub_root": "{'sha': '4fe1c94a79d9', 'commit_msg': 'grain: hub harvest 133 (manifest-digested) [skip ci]', 'ts': '2026-10-31 22:18:04'}"
@@ -219,62 +227,60 @@
  "folded_genes": [],
  "rolled_back": [],
  "retired": [],
- "floors_restored": 1,
+ "floors_restored": 0,
  "git_restored": 0,
- "alarms": [
-  "knowledge lane 'events.mines' regressed 54 -> 42 (PathMemory clobber suspected)"
- ],
+ "alarms": [],
  "goals": {
   "gold": {
-   "score": 2243.0,
-   "delta": 5.0,
-   "progress_age_min": 0.0
+   "score": 2359.0,
+   "delta": 0.0,
+   "progress_age_min": 0.9
   },
   "money": {
    "score": 0.0,
    "delta": 0.0,
-   "progress_age_min": 176.7
+   "progress_age_min": 221.8
   },
   "life": {
-   "score": 135.0,
+   "score": 138.0,
    "delta": 0.0,
-   "progress_age_min": 0.1
+   "progress_age_min": 0.9
   },
   "recruits": {
    "score": 6.0,
    "delta": 0.0,
-   "progress_age_min": 131.6
+   "progress_age_min": 176.7
   },
   "jobs": {
-   "score": 213.0,
+   "score": 68.0,
    "delta": 0.0,
-   "progress_age_min": 131.6
+   "progress_age_min": 176.7
   },
   "coding": {
    "score": 405.0,
    "delta": 0.0,
-   "progress_age_min": 0.1
+   "progress_age_min": 45.2
   },
   "omnivore": {
    "score": 433.0,
    "delta": 0.0,
-   "progress_age_min": 0.1
+   "progress_age_min": 45.2
   },
   "efficiency": {
    "score": 526.0,
    "delta": 0.0,
-   "progress_age_min": 131.6
+   "progress_age_min": 176.7
   },
   "safety": {
    "score": 2.0,
    "delta": 0.0,
-   "progress_age_min": 131.6
+   "progress_age_min": 176.7
   }
  },
  "goal_progress": {
-  "gold": 1793552151.1549325,
+  "gold": 1793554804.2422295,
   "money": 1793541551.1543214,
-  "life": 1793552142.9098723,
+  "life": 1793554804.2422295,
   "recruits": 1793544253.5449352,
   "jobs": 1793544253.5449352,
   "coding": 1793552142.9098723,
@@ -282,7 +288,7 @@
   "efficiency": 1793544253.5449352,
   "safety": 1793544253.5449352
  },
- "gi_score": 413.3,
+ "gi_score": 419.3,
  "goal_genealogy": {
   "gold": {
    "origin": "ApplyTriGenome: MAXIMIZE YIELD (mines/req - the original fitness)",
@@ -457,21 +463,6 @@
  },
  "hardware_history": [
   {
-   "ts": "10:26:10",
-   "ms": 4116.9,
-   "ram": 7.47
-  },
-  {
-   "ts": "10:26:18",
-   "ms": 4159.8,
-   "ram": 7.47
-  },
-  {
-   "ts": "10:26:44",
-   "ms": 4115.2,
-   "ram": 7.43
-  },
-  {
    "ts": "10:30:18",
    "ms": 4142.4,
    "ram": 7.49
@@ -495,6 +486,21 @@
    "ts": "11:55:51",
    "ms": 8175.2,
    "ram": 4.83
+  },
+  {
+   "ts": "12:40:04",
+   "ms": 4148.7,
+   "ram": 4.43
+  },
+  {
+   "ts": "12:40:13",
+   "ms": 4112.2,
+   "ram": 4.36
+  },
+  {
+   "ts": "12:40:57",
+   "ms": 4091.4,
+   "ram": 4.39
   }
  ],
  "speed": {

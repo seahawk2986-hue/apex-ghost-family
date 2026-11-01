@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-01 10:45:41",
+ "ts": "2026-11-01 12:39:29",
  "canon": {
   "n": 100,
   "lanes": {
@@ -93,12 +93,12 @@
   },
   {
    "lane": "jobs marketplace asks",
-   "n": 12,
+   "n": 0,
    "status": "REAL inbox (EV-graded via FinancialBrain)"
   },
   {
    "lane": "service catalog (doors offer)",
-   "n": 6,
+   "n": 22,
    "status": "REAL (channels listed; checkout = founder-gated)"
   },
   {
@@ -124,8 +124,8 @@
   "bounty_lane_ev_per_filed_verified_bug": 50.0,
   "marketplace_lane_ev_per_completed_rung": 25.0,
   "candidates": 18,
-  "asks": 12,
-  "theoretical_ceiling_usd_if_all_verified_and_filed": 1200.0,
+  "asks": 0,
+  "theoretical_ceiling_usd_if_all_verified_and_filed": 900.0,
   "honest": "a ceiling, not a forecast; verification + the founder's filing are the gates between theory and the tally"
  },
  "money_law": "NOTHING auto-files; the founder's hand is the gate between drafts and the world",

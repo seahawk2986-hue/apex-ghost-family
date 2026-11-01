@@ -43,3 +43,6 @@
 {"id": "1030-0", "task": "Fork, Commit, Merge - Easy Issue (Spring Boot)", "kind": "locate", "criterion": "name the exact file:line where the change lands", "depends_on": null, "serves": "long_horizon_specs"}
 {"id": "1030-1", "task": "Fork, Commit, Merge - Easy Issue (Spring Boot)", "kind": "change", "criterion": "state the minimal change as a diff-sized contract", "depends_on": "1030-0", "serves": "long_horizon_specs"}
 {"id": "1030-2", "task": "Fork, Commit, Merge - Easy Issue (Spring Boot)", "kind": "verify", "criterion": "a test/command whose exit 0 proves the chunk done", "depends_on": "1030-1", "serves": "long_horizon_specs"}
+{"id": "1240-0", "task": "drain the discovery backlog", "kind": "locate", "criterion": "name the exact file:line where the change lands", "depends_on": null, "serves": "long_horizon_specs"}
+{"id": "1240-1", "task": "drain the discovery backlog", "kind": "change", "criterion": "state the minimal change as a diff-sized contract", "depends_on": "1240-0", "serves": "long_horizon_specs"}
+{"id": "1240-2", "task": "drain the discovery backlog", "kind": "verify", "criterion": "a test/command whose exit 0 proves the chunk done", "depends_on": "1240-1", "serves": "long_horizon_specs"}

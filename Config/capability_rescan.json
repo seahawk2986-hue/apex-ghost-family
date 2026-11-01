@@ -1,7 +1,7 @@
 {
- "ts": "2026-11-01 10:31:10",
+ "ts": "2026-11-01 12:41:04",
  "canon_unique": 721,
- "live_organs_scanned": 93,
+ "live_organs_scanned": 132,
  "class_counts": {
   "autonomy_selfimprove": 260,
   "benchmark_driven": 80,
@@ -91,5 +91,5 @@
  },
  "GAPS_RANKED": [],
  "law": "implement in canon-mass order, hardware-legal, test-first, clash-checked",
- "live_lines_scanned": 16428
+ "live_lines_scanned": 21767
 }
