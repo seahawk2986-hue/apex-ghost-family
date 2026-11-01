@@ -1,32 +1,12 @@
 {
- "ts": "2026-11-01 09:35:51",
+ "ts": "2026-11-01 10:00:21",
  "needs": 12,
  "library": 302,
  "asks_scanned": 12,
  "canon_titles": 100,
  "gaps": [
   {
-   "term": "dojo",
-   "source": "jobs_inbox x11",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "community",
-   "source": "jobs_inbox x10",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "kana",
-   "source": "jobs_inbox x11",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "lingdojo",
-   "source": "jobs_inbox x11",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "https",
+   "term": "first",
    "source": "jobs_inbox x12",
    "serves": "skill_omnivore"
   },
@@ -36,8 +16,28 @@
    "serves": "skill_omnivore"
   },
   {
-   "term": "first",
+   "term": "wanted",
    "source": "jobs_inbox x12",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "kana",
+   "source": "jobs_inbox x11",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "help",
+   "source": "jobs_inbox x12",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "https",
+   "source": "jobs_inbox x12",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "community",
+   "source": "jobs_inbox x10",
    "serves": "skill_omnivore"
   },
   {
@@ -46,13 +46,8 @@
    "serves": "skill_omnivore"
   },
   {
-   "term": "false",
-   "source": "jobs_inbox x12",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "wanted",
-   "source": "jobs_inbox x12",
+   "term": "dojo",
+   "source": "jobs_inbox x11",
    "serves": "skill_omnivore"
   },
   {
@@ -66,7 +61,12 @@
    "serves": "skill_omnivore"
   },
   {
-   "term": "help",
+   "term": "lingdojo",
+   "source": "jobs_inbox x11",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "false",
    "source": "jobs_inbox x12",
    "serves": "skill_omnivore"
   },
@@ -102,7 +102,7 @@
   },
   {
    "term": "autonomy_selfimprove",
-   "source": "canon cluster (2 papers)",
+   "source": "canon cluster (10 papers)",
    "serves": "skill_omnivore"
   }
  ],

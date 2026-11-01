@@ -25,6 +25,7 @@ CHAIN = [
     ("capability_rescan", "CapabilityRescan.py"),
     ("paper_tools", "PaperTools.py"),
     ("code_profiler", "CodeProfiler.py"),
+    ("full_sweep", "FullSweep.py"),
     ("bounded_planner", "BoundedPlanner.py"),
     ("reward_integrity", "RewardIntegrity.py"),
     ("goal_coherence", "GoalCoherence.py"),

@@ -3407,7 +3407,7 @@
    "license": "check repo",
    "sha256": "6bc9269df79f6c211a0c72816d3c4a29a8491f0202ac56506a6a0c97855db1a9",
    "lines": 22,
-   "first_line": "\"\"\"User-data helpers \u2014 re-exported from ``crewai_core.user_data``.\"\"\"",
+   "first_line": "\"\"\"User-data helpers — re-exported from ``crewai_core.user_data``.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:12"
   },
@@ -3446,7 +3446,7 @@
    "license": "check repo",
    "sha256": "45ee86a7440b594196ed9578fa0346585184fb3d19b04ae248d2de9c529423dd",
    "lines": 24,
-   "first_line": "\"\"\"OAuth2 authentication primitives \u2014 shared by crewai and crewai-cli.\"\"\"",
+   "first_line": "\"\"\"OAuth2 authentication primitives — shared by crewai and crewai-cli.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:19"
   },
@@ -3832,6 +3832,284 @@
     "traceback"
    ],
    "registered": "2026-10-31 22:54:22"
+  },
+  {
+   "skill": "app_config",
+   "source_file": "app_config.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "dbe56a2146bbabaea6397384b8f2d5f910c7186612e65a858a5c4c2a6ca697be",
+   "lines": 52,
+   "first_line": "\"\"\"",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-11-01 10:04:32"
+  },
+  {
+   "skill": "card_styles",
+   "source_file": "card_styles.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "",
+   "license": "permissive (fetched)",
+   "sha256": "3ad7de60a42cb6782d4804b62ad4ed249afb476fa85513b39d5430976ead61de",
+   "lines": 303,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-11-01 10:04:33"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "core/allocation/__init__.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "1b9eac0b59627b8782cbfcc9a69c89d09b689dc07b25965df3668a5dc7e65bb8",
+   "lines": 22,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-01 10:04:34"
+  },
+  {
+   "skill": "api_keys",
+   "source_file": "core/api_keys.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "32bf64d7b61c39f28a984c42496e16afa60b5447216229a6ceec45d64db1c695",
+   "lines": 215,
+   "first_line": "\"\"\"",
+   "imports": [
+    "logging",
+    "os"
+   ],
+   "registered": "2026-11-01 10:04:34"
+  },
+  {
+   "skill": "api_monitor",
+   "source_file": "core/api_monitor.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "45d27b2e7d6ebe3a2535f713911337cd7a30fe439c02ebaeff8626a9d1066f47",
+   "lines": 110,
+   "first_line": "\"\"\"",
+   "imports": [
+    "csv",
+    "json",
+    "os",
+    "time"
+   ],
+   "registered": "2026-11-01 10:04:35"
+  },
+  {
+   "skill": "auth",
+   "source_file": "core/auth.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"User identity helper for Stock Scout multi-user support.",
+   "license": "permissive (fetched)",
+   "sha256": "c771cbb634df2d8b549d4c5667dc39e7111c5ee12721005f7585524f4f29306e",
+   "lines": 140,
+   "first_line": "\"\"\"User identity helper for Stock Scout multi-user support.",
+   "imports": [
+    "json",
+    "logging",
+    "os",
+    "re",
+    "streamlit"
+   ],
+   "registered": "2026-11-01 10:04:36"
+  },
+  {
+   "skill": "bridge",
+   "source_file": "core/bridge.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "from __future__ import annotations",
+   "license": "permissive (fetched)",
+   "sha256": "9b6cfd1dfed779d6abf6fb6e9bc1d1f21ab1f951509467acb61f2e57eb4e47ff",
+   "lines": 224,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "logging",
+    "numpy",
+    "os",
+    "pandas"
+   ],
+   "registered": "2026-11-01 10:04:36"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "core/classifier/__init__.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "b3867ebe8029452b37ff6e63e517b84427d4f774daa876697175ca2f4469e9ee",
+   "lines": 26,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-01 10:04:37"
+  },
+  {
+   "skill": "config",
+   "source_file": "core/config.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "8152572a582fbf6fa939b04be2f62d79ec78bdba26caef32d3e24d8502d3e18b",
+   "lines": 245,
+   "first_line": "\"\"\"",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-01 10:04:37"
+  },
+  {
+   "skill": "contracts",
+   "source_file": "core/contracts.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "58a3792c6743b701a116738b14c358dbc0e79724cc77266d07f54b2f8dfbe538",
+   "lines": 181,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-01 10:04:38"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "core/data/__init__.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "f6f4998df2a87efe3283b282d756200e75b7cbd28b2b7646cf910349e5a0dbf5",
+   "lines": 42,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-01 10:04:45"
+  },
+  {
+   "skill": "schema",
+   "source_file": "core/db/schema.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"DuckDB schema definitions for Stock Scout scan store.",
+   "license": "permissive (fetched)",
+   "sha256": "9e387548f418c2ef4fdea38e8722f42ca9ee134cb5c20712fe6b1e2fb122cf93",
+   "lines": 184,
+   "first_line": "\"\"\"DuckDB schema definitions for Stock Scout scan store.",
+   "imports": [],
+   "registered": "2026-11-01 10:04:46"
+  },
+  {
+   "skill": "supabase_client",
+   "source_file": "core/db/supabase_client.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"Supabase client wrapper for Stock Scout portfolio persistence.",
+   "license": "permissive (fetched)",
+   "sha256": "482a18dfbd46d869ff1ac56c7c8a3c77a38124fdb88a919378bbdf452cd7a417",
+   "lines": 85,
+   "first_line": "\"\"\"Supabase client wrapper for Stock Scout portfolio persistence.",
+   "imports": [
+    "logging",
+    "os",
+    "streamlit"
+   ],
+   "registered": "2026-11-01 10:04:46"
+  },
+  {
+   "skill": "debug_utils",
+   "source_file": "core/debug_utils.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "38385883f2deece41fb19875ab9544a2c1eb44a47df2a739a5a5b8ae56bce4e4",
+   "lines": 322,
+   "first_line": "\"\"\"",
+   "imports": [
+    "logging",
+    "numpy",
+    "pandas"
+   ],
+   "registered": "2026-11-01 10:04:47"
+  },
+  {
+   "skill": "ensemble",
+   "source_file": "core/ensemble.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "8b87eee98ea42ab617820bef804344080e024dfcbb7fefd332b0669af6b46415",
+   "lines": 81,
+   "first_line": "\"\"\"",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-11-01 10:04:47"
+  },
+  {
+   "skill": "exceptions",
+   "source_file": "core/exceptions.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "93c867005ae032aa656cb7666947c9d57d65d4180cefa64068b5b6ca6c9696cb",
+   "lines": 309,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-01 10:04:48"
+  },
+  {
+   "skill": "exit_signals",
+   "source_file": "core/exit_signals.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"Exit signal evaluator for live recommendations.",
+   "license": "permissive (fetched)",
+   "sha256": "6a6e85d883bdf775c5df225e4ff9492aaa27d0eab18ee3183d0d9c42e719a013",
+   "lines": 192,
+   "first_line": "\"\"\"Exit signal evaluator for live recommendations.",
+   "imports": [
+    "logging",
+    "numpy",
+    "pandas"
+   ],
+   "registered": "2026-11-01 10:04:49"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "core/filters/__init__.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "9f0c3756512fc4509e62dd91a842499c3dea3bf985c67fb4869a390c4aa8523c",
+   "lines": 38,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-01 10:04:49"
+  },
+  {
+   "skill": "fundamental",
+   "source_file": "core/fundamental.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "6ebd9b1606da1bc63cf8b788bd303123d80ba64fe47dee2995c4c45646f0cc03",
+   "lines": 18,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-01 10:04:50"
+  },
+  {
+   "skill": "interfaces",
+   "source_file": "core/interfaces.py",
+   "source_repo": "asafamos/stock-scout",
+   "summary": "from __future__ import annotations",
+   "license": "permissive (fetched)",
+   "sha256": "35f5d43b5473f09ff961c7d9cf19ae6b2ee63e3b0c8f2a6ce905b8fbbc5d0995",
+   "lines": 86,
+   "first_line": "from __future__ import annotations",
+   "imports": [],
+   "registered": "2026-11-01 10:04:51"
   }
- ]
+ ],
+ "built": "2026-11-01 10:04:51"
 }

@@ -104,7 +104,9 @@
   "NullArray/AutoSploit",
   "microsoft/SynapseML",
   "Ganapati/RsaCtfTool",
-  "CoreSecurity/impacket"
+  "CoreSecurity/impacket",
+  "crslade/crslade.github.io",
+  "asafamos/stock-scout"
  ],
  "pending": [],
  "rotated": "2026-10-31"
