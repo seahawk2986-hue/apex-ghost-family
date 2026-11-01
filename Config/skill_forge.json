@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-01 13:06:51",
+ "ts": "2026-11-01 14:14:06",
  "verdict": "CHECK:",
  "results": {
   "context_press": {
@@ -53,11 +53,11 @@
    "verdict": "CONSENSUS",
    "k": 3,
    "agree": 1.0,
-   "winner": "json\n{\"sum\": 7}\n",
+   "winner": "{\"sum\": 7}",
    "votes": {
-    "json\n{\"sum\": 7}\n": 3
+    "{\"sum\": 7}": 3
    },
-   "verified": false
+   "verified": true
   }
  }
 }

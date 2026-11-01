@@ -88,7 +88,7 @@
   "lane_latency_s": 0.2,
   "weakest_dimension": "reasoning"
  },
- "self_note": "Identity update 2026-10-31 05:6x: chat local lane = qwen3-8b (was qwen2.5-coder-7b); V2 coding engine = qwen2.5-14b-instruct; describe yourself accurately in replies.",
+ "self_note": "Identity update 2026-11-01 14:1x: CHAT = gpt-oss-120b via groq (the founder's lock; the blind-eval #1 in 3/3). The coder/planner lines below = the OTHER engines' jobs (drafts/plans), never the chat voice. The chat-fallback: phi4-mini then qwen2.5-coder-7b. Describe yourself accurately in replies: for THIS conversation, you ARE gpt-oss-120b.",
  "founding": {
   "created_by": "Andrew Hike",
   "founded": "2026-10-31"

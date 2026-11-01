@@ -854,6 +854,181 @@
     }
    ],
    "action": null
+  },
+  {
+   "ts": "2026-11-01 14:14:06",
+   "wall_s": 4.3,
+   "before": [
+    {
+     "cap": "brain",
+     "score": 10,
+     "receipt": "agent_track: 36D/1F + gpt-oss-120b 2/2 review-verdicts @0.3-0.8s $0 (the outsourced weights, 0GB local RAM)",
+     "lever": "the ensemble + the 120b judge-ladder"
+    },
+    {
+     "cap": "code",
+     "score": 10,
+     "receipt": "pr_watch: 2 PRs open",
+     "lever": "the bug-fix lane's next proof"
+    },
+    {
+     "cap": "gates",
+     "score": 7.9,
+     "receipt": "dual_review PASS x2 = the skip-path dead",
+     "lever": "the drain lane: 1 held row(s)"
+    },
+    {
+     "cap": "verify",
+     "score": 10,
+     "receipt": "rescan: 12 steps chain",
+     "lever": "the rowed-aggregates (per-organ ts rows)"
+    },
+    {
+     "cap": "governance",
+     "score": 9.0,
+     "receipt": "lanes_flags + the $0.00 cap + CLOUD_ALLOWED gate",
+     "lever": "the same-tick goals-carry"
+    },
+    {
+     "cap": "autonomy",
+     "score": 6.5,
+     "receipt": "earn_loop: filed=False beat=11",
+     "lever": "the daemon's first FILED proof"
+    },
+    {
+     "cap": "earning",
+     "score": 9,
+     "receipt": "polar_shop SHOP-LIVE; WORLD-ROWS: sold=0 merged=0",
+     "lever": "THE WORLD'S GATE (the honest cap): the click+accept"
+    },
+    {
+     "cap": "marketing",
+     "score": 8.0,
+     "receipt": "site LIVE-200; topics set; 4 posts ready",
+     "lever": "the v3 patterns + the funnel (DemoDesk)"
+    },
+    {
+     "cap": "security",
+     "score": 6.5,
+     "receipt": "sanitizer 4/4 flagged; RsaCtfTool cloned",
+     "lever": "the clone-route + the full-run verify"
+    },
+    {
+     "cap": "omnivore",
+     "score": 10,
+     "receipt": "canon 1116+; exec-verified skills 6",
+     "lever": "SkillForge's next forges (the skill-class ladder)"
+    },
+    {
+     "cap": "robustness",
+     "score": 9.5,
+     "receipt": "honest stops: the receipts carry them",
+     "lever": "the bounded-retry wrappers on the queued lanes"
+    },
+    {
+     "cap": "efficiency",
+     "score": 9.5,
+     "receipt": "RAM-gated beats; local 57 vs off-box 160",
+     "lever": "the AdaptiveBeats self-tuning"
+    },
+    {
+     "cap": "founder",
+     "score": 7.5,
+     "receipt": "FoundersFive standing; briefs live",
+     "lever": "pre-paste everything further"
+    }
+   ],
+   "after": [
+    {
+     "cap": "brain",
+     "score": 10,
+     "receipt": "agent_track: 39D/1F + gpt-oss-120b 2/2 review-verdicts @0.3-0.8s $0 (the outsourced weights, 0GB local RAM)",
+     "lever": "the ensemble + the 120b judge-ladder"
+    },
+    {
+     "cap": "code",
+     "score": 10,
+     "receipt": "pr_watch: 2 PRs open",
+     "lever": "the bug-fix lane's next proof"
+    },
+    {
+     "cap": "gates",
+     "score": 7.9,
+     "receipt": "dual_review PASS x2 = the skip-path dead",
+     "lever": "the drain lane: 1 held row(s)"
+    },
+    {
+     "cap": "verify",
+     "score": 10,
+     "receipt": "rescan: 12 steps chain",
+     "lever": "the rowed-aggregates (per-organ ts rows)"
+    },
+    {
+     "cap": "governance",
+     "score": 9.0,
+     "receipt": "lanes_flags + the $0.00 cap + CLOUD_ALLOWED gate",
+     "lever": "the same-tick goals-carry"
+    },
+    {
+     "cap": "autonomy",
+     "score": 6.5,
+     "receipt": "earn_loop: filed=False beat=11",
+     "lever": "the daemon's first FILED proof"
+    },
+    {
+     "cap": "earning",
+     "score": 9,
+     "receipt": "polar_shop SHOP-LIVE; WORLD-ROWS: sold=0 merged=0",
+     "lever": "THE WORLD'S GATE (the honest cap): the click+accept"
+    },
+    {
+     "cap": "marketing",
+     "score": 8.0,
+     "receipt": "site LIVE-200; topics set; 4 posts ready",
+     "lever": "the v3 patterns + the funnel (DemoDesk)"
+    },
+    {
+     "cap": "security",
+     "score": 6.5,
+     "receipt": "sanitizer 4/4 flagged; RsaCtfTool cloned",
+     "lever": "the clone-route + the full-run verify"
+    },
+    {
+     "cap": "omnivore",
+     "score": 10,
+     "receipt": "canon 1116+; exec-verified skills 9",
+     "lever": "SkillForge's next forges (the skill-class ladder)"
+    },
+    {
+     "cap": "robustness",
+     "score": 9.5,
+     "receipt": "honest stops: the receipts carry them",
+     "lever": "the bounded-retry wrappers on the queued lanes"
+    },
+    {
+     "cap": "efficiency",
+     "score": 9.5,
+     "receipt": "RAM-gated beats; local 57 vs off-box 160",
+     "lever": "the AdaptiveBeats self-tuning"
+    },
+    {
+     "cap": "founder",
+     "score": 7.5,
+     "receipt": "FoundersFive standing; briefs live",
+     "lever": "pre-paste everything further"
+    }
+   ],
+   "action": {
+    "id": "skillforge",
+    "script": "SkillForge.py",
+    "runner": "local",
+    "ram_needed": 3.5,
+    "capability": "omnivore",
+    "why": "the weakest measured number: exec-verified skills 3 -> 6 (done: 6/6 verified)",
+    "done": true,
+    "ran_at": "2026-11-01 14:14:06",
+    "tail": "[skill-forge] VERDICT: {\"context_press\": \"\", \"bounded_retry\": true, \"self_consistency\": \"CONSENSUS\"}"
+   }
   }
  ]
 }

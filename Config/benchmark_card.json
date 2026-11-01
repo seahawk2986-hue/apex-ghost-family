@@ -20,7 +20,7 @@
   }
  ],
  "our_measured": {
-  "executable_verified_skills": 6,
+  "executable_verified_skills": 9,
   "library_coding_entries": 402,
   "library_total": 404,
   "note": "+3 via SkillForge (each run-verified: context_press, bounded_retry, self_consistency-logic)"

@@ -838,5 +838,47 @@
   "ts": "2026-11-01 13:20:12",
   "verified": null,
   "receipt": "{\"clone\": \"present\"}"
+ },
+ "SkillForge::context_press@20261101_141402": {
+  "source": "SkillForge.py",
+  "intent": "extractive context-compression (the context-engineering canon cluster)",
+  "reward": 1.0,
+  "best": 1.0,
+  "ts": "2026-11-01 14:14:02",
+  "vec": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "verified": true,
+  "receipt": "{\"verified\": false}"
+ },
+ "SkillForge::bounded_retry@20261101_141402": {
+  "source": "SkillForge.py",
+  "intent": "bounded self-healing retry (the self-healing canon class)",
+  "reward": 1.0,
+  "best": 1.0,
+  "ts": "2026-11-01 14:14:02",
+  "vec": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "verified": true,
+  "receipt": "{\"verified\": true}"
+ },
+ "SkillForge::self_consistency@20261101_141406": {
+  "source": "SkillForge.py",
+  "intent": "k-sample ensemble vote (the ensemble canon class; brain-bound)",
+  "reward": 1.0,
+  "best": 1.0,
+  "ts": "2026-11-01 14:14:06",
+  "vec": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "verified": true,
+  "receipt": "{\"verified\": true}"
  }
 }
