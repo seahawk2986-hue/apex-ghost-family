@@ -145,7 +145,25 @@ def read_state():
     try:
         lib = json.load(open(os.path.join(ROOT, "Config", "SkillLibrary.json"),
                              encoding="utf-8-sig"))
-        out["skills_lib"] = {"count": len(lib.get("skills", []))}
+        sk = lib.get("skills", {})
+        items = list(sk.items()) if isinstance(sk, dict) else list(enumerate(sk))
+        cats = {}
+        code_n = 0
+        CODE_EXT = (".py", ".js", ".ts", ".sh", ".ps1", ".cmd", ".bat",
+                    ".rb", ".go", ".rs", ".sql")
+        for _sid, s in items:
+            text = (" ".join(str(s.get(k, "") or "") for k in
+                             ("skill", "first_line", "source_file", "imports"))
+                    if isinstance(s, dict) else str(s)).lower()
+            cat = str((s.get("source_repo") if isinstance(s, dict) else "") or "")
+            cats[cat or "unknown"] = cats.get(cat or "unknown", 0) + 1
+            ext = str((s.get("source_file") if isinstance(s, dict) else "") or "").lower()
+            if ext.endswith(CODE_EXT) or re.match(
+                    r"^(import |def |from |class |function |using |package )",
+                    text):
+                code_n += 1
+        out["skills_lib"] = {"count": len(items), "coding": code_n,
+                             "categories": len(cats)}
     except Exception:
         out["skills_lib"] = {"count": 0}
     try:
@@ -459,6 +477,30 @@ GOAL_REGISTRY = {
         "origin": "'source the papers from the web; compare the swarm to the most successful documented 2026 cases'",
         "status": "folded", "projection": "canon (521 papers)",
         "note": "the canon became the court's authority and the design canon - measured in state.canon"},
+    # ---- the NEW FOUNDING-CLASS GOALS (founded today, nothing removed) ----
+    "efficiency_evolve": {
+        "origin": "GOAL: 'Evolve upwards as efficiently as possible while keeping hardware constraints in mind'",
+        "status": "active",
+        "projection": "efficiency (outputs earned INSIDE the RAM-tier gate; the gate binds always)",
+        "note": "measured by verified skills + banked lessons + canon growth - receipts per hardware window, never a wasted mutation (the court pre-stages best-of-N)"},
+    "coding_mastery": {
+        "origin": "GOAL: 'Become as good at coding as the current best coding agents, hardware constraints kept'",
+        "status": "active",
+        "projection": "coding (executable-verified artifacts; the 2026 benchmark leaders = the comparison class)",
+        "note": "tonight: coding-category library entries + executable-verified count; the fresh canon harvest builds the benchmark-comparison instrument"},
+    "skill_omnivore": {
+        "origin": "GOAL: 'Try to learn every skill that you can, source the web to see what is missing, maximize each skill; innovative workarounds; download any program or tool that helps'",
+        "status": "active",
+        "projection": "omnivore (library depth x breadth; gaps scouted vs the jobs inbox + the canon)",
+        "note": "nothing claimed that is not INSTALLED; the gap-scout prints what is missing honestly"},
+    "self_knowledge": {
+        "origin": "derived goal (the 2026 canon's calibrating agents): know what it can and cannot do, measured",
+        "status": "folded", "projection": "calibration EMA",
+        "note": "claim-vs-measured drift already sinks over-claimers; honest recovery is monotone"},
+    "serviceable": {
+        "origin": "derived goal (best agents are USED, not admired): an external system can discover and employ Apex",
+        "status": "active", "projection": "registry",
+        "note": "agent card + MCP bundle + ladder + doors, measured every tick - the door stands open"},
 }
 
 # ---- THE GOALS: evolution is judged on ANDREW'S goals, nothing else ----
@@ -467,7 +509,8 @@ GOAL_REGISTRY = {
 # life FINANCIALLY, proactively"), recruits, jobs (the 6th dim: found asks +
 # filed rungs), safety. The founder's DIRECT queue (apex_tasks.txt) is the
 # mission inbox every goal serves - recorded every tick.
-GOAL_KEYS = ("gold", "money", "life", "recruits", "jobs", "safety")
+GOAL_KEYS = ("gold", "money", "life", "recruits", "jobs", "coding",
+             "omnivore", "efficiency", "safety")
 STALL_S = 6 * 3600      # a goal stalled >6h alarms (money's hint is honest)
 GOAL_COMPONENTS = {
     "gold":     lambda s: (sum(float((v or {}).get("mines", 0) or 0) for v in (s.get("knowledge") or {}).values()),
@@ -481,6 +524,15 @@ GOAL_COMPONENTS = {
     "jobs":     lambda s: (float((s.get("jobs") or {}).get("opps_inbox") or 0),
                            float((s.get("jobs") or {}).get("rungs_filed") or 0),
                            float((s.get("proactive") or {}).get("opps_scanned") or 0)),
+    "coding":   lambda s: (float((s.get("skills_lib") or {}).get("coding") or 0),
+                           float((s.get("skills") or {}).get("verified_count") or 0)),
+    "omnivore": lambda s: (float((s.get("skills_lib") or {}).get("count") or 0),
+                           float((s.get("skills_lib") or {}).get("categories") or 0),
+                           float((s.get("skills") or {}).get("verified_count") or 0)),
+    "efficiency": lambda s: (float((s.get("lessons") or {}).get("count") or 0),
+                             float((s.get("skills") or {}).get("verified_count") or 0),
+                             float((s.get("canon") or {}).get("papers_2026") or 0)
+                             + float((s.get("canon") or {}).get("papers_evolution") or 0)),
     "safety":   lambda s: (1.0 if (s.get("integrity") or {}).get("ok") else 0.0,
                            1.0 if not (s.get("economy") or {}).get("corrupt") else 0.0),
 }
@@ -656,6 +708,11 @@ def tick(manifest_path=MANIFEST):
                     and not cur.get("brain") else
                     " (needs the inbox triaged - a brain window serves)" if g
                     == "jobs" else
+                    " (executable verification runs in windows)" if g == "coding" else
+                    " (scout the gaps: the inbox asks + the canon name them)" if g
+                    == "omnivore" else
+                    " (outputs are earned inside the hardware gate)" if g
+                    == "efficiency" else
                     " (no external claims yet - the door stands open)")
             alarms.append(f"goal '{g}' stalled "
                           f"{int((now - prog.get(g, now)) / 60)}min{hint}")
@@ -931,7 +988,7 @@ def selftest():
     print(f"   hardware gate tiers @7/3.5/2.5/1.0 GB: {tiers} | "
           f"starvation alarm: {leg_j}")
     legs.append(("hardware_gate_law", leg_j))
-    # (k) THE GOALS: every subsystem projects onto Andrew's SIX goals (pure)
+    # (k) THE GOALS: every subsystem projects onto the NINE measured goals
     st = {"knowledge": {"trending": {"mines": 12, "reqs": 5}},
           "mining": {"findings": 3}, "board": {"repos_consumed": 10},
           "economy": {"earned": 0.0, "rows": 0, "corrupt": False},
@@ -940,7 +997,9 @@ def selftest():
           "jobs": {"opps_inbox": 12, "rungs_filed": 4},
           "proactive": {"opps_scanned": 6, "total_ev": 0.0, "best_action": ""},
           "integrity": {"bad": [], "ok": True},
-          "skills": {"verified_count": 3}, "skills_lib": {"count": 40},
+          "skills": {"verified_count": 3}, "skills_lib": {"count": 40,
+                                                          "coding": 12,
+                                                          "categories": 9},
           "canon": {"papers_2026": 100, "papers_evolution": 421},
           "lessons": {"count": 2},
           "ascent": {"last": 3.9, "max": 3.9, "n": 8}}
@@ -951,15 +1010,18 @@ def selftest():
              and gp["life"]["score"] == 3
              and gp["recruits"]["score"] == 11
              and gp["jobs"]["score"] == 12 + 4 + 6
+             and gp["coding"]["score"] == 12 + 3
+             and gp["omnivore"]["score"] == 40 + 9 + 3
+             and gp["efficiency"]["score"] == 2 + 3 + 100 + 421
              and gp["safety"]["score"] == 2)
     print(f"   goal projection: " + " | ".join(
         f"{g}={gp[g]['score']}" for g in GOAL_KEYS) + f" (complete: {leg_k})")
     legs.append(("goal_projection", leg_k))
     # (k2) THE GENEALOGY: every goal from the beginning, with origin+status
-    leg_k2 = (len(GOAL_REGISTRY) >= 12
+    leg_k2 = (len(GOAL_REGISTRY) >= 18
               and all("origin" in v and "status" in v
                       for v in GOAL_REGISTRY.values())
-              and all(any(g in val.get("projection", "")
+              and all(any(g in str(val.get("projection", ""))
                           for val in GOAL_REGISTRY.values())
                       for g in GOAL_KEYS if g != "safety")
               and any(v["status"] == "folded" and v.get("note")
