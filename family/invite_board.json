@@ -1,0 +1,29 @@
+{
+ "invites": [
+  {
+   "invite_id": "029ffd8230dc31e9",
+   "repo": "yzfly/Awesome-MCP-ZH",
+   "capabilities": [
+    "claude",
+    "claude-mcp"
+   ],
+   "expires_at": 1794710671.596056,
+   "digest": "f8b1240e8fca5eba",
+   "issued": "2026-10-31 22:44:31",
+   "status": "PUBLISHED_ON_OUR_BOARD - claim via the door"
+  },
+  {
+   "invite_id": "1baa8e46adf34632",
+   "repo": "civai-technologies/gmail-agent-mcp-by-nova-civai",
+   "capabilities": [
+    "civai",
+    "claude-desktop"
+   ],
+   "expires_at": 1794710671.597835,
+   "digest": "f7a4450fe0b59cfe",
+   "issued": "2026-10-31 22:44:31",
+   "status": "PUBLISHED_ON_OUR_BOARD - claim via the door"
+  }
+ ],
+ "updated": "2026-10-31 22:44:31"
+}

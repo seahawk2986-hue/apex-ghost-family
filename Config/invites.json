@@ -10,5 +10,27 @@
   "single_use": true,
   "sig_hex": "def4ab2dbb27a7da88c5f3b3116cb3baf337cc44c909b6f52e1f0199958a44abdf6b0ea661db7cb5b5125395a1de7fc4d115086adda4bbd1f1352aac9660430a",
   "used": true
+ },
+ "029ffd8230dc31e9": {
+  "invite_id": "029ffd8230dc31e9",
+  "issued": "2026-10-31 22:44:31",
+  "expires_at": 1794710671.596056,
+  "capabilities": [
+   "claude",
+   "claude-mcp"
+  ],
+  "single_use": true,
+  "sig_hex": "fa5e38a7def48d11b2b709bab26b8563b1b5e500f6f62c64963ec87dfc82e2c6712d1eb15469c8f3cffc9c89ca3fa739fb690da6b5bc5e918787bc42a4c55e0c"
+ },
+ "1baa8e46adf34632": {
+  "invite_id": "1baa8e46adf34632",
+  "issued": "2026-10-31 22:44:31",
+  "expires_at": 1794710671.597835,
+  "capabilities": [
+   "civai",
+   "claude-desktop"
+  ],
+  "single_use": true,
+  "sig_hex": "2cd7df443e1e0f1f5dd5a20e6d3918b41fc76724e58f4c3079f88aa6fd9e2bdb755a0bc621e75a9240e9a5fdfa7120afee95bafa4ce820d780cfa54096076303"
  }
 }
