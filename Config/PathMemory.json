@@ -21,22 +21,72 @@
  "trending": {},
  "variants": {
   "base": {
-   "wins": 4,
-   "rounds": 63,
+   "params": {
+    "ghost_cc_leads": 205,
+    "ghost_events": 80,
+    "ghost_trending": 42,
+    "ghost_wiki_leads": 65,
+    "ghost_wayback_leads": 85,
+    "ghost_queue_mines_to_farm": 27,
+    "ghost_min_stars": 315
+   },
+   "fitness": 0.259,
+   "descriptor": "cc4_ev3_tr2",
+   "wins": 0,
    "mines": 1121,
-   "reqs": 4581,
-   "fitness": 0.2447
+   "reqs": 0
   },
-  "explore_29868_2": {
-   "wins": 1,
-   "rounds": 7,
-   "mines": 211,
-   "reqs": 790,
-   "fitness": 0.2671
+  "g0_0": {
+   "params": {
+    "ghost_cc_leads": 199,
+    "ghost_events": 92,
+    "ghost_trending": 44,
+    "ghost_wiki_leads": 53,
+    "ghost_wayback_leads": 101,
+    "ghost_queue_mines_to_farm": 19,
+    "ghost_min_stars": 318
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev3_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g1_1": {
+   "params": {
+    "ghost_cc_leads": 217,
+    "ghost_events": 86,
+    "ghost_trending": 45,
+    "ghost_wiki_leads": 42,
+    "ghost_wayback_leads": 73,
+    "ghost_queue_mines_to_farm": 26,
+    "ghost_min_stars": 361
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev3_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g2_2": {
+   "params": {
+    "ghost_cc_leads": 236,
+    "ghost_events": 35,
+    "ghost_trending": 47,
+    "ghost_wiki_leads": 55,
+    "ghost_wayback_leads": 94,
+    "ghost_queue_mines_to_farm": 22,
+    "ghost_min_stars": 351
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev1_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
   }
  },
  "family": {
-  "champion": "explore_29868_2"
+  "champion": "base"
  },
  "andrew_help": {
   "briefs": 123,
