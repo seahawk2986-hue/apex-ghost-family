@@ -95,6 +95,16 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
          "qwen2.5-coder:7b", "local-no-key", {}),
         ("local-fast", "http://localhost:11434/api/chat",
          "qwen2.5-coder:3b", "local-no-key", {}),
+        # THE CHAT-LANES (the ChatEval's blind-race's verdict: the
+        # phi4-mini = the #2 chat (the #1's the 120b); the r1 = the
+        # reasoning-window's candidate; the ollama = the single-slot
+        # auto-swap = the RAM-legal (one at a time))
+        ("local-phi4", "http://localhost:11434/api/chat",
+         "phi4-mini:latest", "local-no-key", {}),
+        ("local-gemma3", "http://localhost:11434/api/chat",
+         "gemma3:4b", "local-no-key", {}),
+        ("local-r1", "http://localhost:11434/api/chat",
+         "deepseek-r1:7b", "local-no-key", {}),
     ]
     if cloud_allowed:
         pool += [

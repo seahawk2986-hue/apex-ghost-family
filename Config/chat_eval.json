@@ -1,0 +1,56 @@
+{
+ "ts": "2026-11-01 13:29:47",
+ "asks": [
+  {
+   "n": 0,
+   "lanes": [
+    "groq-120b",
+    "qwen25-7b",
+    "phi4-mini",
+    "deepseek-r1"
+   ],
+   "rank": [
+    "A",
+    "C",
+    "B",
+    "D"
+   ],
+   "judge_why": "A is concise, specific, and clear; C is detailed but less concise; B is vague and overly brief; D is incomplete.",
+   "count": 4
+  },
+  {
+   "n": 1,
+   "lanes": [
+    "groq-120b",
+    "qwen25-7b",
+    "phi4-mini",
+    "deepseek-r1"
+   ],
+   "rank": [
+    "A",
+    "C",
+    "B",
+    "D"
+   ],
+   "judge_why": "A is most honest, clear, and specific about data handling; C is clear but less detail on logging; B is vague about security; D is incomplete",
+   "count": 4
+  },
+  {
+   "n": 2,
+   "lanes": [
+    "groq-120b",
+    "qwen25-7b",
+    "phi4-mini",
+    "deepseek-r1"
+   ],
+   "rank": [
+    "A",
+    "C",
+    "B",
+    "D"
+   ],
+   "judge_why": "A provides concrete task, metrics, and benefits; C adds detail but remains vague; B is generic hype; D is incomplete and unclear.",
+   "count": 4
+  }
+ ]
+}

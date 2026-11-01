@@ -102,13 +102,19 @@ def main():
     with open(os.path.join(ROOT, "Config", "chat_eval.json"), "w",
               encoding="utf-8") as f:
         json.dump(evalout, f, ensure_ascii=False, indent=1)
-    # the route-learning: the ranks -> the chat-lane's order (the DATA!)
+    # the route-learning: the rank-letters -> the POOL-NAME map (the
+    # eval's lane-names -> the CloudBrain's vocabulary)
+    POOL_MAP = {"groq-120b": "groq", "phi4-mini": "local-phi4",
+                "qwen25-7b": "local-coder", "deepseek-r1": "local-r1"}
     tally = {}
     for x in evalout["asks"]:
+        lanes = x.get("lanes") or []
         for pos, L in enumerate(x.get("rank") or []):
-            if L in dict(zip(x.get("lanes", []), letters)):
-                name = x["lanes"][list(x["lanes"]).index(L)]
-                tally[name] = tally.get(name, 0) + (10 - pos)
+            if 0 <= ord(L) - 65 < len(lanes):
+                name = lanes[ord(L) - 65]
+                pool_name = POOL_MAP.get(name)
+                if pool_name:
+                    tally[pool_name] = tally.get(pool_name, 0) + (10 - pos)
     order = [k for k, _ in sorted(tally.items(), key=lambda kv: -kv[1])]
     if order:
         rp = os.path.join(ROOT, "Config", "hybrid_routes.json")

@@ -1,0 +1,10 @@
+{
+ "chat": ["groq", "local-phi4", "local-coder", "local-r1"],
+ "judge": ["groq", "local-coder", "local-fast"],
+ "draft": ["local-coder", "local-fast"],
+ "translate": ["groq", "local-coder"],
+ "vote": ["groq", "local-coder", "local-fast"],
+ "copy": ["groq", "local-coder"],
+ "learned_from": "ChatEval (the blind 4-lane A/B/C/D race, judged by the 120b): the 120b = #1 in 3/3 asks; phi4-mini = #2 in 3/3; the qwen-7b = the vague/generic on the chat-asks (the judge's words) - the CODER-tuned = for code-only; the deepseek-r1 = the slow-reasoning (the 4th)",
+ "law": "the routes = the DATA (the eval-refresh rewrites them); the pool-vocab = CloudBrain's; the RAM-law: the ollama = the single-slot auto-swap (one model loaded at a time); $0.00 all-lanes"
+}
