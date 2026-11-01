@@ -80,11 +80,21 @@ def stage_lint(changed, wd):
     if not py_changed:
         return {"stage": "lint", "ok": True, "note": "no python in the change"}
     try:
-        r = subprocess.run([sys.executable, "-m", "pyflakes"] + py_changed,
-                           capture_output=True, text=True, timeout=120)
-        warns = (r.stdout or "").splitlines()
-        return {"stage": "lint", "ok": len(warns) == 0,
-                "note": f"{len(warns)} warnings: " +
+        # the free-tools upgrade: ruff (fast/strict) with the pyflakes
+        # fallback - the real lint teeth, $0
+        ruff = os.path.join(os.path.dirname(sys.executable), "ruff.exe")
+        if os.path.exists(ruff):
+            r = subprocess.run([ruff, "check", "--quiet",
+                                "--select", "E9,F"] + py_changed,
+                               capture_output=True, text=True, timeout=120)
+            tool = "ruff"
+        else:
+            r = subprocess.run([sys.executable, "-m", "pyflakes"] + py_changed,
+                               capture_output=True, text=True, timeout=120)
+            tool = "pyflakes"
+        warns = [w for w in (r.stdout or "").splitlines() if w.strip()]
+        return {"stage": "lint", "ok": r.returncode == 0, "tool": tool,
+                "note": f"{len(warns)} warnings ({tool}): " +
                         ("; ".join(w.split("/")[-1] + ":" +
                                    w.split(":")[-1].strip()
                                    for w in warns[:4]))}

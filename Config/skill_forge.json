@@ -1,0 +1,63 @@
+{
+ "ts": "2026-11-01 13:06:51",
+ "verdict": "CHECK:",
+ "results": {
+  "context_press": {
+   "pass": false,
+   "out": {
+    "packed": "doc0 about the payment gateway retries on timeout errors doc4 about the gateway timeout default is 30s doc3 about the retry wrapper backoff is 200ms doc1 about the UI uses a sticky header for navigation doc2 about the loader validates the schema before insert doc5 about gardening notes unrelated to the repo doc6 about the schema validation receipts are written",
+    "chars": 363,
+    "sentences": 7,
+    "budget": 400
+   }
+  },
+  "bounded_retry": {
+   "recover_pass": true,
+   "exhaust_pass": true,
+   "receipts": [
+    {
+     "ok": true,
+     "attempts": 3,
+     "result": "recovered",
+     "log": [
+      {
+       "attempt": 1,
+       "err": "transient"
+      },
+      {
+       "attempt": 2,
+       "err": "transient"
+      }
+     ],
+     "label": "transient-crash"
+    },
+    {
+     "ok": false,
+     "attempts": 2,
+     "log": [
+      {
+       "attempt": 1,
+       "err": "always"
+      },
+      {
+       "attempt": 2,
+       "err": "always"
+      }
+     ],
+     "label": "hopeless-op",
+     "verdict": "EXHAUSTED-honest (no silent pass)"
+    }
+   ]
+  },
+  "self_consistency": {
+   "verdict": "CONSENSUS",
+   "k": 3,
+   "agree": 1.0,
+   "winner": "json\n{\"sum\": 7}\n",
+   "votes": {
+    "json\n{\"sum\": 7}\n": 3
+   },
+   "verified": false
+  }
+ }
+}

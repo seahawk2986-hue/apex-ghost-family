@@ -1,0 +1,46 @@
+{
+ "ts": "2026-11-01 13:04:26",
+ "verdict": "PASS x2",
+ "rows": [
+  {
+   "stage": "brain-review",
+   "ok": false,
+   "note": "HELD for review (never silently skipped) - queued for the drain lane",
+   "ladder": [
+    {
+     "try": 1,
+     "verdict": "brain-empty"
+    },
+    {
+     "try": 2,
+     "verdict": "brain-empty"
+    },
+    {
+     "try": 3,
+     "verdict": "brain-empty"
+    }
+   ],
+   "held": true
+  },
+  {
+   "check": "empty->HELD+queued",
+   "pass": true
+  },
+  {
+   "stage": "brain-review",
+   "ok": true,
+   "note": "clean",
+   "ladder": [
+    {
+     "try": 1,
+     "verdict": "reviewed:True"
+    }
+   ],
+   "held": false
+  },
+  {
+   "check": "good->clean-pass",
+   "pass": true
+  }
+ ]
+}

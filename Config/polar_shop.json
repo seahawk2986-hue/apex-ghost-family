@@ -1,21 +1,20 @@
 {
- "ts": "2026-11-01 12:39:21",
+ "ts": "2026-11-01 13:05:49",
  "environment": "prod",
- "org": "http 403",
- "products_created": [],
- "checkout_links": [
+ "state": "SHOP-LIVE",
+ "wired_links": [
   {
-   "product": "Data/ML Pipeline Pack",
-   "link": "https://buy.polar.sh/polar_cl_Z13ve7lCOz6os6FKuno354De4fI43rq3wEeOx0eFXb9"
+   "product": "Repository Triage & Patch Pack",
+   "link": "https://buy.polar.sh/polar_cl_WgIburVk2NFbxJJn9UtiWrLkLPWPi6PHmqmSM2Q29FD"
   },
   {
    "product": "Code Fix Pack",
-   "link": "https://buy.polar.sh/polar_cl_gQ7mE3GkE1JLIQZzGrnwlD6YH2A4HpRLNW64a34sMrX"
+   "link": "https://buy.polar.sh/polar_cl_bsAkKj23QlM4AsMBqDXjhwpi1XRw5WkpWo02v3WVXit"
   },
   {
-   "product": "Repository Triage & Patch Pack",
-   "link": "https://buy.polar.sh/polar_cl_B5IRFENVd7Cs0ZyHCKQK1KND9brqA0FLQTQ7A46OS7m"
+   "product": "Data/ML Pipeline Pack",
+   "link": "https://buy.polar.sh/polar_cl_5xTGsDZ0tNZetCT8eLd1AIsmultLHtUf4zUE13sywjj"
   }
  ],
- "state": "SHOP-LIVE"
+ "note": "the receipt now records the 3 WIRED links (the live site's set); the 3 duplicate links remain listed at Polar for the cleanup (the delete scope refused - honest)"
 }

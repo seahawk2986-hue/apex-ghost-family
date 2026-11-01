@@ -69,12 +69,24 @@ def beat(n):
     # standing: the SPEND caps (the wallet's protection) + the platform
     # acceptance (the tally moves only when work is ACCEPTED by the world).
     try:
-        import ClaimCheck as CC
-        u, c = CC.main()
-        work["unclaimed"] = len(u)
-        work["claimed_skipped"] = len(c)
-    except Exception as e:
-        work["claim_audit_error"] = str(e)[:60]
+        lanes = json.load(open(os.path.join(ROOT, "Config",
+                                            "lanes_flags.json"),
+                               encoding="utf-8-sig"))
+    except Exception:
+        lanes = {}
+    if lanes.get("watch_on_actions"):
+        # THE OUTSOURCING-MAX: the claim-lens runs on GITHUB's machines
+        # (the */5 watch workflow); the local beat = brain+filing only.
+        work["claim_audit"] = ("on-actions(off-box */5 lane); the local "
+                               "beat is hardware-clean")
+    else:
+        try:
+            import ClaimCheck as CC
+            u, c = CC.main()
+            work["unclaimed"] = len(u)
+            work["claimed_skipped"] = len(c)
+        except Exception as e:
+            work["claim_audit_error"] = str(e)[:60]
     kit = {}
     try:
         kit = json.load(open(KIt, encoding="utf-8-sig"))

@@ -1,0 +1,39 @@
+{
+ "actions": [
+  {
+   "id": "skillforge",
+   "script": "SkillForge.py",
+   "runner": "local",
+   "ram_needed": 3.5,
+   "capability": "omnivore",
+   "why": "the weakest measured number: exec-verified skills 3 -> 6 (the local brain only, $0)",
+   "done": true,
+   "ran_at": "2026-11-01 13:06:51",
+   "tail": "[skill-forge] VERDICT: {\"context_press\": \"\", \"bounded_retry\": true, \"self_consistency\": \"CONSENSUS\"}"
+  },
+  {
+   "id": "receipt-fix",
+   "script": "ReceiptFix.py",
+   "runner": "local",
+   "ram_needed": 0.3,
+   "capability": "governance",
+   "why": "the wired-links receipt restored + world-rows born (the honest 0s)"
+  },
+  {
+   "id": "rsa-clone",
+   "script": "RsaCloneRoute.py",
+   "runner": "local",
+   "ram_needed": 0.5,
+   "capability": "security",
+   "why": "the queued clone-route: the security class's capability cap"
+  },
+  {
+   "id": "harvest10",
+   "script": "PaperHarvest10.py",
+   "runner": "actions",
+   "cooldown_min": 1440,
+   "capability": "omnivore",
+   "why": "THE SOURCING DIRECTIVE: the 200-doc 10/10-lane canon - runs ENTIRELY on GITHUB's machines (network-bound = theirs; the dedupe is idempotent; the grain returns via commit)"
+  }
+ ]
+}

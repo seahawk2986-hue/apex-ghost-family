@@ -1,0 +1,6 @@
+{
+ "ts": "2026-11-01 13:05:49",
+ "sales": [],
+ "merges": [],
+ "law": "A row lands ONLY on the world's real event (a sale's webhook-visible order read; a maintainer's merge). No row = no event = the truthful 0. The earning score cannot inflate."
+}

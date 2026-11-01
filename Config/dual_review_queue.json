@@ -1,0 +1,22 @@
+[
+ {
+  "ts": "2026-11-01 13:04:26",
+  "purpose": "selftest-empty",
+  "digest": "DIFF-A",
+  "ladder": [
+   {
+    "try": 1,
+    "verdict": "brain-empty"
+   },
+   {
+    "try": 2,
+    "verdict": "brain-empty"
+   },
+   {
+    "try": 3,
+    "verdict": "brain-empty"
+   }
+  ],
+  "held": true
+ }
+]

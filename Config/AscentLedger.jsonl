@@ -175,3 +175,8 @@
 {"ts": "2026-11-01 12:39:05", "kind": "upward", "what": "earn-loop-beat", "beat": 5, "unclaimed": 6, "filed": false}
 {"ts": "2026-11-01 12:39:22", "kind": "upward", "what": "pr-watch", "states": ["blocked", "blocked"]}
 {"ts": "2026-11-01 12:49:47", "kind": "upward", "what": "the growth-topics set (the SEO/discovery class's first applied move)"}
+{"ts": "2026-11-01 12:54:29", "kind": "upward", "what": "earn-loop-beat", "beat": 6, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 13:04:57", "kind": "upward", "what": "earn-loop-beat", "beat": 99, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 13:05:49", "kind": "upward", "what": "earn-loop-beat", "beat": 101, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-01 13:05:49", "kind": "upward", "what": "receipt-fix: the wired-links restored + world-rows born"}
+{"ts": "2026-11-01 13:07:27", "kind": "upward", "what": "the free-tools round", "oks": ["ruff", "pytest", "hypothesis", "jsonschema"]}

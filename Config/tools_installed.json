@@ -124,5 +124,45 @@
   "Werkzeug==3.1.9",
   "yarl==1.25.1"
  ],
- "note": "the omnivore tool law: everything installed, $0, receipted"
+ "note": "the omnivore tool law: everything installed, $0, receipted",
+ "free_tools_round@20261101_130727": {
+  "root": "C:\\Users\\seaha\\AppData\\Local\\apex_tools",
+  "law": "$0.00 - PyPI only, RAM-light, no GPU, no browsers (the RAM law), no OCR (the keys-lesson)",
+  "tools": [
+   {
+    "tool": "ruff",
+    "ok": true,
+    "why": "the real lint for the quality-gate's stage 4 (the fast, free, single-binary linter)",
+    "note": "ok",
+    "err": ""
+   },
+   {
+    "tool": "pytest",
+    "ok": true,
+    "why": "the verify-lane's real test-runner (the deliverables' tests actually RUN)",
+    "note": "9.2.0",
+    "err": ""
+   },
+   {
+    "tool": "hypothesis",
+    "ok": true,
+    "why": "the property-based-testing canon class, LIVE (the test_gen adoption)",
+    "note": "6.170.14",
+    "err": ""
+   },
+   {
+    "tool": "jsonschema",
+    "ok": true,
+    "why": "the receipts' self-validation (the schema-lanes' honest verifier)",
+    "note": "4.26.0",
+    "err": ""
+   }
+  ],
+  "skips": [
+   "the browser-lane = RAM-fatal (honest skip)",
+   "the models >7b = the 16GB cap (honest skip)",
+   "the OCR = the keys-error-lesson (honest skip)"
+  ],
+  "ts": "2026-11-01 13:07:27"
+ }
 }
