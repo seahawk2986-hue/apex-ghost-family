@@ -1,0 +1,6 @@
+{
+ "ts": "2026-11-01 16:10:00",
+ "note": "the honest-seed: the filer self-creates/updates; the state = the pipeline-armed receipt",
+ "pipeline": "armed",
+ "staged_artifacts": []
+}
