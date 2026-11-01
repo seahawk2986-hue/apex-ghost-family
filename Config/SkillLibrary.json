@@ -2983,8 +2983,430 @@
    "first_line": "\"\"\"",
    "imports": [],
    "registered": "2026-10-31 14:11:22"
+  },
+  {
+   "skill": "convert_msys_paths_to_win_paths",
+   "source_file": "ci/official/utilities/convert_msys_paths_to_win_paths.py",
+   "source_repo": "tensorflow/tensorflow",
+   "summary": "#!/usr/bin/python3",
+   "license": "permissive (fetched)",
+   "sha256": "ea845d231afe654dbcd63c1eeb9afbf73aa9f76f5c27fa661c22786a70b14a1b",
+   "lines": 76,
+   "first_line": "#!/usr/bin/python3",
+   "imports": [
+    "argparse",
+    "os"
+   ],
+   "registered": "2026-10-31 20:54:48"
+  },
+  {
+   "skill": "all",
+   "source_file": ".github/workflows/all.py",
+   "source_repo": "openframeworks/openFrameworks",
+   "summary": "#!/usr/bin/python3",
+   "license": "permissive (fetched)",
+   "sha256": "06c817343150d91172055deb4309d88c529e6ef03c4feeac7c5061562764db17",
+   "lines": 35,
+   "first_line": "#!/usr/bin/python3",
+   "imports": [
+    "glob"
+   ],
+   "registered": "2026-10-31 20:54:49"
+  },
+  {
+   "skill": "rest-api-template",
+   "source_file": "plugins/backend-development/skills/api-design-principles/assets/rest-api-template.py",
+   "source_repo": "wshobson/agents",
+   "summary": "\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "ff594a173b353fd359a6d7e391a6e15324434a5754cc51ae9a90a2e3625dd0c9",
+   "lines": 185,
+   "first_line": "\"\"\"",
+   "imports": [
+    "uvicorn"
+   ],
+   "registered": "2026-10-31 20:54:53"
+  },
+  {
+   "skill": "benchmark_dumps",
+   "source_file": "bench/benchmark_dumps.py",
+   "source_repo": "ijl/orjson",
+   "summary": "# SPDX-License-Identifier: (Apache-2.0 OR MIT)",
+   "license": "permissive (fetched)",
+   "sha256": "70618170d71886bac38b4aa8ccfd9abbea0f695b1d64bc79831abd19acbf9f66",
+   "lines": 19,
+   "first_line": "# SPDX-License-Identifier: (Apache-2.0 OR MIT)",
+   "imports": [
+    "pytest"
+   ],
+   "registered": "2026-10-31 20:55:00"
+  },
+  {
+   "skill": "add_crew_to_flow",
+   "source_file": "lib/cli/src/crewai_cli/add_crew_to_flow.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "1bbd4985a004e138c3cc1262c30570b243521314c67504bab207f081a5263fdc",
+   "lines": 96,
+   "first_line": "from pathlib import Path",
+   "imports": [
+    "click"
+   ],
+   "registered": "2026-10-31 20:55:34"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "lib/cli/src/crewai_cli/authentication/__init__.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "5b0ee042631e70ee75fcbb3e2a94c627d3500c5a65f28091a0b3077acd8587ea",
+   "lines": 8,
+   "first_line": "\"\"\"CLI authentication entry point.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:55:35"
+  },
+  {
+   "skill": "constants",
+   "source_file": "lib/cli/src/crewai_cli/authentication/constants.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "9826c087101c8381722a18d777367f7c68055f13f033a9627a6569256c577dee",
+   "lines": 8,
+   "first_line": "\"\"\"Re-export of authentication constants from ``crewai_core.auth.constants``.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:55:36"
+  },
+  {
+   "skill": "main",
+   "source_file": "lib/cli/src/crewai_cli/authentication/main.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "42598b947ca82d4aee50f8b388c6a634f487c037ec039a15ab272d9c4cdce77d",
+   "lines": 118,
+   "first_line": "\"\"\"CLI-side authentication wiring.",
+   "imports": [],
+   "registered": "2026-10-31 20:55:36"
+  },
+  {
+   "skill": "auth0",
+   "source_file": "lib/cli/src/crewai_cli/authentication/providers/auth0.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "a0c86244db1bedd1dd5e22404bf2195a4916dc621d222b0f968221b9a364c21c",
+   "lines": 8,
+   "first_line": "\"\"\"Re-export of ``Auth0Provider`` from ``crewai_core.auth.providers.auth0``.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:55:37"
+  },
+  {
+   "skill": "base_provider",
+   "source_file": "lib/cli/src/crewai_cli/authentication/providers/base_provider.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "4481c6b0bcff7bdb296389fd362858cda875f9e65149b29720dec392c758bd2e",
+   "lines": 8,
+   "first_line": "\"\"\"Re-export of ``BaseProvider`` from ``crewai_core.auth.providers.base_provider``.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:55:38"
+  },
+  {
+   "skill": "entra_id",
+   "source_file": "lib/cli/src/crewai_cli/authentication/providers/entra_id.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "a1e8d190b62146a9cbd9a57abd11a0f01e045369bfe0b32953fd5feb08181890",
+   "lines": 8,
+   "first_line": "\"\"\"Re-export of ``EntraIdProvider`` from ``crewai_core.auth.providers.entra_id``.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:55:39"
+  },
+  {
+   "skill": "keycloak",
+   "source_file": "lib/cli/src/crewai_cli/authentication/providers/keycloak.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "b8a1434559a9dd31f72c0f90f790959cad1fc6b3c3d56f580d5b2941d4db0998",
+   "lines": 8,
+   "first_line": "\"\"\"Re-export of ``KeycloakProvider`` from ``crewai_core.auth.providers.keycloak``.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:55:39"
+  },
+  {
+   "skill": "okta",
+   "source_file": "lib/cli/src/crewai_cli/authentication/providers/okta.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "03723d64d60368e07ec753c4b258b2cfdbd74601316cc4825a660f8f03b58999",
+   "lines": 8,
+   "first_line": "\"\"\"Re-export of ``OktaProvider`` from ``crewai_core.auth.providers.okta``.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:55:40"
+  },
+  {
+   "skill": "workos",
+   "source_file": "lib/cli/src/crewai_cli/authentication/providers/workos.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "3323c8eb01879a1dde6193c28b9293d070c767917988deb6471731ee3596f687",
+   "lines": 8,
+   "first_line": "\"\"\"Re-export of ``WorkosProvider`` from ``crewai_core.auth.providers.workos``.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:55:41"
+  },
+  {
+   "skill": "token",
+   "source_file": "lib/cli/src/crewai_cli/authentication/token.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "d59d7a3b58ebd62a001b0283827cd8880ea4929f1bc9c5e0d3c52093ca77c64e",
+   "lines": 11,
+   "first_line": "\"\"\"Re-exports of authentication token helpers from ``crewai_core.auth.token``.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:55:47"
+  },
+  {
+   "skill": "utils",
+   "source_file": "lib/cli/src/crewai_cli/authentication/utils.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "5c62d0d3f650b71d0ce65b99d7b28b360b84dc75df63eef3450893950645f7c6",
+   "lines": 8,
+   "first_line": "\"\"\"Re-export of ``validate_jwt_token`` from ``crewai_core.auth.utils``.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:55:48"
+  },
+  {
+   "skill": "config",
+   "source_file": "lib/cli/src/crewai_cli/config.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "96e904e23dc7c4c6a365e231da46809a45d8d3a2a18fc0b0d5740cd53e34fa45",
+   "lines": 30,
+   "first_line": "\"\"\"Re-exports of shared settings from ``crewai_core.settings``.",
+   "imports": [],
+   "registered": "2026-10-31 20:55:49"
+  },
+  {
+   "skill": "create_crew",
+   "source_file": "lib/cli/src/crewai_cli/create_crew.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "7e17b8caac3a42bea5dc747e96bd391959f3e878fcda5f2952a92c1ae6900dbf",
+   "lines": 329,
+   "first_line": "from pathlib import Path",
+   "imports": [
+    "click",
+    "keyword",
+    "re",
+    "shutil",
+    "sys",
+    "tomli"
+   ],
+   "registered": "2026-10-31 20:55:49"
+  },
+  {
+   "skill": "create_flow",
+   "source_file": "lib/cli/src/crewai_cli/create_flow.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "bb3abdd9ce1fc8a7dd1ab0aac816fe32c0dc6dfcd8f89f4e79269b37f8b91958",
+   "lines": 161,
+   "first_line": "from pathlib import Path",
+   "imports": [
+    "click"
+   ],
+   "registered": "2026-10-31 20:55:50"
+  },
+  {
+   "skill": "crew_chat",
+   "source_file": "lib/cli/src/crewai_cli/crew_chat.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "e3115ed156f46bd4175b01bf204888d3423e241cf6bb2a6d1d8f3a6c588903a6",
+   "lines": 34,
+   "first_line": "\"\"\"Wrapper for the crew chat command.",
+   "imports": [],
+   "registered": "2026-10-31 20:55:51"
+  },
+  {
+   "skill": "archive",
+   "source_file": "lib/cli/src/crewai_cli/deploy/archive.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "0d9007cf3b86ecd7dbf90b7904e2bc37b4b4a835b370c47fbabd9ac03a9b7472",
+   "lines": 168,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "shutil",
+    "tempfile",
+    "zipfile"
+   ],
+   "registered": "2026-10-31 20:55:51"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "lib/cli/src/crewai_cli/experimental/__init__.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "6c0471fefa8afc8bdb851e6ac2e6167b494ac717b5f6d862ada35e2809c15cba",
+   "lines": 13,
+   "first_line": "\"\"\"Commands whose shape is not settled yet.",
+   "imports": [],
+   "registered": "2026-10-31 20:55:53"
+  },
+  {
+   "skill": "input_prompt",
+   "source_file": "lib/cli/src/crewai_cli/input_prompt.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "de4b3e510b462f1c183fc402e8060af02a6f578c29184fbbcd0361efcfe49c8a",
+   "lines": 88,
+   "first_line": "\"\"\"Shared interactive prompting for runtime inputs (flows and crews).",
+   "imports": [
+    "click",
+    "difflib",
+    "json",
+    "sys"
+   ],
+   "registered": "2026-10-31 20:55:53"
+  },
+  {
+   "skill": "reset_memories_command",
+   "source_file": "lib/cli/src/crewai_cli/reset_memories_command.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "bd73b372ae4314e76021d7cb7894074006ec701957ec63384a9d8221a2340909",
+   "lines": 31,
+   "first_line": "\"\"\"Wrapper for the reset-memories command.",
+   "imports": [
+    "click"
+   ],
+   "registered": "2026-10-31 20:55:56"
+  },
+  {
+   "skill": "main",
+   "source_file": "lib/cli/src/crewai_cli/settings/main.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "da05c436fbaf7e0c36966cc79e75a8e864333cc79b9aa4e0537aecbac89e305d",
+   "lines": 104,
+   "first_line": "from datetime import datetime",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-10-31 20:56:04"
+  },
+  {
+   "skill": "token_manager",
+   "source_file": "lib/cli/src/crewai_cli/shared/token_manager.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "0cd4d982abf59701671785c9f566342672394c325cdbc3885743c288cd770491",
+   "lines": 12,
+   "first_line": "\"\"\"Re-export of ``crewai_core.token_manager.TokenManager``.",
+   "imports": [],
+   "registered": "2026-10-31 20:56:05"
+  },
+  {
+   "skill": "custom_tool",
+   "source_file": "lib/cli/src/crewai_cli/templates/crew/tools/custom_tool.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "bfdca6c41a4c51437876cdeb9c0de0e72e0fa67a3538c6c6f8e4c37ae4d170cb",
+   "lines": 18,
+   "first_line": "from crewai.tools import BaseTool",
+   "imports": [],
+   "registered": "2026-10-31 20:56:07"
+  },
+  {
+   "skill": "content_crew",
+   "source_file": "lib/cli/src/crewai_cli/templates/flow/crews/content_crew/content_crew.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "71712674cb4737e98acc6958dbd49c5d4827cbee91d2de5a0c10bbb2ec391c9d",
+   "lines": 60,
+   "first_line": "from crewai import Agent, Crew, Process, Task",
+   "imports": [],
+   "registered": "2026-10-31 20:56:07"
+  },
+  {
+   "skill": "custom_tool",
+   "source_file": "lib/cli/src/crewai_cli/templates/flow/tools/custom_tool.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "acf66db3f76a86628571c85f4805a465d2de4ec199b0e628068d8737550338be",
+   "lines": 20,
+   "first_line": "from typing import Type",
+   "imports": [],
+   "registered": "2026-10-31 20:56:09"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "lib/cli/src/crewai_cli/triggers/__init__.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "bdff9a5effb25d29bebaec359b7fa6b2a79576f98ff8f4aaef8f960905d588cf",
+   "lines": 6,
+   "first_line": "\"\"\"Triggers command module for CrewAI CLI.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:56:10"
+  },
+  {
+   "skill": "update_crew",
+   "source_file": "lib/cli/src/crewai_cli/update_crew.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "a9a191ecb17e0dfe83b3114671392a1ac1dee53467f649f5c98f71cb58bcce9a",
+   "lines": 135,
+   "first_line": "import os",
+   "imports": [
+    "click",
+    "os",
+    "shutil",
+    "tomli_w"
+   ],
+   "registered": "2026-10-31 20:56:11"
+  },
+  {
+   "skill": "user_data",
+   "source_file": "lib/cli/src/crewai_cli/user_data.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "6bc9269df79f6c211a0c72816d3c4a29a8491f0202ac56506a6a0c97855db1a9",
+   "lines": 22,
+   "first_line": "\"\"\"User-data helpers — re-exported from ``crewai_core.user_data``.\"\"\"",
+   "imports": [],
+   "registered": "2026-10-31 20:56:12"
+  },
+  {
+   "skill": "utils",
+   "source_file": "lib/cli/src/crewai_cli/utils.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "b934e93feffb8e49b64117a436899a0637e398c47d57b66638e6fe964bcec610",
+   "lines": 267,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "click",
+    "os",
+    "re",
+    "readline",
+    "shutil"
+   ],
+   "registered": "2026-10-31 20:56:12"
+  },
+  {
+   "skill": "version",
+   "source_file": "lib/cli/src/crewai_cli/version.py",
+   "source_repo": "crewAIInc/crewAI",
+   "license": "check repo",
+   "sha256": "4f397163417b2d31a386466b93e44c2b733d7e508ab8ce7cfd3387421105c797",
+   "lines": 40,
+   "first_line": "\"\"\"Re-exports of version utilities from ``crewai_core.version``.",
+   "imports": [],
+   "registered": "2026-10-31 20:56:13"
   }
  ],
  "sources": [],
- "built": "2026-10-31 14:11:22"
+ "built": "2026-10-31 20:56:13"
 }
