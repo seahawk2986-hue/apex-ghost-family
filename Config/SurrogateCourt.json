@@ -1,0 +1,19 @@
+{
+ "alpha": 0.3,
+ "drift": {
+  "territory_match": 2.285,
+  "lesson_coverage": 0.35,
+  "novelty_distance": 0.5
+ },
+ "wins": {
+  "territory_match": 13,
+  "lesson_coverage": 319,
+  "novelty_distance": 1
+ },
+ "trials": {
+  "territory_match": 14,
+  "lesson_coverage": 320,
+  "novelty_distance": 2
+ },
+ "measured_pairs": 45
+}

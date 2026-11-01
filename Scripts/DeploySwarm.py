@@ -1,4 +1,4 @@
-﻿"""Deploy 3 ghost-shard workers (code/science/archive) - the production launcher.
+"""Deploy 3 ghost-shard workers (code/science/archive) - the production launcher.
 Called by the hourly scheduled task; each shard self-gates (RAM >= 2 GB) and
 dissolves when its territory's round ends."""
 import json
@@ -76,7 +76,7 @@ def _variant_env(shard_i):
                               encoding="utf-8-sig")).get(k0, 100)
         env_m["MUT_" + k0] = str(max(10, int(base * _r.uniform(0.6, 1.4))))
     return env_m
-if __name__ == '__main__':
+if __name__ == '__main__':      # THE FIX (audited): the runner - spawn + the grain line - must not fire at import time
     import sys as _sys
     _sys.path.insert(0, r"C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts")
     import Births

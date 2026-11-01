@@ -1,0 +1,28 @@
+{
+ "ts": "2026-11-01 09:35:51",
+ "law": "THEIR numbers = published receipts from suites we cannot run on this box (16GB, $0); OUR numbers = measured on OUR gates. Directional, never equivalent - and never inflated.",
+ "honest_note": "numbered claims in the 621-canon: 0 - the abstracts are method-first; the canon carries no published score tables in abstracts; rows are directional references",
+ "their_claims": [
+  {
+   "paper": "2610.33958v1",
+   "class": "reference",
+   "claim": "benchmarks cited: SWE-bench (method paper - directional only)"
+  },
+  {
+   "paper": "2610.32313v1",
+   "class": "reference",
+   "claim": "benchmarks cited: SWE-bench (method paper - directional only)"
+  },
+  {
+   "paper": "2607.26117v1",
+   "class": "reference",
+   "claim": "benchmarks cited: MBPP (method paper - directional only)"
+  }
+ ],
+ "our_measured": {
+  "executable_verified_skills": 3,
+  "library_coding_entries": 302,
+  "library_total": 302
+ },
+ "serves": "benchmark_honesty"
+}

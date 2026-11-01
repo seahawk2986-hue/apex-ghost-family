@@ -56,6 +56,41 @@ def mutate(parent_genes, rng):
     return child
 
 
+def mutate_fusion(a, parent_vid, rng):
+    """FUSION IS THE NEW MUTATION (canon 2610.05284, bandit-guided evolution):
+    cross the parent with a second lineage from the front/pool, then jitter -
+    the jitter-only operator produced near-twins (the SurrogateFitnessCourt
+    measured territory distance 0.5 across ALL mutants: zero new territory,
+    the classic diversity collapse). Fusion + guaranteed bucket flips make
+    every child NEW TERRITORY, not a clone in disguise."""
+    pool = [v for v in a.get("lineages", {}) if v != parent_vid]
+    front = [v for v in (a.get("pareto_front") or [])
+             if v in a.get("lineages", {}) and v != parent_vid]
+    second = rng.choice(front or pool) if (front or pool) else None
+    p = a["lineages"][parent_vid]["genes"]
+    s = a["lineages"][second]["genes"] if second else p
+    child = {}
+    for k, (lo, hi, typ) in GENES.items():
+        src = rng.choice([p, s])                    # the FUSION
+        base = float(src.get(k, (lo + hi) / 2))
+        child[k] = _clamp(base * (1 + rng.gauss(0, 0.25)), lo, hi, typ)
+    child["ghost_cc_leads"] = _flip_bucket(p, "ghost_cc_leads", child, rng)
+    child["ghost_trending"] = _flip_bucket(p, "ghost_trending", child, rng)
+    return child
+
+
+def _flip_bucket(parent_genes, key, child, rng):
+    """Guarantee the child's descriptor BUCKET differs from the parent's in
+    this dim (new territory, enforced per dim - jitter alone can't)."""
+    lo, hi, _t = GENES[key]
+    gran = 50 if key == "ghost_cc_leads" else 20
+    pb = int(float(parent_genes.get(key, lo)) // gran)
+    buckets = sorted({b for b in range(int(lo // gran) + 1, int(hi // gran) + 1)})
+    choices = [b for b in buckets if b != pb] or buckets
+    nb = rng.choice(choices)
+    return _clamp(nb * gran + gran // 2, lo, hi, GENES[key][2])
+
+
 def descriptor(genes):
     """Behavior descriptor: the mix the child actually explores (low dims,
     QD archive key)."""
@@ -106,15 +141,25 @@ def save(a):
 
 
 def publish(archive):
-    """Write the archive's lineages into PathMemory['variants'] via SafeIO -
-    the birth integration: DeploySwarm._variant_env reads EXACTLY this."""
+    """Write the archive's lineages into PathMemory['variants'] via SafeIO - 
+    the birth integration: DeploySwarm._variant_env reads EXACTLY this.
+    MERGE-PRESERVE (loop-closer fix): keys the archive does not own (e.g. the
+    orchestrator's measured 'rounds' telemetry) are carried forward - the old
+    wholesale replace WIPED measured rounds on every publish (root cause of
+    mutants starving at 0.0 forever)."""
     from SafeIO import write_json as _w, read_json as _rj
     pm = _rj(PM, {}) or {}
-    pm["variants"] = {
+    stale = pm.get("variants") or {}
+    fresh = {
         vid: {"params": g["genes"], "fitness": g["fitness"],
               "descriptor": g["descriptor"], "wins": g.get("wins", 0),
               "mines": g.get("mines", 0), "reqs": g.get("reqs", 0)}
         for vid, g in archive["lineages"].items()}
+    for vid, v in fresh.items():
+        for k, val in (stale.get(vid) or {}).items():
+            if k not in v:
+                v[k] = val
+    pm["variants"] = fresh
     ch = archive.get("champion")
     if ch:
         pm.setdefault("family", {})["champion"] = ch
@@ -127,6 +172,78 @@ def publish(archive):
     return True
 
 
+def sync_from_pathmemory():
+    """THE MEASURED-FITNESS LOOP CLOSER (audit-found root cause: the
+    orchestrator measures real rounds into PathMemory['variants'], but the
+    archive never FOLDED them back - mutants starved at 0.0 forever, and the
+    old publish() even WIPED 'rounds' on every re-publish). Folds measured
+    fitness into the archive, applies the upward-only rollback guard, retires
+    only among MEASURED lineages (fitness 0.0 = unmeasured child: protected,
+    never slaughtered), re-keys cells, recomputes the front from the stored
+    per-goal grid, saves, publishes. Returns (synced, rolled, retired)."""
+    from SafeIO import read_json as _rj
+    pm = _rj(PM, {}) or {}
+    a = load()
+    synced, rolled = [], []
+    for vid, g in a.get("lineages", {}).items():
+        v = (pm.get("variants") or {}).get(vid) or {}
+        try:
+            v_rounds = int(v.get("rounds") or 0)
+        except Exception:
+            v_rounds = 0
+        if v_rounds > int(g.get("m_rounds", 0)):
+            new_fit = float(v.get("fitness") or 0.0)
+            if new_fit > 0.0:                    # never fold an empty measure
+                g["m_rounds"] = v_rounds
+                g["mines"] = int(v.get("mines") or 0)
+                g["reqs"] = int(v.get("reqs") or 0)
+                g["wins"] = int(v.get("wins") or 0)
+                g["fitness"] = new_fit
+                d = g.get("descriptor")
+                if d:
+                    a.setdefault("cells", {})[d] = {"vid": vid, "fitness": new_fit}
+                synced.append(vid)
+    try:
+        import EvolutionSpeedup as ES
+        rolled = ES.upward_guard(a, None)
+    except Exception:
+        rolled = []
+    pool = a.get("lineages", {})
+    top_f = max((float(L.get("fitness", -1)) for L in pool.values()), default=0.0)
+    floor = 0.2 * max(0.1, top_f)
+    retired = [k for k, L in list(pool.items())
+               if int(L.get("m_rounds", 0)) > 0
+               and float(L.get("fitness", 0)) < floor
+               and k != a.get("champion")]
+    for k in retired:
+        d = pool[k].get("descriptor")
+        del pool[k]
+        cell = a.get("cells", {}).get(d)
+        if cell and cell.get("vid") == k:
+            del a["cells"][d]
+    a["champion"] = champion(a)[0] if pool else a.get("champion")
+    try:
+        grid = a.get("goal_grid") or {}
+        scored = [(vid, gg) for vid, gg in grid.items() if vid in pool]
+        if scored:
+            import EvolutionUpward as EU
+            front = EU.pareto_front(scored)
+            if front:
+                a["pareto_front"] = sorted(set(front))
+    except Exception:
+        pass
+    a["pareto_front"] = [v for v in (a.get("pareto_front") or [])
+                         if v in pool] or [a.get("champion") or "base"]
+    save(a)
+    publish(a)
+    note_s = ", ".join(synced) or "none (no new measured rounds - honest no-op)"
+    note_r = ", ".join(rolled) or "none"
+    note_t = ", ".join(retired) or "none (unmeasured children protected)"
+    print(f"[genepool] sync: folded [{note_s}] | rolled-back [{note_r}] | "
+          f"retired [{note_t}] | front {a['pareto_front']} | champion {a['champion']}")
+    return synced, rolled, retired
+
+
 def run(gen_mutations=3):
     rng = random.Random(int(time.time()))
     a = load()
@@ -137,8 +254,12 @@ def run(gen_mutations=3):
                                  "fitness": 0.259, "descriptor": descriptor(base_genes),
                                  "wins": 0, "mines": 1121, "reqs": 0}
         a["champion"] = "base"
-    parent_vid, parent = champion(a)
-    made = []
+    front = a.get("pareto_front") or [a["champion"]]
+    parent_vid = front[int(a.get("gen", 0)) % len(front)]   # EVOLVE FROM THE FRONT:
+    if parent_vid not in a["lineages"]:                     # stale-front guard
+        parent_vid = (a["champion"] if a["champion"] in a["lineages"] else "base")
+    parent = a["lineages"][parent_vid]                      # parents rotate across the
+    made = []                                               # Pareto front per goal
     for i in range(gen_mutations):
         vid = f"g{a['gen']}_{i}"
         genes = mutate(parent["genes"], rng)
@@ -157,7 +278,7 @@ def run(gen_mutations=3):
     a["champion"] = champion(a)[0]
     save(a)
     print(f"[genepool] gen {a['gen']}: {len(made)} mutated lineages entered "
-          f"({', '.join(made) or 'none - all refused as non-novel'}); "
+          f"(from PARETO parent {parent_vid} - the front rotates); "
           f"archive now {len(a['lineages'])} lineages, champion {a['champion']}")
     return a
 

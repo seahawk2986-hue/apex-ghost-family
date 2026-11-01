@@ -216,11 +216,6 @@ if __name__ == "__main__":
         b, a = execute_green(green)
         print(f"[runroi] MEASURED DELTAS: gfi {b['gfi']}->{a['gfi']} | "
               f"curriculum {b['curriculum']}->{a['curriculum']}")
-        for mode, key in (("archive_pull", "gfi"), ("upgrader", "curriculum")):
-            gain = a[key] - b[key]
-            if any(cmd[1].lower().endswith(mode.split('_')[0] + "*.py")
-                   for _cmd in [green] if False):
-                pass
         # record honestly per greenlit mode by its own key
         if any(c[0][1].endswith("GhArchiveLane.py") for c in green):
             record("archive_pull", min(1.0, (a["gfi"] - b["gfi"]) / 4.0))

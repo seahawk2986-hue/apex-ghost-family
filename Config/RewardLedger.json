@@ -58,25 +58,27 @@
  "TrainingMinStack.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 11,
+  "attempts": 12,
   "successes": 1,
   "streak": 0,
-  "ok_full": 1
+  "ok_full": 1,
+  "parity_total": 1,
+  "parity_hits": 1
  },
  "TrainingLogParser.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 37,
+  "attempts": 39,
   "successes": 1,
   "streak": 0,
   "ok_full": 1,
-  "parity_total": 25,
-  "parity_hits": 25
+  "parity_total": 27,
+  "parity_hits": 27
  },
  "Scripts/ApexGym.py": {
   "best": 110,
-  "streak": 0,
-  "attempts": 277
+  "streak": 2,
+  "attempts": 295
  },
- "Scripts/SwarmOrchestrator.py": 87429.5
+ "Scripts/SwarmOrchestrator.py": 108971.0
 }

@@ -1,0 +1,50 @@
+{"ts": "2026-11-01 09:48:44", "run": "harvest4", "tool": "arxiv-export-api", "purpose": "https://export.arxiv.org/api/query (search by query, paged, sorted submittedDate) - the source endpoint"}
+{"ts": "2026-11-01 09:48:44", "run": "harvest4", "tool": "python-urllib", "purpose": "the fetch transport (stdlib, no auth, UA apex-paper-harvest/4.0) - venv 3.14.7"}
+{"ts": "2026-11-01 09:48:44", "run": "harvest4", "tool": "python-xml.etree", "purpose": "the ATOM response parser (stdlib)"}
+{"ts": "2026-11-01 09:48:44", "run": "harvest4", "tool": "regex-company-ranker", "purpose": "the industry-signal recognizer (the COMPANY pattern) - flags which lab/product built it"}
+{"ts": "2026-11-01 09:48:44", "run": "harvest4", "tool": "regex-cut-filter", "purpose": "the coding-frontier filter (CUT pattern) - only cutting-edge coding rows enter"}
+{"ts": "2026-11-01 09:48:44", "run": "harvest4", "tool": "jsonl-ledger", "purpose": "the dedupe-safe append ledger (os.replace atomic)"}
+{"ts": "2026-11-01 09:48:44", "run": "harvest4", "tool": "politeness-3s", "purpose": "the inter-query sleep (anti-hammer law)"}
+{"ts": "2026-11-01 09:58:32", "run": "paper_tools", "tool": "tree-sitter", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:32", "run": "paper_tools", "tool": "pyflakes", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:32", "run": "paper_tools", "tool": "bandit", "purpose": "canon-adopted (3 papers cite it)"}
+{"ts": "2026-11-01 09:58:32", "run": "paper_tools", "tool": "ruff", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:32", "run": "paper_tools", "tool": "pytest", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:36", "run": "paper_tools", "tool": "tree-sitter", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:36", "run": "paper_tools", "tool": "pyflakes", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:36", "run": "paper_tools", "tool": "bandit", "purpose": "canon-adopted (3 papers cite it)"}
+{"ts": "2026-11-01 09:58:36", "run": "paper_tools", "tool": "ruff", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:36", "run": "paper_tools", "tool": "pytest", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:53", "run": "paper_tools", "tool": "tree-sitter", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:53", "run": "paper_tools", "tool": "pyflakes", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:53", "run": "paper_tools", "tool": "bandit", "purpose": "canon-adopted (3 papers cite it)"}
+{"ts": "2026-11-01 09:58:53", "run": "paper_tools", "tool": "ruff", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:53", "run": "paper_tools", "tool": "pytest", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:57", "run": "paper_tools", "tool": "tree-sitter", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:57", "run": "paper_tools", "tool": "pyflakes", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:57", "run": "paper_tools", "tool": "bandit", "purpose": "canon-adopted (3 papers cite it)"}
+{"ts": "2026-11-01 09:58:57", "run": "paper_tools", "tool": "ruff", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:58:57", "run": "paper_tools", "tool": "pytest", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:19", "run": "paper_tools", "tool": "tree-sitter", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:19", "run": "paper_tools", "tool": "pyflakes", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:19", "run": "paper_tools", "tool": "bandit", "purpose": "canon-adopted (3 papers cite it)"}
+{"ts": "2026-11-01 09:59:19", "run": "paper_tools", "tool": "ruff", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:19", "run": "paper_tools", "tool": "pytest", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:30", "run": "paper_tools", "tool": "tree-sitter", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:30", "run": "paper_tools", "tool": "pyflakes", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:30", "run": "paper_tools", "tool": "bandit", "purpose": "canon-adopted (3 papers cite it)"}
+{"ts": "2026-11-01 09:59:30", "run": "paper_tools", "tool": "ruff", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:30", "run": "paper_tools", "tool": "pytest", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:30", "run": "paper_tools", "tool": "ast", "purpose": "canon-adopted (83 papers cite it)"}
+{"ts": "2026-11-01 09:59:31", "run": "paper_tools", "tool": "tree-sitter", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:31", "run": "paper_tools", "tool": "pyflakes", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:31", "run": "paper_tools", "tool": "bandit", "purpose": "canon-adopted (3 papers cite it)"}
+{"ts": "2026-11-01 09:59:31", "run": "paper_tools", "tool": "ruff", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:31", "run": "paper_tools", "tool": "pytest", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:31", "run": "paper_tools", "tool": "ast", "purpose": "canon-adopted (83 papers cite it)"}
+{"ts": "2026-11-01 09:59:37", "run": "paper_tools", "tool": "tree-sitter", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:37", "run": "paper_tools", "tool": "pyflakes", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:37", "run": "paper_tools", "tool": "bandit", "purpose": "canon-adopted (3 papers cite it)"}
+{"ts": "2026-11-01 09:59:37", "run": "paper_tools", "tool": "ruff", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:37", "run": "paper_tools", "tool": "pytest", "purpose": "canon-adopted (0 papers cite it)"}
+{"ts": "2026-11-01 09:59:37", "run": "paper_tools", "tool": "ast", "purpose": "canon-adopted (83 papers cite it)"}

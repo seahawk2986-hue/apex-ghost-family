@@ -114,6 +114,16 @@ def run(top_n=10):
         s["verified_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
         print(f"[upgrader] {s.get('skill', '?')[:44]} <- {repo[:32]}: "
               f"fetched={bool(src)} compiles={ok}")
+        try:
+            import RuntimeReceipt as _rr
+            row = _rr._receipt(f"upgrader:{str(s.get('skill', '?'))[:36]}",
+                               bool(ok), 0.0,
+                               f"compile-verify (bounded subprocess): "
+                               f"fetched={bool(src)} compiles={ok}")
+            with open(_rr.LEDGER, "a", encoding="utf-8") as _f:
+                _f.write(json.dumps(row) + "\n")
+        except Exception:
+            pass
         if ok:
             curriculum.append({"skill": s.get("skill"), "repo": repo,
                                "file": path_part,

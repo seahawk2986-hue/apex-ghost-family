@@ -4,28 +4,311 @@
   "grades_top": []
  },
  "use": {
-  "lessons_written": 0
+  "lessons_written": 0,
+  "recruit_bonus": 0.75
  },
  "events": {
-  "reqs": 0.22825379948496705,
-  "mines": 5.934598786609146
+  "reqs": 0.98,
+  "mines": 21.56
  },
  "wiki": {
-  "reqs": 0.22825379948496705,
-  "mines": 1.3695227969098018
+  "reqs": 0.18276997317537075,
+  "mines": 1.096619839052224
  },
  "hf_space": {
-  "reqs": 0.22825379948496705,
-  "mines": 0.22825379948496705
+  "reqs": 0.18276997317537075,
+  "mines": 0.18276997317537075
  },
  "trending": {},
  "variants": {
   "base": {
-   "wins": 4,
-   "rounds": 63,
-   "mines": 1121,
-   "reqs": 4581,
-   "fitness": 0.2447
+   "params": {
+    "ghost_cc_leads": 205,
+    "ghost_events": 80,
+    "ghost_trending": 42,
+    "ghost_wiki_leads": 65,
+    "ghost_wayback_leads": 85,
+    "ghost_queue_mines_to_farm": 27,
+    "ghost_min_stars": 315
+   },
+   "fitness": 3.7933,
+   "descriptor": "cc4_ev3_tr2",
+   "wins": 1,
+   "mines": 1138,
+   "reqs": 300,
+   "rounds": 4
+  },
+  "g0_0": {
+   "params": {
+    "ghost_cc_leads": 199,
+    "ghost_events": 92,
+    "ghost_trending": 44,
+    "ghost_wiki_leads": 53,
+    "ghost_wayback_leads": 101,
+    "ghost_queue_mines_to_farm": 19,
+    "ghost_min_stars": 318
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev3_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g1_1": {
+   "params": {
+    "ghost_cc_leads": 217,
+    "ghost_events": 86,
+    "ghost_trending": 45,
+    "ghost_wiki_leads": 42,
+    "ghost_wayback_leads": 73,
+    "ghost_queue_mines_to_farm": 26,
+    "ghost_min_stars": 361
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev3_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g2_2": {
+   "params": {
+    "ghost_cc_leads": 236,
+    "ghost_events": 35,
+    "ghost_trending": 47,
+    "ghost_wiki_leads": 55,
+    "ghost_wayback_leads": 94,
+    "ghost_queue_mines_to_farm": 22,
+    "ghost_min_stars": 351
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev1_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g3_0": {
+   "params": {
+    "ghost_cc_leads": 173,
+    "ghost_events": 82,
+    "ghost_trending": 36,
+    "ghost_wiki_leads": 55,
+    "ghost_wayback_leads": 90,
+    "ghost_queue_mines_to_farm": 27,
+    "ghost_min_stars": 328
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev3_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g4_2": {
+   "params": {
+    "ghost_cc_leads": 217,
+    "ghost_events": 110,
+    "ghost_trending": 46,
+    "ghost_wiki_leads": 77,
+    "ghost_wayback_leads": 59,
+    "ghost_queue_mines_to_farm": 33,
+    "ghost_min_stars": 243
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev4_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g5_1": {
+   "params": {
+    "ghost_cc_leads": 284,
+    "ghost_events": 77,
+    "ghost_trending": 40,
+    "ghost_wiki_leads": 66,
+    "ghost_wayback_leads": 88,
+    "ghost_queue_mines_to_farm": 19,
+    "ghost_min_stars": 387
+   },
+   "fitness": 0.0,
+   "descriptor": "cc5_ev3_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g6_2": {
+   "params": {
+    "ghost_cc_leads": 262,
+    "ghost_events": 85,
+    "ghost_trending": 27,
+    "ghost_wiki_leads": 71,
+    "ghost_wayback_leads": 91,
+    "ghost_queue_mines_to_farm": 18,
+    "ghost_min_stars": 301
+   },
+   "fitness": 0.0,
+   "descriptor": "cc5_ev3_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g7_2": {
+   "params": {
+    "ghost_cc_leads": 229,
+    "ghost_events": 77,
+    "ghost_trending": 39,
+    "ghost_wiki_leads": 47,
+    "ghost_wayback_leads": 91,
+    "ghost_queue_mines_to_farm": 32,
+    "ghost_min_stars": 334
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev3_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g8_0": {
+   "params": {
+    "ghost_cc_leads": 193,
+    "ghost_events": 110,
+    "ghost_trending": 40,
+    "ghost_wiki_leads": 73,
+    "ghost_wayback_leads": 89,
+    "ghost_queue_mines_to_farm": 39,
+    "ghost_min_stars": 249
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev4_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g9_0": {
+   "params": {
+    "ghost_cc_leads": 156,
+    "ghost_events": 66,
+    "ghost_trending": 36,
+    "ghost_wiki_leads": 64,
+    "ghost_wayback_leads": 100,
+    "ghost_queue_mines_to_farm": 25,
+    "ghost_min_stars": 303
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev2_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g10_2": {
+   "params": {
+    "ghost_cc_leads": 196,
+    "ghost_events": 71,
+    "ghost_trending": 53,
+    "ghost_wiki_leads": 52,
+    "ghost_wayback_leads": 65,
+    "ghost_queue_mines_to_farm": 28,
+    "ghost_min_stars": 350
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev2_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g11_0": {
+   "params": {
+    "ghost_cc_leads": 236,
+    "ghost_events": 51,
+    "ghost_trending": 44,
+    "ghost_wiki_leads": 71,
+    "ghost_wayback_leads": 104,
+    "ghost_queue_mines_to_farm": 27,
+    "ghost_min_stars": 238
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev2_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g12_1": {
+   "params": {
+    "ghost_cc_leads": 174,
+    "ghost_events": 107,
+    "ghost_trending": 33,
+    "ghost_wiki_leads": 65,
+    "ghost_wayback_leads": 78,
+    "ghost_queue_mines_to_farm": 30,
+    "ghost_min_stars": 447
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev4_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g13_2": {
+   "params": {
+    "ghost_cc_leads": 203,
+    "ghost_events": 67,
+    "ghost_trending": 37,
+    "ghost_wiki_leads": 61,
+    "ghost_wayback_leads": 76,
+    "ghost_queue_mines_to_farm": 25,
+    "ghost_min_stars": 265
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev2_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g14_1": {
+   "params": {
+    "ghost_cc_leads": 183,
+    "ghost_events": 87,
+    "ghost_trending": 63,
+    "ghost_wiki_leads": 71,
+    "ghost_wayback_leads": 82,
+    "ghost_queue_mines_to_farm": 14,
+    "ghost_min_stars": 393
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev3_tr3",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g15_2": {
+   "params": {
+    "ghost_cc_leads": 295,
+    "ghost_events": 72,
+    "ghost_trending": 34,
+    "ghost_wiki_leads": 61,
+    "ghost_wayback_leads": 91,
+    "ghost_queue_mines_to_farm": 23,
+    "ghost_min_stars": 278
+   },
+   "fitness": 0.0,
+   "descriptor": "cc5_ev2_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
+  },
+  "g16_2": {
+   "params": {
+    "ghost_cc_leads": 254,
+    "ghost_events": 103,
+    "ghost_trending": 44,
+    "ghost_wiki_leads": 72,
+    "ghost_wayback_leads": 105,
+    "ghost_queue_mines_to_farm": 25,
+    "ghost_min_stars": 254
+   },
+   "fitness": 0.0,
+   "descriptor": "cc5_ev4_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0
   }
  },
  "family": {
@@ -43,8 +326,60 @@
   "best_action": "none this cycle - the honest zero; widen lanes/token tomorrow"
  },
  "none": {
-  "reqs": 0.08635231448510455,
-  "mines": 79.78953858423658,
+  "reqs": 0.6382393305518408,
+  "mines": 185.0894058600338,
   "recruit_bonus": 1.0
+ },
+ "upward": {
+  "ts": "2026-11-01 10:04:34",
+  "alarms": 0,
+  "genes_front": [
+   "base"
+  ],
+  "skills_verified": 3,
+  "skills_lib": 302,
+  "canon": {
+   "papers_2026": 100,
+   "papers_evolution": 421
+  },
+  "gi_score": 387.3,
+  "goals": {
+   "gold": 2205.0,
+   "money": 0.0,
+   "life": 129.0,
+   "recruits": 6.0,
+   "jobs": 213.0,
+   "coding": 305.0,
+   "omnivore": 329.0,
+   "efficiency": 526.0,
+   "safety": 2.0
+  },
+  "ascent_last": 3.987
+ },
+ "lane_plan": {
+  "ts": "2026-11-01 10:00:22",
+  "search": "bounded-best-first depth2 beam4",
+  "lane_order": [
+   "forge",
+   "code"
+  ],
+  "alloc_units": {
+   "forge": 5,
+   "code": 4
+  },
+  "score": 1.0,
+  "ms": 0.0,
+  "stats": {
+   "forge": {
+    "yield": 0.0,
+    "reqs": 0.0,
+    "tries": 0
+   },
+   "code": {
+    "yield": 0.0,
+    "reqs": 0.0,
+    "tries": 0
+   }
+  }
  }
 }

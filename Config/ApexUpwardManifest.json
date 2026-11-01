@@ -1,0 +1,494 @@
+{
+ "ts": "2026-11-01 10:04:34",
+ "ms": 4096.6,
+ "state": {
+  "genes": {
+   "gen": 17,
+   "champion": "base",
+   "front": [
+    "base"
+   ],
+   "lineages": {
+    "base": {
+     "fitness": 3.7933,
+     "m_rounds": 4
+    },
+    "g0_0": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g1_1": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g2_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g3_0": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g4_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g5_1": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g6_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g7_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g8_0": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g9_0": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g10_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g11_0": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g12_1": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g13_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g14_1": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g15_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g16_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    }
+   }
+  },
+  "skills": {
+   "verified_count": 3,
+   "items": 3
+  },
+  "economy": {
+   "earned": 0.0,
+   "spent": 0.0,
+   "rows": 3,
+   "corrupt": false
+  },
+  "ascent": {
+   "last": 3.987,
+   "max": 3.987,
+   "n": 8
+  },
+  "knowledge": {
+   "events": {
+    "reqs": 0,
+    "mines": 21
+   },
+   "wiki": {
+    "reqs": 0,
+    "mines": 1
+   },
+   "hf_space": {
+    "reqs": 0,
+    "mines": 0
+   },
+   "trending": {
+    "reqs": 0,
+    "mines": 0
+   }
+  },
+  "help": {
+   "briefs": 123,
+   "alarmsRaised": 6
+  },
+  "canon": {
+   "papers_2026": 100,
+   "papers_evolution": 421
+  },
+  "skills_lib": {
+   "count": 302,
+   "coding": 302,
+   "categories": 24
+  },
+  "board": {
+   "backlog": 1455,
+   "repos_consumed": 2098,
+   "skills": 245,
+   "money": "$0.00"
+  },
+  "doors": {
+   "count": 5
+  },
+  "health": {
+   "ram_free_gb": 7.0,
+   "disk_free_gb": 435.0,
+   "alarms": []
+  },
+  "registry": {
+   "family/agent_card.json": true,
+   "server.mcpb": true,
+   "family/ladder.md": true,
+   "mcp.json": true
+  },
+  "jobs": {
+   "opps_inbox": 146,
+   "rungs_filed": 67
+  },
+  "proactive": {
+   "opps_scanned": 0,
+   "total_ev": 0.0,
+   "best_action": "none this cycle - the honest zero; widen lanes/token tomorrow"
+  },
+  "directives": {
+   "queue_depth": 0,
+   "head": ""
+  },
+  "hardware": {
+   "ram_free_gb": 7.0,
+   "tier": "brain-window",
+   "allowed": [
+    "brain-load+conversion",
+    "chain",
+    "bubbles",
+    "genes"
+   ],
+   "starved": false,
+   "proc_rss_mb": 103.4,
+   "gpu_note": "no GPU loads for swarm work (the 3050 stays idle-capable)"
+  },
+  "lessons": {
+   "count": 2,
+   "champions": 0,
+   "weights": true
+  },
+  "converts": {
+   "count": 1
+  },
+  "digest": {
+   "present": true,
+   "age_min": 0.5
+  },
+  "brain": {},
+  "integrity": {
+   "bad": [],
+   "ok": true
+  },
+  "mining": {
+   "net_reqs": 176,
+   "net_ok": 62,
+   "findings": 85
+  },
+  "transport": {
+   "last_hub_root": "{'sha': '4fe1c94a79d9', 'commit_msg': 'grain: hub harvest 133 (manifest-digested) [skip ci]', 'ts': '2026-10-31 22:18:04'}"
+  }
+ },
+ "folded_genes": [],
+ "rolled_back": [],
+ "retired": [],
+ "floors_restored": 0,
+ "git_restored": 0,
+ "alarms": [],
+ "goals": {
+  "gold": {
+   "score": 2205.0,
+   "delta": 23.0,
+   "progress_age_min": 0.0
+  },
+  "money": {
+   "score": 0.0,
+   "delta": 0.0,
+   "progress_age_min": 65.4
+  },
+  "life": {
+   "score": 129.0,
+   "delta": 0.0,
+   "progress_age_min": 20.3
+  },
+  "recruits": {
+   "score": 6.0,
+   "delta": 0.0,
+   "progress_age_min": 20.3
+  },
+  "jobs": {
+   "score": 213.0,
+   "delta": 0.0,
+   "progress_age_min": 20.3
+  },
+  "coding": {
+   "score": 305.0,
+   "delta": 0.0,
+   "progress_age_min": 20.3
+  },
+  "omnivore": {
+   "score": 329.0,
+   "delta": 0.0,
+   "progress_age_min": 20.3
+  },
+  "efficiency": {
+   "score": 526.0,
+   "delta": 0.0,
+   "progress_age_min": 20.3
+  },
+  "safety": {
+   "score": 2.0,
+   "delta": 0.0,
+   "progress_age_min": 20.3
+  }
+ },
+ "goal_progress": {
+  "gold": 1793545474.1957452,
+  "money": 1793541551.1543214,
+  "life": 1793544253.5449352,
+  "recruits": 1793544253.5449352,
+  "jobs": 1793544253.5449352,
+  "coding": 1793544253.5449352,
+  "omnivore": 1793544253.5449352,
+  "efficiency": 1793544253.5449352,
+  "safety": 1793544253.5449352
+ },
+ "gi_score": 387.3,
+ "goal_genealogy": {
+  "gold": {
+   "origin": "ApplyTriGenome: MAXIMIZE YIELD (mines/req - the original fitness)",
+   "status": "active",
+   "projection": "gold"
+  },
+  "money": {
+   "origin": "UsdLane: 'the packet's purpose gains the USD cause'",
+   "status": "active",
+   "projection": "money"
+  },
+  "andrew_life": {
+   "origin": "FinancialBrain: the swarm's OVERARCHING goal - improve Andrew Hike's life FINANCIALLY, proactively",
+   "status": "active",
+   "projection": "life"
+  },
+  "recruits": {
+   "origin": "Recruiter/OpenDoorHunter/RecruitmentDoor: consent-gated onboarding; the handshake",
+   "status": "active",
+   "projection": "recruits"
+  },
+  "jobs": {
+   "origin": "FounderKit: 'filed issues = the reputation ladder's first rungs + sponsor visibility'",
+   "status": "active",
+   "projection": "jobs"
+  },
+  "safety": {
+   "origin": "EthicAudit (Attic) + the card's laws (fail-closed, print-first, digest-evidenced)",
+   "status": "active",
+   "projection": "safety"
+  },
+  "upward_evo": {
+   "origin": "the standing directive: better each generation at EVERY goal, upward-only",
+   "status": "active",
+   "projection": "ascent+genes"
+  },
+  "speed": {
+   "origin": "the standing hardware law: evolve as fast as the box honestly allows",
+   "status": "active",
+   "projection": "hardware_gate"
+  },
+  "sovereignty": {
+   "origin": "SeedPacket + hub transport: keyless commit-rooted git+files, publish on OUR turf",
+   "status": "active",
+   "projection": "transport+registry"
+  },
+  "backlog_drain": {
+   "origin": "Campaign100: 'THE BACKLOG IS DRAINED - the gold goal reached early' (10 waves x 10 shifts)",
+   "status": "flow",
+   "projection": "backlog_alarm"
+  },
+  "tri_genome": {
+   "origin": "ApplyTriGenome: yield x (help_the_founder + recruits)",
+   "status": "folded",
+   "projection": null,
+   "note": "its three legs are exactly gold + life + recruits today"
+  },
+  "elections": {
+   "origin": "Persuasion (Attic): family elections; fitness voted; a name in the ledger",
+   "status": "folded",
+   "projection": null,
+   "note": "the vote became the measured calibration EMA - claims cannot outvote receipts"
+  },
+  "throne": {
+   "origin": "HubCharter: hubs compete for the champion throne by measured fitness",
+   "status": "dormant",
+   "projection": null,
+   "note": "measures when domiciled hubs exist; the charter refuses all but the operator-signed"
+  },
+  "sleep": {
+   "origin": "ApexDream + ApexSkills recertify: nightly consolidation; stale skills DEMOTE",
+   "status": "folded",
+   "projection": "skills_lib",
+   "note": "the demotion gate keeps the library honest between sleeps"
+  },
+  "first_external_value": {
+   "origin": "the opening directive: directed toward FIRST EXTERNAL VALUE (filed issue / merged PR) - all money-gated steps end at the founder's review",
+   "status": "active",
+   "projection": "money+recruits+jobs (the $0.00 tally)",
+   "note": "only a human-founded file/PR/listing moves it - the telos of the other three"
+  },
+  "discovery_harvest": {
+   "origin": "the opening directive: make the swarm MAXIMALLY EFFECTIVE at discovery/harvest",
+   "status": "active",
+   "projection": "gold",
+   "note": "gold is this directive's measured instrument (mines/req)"
+  },
+  "test_first": {
+   "origin": "the standing method rule: test first, implement if pass, else self-shelve",
+   "status": "active",
+   "projection": "the gates themselves (RepeatTest)",
+   "note": "every organ ships with its own gate; failures iterate openly"
+  },
+  "reproducible": {
+   "origin": "'repeat the test with the same parameters' - a gate that passes once is not proven",
+   "status": "active",
+   "projection": "RepeatTest's two-pass ledger",
+   "note": "organs ship only when BOTH identical passes are green"
+  },
+  "compare_to_canon": {
+   "origin": "'source the papers from the web; compare the swarm to the most successful documented 2026 cases'",
+   "status": "folded",
+   "projection": "canon (521 papers)",
+   "note": "the canon became the court's authority and the design canon - measured in state.canon"
+  },
+  "efficiency_evolve": {
+   "origin": "GOAL: 'Evolve upwards as efficiently as possible while keeping hardware constraints in mind'",
+   "status": "active",
+   "projection": "efficiency (outputs earned INSIDE the RAM-tier gate; the gate binds always)",
+   "note": "measured by verified skills + banked lessons + canon growth - receipts per hardware window, never a wasted mutation (the court pre-stages best-of-N)"
+  },
+  "coding_mastery": {
+   "origin": "GOAL: 'Become as good at coding as the current best coding agents, hardware constraints kept'",
+   "status": "active",
+   "projection": "coding (executable-verified artifacts; the 2026 benchmark leaders = the comparison class)",
+   "note": "tonight: coding-category library entries + executable-verified count; the fresh canon harvest builds the benchmark-comparison instrument"
+  },
+  "skill_omnivore": {
+   "origin": "GOAL: 'Try to learn every skill that you can, source the web to see what is missing, maximize each skill; innovative workarounds; download any program or tool that helps'",
+   "status": "active",
+   "projection": "omnivore (library depth x breadth; gaps scouted vs the jobs inbox + the canon)",
+   "note": "nothing claimed that is not INSTALLED; the gap-scout prints what is missing honestly"
+  },
+  "self_knowledge": {
+   "origin": "derived goal (the 2026 canon's calibrating agents): know what it can and cannot do, measured",
+   "status": "folded",
+   "projection": "calibration EMA",
+   "note": "claim-vs-measured drift already sinks over-claimers; honest recovery is monotone"
+  },
+  "serviceable": {
+   "origin": "derived goal (best agents are USED, not admired): an external system can discover and employ Apex",
+   "status": "active",
+   "projection": "registry",
+   "note": "agent card + MCP bundle + ladder + doors, measured every tick - the door stands open"
+  },
+  "runtime_verification": {
+   "origin": "canon cluster verification_runtime (17/100 papers; e.g. 2610.38800 'Runtime-Aware Context for AI Coding Agents'): skills verified by EXECUTION AT USE, not static compile alone",
+   "status": "implemented",
+   "projection": "coding",
+   "note": "RuntimeReceipt: the append-only execution ledger (exec-ok and honest-fail both = evidence), bounded 10s, monotone - GATE PASSED x2"
+  },
+  "long_horizon_specs": {
+   "origin": "canon cluster long_horizon (7/100; e.g. 2610.40256 'Scaling Long-Horizon Coding via Interdependent Specifications'): big work = EXPLICIT interdependent sub-specs",
+   "status": "implemented",
+   "projection": "jobs+coding",
+   "note": "LongHorizonSpecs: locate/change/verify contract chunks with exits + dep edges - the 12 board asks became 36 local contract chunks; posting stays FOUNDER-GATED - GATE PASSED x2"
+  },
+  "gap_scouting": {
+   "origin": "canon cluster skill_library (frontier agents maintain libraries; 2610.05300-class harnesses): scout gaps vs REAL demand",
+   "status": "implemented",
+   "projection": "omnivore",
+   "note": "SkillGapScout live tonight: 20 canon-cluster gaps + inbox asks flagged - SKILL GAP SCOUT'S OWN GATE PASSED 4/4"
+  },
+  "consolidation_cadence": {
+   "origin": "canon cluster memory_lifelong (8/100): consolidate LESSONS (directives), not raw logs - ApexDream's sleep refocused",
+   "status": "implemented",
+   "projection": "efficiency",
+   "note": "ConsolidateLessons: dedup+cap directive from the banked lessons, folded HERITABLE into the gene archive (2 live lessons -> the genome) - GATE PASSED x2"
+  },
+  "budgeted_context": {
+   "origin": "canon cluster context_engineering (10/100): context ranked by MEASURED yield within bounded budgets",
+   "status": "implemented",
+   "projection": "efficiency",
+   "note": "bounded reads are law everywhere; the PathMemory lanes already rank by yield (the 22s-window chat obeys)"
+  },
+  "benchmark_honesty": {
+   "origin": "canon cluster benchmark_driven (22/100 - the LARGEST): measured against the 2026 leaders HONESTLY (we cannot run their suites on this box; their numbers are receipts, ours are measured on OUR gates)",
+   "status": "implemented",
+   "projection": "coding+canon",
+   "note": "BenchmarkCard: 621-canon scanned (3 benchmark references; 0 numbered - the honest note PRINTED: abstracts are method-first), our side 302-code-entry library + 3 exec-verified; directional, never inflated - GATE PASSED x2"
+  }
+ },
+ "hardware_history": [
+  {
+   "ts": "09:57:05",
+   "ms": 4123.5,
+   "ram": 6.92
+  },
+  {
+   "ts": "09:57:14",
+   "ms": 4106.0,
+   "ram": 7.02
+  },
+  {
+   "ts": "09:57:34",
+   "ms": 4097.6,
+   "ram": 7.05
+  },
+  {
+   "ts": "09:59:47",
+   "ms": 4098.6,
+   "ram": 7.08
+  },
+  {
+   "ts": "09:59:56",
+   "ms": 4084.7,
+   "ram": 6.77
+  },
+  {
+   "ts": "10:00:16",
+   "ms": 4090.0,
+   "ram": 6.91
+  },
+  {
+   "ts": "10:04:02",
+   "ms": 4115.4,
+   "ram": 1.89
+  },
+  {
+   "ts": "10:04:34",
+   "ms": 4096.6,
+   "ram": 7.0
+  }
+ ],
+ "speed": {
+  "prestaged_genome": true,
+  "prestage_parent": "base",
+  "tier": "brain-window",
+  "next_actions": [
+   "genes: GenePool.run(3) pre-stages the next generation (CPU-only, gated-safe)",
+   "brain: RAM permits a loaded brain NOW - load qwen3-8b and run conversion MEASURED this window",
+   "bubbles: pre-stage + manifests + gates fill every gated minute",
+   "skills: SkillUpgrader consumes curriculum candidates in-window"
+  ]
+ }
+}

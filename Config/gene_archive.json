@@ -10,11 +10,12 @@
     "ghost_queue_mines_to_farm": 27,
     "ghost_min_stars": 315
    },
-   "fitness": 0.259,
+   "fitness": 3.7933,
    "descriptor": "cc4_ev3_tr2",
-   "wins": 0,
-   "mines": 1121,
-   "reqs": 0
+   "wins": 1,
+   "mines": 1138,
+   "reqs": 300,
+   "m_rounds": 4
   },
   "g0_0": {
    "genes": {
@@ -69,6 +70,258 @@
    "reqs": 0,
    "parent": "base",
    "born": "2026-10-31 22:19:07"
+  },
+  "g3_0": {
+   "genes": {
+    "ghost_cc_leads": 173,
+    "ghost_events": 82,
+    "ghost_trending": 36,
+    "ghost_wiki_leads": 55,
+    "ghost_wayback_leads": 90,
+    "ghost_queue_mines_to_farm": 27,
+    "ghost_min_stars": 328
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev3_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 08:42:36"
+  },
+  "g4_2": {
+   "genes": {
+    "ghost_cc_leads": 217,
+    "ghost_events": 110,
+    "ghost_trending": 46,
+    "ghost_wiki_leads": 77,
+    "ghost_wayback_leads": 59,
+    "ghost_queue_mines_to_farm": 33,
+    "ghost_min_stars": 243
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev4_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 08:42:36"
+  },
+  "g5_1": {
+   "genes": {
+    "ghost_cc_leads": 284,
+    "ghost_events": 77,
+    "ghost_trending": 40,
+    "ghost_wiki_leads": 66,
+    "ghost_wayback_leads": 88,
+    "ghost_queue_mines_to_farm": 19,
+    "ghost_min_stars": 387
+   },
+   "fitness": 0.0,
+   "descriptor": "cc5_ev3_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 08:44:12"
+  },
+  "g6_2": {
+   "genes": {
+    "ghost_cc_leads": 262,
+    "ghost_events": 85,
+    "ghost_trending": 27,
+    "ghost_wiki_leads": 71,
+    "ghost_wayback_leads": 91,
+    "ghost_queue_mines_to_farm": 18,
+    "ghost_min_stars": 301
+   },
+   "fitness": 0.0,
+   "descriptor": "cc5_ev3_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 08:44:12"
+  },
+  "g7_2": {
+   "genes": {
+    "ghost_cc_leads": 229,
+    "ghost_events": 77,
+    "ghost_trending": 39,
+    "ghost_wiki_leads": 47,
+    "ghost_wayback_leads": 91,
+    "ghost_queue_mines_to_farm": 32,
+    "ghost_min_stars": 334
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev3_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 09:01:42"
+  },
+  "g8_0": {
+   "genes": {
+    "ghost_cc_leads": 193,
+    "ghost_events": 110,
+    "ghost_trending": 40,
+    "ghost_wiki_leads": 73,
+    "ghost_wayback_leads": 89,
+    "ghost_queue_mines_to_farm": 39,
+    "ghost_min_stars": 249
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev4_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 09:03:14"
+  },
+  "g9_0": {
+   "genes": {
+    "ghost_cc_leads": 156,
+    "ghost_events": 66,
+    "ghost_trending": 36,
+    "ghost_wiki_leads": 64,
+    "ghost_wayback_leads": 100,
+    "ghost_queue_mines_to_farm": 25,
+    "ghost_min_stars": 303
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev2_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 09:05:13"
+  },
+  "g10_2": {
+   "genes": {
+    "ghost_cc_leads": 196,
+    "ghost_events": 71,
+    "ghost_trending": 53,
+    "ghost_wiki_leads": 52,
+    "ghost_wayback_leads": 65,
+    "ghost_queue_mines_to_farm": 28,
+    "ghost_min_stars": 350
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev2_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 09:35:23"
+  },
+  "g11_0": {
+   "genes": {
+    "ghost_cc_leads": 236,
+    "ghost_events": 51,
+    "ghost_trending": 44,
+    "ghost_wiki_leads": 71,
+    "ghost_wayback_leads": 104,
+    "ghost_queue_mines_to_farm": 27,
+    "ghost_min_stars": 238
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev2_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 09:35:37"
+  },
+  "g12_1": {
+   "genes": {
+    "ghost_cc_leads": 174,
+    "ghost_events": 107,
+    "ghost_trending": 33,
+    "ghost_wiki_leads": 65,
+    "ghost_wayback_leads": 78,
+    "ghost_queue_mines_to_farm": 30,
+    "ghost_min_stars": 447
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev4_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 09:55:10"
+  },
+  "g13_2": {
+   "genes": {
+    "ghost_cc_leads": 203,
+    "ghost_events": 67,
+    "ghost_trending": 37,
+    "ghost_wiki_leads": 61,
+    "ghost_wayback_leads": 76,
+    "ghost_queue_mines_to_farm": 25,
+    "ghost_min_stars": 265
+   },
+   "fitness": 0.0,
+   "descriptor": "cc4_ev2_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 09:55:10"
+  },
+  "g14_1": {
+   "genes": {
+    "ghost_cc_leads": 183,
+    "ghost_events": 87,
+    "ghost_trending": 63,
+    "ghost_wiki_leads": 71,
+    "ghost_wayback_leads": 82,
+    "ghost_queue_mines_to_farm": 14,
+    "ghost_min_stars": 393
+   },
+   "fitness": 0.0,
+   "descriptor": "cc3_ev3_tr3",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 09:55:25"
+  },
+  "g15_2": {
+   "genes": {
+    "ghost_cc_leads": 295,
+    "ghost_events": 72,
+    "ghost_trending": 34,
+    "ghost_wiki_leads": 61,
+    "ghost_wayback_leads": 91,
+    "ghost_queue_mines_to_farm": 23,
+    "ghost_min_stars": 278
+   },
+   "fitness": 0.0,
+   "descriptor": "cc5_ev2_tr1",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 09:55:25"
+  },
+  "g16_2": {
+   "genes": {
+    "ghost_cc_leads": 254,
+    "ghost_events": 103,
+    "ghost_trending": 44,
+    "ghost_wiki_leads": 72,
+    "ghost_wayback_leads": 105,
+    "ghost_queue_mines_to_farm": 25,
+    "ghost_min_stars": 254
+   },
+   "fitness": 0.0,
+   "descriptor": "cc5_ev4_tr2",
+   "wins": 0,
+   "mines": 0,
+   "reqs": 0,
+   "parent": "base",
+   "born": "2026-11-01 09:57:25"
   }
  },
  "cells": {
@@ -77,14 +330,133 @@
    "fitness": 0.0
   },
   "cc4_ev3_tr2": {
-   "vid": "g1_1",
-   "fitness": 0.0
+   "vid": "base",
+   "fitness": 3.7933
   },
   "cc4_ev1_tr2": {
    "vid": "g2_2",
    "fitness": 0.0
+  },
+  "cc3_ev3_tr1": {
+   "vid": "g3_0",
+   "fitness": 0.0
+  },
+  "cc4_ev4_tr2": {
+   "vid": "g4_2",
+   "fitness": 0.0
+  },
+  "cc5_ev3_tr2": {
+   "vid": "g5_1",
+   "fitness": 0.0
+  },
+  "cc5_ev3_tr1": {
+   "vid": "g6_2",
+   "fitness": 0.0
+  },
+  "cc4_ev3_tr1": {
+   "vid": "g7_2",
+   "fitness": 0.0
+  },
+  "cc3_ev4_tr2": {
+   "vid": "g8_0",
+   "fitness": 0.0
+  },
+  "cc3_ev2_tr1": {
+   "vid": "g9_0",
+   "fitness": 0.0
+  },
+  "cc3_ev2_tr2": {
+   "vid": "g10_2",
+   "fitness": 0.0
+  },
+  "cc4_ev2_tr2": {
+   "vid": "g11_0",
+   "fitness": 0.0
+  },
+  "cc3_ev4_tr1": {
+   "vid": "g12_1",
+   "fitness": 0.0
+  },
+  "cc4_ev2_tr1": {
+   "vid": "g13_2",
+   "fitness": 0.0
+  },
+  "cc3_ev3_tr3": {
+   "vid": "g14_1",
+   "fitness": 0.0
+  },
+  "cc5_ev2_tr1": {
+   "vid": "g15_2",
+   "fitness": 0.0
+  },
+  "cc5_ev4_tr2": {
+   "vid": "g16_2",
+   "fitness": 0.0
   }
  },
  "champion": "base",
- "gen": 3
+ "gen": 17,
+ "pareto_front": [
+  "base"
+ ],
+ "goal_grid": {
+  "base": {
+   "gold": 281.0,
+   "money": 0.0,
+   "life": 123.0,
+   "recruits": 1.0,
+   "safety": 0.0
+  },
+  "g0_0": {
+   "gold": 112.4,
+   "money": 0.0,
+   "life": 49.2,
+   "recruits": 0.4,
+   "safety": 0.0
+  },
+  "g1_1": {
+   "gold": 112.4,
+   "money": 0.0,
+   "life": 49.2,
+   "recruits": 0.4,
+   "safety": 0.0
+  },
+  "g2_2": {
+   "gold": 112.4,
+   "money": 0.0,
+   "life": 49.2,
+   "recruits": 0.4,
+   "safety": 0.0
+  }
+ },
+ "lamarck_genome": {
+  "directive_genome": "mine the backlog in graded windows; keep every claim evidence-backed; the human gate files.",
+  "source": "ReflexionRound (Lamarckian)"
+ },
+ "evolved_at": "2026-11-01 08:42:36",
+ "calibration": {
+  "L_test": {
+   "drift": 0.203,
+   "n": 56,
+   "weight": 0.594
+  }
+ },
+ "routes": {
+  "base": {
+   "specialty": "gold",
+   "edge": 168.6
+  },
+  "g0_0": {
+   "specialty": "gold",
+   "edge": 0.0
+  },
+  "g1_1": {
+   "specialty": "gold",
+   "edge": 0.0
+  },
+  "g2_2": {
+   "specialty": "gold",
+   "edge": 0.0
+  }
+ }
 }

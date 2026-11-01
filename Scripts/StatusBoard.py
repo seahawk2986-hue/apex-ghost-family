@@ -24,9 +24,14 @@ def read_board_once():
     for path, key in ((AD + r"\swarm_state.json", None),):
         try:
             st = json.load(open(path, encoding="utf-8-sig"))
-            b["backlog"] = len(st.get("pending_leads", []))
             b["repos_consumed"] = len(st.get("repos", []))
             b["last_round"] = st.get("last_run", "?")
+            try:
+                import BacklogIntegrity as _bi
+                snap = _bi.tick()          # THE single derivation (parent +
+                b["backlog"] = int(snap.get("backlog"))  # shards, deduped;
+            except Exception:              # the oscillation fix)
+                b["backlog"] = len(st.get("pending_leads", []))  # honest partial
         except Exception:
             b["backlog"] = b["repos_consumed"] = -1
     try:

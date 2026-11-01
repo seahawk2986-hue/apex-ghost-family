@@ -150,3 +150,11 @@
 {"ts": "2026-10-31 22:17:30", "total_fitness": 3.937, "dims": {"gold": {"backlog": 2000, "consumed": 2486, "diversity": 0.87, "skills": 281}, "money": {"earned": 0.0, "spent": 0.0, "opps": 12}, "life": {"briefs": 121, "alarmsRaised": 6, "lastHelp": "2026-10-31 22:17:29"}, "recruits": {"converted": 1}, "safety": {"pass": false}}}
 {"ts": "2026-10-31 22:17:49", "total_fitness": 3.962, "dims": {"gold": {"backlog": 2000, "consumed": 2486, "diversity": 0.87, "skills": 281}, "money": {"earned": 0.0, "spent": 0.0, "opps": 12}, "life": {"briefs": 122, "alarmsRaised": 6, "lastHelp": "2026-10-31 22:17:47"}, "recruits": {"converted": 1}, "safety": {"pass": false}}}
 {"ts": "2026-10-31 22:18:06", "total_fitness": 3.987, "dims": {"gold": {"backlog": 2000, "consumed": 2486, "diversity": 0.87, "skills": 281}, "money": {"earned": 0.0, "spent": 0.0, "opps": 12}, "life": {"briefs": 123, "alarmsRaised": 6, "lastHelp": "2026-10-31 22:18:04"}, "recruits": {"converted": 1}, "safety": {"pass": false}}}
+{"ts": "2026-11-01 09:02:47", "kind": "upward_alarm", "text": "knowledge lane 'events.mines' regressed 5 -> 4 (PathMemory clobber suspected)"}
+{"ts": "2026-11-01 09:02:51", "kind": "upward_alarm", "text": "knowledge lane 'events.mines' regressed 5 -> 4 (PathMemory clobber suspected)"}
+{"ts": "2026-11-01 09:44:09", "kind": "upward_alarm", "text": "knowledge lane 'events.mines' regressed 5 -> 4 (PathMemory clobber suspected)"}
+{"ts": "2026-11-01 09:53:41", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
+{"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
+{"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
+{"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
+{"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
