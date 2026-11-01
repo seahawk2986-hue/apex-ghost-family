@@ -1,0 +1,32 @@
+{
+ "ts": "2026-11-01 11:20:44",
+ "label": "PR#4929",
+ "stages": [
+  {
+   "stage": "compile",
+   "ok": true
+  },
+  {
+   "stage": "build-sh",
+   "ok": false,
+   "note": "hooks/muse/rtk-rewrite.sh: <3>WSL (9 - Relay) ERROR: CreateProcessCommon:875: execvpe(/bin/bash) failed: No"
+  },
+  {
+   "stage": "lint",
+   "ok": true,
+   "note": "no python in the change"
+  },
+  {
+   "stage": "brain-review",
+   "ok": null,
+   "note": "the brain unavailable (the stage skips honestly)"
+  },
+  {
+   "stage": "etiquette",
+   "ok": true,
+   "note": "CONTRIBUTING.md present - the PR body must reference the issue + carry the disclosure | {'disclosure': True, 'issue_reference': True, 'coordination': True}"
+  }
+ ],
+ "ship": false,
+ "verdict": "HOLD (the fix-loop)"
+}

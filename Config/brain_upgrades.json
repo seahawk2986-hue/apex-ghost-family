@@ -1,0 +1,19 @@
+{
+ "ts": "2026-11-01 11:15:33",
+ "additions": [
+  {
+   "add": "stage-judge",
+   "answer": "```json\n{\n  \"top\": [\n    \"SumeetKamble1503_The-Complete-FAANG-Preparation: This tool-family contains a large number of files (115) and could be useful for preparing for FAANG interviews, which could lead to higher-paying jobs in security and code work.\",\n    \"TheAlgorithms_Python: With 200 files, this tool-family offers a comprehensive collection of algorithms implemented in Python, which is a valuable skill in the field of security and coding.\",\n    \"aimacode_aima-python: This tool-family contains 25 files and focuses on artificial intelligence and machine learning, which are increasingly important in modern security and coding roles.\"\n  ]\n}\n```"
+  },
+  {
+   "add": "job-fit-judge",
+   "answer": "**security** - 500.0 rate, 86 papers, no cap."
+  },
+  {
+   "add": "deception-brain-leg",
+   "judged_sample": "2",
+   "expectation": "the vague draft scores LOW"
+  }
+ ],
+ "verdict": "3 additions answered (<= 3 cap)"
+}

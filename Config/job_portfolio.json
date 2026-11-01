@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-01 10:54:15",
+ "ts": "2026-11-01 11:22:07",
  "ranked": [
   {
    "class": "code_fix",
@@ -16,7 +16,7 @@
   {
    "class": "security",
    "rate": 500.0,
-   "papers": 86,
+   "papers": 85,
    "cap": 0
   },
   {
@@ -63,8 +63,8 @@
     "2610.37797v1",
     "2610.33756v1",
     "2607.06197v1",
-    "2610.12948v1",
-    "2610.31165v1"
+    "2610.31165v1",
+    "2610.12927v1"
    ],
    "fulfillment": "apex executes; the checkout + the acceptance = the founder's clicks",
    "checkout": "FOUNDER-GATED (no rail; the destination recorded: [REDACTED-PAYPAL])"
