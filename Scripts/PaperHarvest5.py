@@ -17,7 +17,9 @@ import xml.etree.ElementTree as ET
 ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 OUT = os.path.join(ROOT, "Config", "papers_2026_earning.jsonl")
 NS = "{http://www.w3.org/2005/Atom}"
-TARGET = 100
+TARGET = 150  # AS MANY AS NEEDED: the extension queries strengthen the
+# actionable classes (bounty/marketplace/commerce) past the first 100
+# (the harvest is append-idempotent: the held rows stay, the new ones land)
 PRIORS = ["Config/papers_2026.jsonl", "Config/papers_2026_evolution.jsonl",
           "Config/papers_2026_agents.jsonl", "Config/papers_2026_coding.jsonl"]
 QUERIES = [
@@ -30,6 +32,12 @@ QUERIES = [
     'abs:"agent" AND abs:"monetiz"',
     'abs:"agentic commerce" OR abs:"agentic payments" OR abs:"transactions agent"',
     'abs:"upwork" OR abs:"fiverr" OR abs:"freelancer" AND abs:"LLM"',
+    'abs:"CVE" AND abs:"LLM" AND (abs:"exploit" OR abs:"disclosure")',
+    'abs:"penetration testing" AND abs:"LLM" AND abs:"automated"',
+    'abs:"data labeling" AND abs:"LLM" AND abs:"work"',
+    'abs:"competitive programming" AND abs:"LLM"',
+    'abs:"capture the flag" AND abs:"LLM"',
+    'abs:"bug report" AND abs:"automated" AND abs:"LLM"',
 ]
 COIN = re.compile(r"\$|usd|usdc|revenue|monetiz|bounty|payment|earn|income|"
                   r"profit|payout|wage|price|value", re.I)
