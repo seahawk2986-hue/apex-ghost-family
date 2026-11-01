@@ -1,0 +1,229 @@
+{
+ "ts": "2026-11-01 09:03:22",
+ "ms": 4083.4,
+ "state": {
+  "genes": {
+   "gen": 9,
+   "champion": "base",
+   "front": [
+    "base"
+   ],
+   "lineages": {
+    "base": {
+     "fitness": 12.1848,
+     "m_rounds": 2
+    },
+    "g0_0": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g1_1": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g2_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g3_0": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g4_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g5_1": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g6_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g7_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g8_0": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    }
+   }
+  },
+  "skills": {
+   "verified_count": 3,
+   "items": 3
+  },
+  "economy": {
+   "earned": 0.0,
+   "spent": 0.0,
+   "rows": 3,
+   "corrupt": false
+  },
+  "ascent": {
+   "last": 3.987,
+   "max": 3.987,
+   "n": 8
+  },
+  "knowledge": {
+   "events": {
+    "reqs": 0,
+    "mines": 5
+   },
+   "wiki": {
+    "reqs": 0,
+    "mines": 1
+   },
+   "hf_space": {
+    "reqs": 0,
+    "mines": 0
+   },
+   "trending": {
+    "reqs": 0,
+    "mines": 0
+   }
+  },
+  "help": {
+   "briefs": 123,
+   "alarmsRaised": 6
+  },
+  "canon": {
+   "papers_2026": 100,
+   "papers_evolution": 421
+  },
+  "skills_lib": {
+   "count": 302
+  },
+  "board": {
+   "backlog": 1455,
+   "repos_consumed": 2098,
+   "skills": 245,
+   "money": "$0.00"
+  },
+  "doors": {
+   "count": 5
+  },
+  "health": {
+   "ram_free_gb": 7.0,
+   "disk_free_gb": 435.0,
+   "alarms": []
+  },
+  "registry": {
+   "family/agent_card.json": true,
+   "server.mcpb": true,
+   "family/ladder.md": true,
+   "mcp.json": true
+  },
+  "hardware": {
+   "ram_free_gb": 1.82,
+   "tier": "honest-idle",
+   "allowed": [
+    "manifests-only"
+   ],
+   "starved": false,
+   "proc_rss_mb": 32.7,
+   "gpu_note": "no GPU loads for swarm work (the 3050 stays idle-capable)"
+  },
+  "lessons": {
+   "count": 2,
+   "champions": 0,
+   "weights": true
+  },
+  "converts": {
+   "count": 1
+  },
+  "digest": {
+   "present": true,
+   "age_min": 0.5
+  },
+  "brain": {
+   "lmstudio_chat": [
+    "qwen3-8b"
+   ]
+  },
+  "integrity": {
+   "bad": [],
+   "ok": true
+  },
+  "mining": {
+   "net_reqs": 46,
+   "net_ok": 36,
+   "findings": 45
+  },
+  "transport": {
+   "last_hub_root": "{'sha': '4fe1c94a79d9', 'commit_msg': 'grain: hub harvest 133 (manifest-digested) [skip ci]', 'ts': '2026-10-31 22:18:04'}"
+  }
+ },
+ "folded_genes": [],
+ "rolled_back": [],
+ "retired": [],
+ "floors_restored": 0,
+ "git_restored": 0,
+ "alarms": [],
+ "goals": {
+  "gold": {
+   "score": 2149.0,
+   "delta": 2149.0,
+   "progress_age_min": 0.0
+  },
+  "money": {
+   "score": 0.0,
+   "delta": 0.0,
+   "progress_age_min": 4.2
+  },
+  "life": {
+   "score": 129.0,
+   "delta": 129.0,
+   "progress_age_min": 0.0
+  },
+  "recruits": {
+   "score": 6.0,
+   "delta": 6.0,
+   "progress_age_min": 0.0
+  },
+  "safety": {
+   "score": 2.0,
+   "delta": 2.0,
+   "progress_age_min": 0.0
+  }
+ },
+ "goal_progress": {
+  "gold": 1793541802.8811145,
+  "money": 1793541551.1543214,
+  "life": 1793541802.8811145,
+  "recruits": 1793541802.8811145,
+  "safety": 1793541802.8811145
+ },
+ "gi_score": 385.7,
+ "hardware_history": [
+  {
+   "ts": "08:59:11",
+   "ms": 4179.1,
+   "ram": 6.66
+  },
+  {
+   "ts": "09:02:51",
+   "ms": 8151.2,
+   "ram": 2.36
+  },
+  {
+   "ts": "09:03:09",
+   "ms": 4111.7,
+   "ram": 2.14
+  },
+  {
+   "ts": "09:03:22",
+   "ms": 4083.4,
+   "ram": 1.82
+  }
+ ],
+ "speed": {
+  "prestaged_genome": true,
+  "prestage_parent": "base",
+  "tier": "honest-idle",
+  "next_actions": [
+   "skills: SkillUpgrader consumes curriculum candidates in-window"
+  ]
+ }
+}
