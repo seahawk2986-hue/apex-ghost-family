@@ -1,0 +1,31 @@
+name: ApexPRLane
+"on":
+  push:
+    branches: [main]
+  schedule:
+    - cron: '*/15 * * * *'   # the PR-lane's beats (the staged-state -> the grant)
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  prlane:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: the grant-lane's beat (the staged-state -> the PR-file)
+        env:
+          APEX_ROOT: ${{ github.workspace }}
+          APEX_TOKEN: ${{ secrets.APEX_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 Scripts/_runner_prfile.py || true
+      - name: the prlane-grain returns (the sync home)
+        run: |
+          git config user.name "apex-pr-lane"
+          git config user.email "actions@github.com"
+          git pull --rebase || git rebase --abort || true
+          git add Config/pr_pipeline_state.json 2>/dev/null || true
+          git commit -m "the prlane-grain (the runner-side's PR-state)" || true
+          git push || true
