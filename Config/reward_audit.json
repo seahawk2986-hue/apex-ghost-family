@@ -1,0 +1,10 @@
+{
+ "ts": "2026-11-01 09:55:39",
+ "reward_rows": 0,
+ "aggregate_ledgers": "per-source totals (unauditable row-wise, honestly labeled)",
+ "round_metrics": 141,
+ "theater": [],
+ "theater_rounds": [],
+ "verdict": "CLEAN - every point-bearing row has findings",
+ "note": "the aggregate maps (per-source totals) are UNAUDITABLE row-wise (no rows, no ts - honest); the going-forward instrument is these per-round receipt rows"
+}

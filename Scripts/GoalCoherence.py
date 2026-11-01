@@ -57,6 +57,9 @@ DEMANDS = {           # ALL 30 goals (aliases honor their measured successors)
     "consolidation_cadence": {"ram_free_gb": 0.5, "cpu_serial": 0.2},
     "budgeted_context": {"cpu_serial": 0.02, "fs_trust": 1.0},
     "benchmark_honesty": {"cpu_serial": 0.05, "human_attention": 0.2},
+    "capability_rescan": {"cpu_serial": 0.1, "fs_trust": 1.0},
+    "bounded_planner": {"cpu_serial": 0.1, "fs_trust": 1.0},
+    "reward_integrity": {"cpu_serial": 0.05, "fs_trust": 1.0},
     "tri_genome": {}, "elections": {}, "throne": {}, "sleep": {},
 }
 
@@ -76,7 +79,9 @@ TIERS = {
                    "budgeted_context", "benchmark_honesty", "efficiency",
                    "safety", "upward_evo", "speed", "self_knowledge",
                    "backlog_drain", "discovery_harvest", "serviceable",
-                   "sovereignty", "compare_to_canon"],
+                   "sovereignty", "compare_to_canon",
+                   "capability_rescan", "bounded_planner",
+                   "reward_integrity"],
          "ram": 2.4, "cpu": 0.95},
         {"goals": ["life", "money", "recruits", "first_external_value"],
          "ram": 2.4, "cpu": 0.6}]},
@@ -117,6 +122,12 @@ TENSIONS = [
      "never actuated without receipts + the $0 law"),
     ("budgeted_context", "safety", "bounded reads everywhere; no unbounded "
      "fetch on a gated budget"),
+    ("bounded_planner", "efficiency", "bounded depth-2/beam-4, <1s in "
+     "bubbles; the pre-stage consumes its plan"),
+    ("reward_integrity", "safety", "read-only on the audited ledgers "
+     "(bytes-verified); its alarms never edit anything"),
+    ("bounded_planner", "gold", "the plan allocates the REQS budget by "
+     "measured lane yield"),
 ]
 
 # THE SYNERGY MAP - how goals POWER each other (named mechanisms)
