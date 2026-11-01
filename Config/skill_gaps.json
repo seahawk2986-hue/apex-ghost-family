@@ -1,63 +1,13 @@
 {
- "ts": "2026-11-01 09:19:15",
+ "ts": "2026-11-01 09:35:51",
  "needs": 12,
  "library": 302,
  "asks_scanned": 12,
- "canon_titles": 40,
+ "canon_titles": 100,
  "gaps": [
-  {
-   "term": "help",
-   "source": "jobs_inbox x12",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "wanted",
-   "source": "jobs_inbox x12",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "lingdojo",
-   "source": "jobs_inbox x11",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "first",
-   "source": "jobs_inbox x12",
-   "serves": "skill_omnivore"
-  },
   {
    "term": "dojo",
    "source": "jobs_inbox x11",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "issues",
-   "source": "jobs_inbox x12",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "https",
-   "source": "jobs_inbox x12",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "false",
-   "source": "jobs_inbox x12",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "hacktoberfest",
-   "source": "jobs_inbox x11",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "good",
-   "source": "jobs_inbox x12",
-   "serves": "skill_omnivore"
-  },
-  {
-   "term": "issue",
-   "source": "jobs_inbox x12",
    "serves": "skill_omnivore"
   },
   {
@@ -68,6 +18,56 @@
   {
    "term": "kana",
    "source": "jobs_inbox x11",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "lingdojo",
+   "source": "jobs_inbox x11",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "https",
+   "source": "jobs_inbox x12",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "hacktoberfest",
+   "source": "jobs_inbox x11",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "first",
+   "source": "jobs_inbox x12",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "issue",
+   "source": "jobs_inbox x12",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "false",
+   "source": "jobs_inbox x12",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "wanted",
+   "source": "jobs_inbox x12",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "good",
+   "source": "jobs_inbox x12",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "issues",
+   "source": "jobs_inbox x12",
+   "serves": "skill_omnivore"
+  },
+  {
+   "term": "help",
+   "source": "jobs_inbox x12",
    "serves": "skill_omnivore"
   },
   {
@@ -87,22 +87,22 @@
   },
   {
    "term": "long_horizon",
-   "source": "canon cluster (2 papers)",
+   "source": "canon cluster (5 papers)",
    "serves": "skill_omnivore"
   },
   {
    "term": "context_engineering",
-   "source": "canon cluster (2 papers)",
+   "source": "canon cluster (3 papers)",
    "serves": "skill_omnivore"
   },
   {
    "term": "memory_lifelong",
-   "source": "canon cluster (4 papers)",
+   "source": "canon cluster (5 papers)",
    "serves": "skill_omnivore"
   },
   {
    "term": "autonomy_selfimprove",
-   "source": "canon cluster (1 papers)",
+   "source": "canon cluster (2 papers)",
    "serves": "skill_omnivore"
   }
  ],

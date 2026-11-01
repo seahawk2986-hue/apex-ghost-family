@@ -63,7 +63,7 @@ def _canon_clusters():
     return CLUSTERS
 
 
-def _canon_titles(path=CANON, limit=40):
+def _canon_titles(path=CANON, limit=100):
     try:
         return [json.loads(x).get("title", "") for x in open(path,
                                                              encoding="utf-8-sig")
