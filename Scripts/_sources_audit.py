@@ -4,6 +4,7 @@ FILES = {
     "papers_2026.jsonl": 100,
     "papers_2026_evolution.jsonl": 421,
     "papers_2026_agents.jsonl": 100,
+    "papers_2026_coding.jsonl": 100,
 }
 ok_all = True
 seen_ids = {}
