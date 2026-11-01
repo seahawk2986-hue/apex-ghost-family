@@ -7,12 +7,27 @@ He built them; they serve his life - implemented as three concrete channels:
     alarms with actionable suggestions - his tool never surprises him
  3. THE JEWEL SURFACE: the family surfacing its best finds for him daily
     (top-graded mines + fresh issues worth reading) - he never digs.
+
+AUDIT HARDENING (2026-10-31, economy-organ audit): ingest_hub() previously
+raised NameError on its very first line (sys imported too late) and a second
+NameError inside (urllib partially imported) - both swallowed by except, so
+the hub ingest NEVER RAN despite being announced live. Fixed: real imports,
+honest 404 handling, atomic writes, and the dead brain_ok probe removed.
 """
 import json
 import os
 import shutil
+import sys
 import time
+import hashlib
+import urllib.request
 import psutil
+
+_DIR = os.path.dirname(os.path.abspath(__file__))
+if _DIR not in sys.path:
+    sys.path.insert(0, _DIR)
+from SafeIO import write_json as _atomic_json
+import re  # noqa: F401  (kept: lane regex patterns used by brief consumers)
 
 ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 AD = r"C:\Users\seaha\Apex-Adapter"
@@ -21,24 +36,33 @@ HEALTH = os.path.join(AD, "andrew_health_watch.json")
 
 
 def ingest_hub():
-    sys.path0 = os.path.dirname(os.path.abspath(__file__))
+    """THE RETURN LEG: pull the hub's committed packet from the repo's raw
+    URL, merge verified mines to the FRONT of the queue, atomically.
+    A 404 means the hub has committed nothing home YET - honest zero, not
+    an error; any other failure prints (never silent again)."""
     try:
-        import sys as _s2
-        _s2.path.insert(0, _s2.path0)
-        import GrainRepo  # the in-repo ingest lives here too
-    except Exception:
-        pass
-    try:
-        from urllib.request import urlopen
         req = urllib.request.Request(
             "https://raw.githubusercontent.com/seahawk2986-hue/apex-ghost-family/main/hub_packet_home.json",
             headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=30) as r:
             home = json.load(r)
-        st = json.load(open(os.path.join(r"C:\\Users\\seaha\\Apex-Adapter",
-                                         "swarm_state.json"), encoding="utf-8-sig"))
+        # ZERO-TRUST GATE (the archive of ReturnLeg removes the only digest-
+        # verifying path - the live ingest now verifies exactly the same way
+        # the hub_round computed it: sha256 over all keys minus 'digest', [:16])
+        if home.get("mines"):
+            if not home.get("digest"):
+                print("[ingest_hub] REFUSED: packet has mines but NO digest", flush=True)
+                return 0
+            core = {k0: v0 for k0, v0 in home.items() if k0 != "digest"}
+            dig = hashlib.sha256(json.dumps(core, sort_keys=True).encode()).hexdigest()[:16]
+            if dig != home.get("digest"):
+                print("[ingest_hub] REFUSED: digest mismatch (tamper or stale packet) "
+                      "- nothing ingested", flush=True)
+                return 0
+        st_path = os.path.join(AD, "swarm_state.json")
+        st = json.load(open(st_path, encoding="utf-8-sig"))
         seen = set(st.get("repos", []))
-        pend = st.get("pending_leads", [])
+        pend = list(st.get("pending_leads", []))
         added = 0
         for m0 in home.get("mines", []):
             rv = m0.get("repo", "").strip()
@@ -46,12 +70,20 @@ def ingest_hub():
                 seen.add(rv)
                 pend.insert(0, rv)
                 added += 1
-        st["pending_leads"] = pend[:4000]
-        st["repos"] = list(seen)[-20000:]
-        json.dump(st, open(os.path.join(r"C:\\Users\\seaha\\Apex-Adapter",
-                                        "swarm_state.json"), "w", encoding="utf-8"), indent=1)
+        if added:
+            st["pending_leads"] = pend[:4000]
+            st["repos"] = list(seen)[-20000:]
+            if not _atomic_json(st_path, st):
+                print("[ingest_hub] atomic state write FAILED (lock busy >30s) "
+                      "- nothing ingested this pass", flush=True)
+                return 0
         return added
-    except Exception:
+    except Exception as e:
+        s = str(e)
+        if "404" in s:
+            print("[ingest_hub] no packet home in the repo yet (404) - honest zero", flush=True)
+        else:
+            print(f"[ingest_hub] FAILED: {s}", flush=True)
         return 0
 
 
@@ -64,10 +96,6 @@ def health_watch():
         alarms.append("RAM low (" + str(round(vm.available / 1024 ** 3, 1)) + " GB free) - close Chrome/Steam, or 'ApexServe.ps1 UnloadAll'")
     if du.free / (1024 ** 3) < 25:
         alarms.append("Disk tight (" + str(round(du.free / 1024 ** 3, 0)) + " GB) - harvest caps auto-trim; consider cleanup")
-    try:
-        brain_ok = psutil.Process().parent() is not None
-    except Exception:
-        brain_ok = True
     return {"ts": time.strftime("%Y-%m-%d %H:%M:%S"),
             "ram_free_gb": round(vm.available / 1024 ** 3, 1),
             "disk_free_gb": round(du.free / 1024 ** 3, 0),
@@ -81,8 +109,8 @@ def morning_brief():
         _in = ingest_hub()
         if _in:
             brief["lines"].append(f"THE HUB'S GRAIN ARRIVED: +{_in} verified mines queued for farming")
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"[brief: hub ingest failed] {e}", file=sys.stderr, flush=True)
     try:
         st = json.load(open(os.path.join(AD, "swarm_state.json"), encoding="utf-8-sig"))
         brief["lines"].append("backlog waiting for tonight: " + str(len(st.get("pending_leads", []))) + " leads")
@@ -100,7 +128,8 @@ def morning_brief():
         pass
     try:
         cl = json.load(open(os.path.join(ROOT, "Config", "CryptoLedger.json"), encoding="utf-8-sig"))
-        brief["lines"].append(f"money {float(cl.get("earned", 0)):.2f}$ / {float(cl.get("spent", 0)):.2f}$ (honest zero is fine)")
+        brief["lines"].append(f"money {float(cl.get('earned', 0)):.2f}$ / "
+                              f"{float(cl.get('spent', 0)):.2f}$ (honest zero is fine)")
     except Exception:
         pass
     h = health_watch()
@@ -115,8 +144,10 @@ def morning_brief():
             brief["lines"].append("today's jewels: " + ", ".join(k for k, v in top[:3] if v >= 8))
     except Exception:
         pass
-    json.dump([brief], open(NOTES, "w", encoding="utf-8"), indent=1)
-    json.dump(h, open(HEALTH, "w", encoding="utf-8"), indent=1)
+    if not _atomic_json(NOTES, [brief]):
+        print("[morning_brief] brief write FAILED (lock busy) - the brief is LOST this run", flush=True)
+    if not _atomic_json(HEALTH, h):
+        print("[morning_brief] health write FAILED (lock busy)", flush=True)
     # the help events enter the GENOME: evolution now sees how much we helped
     try:
         pm = json.load(open(os.path.join(ROOT, "Config", "PathMemory.json"),
@@ -125,10 +156,11 @@ def morning_brief():
         hz["briefs"] = int(hz.get("briefs", 0)) + 1
         hz["alarmsRaised"] = int(hz.get("alarmsRaised", 0)) + len(h.get("alarms", []))
         hz["lastHelp"] = time.strftime("%Y-%m-%d %H:%M:%S")
-        json.dump(pm, open(os.path.join(ROOT, "Config", "PathMemory.json"),
-                           "w", encoding="utf-8"), indent=1)
-    except Exception:
-        pass
+        if not _atomic_json(os.path.join(ROOT, "Config", "PathMemory.json"), pm):
+            print("[morning_brief] PathMemory write FAILED (lock busy) "
+                  "- the help-genome's brief count is not persisted", flush=True)
+    except Exception as e:
+        print(f"[morning_brief] PathMemory update failed: {e}", file=sys.stderr, flush=True)
     return brief
 
 

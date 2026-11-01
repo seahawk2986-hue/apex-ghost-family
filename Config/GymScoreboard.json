@@ -1,40 +1,40 @@
 {
  "flaw-spot": {
-  "attempts": 102,
+  "attempts": 106,
   "gains": 6,
   "last10": [
    0,
    0,
    0,
-   0,
-   0,
-   0,
-   0,
    1,
    1,
+   0,
+   0,
+   0,
+   0,
    0
   ],
-  "rate": 0.059
+  "rate": 0.057
  },
  "reasoning": {
-  "attempts": 79,
-  "gains": 20,
+  "attempts": 84,
+  "gains": 23,
   "last10": [
-   0,
-   1,
-   1,
-   0,
-   1,
    1,
    0,
    1,
    0,
+   1,
+   0,
+   1,
+   0,
+   1,
    1
   ],
-  "rate": 0.253
+  "rate": 0.274
  },
  "arith": {
-  "attempts": 61,
+  "attempts": 68,
   "gains": 0,
   "last10": [
    0,

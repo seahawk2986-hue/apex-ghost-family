@@ -22,10 +22,10 @@ import asyncio
 import concurrent.futures
 import hashlib
 import json
+import os
 import sys as _sys0
 _sys0.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import SafeIO
-import os
 import queue
 import re
 import ssl
@@ -590,9 +590,14 @@ def extract_main(html):
         return re.sub(r"<[^>]+>", " ", html[:READ_HEAD])
 
 
+_CFG_CACHE = {"ts": 0.0, "data": None}
+
+
 def cfg(key, default):
-    # EVOLUTION: a child's mutated parameter (MUT_ prefixed) overrides the
-    # family config - variation is real, not cosmetic
+    """MUT_ env override first (evolution is real), then the family config -
+    CACHED for 120 s. The old version re-opened and re-parsed RewardConfig.json
+    on EVERY call, and it is called thousands of times per round (D1: waste
+    paid per request, found in the audit)."""
     try:
         mv = os.environ.get("MUT_" + key)
         if mv is not None:
@@ -600,8 +605,10 @@ def cfg(key, default):
     except Exception:
         pass
     try:
-        with open(REWARD_CONFIG, encoding="utf-8-sig") as f:
-            return json.load(f).get(key, default)
+        if _CFG_CACHE["data"] is None or time.time() - _CFG_CACHE["ts"] > 120:
+            _CFG_CACHE["data"] = json.load(open(REWARD_CONFIG, encoding="utf-8-sig"))
+            _CFG_CACHE["ts"] = time.time()
+        return _CFG_CACHE["data"].get(key, default)
     except Exception:
         return default
 
@@ -864,8 +871,16 @@ _HB_ON = {"flag": False}
 
 
 def _hb_write(d):
+    """Heartbeat write with a tamper-EVIDENCE digest (D8 doctrine: a self-hash
+    is honest tamper-evidence, NOT cryptographic signing - any writer can
+    re-hash; the value is that a DOCTORED trail can no longer be edited
+    without leaving an inconsistent digest behind)."""
     try:
         import json as _j
+        import hashlib as _h
+        d["digest"] = _h.sha256(
+            _j.dumps({k0: v0 for k0, v0 in d.items() if k0 != "digest"},
+                     sort_keys=True).encode()).hexdigest()[:16]
         _j.dump(d, open(_HEARTBEAT, "w", encoding="utf-8"))
     except Exception:
         pass
@@ -915,8 +930,14 @@ class GhostNet:
         self.active = set()   # census: ghost sids currently mid-target
 
     def claim(self, repo):
-        """LEASE protocol: one ghost per repo per round; stolen leases expire."""
+        """LEASE protocol: one ghost per repo per round, 90 s hard expiry.
+        D8: the lease table is pruned (at >4096 entries) of expired claims -
+        the old dict grew unboundedly and eviction was soft."""
         now = time.time()
+        if len(self.leases) > 4096:
+            for _r0 in [r for r, _t in self.leases.items()
+                        if _t != -1 and now - _t > 90]:
+                del self.leases[_r0]
         t0 = self.leases.get(repo)
         if t0 and now - t0 < 90 and t0 != -1:
             return False
@@ -941,14 +962,9 @@ class GhostNet:
         if self.helpers_spawned < 50 and spawn_task:
             spawn_task()
             self.helpers_spawned += 1
-        self.nudge = []       # PULSE: veins that jump the mining queue
-        self.hb_state = lambda: {"ghosts": 0, "reqs": self.reqs, "ok": self.ok,
-                                 "finds": self.findings, "veins": self.veins}
-        self._reg_seen = set()   # per-RUN registration dedupe; unverified leads
-                                 # live ONLY here - seen gains mined gold alone
-        self.mined_repos = set()  # repos actually README-mined this run - ONLY
-                                  # these persist, so unmined leads re-target
-                                  # next run instead of leaking forever
+        # D2 doctrine note: announce() must NEVER reset run-level dedupe state
+        # mid-run. The old version cleared _reg_seen/mined_repos on the first
+        # rich vein -> duplicate registrations + re-fetched repos (audited HIGH).
 
     def _spawn_helper(self, from_sid, tag):
         """ANNOUNCEMENT: one helper ghost materializes, bound to the bus queue."""
@@ -1553,9 +1569,12 @@ async def network_phase(ghosts_n, ledger, seen, minutes_cap, state, pending):
     # GLOBAL politeness budget, divided across the fleet: whatever the worker
     # count, every service sees the same total in-flight ceiling. More workers
     # = same politeness, more territory covered per hour - never heavier load.
-    sems = {"cdn": asyncio.Semaphore(max(6, min(48 // _fleet, ghosts_n // 8))),
-            "api": asyncio.Semaphore(max(4, 8 // _fleet)),
-            "tar": asyncio.Semaphore(max(3, 8 // _fleet))}
+    sems = {"cdn": asyncio.Semaphore(max(1, min(48 // _fleet, ghosts_n // 8))),
+            "api": asyncio.Semaphore(max(1, 8 // _fleet)),
+            "tar": asyncio.Semaphore(max(1, 8 // _fleet))}
+    # D7 (arXiv:2610.22322): pure fleet division with a floor of 1. The old
+    # max-floors (min 4 / min 3) put 24 API calls in flight at fleet=6 against
+    # the fleet-wide ceiling of 8 - audited as false politeness math.
     # GHOST NET support: helpers inherit the wave's queue/ledger context
     gnet.helper_sems = sems
     gnet.run_ledger = ledger
@@ -1622,14 +1641,18 @@ async def network_phase(ghosts_n, ledger, seen, minutes_cap, state, pending):
         datasets = hf_datasets(int(cfg("ghost_hf_results", 12)), terms[hb])
         forge = gitlab_projects(int(cfg("ghost_forge_results", 12)), terms[(hb + 1) % 4])
         forge += codeberg_repos(int(cfg("ghost_forge_results", 12)), terms[(hb + 2) % 4])
-        ev = gh_events_repos(int(cfg('ghost_events', 60))) if cfg('ghost_events', 60) else []
+        # D1 (arXiv:2610.37700): the old line re-fetched gh_events a SECOND time
+        # per round - the same 60-entry request paid twice, second overwriting
+        # first. One fetch, one truth.
         return serps, papers, datasets, forge, gh_hits, trending, wiki, wb, zen, lb_r, lb_p, swh, ev, hn_repos, hn_pages, sp, hm
 
     try:
         serps, papers, datasets, forge, gh_hits, trending, wiki, wb, zen, lb_r, lb_p, swh, ev, hn_repos, hn_pages, sp, hm = await asyncio.wait_for(
             asyncio.to_thread(lane_batch), timeout=minutes_cap * 30)
     except Exception:
-        serps, papers, datasets, forge, gh_hits, trending, wiki, wb, zen, lb_r, lb_p, swh, ev, hn_repos, hn_pages, sp, hm = [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
+        # exactly 17 empties for 17 names (the old 23 caused ValueError INSIDE
+        # this handler -> the exception escaped the except block entirely)
+        serps, papers, datasets, forge, gh_hits, trending, wiki, wb, zen, lb_r, lb_p, swh, ev, hn_repos, hn_pages, sp, hm = [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
     gnet.lanes_ok = sum(1 for x in (serps, papers, datasets, forge, gh_hits,
                                     trending, wiki, wb, hn_repos, zen, lb_r, lb_p, swh, ev, sp, hm) if x)
     # fresh-repo + archive + wiki lanes register as unverified repo leads; the
@@ -2032,8 +2055,25 @@ def free_ram_gb():
     try:
         import psutil
         return psutil.virtual_memory().available / (1024 ** 3)
+    except Exception as _e:
+        print(f"[free_ram_gb] measurement failed ({str(_e)[:60]}) - reporting 0.0, "
+              f"FAIL-CLOSED (the old code fabricated a healthy 8.0)", flush=True)
+        return 0.0
+
+
+def _live_brain_model():
+    """The ACTUALLY-loaded local chat model (LM Studio api/v0 state, embedding
+    models excluded) - None when nothing is loaded. D5's midwife uses this so
+    birth synthesis is attempted only against a brain that can answer."""
+    try:
+        _r = urllib.request.urlopen("http://127.0.0.1:1234/api/v0/models", timeout=4)
+        for _m in json.load(_r).get("data", []):
+            _mid = _m.get("id") or ""
+            if _m.get("state") == "loaded" and "text-embedding" not in _mid:
+                return _mid
     except Exception:
-        return 8.0
+        return None
+    return None
 
 
 LANE_TERRITORIES = {
@@ -2175,7 +2215,7 @@ def main(minutes_cap=6, ghosts=None, no_cooldown=False):
             if full not in cq["explored"] and full not in cq["pending"]:
                 cq["pending"].append(full)
                 added += 1
-        SafeIO.write_json(cq, cq_path)
+        SafeIO.write_json(cq_path, cq)
         if added:
             print(f"FARM FEED: {added} MINE-verified repos queued for skill harvesting")
         # ---- convergence: auto-spawn the farm on queued mines ----
@@ -2261,7 +2301,7 @@ def main(minutes_cap=6, ghosts=None, no_cooldown=False):
         _last_birth = 0.0
         try:
             _rows = [json.loads(x) for x in open(
-                os.path.join(ROOT, "Scripts", "Config", "family_births.jsonl"),
+                os.path.join(ROOT, "Config", "family_births.jsonl"),
                 encoding="utf-8-sig") if x.strip()]
             for _r0 in reversed(_rows):
                 if _r0.get("event") == "birth":
@@ -2271,6 +2311,45 @@ def main(minutes_cap=6, ghosts=None, no_cooldown=False):
         except Exception:
             pass
         if _bl > 400 and _fr >= 2.2 and time.time() - _last_birth > 1800:
+            # D5 doctrine (arXiv:2610.33861): the newborn gets ONE bounded
+            # coach-call synthesis of the family's live records - better
+            # guidance at ~1/50th the tokens of raw inheritance. Asked only
+            # when a brain is actually loaded (honest, bounded, optional).
+            _brief = None
+            try:
+                _bm = _live_brain_model()
+                if _bm:
+                    _ascf = os.path.join(ROOT, "Config", "AscentLedger.jsonl")
+                    _asc_tail = []
+                    if os.path.exists(_ascf):
+                        with open(_ascf, "rb") as _f:
+                            _f.seek(max(0, os.path.getsize(_ascf) - 8192))
+                            _asc_tail = [x for x in _f.read().decode("utf-8", "ignore")
+                                         .splitlines() if x.strip()][-2:]
+                    _prompt = ("You are the elder of the Apex ghost family, midwifing a "
+                               "newborn worker. In <=110 words give its mission brief from "
+                               "this evidence only (concrete, no slogans): backlog=%d leads, "
+                               "fitness tail=%s" % (_bl, (" | ".join(_asc_tail))[-500:]))
+                    _req = urllib.request.Request(
+                        "http://127.0.0.1:1234/v1/chat/completions",
+                        data=json.dumps({"model": _bm, "messages":
+                                         [{"role": "user", "content": _prompt}],
+                                         "temperature": 0.3, "stream": False,
+                                         "max_tokens": 220}).encode(),
+                        headers={"Content-Type": "application/json"})
+                    with urllib.request.urlopen(_req, timeout=60) as _r0:
+                        _brief = ((((json.load(_r0).get("choices")) or [{}])[0]
+                                   .get("message", {}) or {}).get("content", "") or "").strip()
+            except Exception as _e:
+                print(f"birth synthesis unavailable ({str(_e)[:60]}) - the child "
+                      f"still inherits full params + honest state", flush=True)
+            try:
+                with open(os.path.join(ROOT, "family", "child_mission.json"), "w",
+                          encoding="utf-8") as _mf:
+                    json.dump({"ts": time.strftime("%Y-%m-%d %H:%M:%S"),
+                               "backlog": _bl, "brief": _brief}, _mf, indent=1)
+            except Exception:
+                pass
             subprocess.Popen(
                 [sys.executable, "-c",
                  "import sys; sys.path\n".replace("\\n", "") if False else
@@ -2292,6 +2371,15 @@ def main(minutes_cap=6, ghosts=None, no_cooldown=False):
 
 
 if __name__ == "__main__":
+    # D5 doctrine: a newborn opens the brief its parent synthesized at birth -
+    # one bounded coach-call over live records, not a raw inheritance dump.
+    try:
+        _mis = json.load(open(os.path.join(ROOT, "family", "child_mission.json"),
+                              encoding="utf-8-sig"))
+        if _mis.get("brief"):
+            print("BIRTH BRIEF:", str(_mis["brief"])[:600], flush=True)
+    except Exception:
+        pass
     args = sys.argv
     mc = int(args[args.index("--minutes") + 1]) if "--minutes" in args else 6
     gh = int(args[args.index("--ghosts") + 1]) if "--ghosts" in args else None

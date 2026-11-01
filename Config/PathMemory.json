@@ -1,51 +1,45 @@
 {
- "trending": {},
- "none": {
-  "reqs": 1.8432,
-  "mines": 3.6864
+ "grading": {
+  "last_run_count": 0,
+  "grades_top": []
  },
- "ddg": {
-  "reqs": 0.9216,
-  "mines": 15.6672
- },
- "wiki": {
-  "reqs": 0.9216,
-  "mines": 4.608
+ "use": {
+  "lessons_written": 0
  },
  "events": {
-  "reqs": 0.9216,
-  "mines": 14.7456
+  "reqs": 0.884736,
+  "mines": 23.003136
  },
- "andrew_help": {
-  "briefs": 5,
-  "alarmsRaised": 1,
-  "lastHelp": "2026-10-31 15:02:06"
+ "wiki": {
+  "reqs": 0.884736,
+  "mines": 5.308415999999999
  },
- "finance": {
-  "ts": "2026-10-31 15:00:53",
-  "opportunities": [],
-  "total_ev": 0,
-  "best_action": "none this cycle - the honest zero; widen lanes/token tomorrow",
-  "kit": {
-   "readme": true,
-   "issue_drafts": 3,
-   "plan": {
-    "rung_1": "file the 3 issue drafts (issue_drafts.md) from your GitHub - 20 min; builds the public track record",
-    "rung_2": "publish this repo public + enable Sponsors (the README is written: README.md) - 10 min",
-    "rung_3": "post the pitch (family_pitch.md) where you have real communities - 10 min",
-    "rung_4": "take ONE catalog job via the room (@Apex) - the V2 pipeline delivers; 80% cap; announced in chat",
-    "the_math": "sponsors ($3-5/mo x a few) + one $40-150 page build = the first $100",
-    "the_family_does": "scans, drafts, verifies, converts, briefs - you sign, submit, decide"
-   }
-  }
+ "hf_space": {
+  "reqs": 0.884736,
+  "mines": 0.884736
  },
+ "trending": {},
  "variants": {
   "base": {
    "wins": 1,
    "rounds": 1,
-   "mines": 2,
-   "reqs": 6,
-   "fitness": 0.3333
+   "mines": 33,
+   "reqs": 188,
+   "fitness": 0.1755
   }
+ },
+ "family": {
+  "champion": "base"
+ },
+ "andrew_help": {
+  "briefs": 23,
+  "alarmsRaised": 2,
+  "lastHelp": "2026-10-31 16:25:16"
+ },
+ "finance": {
+  "ts": "2026-10-31 16:25:17",
+  "opportunities": [],
+  "total_ev": 0,
+  "best_action": "none this cycle - the honest zero; widen lanes/token tomorrow"
  }
 }

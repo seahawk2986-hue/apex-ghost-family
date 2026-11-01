@@ -2,11 +2,11 @@
  "ApexIPCEngine.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 15,
+  "attempts": 16,
   "successes": 1,
   "streak": 0,
-  "parity_total": 17,
-  "parity_hits": 17
+  "parity_total": 20,
+  "parity_hits": 20
  },
  "apexpacing.py": {
   "best": 105.0,
@@ -66,17 +66,17 @@
  "TrainingLogParser.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 25,
+  "attempts": 34,
   "successes": 1,
   "streak": 0,
   "ok_full": 1,
-  "parity_total": 19,
-  "parity_hits": 19
+  "parity_total": 24,
+  "parity_hits": 24
  },
  "Scripts/ApexGym.py": {
-  "best": 100,
-  "streak": 2,
-  "attempts": 253
+  "best": 110,
+  "streak": 4,
+  "attempts": 269
  },
- "Scripts/SwarmOrchestrator.py": 20335
+ "Scripts/SwarmOrchestrator.py": 24884.0
 }
