@@ -75,8 +75,8 @@
  },
  "Scripts/ApexGym.py": {
   "best": 110,
-  "streak": 4,
-  "attempts": 269
+  "streak": 0,
+  "attempts": 277
  },
- "Scripts/SwarmOrchestrator.py": 82365.5
+ "Scripts/SwarmOrchestrator.py": 85598.5
 }
