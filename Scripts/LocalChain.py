@@ -1,6 +1,6 @@
 """THE LOCAL CHAIN - the biggest honest upgrade to 10/10: the evolution's
 chain (upgrader -> conversion -> gauntlet) runs on the LOCAL BRAIN
-(qwen2.5-coder:7b, \$0, our own machine) - the mutants stop waiting for a
+(qwen2.5-coder:7b, \\$0, our own machine) - the mutants stop waiting for a
 'loaded brain' window: THE WINDOW IS THE CODER-TIER (4.4GB + the chain =
 inside the box's laws). Each step: the honest brain-call (CloudBrain's
 local-first) -> the artifacts -> the measured outcomes -> the sync -> the

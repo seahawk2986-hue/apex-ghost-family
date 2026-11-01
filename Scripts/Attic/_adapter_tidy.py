@@ -1,6 +1,6 @@
 """THE ADAPTER'S HONEST TIDY-UP: the 94 one-shot session scripts (apply_*/
 fix_*/wire_*/diag_*/probe_*/patch_*/check_*/repair_*...) move to
-Adapter\Scratch\ (receipts preserved, NOTHING deleted) - the full sweep's
+Adapter\\Scratch (receipts preserved, NOTHING deleted) - the full sweep's
 orphan verdict applied where the one-shots actually live. The adapter's
 LIVE machinery (the job engine, the state/board/ledger files, heartbeats,
 doors) stays untouched."""

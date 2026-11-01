@@ -52,7 +52,7 @@ drive = '''
             subprocess.Popen(
                 [sys.executable, "-c",
                  "import sys; sys.path\\n".replace("\\\\n", "") if False else
-                 "import sys; sys.path.insert(0, r'" + ROOT + r"\Scripts');"
+                 "import sys; sys.path.insert(0, ' + ROOT.replace(chr(92), chr(47)) + '/Scripts');"
                  "import SwarmOrchestrator as so; so.main(10, None, False)"],
                 cwd=ROOT,
                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
@@ -84,4 +84,4 @@ log.append("OK   reproduction-instinct-in-packet")
 
 print("COMPILED CLEAN")
 print("\n".join(log))
-subprocess.run([PY, ROOT + r"\Scripts\SecurityBaseline.py", "--respin"], timeout=120)
+subprocess.run([PY, ROOT + r"\\Scripts\\SecurityBaseline.py", "--respin"], timeout=120)

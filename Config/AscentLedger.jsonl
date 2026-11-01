@@ -183,3 +183,14 @@
 {"ts": "2026-11-01 15:13:10", "kind": "upward", "what": "earn-loop-beat", "beat": 15, "unclaimed": 6, "filed": false}
 {"ts": "2026-11-01 15:14:02", "kind": "upward", "what": "receipt-fix: the wired-links restored + world-rows born"}
 {"ts": "2026-11-01 15:28:35", "kind": "upward", "what": "earn-loop-beat", "beat": 16, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 15:43:59", "kind": "upward", "what": "earn-loop-beat", "beat": 17, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 15:54:43", "kind": "upward_alarm", "text": "goal 'money' stalled 415min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-01 15:54:43", "kind": "upward_alarm", "text": "goal 'recruits' stalled 370min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-01 15:54:43", "kind": "upward_alarm", "text": "goal 'jobs' stalled 370min (needs the inbox triaged - a brain window serves)"}
+{"ts": "2026-11-01 15:54:43", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 370min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-01 15:54:43", "kind": "upward_alarm", "text": "goal 'safety' stalled 370min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-01 15:54:46", "kind": "upward_alarm", "text": "goal 'money' stalled 415min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-01 15:54:46", "kind": "upward_alarm", "text": "goal 'recruits' stalled 370min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-01 15:54:46", "kind": "upward_alarm", "text": "goal 'jobs' stalled 370min (needs the inbox triaged - a brain window serves)"}
+{"ts": "2026-11-01 15:54:46", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 370min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-01 15:54:46", "kind": "upward_alarm", "text": "goal 'safety' stalled 370min (no external claims yet - the door stands open)"}

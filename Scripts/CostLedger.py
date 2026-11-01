@@ -1,18 +1,18 @@
 """COST LEDGER - the EVERYTHING-FREE audit (the founder's law: this all
-runs at \$0). Every lane, its tier, its limit, its current bill:
- 1. THE COMPUTE: this box (bought+owned; the marginal \$0) + the GitHub
+runs at \\$0). Every lane, its tier, its limit, its current bill:
+ 1. THE COMPUTE: this box (bought+owned; the marginal \\$0) + the GitHub
     Actions (a PUBLIC repo = UNLIMITED free minutes; the hub's 198+ runs
     already succeeded free) + the edge worker (the Cloudflare free tier =
     100k req/day; dormant until the founder's free signup);
- 2. THE BRAINS: the local ollama models (\$0 forever; the RAM law) + the
-    cloud tier DORMANT behind CLOUD_ALLOWED=1 (the credits' spend = \$0
-    since the founder's \$0.00-cap law);
+ 2. THE BRAINS: the local ollama models (\\$0 forever; the RAM law) + the
+    cloud tier DORMANT behind CLOUD_ALLOWED=1 (the credits' spend = \\$0
+    since the founder's \\$0.00-cap law);
  3. THE SOURCES: arXiv (free) / GitHub API (free tier; the public + the
     token's 5000/hr) / the web search tonight = 402-refused (honest).
  4. THE PLACES OUT: the Smithery listing (free), the marketplaces' signups
     (free to join; the payouts come TO the founder).
  5. THE LEDGER: Config/CostLedger.json - the forever-receipt.
-TEST GATE: (a) every lane's bill = \$0.00 verified from the real state,
+TEST GATE: (a) every lane's bill = \\$0.00 verified from the real state,
 (b) NO lane costs a subscription we haven't declared free, (c) the
 report's honest verdict."""
 import json

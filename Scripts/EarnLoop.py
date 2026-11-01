@@ -6,7 +6,7 @@ with the honest laws inside every beat:
  2. THE CLAIM AUDIT: refresh the kit's claim state (we never take a
     person's promised work);
  3. ONE CANDIDATE: the top unclaimed -> fork/clone/locate/stage (the local
-    brain at \$0 draws the diff; the muse-bundle-style deterministic
+    brain at \\$0 draws the diff; the muse-bundle-style deterministic
     writer for the bundle-class work) - ONE PER ROUND (the bounded
     velocity; the founder's clicks stay the gate);
  4. THE KIT REFRESH (the file-now kit's commands re-ranked);

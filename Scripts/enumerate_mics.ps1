@@ -1,8 +1,10 @@
-"""Fix mic exclusive-mode / device binding: enumerate ALL capture endpoints,
+<#
+Fix mic exclusive-mode / device binding: enumerate ALL capture endpoints,
 try each one, find the one that actually produces audio, and bind SAPI to it.
 Cutting-edge approach: enumerate capture devices via the MMDeviceEnumerator COM
 interface (the correct Windows 10/11 API), probe audio levels per device, and
-write the WORKING device identity to Config so ApexEars can bind to it."""
+write the WORKING device identity to Config so ApexEars can bind to it.
+#>
 Add-Type -AssemblyName System.Speech
 
 $diag = "C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed\Logs\mic_devices.txt"
@@ -22,7 +24,7 @@ $devs | ForEach-Object { $_.Name } | Out-File (Join-Path (Split-Path $diag) "cap
 $speaker = New-Object System.Speech.Synthesis.SpeechSynthesizer
 # say something to test the SPEAKER side first
 Write-Host "Testing speaker..."
-try { $speaker = New-Object System.Speech.Synthesis.SpeechSynthesizer; $speaker.Speak("Testing.") } catch { Write-Host "speaker TTS failed: $_" }
+try { $speaker = New-Object System.Speech.Synthesis.SpeechSynthesizer; $speaker.Speak("Testing.") } catch { Write-Host "speaker TTS failed: $_" }speaker TTS failed: $_" }
 
 Write-Host "Now testing EACH capture device for audio..."
 Write-Host ">> SPEAK NOW — say 'test one two three' repeatedly for 5 seconds per device <<"

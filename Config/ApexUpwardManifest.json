@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-01 13:54:32",
- "ms": 4106.5,
+ "ts": "2026-11-01 15:54:46",
+ "ms": 4119.8,
  "state": {
   "genes": {
    "gen": 22,
@@ -10,8 +10,8 @@
    ],
    "lineages": {
     "base": {
-     "fitness": 1.6983,
-     "m_rounds": 6
+     "fitness": 1.2839,
+     "m_rounds": 7
     },
     "g0_0": {
      "fitness": 0.0,
@@ -121,11 +121,11 @@
   "knowledge": {
    "events": {
     "reqs": 0,
-    "mines": 78
+    "mines": 94
    },
    "wiki": {
     "reqs": 0,
-    "mines": 17
+    "mines": 18
    },
    "hf_space": {
     "reqs": 0,
@@ -137,7 +137,7 @@
    }
   },
   "help": {
-   "briefs": 138,
+   "briefs": 146,
    "alarmsRaised": 6
   },
   "canon": {
@@ -145,9 +145,9 @@
    "papers_evolution": 421
   },
   "skills_lib": {
-   "count": 404,
-   "coding": 402,
-   "categories": 26
+   "count": 406,
+   "coding": 404,
+   "categories": 27
   },
   "board": {
    "backlog": 1455,
@@ -183,10 +183,9 @@
    "head": ""
   },
   "hardware": {
-   "ram_free_gb": 5.9,
-   "tier": "brain-window",
+   "ram_free_gb": 4.43,
+   "tier": "chain-window",
    "allowed": [
-    "brain-load+conversion",
     "chain",
     "bubbles",
     "genes"
@@ -207,15 +206,19 @@
    "present": true,
    "age_min": 0.0
   },
-  "brain": {},
+  "brain": {
+   "ollama_chat": [
+    "qwen2.5-coder:7b"
+   ]
+  },
   "integrity": {
    "bad": [],
    "ok": true
   },
   "mining": {
-   "net_reqs": 171,
-   "net_ok": 68,
-   "findings": 201
+   "net_reqs": 235,
+   "net_ok": 112,
+   "findings": 215
   },
   "transport": {
    "last_hub_root": "{'sha': '4fe1c94a79d9', 'commit_msg': 'grain: hub harvest 133 (manifest-digested) [skip ci]', 'ts': '2026-10-31 22:18:04'}"
@@ -226,66 +229,72 @@
  "retired": [],
  "floors_restored": 0,
  "git_restored": 0,
- "alarms": [],
+ "alarms": [
+  "goal 'money' stalled 415min (moves only when Andrew files/review - the honest $0.00 law)",
+  "goal 'recruits' stalled 370min (no external claims yet - the door stands open)",
+  "goal 'jobs' stalled 370min (needs the inbox triaged - a brain window serves)",
+  "goal 'efficiency' stalled 370min (outputs are earned inside the hardware gate)",
+  "goal 'safety' stalled 370min (no external claims yet - the door stands open)"
+ ],
  "goals": {
   "gold": {
-   "score": 2394.0,
-   "delta": 11.0,
-   "progress_age_min": 0.0
+   "score": 2425.0,
+   "delta": 0.0,
+   "progress_age_min": 0.1
   },
   "money": {
    "score": 0.0,
    "delta": 0.0,
-   "progress_age_min": 295.4
+   "progress_age_min": 415.6
   },
   "life": {
-   "score": 144.0,
+   "score": 152.0,
    "delta": 0.0,
-   "progress_age_min": 0.0
+   "progress_age_min": 0.1
   },
   "recruits": {
    "score": 6.0,
    "delta": 0.0,
-   "progress_age_min": 250.3
+   "progress_age_min": 370.6
   },
   "jobs": {
    "score": 68.0,
    "delta": 0.0,
-   "progress_age_min": 250.3
+   "progress_age_min": 370.6
   },
   "coding": {
-   "score": 405.0,
+   "score": 407.0,
    "delta": 0.0,
-   "progress_age_min": 118.8
+   "progress_age_min": 0.1
   },
   "omnivore": {
-   "score": 433.0,
+   "score": 436.0,
    "delta": 0.0,
-   "progress_age_min": 118.8
+   "progress_age_min": 0.1
   },
   "efficiency": {
    "score": 526.0,
    "delta": 0.0,
-   "progress_age_min": 250.3
+   "progress_age_min": 370.6
   },
   "safety": {
    "score": 2.0,
    "delta": 0.0,
-   "progress_age_min": 250.3
+   "progress_age_min": 370.6
   }
  },
  "goal_progress": {
-  "gold": 1793559272.3946161,
+  "gold": 1793566483.5730815,
   "money": 1793541551.1543214,
-  "life": 1793559271.0181108,
+  "life": 1793566483.5730815,
   "recruits": 1793544253.5449352,
   "jobs": 1793544253.5449352,
-  "coding": 1793552142.9098723,
-  "omnivore": 1793552142.9098723,
+  "coding": 1793566483.5730815,
+  "omnivore": 1793566483.5730815,
   "efficiency": 1793544253.5449352,
   "safety": 1793544253.5449352
  },
- "gi_score": 434.8,
+ "gi_score": 452.7,
  "goal_genealogy": {
   "gold": {
    "origin": "ApplyTriGenome: MAXIMIZE YIELD (mines/req - the original fitness)",
@@ -460,16 +469,6 @@
  },
  "hardware_history": [
   {
-   "ts": "10:30:53",
-   "ms": 4096.4,
-   "ram": 7.51
-  },
-  {
-   "ts": "11:55:42",
-   "ms": 4104.9,
-   "ram": 5.37
-  },
-  {
    "ts": "11:55:51",
    "ms": 8175.2,
    "ram": 4.83
@@ -498,15 +497,25 @@
    "ts": "13:54:32",
    "ms": 4106.5,
    "ram": 5.9
+  },
+  {
+   "ts": "15:54:43",
+   "ms": 4096.7,
+   "ram": 4.31
+  },
+  {
+   "ts": "15:54:46",
+   "ms": 4119.8,
+   "ram": 4.43
   }
  ],
  "speed": {
   "prestaged_genome": true,
   "prestage_parent": "base",
-  "tier": "brain-window",
+  "tier": "chain-window",
   "next_actions": [
    "genes: GenePool.run(3) pre-stages the next generation (CPU-only, gated-safe)",
-   "brain: RAM permits a loaded brain NOW - load qwen3-8b and run conversion MEASURED this window",
+   "chain: RunROI-greenlit chain runs (no loaded brain needed; conversion honestly skips)",
    "bubbles: pre-stage + manifests + gates fill every gated minute",
    "skills: SkillUpgrader consumes curriculum candidates in-window"
   ]

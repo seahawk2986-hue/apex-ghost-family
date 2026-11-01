@@ -1,9 +1,9 @@
 """THE AGENT ROSTER (every agent Apex can use, tested + priced + honest):
 the router dispatches each task to the cheapest CAPABLE agent:
- 1. local-coder    qwen2.5-coder:7b @ localhost:11434 - \$0 forever, RAM
+ 1. local-coder    qwen2.5-coder:7b @ localhost:11434 - \\$0 forever, RAM
                    4.4GB (inside the window; the swarm duck queues) - the
                    patch/JSON brain;
- 2. cloud-ollama   gpt-oss:120b - Andrew's credits, SPEND-GATED (\$0.50
+ 2. cloud-ollama   gpt-oss:120b - Andrew's credits, SPEND-GATED (\\$0.50
                    session cap, ledgered) - the synthesis/judge brains;
  3. groq/openrouter - the keys' state flags (403/404 tonight - the
                    founder's renewal step); auto-skipped while dead;
@@ -11,7 +11,7 @@ the router dispatches each task to the cheapest CAPABLE agent:
                    run off my box's main thread; RAM-light locally);
   SKIPPED HONESTLY: aider (py3.14 wheels absent), cline (GUI), goose
   (extra binary; the same capability exists in-member).
-TEST GATE: (a) the local probe (\$0), (b) the cloud probe (cap-gated,
+TEST GATE: (a) the local probe (\\$0), (b) the cloud probe (cap-gated,
 ledgered), (c) the ROUTE table correct for sample tasks, (d) the skips'
 reasons printed, (e) reproducible."""
 import json

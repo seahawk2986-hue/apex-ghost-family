@@ -40,7 +40,7 @@ try:
     print("steps:", [s.get("name", s.get("uses")) for s in
                     d["jobs"]["hub-round"]["steps"]])
 except ImportError:
-    r = subprocess.run([r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed\apex_venv\Scripts\python.exe".replace("\U", "\\U"),
+    r = subprocess.run([r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed\apex_venv\Scripts\python",
                         "-m", "pip", "install", "pyyaml", "--quiet", "--disable-pip-version-check"],
                        capture_output=True, text=True, timeout=180)
     import yaml as _y

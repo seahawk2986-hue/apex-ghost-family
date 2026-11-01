@@ -34,7 +34,6 @@ if "REPRODUCTIVE DRIVE" not in swg:
     m = m[: m.find("print(f\"REPRODUCTIVE DRIVE") + 200]
     base = '''        try:
         _bl = len(state.get("pending_leads", []))'''
-    return
 py_compile.compile(ROOT + r"\Scripts\SwarmOrchestrator.py", doraise=True)
 print("\n".join(log))
 print("SWARM COMPILED CLEAN")

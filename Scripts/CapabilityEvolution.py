@@ -9,7 +9,7 @@ can'. The PIPELINE per uncovered job-class:
     a. THE TOOL ADOPTION: the stage-queue's family for the class -> the
        install to the NATIVE tools dir (OUTSIDE OneDrive - the OSError-22
        lesson) + the import proof;
-    b. THE SKILL SYNTHESIS: the local brain (\$0, format=json) drafts a NEW
+    b. THE SKILL SYNTHESIS: the local brain (\\$0, format=json) drafts a NEW
        skill entry from the related library skills + the class's method -
        compiled + self-tested + registered in the SkillLibrary (sha'd);
  4. THE RE-TEST: the capability's evidence count re-read (it MUST grow);
