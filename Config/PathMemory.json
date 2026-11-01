@@ -363,9 +363,19 @@
   "champion": "base"
  },
  "andrew_help": {
-  "briefs": 123,
+  "briefs": 125,
   "alarmsRaised": 6,
-  "lastHelp": "2026-10-31 22:18:04"
+  "lastHelp": "2026-10-31 22:18:04",
+  "earn_briefs": [
+   {
+    "ts": "2026-11-01 11:13:59",
+    "text": "EarnLoop beat 1: staged/refreshed the kit; the top unclaimed = Primeteumm/Screenshot-Enhancer; the FILE-NOW commands wait in Adapter/FILE_NOW_KIT.md"
+   },
+   {
+    "ts": "2026-11-01 11:17:12",
+    "text": "FIRST PR FILED: rtk-ai/rtk#4929 (the muse provider bundle; disclosed; founder-granted) - awaiting the maintainer's review"
+   }
+  ]
  },
  "finance": {
   "ts": "2026-10-31 22:18:05",

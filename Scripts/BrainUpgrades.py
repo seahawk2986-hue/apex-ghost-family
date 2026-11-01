@@ -56,9 +56,7 @@ def run():
                     max_tokens=400, purpose="the stage judge")
         if r:
             out["additions"].append({"add": "stage-judge",
-                                     "answer": re.sub(
-                                         STRIP_PATTERN, "", r,
-                                         flags=re.I | re.S)[:700]})
+                                     "answer": STRIP_PATTERN.sub("", r)[:700]})
     # 2. the JOB-FIT judge
     try:
         pf = portfolio()
@@ -72,7 +70,7 @@ def run():
                      purpose="the job-fit judge")
         if r2:
             out["additions"].append({"add": "job-fit-judge",
-                                     "answer": r2-strip_junk(r2)[:350]})
+                                     "answer": strip_junk(r2)[:350]})
     except Exception as e:
         print(f"[brain-upgrades] the job-fit judge skipped: {str(e)[:50]}")
     # 3. the DECEPTION brain-leg (a judged sample)
@@ -100,7 +98,7 @@ STRIP_PATTERN = re.compile(re.escape("<" + "think") + r".*?" +
 
 
 def strip_junk(x):
-    return re.sub(STRIP_PATTERN, "", x or "", flags=re.I | re.S).strip()
+    return STRIP_PATTERN.sub("", x or "").strip()
 
 
 def selftest():

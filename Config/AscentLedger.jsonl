@@ -158,3 +158,5 @@
 {"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
 {"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
 {"ts": "2026-11-01 09:53:48", "kind": "upward_alarm", "text": "reward THEATER rows: 8"}
+{"ts": "2026-11-01 11:13:59", "kind": "upward", "what": "earn-loop-beat", "beat": 1, "unclaimed": 7}
+{"ts": "2026-11-01 11:17:12", "kind": "upward", "what": "FIRST-EXTERNAL-PR (founder-granted)", "url": "https://github.com/rtk-ai/rtk/pull/4929"}

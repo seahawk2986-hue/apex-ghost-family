@@ -72,3 +72,4 @@
 {"ts": "2026-11-01 10:51:29", "run": "harvest5", "tool": "money-recognizer", "purpose": "the COIN regex ranks each paper's money-documentation density"}
 {"ts": "2026-11-01 10:51:29", "run": "harvest5", "tool": "lane-classifier", "purpose": "bounty/marketplace/trading/commerce/economy-sim tags per row"}
 {"ts": "2026-11-01 10:52:44", "run": "harvest6", "tool": "rate-anchored-classifier", "purpose": "high-earn job classes with documented USD rate bands"}
+{"ts": "2026-11-01", "run": "stage-adoption", "tool": "impacket (from the stage candidates)", "purpose": "the security capability birth: the bounty-class verification work"}
