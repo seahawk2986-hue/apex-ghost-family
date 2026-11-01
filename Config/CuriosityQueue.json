@@ -93,7 +93,18 @@
   "shlomi-noach/awesome-mysql",
   "Siv3D/OpenSiv3D",
   "gammasoft71/xtd",
-  "crewAIInc/crewAI"
+  "crewAIInc/crewAI",
+  "SujalMeghwal/mcafee-xpass",
+  "federicodotta/Brida",
+  "govolution/avet",
+  "sensepost/DET",
+  "elceef/dnstwist",
+  "infobyte/faraday",
+  "danielmiessler/SecLists",
+  "NullArray/AutoSploit",
+  "microsoft/SynapseML",
+  "Ganapati/RsaCtfTool",
+  "CoreSecurity/impacket"
  ],
  "pending": [],
  "rotated": "2026-10-31"

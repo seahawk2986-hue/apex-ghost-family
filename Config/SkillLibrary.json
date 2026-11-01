@@ -3407,7 +3407,7 @@
    "license": "check repo",
    "sha256": "6bc9269df79f6c211a0c72816d3c4a29a8491f0202ac56506a6a0c97855db1a9",
    "lines": 22,
-   "first_line": "\"\"\"User-data helpers \u2014 re-exported from ``crewai_core.user_data``.\"\"\"",
+   "first_line": "\"\"\"User-data helpers — re-exported from ``crewai_core.user_data``.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:12"
   },
@@ -3446,7 +3446,7 @@
    "license": "check repo",
    "sha256": "45ee86a7440b594196ed9578fa0346585184fb3d19b04ae248d2de9c529423dd",
    "lines": 24,
-   "first_line": "\"\"\"OAuth2 authentication primitives \u2014 shared by crewai and crewai-cli.\"\"\"",
+   "first_line": "\"\"\"OAuth2 authentication primitives — shared by crewai and crewai-cli.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:19"
   },
@@ -3460,6 +3460,361 @@
    "first_line": "\"\"\"Authentication constants.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:20"
+  },
+  {
+   "skill": "server",
+   "source_file": "Demo/Android/server.py",
+   "source_repo": "federicodotta/Brida",
+   "summary": "import flask",
+   "license": "permissive (fetched)",
+   "sha256": "39f3235e30668285ae5beee192de751aebe5d4a07daf5cc7ef4ef8cf742f93e5",
+   "lines": 32,
+   "first_line": "import flask",
+   "imports": [
+    "base64",
+    "flask",
+    "random"
+   ],
+   "registered": "2026-10-31 22:53:55"
+  },
+  {
+   "skill": "CheckLDAPStatus",
+   "source_file": "examples/CheckLDAPStatus.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "fab70a6e76c204b35887b327f0b9c2aaa801c7f0fd4e4a7ab4287d89e1130301",
+   "lines": 142,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-10-31 22:53:58"
+  },
+  {
+   "skill": "GetADComputers",
+   "source_file": "examples/GetADComputers.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "6f56f70f7e571cb235fb80145bdad37da6eaf964054e2d364fa06fa4c0f8a09c",
+   "lines": 236,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "dns",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-10-31 22:54:00"
+  },
+  {
+   "skill": "GetADUsers",
+   "source_file": "examples/GetADUsers.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "d0426a7fea75125421b1ac2753be58e859932c2ebecb1b9887cb711822678916",
+   "lines": 197,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-10-31 22:54:01"
+  },
+  {
+   "skill": "checkMSSQLStatus",
+   "source_file": "examples/checkMSSQLStatus.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "4eeea6d61431b635bd4fc760b272724c6405025d6a26b47d49c7d6181c7c9e4b",
+   "lines": 154,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-10-31 22:54:02"
+  },
+  {
+   "skill": "esentutl",
+   "source_file": "examples/esentutl.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "aeea11b4cd5fd74dd1e805948c27fa35776280fb6ad1eb11d5840e908a539800",
+   "lines": 111,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-10-31 22:54:03"
+  },
+  {
+   "skill": "getArch",
+   "source_file": "examples/getArch.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "df93865ddf8fae14b165daf458977f52191806b5097b2c59c030efc6a8b6b219",
+   "lines": 111,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-10-31 22:54:04"
+  },
+  {
+   "skill": "getTGT",
+   "source_file": "examples/getTGT.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "07818dd348b6abade275cd31ae9beb7c6f386f5096188a255f95e39d69fd3296",
+   "lines": 190,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-10-31 22:54:05"
+  },
+  {
+   "skill": "kintercept",
+   "source_file": "examples/kintercept.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "75da0f2d8e0d462fc88ca336e2479f4110dd442fa24320adf19ea8651dd006b2",
+   "lines": 296,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "struct"
+   ],
+   "registered": "2026-10-31 22:54:06"
+  },
+  {
+   "skill": "lookupsid",
+   "source_file": "examples/lookupsid.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "8b07630d80985ccc5584e7cfcb8e5263d3506a913631cb34ca5a6458ac83a0c7",
+   "lines": 204,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "codecs",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-10-31 22:54:06"
+  },
+  {
+   "skill": "machine_role",
+   "source_file": "examples/machine_role.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "052c0b388fbca67a81ff524dbef0d7c473531c9865b16907abf99c6d165cf145",
+   "lines": 176,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys"
+   ],
+   "registered": "2026-10-31 22:54:07"
+  },
+  {
+   "skill": "mimikatz",
+   "source_file": "examples/mimikatz.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "4755cee5a7a8d909384dfe4d597844c3d37779433c2e15785b2e938ea488ffa7",
+   "lines": 238,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "cmd",
+    "logging",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-10-31 22:54:15"
+  },
+  {
+   "skill": "mqtt_check",
+   "source_file": "examples/mqtt_check.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "be6e36c78a4c0f018283cbf96955de035f53855c0395b0650aff7e140e60b673",
+   "lines": 84,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-10-31 22:54:17"
+  },
+  {
+   "skill": "mssqlclient",
+   "source_file": "examples/mssqlclient.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "2c6f99f377fe38396e58c504ba0da126a9f8faeb1e7c7161189fe103a8a5cc08",
+   "lines": 167,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys"
+   ],
+   "registered": "2026-10-31 22:54:18"
+  },
+  {
+   "skill": "mssqlinstance",
+   "source_file": "examples/mssqlinstance.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "2222e4df627faba9ebe6af3d314d8444496ad23d7a7e20313dc13ca589fdf23b",
+   "lines": 56,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys"
+   ],
+   "registered": "2026-10-31 22:54:19"
+  },
+  {
+   "skill": "registry-read",
+   "source_file": "examples/registry-read.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "574b7ff47573d81d7edc7b112a747e6626785a56daeebef2a78f18587e866299",
+   "lines": 174,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "ntpath",
+    "sys"
+   ],
+   "registered": "2026-10-31 22:54:19"
+  },
+  {
+   "skill": "regsecrets",
+   "source_file": "examples/regsecrets.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "883ceae5d5aafd52f311e07c6500fa28c40efb5799c2ae45c7be2c150b81c79c",
+   "lines": 251,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "codecs",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-10-31 22:54:20"
+  },
+  {
+   "skill": "rpcdump",
+   "source_file": "examples/rpcdump.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "278fbcb197fdefdc37fe559f527712dedb3fb0c9589c7b523f2ee58b131c2e21",
+   "lines": 208,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys"
+   ],
+   "registered": "2026-10-31 22:54:20"
+  },
+  {
+   "skill": "samedit",
+   "source_file": "examples/samedit.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "d2e8be7009ca43b4f1ba5539f5b91e0c7ac4cec995ba582821d32022f9ea9b87",
+   "lines": 121,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "binascii",
+    "codecs",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-10-31 22:54:21"
+  },
+  {
+   "skill": "samrdump",
+   "source_file": "examples/samrdump.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "c9496e94baa3b6b4fffb480f727ad0f2b1a496d8515de1757b99578add85be09",
+   "lines": 256,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "codecs",
+    "logging",
+    "sys"
+   ],
+   "registered": "2026-10-31 22:54:22"
+  },
+  {
+   "skill": "smbclient",
+   "source_file": "examples/smbclient.py",
+   "source_repo": "CoreSecurity/impacket",
+   "summary": "#!/usr/bin/env python",
+   "license": "permissive (fetched)",
+   "sha256": "0119f5663f8f8f91a92e94ebf08b1f8458ad89cafbf6e2940fa3f699edaeb184",
+   "lines": 130,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "logging",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-10-31 22:54:22"
   }
- ]
+ ],
+ "built": "2026-10-31 22:54:22"
 }

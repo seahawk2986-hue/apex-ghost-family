@@ -13,3 +13,43 @@
 {"ts": "2026-10-31 21:53:14", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
 {"ts": "2026-10-31 21:56:42", "event": "birth", "child_pid": 0, "shard": "self", "variant": "urge", "territory": "family"}
 {"ts": "2026-10-31 22:19:11", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-10-31 22:53:51", "event": "birth", "child_pid": 0, "shard": "self", "variant": "urge", "territory": "family"}
+{"ts": "2026-10-31 22:53:55", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-10-31 22:53:55", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-10-31 22:53:55", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-10-31 23:53:37", "event": "birth", "child_pid": 0, "shard": "self", "variant": "urge", "territory": "family"}
+{"ts": "2026-10-31 23:53:40", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-10-31 23:53:40", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-10-31 23:53:40", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-11-01 00:53:40", "event": "birth", "child_pid": 0, "shard": "self", "variant": "urge", "territory": "family"}
+{"ts": "2026-11-01 00:53:44", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-11-01 00:53:44", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-11-01 00:53:44", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-11-01 01:53:32", "event": "birth", "child_pid": 0, "shard": "self", "variant": "urge", "territory": "family"}
+{"ts": "2026-11-01 01:53:35", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-11-01 01:53:35", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-11-01 01:53:35", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-11-01 01:53:59", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-11-01 01:53:59", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-11-01 01:53:59", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-11-01 02:53:14", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-11-01 02:53:14", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-11-01 02:53:14", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-11-01 03:53:31", "event": "birth", "child_pid": 0, "shard": "self", "variant": "urge", "territory": "family"}
+{"ts": "2026-11-01 03:53:53", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-11-01 03:53:53", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-11-01 03:53:53", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-11-01 04:53:14", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-11-01 04:53:14", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-11-01 04:53:14", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-11-01 05:53:33", "event": "birth", "child_pid": 0, "shard": "self", "variant": "urge", "territory": "family"}
+{"ts": "2026-11-01 05:53:54", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-11-01 05:53:54", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-11-01 05:53:54", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-11-01 06:53:14", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-11-01 06:53:14", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-11-01 06:53:14", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
+{"ts": "2026-11-01 07:53:47", "event": "birth", "child_pid": 0, "shard": "self", "variant": "urge", "territory": "family"}
+{"ts": "2026-11-01 07:53:53", "event": "dissolved", "child_pid": null, "shard": 0, "variant": "child"}
+{"ts": "2026-11-01 07:53:53", "event": "dissolved", "child_pid": null, "shard": 1, "variant": "child"}
+{"ts": "2026-11-01 07:53:53", "event": "dissolved", "child_pid": null, "shard": 2, "variant": "child"}
