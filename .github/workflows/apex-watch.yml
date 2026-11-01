@@ -23,7 +23,7 @@ jobs:
         run: |
           python3 Scripts/PrWatch.py || true
           python3 Scripts/ClaimCheck.py || true
-      - name: the meta-loop's actions lane (runner=actions: the free off-box work)
+      - name: "the meta-loop's actions lane (runner=actions - the free off-box work)"
         env:
           APEX_ROOT: ${{ github.workspace }}
           APEX_RUNNER: actions
