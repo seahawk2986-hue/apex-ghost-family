@@ -7,8 +7,12 @@
 - Open the CLA's text: https://github.com/dream-machine-systems/dream-machine-os/blob/main/CLA.md — post your attestation as the YOUR-comment (the legal-act = yours honestly).
 
 ## 2. The Polar's go-live confirm (30 sec)
-- https://dashboard.polar.sh — if a red banner asks for the extra payout info = complete; then the "Go live" toggle.
-- The account's approved + the payout connected (the Visa ****8902 instant-eligible) + the identity verified — the products + links = API-verified live.
+- https://dashboard.polar.sh - if a red banner asks for the extra payout info = complete; then the "Go live" toggle.
+- The account's approved + the payout connected (the Visa ****8902 instant-eligible) + the identity verified - the products + links = API-verified live.
+
+## 2b. The demo-repo's create (10 sec)
+- https://github.com/new - name: `open-triage-demo`, add-description: "the FREE triage tier", Public.
+- The machine's DemoDesk = watches + serves it (the token's create-scope = refused honestly; the manual-create = the same result).
 
 ## 3. The 4 paste-ready posts (60 sec each — any/all)
 - `C:\Users\seaha\Apex-Adapter\marketing_kit\` — SHOW_HN / REDDIT / X / LINKEDIN.
