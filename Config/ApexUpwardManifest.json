@@ -1,9 +1,9 @@
 {
- "ts": "2026-11-01 09:44:47",
- "ms": 4106.8,
+ "ts": "2026-11-01 09:55:33",
+ "ms": 4082.8,
  "state": {
   "genes": {
-   "gen": 12,
+   "gen": 16,
    "champion": "base",
    "front": [
     "base"
@@ -58,6 +58,22 @@
      "m_rounds": 0
     },
     "g11_0": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g12_1": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g13_2": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g14_1": {
+     "fitness": 0.0,
+     "m_rounds": 0
+    },
+    "g15_2": {
      "fitness": 0.0,
      "m_rounds": 0
     }
@@ -143,7 +159,7 @@
    "head": ""
   },
   "hardware": {
-   "ram_free_gb": 6.64,
+   "ram_free_gb": 6.82,
    "tier": "brain-window",
    "allowed": [
     "brain-load+conversion",
@@ -152,7 +168,7 @@
     "genes"
    ],
    "starved": false,
-   "proc_rss_mb": 34.0,
+   "proc_rss_mb": 33.3,
    "gpu_note": "no GPU loads for swarm work (the 3050 stays idle-capable)"
   },
   "lessons": {
@@ -165,7 +181,7 @@
   },
   "digest": {
    "present": true,
-   "age_min": 0.6
+   "age_min": 11.3
   },
   "brain": {},
   "integrity": {
@@ -191,47 +207,47 @@
   "gold": {
    "score": 2166.0,
    "delta": 0.0,
-   "progress_age_min": 0.6
+   "progress_age_min": 11.3
   },
   "money": {
    "score": 0.0,
    "delta": 0.0,
-   "progress_age_min": 45.6
+   "progress_age_min": 56.4
   },
   "life": {
    "score": 129.0,
    "delta": 0.0,
-   "progress_age_min": 0.6
+   "progress_age_min": 11.3
   },
   "recruits": {
    "score": 6.0,
    "delta": 0.0,
-   "progress_age_min": 0.6
+   "progress_age_min": 11.3
   },
   "jobs": {
    "score": 213.0,
    "delta": 0.0,
-   "progress_age_min": 0.6
+   "progress_age_min": 11.3
   },
   "coding": {
    "score": 305.0,
    "delta": 0.0,
-   "progress_age_min": 0.6
+   "progress_age_min": 11.3
   },
   "omnivore": {
    "score": 329.0,
    "delta": 0.0,
-   "progress_age_min": 0.6
+   "progress_age_min": 11.3
   },
   "efficiency": {
    "score": 526.0,
    "delta": 0.0,
-   "progress_age_min": 0.6
+   "progress_age_min": 11.3
   },
   "safety": {
    "score": 2.0,
    "delta": 0.0,
-   "progress_age_min": 0.6
+   "progress_age_min": 11.3
   }
  },
  "goal_progress": {
@@ -420,16 +436,6 @@
  },
  "hardware_history": [
   {
-   "ts": "09:39:04",
-   "ms": 4145.8,
-   "ram": 7.09
-  },
-  {
-   "ts": "09:39:35",
-   "ms": 4129.9,
-   "ram": 7.08
-  },
-  {
    "ts": "09:41:15",
    "ms": 4108.4,
    "ram": 6.91
@@ -458,6 +464,16 @@
    "ts": "09:44:47",
    "ms": 4106.8,
    "ram": 6.64
+  },
+  {
+   "ts": "09:55:18",
+   "ms": 4132.9,
+   "ram": 6.78
+  },
+  {
+   "ts": "09:55:33",
+   "ms": 4082.8,
+   "ram": 6.82
   }
  ],
  "speed": {

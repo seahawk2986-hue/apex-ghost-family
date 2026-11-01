@@ -1,0 +1,94 @@
+{
+ "ts": "2026-11-01 09:55:39",
+ "canon_unique": 721,
+ "live_organs_scanned": 89,
+ "class_counts": {
+  "autonomy_selfimprove": 260,
+  "benchmark_driven": 80,
+  "efficiency_constraint": 74,
+  "self_evolving_loop": 72,
+  "multi_agent_comms": 71,
+  "long_horizon": 59,
+  "memory_lifelong": 58,
+  "context_engineering": 42,
+  "world_model_planning": 32,
+  "verification_runtime": 27,
+  "skill_library": 11,
+  "reward_integrity": 5,
+  "speculative_efficient_infra": 3,
+  "tree_search_planning": 2
+ },
+ "representatives": {
+  "long_horizon": [
+   "2610.40293v1",
+   "2610.39468v1",
+   "2610.40186v1"
+  ],
+  "benchmark_driven": [
+   "2610.40293v1",
+   "2610.39438v1",
+   "2610.39377v1"
+  ],
+  "multi_agent_comms": [
+   "2610.40293v1",
+   "2610.39927v1",
+   "2610.39576v1"
+  ],
+  "efficiency_constraint": [
+   "2610.39681v1",
+   "2610.37779v1",
+   "2610.35690v1"
+  ],
+  "world_model_planning": [
+   "2610.39576v1",
+   "2610.36989v2",
+   "2610.34564v1"
+  ],
+  "autonomy_selfimprove": [
+   "2610.38946v1",
+   "2610.38145v1",
+   "2610.37926v1"
+  ],
+  "self_evolving_loop": [
+   "2610.38946v1",
+   "2610.30851v1",
+   "2607.11175v2"
+  ],
+  "memory_lifelong": [
+   "2610.36652v1",
+   "2610.35592v1",
+   "2610.35966v1"
+  ],
+  "verification_runtime": [
+   "2610.37700v1",
+   "2610.31351v1",
+   "2610.38620v1"
+  ],
+  "context_engineering": [
+   "2610.40186v1",
+   "2610.39781v1",
+   "2610.38980v1"
+  ],
+  "speculative_efficient_infra": [
+   "2610.25012v1",
+   "2609.12551v2",
+   "2610.20503v2"
+  ],
+  "skill_library": [
+   "2610.23599v1",
+   "2605.08693v3",
+   "2610.28386v1"
+  ],
+  "reward_integrity": [
+   "2610.11464v1",
+   "2608.08008v1",
+   "2605.25062v1"
+  ],
+  "tree_search_planning": [
+   "2610.02286v1",
+   "2610.25932v1"
+  ]
+ },
+ "GAPS_RANKED": [],
+ "law": "implement in canon-mass order, hardware-legal, test-first, clash-checked"
+}
