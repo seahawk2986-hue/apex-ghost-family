@@ -44,7 +44,8 @@ def stage3(diff_text, issue_body, purpose="the quality review", tries=3,
             ladder.append({"try": i + 1, "verdict": "ram-gated"})
             time.sleep(delay if i < tries - 1 else 0)
             continue
-        r = CB.chat(ask, max_tokens=250, purpose=purpose)
+        r = CB.chat(ask, max_tokens=250, purpose=purpose,
+                    models=("groq", "local-coder", "local-fast"))
         if r:
             import re as _re
             t = _re.sub(_re.escape("<" + "think") + r".*?" + _re.escape("</" + "think")

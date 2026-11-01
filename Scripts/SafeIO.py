@@ -1,15 +1,26 @@
-"""SafeIO: the family's single write authority - atomic + locked everywhere."""
+"""SafeIO: the family's single write authority - atomic + locked everywhere.
+PORTABLE: the Windows lock (msvcrt) OR the POSIX flock (the runners) - the
+off-box law: every ledger-writer survives on ubuntu."""
 import json
-import msvcrt
 import os
 import time
+
+try:
+    import msvcrt
+    _POSIX = False
+except ImportError:
+    import fcntl
+    _POSIX = True
 
 def _lock(path):
     lf = open(path + ".lock", "w")
     dl = time.time() + 30
     while True:
         try:
-            msvcrt.locking(lf.fileno(), msvcrt.LK_LOCK, 1)
+            if _POSIX:
+                fcntl.flock(lf.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            else:
+                msvcrt.locking(lf.fileno(), msvcrt.LK_LOCK, 1)
             return lf
         except OSError:
             if time.time() > dl:
@@ -29,7 +40,13 @@ def write_json(path, data, indent=1):
         os.replace(tmp, path)
         return True
     finally:
-        msvcrt.locking(lf.fileno(), msvcrt.LK_UNLCK, 1)
+        try:
+            if _POSIX:
+                fcntl.flock(lf.fileno(), fcntl.LOCK_UN)
+            else:
+                msvcrt.locking(lf.fileno(), msvcrt.LK_UNLCK, 1)
+        except Exception:
+            pass
         lf.close()
 
 

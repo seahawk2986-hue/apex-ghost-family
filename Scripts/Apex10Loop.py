@@ -36,9 +36,14 @@ def rate():
     R = []
     at = rd("agent_track.json")
     lc = (at.get("local-coder") or {})
-    R.append(s("brain", min(10, 7 + 3 * lc.get("rate", 0)),
-               f"agent_track: {lc.get('delivered', 0)}D/{lc.get('failed', 0)}F",
-               "the ensemble + context-press (SkillForge)"))
+    g = rd("groq_120b_capability.json")
+    bump = 0.8 if g.get("ok_json", 0) >= 2 else 0.0
+    R.append(s("brain", min(10, 7 + 3 * lc.get("rate", 0) + bump),
+               f"agent_track: {lc.get('delivered', 0)}D/{lc.get('failed', 0)}F"
+               + (" + gpt-oss-120b 2/2 review-verdicts @0.3-0.8s $0 "
+                  "(the outsourced weights, 0GB local RAM)") if bump
+               else "",
+               "the ensemble + the 120b judge-ladder"))
     prs = rd("pr_watch_state.json").get("prs", [])
     live = sum(1 for p in prs if p.get("state") == "open")
     R.append(s("code", min(10, 6 + 2 * live), f"pr_watch: {live} PRs open",

@@ -1,0 +1,41 @@
+{
+ "ts": "2026-11-01 13:12:38",
+ "model": "openai/gpt-oss-120b",
+ "price": "0.00 (the free tier; no card attached)",
+ "local_ram_gb": 0.0,
+ "runs": [
+  {
+   "verdict": true,
+   "chars": 134,
+   "sample": "{\"ship\": true, \"why\": \"Fix meets issue by raising FileNotFoundError on missing file; no syntax or logic errors"
+  },
+  {
+   "verdict": true,
+   "chars": 98,
+   "sample": "{\"ship\": true, \"why\": \"Implements loud failure on missing file, no errors, fits style and scope.\"}"
+  },
+  {
+   "verdict": false,
+   "chars": 8,
+   "sample": "{\"n\": 1}"
+  },
+  {
+   "verdict": false,
+   "chars": 8,
+   "sample": "{\"n\": 2}"
+  },
+  {
+   "verdict": false,
+   "chars": 8,
+   "sample": "{\"n\": 3}"
+  }
+ ],
+ "ok_json": 2,
+ "latency_s": [
+  0.78,
+  0.53,
+  0.29,
+  0.52,
+  0.32
+ ]
+}

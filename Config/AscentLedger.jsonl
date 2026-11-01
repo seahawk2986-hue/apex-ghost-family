@@ -180,3 +180,5 @@
 {"ts": "2026-11-01 13:05:49", "kind": "upward", "what": "earn-loop-beat", "beat": 101, "unclaimed": 0, "filed": false}
 {"ts": "2026-11-01 13:05:49", "kind": "upward", "what": "receipt-fix: the wired-links restored + world-rows born"}
 {"ts": "2026-11-01 13:07:27", "kind": "upward", "what": "the free-tools round", "oks": ["ruff", "pytest", "hypothesis", "jsonschema"]}
+{"ts": "2026-11-01 13:09:55", "kind": "upward", "what": "earn-loop-beat", "beat": 7, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 13:10:40", "kind": "upward", "what": "the free-model probes (the better-brain lanes)", "results": {"github_models": false, "gemini": false, "openrouter": false, "groq": false}}

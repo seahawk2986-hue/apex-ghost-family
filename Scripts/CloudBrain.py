@@ -20,7 +20,8 @@ import urllib.request
 ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 GATE = os.path.join(ROOT, "Config", "spend_gate.json")
 # the honest pricing (round per-1M estimates; the gate errs HIGH not low)
-PRICE_PER_1M = {"ollama": 0.20, "openrouter-free": 0.0, "groq": 0.10,
+PRICE_PER_1M = {"ollama": 0.20, "openrouter-free": 0.0, "groq": 0.0,
+                "gemini": 0.0,
                 "gemini": 0.10}
 DEFAULT_SESSION_CAP = 0.50       # USD - Andrew's drain protection
 
@@ -82,40 +83,60 @@ def chat(prompt, max_tokens=512, purpose="", models=()):
     g = load_gate()
     est = (len(prompt) / 4 + max_tokens) / 1e6 * 0.2   # the HIGH-side estimate
     keys = env_keys()
-    cloud_allowed = os.environ.get("CLOUD_ALLOWED") == "1"   # the founder's
-    cands = list(models) or [                                 # opt-in only
+    cloud_allowed = (os.environ.get("CLOUD_ALLOWED") == "1" or
+                     (keys.get("CLOUD_ALLOWED") == "1"))   # the founder's
+    # opt-in: the env-var OR the .env line (the daemon's processes see the
+    # .env form; the interactive runs either)
+    pool = [                                                  # the ladder
         # THE FREE-ONLY ROSTER (the founder's law: only free agents run by
-        # default; the CLOUD tier (his credits) sleeps behind CLOUD_ALLOWED=1)
+        # default; the no-card free tiers behind CLOUD_ALLOWED=1; the
+        # credits-tier behind the SEPARATE CREDITS_ALLOWED)
         ("local-coder", "http://localhost:11434/api/chat",
          "qwen2.5-coder:7b", "local-no-key", {}),
         ("local-fast", "http://localhost:11434/api/chat",
          "qwen2.5-coder:3b", "local-no-key", {}),
     ]
     if cloud_allowed:
-        cands += [
-            # the DORMANT-BY-DEFAULT cloud set (Andrew's ollama credits +
-            # the others' keys; each ledgered; the cap always enforced)
-            ("ollama", "https://ollama.com/v1/chat/completions",
-             "gpt-oss:120b", keys.get("OLLAMA_API_KEY", ""),
-             {"Authorization": "Bearer " + keys.get("OLLAMA_API_KEY", "")}),
+        pool += [
+            # THE NO-CARD FREE TIERS ($0 STRUCTURALLY: no card attached =
+            # no possible bill; the 429s = the daily rate-ceilings) - the
+            # probe-verified 120b-class brain + the gemini-flash alias
+            ("groq", "https://api.groq.com/openai/v1/chat/completions",
+             "openai/gpt-oss-120b", keys.get("GROQ_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("GROQ_API_KEY", "")}),
+            ("gemini", "https://generativelanguage.googleapis.com/v1beta/"
+             "openai/chat/completions", "gemini-flash-latest",
+             keys.get("GEMINI_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("GEMINI_API_KEY", "")}),
             ("openrouter", "https://openrouter.ai/api/v1/chat/completions",
              "meta-llama/llama-3.2-3b-instruct:free",
              keys.get("OPENROUTER_API_KEY", ""),
              {"Authorization": "Bearer " + keys.get("OPENROUTER_API_KEY", "")}),
-            ("groq", "https://api.groq.com/openai/v1/chat/completions",
-             "llama-3.3-70b-versatile", keys.get("GROQ_API_KEY", ""),
-             {"Authorization": "Bearer " + keys.get("GROQ_API_KEY", "")}),
         ]
+    credits_allowed = (os.environ.get("CREDITS_ALLOWED") == "1" or
+                       (keys.get("CREDITS_ALLOWED") == "1"))
+    if cloud_allowed and credits_allowed:
+        pool += [
+            # THE FOUNDER'S CREDITS tier (a SEPARATE explicit unlock; the
+            # est stays high-side 0.20; the $0.00-cap still gates it):
+            ("ollama", "https://ollama.com/v1/chat/completions",
+             "gpt-oss:120b", keys.get("OLLAMA_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("OLLAMA_API_KEY", "")}),
+        ]
+    # the named-ladder: models=("groq", ...) = the EXPLICIT order-filter
+    cands = ([c for c in pool if c[0] in set(models)] if models else pool)
     for name, url, model, keyv, hdrs in cands:
         is_local = name.startswith("local")
         if not keyv and not is_local:
             continue
-        # THE GATE LIVES PER CANDIDATE: the free tier ALWAYS serves; the
-        # cloud candidates skip individually when the cap is met (the
-        # local brain is never blocked by the spend law)
+        # THE GATE LIVES PER CANDIDATE: the no-card free tiers price $0.00
+        # (they pass even the $0.00 cap); the credits-tier's est stays
+        # HIGH-side (the cap blocks it until the founder's second unlock)
+        est_c = (len(prompt) / 4 + max_tokens) / 1e6 * (
+            0.0 if name in ("groq", "gemini", "openrouter") else 0.2)
         if not is_local:
             g2 = load_gate()
-            if g2["spent_usd"] + est > g2["session_cap_usd"]:
+            if g2["spent_usd"] + est_c > g2["session_cap_usd"]:
                 continue
         try:
             if is_local:

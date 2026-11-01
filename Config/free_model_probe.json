@@ -1,0 +1,20 @@
+{
+ "ts": "2026-11-01 13:11:44",
+ "round": 3,
+ "probes": {
+  "gemini": {
+   "ok": false,
+   "note": "HTTPError b'{\\n  \"error\": {\\n    \"code\": 429,\\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more inform'"
+  },
+  "groq": {
+   "ok": true,
+   "model": "openai/gpt-oss-120b",
+   "note": "44 chars (the review-JSON: LIVE)"
+  },
+  "github_models": {
+   "ok": false,
+   "note": "JSONDecodeError b''"
+  }
+ },
+ "law": "the LIST-driven ids; $0.00 enforced"
+}
