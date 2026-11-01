@@ -1549,6 +1549,9 @@ def talk_api(t: TalkMsg):
         reply = _XB.ask(prompt, task_class="chat", max_tokens=800)
         if reply:
             log("system", "chat served by: gpt-oss-120b (groq)")
+        else:
+            log("system", "chat served by: the FALLBACK floor (the "
+                          "groq's rate-moment = the honest candor)")
     except Exception as _e:
         log("system", f"chat-lock drop: {str(_e)[:70]} (the qwen-floor)")
     if not reply:
