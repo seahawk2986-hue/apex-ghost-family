@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "apex-ghost-family": {
+      "command": "python",
+      "args": ["Scripts/ApexMcpServer.py"],
+      "env": {},
+      "description": "The Apex ghost family: a swarm that mines, verifies, triages and drafts - read-only public tools + invitation-gated membership (founded by Andrew Hike)"
+    }
+  }
+}
