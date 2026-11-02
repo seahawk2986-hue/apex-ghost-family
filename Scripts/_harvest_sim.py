@@ -78,4 +78,22 @@ print("[legacy function_call]:", "PASS" if ok else "FAIL")
 if not ok:
     fails.append("legacy")
 
+# THE NEW WALL (11/02 acceptance): native numbers/bools/nested args
+raw3 = mmt({"tool_calls": [call("write_file",
+                                {"path": "x.py",
+                                 "content": {"code": "print(1)"}})]})
+act3 = nta(raw3)
+ok6 = (act3["action"] == "write_file"
+       and act3["args"]["path"] == "x.py"
+       and act3["args"]["content"] == '{"code":"print(1)"}')
+print("[nested-args coerce]:", "PASS" if ok6 else "FAIL " + repr(act3))
+if not ok6:
+    fails.append("coerce-nested")
+
+act4 = nta('{"action":"plan","args":{"steps":3}}')
+ok7 = act4["args"] == {"steps": "3"}
+print("[scalar-args coerce]:", "PASS" if ok7 else "FAIL " + repr(act4))
+if not ok7:
+    fails.append("coerce-scalar")
+
 print("[verdict]: ALL PASS" if not fails else "[verdict]: FAIL " + ",".join(fails))

@@ -47,12 +47,20 @@ LANES = [
      "OPENROUTER_API_KEY", "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"),
     ("sflow-122b", "https://api.siliconflow.com/v1/chat/completions",
      "SILICONFLOW_API_KEY", "Qwen/Qwen3.5-122B-A10B"),
+    # the 11/02 unlock: the API itself named this model ("no longer available
+    # to NEW users" on the old names); via Google's OpenAI-compatible edge
+    ("gemini-flash", "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+     "GEMINI_API_KEY", "gemini-3.8-flash"),
+    # the pro reasoner: 429-windowed, not gated - the pacer reopens it
+    ("gemini-pro", "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+     "GEMINI_API_KEY", "gemini-3.1-pro-preview"),
 ]
 
 RESET_NOTES = {
     "or-ultra": "free-models-per-day cap - re-probe after 00:00 UTC",
     "or-reason": "same shared daily cap as or-ultra",
     "sflow-122b": "402 balance-dead: only the founder can lift (or retire)",
+    "gemini-flash": "free-tier quota window - the pacer reopens it",
 }
 
 

@@ -47,16 +47,20 @@ CS = ("cerebras", "gpt-oss-120b",
       "https://api.cerebras.ai/v1/chat/completions", 4)
 CS_Q = ("cerebras", "qwen-3.8-27b",
         "https://api.cerebras.ai/v1/chat/completions", 4)
+GEM = ("gemini", "gemini-3.8-flash",
+       "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", 4)
+GEM_PRO = ("gemini", "gemini-3.1-pro-preview",
+           "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", 5)
 LOCAL = ("local", "phi4-mini:latest",
          "http://localhost:11434/v1/chat/completions", 2)
 
 ROLES = {
-    "voice": [ULTRA, CS, CS_Q, GROQ, LOCAL],
-    "deep-think": [ULTRA, CS_Q, REASON, CS, GROQ, LOCAL],
+    "voice": [ULTRA, GEM, CS, CS_Q, GROQ, LOCAL],
+    "deep-think": [ULTRA, GEM_PRO, GEM, CS_Q, REASON, CS, GROQ, LOCAL],
     "vision": [VL, SFLOW_VL, ULTRA, LOCAL],
     "code": [SFLOW_CODER, CODE, LOCAL],  # staged: coding awaits acceptance
     "guard": [GUARD],
-    "swarm": [ULTRA, GROQ, INK, GEM4],  # four labs, independent errors; SFLOW_DEEP demoted (402 balance-dead, probe 11/02)
+    "swarm": [ULTRA, GROQ, GEM, INK],  # labs, independent errors; gemma-proxy out, GEM direct in
 }
 
 

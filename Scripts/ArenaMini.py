@@ -39,6 +39,8 @@ LANES = [
      "CEREBRAS_API_KEY", "gpt-oss-120b"),
     ("sflow-122b", "https://api.siliconflow.com/v1/chat/completions",
      "SILICONFLOW_API_KEY", "Qwen/Qwen3.5-122B-A10B"),
+    ("gemini-flash", "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+     "GEMINI_API_KEY", "gemini-3.8-flash"),
     # the quota-FREE floor: local Ollama phi4-mini - never rate-capped, honest row
     ("local-phi4", "http://localhost:11434/v1/chat/completions",
      None, "phi4-mini:latest"),
