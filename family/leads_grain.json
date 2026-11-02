@@ -1,10 +1,17 @@
 {
- "ts": "2026-11-02 08:15:01",
- "count": 714,
+ "ts": "2026-11-02 08:30:02",
+ "count": 717,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
    "score": 150.0,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "twentyhq/twenty",
+   "score": 123.1,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -95,6 +102,20 @@
   },
   {
    "repo": "rastating/wordpress-exploit-framework",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "govolution/avet",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "GoVanguard/legion",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
