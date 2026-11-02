@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 18:00:03",
- "count": 733,
+ "ts": "2026-11-02 18:15:03",
+ "count": 732,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -95,13 +95,6 @@
   },
   {
    "repo": "rastating/wordpress-exploit-framework",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "govolution/avet",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
