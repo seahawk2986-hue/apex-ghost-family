@@ -14,7 +14,8 @@ import time
 import urllib.request
 import urllib.error
 
-ROOT = os.environ.get("GITHUB_WORKSPACE", os.getcwd())
+ROOT = (os.environ.get("GITHUB_WORKSPACE")
+        or os.path.dirname(os.path.abspath(__file__)))
 LIB = os.path.join(ROOT, "Config", "SkillLibrary.json")
 REWARDS = os.path.join(ROOT, "Config", "GymRewards.json")
 GRAIN = os.path.join(ROOT, "family", "leads_grain.json")
