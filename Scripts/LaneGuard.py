@@ -48,6 +48,9 @@ LANES = [
     # the auto-router lane (catalog-verified 11/02): shifts to whatever is free
     ("or-auto", "https://openrouter.ai/api/v1/chat/completions",
      "OPENROUTER_API_KEY", "openrouter/free"),
+    # the NIM flagships (verified real 11/02; dormant until the trial key)
+    ("nim-k3", "https://integrate.api.nvidia.com/v1/chat/completions",
+     "NVIDIA_API_KEY", "moonshotai/kimi-k3"),
     ("sflow-122b", "https://api.siliconflow.com/v1/chat/completions",
      "SILICONFLOW_API_KEY", "Qwen/Qwen3.5-122B-A10B"),
     # the 11/02 unlock: the API itself named this model ("no longer available

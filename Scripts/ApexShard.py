@@ -31,6 +31,11 @@ LANES = [
      "GEMINI_API_KEY", "gemini-3.8-flash", "medium"),
     ("gemini-pro", "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
      "GEMINI_API_KEY", "gemini-3.1-pro-preview", "deep"),
+    # the NIM flagships (build.nvidia.com, verified 11/02): dormant until the free trial key
+    ("nim-k3", "https://integrate.api.nvidia.com/v1/chat/completions",
+     "NVIDIA_API_KEY", "moonshotai/kimi-k3", "deep"),
+    ("nim-v4pro", "https://integrate.api.nvidia.com/v1/chat/completions",
+     "NVIDIA_API_KEY", "deepseek-ai/deepseek-v4-pro-0813", "deep"),
     ("local-floor", "http://localhost:11434/v1/chat/completions",
      None, "phi4-mini:latest", "floor"),
 ]

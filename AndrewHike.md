@@ -31,9 +31,10 @@ Plus: the SQLite resolution cache (`apex_cache.db`) already bypassed the network
 
 ## What only you can do (optional, one click each)
 
-1. GitHub token → grant **Models: read** → the frontier shelf opens
-2. SiliconFlow → balance → 4 seats revive
-3. *(Whenever)* the funnel check from your phone
+1. **NVIDIA NIM (the big one)** — a free trial key at **build.nvidia.com** (2-min signup, $0) → wakes **Kimi-K3** (2.8T, 1M ctx, FrontierSWE 81.2) + **DeepSeek-V4-Pro** (1.65T) at 60 RPM — both already wired as the tier-3 deep seats
+2. GitHub token → grant **Models: read** → the frontier shelf opens
+3. SiliconFlow → balance → 4 seats revive
+4. *(Whenever)* the funnel check from your phone
 
 The machine is honest, trained, priced, accepted, and self-healing on schedule. The coding lane's gate = satisfied; the go-live = your call.
 
