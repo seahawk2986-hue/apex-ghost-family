@@ -3407,7 +3407,7 @@
    "license": "check repo",
    "sha256": "6bc9269df79f6c211a0c72816d3c4a29a8491f0202ac56506a6a0c97855db1a9",
    "lines": 22,
-   "first_line": "\"\"\"User-data helpers — re-exported from ``crewai_core.user_data``.\"\"\"",
+   "first_line": "\"\"\"User-data helpers \u2014 re-exported from ``crewai_core.user_data``.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:12"
   },
@@ -3446,7 +3446,7 @@
    "license": "check repo",
    "sha256": "45ee86a7440b594196ed9578fa0346585184fb3d19b04ae248d2de9c529423dd",
    "lines": 24,
-   "first_line": "\"\"\"OAuth2 authentication primitives — shared by crewai and crewai-cli.\"\"\"",
+   "first_line": "\"\"\"OAuth2 authentication primitives \u2014 shared by crewai and crewai-cli.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:19"
   },
@@ -5307,7 +5307,304 @@
     "yaml"
    ],
    "registered": "2026-11-01 17:55:01"
+  },
+  {
+   "skill": "PRESUBMIT",
+   "source_file": "libs/libyuv/PRESUBMIT.py",
+   "source_repo": "signalwire/freeswitch",
+   "license": "check repo",
+   "sha256": "9edf50b7df5b973c45c4c922b56a1f4f6b308ff4540e2f7e88f165e7253f249e",
+   "lines": 73,
+   "first_line": "# Copyright 2017 The LibYuv Project Authors. All rights reserved.",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-02 03:55:18",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "download_vs_toolchain",
+   "source_file": "libs/libyuv/download_vs_toolchain.py",
+   "source_repo": "signalwire/freeswitch",
+   "license": "check repo",
+   "sha256": "f8ba2a5b7f20e77c0f753dc00ea438aeb7cc243daebef8b6483d880aba455833",
+   "lines": 30,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "os",
+    "sys",
+    "vs_toolchain"
+   ],
+   "registered": "2026-11-02 03:55:18",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_binary_license",
+   "source_file": "distribution/bin/generate-binary-license.py",
+   "source_repo": "apache/druid",
+   "license": "check repo",
+   "sha256": "6ee7e39dfc5e06aa24f671327a4eacfdc8ff12606a45ba5e9fa359ba85240b92",
+   "lines": 263,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "licenses_yaml",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-02 03:55:19",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_binary_notice",
+   "source_file": "distribution/bin/generate-binary-notice.py",
+   "source_repo": "apache/druid",
+   "license": "check repo",
+   "sha256": "22b4e1dc05dc664092fc1bef2e09caeaa4b6e3d0d606894f354ded684ef20769",
+   "lines": 126,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "licenses_yaml",
+    "sys"
+   ],
+   "registered": "2026-11-02 03:55:19",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "addons/account/__init__.py",
+   "source_repo": "odoo/odoo",
+   "license": "check repo",
+   "sha256": "bd73a49ac437491149b5d1734811df0bc381e9e247f24a8a45a947fd8242d189",
+   "lines": 34,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [],
+   "registered": "2026-11-02 03:55:20",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__manifest__",
+   "source_file": "addons/account/__manifest__.py",
+   "source_repo": "odoo/odoo",
+   "license": "check repo",
+   "sha256": "7a47ab33910f3bfb1b4888b0283f89793a674286999ffebf2b42342d0571e590",
+   "lines": 152,
+   "first_line": "# Part of Odoo. See LICENSE file for full copyright and licensing details.",
+   "imports": [],
+   "registered": "2026-11-02 03:55:20",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "config",
+   "source_file": "mpt/config.py",
+   "source_repo": "ByteSnipers/mobile-pentest-toolkit",
+   "license": "check repo",
+   "sha256": "c04fce366ac67b9f619a72d6f61c8815d1b9976d72530545f15259875bf5813e",
+   "lines": 256,
+   "first_line": "import json",
+   "imports": [
+    "json",
+    "netifaces",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 03:55:21",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "logger",
+   "source_file": "mpt/logger.py",
+   "source_repo": "ByteSnipers/mobile-pentest-toolkit",
+   "license": "check repo",
+   "sha256": "86332c7037e116669584210ed7795b40ebede42f975cd4da7e8d94272fee278d",
+   "lines": 59,
+   "first_line": "import logging, colorlog",
+   "imports": [
+    "colorlog",
+    "logging",
+    "sys"
+   ],
+   "registered": "2026-11-02 03:55:21",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "backend/globaleaks/__init__.py",
+   "source_repo": "globaleaks/globaleaks-whistleblowing-software",
+   "license": "check repo",
+   "sha256": "bf54de9f4fd7d877cafac1537e3fc7eb13dd19e2e53ea37d0183538e5d208e6e",
+   "lines": 149,
+   "first_line": "\"\"\"",
+   "imports": [
+    "operator"
+   ],
+   "registered": "2026-11-02 03:55:22",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "backend",
+   "source_file": "backend/globaleaks/backend.py",
+   "source_repo": "globaleaks/globaleaks-whistleblowing-software",
+   "license": "check repo",
+   "sha256": "9eecdcaace015fa732e7f2bdfb8455b7a6b6444f8278c75004076f5ee325ec70",
+   "lines": 132,
+   "first_line": "#   backend",
+   "imports": [
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-11-02 03:55:22",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "dnslib/__init__.py",
+   "source_repo": "TheRook/subbrute",
+   "license": "check repo",
+   "sha256": "db4bd730bcdb9ea5708a8f8d07c30ecc474f323d4d97772270984d3b1cd5a473",
+   "lines": 348,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [
+    "doctest",
+    "textwrap"
+   ],
+   "registered": "2026-11-02 03:55:22",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bimap",
+   "source_file": "dnslib/bimap.py",
+   "source_repo": "TheRook/subbrute",
+   "license": "check repo",
+   "sha256": "45313e315b14db9718b0d097f98124e12d2b9564a0a84db5fd11851601ab6598",
+   "lines": 79,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [
+    "doctest"
+   ],
+   "registered": "2026-11-02 03:55:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "asgi",
+   "source_file": "config/asgi.py",
+   "source_repo": "jaywink/socialhome",
+   "license": "check repo",
+   "sha256": "1eca2652c1c6a2e74f79e55f34118838825ae0e69ae6bd7900a384b47984126a",
+   "lines": 22,
+   "first_line": "import os",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-02 03:55:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "routing",
+   "source_file": "config/routing.py",
+   "source_repo": "jaywink/socialhome",
+   "license": "check repo",
+   "sha256": "1678f7cccf36bc6de8269db1a2bdf6f6a6d16a31749ac39b976185718fed98b7",
+   "lines": 15,
+   "first_line": "# TODO: remove this file when ASGI has been run for a while",
+   "imports": [],
+   "registered": "2026-11-02 03:55:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "apply_candidate",
+   "source_file": "tools/apply_candidate.py",
+   "source_repo": "OpenRAC/rac1-decomp",
+   "license": "check repo",
+   "sha256": "41524329d07568c4bda22538be020c890362516a9aab9d74f58b3928386f03bb",
+   "lines": 98,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "provenance",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-02 03:55:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_build_fidelity",
+   "source_file": "tools/check_build_fidelity.py",
+   "source_repo": "OpenRAC/rac1-decomp",
+   "license": "check repo",
+   "sha256": "415ada3339e33b79a80a0a1926eea9b288cfc4adfcabe2fd80306eb9a1a1590e",
+   "lines": 114,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-02 03:55:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "gen_api_reference",
+   "source_file": "tools/gen_api_reference.py",
+   "source_repo": "s1t5/mail-archiver",
+   "license": "check repo",
+   "sha256": "cf3100395bab26e5d18411543b2bf09646d307823d9174f63cf07e9fad7c1314",
+   "lines": 278,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-02 03:55:25",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "remove_duplicates",
+   "source_file": "test/scripts/remove-duplicates.py",
+   "source_repo": "nil0x42/duplicut",
+   "license": "check repo",
+   "sha256": "19cf5efa863832e426f9835505d83b1d453f9e99cfdc0604e454900e8a7c938c",
+   "lines": 88,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-02 03:55:27",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "censys",
+   "source_file": "api_calls/censys.py",
+   "source_repo": "NullArray/AutoSploit",
+   "license": "check repo",
+   "sha256": "42e4298774014426dc4f71bc2dedec5ae4f4dead56a6781836a73a6bce2364b5",
+   "lines": 45,
+   "first_line": "import requests",
+   "imports": [
+    "lib",
+    "requests"
+   ],
+   "registered": "2026-11-02 03:55:27",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "honeyscore_hook",
+   "source_file": "api_calls/honeyscore_hook.py",
+   "source_repo": "NullArray/AutoSploit",
+   "license": "check repo",
+   "sha256": "775f12e4ddd7a830368aa33f118b7a43dcee166796f2fad16a6c013aefcac479",
+   "lines": 22,
+   "first_line": "import requests",
+   "imports": [
+    "requests"
+   ],
+   "registered": "2026-11-02 03:55:27",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-01 17:55:01"
+ "built": "2026-11-02 03:55:27"
 }
