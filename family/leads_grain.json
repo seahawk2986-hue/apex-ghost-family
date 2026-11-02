@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-01 22:45:02",
- "count": 627,
+ "ts": "2026-11-01 23:00:03",
+ "count": 625,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -108,21 +108,7 @@
    "license": ""
   },
   {
-   "repo": "mschwager/fierce",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "belane/CloudHunter",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Marten4n6/EvilOSX",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
