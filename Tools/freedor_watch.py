@@ -43,7 +43,7 @@ def main():
     with urllib.request.urlopen("https://openrouter.ai/api/v1/models",
                                 timeout=30) as r:
         models = json.loads(r.read())["data"]
-    for fam in ("claude", "grok", "qwen", "deepseek"):
+    for fam in ("claude", "grok", "kimi", "moonshotai", "glm", "deepseek", "qwen"):
         for m in models:
             if fam in m["id"].lower() and ":free" in m["id"]:
                 print(f"   [{fam.upper()} FREE DOOR SPOTTED]:", m["id"])
