@@ -35,12 +35,14 @@ INK = ("openrouter", "thinkingmachines/inkling:free",
        "https://openrouter.ai/api/v1/chat/completions", 4)
 GROQ = ("groq", "openai/gpt-oss-120b",
         "https://api.groq.com/openai/v1/chat/completions", 4)
+CS = ("cerebras", "gpt-oss-120b",
+      "https://api.cerebras.ai/v1/chat/completions", 4)
 LOCAL = ("local", "phi4-mini:latest",
          "http://localhost:11434/v1/chat/completions", 2)
 
 ROLES = {
-    "voice": [ULTRA, GROQ, LOCAL],
-    "deep-think": [ULTRA, REASON, GROQ, LOCAL],
+    "voice": [ULTRA, CS, GROQ, LOCAL],
+    "deep-think": [ULTRA, REASON, CS, GROQ, LOCAL],
     "vision": [VL, ULTRA, LOCAL],
     "code": [CODE, LOCAL],            # staged: live only after coding acceptance
     "guard": [GUARD],
@@ -142,14 +144,15 @@ if __name__ == "__main__":
         return model[:20] + "-answer"
 
     t, p = ask("voice", "hello", http=stub)
-    assert t and p["model"] == "openai/gpt-oss-120b", p   # ultra benched -> groq
+    assert t and p["model"] == "gpt-oss-120b" and p["provider"] == "cerebras", p
+    # ultra benched -> the wafer-fast Cerebras voice answers
     t, p = ask("deep-think", "hard question", http=stub)
     assert p["model"] == "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free", p
     t, p = ask("vision", "see this", http=stub)
     assert p["model"] == "nvidia/nemotron-3.5-super-vl:free", p
     t, p = ask("swarm", "cross-check", http=stub)
     assert p["model"] == "thinkingmachines/inkling:free", p
-    print("[role-map verified]: voice->groq after ultra-bench; deep->REASON;"
+    print("[role-map verified]: voice->cerebras after ultra-bench; deep->REASON;"
           " vision->VL; swarm->inkling (3 labs)")
     print("[lanes]:", " ".join(sorted(l[0] + "/" + l[1].split("/")[0]
                                       for role in ROLES.values()
