@@ -73,6 +73,13 @@ ts = time.strftime("%Y-%m-%d %H:%M:%S")
 print(f"[loop]: sweep done | weaknesses: {len(w)}")
 for x in w:
     print("   -", x)
+if w:  # THE POCKET PAGER: the phone learns of problems when they exist
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from PocketPing import ping
+        ping("APEX: weakness detected", "; ".join(w)[:160], tags="warning")
+    except Exception as _e:
+        print("   [pager]:", str(_e)[:50])
 
 led.append({"ts": ts, "up": sum(1 for k, v in state.items() if v == "up"),
             "total": len(state), "weaknesses": w})
