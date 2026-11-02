@@ -1,8 +1,8 @@
 {
  "mode": "straining",
- "reason": "RAM guard: 0.56GB free < 2.0GB",
- "stress_streak": 2,
- "current_wait_s": 180,
- "since": "2026-11-01 21:19:48",
+ "reason": "RAM guard: 1.11GB free < 2.0GB",
+ "stress_streak": 3,
+ "current_wait_s": 300,
+ "since": "2026-11-01 21:25:11",
  "lesson": "the self-abort lesson 2026-10-31: pacing never silently downsizes - every pause explains its why"
 }
