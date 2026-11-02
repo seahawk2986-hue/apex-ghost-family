@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-01 23:15:02",
- "count": 625,
+ "ts": "2026-11-02 00:00:02",
+ "count": 628,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -94,7 +94,14 @@
    "license": ""
   },
   {
-   "repo": "nil0x42/duplicut",
+   "repo": "govolution/avet",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "GoVanguard/legion",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -108,7 +115,21 @@
    "license": ""
   },
   {
+   "repo": "mschwager/fierce",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "belane/CloudHunter",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Marten4n6/EvilOSX",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
