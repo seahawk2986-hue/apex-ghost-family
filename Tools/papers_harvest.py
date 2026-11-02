@@ -53,13 +53,13 @@ TAGS = [
 ]
 
 
-def fetch(url, tries=3):
+def fetch(url, tries=2):
     for a in range(tries):
         try:
-            with urllib.request.urlopen(url, timeout=30) as r:
+            with urllib.request.urlopen(url, timeout=20) as r:
                 return r.read()
         except Exception:
-            time.sleep(10 * (a + 1))   # the 429-cure: polite backoff 10/20/30s
+            time.sleep(10)   # the 429-cure: one polite retry, wall-safe
     return b""
 
 
@@ -119,7 +119,7 @@ def openalex_fill(need):
 def main():
     calls, reg, seen = 0, [], set()
     for theme, q_rel, q_new in THEMES:
-        for q, sort in ((q_rel, "relevance"), (q_new, "submittedDate")):
+        for q, sort in ((q_rel, "relevance"),):   # wall-safe: 1 call per theme
             if calls >= MAX_CALLS:
                 break
             for p in arxiv_query(q, 12, sort):
