@@ -1,111 +1,113 @@
 {
- "kind": "vet-line",
- "added": [
+ "hub": "actions-runner",
+ "ts": "2026-11-02 08:54:53",
+ "status": "done",
+ "lifecycle": "done",
+ "requested": 150,
+ "ok": 128,
+ "mines": [
   {
-   "skill": "__init__",
-   "repo": "evilsocket/pwnagotchi",
-   "sha256": "5bd8d7b477d1828e"
+   "repo": "ETLCPP/etl",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "286a3041456d2834"
   },
   {
-   "skill": "_version",
-   "repo": "evilsocket/pwnagotchi",
-   "sha256": "6738f69c21fea5e7"
+   "repo": "rfgplk/micron.cpp",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "c3c719a6d1e841ba"
   },
   {
-   "skill": "_gevent_test_main",
-   "repo": "grpc/grpc",
-   "sha256": "618c675499bd29b8"
+   "repo": "Pagghiu/SaneCppLibraries",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "4ab3813a8e445aa1"
   },
   {
-   "skill": "_run_time_type_check_main",
-   "repo": "grpc/grpc",
-   "sha256": "b55ec035691684ea"
+   "repo": "gammasoft71/xtd",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "f6e929a357533ee9"
   },
   {
-   "skill": "__init__",
-   "repo": "apache/incubator-mxnet",
-   "sha256": "f617571c006b5699"
+   "repo": "hkr04/cpp-mcp",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "4ca78a1584382c28"
   },
   {
-   "skill": "opperf",
-   "repo": "apache/incubator-mxnet",
-   "sha256": "e5cfe0639e591b42"
+   "repo": "Dobiasd/frugally-deep",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "ade0802382527573"
   },
   {
-   "skill": "models",
-   "repo": "django-guardian/django-guardian",
-   "sha256": "88124ec0ed77cf35"
+   "repo": "flashlight/flashlight",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "83019abe4094c7cd"
   },
   {
-   "skill": "run_benchmarks",
-   "repo": "django-guardian/django-guardian",
-   "sha256": "c53a23f0c0f23722"
+   "repo": "oneapi-src/oneDNN",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "9137b16c7fe4662e"
   },
   {
-   "skill": "conf",
-   "repo": "Elgg/Elgg",
-   "sha256": "d0eb35ad68ba21c4"
+   "repo": "volt-software/ichor",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "e242fb55b5beb55d"
   },
   {
-   "skill": "backend",
-   "repo": "pretalx/pretalx",
-   "sha256": "76cbba72145b1d1c"
+   "repo": "libuv/libuv",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "c21a178b9518fea8"
   },
   {
-   "skill": "conf",
-   "repo": "pretalx/pretalx",
-   "sha256": "a8089bdb944d57a2"
+   "repo": "skypjack/uvw",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "7bdd8e519a9cc6f2"
   },
   {
-   "skill": "build_assets",
-   "repo": "tuunanet/rea-ski-or-die-reconstruction",
-   "sha256": "c625322803b6502f"
+   "repo": "adamstark/AudioFile",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "b023032642cc770c"
   },
   {
-   "skill": "extract_assets",
-   "repo": "tuunanet/rea-ski-or-die-reconstruction",
-   "sha256": "b35a8ac0b8b28527"
+   "repo": "libAudioFlux/audioFlux",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "c983a1870ff2710d"
   },
   {
-   "skill": "macho_text_rwx",
-   "repo": "JRickey/BattleShip",
-   "sha256": "34fd5b8e6be706f9"
+   "repo": "ekg/vcflib",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "844371468ae93fab"
   },
   {
-   "skill": "acmd_diff",
-   "repo": "JRickey/BattleShip",
-   "sha256": "4546e865354e6f5c"
+   "repo": "p-ranav/argparse",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "63cf0d9102a78020"
   },
   {
-   "skill": "fpfix",
-   "repo": "ryanoasis/nerd-fonts",
-   "sha256": "84242ef761202b18"
+   "repo": "jupyter-xeus/cpp-terminal",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "8eb309d6f4691864"
   },
   {
-   "skill": "generate_extraglyphs",
-   "repo": "ryanoasis/nerd-fonts",
-   "sha256": "9706568080db243b"
-  },
-  {
-   "skill": "getdeps",
-   "repo": "facebook/folly",
-   "sha256": "4dffefdd2938faee"
-  },
-  {
-   "skill": "lint_cmake_floors",
-   "repo": "facebook/folly",
-   "sha256": "5dd0504d96a6dc2c"
-  },
-  {
-   "skill": "__init__",
-   "repo": "django-cms/django-cms",
-   "sha256": "b83299b6bb2fa2cc"
-  },
-  {
-   "skill": "__main__",
-   "repo": "django-cms/django-cms",
-   "sha256": "e89c785abf8de6fa"
+   "repo": "jcwangxp/Crossline",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "80b9ddc6b66b9f89"
   }
  ],
- "ts": "2026-11-02 07:23:51"
+ "rules_followed": true
 }
