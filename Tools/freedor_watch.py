@@ -40,6 +40,13 @@ def main():
         print("   [NEW]:", i)
     for i in g5:
         print("   [GPT-5 FREE DOOR SPOTTED]:", i)
+    with urllib.request.urlopen("https://openrouter.ai/api/v1/models",
+                                timeout=30) as r:
+        models = json.loads(r.read())["data"]
+    for fam in ("claude", "grok", "qwen", "deepseek"):
+        for m in models:
+            if fam in m["id"].lower() and ":free" in m["id"]:
+                print(f"   [{fam.upper()} FREE DOOR SPOTTED]:", m["id"])
     STATE.write_text(json.dumps(free, indent=1), encoding="utf-8")
     print("[state updated]:", STATE.name)
     with (pathlib.Path(__file__).parent / "freedoors_NOW.txt").open(
