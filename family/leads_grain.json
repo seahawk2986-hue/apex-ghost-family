@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 13:45:03",
- "count": 727,
+ "ts": "2026-11-02 14:00:03",
+ "count": 728,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -2699,6 +2699,13 @@
   },
   {
    "repo": "Kilo-Org/kilocode",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "basementuniverse/kanbn",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
