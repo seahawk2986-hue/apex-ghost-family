@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 09:30:03",
- "count": 714,
+ "ts": "2026-11-02 09:45:03",
+ "count": 713,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -102,13 +102,6 @@
   },
   {
    "repo": "kpcyrd/rshijack",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mschwager/fierce",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
