@@ -24,6 +24,9 @@ LANES = [
      "GROQ_API_KEY", "openai/gpt-oss-120b", "medium"),
     ("groq-qwen", "https://api.groq.com/openai/v1/chat/completions",
      "GROQ_API_KEY", "qwen/qwen3.8-27b", "medium"),
+    # the catalog-verified auto-router: one key, whatever massive model is free
+    ("or-auto", "https://openrouter.ai/api/v1/chat/completions",
+     "OPENROUTER_API_KEY", "openrouter/free", "medium"),
     ("gemini-flash", "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
      "GEMINI_API_KEY", "gemini-3.8-flash", "medium"),
     ("gemini-pro", "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",

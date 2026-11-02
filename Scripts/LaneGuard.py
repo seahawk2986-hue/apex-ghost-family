@@ -45,6 +45,9 @@ LANES = [
      "OPENROUTER_API_KEY", "nvidia/nemotron-3-ultra-550b-a55b:free"),
     ("or-reason", "https://openrouter.ai/api/v1/chat/completions",
      "OPENROUTER_API_KEY", "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"),
+    # the auto-router lane (catalog-verified 11/02): shifts to whatever is free
+    ("or-auto", "https://openrouter.ai/api/v1/chat/completions",
+     "OPENROUTER_API_KEY", "openrouter/free"),
     ("sflow-122b", "https://api.siliconflow.com/v1/chat/completions",
      "SILICONFLOW_API_KEY", "Qwen/Qwen3.5-122B-A10B"),
     # the 11/02 unlock: the API itself named this model ("no longer available
