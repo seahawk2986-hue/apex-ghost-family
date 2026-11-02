@@ -43,10 +43,15 @@ TEACHERS = [  # top-tier first; the leaderboard re-ranks them nightly
     ("cerebras-q", "https://api.cerebras.ai/v1/chat/completions",
      "CEREBRAS_API_KEY", "qwen-3.8-27b"),
 ]
-FAMILIES = ["arithmetic-chain", "arithmetic-chain", "predict-output",
-            "spot-the-flaw", "math-word"]     # GI-weighted mix
+FAMILIES = ["self-forecast", "self-forecast", "arithmetic-chain",
+            "arithmetic-chain", "predict-output", "spot-the-flaw",
+            "math-word", "self-forecast"]     # GI-weighted, metacognition-heavy
 
 GEN = {
+ "self-forecast": "Reply ONLY JSON: {\"question\": one short factual/reasoning Q; "
+   "the trainee must answer AND predict their own correctness (high/med/low) in "
+   "the form 'answer | confidence: high|medium|low', \"answer\": the exact short "
+   "correct answer, \"verify_py\": python expression equal to that answer}. No fences.",
  "arithmetic-chain": "Generate ONE multi-step arithmetic-chain drill (3-4 steps: e.g. "
    "percentages, ratios, unit conversions). Reply ONLY JSON: {\"question\": the "
    "worded multi-step problem, \"verify_py\": a python expression evaluating to "
@@ -63,9 +68,13 @@ GEN = {
 }
 
 
-def teacher(prompt):
+GEN_LANES = TEACHERS[:2]      # drill-farming = the FAST top lanes (volume)
+REFLECT_LANES = TEACHERS      # the reflection/judgment = the full top-tier
+
+
+def teacher(prompt, lanes=None):
     import requests
-    for name, url, envk, model in TEACHERS:
+    for name, url, envk, model in (lanes or TEACHERS):
         key = K.get(envk)
         if not key:
             continue
@@ -117,9 +126,27 @@ def truth(j):
                 os.remove(p)
             except Exception:
                 pass
+def truth(j):
+    vp = j.get("verify_py", "")
+    if j.get("code"):
+        import tempfile
+        with tempfile.NamedTemporaryFile("w", suffix=".py", delete=False,
+                                         dir=os.environ.get("TEMP", ".")) as f:
+            f.write(j["code"])
+            p = f.name
+        try:
+            r = subprocess.run([PY, "-I", p], capture_output=True,
+                               text=True, timeout=15)
+            return r.stdout.strip()[:300]
+        finally:
+            try:
+                os.remove(p)
+            except Exception:
+                pass
     if vp and vp != "ok":
         try:
-            return repr(eval(vp, {"__builtins__": {}}, {}))
+            v = eval(vp, {"__builtins__": {}}, {})
+            return v if isinstance(v, str) else repr(v)   # no quote-artifacts
         except Exception:
             return None
     return vp or None
@@ -127,19 +154,27 @@ def truth(j):
 
 def grade(j, forecast):
     f = (forecast or "").strip()
+    conf = None
+    if "| confidence:" in f.lower():
+        try:
+            ans, conf = f.split("| confidence:", 1)
+            f = ans.strip()
+            conf = conf.strip().split()[0].lower()
+        except Exception:
+            conf = None
     if j.get("code"):
-        return f == (j.get("verify_py") or "").strip()
+        return f == (j.get("verify_py") or "").strip(), conf
     flaw = j.get("flaw", "")
     if flaw:
-        text = f.lower()
-        return flaw.lower() in text or flaw.lower().replace("-", " ") in text
+        return (flaw.lower() in f.lower() or
+                flaw.lower().replace("-", " ") in f.lower()), conf
     want = str(j.get("verify_py", ""))
     try:
-        # the numeric-truth cure: 210 == 210.0 == 2.1e2
-        return abs(float(want) - float(f)) < 1e-9
-    except (ValueError, TypeError):
+        lhs = eval(want, {"__builtins__": {}}, {})   # the expression's VALUE counts
+        return abs(float(lhs) - float(f)) < 1e-9
+    except (ValueError, TypeError, SyntaxError):
         pass
-    return want in f.replace(" ", "")
+    return want in f.replace(" ", ""), conf
 
 
 def remember(kind, text, meta, imp=0.6):
@@ -152,6 +187,7 @@ def remember(kind, text, meta, imp=0.6):
 
 def main():
     n_hit = n_done = 0
+    lessons = []          # the curriculum: tonight's own lessons re-teach
     fams = FAMILIES * (1 if "--smoke" in sys.argv else 3)
     random.shuffle(fams)
     for i, kind in enumerate(fams):
@@ -164,16 +200,30 @@ def main():
             continue
         out = truth(j)
         q = j["question"][:160]
+        teach = ""
+        if lessons:
+            teach = ("\n[THE TRAINEE'S OWN LESSONS SO FAR - apply them]:\n"
+                     + "\n".join("- " + l for l in lessons[-3:]))
         forecast, lane = teacher(
             "Answer with ONLY the required answer: the exact output/number/"
-            "flaw-name. No explanation.\n" + q)
-        hit = grade(j, forecast)
+            "flaw-name. If the prompt asks for confidence, keep it. No "
+            "explanation.\n" + q + teach)
+        hit, conf = grade(j, forecast)
         n_hit += hit
         n_done += 1
+        meta = {"family": kind, "hit": hit}
+        if conf:
+            meta["claimed"] = conf
+            remember("metacognition",
+                     f"self-forecast: claimed {conf}, got "
+                     f"{'HIT' if hit else 'MISS'}"
+                     + (" <- OVERCONFIDENT (the calibration violation)"
+                        if conf == "high" and not hit else ""),
+                     meta, imp=0.7)
         remember("calibration",
                  (f"GI gym[{kind}] HIT (teacher={lane})" if hit else
                   f"GI gym[{kind}] MISS (teacher={lane}, truth={str(out)[:50]!r})"),
-                 {"family": kind, "hit": hit})
+                 meta)
         print(f"[{kind}] {q[:56]} -> {str(forecast)[:48]!r} "
               f"{'HIT' if hit else 'MISS (truth ' + str(out)[:28] + ')'}")
         if not hit:
@@ -181,6 +231,7 @@ def main():
                 f"Training miss. Problem: {q} | correct: {str(out)[:80]!r} | "
                 "write ONE durable lesson (<=35 words) on the general principle.")
             if lesson:
+                lessons.append(lesson.strip()[:160])
                 remember("lesson", lesson[:220],
                          {"teacher": lane, "family": kind}, imp=0.8)
                 print("   lesson:", lesson[:78])
