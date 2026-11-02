@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 12:00:03",
- "count": 729,
+ "ts": "2026-11-02 12:15:02",
+ "count": 727,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -2705,13 +2705,6 @@
    "license": ""
   },
   {
-   "repo": "stablyai/orca",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "emanuelef/daily-stars-explorer",
    "score": 51.0,
    "tier": "MINE",
@@ -2720,13 +2713,6 @@
   },
   {
    "repo": "HitKeep/hitkeep",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "lutzroeder/netron",
    "score": 51.0,
    "tier": "MINE",
    "stars": 0,
