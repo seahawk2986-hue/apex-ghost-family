@@ -18,8 +18,15 @@ jobs:
         run: python Tools/papers_harvest.py
       - name: commit the register back
         run: |
+          git fetch origin
+          git pull --rebase origin main || true
           git config user.name "ghost-outsource"
           git config user.email "actions@users.noreply.github.com"
           git add papers/
           git commit -m "papers-100: the register [skip ci]" || echo "nothing new"
           git push || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: papers-100
+          path: papers/
