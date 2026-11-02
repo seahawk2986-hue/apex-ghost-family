@@ -1,17 +1,10 @@
 {
- "ts": "2026-11-02 09:00:03",
- "count": 717,
+ "ts": "2026-11-02 09:15:03",
+ "count": 716,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
    "score": 150.0,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "twentyhq/twenty",
-   "score": 123.1,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
