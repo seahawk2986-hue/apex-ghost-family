@@ -24,6 +24,11 @@ LANES = [
      "GROQ_API_KEY", "openai/gpt-oss-120b", "medium"),
     ("groq-qwen", "https://api.groq.com/openai/v1/chat/completions",
      "GROQ_API_KEY", "qwen/qwen3.8-27b", "medium"),
+    # the NIM unlocks (free trial, verified 200 on 11/02): the spec's tier-2 exactly
+    ("nim-v41f", "https://integrate.api.nvidia.com/v1/chat/completions",
+     "NVIDIA_API_KEY", "deepseek-ai/deepseek-v4.1-flash", "medium"),
+    ("nim-glm", "https://integrate.api.nvidia.com/v1/chat/completions",
+     "NVIDIA_API_KEY", "z-ai/glm-5.3-flash", "medium"),
     # the catalog-verified auto-router: one key, whatever massive model is free
     ("or-auto", "https://openrouter.ai/api/v1/chat/completions",
      "OPENROUTER_API_KEY", "openrouter/free", "medium"),
