@@ -34,8 +34,8 @@ TEACHERS = [  # top-tier first; the leaderboard re-ranks them nightly
      "CEREBRAS_API_KEY", "gpt-oss-120b"),
     ("groq", "https://api.groq.com/openai/v1/chat/completions",
      "GROQ_API_KEY", "openai/gpt-oss-120b"),
-    ("groq-kimi", "https://api.groq.com/openai/v1/chat/completions",
-     "GROQ_API_KEY", "moonshotai/kimi-k2-instruct"),
+    ("groq-qwen", "https://api.groq.com/openai/v1/chat/completions",
+     "GROQ_API_KEY", "qwen/qwen3.8-27b"),
     ("sflow", "https://api.siliconflow.com/v1/chat/completions",
      "SILICONFLOW_API_KEY", "Qwen/Qwen3.5-122B-A10B"),
     ("or-ultra", "https://openrouter.ai/api/v1/chat/completions",
@@ -171,6 +171,11 @@ def grade(j, forecast):
     want = str(j.get("verify_py", ""))
     try:
         lhs = eval(want, {"__builtins__": {}}, {})   # the expression's VALUE counts
+        if isinstance(lhs, str):
+            # the 11/02 fix: quoted string truths graded by VALUE, not by quote-artifact
+            lf = f.lower()
+            ll = lhs.lower()
+            return (lf == ll or (ll != "" and ll in lf)), conf
         return abs(float(lhs) - float(f)) < 1e-9, conf
     except (ValueError, TypeError, SyntaxError):
         pass

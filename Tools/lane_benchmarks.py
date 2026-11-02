@@ -20,6 +20,7 @@ import time
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Scripts"))  # CloudBrain's home
 import CloudBrain
 
 K = CloudBrain.env_keys()
@@ -52,8 +53,8 @@ LANES = [
      "CEREBRAS_API_KEY", "qwen-3.8-27b", 60, 250),
     ("groq-120b", "https://api.groq.com/openai/v1/chat/completions",
      "GROQ_API_KEY", "openai/gpt-oss-120b", 60, 400),
-    ("groq-kimi", "https://api.groq.com/openai/v1/chat/completions",
-     "GROQ_API_KEY", "moonshotai/kimi-k2-instruct", 60, 400),
+    ("groq-qwen", "https://api.groq.com/openai/v1/chat/completions",
+     "GROQ_API_KEY", "qwen/qwen3.8-27b", 60, 400),
     ("or-ultra", "https://openrouter.ai/api/v1/chat/completions",
      "OPENROUTER_API_KEY", "nvidia/nemotron-3-ultra-550b-a55b:free", 90, 400),
     ("sflow-122b", "https://api.siliconflow.com/v1/chat/completions",

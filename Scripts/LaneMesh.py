@@ -55,7 +55,7 @@ def _save_ledger(d):
 def default_lanes():
     gkey = (_KEYS or {}).get("GROQ_API_KEY")
     return [
-        {"name": "groq-kimi", "strength": 5, "model": "moonshotai/kimi-k2-instruct",
+        {"name": "groq-qwen", "strength": 5, "model": "qwen/qwen3.8-27b",
          "base": "https://api.groq.com/openai/v1/chat/completions",
          "key": gkey, "alive": bool(gkey)},
         {"name": "groq-120b", "strength": 4, "model": "openai/gpt-oss-120b",
@@ -166,7 +166,7 @@ if __name__ == "__main__":
 
     a, p = ask("test question", http=stub, lanes=L, ledger=ledger)
     ok1 = a == "the mesh answer" and p["lane"] == "openrouter-free"
-    ok2 = calls == ["groq-kimi", "groq-120b", "openrouter-free"], calls
+    ok2 = calls == ["groq-qwen", "groq-120b", "openrouter-free"], calls
     ok3 = all(p.get(k) is not None for k in ("model", "strength", "cost_usd"))
     print("[passport]:", json.dumps(p))
     print("[fallback-order ok]:", bool(ok2[0]), "->", ok2[1])

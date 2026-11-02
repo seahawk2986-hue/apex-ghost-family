@@ -1,0 +1,42 @@
+{
+ "ts": "2026-11-02 09:38:01",
+ "results": {
+  "cerebras-120b": {
+   "state": "scored",
+   "score": 1.0,
+   "answered": 2,
+   "mean_wall_s": 0.76
+  },
+  "cerebras-qwen": {
+   "state": "scored",
+   "score": 1.0,
+   "answered": 2,
+   "mean_wall_s": 0.27
+  },
+  "groq-120b": {
+   "state": "scored",
+   "score": 1.0,
+   "answered": 2,
+   "mean_wall_s": 0.44
+  },
+  "groq-kimi": {
+   "state": "no-answers",
+   "score": null
+  },
+  "or-ultra": {
+   "state": "walled",
+   "why": "HTTP 429",
+   "score": null
+  },
+  "sflow-122b": {
+   "state": "walled",
+   "why": "HTTP 402",
+   "score": null
+  },
+  "or-reason": {
+   "state": "walled",
+   "why": "HTTP 429",
+   "score": null
+  }
+ }
+}

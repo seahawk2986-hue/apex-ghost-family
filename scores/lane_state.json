@@ -1,0 +1,61 @@
+{
+ "groq-120b": {
+  "pace_s": 4.0,
+  "walls": 1,
+  "oks": 0,
+  "last": "09:47:13",
+  "last_http": 429,
+  "note": "rate window - will re-open"
+ },
+ "groq-qwen": {
+  "pace_s": 2.5,
+  "walls": 0,
+  "oks": 1,
+  "last": "09:47:15",
+  "last_http": 200,
+  "last_ok_ts": 1793630835.34222,
+  "note": "alive"
+ },
+ "cerebras-120b": {
+  "pace_s": 2.5,
+  "walls": 0,
+  "oks": 1,
+  "last": "09:47:17",
+  "last_http": 200,
+  "last_ok_ts": 1793630837.032519,
+  "note": "alive"
+ },
+ "cerebras-qwen": {
+  "pace_s": 2.5,
+  "walls": 0,
+  "oks": 1,
+  "last": "09:47:18",
+  "last_http": 200,
+  "last_ok_ts": 1793630838.7174869,
+  "note": "alive"
+ },
+ "or-ultra": {
+  "pace_s": 4.0,
+  "walls": 1,
+  "oks": 0,
+  "last": "09:47:20",
+  "last_http": 429,
+  "note": "free-models-per-day cap - re-probe after 00:00 UTC"
+ },
+ "or-reason": {
+  "pace_s": 4.0,
+  "walls": 1,
+  "oks": 0,
+  "last": "09:47:21",
+  "last_http": 429,
+  "note": "same shared daily cap as or-ultra"
+ },
+ "sflow-122b": {
+  "pace_s": 2.5,
+  "walls": 0,
+  "oks": 0,
+  "last": "09:47:23",
+  "last_http": 402,
+  "note": "{\"code\":30001,\"message\":\"Sorry, your account balance is insufficient\","
+ }
+}

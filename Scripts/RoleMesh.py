@@ -52,11 +52,11 @@ LOCAL = ("local", "phi4-mini:latest",
 
 ROLES = {
     "voice": [ULTRA, CS, CS_Q, GROQ, LOCAL],
-    "deep-think": [ULTRA, SFLOW_DEEP, CS_Q, REASON, CS, GROQ, LOCAL],
+    "deep-think": [ULTRA, CS_Q, REASON, CS, GROQ, LOCAL],
     "vision": [VL, SFLOW_VL, ULTRA, LOCAL],
     "code": [SFLOW_CODER, CODE, LOCAL],  # staged: coding awaits acceptance
     "guard": [GUARD],
-    "swarm": [ULTRA, SFLOW_DEEP, INK, GEM4],  # four labs, independent errors
+    "swarm": [ULTRA, GROQ, INK, GEM4],  # four labs, independent errors; SFLOW_DEEP demoted (402 balance-dead, probe 11/02)
 }
 
 

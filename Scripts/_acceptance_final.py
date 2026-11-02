@@ -57,7 +57,6 @@ while time.time() < t_end:
 if not final:
     final = {"state": "wall"}
 print("[final]:", final.get("state"), "|", str(final.get("failure_note") or "")[:110])
-ck, wid = final.get("checkpoint") or (None, None)
 ck = (final.get("checkpoint") or {})
 if isinstance(ck, dict) and ck.get("checkpoint_id"):
     ckid, wid = ck["checkpoint_id"], ck["workspace_id"]

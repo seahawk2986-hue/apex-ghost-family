@@ -1,0 +1,41 @@
+{
+ "ts": "2026-11-02 09:40:16",
+ "exam": "gsm8k-test-30 (seed 20261102)",
+ "truth_law": "numeric value, 1e-4",
+ "results": [
+  {
+   "lane": "groq-120b",
+   "model": "openai/gpt-oss-120b",
+   "score": 1,
+   "answered": 1,
+   "walls": 2,
+   "samples": 30
+  },
+  {
+   "lane": "groq-kimi",
+   "model": "moonshotai/kimi-k2-instruct",
+   "score": 0,
+   "answered": 0,
+   "walls": 2,
+   "samples": 30
+  },
+  {
+   "lane": "cerebras-120b",
+   "model": "gpt-oss-120b",
+   "score": 10,
+   "answered": 10,
+   "walls": 2,
+   "samples": 30
+  },
+  {
+   "lane": "sflow-122b",
+   "model": "Qwen/Qwen3.5-122B-A10B",
+   "score": 0,
+   "answered": 0,
+   "walls": 2,
+   "samples": 30
+  }
+ ],
+ "best_score": 10,
+ "note": "the score = Apex's measured lane accuracy; published frontier-class exams run in the 90s of percent; this number = the honest baseline the swarm/verify loops must lift"
+}
