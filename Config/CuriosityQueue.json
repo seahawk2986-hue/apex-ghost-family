@@ -152,6 +152,19 @@
   "moonsharp-devs/moonsharp",
   "teddytennant/openclaw"
  ],
- "pending": [],
+ "pending": [
+  "pungme/superagent-desktop",
+  "LIM-AIT/cgv-api-watcher",
+  "kyrie25/wuwa-tappo-mac",
+  "vtmocanu/uzi",
+  "KytyPS5/KytyPS5",
+  "Slic3r/Slic3r",
+  "pungme/superagent-relay",
+  "prusa3d/PrusaSlicer",
+  "supermerill/SuperSlicer",
+  "pungme/superagent-ios",
+  "bambulab/BambuStudio",
+  "OrcaSlicer/OrcaSlicer"
+ ],
  "rotated": "2026-10-31"
 }
