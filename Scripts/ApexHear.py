@@ -142,11 +142,13 @@ def main(daemon=False):
 
 
 def transcribe(model, audio):
-    # the hallucination-cure (the whisper's empty-input fiction: the
-    # no-speech-threshold + the log-prob-floor + no-conditioning = the
-    # standard cures; the VAD-gate already silences true empties)
+    # the TRIPLE GATE (the hallucination-cure, silence-smoke-proven 0
+    # segments on 1.2.1): (1) the rms energy-gate ran BEFORE this call,
+    # (2) the silero VAD inside (pure silence = 0 segments = no phantom
+    # 'You' at log -0.71), (3) no-conditioning + the floors.
     return model.transcribe(audio, language="en", beam_size=1,
-                            vad_filter=False,
+                            vad_filter=True,
+                            vad_parameters={"min_silence_duration_ms": 400},
                             condition_on_previous_text=False,
                             no_speech_threshold=0.6,
                             log_prob_threshold=-1.0)
