@@ -195,3 +195,32 @@
 {"ts": "2026-11-01 15:54:46", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 370min (outputs are earned inside the hardware gate)"}
 {"ts": "2026-11-01 15:54:46", "kind": "upward_alarm", "text": "goal 'safety' stalled 370min (no external claims yet - the door stands open)"}
 {"ts": "2026-11-01 15:59:23", "kind": "upward", "what": "earn-loop-beat", "beat": 18, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 16:14:48", "kind": "upward", "what": "earn-loop-beat", "beat": 19, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 16:30:13", "kind": "upward", "what": "earn-loop-beat", "beat": 20, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 16:45:38", "kind": "upward", "what": "earn-loop-beat", "beat": 21, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 16:54:29", "kind": "upward_alarm", "text": "goal 'money' stalled 475min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-01 16:54:29", "kind": "upward_alarm", "text": "goal 'recruits' stalled 430min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-01 16:54:29", "kind": "upward_alarm", "text": "goal 'jobs' stalled 430min (needs the inbox triaged - a brain window serves)"}
+{"ts": "2026-11-01 16:54:29", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 430min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-01 16:54:29", "kind": "upward_alarm", "text": "goal 'safety' stalled 430min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-01 17:16:03", "kind": "upward", "what": "earn-loop-beat", "beat": 23, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 17:31:28", "kind": "upward", "what": "earn-loop-beat", "beat": 24, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 17:46:53", "kind": "upward", "what": "earn-loop-beat", "beat": 25, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 17:54:24", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 29 -> 28 (PathMemory clobber suspected)"}
+{"ts": "2026-11-01 17:54:24", "kind": "upward_alarm", "text": "goal 'money' stalled 535min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-01 17:54:24", "kind": "upward_alarm", "text": "goal 'recruits' stalled 490min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-01 17:54:24", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 490min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-01 17:54:24", "kind": "upward_alarm", "text": "goal 'safety' stalled 490min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-01 17:54:27", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 29 -> 28 (PathMemory clobber suspected)"}
+{"ts": "2026-11-01 17:54:27", "kind": "upward_alarm", "text": "goal 'money' stalled 535min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-01 17:54:27", "kind": "upward_alarm", "text": "goal 'recruits' stalled 490min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-01 17:54:27", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 490min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-01 17:54:27", "kind": "upward_alarm", "text": "goal 'safety' stalled 490min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-01 18:02:18", "kind": "upward", "what": "earn-loop-beat", "beat": 26, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 18:17:50", "kind": "upward", "what": "earn-loop-beat", "beat": 27, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 18:33:15", "kind": "upward", "what": "earn-loop-beat", "beat": 28, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 18:48:40", "kind": "upward", "what": "earn-loop-beat", "beat": 29, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 19:04:05", "kind": "upward", "what": "earn-loop-beat", "beat": 30, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 19:19:29", "kind": "upward", "what": "earn-loop-beat", "beat": 31, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 19:34:54", "kind": "upward", "what": "earn-loop-beat", "beat": 32, "unclaimed": 6, "filed": false}
+{"ts": "2026-11-01 19:50:20", "kind": "upward", "what": "earn-loop-beat", "beat": 33, "unclaimed": 6, "filed": false}

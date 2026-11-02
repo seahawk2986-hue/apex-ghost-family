@@ -20,12 +20,12 @@
  "ApexPacing.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 181,
+  "attempts": 240,
   "successes": 1,
   "streak": 0,
   "ok_full": 1,
-  "parity_total": 102,
-  "parity_hits": 54
+  "parity_total": 131,
+  "parity_hits": 78
  },
  "ApexInstaller.py": {
   "best": 105.0,
@@ -80,7 +80,7 @@
   "streak": 2,
   "attempts": 295
  },
- "Scripts/SwarmOrchestrator.py": 128257.5,
+ "Scripts/SwarmOrchestrator.py": 139629.0,
  "lint_probe_12698290.py": {
   "best": 0.0,
   "best_base": 0.0,

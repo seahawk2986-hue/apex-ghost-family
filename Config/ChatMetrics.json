@@ -1,0 +1,52 @@
+{
+ "recent": [
+  {
+   "ts": "2026-11-01 19:04:26",
+   "lane": "local-coder",
+   "ttft_s": 2.881,
+   "chars_in": 50
+  },
+  {
+   "ts": "2026-11-01 19:05:50",
+   "lane": "local-coder",
+   "ttft_s": 5.632,
+   "chars_in": 50
+  },
+  {
+   "ts": "2026-11-01 19:08:00",
+   "lane": "local-coder",
+   "ttft_s": 2.489,
+   "chars_in": 46
+  },
+  {
+   "ts": "2026-11-01 19:13:01",
+   "lane": "local-coder",
+   "ttft_s": 251.294,
+   "chars_in": 46
+  },
+  {
+   "ts": "2026-11-01 19:35:36",
+   "lane": "local-coder",
+   "ttft_s": 255.715,
+   "chars_in": 23
+  },
+  {
+   "ts": "2026-11-01 19:38:09",
+   "lane": "local-phi4",
+   "ttft_s": 114.36,
+   "chars_in": 37
+  },
+  {
+   "ts": "2026-11-01 19:38:09",
+   "lane": "local-phi4",
+   "ttft_s": 19.803,
+   "chars_in": 7
+  },
+  {
+   "ts": "2026-11-01 19:39:28",
+   "lane": "local-phi4",
+   "ttft_s": 20.189,
+   "chars_in": 40
+  }
+ ]
+}

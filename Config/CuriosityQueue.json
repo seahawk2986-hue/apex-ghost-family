@@ -139,7 +139,18 @@
   "ashlrai/morphkit",
   "ashlrai/ashlrcode",
   "ashlrai/lexicon",
-  "ashlrai/phantom"
+  "ashlrai/phantom",
+  "wxhmrx1129/yueye-epub-reader",
+  "lawale/quorum",
+  "thundercomb/poetrydb",
+  "zhxunzh84/rea-dino-reverse-engineering",
+  "NetTopologySuite/ProjNet4GeoAPI",
+  "jehna/humanify",
+  "microsoft/playwright-mcp",
+  "j4k0xb/webcrack",
+  "defai-digital/akitty",
+  "moonsharp-devs/moonsharp",
+  "teddytennant/openclaw"
  ],
  "pending": [],
  "rotated": "2026-10-31"

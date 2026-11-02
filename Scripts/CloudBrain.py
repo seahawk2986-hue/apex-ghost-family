@@ -134,7 +134,13 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
              {"Authorization": "Bearer " + keys.get("OLLAMA_API_KEY", "")}),
         ]
     # the named-ladder: models=("groq", ...) = the EXPLICIT order-filter
+    # AND the TRUTH-PRIORITY (the route's order = the serving order - the
+    # 2026-11-01 fix: the pool's local-first order used to outrank the
+    # route, silently downgrading the founder's chat-lock to the floor)
+    _idx = {m: i for i, m in enumerate(models)} if models else {}
     cands = ([c for c in pool if c[0] in set(models)] if models else pool)
+    if _idx:
+        cands = sorted(cands, key=lambda c: _idx.get(c[0], 99))
     for name, url, model, keyv, hdrs in cands:
         is_local = name.startswith("local")
         if not keyv and not is_local:
@@ -240,6 +246,116 @@ def selftest():
         print(f"   {'PASS' if v else 'FAIL'} | {nm}")
     print(f"[cloud-brain] VERDICT: {'PASS -> implemented' if all_pass else 'FAIL -> redo'}")
     return all_pass
+
+
+def chat_stream(prompt, max_tokens=800, purpose="", models=()):
+    """THE STREAMING CHAT (the canon's #1 chat-UX practice: perceived speed
+    = the first-token latency, not the total): a GENERATOR yielding
+    (lane_name, chunk) rows in the ladder-order. The groq/no-card lanes =
+    the OpenAI-compat SSE (stream=true, the delta.content chunks); the
+    ollama local lanes = the NDJSON stream. The SAME per-candidate spend-
+    gate as chat(); the credits-tier = refused (the founder's law) - the
+    stream is for the FREE lanes. Honest aborts yield nothing for a silent
+    lane; the caller decides the fallback UX. No billing; $0."""
+    import json as _j
+    keys = env_keys()
+    cloud_allowed = (os.environ.get("CLOUD_ALLOWED") == "1" or
+                     (keys.get("CLOUD_ALLOWED") == "1"))
+    pool = [
+        ("local-coder", "http://localhost:11434/api/chat",
+         "qwen2.5-coder:7b", "local-no-key", {}),
+        ("local-fast", "http://localhost:11434/api/chat",
+         "qwen2.5-coder:3b", "local-no-key", {}),
+        ("local-phi4", "http://localhost:11434/api/chat",
+         "phi4-mini:latest", "local-no-key", {}),
+        ("local-gemma3", "http://localhost:11434/api/chat",
+         "gemma3:4b", "local-no-key", {}),
+        ("local-r1", "http://localhost:11434/api/chat",
+         "deepseek-r1:7b", "local-no-key", {}),
+    ]
+    if cloud_allowed:
+        pool += [
+            ("groq", "https://api.groq.com/openai/v1/chat/completions",
+             "openai/gpt-oss-120b", keys.get("GROQ_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("GROQ_API_KEY", "")}),
+            ("gemini", "https://generativelanguage.googleapis.com/v1beta/"
+             "openai/chat/completions", "gemini-flash-latest",
+             keys.get("GEMINI_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("GEMINI_API_KEY", "")}),
+            ("openrouter", "https://openrouter.ai/api/v1/chat/completions",
+             "meta-llama/llama-3.2-3b-instruct:free",
+             keys.get("OPENROUTER_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("OPENROUTER_API_KEY", "")}),
+        ]
+    _idx = {m: i for i, m in enumerate(models)} if models else {}
+    cands = ([c for c in pool if c[0] in set(models)] if models else pool)
+    if _idx:
+        cands = sorted(cands, key=lambda c: _idx.get(c[0], 99))
+    for name, url, model, keyv, hdrs in cands:
+        is_local = name.startswith("local")
+        if not keyv and not is_local:
+            continue
+        # THE GATE (the free-tier law, mirrored from chat()): the pool here
+        # = the FREE lanes ONLY (the local = structurally $0; the groq/
+        # gemini/openrouter = the NO-CARD free tiers = $0.00-price = they
+        # PASS even the $0.00 cap). The CREDITS-tier = structurally OUT of
+        # this function (the founder's second-unlock law) - its est can
+        # never appear here, so no est-gate check is needed or applied.
+        body_dict = None
+        if is_local:
+            body_dict = {"model": model, "stream": True,
+                         "messages": [{"role": "user",
+                                       "content": prompt[:6000]}],
+                         "keep_alive": "1m",
+                         "options": {"num_predict": max(max_tokens, 512),
+                                     "temperature": 0}}
+        else:
+            body_dict = {"model": model, "stream": True,
+                         "messages": [{"role": "user",
+                                       "content": prompt[:9000 if name == "groq" else 6000]}],
+                         "max_tokens": max(max_tokens, 512),
+                         "temperature": 0}
+        try:
+            import requests as _rq
+            with _rq.post(url, headers=hdrs, json=body_dict, stream=True,
+                          timeout=(240 if is_local else 90)) as r:
+                if r.status_code != 200:
+                    continue
+                for line in r.iter_lines(decode_unicode=True):
+                    if not line:
+                        continue
+                    if is_local:
+                        # the ollama NDJSON: one object per line
+                        try:
+                            j = _j.loads(line)
+                        except Exception:
+                            continue
+                        tok = (j.get("message") or {}).get("content") or ""
+                        if tok:
+                            yield (name, tok)
+                        if j.get("done"):
+                            return
+                    else:
+                        # the OpenAI-compat SSE: data: {...} / [DONE]
+                        s = line.strip()
+                        if not s.startswith("data:"):
+                            continue
+                        payload_s = s[5:].strip()
+                        if payload_s == "[DONE]":
+                            return
+                        try:
+                            j = _j.loads(payload_s)
+                        except Exception:
+                            continue
+                        chs = j.get("choices") or [{}]
+                        tok = ((chs[0].get("delta") or {}).get("content")) or ""
+                        if tok:
+                            yield (name, tok)
+            # the lane ended = the full content streamed = the caller done
+            return
+        except Exception:
+            continue
+    return
 
 
 if __name__ == "__main__":

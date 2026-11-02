@@ -1,8 +1,8 @@
 {
  "mode": "healthy",
- "reason": "OK (ram 6.87GB, cpu 16%, disk 428.8GB)",
+ "reason": "OK (ram 5.07GB, cpu 24%, disk 428.4GB)",
  "stress_streak": 0,
  "current_wait_s": 0,
- "since": "2026-11-01 16:01:38",
+ "since": "2026-11-01 19:39:23",
  "lesson": "the self-abort lesson 2026-10-31: pacing never silently downsizes - every pause explains its why"
 }

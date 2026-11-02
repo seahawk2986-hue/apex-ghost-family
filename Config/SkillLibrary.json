@@ -5263,7 +5263,51 @@
    "first_line": "\"\"\"Offline dispatchd lane selection; caller persists the returned queue under its lock.",
    "imports": [],
    "registered": "2026-11-01 15:57:58"
+  },
+  {
+   "skill": "check-composite-action-input-interpolation",
+   "source_file": "scripts/check-composite-action-input-interpolation.py",
+   "source_repo": "teddytennant/openclaw",
+   "license": "check repo",
+   "sha256": "00c9566941995c9087b6e678da6c1d9714313ba570c7e02eeada841de0f8ddde",
+   "lines": 81,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "pathlib",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-01 17:54:59"
+  },
+  {
+   "skill": "package_skill",
+   "source_file": "skills/skill-creator/scripts/package_skill.py",
+   "source_repo": "teddytennant/openclaw",
+   "license": "check repo",
+   "sha256": "f290101073ee6a167f46edadda164d2c88affc03c554135fe101a4e422c44c22",
+   "lines": 139,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "sys",
+    "zipfile"
+   ],
+   "registered": "2026-11-01 17:55:01"
+  },
+  {
+   "skill": "quick_validate",
+   "source_file": "skills/skill-creator/scripts/quick_validate.py",
+   "source_repo": "teddytennant/openclaw",
+   "license": "check repo",
+   "sha256": "3e3cdceba2daa893e260551c8c5f09937f94be1153307185c7fc7c24c0896750",
+   "lines": 159,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "re",
+    "sys",
+    "yaml"
+   ],
+   "registered": "2026-11-01 17:55:01"
   }
  ],
- "built": "2026-11-01 15:57:58"
+ "built": "2026-11-01 17:55:01"
 }

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -84,17 +84,49 @@ function bubble(kind,html,when){const r=document.createElement("div");r.classNam
 function sys(text,gold){const d=document.createElement("div");d.className="sys";if(gold)d.classList.add("gold");d.textContent=text;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;return d;}
 function chips(re){re.slice(0,3).forEach(x=>{const c=document.createElement("div");c.className="chip";c.textContent="recalled: "+x.text;chat.appendChild(c);});}
 const busy=document.createElement("div");busy.className="row me";busy.id="typing";busy.innerHTML='<div class="bubble typing"><span></span><span></span><span></span></div>';
-async function send(){const ta=document.getElementById("msg");const t=ta.value.trim();if(!t)return;ta.value="";
+let streamCtrl=null;
+async function send(){const ta=document.getElementById("msg");const t=ta.value.trim();if(!t)return;if(streamCtrl){streamCtrl.abort();streamCtrl=null;return;}ta.value="";
  bubble("you",md(t),new Date().toLocaleTimeString());
  if(t.startsWith("📋"))return;
  chat.appendChild(busy);chat.scrollTop=chat.scrollHeight;
- const s=document.getElementById("send");s.disabled=true;
- try{const r=await fetch("/talk/api",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:t})});
-   const j=await r.json();busy.remove();
-   if(j.reply){bubble("me",md(j.reply),new Date().toLocaleTimeString());chips(j.recall||[]);}
-   else sys("APEX: (no reply payload)");}catch(e){busy.remove();sys("channel hiccup - the watchdog keeps me alive; try again.");}
- s.disabled=false;ta.focus();}
-document.getElementById("send").onclick=send;
+ const s=document.getElementById("send");s.disabled=false;s.textContent="■ STOP";
+ const ac=new AbortController();streamCtrl=ac;
+ const b=bubble("me","",new Date().toLocaleTimeString());b.setAttribute("aria-live","polite");
+ let acc="",got=false,ok404=false;
+ const paint=acc2=>{const c=b.querySelector(".c")||b;b.innerHTML=md(acc2)+(acc2?'<span class="caret">▍</span>':"");chat.scrollTop=chat.scrollHeight;};
+ try{
+   let r;
+   try{r=await fetch("/talk/api/stream",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:t}),signal:ac.signal});}
+   catch(e1){ok404=true;}
+   if(ok404||false){busy.remove();}
+   if(!r||!r.ok){ok404=true;}
+   if(ok404||!r||!r.ok||!(r.headers.get("content-type")||"").includes("event-stream")){
+     // the honest fallback: the proven blocking lane
+     const r2=await fetch("/talk/api",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:t})});
+     const j=await r2.json();busy.remove();
+     if(j.reply){b.innerHTML=md(j.reply);chips(j.recall||[]);}else sys("APEX: (no reply payload)");
+   }else{
+     busy.remove();
+     const rd=r.body.getReader();const dec=new TextDecoder();let buf="";
+     while(true){
+       const {done,value}=await rd.read();if(done)break;
+       buf+=dec.decode(value,{stream:true});
+       const parts=buf.split("\n\n");buf=parts.pop();
+       for(const ev0 of parts){
+         const lines=ev0.split("\n");let ev="";let data="";
+         for(const l of lines){if(l.startsWith("event:"))ev=l.slice(6).trim();if(l.startsWith("data:"))data+=l.slice(5).trim();}
+         if(!data)continue;
+         try{const j=JSON.parse(data);
+           if(ev==="meta"&&!got){got=true;if(j.lane)chips([{text:"via "+j.lane+(j.ttft_s?" · first token "+j.ttft_s+"s":"")}]);if(j.recall)chips(j.recall);}
+           if(ev==="tok"){acc+=j.t||"";paint(acc);}
+           if(ev==="done"){const fin=j.reply||acc;if(fin)paint(fin); else if(acc)paint(acc);b.querySelector(".caret")&&b.querySelector(".caret").remove();streamCtrl=null;s.textContent="Send";}
+         }catch(_){}
+       }
+     }
+   }
+ }catch(e){if(e&&e.name==="AbortError"){acc+=" ⏹ (stopped - the partial is kept)";paint(acc);b.querySelector(".caret")&&(b.querySelector(".caret").textContent="");}else{busy.remove();sys("channel hiccup - the watchdog keeps me alive; try again. If I'm stuck: say 'stop' to my voice, or page a human — I never fake answers.");}}
+ streamCtrl=null;s.textContent="Send";s.disabled=false;ta.focus();}
+document.getElementById("send").onclick=()=>send();
 const ta=document.getElementById("msg");ta.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();send();}});
 ta.addEventListener("input",()=>{ta.style.height="auto";ta.style.height=Math.min(120,ta.scrollHeight)+"px";});
 document.getElementById("dirbtn").onclick=()=>{ta.value=D;ta.focus();ta.dispatchEvent(new Event("input"));};

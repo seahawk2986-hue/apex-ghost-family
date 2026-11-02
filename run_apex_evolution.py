@@ -1297,7 +1297,7 @@ async def apex_gate(request: Request, call_next):
         cl = int(request.headers.get("content-length", "0") or "0")
         if cl > _BODY_CAP:
             return JSONResponse({"error": "body too large"}, status_code=413)
-        if path in ("/talk/api", "/chat"):
+        if path in ("/talk/api", "/chat", "/talk/api/stream"):
             q = _POST_RATE[ip]
             while q and now - q[0] > 60:
                 q.popleft()
@@ -1584,6 +1584,141 @@ def talk_api(t: TalkMsg):
                 "recall": [{"text": l["text"][:140]} for l in lessons]}
     return {"reply": reply,
             "recall": [{"text": l["text"][:140]} for l in lessons]}
+
+# ================================================== THE CHAT-STREAM (the
+# canon's #1 chat-UX feature: streaming + honest-UX + context-carry; all
+# lanes = the SAME free-set as chat(); $0)
+class TalkStreamMsg(BaseModel):
+    message: str
+
+
+@app.post("/talk/api/stream")
+def talk_api_stream(t: TalkStreamMsg):
+    """THE STREAMING CHAT (SSE): the first token = the perceived speed.
+    Events: meta (the lane + the recall + the prior-turn carry), tok
+    (the streamed chunk), done (the final + the ttft-metrics). The
+    client-disconnect = the text-barge-in (the generator = closed; the
+    partial = recorded honestly as interrupted)."""
+    from fastapi.responses import StreamingResponse
+    import threading as _th
+    msg = (t.message or "").strip()[:4000]
+    if not msg:
+        def empty():
+            yield "event: done\ndata: {\"reply\": \"Say something, Andrew - I'm listening.\"}\n\n"
+        return StreamingResponse(empty(), media_type="text/event-stream")
+    # the context-carry (the NN/g law: save information task-to-task):
+    prior = []
+    try:
+        for e0 in MEM.recent_events(2, kind="conversation"):
+            m0 = e0.get("meta") or {}
+            if m0.get("message") and m0.get("reply"):
+                prior.append((m0["message"][:500], m0["reply"][:500]))
+    except Exception:
+        prior = []
+    prior_txt = ""
+    if prior:
+        prior_txt = "\n\nRECENT CONVERSATION (context continues; do not repeat it):\n"
+        for pm, pr in prior[-2:]:
+            prior_txt += f"Andrew: {pm}\nApex: {pr}\n"
+    # the same recall/prompt-discipline as the blocking route (self-contained)
+    try:
+        lessons = MEM.recall(msg, k=3)
+    except Exception:
+        lessons = []
+    ltxt = "\n".join(f"- {l['text'][:140]}" for l in lessons) or "none"
+    skill_hits = ""
+    try:
+        sys.path.insert(0, os.path.join(R, "Scripts"))
+        import HarvestUse as _hu
+        _hits = _hu.consult(msg, 2)
+        if _hits:
+            skill_hits = "\nSEMANTIC SKILL HITS:\n" + "\n".join(
+                "- " + x["skill"] + " (" + x["repo"] + ")" for x in _hits)
+    except Exception:
+        pass
+    selfcard = ""
+    try:
+        with open(os.path.join(R, "Config", "ApexSelf.json"), "r",
+                  encoding="utf-8") as f:
+            _self = json.load(f)
+        _pref = ("identity", "role", "engines", "hardware", "capabilities",
+                 "north_star", "gym", "library")
+        selfcard = " | ".join(f"{k}: {json.dumps(_self[k], ensure_ascii=False)[:450]}"
+                              for k in _pref if _self.get(k))[:2400]
+    except Exception:
+        pass
+    prompt = (
+        "You are Apex, talking privately with Andrew - your creator, and the human "
+        "who runs your hardware. This is your personal channel. Be direct, honest, "
+        "concise. You may discuss your own architecture openly (SELF-MODEL). Never "
+        "claim results you have not verified.\n\n"
+        f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n"
+        f"LIBRARY SKILLS:{skill_hits}\n{prior_txt}\nANDREW SAYS:\n{msg}\n\nREPLY:")
+
+    def gen():
+        import CrossBrain as _XB
+        import CloudBrain as _CB
+        t0 = time.time()
+        first = {"open": False}
+        full = []
+        lane_name = {"v": "unknown"}
+        try:
+            chat_models = tuple((_XB.routes().get("chat") or
+                                 ("groq", "local-phi4", "local-coder")))
+            for lane, tok in _CB.chat_stream(prompt, max_tokens=800,
+                                             purpose="the chat-stream",
+                                             models=chat_models):
+                if not first["open"]:
+                    first["open"] = True
+                    lane_name["v"] = lane
+                    ttft = round(time.time() - t0, 3)
+                    log("system", f"chat-stream: first token in {ttft}s via {lane}")
+                    try:  # the ttft-metrics receipt (the voice-op's law)
+                        MP = os.path.join(R, "Config", "ChatMetrics.json")
+                        mrow = json.load(open(MP, encoding="utf-8-sig")) \
+                            if os.path.exists(MP) else {"recent": []}
+                        mrow.setdefault("recent", []).append(
+                            {"ts": time.strftime("%Y-%m-%d %H:%M:%S"),
+                             "lane": lane, "ttft_s": ttft, "chars_in": len(msg)})
+                        mrow["recent"] = mrow["recent"][-50:]
+                        json.dump(mrow, open(MP, "w", encoding="utf-8"),
+                                  indent=1)
+                    except Exception:
+                        pass
+                    yield (f'event: meta\ndata: ' +
+                           json.dumps({"lane": lane, "ttft_s": ttft,
+                                       "recall": [l["text"][:140]
+                                                  for l in lessons]},
+                                      ensure_ascii=False) + "\n\n")
+                full.append(tok)
+                d = json.dumps({"t": tok}, ensure_ascii=False)
+                yield f"event: tok\ndata: {d}\n\n"
+        except Exception as _e:
+            if full:
+                yield ('event: meta\ndata: ' + json.dumps(
+                    {"note": f"stream interrupted ({str(_e)[:60]})"},
+                    ensure_ascii=False) + "\n\n")
+            else:
+                yield ('event: done\ndata: ' + json.dumps(
+                    {"reply": ("All engines are busy right now, Andrew - the "
+                               "pacing brakes may be active. Try again in a "
+                               "minute.\n\nHONEST DIAGNOSTIC: " + str(_e)[:120]),
+                     "lane": "none"}, ensure_ascii=False) + "\n\n")
+        joined = "".join(full)
+        try:
+            MEM.record_event("conversation",
+                             f"Andrew: {msg[:150]} | Apex streamed "
+                             f"({len(joined)} chars via {lane_name['v']})",
+                             talk=True, message=msg[:800], reply=joined[:3000])
+        except Exception:
+            pass
+        yield ("event: done\ndata: " + json.dumps(
+            {"reply": joined, "lane": lane_name["v"],
+             "chars": len(joined), "ttft_s": round(time.time() - t0, 3)},
+            ensure_ascii=False) + "\n\n")
+    return StreamingResponse(gen(), media_type="text/event-stream",
+                             headers={"Cache-Control": "no-cache",
+                                      "X-Accel-Buffering": "no"})
 
 @app.get("/notes")
 def notes_api():

@@ -28,7 +28,10 @@
    "runner": "local",
    "ram_needed": 0.5,
    "capability": "security",
-   "why": "the clone-route (done; the full-run verify = the next rep)"
+   "why": "the clone-route (done; the full-run verify = the next rep)",
+   "done": true,
+   "ran_at": "2026-11-01 16:14:02",
+   "tail": "[rsa-route] {'clone': 'present'} -> the honest stop carries the retry"
   },
   {
    "id": "harvest10",
@@ -45,6 +48,15 @@
    "cooldown_min": 1440,
    "capability": "omnivore",
    "why": "THE MODEL-USE CANON (100 docs: the small-models/distill/ensemble/cascade/quantization/edge lanes) - runs ENTIRELY on GITHUB's machines"
+  },
+  {
+   "id": "web-harvest",
+   "script": "WebHarvest.py",
+   "runner": "actions",
+   "ram_needed": 0.0,
+   "capability": "omnivore",
+   "why": "the 44-canon-URLs' fetch+extract = ON THE RUNNERS (the founder's outsourcing-order); rows = receipts",
+   "done": false
   }
  ]
 }
