@@ -1,0 +1,121 @@
+{
+ "ts": "2026-11-02 00:08:27",
+ "judged": [
+  {
+   "ts": "2026-11-01 10:44:58",
+   "repo": "JohnMcNulty/copilot-app-for-beginners",
+   "issue": "Make search case-insensitive",
+   "title": "[DRAFT - FOUNDER-GATED] JohnMcNulty/copilot-app-for-beginners: Make search case-insensitive",
+   "body": "Repo: JohnMcNulty/copilot-app-for-beginners\nIssue observed: Make search case-insensitive\nSource: gh-archive-gfi @ 2026-10-31 21:07:06\nImpact: (founder verifies before filing - the draft must state the observable behavior, not an injected claim)\nRepro: (steps the founder can run - verified locally before any contact)\nProgram: GitHub Security / the repo's SECURITY.md\n",
+   "filed": false,
+   "founder_gate": "REQUIRED",
+   "judge": {
+    "fit": 8,
+    "value": 6,
+    "difficulty_hours": 1.5,
+    "risk": 2,
+    "verdict": "file-now",
+    "reason": "Simple string normalization to enable case‑insensitive search, low risk and quick to implement.",
+    "judged_by": "gpt-oss-120b",
+    "judge_s": 0.4
+   }
+  },
+  {
+   "ts": "2026-11-01 10:44:58",
+   "repo": "zsabados3523/AssetDeck",
+   "issue": "Sign and notarize the macOS app",
+   "title": "[DRAFT - FOUNDER-GATED] zsabados3523/AssetDeck: Sign and notarize the macOS app",
+   "body": "Repo: zsabados3523/AssetDeck\nIssue observed: Sign and notarize the macOS app\nSource: gh-archive-gfi @ 2026-10-31 21:07:06\nImpact: (founder verifies before filing - the draft must state the observable behavior, not an injected claim)\nRepro: (steps the founder can run - verified locally before any contact)\nProgram: GitHub Security / the repo's SECURITY.md\n",
+   "filed": false,
+   "founder_gate": "REQUIRED",
+   "judge": {
+    "verdict": "unjudged",
+    "reason": "no alive judge brain"
+   }
+  },
+  {
+   "ts": "2026-11-01 10:45:41",
+   "repo": "JohnMcNulty/copilot-app-for-beginners",
+   "issue": "Make search case-insensitive",
+   "title": "[DRAFT - FOUNDER-GATED] JohnMcNulty/copilot-app-for-beginners: Make search case-insensitive",
+   "body": "Repo: JohnMcNulty/copilot-app-for-beginners\nIssue observed: Make search case-insensitive\nSource: gh-archive-gfi @ 2026-10-31 21:07:06\nImpact: (founder verifies before filing - the draft must state the observable behavior, not an injected claim)\nRepro: (steps the founder can run - verified locally before any contact)\nProgram: GitHub Security / the repo's SECURITY.md\n",
+   "filed": false,
+   "founder_gate": "REQUIRED",
+   "judge": {
+    "verdict": "unjudged",
+    "reason": "no alive judge brain"
+   }
+  },
+  {
+   "ts": "2026-11-01 10:45:41",
+   "repo": "zsabados3523/AssetDeck",
+   "issue": "Sign and notarize the macOS app",
+   "title": "[DRAFT - FOUNDER-GATED] zsabados3523/AssetDeck: Sign and notarize the macOS app",
+   "body": "Repo: zsabados3523/AssetDeck\nIssue observed: Sign and notarize the macOS app\nSource: gh-archive-gfi @ 2026-10-31 21:07:06\nImpact: (founder verifies before filing - the draft must state the observable behavior, not an injected claim)\nRepro: (steps the founder can run - verified locally before any contact)\nProgram: GitHub Security / the repo's SECURITY.md\n",
+   "filed": false,
+   "founder_gate": "REQUIRED",
+   "judge": {
+    "verdict": "unjudged",
+    "reason": "no alive judge brain"
+   }
+  },
+  {
+   "ts": "2026-11-01 10:45:41",
+   "repo": "JohnMcNulty/copilot-app-for-beginners",
+   "issue": "Make search case-insensitive",
+   "title": "[DRAFT - FOUNDER-GATED] JohnMcNulty/copilot-app-for-beginners: Make search case-insensitive",
+   "body": "Repo: JohnMcNulty/copilot-app-for-beginners\nIssue observed: Make search case-insensitive\nSource: gh-archive-gfi @ 2026-10-31 21:07:06\nImpact: (founder verifies before filing - the draft must state the observable behavior, not an injected claim)\nRepro: (steps the founder can run - verified locally before any contact)\nProgram: GitHub Security / the repo's SECURITY.md\n",
+   "filed": false,
+   "founder_gate": "REQUIRED",
+   "judge": {
+    "fit": 8,
+    "value": 6,
+    "difficulty_hours": 1,
+    "risk": 2,
+    "verdict": "file-now",
+    "reason": "Small, well-scoped search normalization fix with low ambiguity.",
+    "judged_by": "qwen-3.8-27b",
+    "judge_s": 0.32
+   }
+  },
+  {
+   "ts": "2026-11-01 10:45:41",
+   "repo": "zsabados3523/AssetDeck",
+   "issue": "Sign and notarize the macOS app",
+   "title": "[DRAFT - FOUNDER-GATED] zsabados3523/AssetDeck: Sign and notarize the macOS app",
+   "body": "Repo: zsabados3523/AssetDeck\nIssue observed: Sign and notarize the macOS app\nSource: gh-archive-gfi @ 2026-10-31 21:07:06\nImpact: (founder verifies before filing - the draft must state the observable behavior, not an injected claim)\nRepro: (steps the founder can run - verified locally before any contact)\nProgram: GitHub Security / the repo's SECURITY.md\n",
+   "filed": false,
+   "founder_gate": "REQUIRED",
+   "judge": {
+    "verdict": "unjudged",
+    "reason": "no alive judge brain"
+   }
+  },
+  {
+   "ts": "2026-11-01 12:39:29",
+   "repo": "JohnMcNulty/copilot-app-for-beginners",
+   "issue": "Make search case-insensitive",
+   "title": "[DRAFT - FOUNDER-GATED] JohnMcNulty/copilot-app-for-beginners: Make search case-insensitive",
+   "body": "Repo: JohnMcNulty/copilot-app-for-beginners\nIssue observed: Make search case-insensitive\nSource: gh-archive-gfi @ 2026-10-31 21:07:06\nImpact: (founder verifies before filing - the draft must state the observable behavior, not an injected claim)\nRepro: (steps the founder can run - verified locally before any contact)\nProgram: GitHub Security / the repo's SECURITY.md\n",
+   "filed": false,
+   "founder_gate": "REQUIRED",
+   "judge": {
+    "verdict": "bounded",
+    "reason": "call cap (honest)"
+   }
+  },
+  {
+   "ts": "2026-11-01 12:39:29",
+   "repo": "zsabados3523/AssetDeck",
+   "issue": "Sign and notarize the macOS app",
+   "title": "[DRAFT - FOUNDER-GATED] zsabados3523/AssetDeck: Sign and notarize the macOS app",
+   "body": "Repo: zsabados3523/AssetDeck\nIssue observed: Sign and notarize the macOS app\nSource: gh-archive-gfi @ 2026-10-31 21:07:06\nImpact: (founder verifies before filing - the draft must state the observable behavior, not an injected claim)\nRepro: (steps the founder can run - verified locally before any contact)\nProgram: GitHub Security / the repo's SECURITY.md\n",
+   "filed": false,
+   "founder_gate": "REQUIRED",
+   "judge": {
+    "verdict": "bounded",
+    "reason": "call cap (honest)"
+   }
+  }
+ ]
+}
