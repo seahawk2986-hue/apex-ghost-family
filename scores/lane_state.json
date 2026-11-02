@@ -1,53 +1,53 @@
 {
  "groq-120b": {
-  "pace_s": 3.6,
+  "pace_s": 3.24,
   "walls": 1,
-  "oks": 1,
-  "last": "09:52:21",
+  "oks": 2,
+  "last": "10:17:01",
   "last_http": 200,
   "note": "alive",
-  "last_ok_ts": 1793631141.0478394
+  "last_ok_ts": 1793632621.725537
  },
  "groq-qwen": {
   "pace_s": 2.5,
   "walls": 0,
-  "oks": 2,
-  "last": "09:52:22",
+  "oks": 3,
+  "last": "10:17:03",
   "last_http": 200,
-  "last_ok_ts": 1793631142.733151,
+  "last_ok_ts": 1793632623.5035336,
   "note": "alive"
  },
  "cerebras-120b": {
   "pace_s": 2.5,
   "walls": 0,
-  "oks": 2,
-  "last": "09:52:25",
+  "oks": 3,
+  "last": "10:17:05",
   "last_http": 200,
-  "last_ok_ts": 1793631145.108736,
+  "last_ok_ts": 1793632625.1873066,
   "note": "alive"
  },
  "cerebras-qwen": {
   "pace_s": 2.5,
   "walls": 0,
-  "oks": 2,
-  "last": "09:52:26",
+  "oks": 3,
+  "last": "10:17:06",
   "last_http": 200,
-  "last_ok_ts": 1793631146.8568523,
+  "last_ok_ts": 1793632626.875992,
   "note": "alive"
  },
  "or-ultra": {
-  "pace_s": 6.4,
-  "walls": 2,
+  "pace_s": 10.240000000000002,
+  "walls": 3,
   "oks": 0,
-  "last": "09:52:28",
+  "last": "10:17:08",
   "last_http": 429,
   "note": "free-models-per-day cap - re-probe after 00:00 UTC"
  },
  "or-reason": {
-  "pace_s": 6.4,
-  "walls": 2,
+  "pace_s": 10.240000000000002,
+  "walls": 3,
   "oks": 0,
-  "last": "09:52:30",
+  "last": "10:17:10",
   "last_http": 429,
   "note": "same shared daily cap as or-ultra"
  },
@@ -55,16 +55,24 @@
   "pace_s": 2.5,
   "walls": 0,
   "oks": 0,
-  "last": "09:52:31",
+  "last": "10:17:11",
   "last_http": 402,
   "note": "{\"code\":30001,\"message\":\"Sorry, your account balance is insufficient\","
  },
  "gemini-flash": {
+  "pace_s": 6.4,
+  "walls": 2,
+  "oks": 0,
+  "last": "10:17:13",
+  "last_http": 429,
+  "note": "free-tier quota window - the pacer reopens it"
+ },
+ "gemini-pro": {
   "pace_s": 4.0,
   "walls": 1,
   "oks": 0,
-  "last": "09:52:33",
+  "last": "10:17:15",
   "last_http": 429,
-  "note": "free-tier quota window - the pacer reopens it"
+  "note": "rate window - will re-open"
  }
 }
