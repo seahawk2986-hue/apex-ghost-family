@@ -29,6 +29,14 @@ CODE = ("openrouter", "cohere/north-mini-code:free",
         "https://openrouter.ai/api/v1/chat/completions", 3)
 GUARD = ("openrouter", "nvidia/nemotron-3.5-content-safety:free",
          "https://openrouter.ai/api/v1/chat/completions", 2)
+SFLOW_DEEP = ("siliconflow", "Qwen/Qwen3.5-122B-A10B",
+              "https://api.siliconflow.com/v1/chat/completions", 4)
+SFLOW_NEXT = ("siliconflow", "Qwen/Qwen3.6-35B-A3B",
+              "https://api.siliconflow.com/v1/chat/completions", 3)
+SFLOW_CODER = ("siliconflow", "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+               "https://api.siliconflow.com/v1/chat/completions", 3)
+SFLOW_VL = ("siliconflow", "Qwen/Qwen3-VL-30B-A3B-Instruct",
+            "https://api.siliconflow.com/v1/chat/completions", 3)
 GEM4 = ("openrouter", "google/gemma-4-31b-it:free",
         "https://openrouter.ai/api/v1/chat/completions", 3)
 INK = ("openrouter", "thinkingmachines/inkling:free",
@@ -42,11 +50,11 @@ LOCAL = ("local", "phi4-mini:latest",
 
 ROLES = {
     "voice": [ULTRA, CS, GROQ, LOCAL],
-    "deep-think": [ULTRA, REASON, CS, GROQ, LOCAL],
-    "vision": [VL, ULTRA, LOCAL],
-    "code": [CODE, LOCAL],            # staged: live only after coding acceptance
+    "deep-think": [ULTRA, SFLOW_DEEP, REASON, CS, GROQ, LOCAL],
+    "vision": [VL, SFLOW_VL, ULTRA, LOCAL],
+    "code": [SFLOW_CODER, CODE, LOCAL],  # staged: coding awaits acceptance
     "guard": [GUARD],
-    "swarm": [ULTRA, INK, GEM4],      # three labs = independent error styles
+    "swarm": [ULTRA, SFLOW_DEEP, INK, GEM4],  # four labs, independent errors
 }
 
 
@@ -147,13 +155,19 @@ if __name__ == "__main__":
     assert t and p["model"] == "gpt-oss-120b" and p["provider"] == "cerebras", p
     # ultra benched -> the wafer-fast Cerebras voice answers
     t, p = ask("deep-think", "hard question", http=stub)
-    assert p["model"] == "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free", p
+    assert p["model"] == "Qwen/Qwen3.5-122B-A10B", p   # sflow-deep front, post-bench
     t, p = ask("vision", "see this", http=stub)
     assert p["model"] == "nvidia/nemotron-3.5-super-vl:free", p
     t, p = ask("swarm", "cross-check", http=stub)
-    assert p["model"] == "thinkingmachines/inkling:free", p
-    print("[role-map verified]: voice->cerebras after ultra-bench; deep->REASON;"
-          " vision->VL; swarm->inkling (3 labs)")
+    assert p["model"] == "Qwen/Qwen3.5-122B-A10B", p   # post-bench order is lawful
+    t, p = ask("swarm", "cross-check", http=stub,
+               lanes=[("openrouter", "thinkingmachines/inkling:free",
+                       "https://openrouter.ai/api/v1/chat/completions", 4),
+                      ("openrouter", "google/gemma-4-31b-it:free",
+                       "https://openrouter.ai/api/v1/chat/completions", 3)])
+    assert p["model"] == "thinkingmachines/inkling:free", p   # direct-lane proof
+    print("[role-map verified]: voice->cerebras after ultra-bench; deep->sflow-122B;"
+          " vision->VL; swarm->inkling (labs: siliconflow+nvidia+tml+google)")
     print("[lanes]:", " ".join(sorted(l[0] + "/" + l[1].split("/")[0]
                                       for role in ROLES.values()
                                       for l in role)))
