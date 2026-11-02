@@ -5604,7 +5604,307 @@
    ],
    "registered": "2026-11-02 03:55:27",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "py_fix",
+   "source_file": "pbx/py_fix.py",
+   "source_repo": "tinode/chat",
+   "license": "check repo",
+   "sha256": "2ef0bf7ccc7215bada22d82f8156fc1af20a54cc7370b37603a527f9832fa36b",
+   "lines": 12,
+   "first_line": "# grpc-tools generates python 2 file which does not work with",
+   "imports": [],
+   "registered": "2026-11-02 04:59:34",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "py_grpc/tinode_grpc/__init__.py",
+   "source_repo": "tinode/chat",
+   "license": "check repo",
+   "sha256": "641a92f7ba1103af5fffc46c36815c22587ef595c8e573ebef7e634ce69c910d",
+   "lines": 3,
+   "first_line": "from . import model_pb2 as pb",
+   "imports": [],
+   "registered": "2026-11-02 04:59:34",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "make_funny_savefile",
+   "source_file": "other/fun/make-funny-savefile.py",
+   "source_repo": "TokTok/c-toxcore",
+   "license": "check repo",
+   "sha256": "e29ab35a25cac67c79016ad567d69aacaa0c24961d081b79a03a32dd955833d2",
+   "lines": 112,
+   "first_line": "#!/usr/bin/python",
+   "imports": [
+    "os",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-02 04:59:34",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "mlmmjadmin.settings",
+   "source_file": "samples/mlmmj/mlmmjadmin.settings.py",
+   "source_repo": "iredmail/iRedMail",
+   "license": "check repo",
+   "sha256": "baff32b4b249518cc35e261950038b2e23f3cc528eaf13192b76948c6f4d8a17",
+   "lines": 50,
+   "first_line": "############################################################",
+   "imports": [],
+   "registered": "2026-11-02 04:59:35",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "add_enabled_service",
+   "source_file": "tools/add_enabled_service.py",
+   "source_repo": "iredmail/iRedMail",
+   "license": "check repo",
+   "sha256": "ef529637d15844985f845922e590643ea079861ca995beeeacf5f8bc8a0b3867",
+   "lines": 61,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "ldap"
+   ],
+   "registered": "2026-11-02 04:59:35",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "oregano/__init__.py",
+   "source_repo": "nametoolong/oregano",
+   "license": "check repo",
+   "sha256": "aa0741a1c12062c50093b80c3d312da1b52c5aecdf8b9ca3b21d6519b448e0de",
+   "lines": 4,
+   "first_line": "'''MITM proxy for Tor.'''",
+   "imports": [],
+   "registered": "2026-11-02 04:59:36",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "configuration",
+   "source_file": "oregano/configuration.py",
+   "source_repo": "nametoolong/oregano",
+   "license": "check repo",
+   "sha256": "4b6f5ebf98992e4f773086b20258bfff1de1b95fc1885a7920aee0460891d78d",
+   "lines": 215,
+   "first_line": "# Default settings for what is undeclared.",
+   "imports": [
+    "oregano",
+    "random"
+   ],
+   "registered": "2026-11-02 04:59:36",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "agent_debugger/__init__.py",
+   "source_repo": "fkie-cad/friTap",
+   "license": "check repo",
+   "sha256": "b2ee563b37d04c54700b207270d1ffb3842b65577fee10f8eecccce5e8108a1c",
+   "lines": 7,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-02 04:59:37",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "agent_debugger/adapters/__init__.py",
+   "source_repo": "fkie-cad/friTap",
+   "license": "check repo",
+   "sha256": "2d17d4559f5fe20eec19974d54fdbc0556c8973b189f48f21c16ddaa384e06bc",
+   "lines": 2,
+   "first_line": "\"\"\"Debugger-specific adapters implementing the MemoryReader protocol.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-02 04:59:37",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "src/caelestia/__init__.py",
+   "source_repo": "caelestia-dots/cli",
+   "license": "check repo",
+   "sha256": "0f301fba792a84cc3f1d26952ec3d2137894aef845b227948371b38e97c56bfe",
+   "lines": 17,
+   "first_line": "from caelestia.parser import parse_args",
+   "imports": [],
+   "registered": "2026-11-02 04:59:38",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__main__",
+   "source_file": "src/caelestia/__main__.py",
+   "source_repo": "caelestia-dots/cli",
+   "license": "check repo",
+   "sha256": "e418cdbb27adf0063e3cec28179ac6b7bdb6ac743bb49d157f450551fcf38be2",
+   "lines": 5,
+   "first_line": "from . import main",
+   "imports": [],
+   "registered": "2026-11-02 04:59:39",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "api_front_matter",
+   "source_file": "docs/_scripts/api_front_matter.py",
+   "source_repo": "xability/py_maidr",
+   "license": "check repo",
+   "sha256": "7ea39518f6c14c72049811be7af62031938bd9f8b07f2c72e996ec61b04ada06",
+   "lines": 252,
+   "first_line": "\"\"\"Give the quartodoc-generated API pages a title and a meta description.",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-02 04:59:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "excel_example",
+   "source_file": "docs/_scripts/excel_example.py",
+   "source_repo": "xability/py_maidr",
+   "license": "check repo",
+   "sha256": "6932d9b714c58acec0b957c260c69f01a727c2b3e74b0f333d6e6184814d59c5",
+   "lines": 316,
+   "first_line": "\"\"\"Write ``docs/sales.xlsx``, the workbook the Excel gallery reads.",
+   "imports": [
+    "re",
+    "xlsxwriter",
+    "zipfile"
+   ],
+   "registered": "2026-11-02 04:59:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "census",
+   "source_file": "fighter_sdk/tools/census.py",
+   "source_repo": "Denkishi/ssbu-recomp",
+   "license": "check repo",
+   "sha256": "fb91a926f233871e47b97134858753a8161b313a3b31d2d78d276582ee6c37fc",
+   "lines": 265,
+   "first_line": "\"\"\"Facts about the lua2cpp script modules: functions by kind, sizes, names, impo",
+   "imports": [
+    "collections",
+    "json",
+    "numpy",
+    "os",
+    "sys",
+    "zlib"
+   ],
+   "registered": "2026-11-02 04:59:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "cityhash",
+   "source_file": "fighter_sdk/tools/cityhash.py",
+   "source_repo": "Denkishi/ssbu-recomp",
+   "license": "check repo",
+   "sha256": "c2f0a68385f13f94246ad2fa456ac911ad2c7118e9d051105b6a6c7df9321ecc",
+   "lines": 133,
+   "first_line": "\"\"\"CityHash64 as used by libc++'s std::hash<std::string> (public algorithm, libc",
+   "imports": [],
+   "registered": "2026-11-02 04:59:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "builder/kartpad_builder/__init__.py",
+   "source_repo": "chrissotraidis/kartpad",
+   "license": "check repo",
+   "sha256": "cdedc5c17461b1793dbe7ac643f0fa2eddca0c45e641a7dfc62069986e226b77",
+   "lines": 4,
+   "first_line": "\"\"\"KartPad personal IPA Builder.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-02 04:59:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "android_release_contract",
+   "source_file": "builder/kartpad_builder/android_release_contract.py",
+   "source_repo": "chrissotraidis/kartpad",
+   "license": "check repo",
+   "sha256": "60b0364b61d946116a68a7488de5f893b01596758290ffd85c639b2891862782",
+   "lines": 80,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "argparse",
+    "json"
+   ],
+   "registered": "2026-11-02 04:59:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "preprocessed_file_size_stats",
+   "source_file": "scripts/preprocessed_file_size_stats.py",
+   "source_repo": "OpenMW/openmw",
+   "license": "check repo",
+   "sha256": "b68fc5bd2de4b1d198fe8aec6d9986d1b3154f53e5d65c85bc019f4d461881b8",
+   "lines": 43,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "clang",
+    "click",
+    "json",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 04:59:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "preprocessed_file_size_stats_diff",
+   "source_file": "scripts/preprocessed_file_size_stats_diff.py",
+   "source_repo": "OpenMW/openmw",
+   "license": "check repo",
+   "sha256": "82e04d69a8f6873bf57bed54cd7c319e9b7f49fc888f0eaff118a8a569a0c90f",
+   "lines": 47,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "click",
+    "json",
+    "termtables"
+   ],
+   "registered": "2026-11-02 04:59:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conftest",
+   "source_file": "tests/conftest.py",
+   "source_repo": "kirklandsig/halo2-decompiled",
+   "license": "check repo",
+   "sha256": "7ed6d4a12a0c3d6505ec3142b360a18d0ec6d6b387ba8d1797668c06ef5a3b19",
+   "lines": 25,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "pytest",
+    "sys",
+    "xbe"
+   ],
+   "registered": "2026-11-02 04:59:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "decomp_dev_export",
+   "source_file": "tools/decomp_dev_export.py",
+   "source_repo": "kirklandsig/halo2-decompiled",
+   "license": "check repo",
+   "sha256": "d1dce4e2a5b591575a269514e65199ac32679ee350dd8b86e893e179f100661e",
+   "lines": 323,
+   "first_line": "\"\"\"Writes an objdiff progress report for ByteMatch from config/functions.csv.",
+   "imports": [
+    "argparse",
+    "json",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-02 04:59:43",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-02 03:55:27"
+ "built": "2026-11-02 04:59:43"
 }

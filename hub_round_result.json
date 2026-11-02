@@ -1,113 +1,111 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-02 04:56:30",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "py_fix",
+   "repo": "tinode/chat",
+   "sha256": "2ef0bf7ccc7215ba"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c3c719a6d1e841ba"
+   "skill": "__init__",
+   "repo": "tinode/chat",
+   "sha256": "641a92f7ba1103af"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "make_funny_savefile",
+   "repo": "TokTok/c-toxcore",
+   "sha256": "e29ab35a25cac67c"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "mlmmjadmin.settings",
+   "repo": "iredmail/iRedMail",
+   "sha256": "baff32b4b249518c"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "add_enabled_service",
+   "repo": "iredmail/iRedMail",
+   "sha256": "ef529637d1584498"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "__init__",
+   "repo": "nametoolong/oregano",
+   "sha256": "aa0741a1c12062c5"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "configuration",
+   "repo": "nametoolong/oregano",
+   "sha256": "4b6f5ebf98992e4f"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "__init__",
+   "repo": "fkie-cad/friTap",
+   "sha256": "b2ee563b37d04c54"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "__init__",
+   "repo": "fkie-cad/friTap",
+   "sha256": "2d17d4559f5fe20e"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "__init__",
+   "repo": "caelestia-dots/cli",
+   "sha256": "0f301fba792a84cc"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "__main__",
+   "repo": "caelestia-dots/cli",
+   "sha256": "e418cdbb27adf006"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "api_front_matter",
+   "repo": "xability/py_maidr",
+   "sha256": "7ea39518f6c14c72"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "excel_example",
+   "repo": "xability/py_maidr",
+   "sha256": "6932d9b714c58ace"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "census",
+   "repo": "Denkishi/ssbu-recomp",
+   "sha256": "fb91a926f233871e"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "cityhash",
+   "repo": "Denkishi/ssbu-recomp",
+   "sha256": "c2f0a68385f13f94"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "__init__",
+   "repo": "chrissotraidis/kartpad",
+   "sha256": "cdedc5c17461b179"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "android_release_contract",
+   "repo": "chrissotraidis/kartpad",
+   "sha256": "60b0364b61d94611"
+  },
+  {
+   "skill": "preprocessed_file_size_stats",
+   "repo": "OpenMW/openmw",
+   "sha256": "b68fc5bd2de4b1d1"
+  },
+  {
+   "skill": "preprocessed_file_size_stats_diff",
+   "repo": "OpenMW/openmw",
+   "sha256": "82e04d69a8f6873b"
+  },
+  {
+   "skill": "conftest",
+   "repo": "kirklandsig/halo2-decompiled",
+   "sha256": "7ed6d4a12a0c3d65"
+  },
+  {
+   "skill": "decomp_dev_export",
+   "repo": "kirklandsig/halo2-decompiled",
+   "sha256": "d1dce4e2a5b59157"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-02 04:59:43"
 }
