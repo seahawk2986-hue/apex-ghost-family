@@ -38,6 +38,7 @@ r = __import__("requests").post(BASE + "/v2/jobs", json=body, headers=H, timeout
 print("[submit]:", r.status_code, r.text[:160])
 
 cursor, t_end, events = 0, time.time() + 430, []
+v = {}
 while time.time() < t_end:
     try:
         v = requests.get(BASE + f"/v2/jobs/{rid}?after={cursor}", headers=H,

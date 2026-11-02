@@ -171,7 +171,7 @@ def grade(j, forecast):
     want = str(j.get("verify_py", ""))
     try:
         lhs = eval(want, {"__builtins__": {}}, {})   # the expression's VALUE counts
-        return abs(float(lhs) - float(f)) < 1e-9
+        return abs(float(lhs) - float(f)) < 1e-9, conf
     except (ValueError, TypeError, SyntaxError):
         pass
     return want in f.replace(" ", ""), conf
