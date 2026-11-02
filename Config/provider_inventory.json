@@ -1,0 +1,43 @@
+{
+ "ts": "2026-11-01 20:09:49",
+ "key_shapes": {
+  "GROQ_API_KEY": "PRESENT",
+  "GEMINI_API_KEY": "PRESENT",
+  "OPENROUTER_API_KEY": "PRESENT",
+  "OLLAMA_API_KEY": "PRESENT",
+  "CLOUD_ALLOWED": "PRESENT",
+  "CREDITS_ALLOWED": "absent"
+ },
+ "providers": {
+  "groq": {
+   "url": "api.groq.com/openai/v1",
+   "billing": "no-card-free-tier",
+   "$0": true,
+   "primary_chat": "openai/gpt-oss-120b"
+  },
+  "gemini": {
+   "url": "generativelanguage.googleapis.com/v1beta/openai",
+   "billing": "no-card-free-tier",
+   "$0": true,
+   "state": "429-cooldown-observed"
+  },
+  "openrouter": {
+   "url": "openrouter.ai/api/v1",
+   "billing": "no-card-free",
+   "$0": true,
+   "state": "day-quota-shaped"
+  },
+  "ollama_local": {
+   "url": "localhost:11434",
+   "$0": true,
+   "models_disk": "deepseek-r1:7b, gemma3:4b, phi4-mini:latest, qwen2.5-coder:7b(:3b :1.5b), glm-5.3-flash:cloud, deepseek-coder:6.7b",
+   "single_slot": true,
+   "keep_alive": "1m|24h(pinned)"
+  },
+  "lmstudio_local": {
+   "url": "127.0.0.1:1234",
+   "$0": true,
+   "role": "planner/coder windows"
+  }
+ }
+}

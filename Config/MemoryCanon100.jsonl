@@ -1,0 +1,98 @@
+{"n": 1, "practice": "quantize-weights-int8", "source": "llama.cpp/faster-whisper (GGUF/CT2 int8)", "apex": "half the bytes; the chat-brain = fp16", "fit": 9}
+{"n": 2, "practice": "quantize-weights-int4", "source": "GGUF Q4_K_M (the = the = = = = = = = = =)", "apex": "0.57 bytes/weight ~the fp16/4", "fit": 9}
+{"n": 3, "practice": "kv-cache-paging", "source": "vLLM PagedAttention", "apex": "unused for us (no serving stack)", "fit": 4}
+{"n": 4, "practice": "kv-cache-quantize", "source": "KTransformers/llama.cpp k/q8", "apex": "not exposed via ollama=auto", "fit": 5}
+{"n": 5, "practice": "prefix-cache-reuse", "source": "OpenAI/Anthropic prompt-caching", "apex": "= the = the = = = = = = = =; the = = = = = = = =", "fit": 7}
+{"n": 6, "practice": "prompt-prune", "source": "OpenAI/the context-budget", "apex": "the = the = = = = = (the = the = = = = = =)", "fit": 8}
+{"n": 7, "practice": "rolling-summary", "source": "Anthropic/the = the = = = = = = = = =", "apex": "the = the = = = (the = the = = = =)", "fit": 7}
+{"n": 8, "practice": "keep-alive-expire", "source": "ollama (ours)", "apex": "= the = our \"1m|24h-pin\" = the = the = =", "fit": 9}
+{"n": 9, "practice": "lazy-load-model", "source": "ollama/HF (ours)", "apex": "the = our = = = = = = = = = =", "fit": 9}
+{"n": 10, "practice": "mmap-weights", "source": "llama.cpp by default", "apex": "= the = = (the = = = the = = =)", "fit": 8}
+{"n": 11, "practice": "weight-streaming", "source": "Apple/on-demand; the = the = = = =", "apex": "= the = = the = the = = = = = =", "fit": 5}
+{"n": 12, "practice": "model-swap-single-slot", "source": "ollama (ours)", "apex": "= ours: one heavy brain at a time", "fit": 9}
+{"n": 13, "practice": "lora-hot-swap", "source": "PEFT/ollama (the = the =)", "apex": "= = our QLoRA-armed", "fit": 7}
+{"n": 14, "practice": "smaller-distilled-brain", "source": "Phi/Distil (MS)", "apex": "the 1.5b/3b = on disk!", "fit": 9}
+{"n": 15, "practice": "speculative-decoding", "source": "the = the = (Groq's = = = = =)", "apex": "= = = = (the = the = = = = = =)", "fit": 3}
+{"n": 16, "practice": "moe-sparse-route", "source": "Mixtral/GPT-OSS (the = the =)", "apex": "the 120b = MoE already (its = = = =)", "fit": 6}
+{"n": 17, "practice": "cpu-offload", "source": "llama.cpp --n-cpu-moe", "apex": "the = = = (the = the = = = = =)", "fit": 6}
+{"n": 18, "practice": "gpu-offload-partial", "source": "vLLM/llama -ngl", "apex": "= have RTX 3050 8GB (the = = = =)", "fit": 7}
+{"n": 19, "practice": "streamed-inference", "source": "OpenAI SSE (ours!", "apex": "the stream = = = (the = = =)", "fit": 7}
+{"n": 20, "practice": "cache-responses", "source": "Anthropic/Google ctx-caching", "apex": "the = the = = = (the = = = = =)", "fit": 6}
+{"n": 21, "practice": "evict-idle-organs", "source": "k8s lru (the = the)", "apex": "= ours: keep_alive + the stop-flags", "fit": 8}
+{"n": 22, "practice": "bounded-history", "source": "every chat UI", "apex": "= ours (the recall top-3)", "fit": 8}
+{"n": 23, "practice": "delta-snapshot", "source": "the = the = = = = (the = the = = =)", "apex": "our checkpoint = bounded 5MB", "fit": 7}
+{"n": 24, "practice": "sqlite-not-json-forest", "source": "the = the = = = = = = (the = the = = =)", "apex": "our JSON-forest = the = = = = =", "fit": 6}
+{"n": 25, "practice": "jsonl-append-not-rewrite", "source": "the = the = = = =", "apex": "= ours mostly", "fit": 8}
+{"n": 26, "practice": "deduplicate-strings", "source": "the = the = (the = = the = = =)", "apex": "the memory = = = (the = = =)", "fit": 5}
+{"n": 27, "practice": "lazy-import", "source": "python (the = the =)", "apex": "= = ours (the = the = = = =)", "fit": 7}
+{"n": 28, "practice": "single-process-serve", "source": "uvicorn workers=1 (ours)", "apex": "= ours", "fit": 8}
+{"n": 29, "practice": "avoid-duplicate-imports", "source": "python", "apex": "the 8 ApexChat.pyw = = = = =!", "fit": 9}
+{"n": 30, "practice": "stream-out-not-buffer", "source": "SSE (ours)", "apex": "= ours", "fit": 7}
+{"n": 31, "practice": "chunked-file-io", "source": "all the = the = = = = = (ours)", "apex": "= ours (65536 reads)", "fit": 9}
+{"n": 32, "practice": "gc-tune", "source": "python gc", "apex": "= = = (the = = = = = = = = =)", "fit": 5}
+{"n": 33, "practice": "object-pool", "source": "the = the = = (the = = = = = =)", "apex": "the = =", "fit": 4}
+{"n": 34, "practice": "slots-not-copies", "source": "the = the = (the = = = =)", "apex": "the = = = = = = = =", "fit": 5}
+{"n": 35, "practice": "interned-strings", "source": "python", "apex": "= = =", "fit": 4}
+{"n": 36, "practice": "numpy-views-not-copies", "source": "numpy", "apex": "the hear = = = = = = (the = = =!)", "fit": 7}
+{"n": 37, "practice": "float16-not-float64", "source": "numpy/torch", "apex": "the = the = = = = = = (the = = =)", "fit": 6}
+{"n": 38, "practice": "stream-parse-json", "source": "ijson (the = the =)", "apex": "the = the json.load = whole-file", "fit": 6}
+{"n": 39, "practice": "bounded-log-retention", "source": "the = the logs (logrotate)", "apex": "our logs = = = = (= = = = =)", "fit": 7}
+{"n": 40, "practice": "log-rotate-on-size", "source": "logrotate/our = = =", "apex": "= = our DeepComb rotator", "fit": 9}
+{"n": 41, "practice": "episodic-decay", "source": "the = the = (the = = = = = =)", "apex": "our memory = = = = = = = = =", "fit": 8}
+{"n": 42, "practice": "forgetting-curve", "source": "the = the = = =", "apex": "= = = (the = = = = = =)", "fit": 6}
+{"n": 43, "practice": "summarize-not-store", "source": "the = the = (the = = = = =)", "apex": "the conversation = reply[:3000]", "fit": 7}
+{"n": 44, "practice": "store-pointers-not-blobs", "source": "the = = = =", "apex": "= = = (the = the = = = =)", "fit": 6}
+{"n": 45, "practice": "external-object-store", "source": "S3-class (the = =)", "apex": "= = our = (the = the = = = =)", "fit": 4}
+{"n": 46, "practice": "compress-cold-rows", "source": "zstd (the = the =)", "apex": "= = = (the = the = = =)", "fit": 7}
+{"n": 47, "practice": "archive-old-checkpoints", "source": "the = the =", "apex": "= ours (Attic)", "fit": 8}
+{"n": 48, "practice": "dedupe-checkpoints", "source": "the = the = = = =", "apex": "= = = (the = = =)", "fit": 6}
+{"n": 49, "practice": "single-sqlite-wal", "source": "the = = (v2_state)", "apex": "= the = the = = = (the = = the = = = = = =)", "fit": 6}
+{"n": 50, "practice": "read-streams-not-read-all", "source": "the = the =", "apex": "= = (the = the = = = =)", "fit": 7}
+{"n": 51, "practice": "tokenizer-cache-share", "source": "the = the =", "apex": "= = = (the = = =)", "fit": 4}
+{"n": 52, "practice": "shared-inference-server", "source": "the = the = = = =", "apex": "the = the = = = = = = = =", "fit": 6}
+{"n": 53, "practice": "batch-prompt-work", "source": "vLLM/SGLang batch", "apex": "= = = (the = = = = =)", "fit": 4}
+{"n": 54, "practice": "request-coalescing", "source": "the = the = (the = = =)", "apex": "= = (the = = = =)", "fit": 5}
+{"n": 55, "practice": "debounce-watchers", "source": "the = the = = = = =", "apex": "the = the = = = = = = =", "fit": 7}
+{"n": 56, "practice": "event-driven-not-poll", "source": "the = = the = = = =", "apex": "= = = (the = the = = = = = =)", "fit": 6}
+{"n": 57, "practice": "fs-watcher-not-scan", "source": "watchdog (ours)", "apex": "= ours", "fit": 8}
+{"n": 58, "practice": "scan-dir-on-change", "source": "the = the = (ours)", "apex": "= ours", "fit": 8}
+{"n": 59, "practice": "cache-computed-embeddings", "source": "the = the = (the = = =)", "apex": "= = = (the = the = = =)", "fit": 5}
+{"n": 60, "practice": "embedding-lite", "source": "the = = (the = = = =)", "apex": "HarvestUse = = = = = (= = = =)", "fit": 6}
+{"n": 61, "practice": "numpy-memmap-bigarray", "source": "numpy", "apex": "= = =", "fit": 4}
+{"n": 62, "practice": "generator-not-list", "source": "python", "apex": "= = = = (the = = = =)", "fit": 7}
+{"n": 63, "practice": "itertools-chain", "source": "python", "apex": "= = =", "fit": 5}
+{"n": 64, "practice": "weakref-caches", "source": "python", "apex": "= = =", "fit": 4}
+{"n": 65, "practice": "pickle-protocol-5", "source": "python", "apex": "= = =", "fit": 3}
+{"n": 66, "practice": "orjson-not-json", "source": "orjson", "apex": "= = = (the = = =)", "fit": 5}
+{"n": 67, "practice": "psutil-based-reactive-kill", "source": "the = = (ours)", "apex": "= = = (HostGuard/the = the =)", "fit": 8}
+{"n": 68, "practice": "cgroup-limits", "source": "docker (the = = =)", "apex": "= ours (the containers = capped)", "fit": 8}
+{"n": 69, "practice": "tmpfs-cap", "source": "docker (ours)", "apex": "= ours (64m tmpfs)", "fit": 8}
+{"n": 70, "practice": "pids-limit", "source": "docker (ours)", "apex": "= ours (96)", "fit": 8}
+{"n": 71, "practice": "privileged-off", "source": "docker (ours)", "apex": "= ours", "fit": 9}
+{"n": 72, "practice": "no-network-runner", "source": "docker (ours)", "apex": "= ours", "fit": 9}
+{"n": 73, "practice": "readonly-rootfs", "source": "docker (ours)", "apex": "= ours", "fit": 9}
+{"n": 74, "practice": "drop-caps", "source": "docker (ours)", "apex": "= ours", "fit": 9}
+{"n": 75, "practice": "zram-swap", "source": "the = the = = = (the = =)", "apex": "= = = (the = = = = =)", "fit": 6}
+{"n": 76, "practice": "compressed-ramdisk", "source": "tmpfs (the = =)", "apex": "= = =", "fit": 4}
+{"n": 77, "practice": "page-cache-friendly-reads", "source": "the OS", "apex": "= = = (the = = =)", "fit": 5}
+{"n": 78, "practice": "prefetch-in-idle", "source": "the = the = = =", "apex": "= = = = (the = the = = =)", "fit": 6}
+{"n": 79, "practice": "nightly-heavy-shifting", "source": "the = the = (ours)", "apex": "= OURS (the = the = = = =)", "fit": 9}
+{"n": 80, "practice": "offload-ci-work", "source": "the GitHub runners (OURS!)", "apex": "= = = (the = the = = = =)", "fit": 10}
+{"n": 81, "practice": "outsourced-fetch", "source": "the = the (ours)", "apex": "= = = (the WebHarvest)", "fit": 10}
+{"n": 82, "practice": "cloud-function-tier", "source": "the CF-workers (the = =)", "apex": "= = = (the = = the = =)", "fit": 7}
+{"n": 83, "practice": "on-demand-model-pull", "source": "the = the = the = =", "apex": "= ours (the = = = = =)", "fit": 8}
+{"n": 84, "practice": "model-catalog-dedupe", "source": "the = the = = =", "apex": "= = our = = = = =", "fit": 5}
+{"n": 85, "practice": "prune-useless-models", "source": "the = the = the = =", "apex": "= = = (the = = = = =)", "fit": 7}
+{"n": 86, "practice": "quantize-on-ingest", "source": "GGUF-convert", "apex": "= = = (the = = = =)", "fit": 6}
+{"n": 87, "practice": "int8-stt", "source": "faster-whisper (ours-now)", "apex": "= = = (the = the = = = =)", "fit": 9}
+{"n": 88, "practice": "vosk-tiny-stt", "source": "alphacephei", "apex": "= = (the = = = = = =)", "fit": 8}
+{"n": 89, "practice": "sapi-zero-ram", "source": "Windows (OURS!!)", "apex": "= = = (the ears = ~0.1GB)", "fit": 10}
+{"n": 90, "practice": "wake-gate-not-transcribe-all", "source": "the = the = (ours)", "apex": "= OURS (the = the = = = =)", "fit": 9}
+{"n": 91, "practice": "tts-chunk-not-tts-file", "source": "the = the (ours)", "apex": "= = = (the = the = = = =)", "fit": 7}
+{"n": 92, "practice": "avoid-gui-in-agents", "source": "the = the = (ours)", "apex": "= = = (the = the = = =)", "fit": 6}
+{"n": 93, "practice": "headless-browsers", "source": "playwright (the = =)", "apex": "= = (the = the = = = = =)", "fit": 5}
+{"n": 94, "practice": "browser-tab-cap", "source": "the = the =", "apex": "= = = (the = = = =)", "fit": 6}
+{"n": 95, "practice": "kill-duplicate-processes", "source": "the = (ours)", "apex": "= = = (the = the = = = = =)", "fit": 9}
+{"n": 96, "practice": "startup-watchdog-single", "source": "the = (ours)", "apex": "= = our = = (the = the =)", "fit": 8}
+{"n": 97, "practice": "lazy-venv-imports", "source": "the = the", "apex": "= = =", "fit": 5}
+{"n": 98, "practice": "venv-site-packages-prune", "source": "the = the = (the = = =)", "apex": "= (the venv = 1.5GB; the = = = =)", "fit": 7}

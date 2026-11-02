@@ -19,7 +19,7 @@ function Cfg {
 
 function Speak($m) {
     $p = Cfg
-    try { & $p.speak_script -Message $m | Out-Null } catch { Log "speak failed" }
+    try { & $p.speak_script -Text $m -NoWatch | Out-Null } catch { Log "speak failed" }
 }
 
 function Toast($m) {
@@ -30,13 +30,20 @@ function Toast($m) {
 function Send-ToApex($cmd) {
     $p = Cfg
     try {
+        # THE AUTH-CURE: the serve = fail-closed (the 401 was honest); the
+        # key = read from the file at send-time. Case-proof via $PSScriptRoot
+        # (a bare $R here collides with the loop's $r recognition-result —
+        # PowerShell vars are case-insensitive, that was the 20:28 crash).
+        $kp = Join-Path (Split-Path -Parent $PSScriptRoot) "Config\apex_api.key"
+        $key = (Get-Content $kp -Raw).Trim()
         $body = @{ message = $cmd } | ConvertTo-Json -Compress
-        Invoke-RestMethod -Uri $p.chat_url -Method Post -Body $body `
-            -ContentType "application/json" -TimeoutSec 30 | Out-Null
-        return $true
+        $rep = Invoke-RestMethod -Uri $p.chat_url -Method Post -Body $body `
+            -ContentType "application/json" -Headers @{ "X-Apex-Key" = $key } `
+            -TimeoutSec 90
+        return $rep
     } catch {
         Log ("send failed: " + $_.Exception.Message)
-        return $false
+        return $null
     }
 }
 
@@ -167,12 +174,18 @@ try {
         if ($cmd -and $conf -ge 0.15) {
             Log ("command: '" + $cmd + "'")
             Toast ("Apex heard: " + $cmd)
-            Send-ToApex $cmd | Out-Null
-            Speak ("On it.")
+            $rep = Send-ToApex $cmd
+            if ($rep -and $rep.reply) {
+                Speak ([string]$rep.reply)          # THE REAL ANSWER, SPOKEN
+            } else {
+                Speak ("On it. My answer is on the screen - the chat page or the toast.")
+            }
         } else {
             Log "command rejected (empty/low conf)"
         }
     }
+} catch {
+    Log ("ears outer crash: " + $_.Exception.Message)
 } finally {
     try { $eng.Dispose() } catch {}
     Log "ears stopped"

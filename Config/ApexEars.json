@@ -1,10 +1,13 @@
 {
- "wake_patterns": ["^\\s*(hey\\s+)?apex\\b", "^\\s*(hey\\s+)?a\\s+pex\\b"],
- "min_confidence": 0.40,
+ "wake_patterns": [
+  "^\\s*(hey\\s+)?apex\\b",
+  "^\\s*(hey\\s+)?a\\s+pex\\b"
+ ],
+ "min_confidence": 0.4,
  "chat_url": "http://127.0.0.1:8080/talk/api",
  "speak_script": "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexSpeak.ps1",
  "toast_script": "C:\\Users\\seaha\\Downloads\\Apex-With-Triggers-Fixed\\Scripts\\ApexToast.ps1",
- "speak_replies": false,
+ "speak_replies": true,
  "muted": false,
  "follow_up_window_s": 10
 }

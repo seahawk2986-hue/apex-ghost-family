@@ -142,8 +142,14 @@ def main(daemon=False):
 
 
 def transcribe(model, audio):
+    # the hallucination-cure (the whisper's empty-input fiction: the
+    # no-speech-threshold + the log-prob-floor + no-conditioning = the
+    # standard cures; the VAD-gate already silences true empties)
     return model.transcribe(audio, language="en", beam_size=1,
-                            vad_filter=False)
+                            vad_filter=False,
+                            condition_on_previous_text=False,
+                            no_speech_threshold=0.6,
+                            log_prob_threshold=-1.0)
 
 
 if __name__ == "__main__":

@@ -53,6 +53,30 @@
    "lane": "local-phi4",
    "ttft_s": 8.632,
    "chars_in": 3
+  },
+  {
+   "ts": "2026-11-01 19:59:06",
+   "lane": "local-phi4",
+   "ttft_s": 2.582,
+   "chars_in": 22
+  },
+  {
+   "ts": "2026-11-01 20:02:54",
+   "lane": "local-phi4",
+   "ttft_s": 2.48,
+   "chars_in": 35
+  },
+  {
+   "ts": "2026-11-01 20:16:46",
+   "lane": "local-phi4",
+   "ttft_s": 2.717,
+   "chars_in": 5
+  },
+  {
+   "ts": "2026-11-01 20:26:30",
+   "lane": "local-phi4",
+   "ttft_s": 2.548,
+   "chars_in": 25
   }
  ]
 }
