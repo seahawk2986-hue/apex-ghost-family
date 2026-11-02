@@ -1345,6 +1345,17 @@ def jobs_board():
         return JSONResponse({"jobs-note": str(e)}, status_code=500)
 
 
+@app.get("/receipts")
+def receipts_board():
+    """the public trust page: live ledgers, refreshed on every view."""
+    try:
+        from receipts_page import render
+        return render()
+    except Exception as e:
+        out = str(e)[:200]
+        return JSONResponse({"receipts-note": out}, status_code=500)
+
+
 @app.get("/talk")
 def talk_page():
     """APEX Chat v2 - the polished console (page file: repo-local ApexChatPage.html)."""

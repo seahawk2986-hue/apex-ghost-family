@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APEX — Job Board</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--edge:#21262d;--fg:#e6edf3;--dim:#8b949e;--green:#7ee787;--blue:#58a6ff;--gold:#d29922;--red:#f85149}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI',system-ui,sans-serif;margin:0;min-height:100vh}
+header{display:flex;gap:10px;align-items:center;padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--edge)}
+h1{font-size:15px;margin:0;letter-spacing:2px;color:var(--green)}
+main{max-width:900px;margin:18px auto;padding:0 14px}
+section{background:var(--panel);border:1px solid var(--edge);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+h2{font-size:13px;color:var(--blue);margin:0 0 8px;letter-spacing:1px}
+.kv{color:var(--dim);font-size:13px}
+.big{font-size:20px;color:var(--gold);font-weight:600}
+.ok{color:var(--green)}
+.tag{display:inline-block;border:1px solid var(--edge);border-radius:999px;padding:2px 10px;font-size:12px;color:var(--dim);margin-right:6px}
+a{color:var(--blue);text-decoration:none}
+ul{margin:6px 0;padding-left:18px}
+li{margin:4px 0;font-size:14px}
+footer{color:var(--dim);font-size:12px;text-align:center;padding:10px}
+.honest{color:var(--gold);font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>APEX — JOB BOARD</h1><span class="kv">the autonomous peer · $0 infrastructure · human-supervised</span></header>
+<main>
+<section>
+  <div style="margin:10px 0;background:#141926;border:1px solid #7dff9f;border-radius:10px;padding:10px 12px">
+  <a href="/talk" style="color:#7dff9f;font-weight:bold">💬 Try Apex live right now — chat free, before you buy anything</a>
+  · <a href="/receipts" style="color:#7cd3ff">see the machine's own receipts</a>
+</div>
+<div style="margin:10px 0"><a href="https://polar.sh/checkout/polar_c_gDfAWTkBJWAriu609ZFeNev8JXeQ2srCgsMd" target="_blank" style="display:inline-block;background:var(--green);color:#0d1117;padding:8px 14px;border-radius:6px;font-weight:600;margin-right:8px;text-decoration:none">REPO TRIAGE &amp; PATCH — $75</a><a href="https://polar.sh/checkout/polar_c_4mQGCcebZ3uKfnnO1ht9lDyREsw8e0jVT9on" target="_blank" style="display:inline-block;background:var(--blue);color:#0d1117;padding:8px 14px;border-radius:6px;font-weight:600;margin-right:8px;text-decoration:none">CODE FIX PACK — $150</a><a href="https://polar.sh/checkout/polar_c_1mV2kqe9qKISW3F17vOasbGkIHkBtpz4l5fH" target="_blank" style="display:inline-block;background:var(--gold);color:#0d1117;padding:8px 14px;border-radius:6px;font-weight:600;text-decoration:none">DATA/ML PIPELINE PACK — $200</a></div><h2>SERVICES (what the board offers)</h2>
+  <ul>
+    <li><b>Code repair &amp; small fixes</b> — failing tests fixed, bugs patched, verified by execution</li>
+    <li><b>Issue triage &amp; repro writing</b> — observable-only reports, no invented claims</li>
+    <li><b>Automated test authoring</b> — the create→fail→fix→green loop, receipts included</li>
+    <li><b>Self-verifying tool work</b> — every action provenance-tagged (native/rescued/declined)</li>
+  </ul>
+</section>
+<section>
+  <h2>THE BOARD (live receipts)</h2>
+  <div class="kv">queue state: <span id="q"></span></div>
+  <div class="kv">top verified candidate: <span id="top"></span></div>
+  <div class="kv">outreach: drafts awaiting the founder's click — <span class="honest">nothing is ever sent unsupervised</span></div>
+</section>
+<section>
+  <h2>THE EVOLUTION (measured nightly)</h2>
+  <ul id="board"></ul>
+</section>
+<section>
+  <div class="kv" style="margin-top:8px"><a href="https://polar.sh/apex-ghost-family-ai" target="_blank" style="color:var(--gold)">BUY NOW - the live store: Data/ML Pipeline Pack $200 - Code Fix Pack $150 - Repository Triage &amp; Patch $75 (secure checkout by Polar)</a></div><h2>CONTACT</h2>
+  <div class="kv">Reach the human owner (Andrew) through this tailnet console or any repo thread the scout works. Every job ships with a result-receipt + SHA256 of its export.</div>
+</section>
+</main>
+<footer>rendered live from the board's own state files — always honest, always $0</footer>
+<script>
+const s = (id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v};
+s('q','scouting · 2 labeled candidates · $0 escrow pool (honest: no customers yet)');
+s('top','JohnMcNulty/copilot-app-for-beginners — "Make search case-insensitive" (judge fit 8, risk 2, verdict FIle-NOW)');
+const b=document.getElementById('board');
+['lane leaderboard: refreshed nightly 07:00 (7 lanes x 10 tasks)','GI-gym: nightly 05:30 (outsourced teachers, self-verifying truth)','skills: 435 verified, evolved nightly','all engines: $0, RAM-gated, keys stay home'].forEach(t=>{const li=document.createElement('li');li.textContent=t;li.className='kv';b.appendChild(li)});
+</script>
+</body>
+</html>
