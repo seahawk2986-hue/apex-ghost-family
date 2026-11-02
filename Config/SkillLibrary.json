@@ -6200,7 +6200,335 @@
    "imports": [],
    "registered": "2026-11-02 06:00:55",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "pwnagotchi/__init__.py",
+   "source_repo": "evilsocket/pwnagotchi",
+   "license": "check repo",
+   "sha256": "5bd8d7b477d1828e2cc3182e6755a470b06ff0d155704a173eb949f69d5a502d",
+   "lines": 165,
+   "first_line": "import os",
+   "imports": [
+    "logging",
+    "os",
+    "re",
+    "time"
+   ],
+   "registered": "2026-11-02 07:23:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "_version",
+   "source_file": "pwnagotchi/_version.py",
+   "source_repo": "evilsocket/pwnagotchi",
+   "license": "check repo",
+   "sha256": "6738f69c21fea5e74b5d07dc07122e1608895d2033f46189489f7a1853ca2c91",
+   "lines": 2,
+   "first_line": "__version__ = '1.5.5'",
+   "imports": [],
+   "registered": "2026-11-02 07:23:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "_gevent_test_main",
+   "source_file": "bazel/_gevent_test_main.py",
+   "source_repo": "grpc/grpc",
+   "license": "check repo",
+   "sha256": "618c675499bd29b8725c8f753c78b2c49ae577321c8b8ef8bb1d6763397d3903",
+   "lines": 103,
+   "first_line": "# Copyright 2021 The gRPC Authors",
+   "imports": [
+    "datetime",
+    "gevent",
+    "greenlet",
+    "grpc",
+    "importlib",
+    "os",
+    "pkgutil",
+    "signal",
+    "sys",
+    "traceback",
+    "unittest"
+   ],
+   "registered": "2026-11-02 07:23:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "_run_time_type_check_main",
+   "source_file": "bazel/_run_time_type_check_main.py",
+   "source_repo": "grpc/grpc",
+   "license": "check repo",
+   "sha256": "b55ec035691684ea9b2c205f7e063765f9206a960f88f93cb340aca5032908da",
+   "lines": 150,
+   "first_line": "# Copyright 2025 gRPC authors.",
+   "imports": [
+    "argparse",
+    "importlib",
+    "os",
+    "pathlib",
+    "pkgutil",
+    "sys",
+    "unittest"
+   ],
+   "registered": "2026-11-02 07:23:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "benchmark/__init__.py",
+   "source_repo": "apache/incubator-mxnet",
+   "license": "check repo",
+   "sha256": "f617571c006b56991ba6366051fb77f643852f6c5219e1b8184b9ad0799e96eb",
+   "lines": 17,
+   "first_line": "# Licensed to the Apache Software Foundation (ASF) under one",
+   "imports": [],
+   "registered": "2026-11-02 07:23:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "opperf",
+   "source_file": "benchmark/opperf/opperf.py",
+   "source_repo": "apache/incubator-mxnet",
+   "license": "check repo",
+   "sha256": "e5cfe0639e591b42fd68f5d5fa3ac87b656668f0a15b7d6e5d90eb23e524aa53",
+   "lines": 228,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "logging",
+    "mxnet",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 07:23:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "models",
+   "source_file": "benchmarks/models.py",
+   "source_repo": "django-guardian/django-guardian",
+   "license": "check repo",
+   "sha256": "88124ec0ed77cf353077e3cf8c6a9fd5dc74739c20c9e9d87db595da1bf55a8a",
+   "lines": 20,
+   "first_line": "from django.db import models",
+   "imports": [],
+   "registered": "2026-11-02 07:23:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "run_benchmarks",
+   "source_file": "benchmarks/run_benchmarks.py",
+   "source_repo": "django-guardian/django-guardian",
+   "license": "check repo",
+   "sha256": "c53a23f0c0f23722a331c8bce8eeb6d6fb0c3b17b3e63d3510472d02bdc74801",
+   "lines": 178,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "datetime",
+    "django",
+    "os",
+    "random",
+    "string",
+    "sys"
+   ],
+   "registered": "2026-11-02 07:23:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "Elgg/Elgg",
+   "license": "check repo",
+   "sha256": "d0eb35ad68ba21c4509cd4b36666d7943f6b5127c933ff4b7b423adb8de1ebbf",
+   "lines": 281,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 07:23:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "backend",
+   "source_file": "_build/backend.py",
+   "source_repo": "pretalx/pretalx",
+   "license": "check repo",
+   "sha256": "76cbba72145b1d1c3f846b9e02d85897750f77712b17a2cd4312533f837e329f",
+   "lines": 31,
+   "first_line": "# SPDX-FileCopyrightText: 2026-present Tobias Kunze",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-02 07:23:44",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "doc/conf.py",
+   "source_repo": "pretalx/pretalx",
+   "license": "check repo",
+   "sha256": "a8089bdb944d57a23d87a199161d71f6385de3b1d4c0574e430e76e94c9edeaa",
+   "lines": 121,
+   "first_line": "# SPDX-FileCopyrightText: 2017-present Tobias Kunze",
+   "imports": [
+    "django",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 07:23:45",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "build_assets",
+   "source_file": "tools/extract/build_assets.py",
+   "source_repo": "tuunanet/rea-ski-or-die-reconstruction",
+   "license": "check repo",
+   "sha256": "c625322803b6502f4d7e1d8b37190c911883655e83e11ec0da560561db2d7bd6",
+   "lines": 198,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "hashlib",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 07:23:45",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "extract_assets",
+   "source_file": "tools/extract/extract_assets.py",
+   "source_repo": "tuunanet/rea-ski-or-die-reconstruction",
+   "license": "check repo",
+   "sha256": "b35a8ac0b8b285279ce3f3da70cc9e8743693ca4cf655dbed425ebbb58959309",
+   "lines": 394,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "os",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-02 07:23:45",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "macho_text_rwx",
+   "source_file": "cmake/macho_text_rwx.py",
+   "source_repo": "JRickey/BattleShip",
+   "license": "check repo",
+   "sha256": "34fd5b8e6be706f954e728b1a71b19540034f039712ee30e8a9510e82afe3fc9",
+   "lines": 91,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-02 07:23:46",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "acmd_diff",
+   "source_file": "debug_tools/acmd_diff/acmd_diff.py",
+   "source_repo": "JRickey/BattleShip",
+   "license": "check repo",
+   "sha256": "4546e865354e6f5cc6128a236960ebca0ab4ed3893aef68d849e3fb345279f88",
+   "lines": 366,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-02 07:23:46",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "fpfix",
+   "source_file": "bin/scripts/fpfix.py",
+   "source_repo": "ryanoasis/nerd-fonts",
+   "license": "check repo",
+   "sha256": "84242ef761202b186821839e4aca82fcb550974b6f0c50ae8c51b9dd8b1dd7d0",
+   "lines": 30,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-02 07:23:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_extraglyphs",
+   "source_file": "bin/scripts/generate-extraglyphs.py",
+   "source_repo": "ryanoasis/nerd-fonts",
+   "license": "check repo",
+   "sha256": "9706568080db243b9f1aa8f3aaeef69c10b1f10e352b5aafef01326a3492a10c",
+   "lines": 34,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "fontforge",
+    "os"
+   ],
+   "registered": "2026-11-02 07:23:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "getdeps",
+   "source_file": "build/fbcode_builder/getdeps.py",
+   "source_repo": "facebook/folly",
+   "license": "check repo",
+   "sha256": "4dffefdd2938faeea2b2f7f02e45515633fd07ea62ca25fd27c6b40fb425a3bd",
+   "lines": 28,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 07:23:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "lint_cmake_floors",
+   "source_file": "build/fbcode_builder/lint_cmake_floors.py",
+   "source_repo": "facebook/folly",
+   "license": "check repo",
+   "sha256": "5dd0504d96a6dc2cc8d04c8b8224325672dcfda7b4e6e24d39f634967fae8888",
+   "lines": 171,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "re"
+   ],
+   "registered": "2026-11-02 07:23:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "cms/__init__.py",
+   "source_repo": "django-cms/django-cms",
+   "license": "check repo",
+   "sha256": "b83299b6bb2fa2cccfeaf383c10521025dc6cd8b5b9ad08410469cfb78dca516",
+   "lines": 2,
+   "first_line": "__version__ = '5.2.0dev1'",
+   "imports": [],
+   "registered": "2026-11-02 07:23:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__main__",
+   "source_file": "cms/__main__.py",
+   "source_repo": "django-cms/django-cms",
+   "license": "check repo",
+   "sha256": "e89c785abf8de6fa2f5949f9a382386933dd36dca7592987cf960e8d332da031",
+   "lines": 10,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-02 07:23:51",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-02 06:00:55"
+ "built": "2026-11-02 07:23:51"
 }
