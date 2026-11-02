@@ -236,3 +236,5 @@
 {"ts": "2026-11-01 19:54:23", "kind": "upward_alarm", "text": "goal 'safety' stalled 610min (no external claims yet - the door stands open)"}
 {"ts": "2026-11-01 20:20:44", "kind": "upward", "what": "earn-loop-beat", "beat": 35, "unclaimed": 6, "filed": false}
 {"ts": "2026-11-01 20:24:01", "kind": "upward", "what": "earn-loop-beat", "beat": 1, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-01 20:39:01", "kind": "upward", "what": "earn-loop-beat", "beat": 1, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-01 21:09:01", "kind": "upward", "what": "earn-loop-beat", "beat": 3, "unclaimed": 0, "filed": false}

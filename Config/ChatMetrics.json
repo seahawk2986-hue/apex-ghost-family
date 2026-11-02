@@ -77,6 +77,42 @@
    "lane": "local-phi4",
    "ttft_s": 2.548,
    "chars_in": 25
+  },
+  {
+   "ts": "2026-11-01 20:58:12",
+   "lane": "local-phi4",
+   "ttft_s": 8.535,
+   "chars_in": 530
+  },
+  {
+   "ts": "2026-11-01 20:59:07",
+   "lane": "local-phi4",
+   "ttft_s": 2.483,
+   "chars_in": 45
+  },
+  {
+   "ts": "2026-11-01 20:59:51",
+   "lane": "local-phi4",
+   "ttft_s": 2.522,
+   "chars_in": 563
+  },
+  {
+   "ts": "2026-11-01 21:02:40",
+   "lane": "local-phi4",
+   "ttft_s": 2.865,
+   "chars_in": 26
+  },
+  {
+   "ts": "2026-11-01 21:04:19",
+   "lane": "local-phi4",
+   "ttft_s": 5.024,
+   "chars_in": 23
+  },
+  {
+   "ts": "2026-11-01 21:15:10",
+   "lane": "local-phi4",
+   "ttft_s": 2.832,
+   "chars_in": 24
   }
  ]
 }
