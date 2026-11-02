@@ -1,0 +1,457 @@
+[
+ {
+  "title": "PolyKV: A Shared Asymmetrically-Compressed KV Cache Pool for Multi-Agent LLM Inference",
+  "url": "http://arxiv.org/abs/2604.24971v1",
+  "year": "2026"
+ },
+ {
+  "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
+  "url": "http://arxiv.org/abs/2609.05565v1",
+  "year": "2026"
+ },
+ {
+  "title": "Accelerating LLM Inference Throughput via Asynchronous KV Cache Prefetching",
+  "url": "http://arxiv.org/abs/2504.06319v2",
+  "year": "2025"
+ },
+ {
+  "title": "MPCache: MPC-Friendly KV Cache Eviction for Efficient Private LLM Inference",
+  "url": "http://arxiv.org/abs/2501.06807v2",
+  "year": "2025"
+ },
+ {
+  "title": "Online Scheduling for LLM Inference with KV Cache Constraints",
+  "url": "http://arxiv.org/abs/2502.07115v5",
+  "year": "2025"
+ },
+ {
+  "title": "Cache-Resident LLM Inference in GB-Scale Last-Level Caches",
+  "url": "http://arxiv.org/abs/2606.25353v1",
+  "year": "2026"
+ },
+ {
+  "title": "Accelerating LLM Inference via Dynamic KV Cache Placement in Heterogeneous Memory System",
+  "url": "http://arxiv.org/abs/2508.13231v2",
+  "year": "2025"
+ },
+ {
+  "title": "Efficient KV Cache Migration for Geo-Distributed LLM Inference in Collaborative Edge Computing",
+  "url": "http://arxiv.org/abs/2610.22172v1",
+  "year": "2026"
+ },
+ {
+  "title": "LLM Cache Bandit Revisited: Addressing Query Heterogeneity for Cost-Effective LLM Inference",
+  "url": "http://arxiv.org/abs/2509.15515v1",
+  "year": "2025"
+ },
+ {
+  "title": "SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer",
+  "url": "http://arxiv.org/abs/2607.28150v1",
+  "year": "2026"
+ },
+ {
+  "title": "Throughput-Oriented LLM Inference via KV-Activation Hybrid Caching with a Single GPU",
+  "url": "http://arxiv.org/abs/2501.01792v2",
+  "year": "2025"
+ },
+ {
+  "title": "MiniKV: Pushing the Limits of LLM Inference via 2-Bit Layer-Discriminative KV Cache",
+  "url": "http://arxiv.org/abs/2411.18077v3",
+  "year": "2024"
+ },
+ {
+  "title": "Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference",
+  "url": "http://arxiv.org/abs/2602.00328v1",
+  "year": "2026"
+ },
+ {
+  "title": "Apt-Serve: Adaptive Request Scheduling on Hybrid Cache for Scalable LLM Inference Serving",
+  "url": "http://arxiv.org/abs/2504.07494v1",
+  "year": "2025"
+ },
+ {
+  "title": "FIER: Fine-Grained and Efficient KV Cache Retrieval for Long-context LLM Inference",
+  "url": "http://arxiv.org/abs/2508.08256v2",
+  "year": "2025"
+ },
+ {
+  "title": "XQuant: Breaking the Memory Wall for LLM Inference with KV Cache Rematerialization",
+  "url": "http://arxiv.org/abs/2508.10395v1",
+  "year": "2025"
+ },
+ {
+  "title": "WindowKV: Task-Adaptive Group-Wise KV Cache Window Selection for Efficient LLM Inference",
+  "url": "http://arxiv.org/abs/2503.17922v2",
+  "year": "2025"
+ },
+ {
+  "title": "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference",
+  "url": "http://arxiv.org/abs/2606.24467v1",
+  "year": "2026"
+ },
+ {
+  "title": "An Internet for the KV Cache: Rethinking Classical Infrastructure Boundaries in the LLM Inference Age",
+  "url": "http://arxiv.org/abs/2608.01526v1",
+  "year": "2026"
+ },
+ {
+  "title": "KV-Runahead: Scalable Causal LLM Inference by Parallel Key-Value Cache Generation",
+  "url": "http://arxiv.org/abs/2405.05329v2",
+  "year": "2024"
+ },
+ {
+  "title": "Rubric-Guided Process Reward for Stepwise Model Routing",
+  "url": "http://arxiv.org/abs/2605.29310v2",
+  "year": "2026"
+ },
+ {
+  "title": "Confidence-Guided Stepwise Model Routing for Cost-Efficient Reasoning",
+  "url": "http://arxiv.org/abs/2511.06190v2",
+  "year": "2025"
+ },
+ {
+  "title": "UniScale: Adaptive Unified Inference Scaling via Online Joint Optimization of Model Routing and Test-Time Scaling",
+  "url": "http://arxiv.org/abs/2605.30898v1",
+  "year": "2026"
+ },
+ {
+  "title": "Rethinking Stepwise Model Routing: A Cost-Efficient Table Reasoning Perspective",
+  "url": "http://arxiv.org/abs/2605.29319v1",
+  "year": "2026"
+ },
+ {
+  "title": "Universal Model Routing for Efficient LLM Inference",
+  "url": "http://arxiv.org/abs/2502.08773v2",
+  "year": "2025"
+ },
+ {
+  "title": "EntroRouter: Learning Efficient Model Routing via Entropy Regulation",
+  "url": "http://arxiv.org/abs/2606.29424v1",
+  "year": "2026"
+ },
+ {
+  "title": "Expected Reward Prediction, with Applications to Model Routing",
+  "url": "http://arxiv.org/abs/2603.20217v1",
+  "year": "2026"
+ },
+ {
+  "title": "AgentRouter: Heterogeneous Model Routing for Cost-Optimal Multi-Step Agentic Workflows",
+  "url": "http://arxiv.org/abs/2609.22951v1",
+  "year": "2026"
+ },
+ {
+  "title": "VL-RouterBench: A Benchmark for Vision-Language Model Routing",
+  "url": "http://arxiv.org/abs/2512.23562v2",
+  "year": "2025"
+ },
+ {
+  "title": "VIA-SD: Verification via Intra-Model Routing for Speculative Decoding",
+  "url": "http://arxiv.org/abs/2606.12243v1",
+  "year": "2026"
+ },
+ {
+  "title": "LLMRank: Understanding LLM Strengths for Model Routing",
+  "url": "http://arxiv.org/abs/2510.01234v1",
+  "year": "2025"
+ },
+ {
+  "title": "Large Language Model Routing with Benchmark Datasets",
+  "url": "http://arxiv.org/abs/2309.15789v1",
+  "year": "2023"
+ },
+ {
+  "title": "TagRouter: Learning Route to LLMs through Tags for Open-Domain Text Generation Tasks",
+  "url": "http://arxiv.org/abs/2506.12473v1",
+  "year": "2025"
+ },
+ {
+  "title": "Register Bias in Complexity-Based Large Language Model Routing",
+  "url": "http://arxiv.org/abs/2609.17542v1",
+  "year": "2026"
+ },
+ {
+  "title": "Collective Bias Mitigation via Model Routing and Collaboration",
+  "url": "http://arxiv.org/abs/2610.03240v1",
+  "year": "2026"
+ },
+ {
+  "title": "Adaptive Vision-Language Model Routing for Computer Use Agents",
+  "url": "http://arxiv.org/abs/2603.12823v1",
+  "year": "2026"
+ },
+ {
+  "title": "SeLMRoute: Probabilistic Semantic Evidence for Large Language Model Routing",
+  "url": "http://arxiv.org/abs/2609.34736v1",
+  "year": "2026"
+ },
+ {
+  "title": "RouterKGQA: Specialized--General Model Routing for Constraint-Aware Knowledge Graph Question Answering",
+  "url": "http://arxiv.org/abs/2603.20017v1",
+  "year": "2026"
+ },
+ {
+  "title": "Truthful and Expected-Payment-Optimal Model Routing in Graph-Based Agentic Workflows",
+  "url": "http://arxiv.org/abs/2610.19316v1",
+  "year": "2026"
+ },
+ {
+  "title": "EmbedLLM: Learning Compact Representations of Large Language Models",
+  "url": "http://arxiv.org/abs/2410.02223v2",
+  "year": "2024"
+ },
+ {
+  "title": "RetryGuard: Preventing Self-Inflicted and Attack-Driven Retry Storms in Cloud Applications",
+  "url": "http://arxiv.org/abs/2511.23278v2",
+  "year": "2025"
+ },
+ {
+  "title": "Rethinking HTTP API Rate Limiting: A Client-Side Approach",
+  "url": "http://arxiv.org/abs/2510.04516v3",
+  "year": "2025"
+ },
+ {
+  "title": "AgentR A Stateful and Recovery-Aware Software Architecture for LLM-based Auditable Workflows",
+  "url": "http://arxiv.org/abs/2608.15264v1",
+  "year": "2026"
+ },
+ {
+  "title": "ContinuityBench: A Benchmark and Systems Study of Stateful Failover in Multi-Provider LLM Routing",
+  "url": "http://arxiv.org/abs/2607.15899v1",
+  "year": "2026"
+ },
+ {
+  "title": "Code Broker: A Multi-Agent System for Automated Code Quality Assessment",
+  "url": "http://arxiv.org/abs/2604.23088v2",
+  "year": "2026"
+ },
+ {
+  "title": "Expert Streaming: Accelerating Low-Batch MoE Inference via Multi-chiplet Architecture and Dynamic Expert Trajectory Scheduling",
+  "url": "http://arxiv.org/abs/2603.27624v1",
+  "year": "2026"
+ },
+ {
+  "title": "DynaNDE: Dynamic Near-Data Expert Scheduling for Batched MoE Inference",
+  "url": "http://arxiv.org/abs/2609.00407v1",
+  "year": "2026"
+ },
+ {
+  "title": "PARIS and ELSA: An Elastic Scheduling Algorithm for Reconfigurable Multi-GPU Inference Servers",
+  "url": "http://arxiv.org/abs/2202.13481v1",
+  "year": "2022"
+ },
+ {
+  "title": "ACE-GNN: Adaptive GNN Co-Inference with System-Aware Scheduling in Dynamic Edge Environments",
+  "url": "http://arxiv.org/abs/2511.11586v1",
+  "year": "2025"
+ },
+ {
+  "title": "Dynamic Space-Time Scheduling for GPU Inference",
+  "url": "http://arxiv.org/abs/1901.00041v1",
+  "year": "2018"
+ },
+ {
+  "title": "SEED: Accelerating Reasoning Tree Construction via Scheduled Speculative Decoding",
+  "url": "http://arxiv.org/abs/2406.18200v2",
+  "year": "2024"
+ },
+ {
+  "title": "BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching",
+  "url": "http://arxiv.org/abs/2411.16102v2",
+  "year": "2024"
+ },
+ {
+  "title": "Performance of Confidential Computing GPUs",
+  "url": "http://arxiv.org/abs/2505.16501v1",
+  "year": "2025"
+ },
+ {
+  "title": "EcoServe: Designing Carbon-Aware AI Inference Systems",
+  "url": "http://arxiv.org/abs/2502.05043v2",
+  "year": "2025"
+ },
+ {
+  "title": "MoE-Lightning: High-Throughput MoE Inference on Memory-constrained GPUs",
+  "url": "http://arxiv.org/abs/2411.11217v1",
+  "year": "2024"
+ },
+ {
+  "title": "Low-latency Mini-batch GNN Inference on CPU-FPGA Heterogeneous Platform",
+  "url": "http://arxiv.org/abs/2206.08536v1",
+  "year": "2022"
+ },
+ {
+  "title": "CF-DETR: Coarse-to-Fine Transformer for Real-Time Object Detection",
+  "url": "http://arxiv.org/abs/2505.23317v1",
+  "year": "2025"
+ },
+ {
+  "title": "A Controlled Synthetic Benchmark for Educational Aspect-Based Sentiment Analysis",
+  "url": "http://arxiv.org/abs/2605.25502v2",
+  "year": "2026"
+ },
+ {
+  "title": "Correctness Forensics for Batch Speculative Decoding: Diagnosing the Ragged Tensor Problem",
+  "url": "http://arxiv.org/abs/2510.22876v4",
+  "year": "2025"
+ },
+ {
+  "title": "Predicting LLM Output Length via Entropy-Guided Representations",
+  "url": "http://arxiv.org/abs/2602.11812v2",
+  "year": "2026"
+ },
+ {
+  "title": "SOD: Step-wise On-policy Distillation for Small Language Model Agents",
+  "url": "http://arxiv.org/abs/2605.07725v3",
+  "year": "2026"
+ },
+ {
+  "title": "Distilling Mathematical Reasoning Capabilities into Small Language Models",
+  "url": "http://arxiv.org/abs/2401.11864v5",
+  "year": "2024"
+ },
+ {
+  "title": "Chain-based Distillation for Effective Initialization of Variable-Sized Small Language Models",
+  "url": "http://arxiv.org/abs/2605.07783v1",
+  "year": "2026"
+ },
+ {
+  "title": "Improving Mathematical Reasoning Capabilities of Small Language Models via Feedback-Driven Distillation",
+  "url": "http://arxiv.org/abs/2411.14698v1",
+  "year": "2024"
+ },
+ {
+  "title": "Efficient Knowledge Distillation: Empowering Small Language Models with Teacher Model Insights",
+  "url": "http://arxiv.org/abs/2409.12586v1",
+  "year": "2024"
+ },
+ {
+  "title": "Advantage-Guided Distillation for Preference Alignment in Small Language Models",
+  "url": "http://arxiv.org/abs/2502.17927v2",
+  "year": "2025"
+ },
+ {
+  "title": "Project Aletheia: Verifier-Guided Distillation of Backtracking for Small Language Models",
+  "url": "http://arxiv.org/abs/2601.14290v1",
+  "year": "2026"
+ },
+ {
+  "title": "What the Abstention Option Measures: Refusal Loss, Sampling Churn, and Option Capture in Distilled Small Language Models",
+  "url": "http://arxiv.org/abs/2607.28639v3",
+  "year": "2026"
+ },
+ {
+  "title": "Progress-Aware Distillation for Mitigating Stagnation in Small Language Model Agents",
+  "url": "http://arxiv.org/abs/2610.19439v2",
+  "year": "2026"
+ },
+ {
+  "title": "Capturing Nuanced Preferences: Preference-Aligned Distillation for Small Language Models",
+  "url": "http://arxiv.org/abs/2502.14272v1",
+  "year": "2025"
+ },
+ {
+  "title": "Distillation and Refinement of Reasoning in Small Language Models for Document Re-ranking",
+  "url": "http://arxiv.org/abs/2504.03947v3",
+  "year": "2025"
+ },
+ {
+  "title": "Dynamic Self-Distillation via Previous Mini-batches for Fine-tuning Small Language Models",
+  "url": "http://arxiv.org/abs/2411.16991v1",
+  "year": "2024"
+ },
+ {
+  "title": "Neural-Symbolic Collaborative Distillation: Advancing Small Language Models for Complex Reasoning Tasks",
+  "url": "http://arxiv.org/abs/2409.13203v4",
+  "year": "2024"
+ },
+ {
+  "title": "Knowledge-Augmented Reasoning Distillation for Small Language Models in Knowledge-Intensive Tasks",
+  "url": "http://arxiv.org/abs/2305.18395v2",
+  "year": "2023"
+ },
+ {
+  "title": "SQuaD-SQL: Efficient Text-to-SQL with Small Language Models via LLM-Guided Knowledge Distillation",
+  "url": "http://arxiv.org/abs/2607.08161v1",
+  "year": "2026"
+ },
+ {
+  "title": "$\\textit{SKIntern}$: Internalizing Symbolic Knowledge for Distilling Better CoT Capabilities into Small Language Models",
+  "url": "http://arxiv.org/abs/2409.13183v2",
+  "year": "2024"
+ },
+ {
+  "title": "Small Language Models are Equation Reasoners",
+  "url": "http://arxiv.org/abs/2409.12393v1",
+  "year": "2024"
+ },
+ {
+  "title": "FutureMind: Equipping Small Language Models with Strategic Thinking-Pattern Priors via Adaptive Knowledge Distillation",
+  "url": "http://arxiv.org/abs/2602.01222v1",
+  "year": "2026"
+ },
+ {
+  "title": "SHIELD: A Diverse Clinical Note Dataset and Distilled Small Language Models for Enterprise-Scale De-identification",
+  "url": "http://arxiv.org/abs/2605.03301v2",
+  "year": "2026"
+ },
+ {
+  "title": "Harness-Aware Distillation for Small Language Model Agents",
+  "url": "http://arxiv.org/abs/2610.02858v1",
+  "year": "2026"
+ },
+ {
+  "title": "Coordinated Scheduling for MoE LLM Serving",
+  "url": "http://arxiv.org/abs/2606.15177v1",
+  "year": "2026"
+ },
+ {
+  "title": "DualMap: Enabling Both Cache Affinity and Load Balancing for Distributed LLM Serving",
+  "url": "http://arxiv.org/abs/2602.06502v1",
+  "year": "2026"
+ },
+ {
+  "title": "KunServe: Parameter-centric Memory Management for Efficient Memory Overloading Handling in LLM Serving",
+  "url": "http://arxiv.org/abs/2412.18169v5",
+  "year": "2024"
+ },
+ {
+  "title": "CacheRoute: Planned Prefix-Affinity Routing for Large-Scale LLM Serving",
+  "url": "http://arxiv.org/abs/2608.19677v1",
+  "year": "2026"
+ },
+ {
+  "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
+  "url": "http://arxiv.org/abs/2407.00079v5",
+  "year": "2024"
+ },
+ {
+  "title": "FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving",
+  "url": "http://arxiv.org/abs/2604.20503v1",
+  "year": "2026"
+ },
+ {
+  "title": "Niyama : Breaking the Silos of LLM Inference Serving",
+  "url": "http://arxiv.org/abs/2503.22562v1",
+  "year": "2025"
+ },
+ {
+  "title": "Purlin: Separating Orchestration from the Datapath of Collectives",
+  "url": "http://arxiv.org/abs/2609.36954v2",
+  "year": "2026"
+ },
+ {
+  "title": "Category-Aware Semantic Caching for Heterogeneous LLM Workloads",
+  "url": "http://arxiv.org/abs/2510.26835v1",
+  "year": "2025"
+ },
+ {
+  "title": "Distributed Load Balancing with Workload-Dependent Service Rates",
+  "url": "http://arxiv.org/abs/2411.17103v3",
+  "year": "2024"
+ },
+ {
+  "title": "Simulate Before You Scale: High-Fidelity LLM Inference Planning Without GPUs",
+  "url": "http://arxiv.org/abs/2610.14255v1",
+  "year": "2026"
+ }
+]

@@ -1,0 +1,267 @@
+[
+ {
+  "title": "Can Open-Weight Models Compete on Financial Text Comprehension?",
+  "url": "http://arxiv.org/abs/2608.08634v1",
+  "year": "2026"
+ },
+ {
+  "title": "Newer and Bigger, but Safer? A Longitudinal Study of the Functionality-Security Gap in LLM-Generated Code",
+  "url": "http://arxiv.org/abs/2610.08240v1",
+  "year": "2026"
+ },
+ {
+  "title": "BenGER: Benchmarking LLM Systems on Subsumption-Based Legal Reasoning in German Law",
+  "url": "http://arxiv.org/abs/2605.28183v4",
+  "year": "2026"
+ },
+ {
+  "title": "HakushoBench: A Japanese Chart and Table VQA Benchmark from Governmental White Papers",
+  "url": "http://arxiv.org/abs/2606.01132v2",
+  "year": "2026"
+ },
+ {
+  "title": "Natural Language Tools: A Natural Language Approach to Tool Calling In Large Language Agents",
+  "url": "http://arxiv.org/abs/2510.14453v1",
+  "year": "2025"
+ },
+ {
+  "title": "LongCat-Flash-Prover: Advancing Native Formal Reasoning via Agentic Tool-Integrated Reinforcement Learning",
+  "url": "http://arxiv.org/abs/2603.21065v1",
+  "year": "2026"
+ },
+ {
+  "title": "BareBones: Benchmarking Zero-Shot Geometric Comprehension in VLMs",
+  "url": "http://arxiv.org/abs/2604.10528v6",
+  "year": "2026"
+ },
+ {
+  "title": "Qwen2.5 Technical Report",
+  "url": "http://arxiv.org/abs/2412.15115v2",
+  "year": "2024"
+ },
+ {
+  "title": "Epistemic Stance Flexibility Probing: Measuring Prompt-Conditioned Register Shift in Large Language Models",
+  "url": "http://arxiv.org/abs/2607.12739v1",
+  "year": "2026"
+ },
+ {
+  "title": "When Grammar Guides the Attack: Uncovering Control-Plane Vulnerabilities in LLMs with Structured Output",
+  "url": "http://arxiv.org/abs/2503.24191v4",
+  "year": "2025"
+ },
+ {
+  "title": "One Token Is Enough: Fingerprinting and Verifying Large Language Models from Single-Token Output Distributions",
+  "url": "http://arxiv.org/abs/2607.10252v1",
+  "year": "2026"
+ },
+ {
+  "title": "Budget-Constrained Embodied Perception: Four Resource Walls and a Pre-Registered Evaluation of Access-Structured Perception on Open Models at less than 31B",
+  "url": "http://arxiv.org/abs/2608.22975v1",
+  "year": "2026"
+ },
+ {
+  "title": "Where LLM Graders Succeed and Break: Evidence from Two Computer-Science Exams",
+  "url": "http://arxiv.org/abs/2609.29333v1",
+  "year": "2026"
+ },
+ {
+  "title": "Qwen2 Technical Report",
+  "url": "http://arxiv.org/abs/2407.10671v4",
+  "year": "2024"
+ },
+ {
+  "title": "ReplayRCA: Measuring Post-hoc Diagnosis and Live Oversight of Agent Failures by Counterfactual Replay",
+  "url": "http://arxiv.org/abs/2610.41025v1",
+  "year": "2026"
+ },
+ {
+  "title": "GeoNatureAgent (GNA): A Framework and Benchmark for Pre-Production Evaluation of Tool-Using Agents on Geospatial and Environmental Tasks",
+  "url": "http://arxiv.org/abs/2610.09112v1",
+  "year": "2026"
+ },
+ {
+  "title": "DQRM: Deep Quantized Recommendation Models",
+  "url": "http://arxiv.org/abs/2410.20046v1",
+  "year": "2024"
+ },
+ {
+  "title": "OpenVLA: An Open-Source Vision-Language-Action Model",
+  "url": "http://arxiv.org/abs/2406.09246v3",
+  "year": "2024"
+ },
+ {
+  "title": "Achieving Cloud-Grade SLOs for Local Mixture-of-Experts Inference through CPU-GPU Hybrid Design",
+  "url": "http://arxiv.org/abs/2606.10493v1",
+  "year": "2026"
+ },
+ {
+  "title": "Noesis: Bidirectional Graph-RAG with Adaptive Parallelism and Cross-Knowledge-Base Semantic Discovery",
+  "url": "http://arxiv.org/abs/2608.15919v1",
+  "year": "2026"
+ },
+ {
+  "title": "PentestChain: A Cost-Aware, MCP-Orchestrated Framework for Automated Penetration Testing with Free-Tier LLMs",
+  "url": "http://arxiv.org/abs/2609.18120v2",
+  "year": "2026"
+ },
+ {
+  "title": "Cost-Performance Analysis of Cloud-Based Retail Point-of-Sale Systems: A Comparative Study of Google Cloud Platform and Microsoft Azure",
+  "url": "http://arxiv.org/abs/2601.00530v1",
+  "year": "2026"
+ },
+ {
+  "title": "CognitiveSky: Scalable Sentiment and Narrative Analysis for Decentralized Social Media",
+  "url": "http://arxiv.org/abs/2509.11444v1",
+  "year": "2025"
+ },
+ {
+  "title": "An Iterative LangGraph Agent for Text-to-SQL: Natural Language Access to the Chicago Crime Database",
+  "url": "http://arxiv.org/abs/2609.22917v2",
+  "year": "2026"
+ },
+ {
+  "title": "STREAM: Multi-Tier LLM Inference Middleware with Dual-Channel HPC Token Streaming",
+  "url": "http://arxiv.org/abs/2606.13968v1",
+  "year": "2026"
+ },
+ {
+  "title": "Causal predictive inference and target trial emulation",
+  "url": "http://arxiv.org/abs/2207.12479v1",
+  "year": "2022"
+ },
+ {
+  "title": "Improving randomized controlled trial analysis via data-adaptive borrowing",
+  "url": "http://arxiv.org/abs/2306.16642v2",
+  "year": "2023"
+ },
+ {
+  "title": "Mitigating Domain Drift in Multi Species Segmentation with DINOv2: A Cross-Domain Evaluation in Herbicide Research Trials",
+  "url": "http://arxiv.org/abs/2508.07514v4",
+  "year": "2025"
+ },
+ {
+  "title": "The Compression Paradox in LLM Inference: Provider-Dependent Energy Effects of Prompt Compression",
+  "url": "http://arxiv.org/abs/2603.23528v1",
+  "year": "2026"
+ },
+ {
+  "title": "Randomization Restrictions: Their Impact on Type I Error When Experimenting with Finite Populations",
+  "url": "http://arxiv.org/abs/2510.07153v1",
+  "year": "2025"
+ },
+ {
+  "title": "Framing Spatial Hearing within the Free Energy Principle: A Hierarchical Model of Perceptual Learning",
+  "url": "http://arxiv.org/abs/2610.23196v1",
+  "year": "2026"
+ },
+ {
+  "title": "Comment on 'Exact-corrected confidence interval for risk difference in noninferiority binomial trials'",
+  "url": "http://arxiv.org/abs/2404.08352v1",
+  "year": "2024"
+ },
+ {
+  "title": "Parametric inference for the average hazard approach in time-to-event analysis with sparse risk sets",
+  "url": "http://arxiv.org/abs/2610.41935v1",
+  "year": "2026"
+ },
+ {
+  "title": "Active Inference with People: a general approach to real-time adaptive experiments",
+  "url": "http://arxiv.org/abs/2603.29003v2",
+  "year": "2026"
+ },
+ {
+  "title": "An Introduction to Causal Reinforcement Learning",
+  "url": "http://arxiv.org/abs/2606.24160v1",
+  "year": "2026"
+ },
+ {
+  "title": "User-Assisted Collaborative Distributed Inference for Efficient QoS-Aware Autoscaling",
+  "url": "http://arxiv.org/abs/2608.11840v1",
+  "year": "2026"
+ },
+ {
+  "title": "Distributed Inference and Fine-tuning of Large Language Models Over The Internet",
+  "url": "http://arxiv.org/abs/2312.08361v1",
+  "year": "2023"
+ },
+ {
+  "title": "Kimi K3: Open Frontier Intelligence",
+  "url": "http://arxiv.org/abs/2607.24653v2",
+  "year": "2026"
+ },
+ {
+  "title": "The Reaction of Financial Markets to the Releases of DeepSeek R1 and Kimi K3: A Critical Analysis",
+  "url": "http://arxiv.org/abs/2610.30886v1",
+  "year": "2026"
+ },
+ {
+  "title": "Your Agentic LLMs Secretly Encode Indirect Prompt-Injection Exposure in Hidden States",
+  "url": "http://arxiv.org/abs/2608.02657v2",
+  "year": "2026"
+ },
+ {
+  "title": "Continuous Context Management",
+  "url": "http://arxiv.org/abs/2609.35540v1",
+  "year": "2026"
+ },
+ {
+  "title": "Monitoring and Discovering Reward Hacking with Internal Representations during LLM Evaluations",
+  "url": "http://arxiv.org/abs/2609.19101v2",
+  "year": "2026"
+ },
+ {
+  "title": "Performance of Clinical AI System and Physicians and Frontier Language Models in primary care diagnostics",
+  "url": "http://arxiv.org/abs/2609.09070v1",
+  "year": "2026"
+ },
+ {
+  "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
+  "url": "http://arxiv.org/abs/2407.00079v5",
+  "year": "2024"
+ },
+ {
+  "title": "Available but Unclaimed: An Empirical Study of Human-AI Synergy",
+  "url": "http://arxiv.org/abs/2609.16793v1",
+  "year": "2026"
+ },
+ {
+  "title": "Do LLMs Make More Mistakes If They Do Not Believe the Input Data?",
+  "url": "http://arxiv.org/abs/2609.09363v1",
+  "year": "2026"
+ },
+ {
+  "title": "Can your AI agent be cheaper? Investigating the effects of task specifications on token spend in agentic coding tasks",
+  "url": "http://arxiv.org/abs/2608.25399v1",
+  "year": "2026"
+ },
+ {
+  "title": "Sample-Efficient Post-Training for LEGO Spatial-Physics Reasoning",
+  "url": "http://arxiv.org/abs/2606.07602v2",
+  "year": "2026"
+ },
+ {
+  "title": "Do New Attention Mechanisms Actually Fix Attention Sinks at Million-Token Context?",
+  "url": "http://arxiv.org/abs/2609.08574v2",
+  "year": "2026"
+ },
+ {
+  "title": "Verbal tics in frontier language models: A critical review of current releases, research evidence, and public discussion",
+  "url": "http://arxiv.org/abs/2604.19139v4",
+  "year": "2026"
+ },
+ {
+  "title": "Training Advisors for LLM Agents from Task Outcomes",
+  "url": "http://arxiv.org/abs/2610.09858v1",
+  "year": "2026"
+ },
+ {
+  "title": "WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse",
+  "url": "http://arxiv.org/abs/2609.35263v1",
+  "year": "2026"
+ },
+ {
+  "title": "ServeLearnBench: How Well Can Agents Self-Improve from Serving Experience?",
+  "url": "http://arxiv.org/abs/2610.07792v1",
+  "year": "2026"
+ }
+]

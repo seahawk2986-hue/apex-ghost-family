@@ -1,0 +1,44 @@
+{
+ "math": {
+  "gpt-oss-120b": {
+   "runs": 3,
+   "hits": 2.0
+  },
+  "qwen3.8-27b": {
+   "runs": 3,
+   "hits": 2.0
+  },
+  "nim-v41f": {
+   "runs": 3,
+   "hits": 1.0
+  }
+ },
+ "agentic": {
+  "gpt-oss-120b": {
+   "runs": 3,
+   "hits": 2.0
+  },
+  "qwen3.8-27b": {
+   "runs": 3,
+   "hits": 2.0
+  },
+  "nim-v41f": {
+   "runs": 3,
+   "hits": 1.0
+  }
+ },
+ "code": {
+  "gpt-oss-120b": {
+   "runs": 3,
+   "hits": 2.0
+  },
+  "qwen3.8-27b": {
+   "runs": 3,
+   "hits": 2.0
+  },
+  "nim-v41f": {
+   "runs": 3,
+   "hits": 1.0
+  }
+ }
+}
