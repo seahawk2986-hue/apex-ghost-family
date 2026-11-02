@@ -48,6 +48,33 @@ CODE_FLOOR = ("local-coder", "http://127.0.0.1:1234/v1/chat/completions",
               None, "qwen2.5-coder-7b-instruct", "floor-code")
 
 _lock = threading.Lock()
+STORM_BUDGET = 30            # RetryGuard-class cap: max swapped-retries per hour, fleet-wide
+
+
+def _storm_ok():
+    """The fleet-wide retry budget (RetryGuard lesson): a self-inflicted retry
+    storm = worse than a wall. Reads+writes a rolling-hour counter."""
+    try:
+        now = time.time()
+        log = []
+        p = os.path.join(REPO, "scores", "shard_retries.jsonl")
+        if os.path.isfile(p):
+            for ln in open(p, encoding="utf-8"):
+                try:
+                    rec = json.loads(ln)
+                    if now - rec.get("ts", 0) < 3600:
+                        log.append(rec)
+                except Exception:
+                    continue
+        if len(log) >= STORM_BUDGET:
+            return False
+        log.append({"ts": now})
+        with open(p, "w", encoding="utf-8") as f:
+            for rec in log:
+                f.write(json.dumps(rec) + "\n")
+        return True
+    except Exception:
+        return True  # the ledger must never block honest attempts
 
 
 def env():

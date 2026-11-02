@@ -45,17 +45,15 @@ LANES = [
      "OPENROUTER_API_KEY", "nvidia/nemotron-3-ultra-550b-a55b:free"),
     ("or-reason", "https://openrouter.ai/api/v1/chat/completions",
      "OPENROUTER_API_KEY", "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"),
-    # the auto-router lane (catalog-verified 11/02): shifts to whatever is free
-    ("or-auto", "https://openrouter.ai/api/v1/chat/completions",
-     "OPENROUTER_API_KEY", "openrouter/free"),
     # the NIM tier-2 unlocks (200-verified 11/02, free trial)
     ("nim-v41f", "https://integrate.api.nvidia.com/v1/chat/completions",
      "NVIDIA_API_KEY", "deepseek-ai/deepseek-v4.1-flash"),
     ("nim-glm", "https://integrate.api.nvidia.com/v1/chat/completions",
      "NVIDIA_API_KEY", "z-ai/glm-5.3-flash"),
-    # the NIM flagships (verified real 11/02; dormant until the trial key)
-    ("nim-k3", "https://integrate.api.nvidia.com/v1/chat/completions",
-     "NVIDIA_API_KEY", "moonshotai/kimi-k3"),
+    # the auto-router lane: one key, whatever massive model is free
+    ("or-auto", "https://openrouter.ai/api/v1/chat/completions",
+     "OPENROUTER_API_KEY", "openrouter/free"),
+    # nim-k3 retired: 410 Gone (NVIDIA EOL) - watched via FreeDoorWatch for returns
     ("sflow-122b", "https://api.siliconflow.com/v1/chat/completions",
      "SILICONFLOW_API_KEY", "Qwen/Qwen3.5-122B-A10B"),
     # the 11/02 unlock: the API itself named this model ("no longer available
@@ -110,6 +108,10 @@ def call_lane(env, url, key, model, messages, max_tokens=1):
 def probe(name, url, key, model, env, st):
     rec = st.setdefault(name, {"pace_s": 2.5, "walls": 0, "oks": 0,
                                "last": "-", "last_http": None})
+    # self-heal legacy/partial records (the empty-dict case from the no-key era)
+    for f in ("pace_s", "walls", "oks", "last", "last_http"):
+        rec.setdefault(f, 2.5 if f == "pace_s" else 0 if f == "walls"
+                       else 0 if f == "oks" else "-" if f == "last" else None)
     gap = time.time() - rec.get("last_ok_ts", 0)
     wait = max(0.0, rec["pace_s"] - gap)
     if wait:

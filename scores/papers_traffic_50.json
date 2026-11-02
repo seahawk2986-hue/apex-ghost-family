@@ -1,0 +1,262 @@
+[
+ {
+  "title": "A Flexible Large Language Models Guardrail Development Methodology Applied to Off-Topic Prompt Detection",
+  "url": "http://arxiv.org/abs/2411.12946v2",
+  "year": "2024"
+ },
+ {
+  "title": "A Monad-Based Clause Architecture for Artificial Age Score (AAS) in Large Language Models",
+  "url": "http://arxiv.org/abs/2512.11835v1",
+  "year": "2025"
+ },
+ {
+  "title": "Enhancing GraphQL Security by Detecting Malicious Queries Using Large Language Models, Sentence Transformers, and Convolutional Neural Networks",
+  "url": "http://arxiv.org/abs/2508.11711v2",
+  "year": "2025"
+ },
+ {
+  "title": "AgentRM: An OS-Inspired Resource Manager for LLM Agent Systems",
+  "url": "http://arxiv.org/abs/2603.13110v1",
+  "year": "2026"
+ },
+ {
+  "title": "Prompto: An open source library for asynchronous querying of LLM endpoints",
+  "url": "http://arxiv.org/abs/2408.11847v2",
+  "year": "2024"
+ },
+ {
+  "title": "Fairness in Serving Large Language Models",
+  "url": "http://arxiv.org/abs/2401.00588v2",
+  "year": "2023"
+ },
+ {
+  "title": "AgentHeal: Evaluating Goal-Preserving Resource Recovery of Web Agents under Access Barriers",
+  "url": "http://arxiv.org/abs/2610.39234v1",
+  "year": "2026"
+ },
+ {
+  "title": "GPT4All: An Ecosystem of Open Source Compressed Language Models",
+  "url": "http://arxiv.org/abs/2311.04931v1",
+  "year": "2023"
+ },
+ {
+  "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution",
+  "url": "http://arxiv.org/abs/2607.13034v1",
+  "year": "2026"
+ },
+ {
+  "title": "Mic Drop or Data Flop? Evaluating the Fitness for Purpose of AI Voice Interviewers for Data Collection within Quantitative &amp; Qualitative Research Contexts",
+  "url": "http://arxiv.org/abs/2509.01814v1",
+  "year": "2025"
+ },
+ {
+  "title": "LAPIS: Lightweight API Specification for Intelligent Systems",
+  "url": "http://arxiv.org/abs/2602.18541v1",
+  "year": "2026"
+ },
+ {
+  "title": "S-DAT: A Multilingual, GenAI-Driven Framework for Automated Divergent Thinking Assessment",
+  "url": "http://arxiv.org/abs/2505.09068v2",
+  "year": "2025"
+ },
+ {
+  "title": "Advancing Semantic Caching for LLMs with Domain-Specific Embeddings and Synthetic Data",
+  "url": "http://arxiv.org/abs/2504.02268v1",
+  "year": "2025"
+ },
+ {
+  "title": "Auditing Prompt Caching in Language Model APIs",
+  "url": "http://arxiv.org/abs/2502.07776v2",
+  "year": "2025"
+ },
+ {
+  "title": "CacheProbe: Auditing Prompt Cache Isolation in Gateway APIs",
+  "url": "http://arxiv.org/abs/2605.30613v1",
+  "year": "2026"
+ },
+ {
+  "title": "Silent and Costly: Characterizing and Detecting Prompt-Caching Mis-Integration in LLM Agents",
+  "url": "http://arxiv.org/abs/2610.34817v2",
+  "year": "2026"
+ },
+ {
+  "title": "Efficient Prompt Caching via Embedding Similarity",
+  "url": "http://arxiv.org/abs/2402.01173v1",
+  "year": "2024"
+ },
+ {
+  "title": "Don't Break the Cache: An Evaluation of Prompt Caching for Long-Horizon Agentic Tasks",
+  "url": "http://arxiv.org/abs/2601.06007v2",
+  "year": "2026"
+ },
+ {
+  "title": "Accelerating Local LLMs on Resource-Constrained Edge Devices via Distributed Prompt Caching",
+  "url": "http://arxiv.org/abs/2602.22812v2",
+  "year": "2026"
+ },
+ {
+  "title": "MeanCache: User-Centric Semantic Caching for LLM Web Services",
+  "url": "http://arxiv.org/abs/2403.02694v4",
+  "year": "2024"
+ },
+ {
+  "title": "ContextCache: Context-Aware Semantic Cache for Multi-Turn Queries in Large Language Models",
+  "url": "http://arxiv.org/abs/2506.22791v3",
+  "year": "2025"
+ },
+ {
+  "title": "Prompt Cache: Modular Attention Reuse for Low-Latency Inference",
+  "url": "http://arxiv.org/abs/2311.04934v2",
+  "year": "2023"
+ },
+ {
+  "title": "Closing the Operational Gap in Semantic Caching",
+  "url": "http://arxiv.org/abs/2606.19719v4",
+  "year": "2026"
+ },
+ {
+  "title": "From Exact Hits to Close Enough: Semantic Caching for LLM Embeddings",
+  "url": "http://arxiv.org/abs/2603.03301v1",
+  "year": "2026"
+ },
+ {
+  "title": "Privacy-Preserving LLMs Routing",
+  "url": "http://arxiv.org/abs/2604.15728v1",
+  "year": "2026"
+ },
+ {
+  "title": "RouterBench: A Benchmark for Multi-LLM Routing System",
+  "url": "http://arxiv.org/abs/2403.12031v2",
+  "year": "2024"
+ },
+ {
+  "title": "LLM Routing as Reasoning: A MaxSAT View",
+  "url": "http://arxiv.org/abs/2603.13612v1",
+  "year": "2026"
+ },
+ {
+  "title": "VeriRouter: Towards Verifiable LLM Routing",
+  "url": "http://arxiv.org/abs/2610.17431v2",
+  "year": "2026"
+ },
+ {
+  "title": "Reward-Based Online LLM Routing via NeuralUCB",
+  "url": "http://arxiv.org/abs/2603.30035v1",
+  "year": "2026"
+ },
+ {
+  "title": "Chance-Constrained Personalized LLM Routing with Online Preference Learning",
+  "url": "http://arxiv.org/abs/2610.22695v1",
+  "year": "2026"
+ },
+ {
+  "title": "Adaptive LLM Routing under Budget Constraints",
+  "url": "http://arxiv.org/abs/2508.21141v2",
+  "year": "2025"
+ },
+ {
+  "title": "WISERouter: LLM Routing with Workload Budget Constraint",
+  "url": "http://arxiv.org/abs/2607.23765v1",
+  "year": "2026"
+ },
+ {
+  "title": "HAPS: Hierarchical LLM Routing with Joint Architecture and Parameter Search",
+  "url": "http://arxiv.org/abs/2601.05903v1",
+  "year": "2026"
+ },
+ {
+  "title": "LLMRouterBench: A Massive Benchmark and Unified Framework for LLM Routing",
+  "url": "http://arxiv.org/abs/2601.07206v1",
+  "year": "2026"
+ },
+ {
+  "title": "From Sampled Outcomes to Capability Distributions: Rethinking Supervision for LLM Routing",
+  "url": "http://arxiv.org/abs/2606.06924v2",
+  "year": "2026"
+ },
+ {
+  "title": "LLM Routing with Dueling Feedback",
+  "url": "http://arxiv.org/abs/2510.00841v1",
+  "year": "2025"
+ },
+ {
+  "title": "PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services",
+  "url": "http://arxiv.org/abs/2405.14636v1",
+  "year": "2024"
+ },
+ {
+  "title": "HeatCache: Thermal-aware Energy-efficient LLM Inference Scheduling for Chassis-level Liquid Cooling in Sustainable Edge Server Rooms",
+  "url": "http://arxiv.org/abs/2609.12449v1",
+  "year": "2026"
+ },
+ {
+  "title": "Hard and Soft Real-Time DNN Inference Scheduling on Heterogeneous Multi-Accelerator Systems via Reinforcement Learning",
+  "url": "http://arxiv.org/abs/2610.29503v2",
+  "year": "2026"
+ },
+ {
+  "title": "SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity",
+  "url": "http://arxiv.org/abs/2603.07917v2",
+  "year": "2026"
+ },
+ {
+  "title": "Multi-model Machine Learning Inference Serving with GPU Spatial Partitioning",
+  "url": "http://arxiv.org/abs/2109.01611v1",
+  "year": "2021"
+ },
+ {
+  "title": "CascadeServe: Unlocking Model Cascades for Inference Serving",
+  "url": "http://arxiv.org/abs/2406.14424v1",
+  "year": "2024"
+ },
+ {
+  "title": "Beyond Greedy Chunking: SLO-Aware Sliding-Window Scheduling for LLM Inference",
+  "url": "http://arxiv.org/abs/2606.05933v1",
+  "year": "2026"
+ },
+ {
+  "title": "RecPipe: Co-designing Models and Hardware to Jointly Optimize Recommendation Quality and Performance",
+  "url": "http://arxiv.org/abs/2105.08820v2",
+  "year": "2021"
+ },
+ {
+  "title": "GEMEL: Model Merging for Memory-Efficient, Real-Time Video Analytics at the Edge",
+  "url": "http://arxiv.org/abs/2201.07705v2",
+  "year": "2022"
+ },
+ {
+  "title": "PecSched: Preemptive and Efficient Cluster Scheduling for LLM Inference",
+  "url": "http://arxiv.org/abs/2409.15104v2",
+  "year": "2024"
+ },
+ {
+  "title": "Intelligent Router for LLM Workloads: Improving Performance Through Workload-Aware Load Balancing",
+  "url": "http://arxiv.org/abs/2408.13510v2",
+  "year": "2024"
+ },
+ {
+  "title": "FairBatching: Fairness-Aware Batch Formation for LLM Inference",
+  "url": "http://arxiv.org/abs/2510.14392v1",
+  "year": "2025"
+ },
+ {
+  "title": "JIZHI: A Fast and Cost-Effective Model-As-A-Service System for Web-Scale Online Inference at Baidu",
+  "url": "http://arxiv.org/abs/2106.01674v1",
+  "year": "2021"
+ },
+ {
+  "title": "Fine-Tuning LLMs to Generate Economical and Reliable Actions for the Power Grid",
+  "url": "http://arxiv.org/abs/2602.15350v1",
+  "year": "2026"
+ },
+ {
+  "title": "HiLO: Towards Product-Level Graceful Degradation with a Quality-Aware, Load-Aware Control Framework",
+  "url": "http://arxiv.org/abs/2610.34844v1",
+  "year": "2026"
+ },
+ {
+  "title": "A near-optimal maintenance policy for automated DR devices",
+  "url": "http://arxiv.org/abs/1410.5496v2",
+  "year": "2014"
+ }
+]

@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 17:15:03",
- "count": 728,
+ "ts": "2026-11-02 17:30:03",
+ "count": 784,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -101,6 +101,34 @@
    "license": ""
   },
   {
+   "repo": "nil0x42/duplicut",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "govolution/avet",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "NullArray/AutoSploit",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "GoVanguard/legion",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "kpcyrd/rshijack",
    "score": 83.8,
    "tier": "VEIN",
@@ -108,7 +136,21 @@
    "license": ""
   },
   {
+   "repo": "mschwager/fierce",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "belane/CloudHunter",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Marten4n6/EvilOSX",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -123,6 +165,27 @@
   },
   {
    "repo": "screego/server",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "tinode/chat",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "TokTok/c-toxcore",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "iredmail/iRedMail",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -158,6 +221,20 @@
   },
   {
    "repo": "kpcyrd/sniffglue",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nametoolong/oregano",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "fkie-cad/friTap",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -213,6 +290,13 @@
    "license": ""
   },
   {
+   "repo": "caelestia-dots/cli",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "morganamilo/paru",
    "score": 83.8,
    "tier": "VEIN",
@@ -241,6 +325,13 @@
    "license": ""
   },
   {
+   "repo": "xability/py_maidr",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "PortSwigger/mcp-server",
    "score": 83.8,
    "tier": "VEIN",
@@ -248,7 +339,56 @@
    "license": ""
   },
   {
+   "repo": "Denkishi/ssbu-recomp",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "chrissotraidis/kartpad",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "OpenMW/openmw",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "Rainchus/Donkey-Kong-64-Recompiled",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "kirklandsig/halo2-decompiled",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "freefrank/LostOdysseyRecomp",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Hero88go/melee-unlocked",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "CameronRedmore/Crash-Team-Racing-Turbocharged",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -353,6 +493,13 @@
    "license": ""
   },
   {
+   "repo": "byt3bl33d3r/MITMf",
+   "score": 83.7,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "alfio-event/alf.io",
    "score": 83.7,
    "tier": "VEIN",
@@ -444,6 +591,27 @@
    "license": ""
   },
   {
+   "repo": "AstrBotDevs/AstrBot",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "oobabooga/text-generation-webui",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "theroyallab/tabbyAPI",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "rustmailer/bichon",
    "score": 83.1,
    "tier": "VEIN",
@@ -465,6 +633,13 @@
    "license": ""
   },
   {
+   "repo": "chiefonboarding/ChiefOnboarding",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "vanhauser-thc/thc-hydra",
    "score": 83.1,
    "tier": "VEIN",
@@ -473,6 +648,13 @@
   },
   {
    "repo": "robertdavidgraham/masscan",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "patched-codes/patchwork",
    "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
@@ -514,7 +696,21 @@
    "license": ""
   },
   {
+   "repo": "simple-login/app",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "the-djmaze/snappymail",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "knadh/listmonk",
    "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
@@ -577,6 +773,13 @@
    "license": ""
   },
   {
+   "repo": "redlib-org/redlib",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "teikei/teikei",
    "score": 83.1,
    "tier": "VEIN",
@@ -598,6 +801,55 @@
    "license": ""
   },
   {
+   "repo": "getpelican/pelican",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nabla-c0d3/sslyze",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Axenide/Ax-Shell",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Xeeynamo/sotn-decomp",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "z3xox/Tenkaichi3Decomp",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Mikompilation/MikuPan",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "bambulab/BambuStudio",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "prusa3d/PrusaSlicer",
    "score": 83.1,
    "tier": "VEIN",
@@ -613,6 +865,13 @@
   },
   {
    "repo": "supermerill/SuperSlicer",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "OrcaSlicer/OrcaSlicer",
    "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
@@ -843,6 +1102,13 @@
    "license": ""
   },
   {
+   "repo": "evilsocket/pwnagotchi",
+   "score": 79.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "relative/synchrony",
    "score": 79.6,
    "tier": "VEIN",
@@ -857,6 +1123,27 @@
    "license": ""
   },
   {
+   "repo": "grpc/grpc",
+   "score": 76.2,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "apache/incubator-mxnet",
+   "score": 73.8,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "django-guardian/django-guardian",
+   "score": 71.4,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "OpenSMTPD/OpenSMTPD",
    "score": 67.2,
    "tier": "VEIN",
@@ -864,8 +1151,43 @@
    "license": ""
   },
   {
+   "repo": "Elgg/Elgg",
+   "score": 66.7,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "pretalx/pretalx",
+   "score": 64.2,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "tboox/tbox",
    "score": 64.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "tuunanet/rea-ski-or-die-reconstruction",
+   "score": 62.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "JRickey/BattleShip",
+   "score": 61.8,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ryanoasis/nerd-fonts",
+   "score": 61.4,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -892,9 +1214,37 @@
    "license": ""
   },
   {
+   "repo": "facebook/folly",
+   "score": 60.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "CoreSecurity/impacket",
+   "score": 59.5,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "django-cms/django-cms",
+   "score": 59.2,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "Pylons/pyramid",
    "score": 58.1,
    "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "tensorflow/tensorflow",
+   "score": 57.5,
+   "tier": "VEIN",
    "stars": 0,
    "license": ""
   },
@@ -1802,6 +2152,13 @@
    "license": ""
   },
   {
+   "repo": "openframeworks/openFrameworks",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "gammasoft71/xtd",
    "score": 51.1,
    "tier": "MINE",
@@ -1838,6 +2195,13 @@
   },
   {
    "repo": "Farama-Foundation/Gymnasium",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "DLR-RM/stable-baselines3",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -2222,7 +2586,21 @@
    "license": ""
   },
   {
+   "repo": "ashlrai/phantom-secrets",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "ashlrai/locus",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ashlrai/phantom",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -2705,6 +3083,13 @@
    "license": ""
   },
   {
+   "repo": "stablyai/orca",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "basementuniverse/kanbn",
    "score": 51.1,
    "tier": "MINE",
@@ -2720,6 +3105,13 @@
   },
   {
    "repo": "HitKeep/hitkeep",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "lutzroeder/netron",
    "score": 51.0,
    "tier": "MINE",
    "stars": 0,

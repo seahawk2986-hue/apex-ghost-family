@@ -1356,6 +1356,13 @@ def receipts_board():
         return JSONResponse({"receipts-note": out}, status_code=500)
 
 
+@app.get("/")
+def root_redirect():
+    """THE public root: land on the storefront (the funnel's front door)."""
+    from fastapi.responses import RedirectResponse
+    return RedirectResponse("/jobs")
+
+
 @app.get("/talk")
 def talk_page():
     """APEX Chat v2 - the polished console (page file: repo-local ApexChatPage.html)."""

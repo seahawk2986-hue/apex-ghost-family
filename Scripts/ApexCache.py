@@ -66,6 +66,42 @@ def stats():
         return {"entries": rows[0], "replayed": rows[1]}
 
 
+# --- the 50-paper combine: the semantic near-cache (MeanCache/ContextCache class) ---
+def _trigrams(s):
+    s = (s or "").lower()
+    return {s[i:i + 5] for i in range(0, max(0, len(s) - 4), 2)} or {s}
+
+
+def _jaccard(a, b):
+    return len(a & b) / max(1, len(a | b))
+
+
+def cache_lookup_any(text, threshold=0.82):
+    """Exact hash first, then a LOCAL trigram near-match over validated
+    entries - the semantic-cache pattern the 50-paper pass surfaced as the
+    #1 proven upgrade over exact-hits. Returns (reply, kind: exact|semantic|none)."""
+    reply, _k = cache_get(text)
+    if reply is not None:
+        return reply, "exact"
+    try:
+        con = _conn()
+        rows = con.execute("SELECT prompt_hash, task, resolution "
+                           "FROM cache_entries WHERE verify_state='validated' "
+                           "LIMIT 400").fetchall()
+        con.close()
+    except Exception:
+        return None, "none"
+    cur = _trigrams(text)
+    best, best_sim = None, 0.0
+    for h, task, res in rows:
+        sim = _jaccard(_trigrams(task or ""), cur)
+        if sim > best_sim:
+            best, best_sim = (h, res), sim
+    if best and best_sim >= threshold:
+        return best[1], "semantic"
+    return None, "none"
+
+
 if __name__ == "__main__":
     h = signature({"task": "smoke", "error": "ZeroDivisionError"})
     if lookup(h):
