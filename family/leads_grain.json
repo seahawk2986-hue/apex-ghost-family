@@ -1,10 +1,17 @@
 {
- "ts": "2026-11-02 09:45:03",
- "count": 713,
+ "ts": "2026-11-02 10:00:02",
+ "count": 724,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
    "score": 150.0,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "NVIDIA/TensorRT-LLM",
+   "score": 129.6,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -724,6 +731,13 @@
    "license": ""
   },
   {
+   "repo": "Atinoda/text-generation-webui-docker",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "miroslavpejic85/mirotalk",
    "score": 83.0,
    "tier": "VEIN",
@@ -1180,6 +1194,13 @@
   },
   {
    "repo": "peiikai/LASRecomp",
+   "score": 51.2,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ikawrakow/ik_llama.cpp",
    "score": 51.2,
    "tier": "MINE",
    "stars": 0,
@@ -2194,13 +2215,6 @@
    "license": ""
   },
   {
-   "repo": "Bhanunamikaze/Agentic-SEO-Skill",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "ashlrai/locus",
    "score": 51.1,
    "tier": "MINE",
@@ -2615,6 +2629,62 @@
   },
   {
    "repo": "leon-ai/leon",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "frankborden/slippilab",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "renderbag/plume",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Kenix3/libultraship",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "HarbourMasters/Torch",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "PSModule/NerdFonts",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "hedge-dev/XenosRecomp",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "hedge-dev/XenonRecomp",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "jpawlowski/nerd-fonts-installer-PS",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -3595,6 +3665,13 @@
   },
   {
    "repo": "oracle/python-oracledb",
+   "score": 31.5,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "xenia-project/FFmpeg",
    "score": 31.5,
    "tier": "GOLD",
    "stars": 0,
