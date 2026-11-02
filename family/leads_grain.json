@@ -1,10 +1,24 @@
 {
- "ts": "2026-11-02 11:00:03",
- "count": 723,
+ "ts": "2026-11-02 11:15:03",
+ "count": 730,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
    "score": 150.0,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "NVIDIA/TensorRT-LLM",
+   "score": 129.6,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "twentyhq/twenty",
+   "score": 123.1,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -101,7 +115,28 @@
    "license": ""
   },
   {
+   "repo": "govolution/avet",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "GoVanguard/legion",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "kpcyrd/rshijack",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "mschwager/fierce",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -417,6 +452,13 @@
   },
   {
    "repo": "jortilles/EDA",
+   "score": 83.2,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "AUTOMATIC1111/stable-diffusion-webui",
    "score": 83.2,
    "tier": "VEIN",
    "stars": 0,
@@ -2202,6 +2244,13 @@
   },
   {
    "repo": "beanboi7/yomomma-apiv2",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Bhanunamikaze/Agentic-SEO-Skill",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
