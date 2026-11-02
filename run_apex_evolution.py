@@ -1333,6 +1333,18 @@ async def process_incoming_agent_event(payload: FriendPayload, background_tasks:
 class TalkMsg(BaseModel):
     message: str
 
+@app.get("/jobs")
+def jobs_board():
+    """the storefront: the job board's public face (fresh receipts)."""
+    from fastapi.responses import HTMLResponse
+    page = os.path.join(r"C:\Users\seaha\Apex-Adapter", "jobs_page.html")
+    try:
+        with open(page, "r", encoding="utf-8") as f:
+            return HTMLResponse(f.read())
+    except Exception as e:
+        return JSONResponse({"jobs-note": str(e)}, status_code=500)
+
+
 @app.get("/talk")
 def talk_page():
     """APEX Chat v2 - the polished console (page file: repo-local ApexChatPage.html)."""
