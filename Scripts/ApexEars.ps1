@@ -32,7 +32,7 @@ function Send-ToApex($cmd) {
     try {
         # THE AUTH-CURE: the serve = fail-closed (the 401 was honest); the
         # key = read from the file at send-time. Case-proof via $PSScriptRoot
-        # (a bare $R here collides with the loop's $r recognition-result —
+        # (a bare $R here collides with the loop's $r recognition-result -
         # PowerShell vars are case-insensitive, that was the 20:28 crash).
         $kp = Join-Path (Split-Path -Parent $PSScriptRoot) "Config\apex_api.key"
         $key = (Get-Content $kp -Raw).Trim()
@@ -85,6 +85,30 @@ if ($p.muted) { Log "muted"; while ($true) { Start-Sleep -Seconds 10; $p = Cfg; 
 $eng = $null
 $wakeGrammar = $null
 $dictGrammar = $null
+
+# == THE PAPER-BACKED VOICE SET (all pure code = zero RAM, zero VRAM) ==
+$script:Acks = @("Yes, Andrew?", "Go ahead.", "I'm listening.", "Mm-hm?")
+$script:AckIdx = 0
+$script:echoUntil = Get-Date -Date "2000-01-01"
+$script:retried = $false
+$script:pendingDanger = $null
+
+function Speak-Clean($m) {
+    # THE FLATTENER: markdown-to-prose so the TTS never says "star star"
+    # or "hash" (the spoken-reply etiquette; the brain also emits prose
+    # by instruction - this is the belt for whatever slips through)
+    $t = [string]$m
+    $t = $t -replace '(?m)^#{1,6}\s*', ''
+    $t = $t -replace '\*\*([^*]+)\*\*', '$1'
+    $t = $t -replace '\*([^*]+)\*', '$1'
+    $t = $t -replace '```[\s\S]*?```', '(code shown on screen)'
+    $t = $t -replace '`([^`]+)`', '$1'
+    $t = $t -replace '\[([^\]]+)\]\(http[^)]+\)', '$1'
+    $t = $t -replace 'https?://\S+', '(a link, on screen)'
+    $t = $t -replace '\n{2,}', '. '
+    $t = $t -replace '\s+', ' '
+    return $t.Trim()
+}
 
 function New-Engine {
     $e = New-Object System.Speech.Recognition.SpeechRecognitionEngine
@@ -151,16 +175,28 @@ try {
         if ($shown.Length -gt 50) { $shown = $shown.Substring(0, 50) }
         Log ("heard [$mode]: '" + $shown + "' (conf " + [math]::Round($conf, 2) + ")")
 
+        # THE ECHO-GUARD: right after Apex speaks, his own TTS lands in
+        # the mic (the self-echo fiction that consumes voice agents); a
+        # low-confidence row inside 5-7s after speech = my own voice's
+        # tail, suppressed. Real wakes (0.7-0.95) always pass.
+        if ((Get-Date) -lt $script:echoUntil -and $conf -lt 0.55) {
+            Log "echo-guard: own-voice tail suppressed"
+            continue
+        }
+
         if ($mode -eq "wake") {
             if ($conf -lt [double]$p.wake_min_conf) { continue }
             if ($heard -match "apex|apx|a pex") {
                 Log "wake word matched"
                 # swap to dictation for the command
+                $script:retried = $false
                 try { $eng.UnloadGrammar($wakeGrammar) } catch {}
                 $eng.LoadGrammar($dictGrammar)
                 $mode = "cmd"
                 $cmdStart = Get-Date
-                Speak "Yes, Andrew?"
+                Speak $script:Acks[$script:AckIdx % $script:Acks.Count]
+                $script:AckIdx++
+                $script:echoUntil = (Get-Date).AddSeconds(5)
                 continue
             }
             continue
@@ -172,16 +208,66 @@ try {
         $eng.LoadGrammar($wakeGrammar)
         $mode = "wake"
         if ($cmd -and $conf -ge 0.15) {
+            # THE CONFIRM-GATE (destructive-verb protection, spoken confirm;
+            # any later confirm-phrase releases the stashed command)
+            if ($script:pendingDanger -and
+                    $cmd -match "(do it|confirm|yes|sure|go ahead)") {
+                $cmd = $script:pendingDanger
+                $script:pendingDanger = $null
+                Log ("confirmed: '" + $cmd + "'")
+            } elseif ($cmd -match "(delete|wipe|erase|format|uninstall|kill)" -and
+                      -not $script:pendingDanger) {
+                $script:pendingDanger = $cmd
+                Log "danger-verb: spoken confirm pending"
+                Speak "That sounds irreversible. Say: Apex do it, to confirm."
+                $script:echoUntil = (Get-Date).AddSeconds(7)
+                continue
+            } else {
+                $script:pendingDanger = $null
+            }
             Log ("command: '" + $cmd + "'")
+            # THE ONE-SEC BACKCHANNEL (the data-driven delay-disclosure:
+            # if the brain's last ttft was slow, acknowledge the wait)
+            $slow = $false
+            try {
+                $mm = Get-Content (Join-Path (Split-Path -Parent $PSScriptRoot) "Config\ChatMetrics.json") -Raw |
+                    ConvertFrom-Json
+                $last = $mm.recent[-1].ttft_s
+                if ($last -and [double]$last -gt 8) { $slow = $true }
+            } catch {}
+            if ($slow) {
+                Speak "One second."
+                $script:echoUntil = (Get-Date).AddSeconds(5)
+            }
             Toast ("Apex heard: " + $cmd)
             $rep = Send-ToApex $cmd
             if ($rep -and $rep.reply) {
-                Speak ([string]$rep.reply)          # THE REAL ANSWER, SPOKEN
+                $clean = Speak-Clean $rep.reply
+                if (-not $clean) { $clean = [string]$rep.reply }
+                if ($clean.Length -gt 400) {
+                    # THE PACE-CURE (long reply = a notch faster, the
+                    # listening-comfort standard; -Rate = SAPI -10..10)
+                    & $p.speak_script -Text $clean -Rate 1 -NoWatch | Out-Null
+                } else {
+                    Speak $clean
+                }
             } else {
                 Speak ("On it. My answer is on the screen - the chat page or the toast.")
             }
+            $script:echoUntil = (Get-Date).AddSeconds(7)
         } else {
             Log "command rejected (empty/low conf)"
+            # THE REPAIR-RETRY (the clarify-request: one second chance,
+            # never a loop; natural wakes reset it)
+            if (-not $script:retried) {
+                $script:retried = $true
+                Speak "Say that again?"
+                $script:echoUntil = (Get-Date).AddSeconds(5)
+                try { $eng.UnloadGrammar($wakeGrammar) } catch {}
+                $eng.LoadGrammar($dictGrammar)
+                $mode = "cmd"
+                $cmdStart = Get-Date
+            }
         }
     }
 } catch {

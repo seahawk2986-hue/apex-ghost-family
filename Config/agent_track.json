@@ -10,8 +10,8 @@
   "rate": 1.0
  },
  "local-phi4": {
-  "delivered": 2,
+  "delivered": 4,
   "failed": 1,
-  "rate": 0.67
+  "rate": 0.8
  }
 }

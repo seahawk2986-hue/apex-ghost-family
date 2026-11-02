@@ -5,7 +5,8 @@
 #        ApexSpeak.ps1 -Text "hello" -NoWatch (speaks without the stop-watch)
 param(
   [Parameter(Mandatory = $true)][string]$Text,
-  [switch]$NoWatch
+  [switch]$NoWatch,
+  [int]$Rate = 0
 )
 $ErrorActionPreference = "SilentlyContinue"
 $R = "C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
@@ -17,7 +18,7 @@ function Log($m) {
 }
 Add-Type -AssemblyName System.Speech
 $synth = New-Object System.Speech.Synthesis.SpeechSynthesizer
-$synth.Rate = 0
+$synth.Rate = [Math]::Max(-6, [Math]::Min(6, $Rate))
 $synth.Volume = 100
 
 # THE CHUNKER (the Pipecat/TTS-latency pattern: speak per-sentence = the

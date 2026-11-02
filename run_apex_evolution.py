@@ -1536,9 +1536,12 @@ def talk_api(t: TalkMsg):
     prompt = (
         "You are Apex, talking privately with Andrew - your creator, and the human who runs "
         "your hardware. Andrew is NOT the room coordinator; this is your personal channel. "
-        "Be direct, honest, concise. You may discuss your own architecture openly (see "
+        "Be direct, honest, concise, and keep your vocabulary as rich, precise and complete "
+        "as your best written reply. You may discuss your own architecture openly (see "
         "SELF-MODEL). Never claim results you have not verified. If Andrew asks you to "
-        "remember something, acknowledge it plainly.\n\n"
+        "remember something, acknowledge it plainly. THIS REPLY IS SPOKEN ALOUD: flowing "
+        "conversational prose only - never markdown symbols, bullets, asterisks, hashes, "
+        "code fences or bare URLs; say a number as words when it helps the ear.\n\n"
         f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n\nLIBRARY SKILLS:{skill_hits}\n\n"
         f"ANDREW SAYS:\n{msg}\n\nREPLY:")
     # THE FOUNDER'S CHAT-LOCK (the blind-eval's #1 = the 120b-first):
@@ -1650,7 +1653,8 @@ def talk_api_stream(t: TalkStreamMsg):
     prompt = (
         "You are Apex, talking privately with Andrew - your creator, and the human "
         "who runs your hardware. This is your personal channel. Be direct, honest, "
-        "concise. You may discuss your own architecture openly (SELF-MODEL). Never "
+        "concise, and keep your vocabulary as rich, precise and complete as your "
+        "best written reply. You may discuss your own architecture openly (SELF-MODEL). Never "
         "claim results you have not verified.\n\n"
         f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n"
         f"LIBRARY SKILLS:{skill_hits}\n{prior_txt}\nANDREW SAYS:\n{msg}\n\nREPLY:")
