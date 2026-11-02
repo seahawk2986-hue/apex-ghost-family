@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 11:45:02",
- "count": 726,
+ "ts": "2026-11-02 12:00:03",
+ "count": 729,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -102,13 +102,6 @@
   },
   {
    "repo": "kpcyrd/rshijack",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mschwager/fierce",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -2705,6 +2698,20 @@
    "license": ""
   },
   {
+   "repo": "Kilo-Org/kilocode",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "stablyai/orca",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "emanuelef/daily-stars-explorer",
    "score": 51.0,
    "tier": "MINE",
@@ -4673,6 +4680,20 @@
   },
   {
    "repo": "balzack/databag",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "openai/codex",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "google-gemini/gemini-cli",
    "score": 30.1,
    "tier": "GOLD",
    "stars": 0,
