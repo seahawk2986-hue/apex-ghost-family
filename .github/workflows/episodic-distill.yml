@@ -1,0 +1,22 @@
+name: episodic-distill
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  distill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 Tools/digest_episodic.py
+      - name: commit the distilled progress
+        run: |
+          git config user.name "ghost-outsource"
+          git config user.email "actions@users.noreply.github.com"
+          git add scores/
+          git commit -m "gi-progress: the off-box distill [skip ci]" || echo "nothing new"
+          git fetch origin && git pull --rebase origin main || true
+          git push || true
