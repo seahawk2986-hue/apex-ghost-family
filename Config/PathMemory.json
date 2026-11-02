@@ -5,19 +5,19 @@
  },
  "use": {
   "lessons_written": 0,
-  "recruit_bonus": 0.003
+  "recruit_bonus": 0.001
  },
  "events": {
   "reqs": 0.9603999999999999,
-  "mines": 145.0204
+  "mines": 154.6244
  },
  "wiki": {
-  "reqs": 0.9223681599999999,
+  "reqs": 0.8858423808639998,
   "mines": 28.419999999999998
  },
  "hf_space": {
-  "reqs": 0.15549393481587023,
-  "mines": 0.15549393481587023
+  "reqs": 0.14933637499716176,
+  "mines": 0.14933637499716176
  },
  "trending": {},
  "variants": {
@@ -576,12 +576,12 @@
   "best_action": "none this cycle - the honest zero; widen lanes/token tomorrow"
  },
  "none": {
-  "reqs": 0.9216,
-  "mines": 137.3184,
+  "reqs": 0.84934656,
+  "mines": 126.55263743999998,
   "recruit_bonus": 1.0
  },
  "upward": {
-  "ts": "2026-11-01 19:54:23",
+  "ts": "2026-11-01 21:54:36",
   "alarms": 5,
   "genes_front": [
    "base"
@@ -592,13 +592,13 @@
    "papers_2026": 100,
    "papers_evolution": 421
   },
-  "gi_score": 490.0,
+  "gi_score": 499.0,
   "goals": {
-   "gold": 2406.0,
+   "gold": 2384.0,
    "money": 0.0,
-   "life": 167.0,
+   "life": 171.0,
    "recruits": 6.0,
-   "jobs": 213.0,
+   "jobs": 77.0,
    "coding": 416.0,
    "omnivore": 448.0,
    "efficiency": 526.0,
@@ -633,8 +633,8 @@
   }
  },
  "ddg": {
-  "reqs": 0.84934656,
-  "mines": 33.973862399999994,
+  "reqs": 0.782757789696,
+  "mines": 31.31031158783999,
   "recruit_bonus": 1.0
  }
 }
