@@ -6832,7 +6832,302 @@
    ],
    "registered": "2026-11-02 10:04:47",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "label_community_user",
+   "source_file": ".github/scripts/label_community_user.py",
+   "source_repo": "NVIDIA/TensorRT-LLM",
+   "license": "check repo",
+   "sha256": "8fa5ad728137635cd12a878d3e009291f254224e9f2b97bcab70bec236a9f663",
+   "lines": 244,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "requests",
+    "sys"
+   ],
+   "registered": "2026-11-02 19:53:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "pr_checklist_check",
+   "source_file": ".github/scripts/pr_checklist_check.py",
+   "source_repo": "NVIDIA/TensorRT-LLM",
+   "license": "check repo",
+   "sha256": "5be4edff00b738a81df5f7ef1a257089c501e51e2bf896ed0952c9cbc4c9269d",
+   "lines": 121,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-02 19:53:25",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "ApplicationInfo",
+   "source_file": "app/ApplicationInfo.py",
+   "source_repo": "GoVanguard/legion",
+   "license": "check repo",
+   "sha256": "8144fe6e0c869365e02f6f82a6a457952c8a65b43759dd14fa1c06c999194822",
+   "lines": 45,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-02 19:53:37",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "ModelHelpers",
+   "source_file": "app/ModelHelpers.py",
+   "source_repo": "GoVanguard/legion",
+   "license": "check repo",
+   "sha256": "0ce429cd9fa70e1a8e1b958aca669edf3709c5753bd8654b903e209ba530ab72",
+   "lines": 35,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-02 19:53:37",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "fierce/lists/__init__.py",
+   "source_repo": "mschwager/fierce",
+   "license": "check repo",
+   "sha256": "16919b687609619ce6f43932f173e20e4d2245e8f2bf516955ff62c6a70ed28f",
+   "lines": 8,
+   "first_line": "import pathlib",
+   "imports": [
+    "pathlib"
+   ],
+   "registered": "2026-11-02 19:53:39",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conftest",
+   "source_file": "tests/conftest.py",
+   "source_repo": "jianchang512/pyvideotrans",
+   "license": "check repo",
+   "sha256": "44bb954f434076d1fa20f700756b1772f4fb46e8fcd1774481a1e52d8051522f",
+   "lines": 147,
+   "first_line": "\"\"\"",
+   "imports": [
+    "importlib",
+    "sys",
+    "types"
+   ],
+   "registered": "2026-11-02 19:53:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "omnivoice_qwentts",
+   "source_file": "tests/omnivoice-qwentts.py",
+   "source_repo": "jianchang512/pyvideotrans",
+   "license": "check repo",
+   "sha256": "13b1e58d4e3f4fb144765c7414318cf831f71787ad132503780d2ccdcb4d1c93",
+   "lines": 81,
+   "first_line": "\"\"\"",
+   "imports": [
+    "json",
+    "soundfile",
+    "torch",
+    "traceback"
+   ],
+   "registered": "2026-11-02 19:53:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "advanced_results",
+   "source_file": "examples/advanced_results.py",
+   "source_repo": "sergree/matchering",
+   "license": "check repo",
+   "sha256": "c882891885e23587351e14bf50cb266b67fc6e9e2050adfdb6aed2639614ac84",
+   "lines": 33,
+   "first_line": "import matchering as mg",
+   "imports": [
+    "matchering"
+   ],
+   "registered": "2026-11-02 19:53:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "advanced_text_output",
+   "source_file": "examples/advanced_text_output.py",
+   "source_repo": "sergree/matchering",
+   "license": "check repo",
+   "sha256": "956d58eee6bca74d2c4b1f27d7c436a3ec39de93286c603e24e2ef1fbddf1bc7",
+   "lines": 50,
+   "first_line": "import matchering as mg",
+   "imports": [
+    "matchering"
+   ],
+   "registered": "2026-11-02 19:53:55",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "lib/__init__.py",
+   "source_repo": "MylarComics/mylar3",
+   "license": "check repo",
+   "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+   "lines": 2,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-11-02 19:53:56",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bencode",
+   "source_file": "lib/bencode.py",
+   "source_repo": "MylarComics/mylar3",
+   "license": "check repo",
+   "sha256": "55b69ddeb41020a8b86cee58765d9e1e34b8b4439bfbd20334e3556f9f0a7ae9",
+   "lines": 282,
+   "first_line": "# Copyright (C) 2011 by clueless <clueless.nospam ! mail.com>",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-02 19:53:56",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "bukuserver/__init__.py",
+   "source_repo": "jarun/Buku",
+   "license": "check repo",
+   "sha256": "2297aa8c3278b16dbd9a353f38445b5c3e02776beeff5bb985bfafe28c0b07e7",
+   "lines": 19,
+   "first_line": "try:",
+   "imports": [],
+   "registered": "2026-11-02 19:53:58",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__main__",
+   "source_file": "bukuserver/__main__.py",
+   "source_repo": "jarun/Buku",
+   "license": "check repo",
+   "sha256": "117a35fb88851d73edfeb88dfa9d36bae69aa442dcb7eb8c6576482c430c4109",
+   "lines": 9,
+   "first_line": "try:",
+   "imports": [],
+   "registered": "2026-11-02 19:53:58",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "normalize_generated",
+   "source_file": "proto/normalize_generated.py",
+   "source_repo": "OliveTin/OliveTin",
+   "license": "check repo",
+   "sha256": "d90dc13ec8612f4e78f73538075ef24267a11f8f0026d108abcf42defdbee2de",
+   "lines": 29,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [],
+   "registered": "2026-11-02 19:54:19",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "devcheck",
+   "source_file": "scripts/devcheck.py",
+   "source_repo": "OliveTin/OliveTin",
+   "license": "check repo",
+   "sha256": "e6262d876c44bc7b4345dc4b4f01a47675f4c00e26adbe537f3df0a692ef35de",
+   "lines": 290,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "re",
+    "shutil",
+    "sys"
+   ],
+   "registered": "2026-11-02 19:54:19",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "extension_edit",
+   "source_file": "scripts/dev/extension-edit.py",
+   "source_repo": "superdesk/superdesk",
+   "license": "check repo",
+   "sha256": "298662e94c9424bc94e0b45946a66fe04249763637c5d5059c12f92be3d701ad",
+   "lines": 154,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-02 19:54:21",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "update_cores_references",
+   "source_file": "scripts/update-cores-references.py",
+   "source_repo": "superdesk/superdesk",
+   "license": "check repo",
+   "sha256": "502f2eaae5bd7ea5c99c7f9e18d389321c16d89329dd71079598d2e14df25ab5",
+   "lines": 39,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "feedparser",
+    "fileinput",
+    "re"
+   ],
+   "registered": "2026-11-02 19:54:21",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "admin",
+   "source_file": "main/admin.py",
+   "source_repo": "mataroablog/mataroa",
+   "license": "check repo",
+   "sha256": "32ac54a04bff7707915d591385a624faa402adb02c12c39848f655d15dd58632",
+   "lines": 247,
+   "first_line": "from django.conf import settings",
+   "imports": [],
+   "registered": "2026-11-02 19:54:22",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "apps",
+   "source_file": "main/apps.py",
+   "source_repo": "mataroablog/mataroa",
+   "license": "check repo",
+   "sha256": "0fab3073159960da221694fe9cb47dde835ba776fc1d97c4fda999422160ddb8",
+   "lines": 6,
+   "first_line": "from django.apps import AppConfig",
+   "imports": [],
+   "registered": "2026-11-02 19:54:22",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "arc_tool",
+   "source_file": "tools/arc_tool.py",
+   "source_repo": "flyngmt/ACGC-PC-Port",
+   "license": "check repo",
+   "sha256": "645f068fade0c4c2acac7d6596bf11a90997d427c2023478ce3b7070e54141cb",
+   "lines": 91,
+   "first_line": "import pyjkernel",
+   "imports": [
+    "argparse",
+    "os",
+    "pyjkernel"
+   ],
+   "registered": "2026-11-02 19:54:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "pal16dis",
+   "source_file": "tools/converters/pal16dis.py",
+   "source_repo": "flyngmt/ACGC-PC-Port",
+   "license": "check repo",
+   "sha256": "ee6e0f3af9840bc91845b6ca058afe0b33f936aaa1aa91dabc92b5ea533e7e81",
+   "lines": 29,
+   "first_line": "from argparse import ArgumentParser",
+   "imports": [
+    "struct"
+   ],
+   "registered": "2026-11-02 19:54:40",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-02 10:04:47"
+ "built": "2026-11-02 19:54:40"
 }
