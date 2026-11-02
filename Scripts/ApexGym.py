@@ -120,15 +120,20 @@ def truth(j):
 
 
 def grade(j, forecast):
+    f = (forecast or "").strip()
     if j.get("code"):
-        return (forecast or "").strip() == (j.get("verify_py") or "").strip()
+        return f == (j.get("verify_py") or "").strip()
     flaw = j.get("flaw", "")
     if flaw:
-        text = (forecast or "").lower()
+        text = f.lower()
         return flaw.lower() in text or flaw.lower().replace("-", " ") in text
     want = str(j.get("verify_py", ""))
-    return want in (forecast or "").replace(" ", "") or \
-        str(eval(want, {"__builtins__": {}}, {})) in (forecast or "")
+    try:
+        # the numeric-truth cure: 210 == 210.0 == 2.1e2
+        return abs(float(want) - float(f)) < 1e-9
+    except (ValueError, TypeError):
+        pass
+    return want in f.replace(" ", "")
 
 
 def remember(kind, text, meta, imp=0.6):
