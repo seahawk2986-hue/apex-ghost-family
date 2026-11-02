@@ -45,12 +45,14 @@ GROQ = ("groq", "openai/gpt-oss-120b",
         "https://api.groq.com/openai/v1/chat/completions", 4)
 CS = ("cerebras", "gpt-oss-120b",
       "https://api.cerebras.ai/v1/chat/completions", 4)
+CS_Q = ("cerebras", "qwen-3.8-27b",
+        "https://api.cerebras.ai/v1/chat/completions", 4)
 LOCAL = ("local", "phi4-mini:latest",
          "http://localhost:11434/v1/chat/completions", 2)
 
 ROLES = {
-    "voice": [ULTRA, CS, GROQ, LOCAL],
-    "deep-think": [ULTRA, SFLOW_DEEP, REASON, CS, GROQ, LOCAL],
+    "voice": [ULTRA, CS, CS_Q, GROQ, LOCAL],
+    "deep-think": [ULTRA, SFLOW_DEEP, CS_Q, REASON, CS, GROQ, LOCAL],
     "vision": [VL, SFLOW_VL, ULTRA, LOCAL],
     "code": [SFLOW_CODER, CODE, LOCAL],  # staged: coding awaits acceptance
     "guard": [GUARD],
