@@ -1,113 +1,106 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-02 05:53:13",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "helper",
+   "repo": "Marten4n6/EvilOSX",
+   "sha256": "553fa956428620bb"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c3c719a6d1e841ba"
+   "skill": "python",
+   "repo": "Marten4n6/EvilOSX",
+   "sha256": "f451435d2325ea50"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "icon_svgs",
+   "repo": "freefrank/LostOdysseyRecomp",
+   "sha256": "6b223e6ac18b0af6"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "generate_embedding",
+   "repo": "freefrank/LostOdysseyRecomp",
+   "sha256": "64395f92ce17b6bd"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "dol",
+   "repo": "Hero88go/melee-unlocked",
+   "sha256": "14d1cf877bf68868"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "dump",
+   "repo": "Hero88go/melee-unlocked",
+   "sha256": "c44fe89ecf261c7e"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "extract_pal_voices",
+   "repo": "CameronRedmore/Crash-Team-Racing-Turbocharged",
+   "sha256": "cf91a05be9daf9c0"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "kart_model_viewer",
+   "repo": "CameronRedmore/Crash-Team-Racing-Turbocharged",
+   "sha256": "89cebfda83d39c9c"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "banners",
+   "repo": "byt3bl33d3r/MITMf",
+   "sha256": "24048bf659bad891"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "configwatcher",
+   "repo": "byt3bl33d3r/MITMf",
+   "sha256": "a0dc1ec3005d9387"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "__init__",
+   "repo": "AstrBotDevs/AstrBot",
+   "sha256": "4bdcaae2567180be"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "__init__",
+   "repo": "AstrBotDevs/AstrBot",
+   "sha256": "2100bc74a8aabf1b"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "script",
+   "repo": "oobabooga/text-generation-webui",
+   "sha256": "9faf6da812be355f"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "script",
+   "repo": "oobabooga/text-generation-webui",
+   "sha256": "72801fcabd77c48f"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "grammar",
+   "repo": "theroyallab/tabbyAPI",
+   "sha256": "18ce3f4939d27ab6"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "sampler",
+   "repo": "theroyallab/tabbyAPI",
+   "sha256": "8e5c6425899f305a"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "apps",
+   "repo": "chiefonboarding/ChiefOnboarding",
+   "sha256": "ca6c283d922c1bba"
+  },
+  {
+   "skill": "permissions",
+   "repo": "chiefonboarding/ChiefOnboarding",
+   "sha256": "10d601763fbedef0"
+  },
+  {
+   "skill": "app",
+   "repo": "patched-codes/patchwork",
+   "sha256": "5e95ae858c58eb41"
+  },
+  {
+   "skill": "constants",
+   "repo": "patched-codes/patchwork",
+   "sha256": "55377057a2a52130"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-02 06:00:55"
 }

@@ -5904,7 +5904,303 @@
    ],
    "registered": "2026-11-02 04:59:43",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "helper",
+   "source_file": "bot/launchers/helper.py",
+   "source_repo": "Marten4n6/EvilOSX",
+   "license": "check repo",
+   "sha256": "553fa956428620bbaa593e743be1d296d54f68fd7032e6300af60e556d4f2bc4",
+   "lines": 38,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [
+    "random",
+    "string"
+   ],
+   "registered": "2026-11-02 06:00:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "python",
+   "source_file": "bot/launchers/python.py",
+   "source_repo": "Marten4n6/EvilOSX",
+   "license": "check repo",
+   "sha256": "f451435d2325ea50dbbd0043c703c8c33161110668c143b48a2971b945c12336",
+   "lines": 20,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [],
+   "registered": "2026-11-02 06:00:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "icon_svgs",
+   "source_file": "assets/icon/icon_svgs.py",
+   "source_repo": "freefrank/LostOdysseyRecomp",
+   "license": "check repo",
+   "sha256": "6b223e6ac18b0af62471633172e2438667b9b1fe86a9e1a741e0ca9473d91d57",
+   "lines": 216,
+   "first_line": "\"\"\"icon_svgs.py [OUTDIR]: the app icon's SVG sources, a medallion (\"ring of a th",
+   "imports": [
+    "math",
+    "sys"
+   ],
+   "registered": "2026-11-02 06:00:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_embedding",
+   "source_file": "thirdparty/smaa/generate_embedding.py",
+   "source_repo": "freefrank/LostOdysseyRecomp",
+   "license": "check repo",
+   "sha256": "64395f92ce17b6bdd2e526c4ddeb8c8378a331189ea8f6ab37624a062c98dfde",
+   "lines": 11,
+   "first_line": "\"\"\"Regenerate the embedded SMAA source from the pinned upstream shader.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-02 06:00:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "dol",
+   "source_file": "port/recomp/dol.py",
+   "source_repo": "Hero88go/melee-unlocked",
+   "license": "check repo",
+   "sha256": "14d1cf877bf6886827ff0b4be80d65f766177bbd8c3a75eaa9220a6d72e80459",
+   "lines": 65,
+   "first_line": "\"\"\"GameCube DOL loader: builds a flat 24 MB guest RAM image (big-endian bytes).\"",
+   "imports": [
+    "struct"
+   ],
+   "registered": "2026-11-02 06:00:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "dump",
+   "source_file": "port/recomp/dump.py",
+   "source_repo": "Hero88go/melee-unlocked",
+   "license": "check repo",
+   "sha256": "c44fe89ecf261c7eb49d654c6e28e57bbd12753aeaecbe582f3aa7189f4a424d",
+   "lines": 45,
+   "first_line": "\"\"\"Dump decoded instructions around an address: python dump.py 80019d8c [before]",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-02 06:00:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "extract_pal_voices",
+   "source_file": "tools/extract_pal_voices.py",
+   "source_repo": "CameronRedmore/Crash-Team-Racing-Turbocharged",
+   "license": "check repo",
+   "sha256": "cf91a05be9daf9c0ace4cef03a6552ce70d22d90161a31b909dcdfb98654588b",
+   "lines": 210,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "math",
+    "shutil",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-02 06:00:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "kart_model_viewer",
+   "source_file": "tools/kart_model_viewer.py",
+   "source_repo": "CameronRedmore/Crash-Team-Racing-Turbocharged",
+   "license": "check repo",
+   "sha256": "89cebfda83d39c9c6f4bb09fbc6e047064a09dc9bdfd987eab775c897e524496",
+   "lines": 266,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "base64",
+    "json",
+    "struct",
+    "threading",
+    "webbrowser"
+   ],
+   "registered": "2026-11-02 06:00:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "banners",
+   "source_file": "core/banners.py",
+   "source_repo": "byt3bl33d3r/MITMf",
+   "license": "check repo",
+   "sha256": "24048bf659bad891df55622450f76b4e6db441492f3ebd074b9be9d6bc21803f",
+   "lines": 83,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [
+    "random"
+   ],
+   "registered": "2026-11-02 06:00:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "configwatcher",
+   "source_file": "core/configwatcher.py",
+   "source_repo": "byt3bl33d3r/MITMf",
+   "license": "check repo",
+   "sha256": "a0dc1ec3005d938792ca2dba21636afe5746c4a63b21c8baa116484bfd49d838",
+   "lines": 45,
+   "first_line": "#!/usr/bin/env python2.7",
+   "imports": [
+    "pyinotify",
+    "threading"
+   ],
+   "registered": "2026-11-02 06:00:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "astrbot/__init__.py",
+   "source_repo": "AstrBotDevs/AstrBot",
+   "license": "check repo",
+   "sha256": "4bdcaae2567180be27ccd060da861f257dd4d7b8fdd138c83b88ab0d18228e7e",
+   "lines": 5,
+   "first_line": "import logging",
+   "imports": [
+    "logging"
+   ],
+   "registered": "2026-11-02 06:00:52",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "astrbot/api/__init__.py",
+   "source_repo": "AstrBotDevs/AstrBot",
+   "license": "check repo",
+   "sha256": "2100bc74a8aabf1b0e56ebf9bcc2b21551aa4cfb80486f54e91691a4ddcfcd19",
+   "lines": 84,
+   "first_line": "import logging",
+   "imports": [
+    "logging",
+    "sys"
+   ],
+   "registered": "2026-11-02 06:00:52",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "script",
+   "source_file": "extensions/character_bias/script.py",
+   "source_repo": "oobabooga/text-generation-webui",
+   "license": "check repo",
+   "sha256": "9faf6da812be355ff426b272182ab584abb8c6735a49f9ca61d2c0f5738374ce",
+   "lines": 75,
+   "first_line": "import os",
+   "imports": [
+    "gradio",
+    "os"
+   ],
+   "registered": "2026-11-02 06:00:53",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "script",
+   "source_file": "extensions/coqui_tts/script.py",
+   "source_repo": "oobabooga/text-generation-webui",
+   "license": "check repo",
+   "sha256": "72801fcabd77c48f1a276f3266cacf30668900a6f02424ed605c92948e384c37",
+   "lines": 229,
+   "first_line": "import html",
+   "imports": [
+    "gradio",
+    "html",
+    "json",
+    "os",
+    "random",
+    "time",
+    "torch"
+   ],
+   "registered": "2026-11-02 06:00:53",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "grammar",
+   "source_file": "backends/exllamav3/grammar.py",
+   "source_repo": "theroyallab/tabbyAPI",
+   "license": "check repo",
+   "sha256": "18ce3f4939d27ab6cd83a72c5d62efeb2165a8a3272ac923d4018067d3537964",
+   "lines": 259,
+   "first_line": "from dataclasses import dataclass",
+   "imports": [
+    "json",
+    "torch",
+    "traceback"
+   ],
+   "registered": "2026-11-02 06:00:53",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "sampler",
+   "source_file": "backends/exllamav3/sampler.py",
+   "source_repo": "theroyallab/tabbyAPI",
+   "license": "check repo",
+   "sha256": "8e5c6425899f305a66766ac7013d9dce25ce4fa8ceb412efb363f078d7c56e6c",
+   "lines": 380,
+   "first_line": "from dataclasses import dataclass, field",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-11-02 06:00:53",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "apps",
+   "source_file": "back/api/apps.py",
+   "source_repo": "chiefonboarding/ChiefOnboarding",
+   "license": "check repo",
+   "sha256": "ca6c283d922c1bba17f7540e8c2e39d3e53e9c97602e5d0b6ef6fc8fba4a3784",
+   "lines": 7,
+   "first_line": "from django.apps import AppConfig",
+   "imports": [],
+   "registered": "2026-11-02 06:00:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "permissions",
+   "source_file": "back/api/permissions.py",
+   "source_repo": "chiefonboarding/ChiefOnboarding",
+   "license": "check repo",
+   "sha256": "10d601763fbedef038c744ae1e36f45ea31dd50fa7e256ba47a5f97276557515",
+   "lines": 15,
+   "first_line": "from django.contrib.auth import get_user_model",
+   "imports": [],
+   "registered": "2026-11-02 06:00:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "app",
+   "source_file": "patchwork/app.py",
+   "source_repo": "patched-codes/patchwork",
+   "license": "check repo",
+   "sha256": "5e95ae858c58eb417f90d5e78e77852d650d19973868fdc35472c8b23cc7ef3c",
+   "lines": 259,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "click",
+    "importlib",
+    "json",
+    "signal",
+    "traceback",
+    "yaml"
+   ],
+   "registered": "2026-11-02 06:00:55",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "constants",
+   "source_file": "patchwork/common/constants.py",
+   "source_repo": "patched-codes/patchwork",
+   "license": "check repo",
+   "sha256": "55377057a2a52130d50c4c115a77dc1ee66c79d7efa7011ccd4bbe108199d917",
+   "lines": 4,
+   "first_line": "TOKEN_URL = \"https://app.patched.codes/signin\"",
+   "imports": [],
+   "registered": "2026-11-02 06:00:55",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-02 04:59:43"
+ "built": "2026-11-02 06:00:55"
 }
