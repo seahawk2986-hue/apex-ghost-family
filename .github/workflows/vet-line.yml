@@ -1,0 +1,29 @@
+name: ApexVetLine
+
+"on":
+  schedule:
+    - cron: '10 * * * *'   # HOURLY, staggered vs the hub's :00; the free
+                           # public-repo minutes; the outsource-max
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  vet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: promote + vet (GITHUB's machines - the box's RAM = untouched)
+        run: python3 Scripts/VetLineRemote.py
+        env:
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+      - name: ship the vetted grain home
+        if: always()
+        run: |
+          git config user.name "apex-ghost-vetline"
+          git config user.email "vet@apex.family"
+          git add Config/SkillLibrary.json Config/GymRewards.json hub_round_result.json
+          git diff --cached --quiet || git commit -m "vetline: promote batch ${GITHUB_RUN_NUMBER} [skip ci]"
+          git push

@@ -145,7 +145,7 @@ def _library_reward(points, text, milestone=False):
         try:
             subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass",
                             "-File", r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
-                                     r"\Scripts\ApexSpeak.ps1", "-Message", text],
+                                     r"\Scripts\ApexSpeak.ps1", "-Text", text, "-NoWatch"],
                            timeout=60, capture_output=True)
         except Exception:
             pass
