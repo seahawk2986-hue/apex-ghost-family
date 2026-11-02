@@ -29,13 +29,19 @@ import CloudBrain
 
 K = CloudBrain.env_keys()
 WALL_END = time.time() + (60 * 8 if "--smoke" in sys.argv else 60 * 28)
-TEACHERS = [
+TEACHERS = [  # top-tier first; the leaderboard re-ranks them nightly
     ("cerebras", "https://api.cerebras.ai/v1/chat/completions",
      "CEREBRAS_API_KEY", "gpt-oss-120b"),
-    ("cerebras-q", "https://api.cerebras.ai/v1/chat/completions",
-     "CEREBRAS_API_KEY", "qwen-3.8-27b"),
     ("groq", "https://api.groq.com/openai/v1/chat/completions",
      "GROQ_API_KEY", "openai/gpt-oss-120b"),
+    ("groq-kimi", "https://api.groq.com/openai/v1/chat/completions",
+     "GROQ_API_KEY", "moonshotai/kimi-k2-instruct"),
+    ("sflow", "https://api.siliconflow.com/v1/chat/completions",
+     "SILICONFLOW_API_KEY", "Qwen/Qwen3.5-122B-A10B"),
+    ("or-ultra", "https://openrouter.ai/api/v1/chat/completions",
+     "OPENROUTER_API_KEY", "nvidia/nemotron-3-ultra-550b-a55b:free"),
+    ("cerebras-q", "https://api.cerebras.ai/v1/chat/completions",
+     "CEREBRAS_API_KEY", "qwen-3.8-27b"),
 ]
 FAMILIES = ["arithmetic-chain", "arithmetic-chain", "predict-output",
             "spot-the-flaw", "math-word"]     # GI-weighted mix
