@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 07:45:01",
- "count": 643,
+ "ts": "2026-11-02 08:00:01",
+ "count": 716,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -19,6 +19,13 @@
   {
    "repo": "mautic/mautic",
    "score": 88.2,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Socioboard-developers/Socioboard-5.0",
+   "score": 84.7,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -297,6 +304,90 @@
    "license": ""
   },
   {
+   "repo": "sergree/matchering",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "MylarComics/mylar3",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "pluxml/PluXml",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "alextselegidis/easyappointments",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "jarun/Buku",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "seatsurfing/seatsurfing",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "beromir/Servas",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "intri-in/manage-my-damn-life-nextjs",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Kovah/LinkAce",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "AdguardTeam/AdGuardHome",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "alfio-event/alf.io",
+   "score": 83.7,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "sabre-io/Baikal",
+   "score": 83.7,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "prismelabs/analytics",
    "score": 83.2,
    "tier": "VEIN",
@@ -326,6 +417,27 @@
   },
   {
    "repo": "debiki/talkyard",
+   "score": 83.2,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "DjangoCRM/django-crm",
+   "score": 83.2,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "pyload/pyload",
+   "score": 83.2,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "jortilles/EDA",
    "score": 83.2,
    "tier": "VEIN",
    "stars": 0,
@@ -528,6 +640,111 @@
    "license": ""
   },
   {
+   "repo": "OliveTin/OliveTin",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "lin-snow/Ech0",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "superdesk/superdesk",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "mataroablog/mataroa",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "writefreely/writefreely",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "relaticle/relaticle",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "givanz/Vvveb",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "lukevella/rallly",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "chartdb/chartdb",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "karakeep-app/karakeep",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "drawdb-io/drawdb",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ridafkih/keeper.sh",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "yourselfhosted/slash",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "stackrender/stackrender",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "linkwarden/linkwarden",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "miroslavpejic85/mirotalk",
    "score": 83.0,
    "tier": "VEIN",
@@ -558,6 +775,41 @@
   {
    "repo": "anonaddy/anonaddy",
    "score": 83.0,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "jonschoning/espial",
+   "score": 83.0,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "rybbit-io/rybbit",
+   "score": 83.0,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "espocrm/espocrm",
+   "score": 83.0,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "SuiteCRM/SuiteCRM",
+   "score": 83.0,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "chobbledotcom/tickets",
+   "score": 82.7,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -599,6 +851,13 @@
   },
   {
    "repo": "relative/synchrony",
+   "score": 79.6,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "LibreBooking/librebooking",
    "score": 79.6,
    "tier": "VEIN",
    "stars": 0,
@@ -685,6 +944,13 @@
    "repo": "cypht-org/cypht",
    "score": 55.1,
    "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "chartbrew/chartbrew",
+   "score": 54.2,
+   "tier": "MINE",
    "stars": 0,
    "license": ""
   },
@@ -851,6 +1117,13 @@
   },
   {
    "repo": "Odrannnn/MetroidPrimePort",
+   "score": 51.3,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "bytebase/bytebase",
    "score": 51.3,
    "tier": "MINE",
    "stars": 0,
@@ -2320,6 +2593,55 @@
    "license": ""
   },
   {
+   "repo": "Lessify/localess",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "rikhuijzer/bloglite",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "AlexSciFier/neonlink",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "securitybunker/databunker",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "tchapi/davis",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "payloadcms/payload",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "leon-ai/leon",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "emanuelef/daily-stars-explorer",
    "score": 51.0,
    "tier": "MINE",
@@ -2726,6 +3048,13 @@
    "license": ""
   },
   {
+   "repo": "Squidex/squidex",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "gkbrk/slowloris",
    "score": 50.9,
    "tier": "MINE",
@@ -2754,7 +3083,21 @@
    "license": ""
   },
   {
+   "repo": "libredb/libredb-studio",
+   "score": 50.7,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "PipeWire/pipewire",
+   "score": 50.6,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "kibitzr/kibitzr",
    "score": 50.6,
    "tier": "MINE",
    "stars": 0,
@@ -2797,6 +3140,13 @@
   },
   {
    "repo": "paazmaya/shuji",
+   "score": 50.5,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "umbraco/Umbraco-CMS",
    "score": 50.5,
    "tier": "MINE",
    "stars": 0,
@@ -2881,6 +3231,13 @@
   },
   {
    "repo": "mgechev/ngrev",
+   "score": 50.4,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "sissbruecker/linkding",
    "score": 50.4,
    "tier": "MINE",
    "stars": 0,
@@ -3013,6 +3370,48 @@
    "license": ""
   },
   {
+   "repo": "modxcms/revolution",
+   "score": 42.0,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "limbas/limbas",
+   "score": 42.0,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "jeremyckahn/chitchatter",
+   "score": 42.0,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "flatpressblog/flatpress",
+   "score": 42.0,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "TYPO3/typo3",
+   "score": 42.0,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "danpros/htmly",
+   "score": 42.0,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "facebookresearch/simmc2",
    "score": 41.9,
    "tier": "GOLD",
@@ -3029,6 +3428,13 @@
   {
    "repo": "phpbb/phpbb",
    "score": 39.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "taleshape-com/shaper",
+   "score": 38.8,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -3090,6 +3496,13 @@
    "license": ""
   },
   {
+   "repo": "mozilla/fxa",
+   "score": 38.7,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "dequelabs/axe-core",
    "score": 38.1,
    "tier": "GOLD",
@@ -3120,6 +3533,13 @@
   {
    "repo": "zone-eu/wildduck",
    "score": 34.2,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "textpattern/textpattern",
+   "score": 34.0,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -3181,6 +3601,13 @@
    "license": ""
   },
   {
+   "repo": "pimcore/pimcore",
+   "score": 32.8,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "thundercomb/poetrydb",
    "score": 31.7,
    "tier": "GOLD",
@@ -3204,6 +3631,13 @@
   {
    "repo": "johnnyxmas/ScanCannon",
    "score": 31.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "apache/superset",
+   "score": 30.9,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -4119,6 +4553,62 @@
    "license": ""
   },
   {
+   "repo": "StackStorm/st2",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "cortezaproject/corteza",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "dbeaver/cloudbeaver",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "simonw/datasette",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "0xERR0R/blocky",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "tanrax/maza-ad-blocking",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "centrifugal/centrifugo",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "balzack/databag",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "getsentry/skills",
    "score": 29.6,
    "tier": "GOLD",
@@ -4175,7 +4665,21 @@
    "license": ""
   },
   {
+   "repo": "kestra-io/kestra",
+   "score": 29.6,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "0xeb/fastmcpp",
+   "score": 29.5,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "explodingcamera/liwan",
    "score": 29.5,
    "tier": "GOLD",
    "stars": 0,
@@ -4499,6 +5003,13 @@
   {
    "repo": "baptisteArno/typebot.io",
    "score": 25.3,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "awesome-foss/awesome-sysadmin",
+   "score": 25.2,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
