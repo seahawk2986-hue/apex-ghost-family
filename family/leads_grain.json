@@ -1,17 +1,10 @@
 {
- "ts": "2026-11-02 10:15:02",
- "count": 724,
+ "ts": "2026-11-02 10:30:04",
+ "count": 723,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
    "score": 150.0,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "NVIDIA/TensorRT-LLM",
-   "score": 129.6,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
