@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 00:00:02",
- "count": 628,
+ "ts": "2026-11-02 00:15:02",
+ "count": 617,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -150,27 +150,6 @@
    "license": ""
   },
   {
-   "repo": "tinode/chat",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "TokTok/c-toxcore",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "iredmail/iRedMail",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "mailcow/mailcow-dockerized",
    "score": 83.8,
    "tier": "VEIN",
@@ -200,20 +179,6 @@
   },
   {
    "repo": "kpcyrd/sniffglue",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "nametoolong/oregano",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "fkie-cad/friTap",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -269,13 +234,6 @@
    "license": ""
   },
   {
-   "repo": "caelestia-dots/cli",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "morganamilo/paru",
    "score": 83.8,
    "tier": "VEIN",
@@ -304,13 +262,6 @@
    "license": ""
   },
   {
-   "repo": "xability/py_maidr",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "PortSwigger/mcp-server",
    "score": 83.8,
    "tier": "VEIN",
@@ -318,35 +269,7 @@
    "license": ""
   },
   {
-   "repo": "Denkishi/ssbu-recomp",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "chrissotraidis/kartpad",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "OpenMW/openmw",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "Rainchus/Donkey-Kong-64-Recompiled",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "kirklandsig/halo2-decompiled",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
