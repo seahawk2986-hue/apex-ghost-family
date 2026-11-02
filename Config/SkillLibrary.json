@@ -6528,7 +6528,311 @@
    "imports": [],
    "registered": "2026-11-02 07:23:51",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "abuser",
+   "source_file": "app/abuser.py",
+   "source_repo": "simple-login/app",
+   "license": "check repo",
+   "sha256": "ba245f7469eee2713a5423dd3b7a1c5924d03eac6a9ee511ff9e0061cc255c20",
+   "lines": 50,
+   "first_line": "from typing import Optional",
+   "imports": [],
+   "registered": "2026-11-02 10:04:27",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "abuser_audit_log_utils",
+   "source_file": "app/abuser_audit_log_utils.py",
+   "source_repo": "simple-login/app",
+   "license": "check repo",
+   "sha256": "82c52ec92ff551d5c6c71e5ea3c06a9c3c475fe76e8ca402bb2f1b8b8108a586",
+   "lines": 28,
+   "first_line": "from enum import Enum",
+   "imports": [],
+   "registered": "2026-11-02 10:04:28",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "build_icons",
+   "source_file": "scripts/build-icons.py",
+   "source_repo": "knadh/listmonk",
+   "license": "check repo",
+   "sha256": "41280a30516dc94e0248a4cc17d1e84b5362233aa79d2046591d37c844ffe21f",
+   "lines": 120,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "shutil",
+    "xml"
+   ],
+   "registered": "2026-11-02 10:04:29",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "populate_dummy",
+   "source_file": "scripts/populate-dummy.py",
+   "source_repo": "knadh/listmonk",
+   "license": "check repo",
+   "sha256": "b8539de03c364bb20ed4da4595983d5f359a16b3d1528a37b5ee7f5b68b49bf7",
+   "lines": 266,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "os",
+    "pg8000",
+    "random",
+    "uuid"
+   ],
+   "registered": "2026-11-02 10:04:29",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "load_test",
+   "source_file": "scripts/load_test.py",
+   "source_repo": "redlib-org/redlib",
+   "license": "check repo",
+   "sha256": "7bae1460aff4770edf2ef3a0d70e368e17d6ef1dcc2d9da34e6275318c15b112",
+   "lines": 32,
+   "first_line": "import requests",
+   "imports": [
+    "requests"
+   ],
+   "registered": "2026-11-02 10:04:34",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "getpelican/pelican",
+   "license": "check repo",
+   "sha256": "003ecf421e75e8aeca4d21365151d8dfa8b8b37949cc52811a6f1f88b10c2fe3",
+   "lines": 98,
+   "first_line": "import datetime",
+   "imports": [
+    "datetime",
+    "os",
+    "sys",
+    "time",
+    "tomllib"
+   ],
+   "registered": "2026-11-02 10:04:36",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__main__",
+   "source_file": "pelican/__main__.py",
+   "source_repo": "getpelican/pelican",
+   "license": "check repo",
+   "sha256": "e1b1fe1077a84b164369abfdda87690e6287b56365fcd0b50f9b6c6d49bee34c",
+   "lines": 9,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-02 10:04:36",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "nabla-c0d3/sslyze",
+   "license": "check repo",
+   "sha256": "40d70092aef054b49a0ad85a4c1df1dd0b06cf967c1502971170af90b149dbda",
+   "lines": 157,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 10:04:37",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "sslyze/__init__.py",
+   "source_repo": "nabla-c0d3/sslyze",
+   "license": "check repo",
+   "sha256": "785892732f7f4e85a74a730180b582dcd3eacca7d2ad6017fd5a53039c84d070",
+   "lines": 90,
+   "first_line": "# flake8: noqa",
+   "imports": [],
+   "registered": "2026-11-02 10:04:37",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "config/__init__.py",
+   "source_repo": "Axenide/Ax-Shell",
+   "license": "check repo",
+   "sha256": "233bb7c3a78143544f12c8cf38e5070ab09f4b0f455cb13031e8a9c85e6104a9",
+   "lines": 7,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-02 10:04:38",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "config",
+   "source_file": "config/config.py",
+   "source_repo": "Axenide/Ax-Shell",
+   "license": "check repo",
+   "sha256": "354689042a3abceadb5f02bc227830bcf98b888b79f7bd90f7c1d09883180de7",
+   "lines": 82,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "shutil",
+    "sys"
+   ],
+   "registered": "2026-11-02 10:04:38",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "auto_dedupe_new_overlay",
+   "source_file": "tools/auto_dedupe_new_overlay.py",
+   "source_repo": "Xeeynamo/sotn-decomp",
+   "license": "check repo",
+   "sha256": "2046c2f231f6bff40189d07cc302c5b602f0de1cef8a2bc54a7d8e69e1567ab5",
+   "lines": 269,
+   "first_line": "# Automatically de-duplicates a newly created overlay. The overlay should have i",
+   "imports": [
+    "argparse",
+    "os",
+    "re"
+   ],
+   "registered": "2026-11-02 10:04:39",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bin2c",
+   "source_file": "tools/bin2c.py",
+   "source_repo": "Xeeynamo/sotn-decomp",
+   "license": "check repo",
+   "sha256": "c009622df24f17ecdb54d912b7f6642b8657cf58c896cd05f485438dba60bb1a",
+   "lines": 97,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 10:04:39",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "add_stage",
+   "source_file": "port/tools/add_stage.py",
+   "source_repo": "z3xox/Tenkaichi3Decomp",
+   "license": "check repo",
+   "sha256": "ab28e2a3d85934e1d03f833b1f87efb14cc77644e0688907eeabb002ff881090",
+   "lines": 286,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "os",
+    "re",
+    "shutil",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-02 10:04:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "buildkey",
+   "source_file": "port/tools/buildkey.py",
+   "source_repo": "z3xox/Tenkaichi3Decomp",
+   "license": "check repo",
+   "sha256": "82a786f480701af6283204c9f32980737e4dc4e5d79c1e85b5945c5c51835c03",
+   "lines": 30,
+   "first_line": "\"\"\"The build key: from the build's environment to the one file that uses it (por",
+   "imports": [
+    "hashlib",
+    "os",
+    "re"
+   ],
+   "registered": "2026-11-02 10:04:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "rml_art",
+   "source_file": "tools/rml_art.py",
+   "source_repo": "Mikompilation/MikuPan",
+   "license": "check repo",
+   "sha256": "27c8ec9c1aa65f156b7c08dc6fd37d60c379ae8c6307a4657da4bc96734d211f",
+   "lines": 197,
+   "first_line": "\"\"\"Generate the RmlUi menus' decorative images into resources/rml/images.",
+   "imports": [
+    "math",
+    "os",
+    "random",
+    "struct",
+    "zlib"
+   ],
+   "registered": "2026-11-02 10:04:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_duplicated_setting_id",
+   "source_file": "resources/profiles/check_duplicated_setting_id.py",
+   "source_repo": "bambulab/BambuStudio",
+   "license": "check repo",
+   "sha256": "da9524025abe1126fcb5f7634674df184bb5c4f1f5e86a39f300511123b10934",
+   "lines": 44,
+   "first_line": "#by chatGPT",
+   "imports": [
+    "json",
+    "os"
+   ],
+   "registered": "2026-11-02 10:04:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_unused_setting_id",
+   "source_file": "resources/profiles/check_unused_setting_id.py",
+   "source_repo": "bambulab/BambuStudio",
+   "license": "check repo",
+   "sha256": "18e9d89a69242dfaad3480ddf33085fd2ba7efc6c4c8264714a9a904c2c441a0",
+   "lines": 55,
+   "first_line": "import os",
+   "imports": [
+    "json",
+    "os"
+   ],
+   "registered": "2026-11-02 10:04:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "orca_dock_panel_plugin_any",
+   "source_file": "sandboxes/orca_dock_panel_plugin_any.py",
+   "source_repo": "OrcaSlicer/OrcaSlicer",
+   "license": "check repo",
+   "sha256": "22bfaada1cda3cde5fd3c934cbcb1e928e6df10122c79f3733761824abd63cd8",
+   "lines": 147,
+   "first_line": "# /// script",
+   "imports": [
+    "orca"
+   ],
+   "registered": "2026-11-02 10:04:46",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "orca_fuzzy_slices_plugin_any",
+   "source_file": "sandboxes/orca_fuzzy_slices_plugin_any.py",
+   "source_repo": "OrcaSlicer/OrcaSlicer",
+   "license": "check repo",
+   "sha256": "3d537df30fc68ecae3196477d58a27477fbf62ad05a98d2f6413501a35a54c57",
+   "lines": 175,
+   "first_line": "# /// script",
+   "imports": [
+    "json",
+    "math",
+    "orca",
+    "random"
+   ],
+   "registered": "2026-11-02 10:04:47",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-02 07:23:51"
+ "built": "2026-11-02 10:04:47"
 }
