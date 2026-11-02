@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 00:45:02",
- "count": 614,
+ "ts": "2026-11-02 07:45:01",
+ "count": 643,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -94,6 +94,20 @@
    "license": ""
   },
   {
+   "repo": "govolution/avet",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "GoVanguard/legion",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "kpcyrd/rshijack",
    "score": 83.8,
    "tier": "VEIN",
@@ -101,14 +115,14 @@
    "license": ""
   },
   {
-   "repo": "belane/CloudHunter",
+   "repo": "mschwager/fierce",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
   },
   {
-   "repo": "Marten4n6/EvilOSX",
+   "repo": "belane/CloudHunter",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -255,29 +269,29 @@
    "license": ""
   },
   {
-   "repo": "freefrank/LostOdysseyRecomp",
+   "repo": "fabiodalez-dev/pinakes-docker",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
   },
   {
-   "repo": "Hero88go/melee-unlocked",
+   "repo": "mitchross/k3s-argocd-starter",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
   },
   {
-   "repo": "CameronRedmore/Crash-Team-Racing-Turbocharged",
+   "repo": "khuedoan/homelab",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
   },
   {
-   "repo": "byt3bl33d3r/MITMf",
-   "score": 83.7,
+   "repo": "jianchang512/pyvideotrans",
+   "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -332,27 +346,6 @@
    "license": ""
   },
   {
-   "repo": "AstrBotDevs/AstrBot",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "oobabooga/text-generation-webui",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "theroyallab/tabbyAPI",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "rustmailer/bichon",
    "score": 83.1,
    "tier": "VEIN",
@@ -374,13 +367,6 @@
    "license": ""
   },
   {
-   "repo": "chiefonboarding/ChiefOnboarding",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "vanhauser-thc/thc-hydra",
    "score": 83.1,
    "tier": "VEIN",
@@ -389,13 +375,6 @@
   },
   {
    "repo": "robertdavidgraham/masscan",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "patched-codes/patchwork",
    "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
@@ -437,21 +416,7 @@
    "license": ""
   },
   {
-   "repo": "simple-login/app",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "the-djmaze/snappymail",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "knadh/listmonk",
    "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
@@ -514,13 +479,6 @@
    "license": ""
   },
   {
-   "repo": "redlib-org/redlib",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "teikei/teikei",
    "score": 83.1,
    "tier": "VEIN",
@@ -536,55 +494,6 @@
   },
   {
    "repo": "loomio/loomio",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "getpelican/pelican",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "nabla-c0d3/sslyze",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Axenide/Ax-Shell",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Xeeynamo/sotn-decomp",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "z3xox/Tenkaichi3Decomp",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Mikompilation/MikuPan",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "bambulab/BambuStudio",
    "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
@@ -612,7 +521,7 @@
    "license": ""
   },
   {
-   "repo": "OrcaSlicer/OrcaSlicer",
+   "repo": "juntaosun/ComeCut",
    "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
@@ -689,36 +598,8 @@
    "license": ""
   },
   {
-   "repo": "evilsocket/pwnagotchi",
-   "score": 79.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "relative/synchrony",
    "score": 79.6,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "grpc/grpc",
-   "score": 76.2,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "apache/incubator-mxnet",
-   "score": 73.8,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "django-guardian/django-guardian",
-   "score": 71.4,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -731,43 +612,8 @@
    "license": ""
   },
   {
-   "repo": "Elgg/Elgg",
-   "score": 66.7,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "pretalx/pretalx",
-   "score": 64.2,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "tboox/tbox",
    "score": 64.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "tuunanet/rea-ski-or-die-reconstruction",
-   "score": 62.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "JRickey/BattleShip",
-   "score": 61.8,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ryanoasis/nerd-fonts",
-   "score": 61.4,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -789,20 +635,6 @@
   {
    "repo": "jitsi/jitsi-meet",
    "score": 61.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "facebook/folly",
-   "score": 60.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "django-cms/django-cms",
-   "score": 59.2,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -2362,6 +2194,132 @@
    "license": ""
   },
   {
+   "repo": "jktrn/astro-erudite",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "lyallcooper/justif",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "kitlangton/justice",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "mirkolenz/makejinja",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "atlaslattice/aluminum-os",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "spegel-org/spegel",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "democratic-csi/democratic-csi",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ajaykumar4/cluster-template",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ricsanfre/pi-cluster",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "bennycode/ig-trading-api",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "strutsfarm/heatpump_optimizer",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "moeru-ai/airi",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "microsoft/VibeASR.cpp",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "inikolax/remiqora",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "zeropointnine/tts-audiobook-tool",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "estebanstifli/OpenDub",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "misix-git/xaus-api",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "shadcn-ui/ui",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "emanuelef/daily-stars-explorer",
    "score": 51.0,
    "tier": "MINE",
@@ -2754,6 +2712,20 @@
    "license": ""
   },
   {
+   "repo": "KanenasInGreece/Shared_Memory_Monitor",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "coinbase/coinbase-exchange-node",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "gkbrk/slowloris",
    "score": 50.9,
    "tier": "MINE",
@@ -3099,6 +3071,27 @@
   {
    "repo": "ZeldaWWHDRecomp/ZeldaWWHDRecomp",
    "score": 38.7,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "siderolabs/talos",
+   "score": 38.7,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "getsops/sops",
+   "score": 38.7,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "dequelabs/axe-core",
+   "score": 38.1,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -3972,6 +3965,160 @@
    "license": ""
   },
   {
+   "repo": "fluxcd/flux2",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "cloudflare/cloudflared",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "cert-manager/cert-manager",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "cilium/cilium",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "stakater/Reloader",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "envoyproxy/gateway",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "allenporter/flux-local",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "k8s-gateway/k8s_gateway",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "rook/rook",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "longhorn/longhorn",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "openebs/openebs",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "kubernetes-csi/csi-driver-nfs",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "SynologyOpenSource/synology-csi",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "kubernetes-csi/csi-driver-smb",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "coinbase/coinbase-pro-node",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "kubernetes-sigs/external-dns",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Elumenotion/GuideAnts",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Martossien/transcria",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "leemysw/yovoice",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "microsoft/playwright",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "GoogleChrome/lighthouse-ci",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "simonw/datasette-lite",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "getsentry/skills",
    "score": 29.6,
    "tier": "GOLD",
@@ -3993,8 +4140,50 @@
    "license": ""
   },
   {
+   "repo": "0xShug0/audio.cpp",
+   "score": 29.6,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "muhlba91/external-dns-provider-adguard",
+   "score": 29.6,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "0xShug0/audio.cpp-server-frontends",
+   "score": 29.6,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "kigner/audio.cpp-webui",
+   "score": 29.6,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "christopherthompson81/AudioCpp-Bindings",
+   "score": 29.6,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "0xeb/fastmcpp",
    "score": 29.5,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "kashalls/external-dns-unifi-webhook",
+   "score": 29.4,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -4043,6 +4232,20 @@
   },
   {
    "repo": "soramanew/m3shapes",
+   "score": 28.9,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "techno-tim/k3s-ansible",
+   "score": 28.9,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "dongfangzhizhu/AudioCpp.NET",
    "score": 28.9,
    "tier": "GOLD",
    "stars": 0,
