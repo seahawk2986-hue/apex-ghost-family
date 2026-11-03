@@ -60,3 +60,10 @@ Sources: Groq API reference (models-list; fetched live 2026-11-02); the
 family's own ProbeFreeModels.py precedent (GitHub/OpenRouter/Gemini catalogs);
 Auer/Cesa-Bianchi/Fischer 2002 (eps-greedy class); the 2026 canon's
 router/QoS papers (Token-Budget-Aware Pool Routing, CALM, DriftSched).
+
+## THE BLIND COURT'S FIRST VERDICT (19:13:42, live)
+- holdout_pct 40.7 (n=27, sealed) vs internal_pct 31.6 -> VERDICT: CLEAN
+  (no self-flattery detected; the fleet slightly UNDER-flatters its gym trend)
+- street: 5/6 real GitHub-archive issues -> structurally sound fix-plans
+  (external-distribution planning truth; receipt Config/court_street_receipt.json)
+- the court now judges nightly inside ApexDream; the verdict renders on /receipts

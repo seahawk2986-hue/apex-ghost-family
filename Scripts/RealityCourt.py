@@ -306,8 +306,8 @@ def judge():
                 ensure_ascii=False) + "\n")
     except Exception:
         pass
-    print("[judge]:", verdict["verdict"], "| internal", ip, "% vs holdout",
-          hold_pct, "% (n=%d)" % done)
+    print("[judge]:", verdict["verdict"], "| internal", ip,
+          "% vs holdout", hold_pct, "% (n=%d)" % done)
     return verdict
 
 

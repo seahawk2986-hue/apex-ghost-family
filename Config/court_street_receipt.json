@@ -1,0 +1,58 @@
+{
+ "ts": "2026-11-02 19:15:24",
+ "drilled": 6,
+ "structurally_sound": 5,
+ "mean_quality": 2.73,
+ "note": "EXTERNAL-DISTRIBUTION planning truth: graded by structure (steps + tests), not by invented answers",
+ "rows": [
+  {
+   "repo": "projectbluefin/utah-packages",
+   "ok": false
+  },
+  {
+   "repo": "mukkund1996/serenity",
+   "issue": "test: unit tests for tmux session names and repo slugs in core/paths.ts",
+   "ok": true,
+   "steps": 4,
+   "tests": 4,
+   "quality": 2.8,
+   "lane": "local-floor"
+  },
+  {
+   "repo": "JohnMcNulty/copilot-app-for-beginners",
+   "issue": "Make search case-insensitive",
+   "ok": true,
+   "steps": 5,
+   "tests": 4,
+   "quality": 3.4,
+   "lane": "cerebras-120b"
+  },
+  {
+   "repo": "PicadoLabs/build-with-ai",
+   "issue": "feat(mcp): implement MCP Sampling protocol for zero-key autonomous execution",
+   "ok": true,
+   "steps": 5,
+   "tests": 4,
+   "quality": 3.4,
+   "lane": "groq-qwen"
+  },
+  {
+   "repo": "jgraef/mrrp",
+   "issue": "Improve auto-vectorization",
+   "ok": true,
+   "steps": 5,
+   "tests": 3,
+   "quality": 3.4,
+   "lane": "or-auto"
+  },
+  {
+   "repo": "dream-machine-systems/dream-machine-os",
+   "issue": "infra: JSON Schema files for registry, audit and deck data",
+   "ok": true,
+   "steps": 5,
+   "tests": 3,
+   "quality": 3.4,
+   "lane": "cerebras-120b"
+  }
+ ]
+}
