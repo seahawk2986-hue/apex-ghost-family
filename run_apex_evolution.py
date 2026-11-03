@@ -2343,9 +2343,11 @@ def talk_vision(v: VisionMsg):
     if not APEX_KEY:
         pass
     _raw = (v.image or "")
-    m = re.match(r"^data:image/(png|jpe?g|webp);base64,(.+)$", _raw[:80] + "...")
-    if not m:
-        m = re.match(r"^data:image/([a-z]+);base64,(.+)$", _raw.strip(), re.S)
+    # THE TRUNCATED-PREVIEW TRAP (fixed 2026-11-04): the old first regex
+    # matched the 80-char PREVIEW + '...' as a valid match - a 77-byte
+    # 'image' went to every seat and they all honestly declined. ONE
+    # length-checked full-URL regex now: no previews, no fragments.
+    m = re.match(r"^data:image/([a-z0-9.+-]+);base64,(.+)$", _raw.strip(), re.S)
     if not m:
         return {"reply": "That attachment is not an image data-URL - the honest no."}
     b64 = m.group(2)
