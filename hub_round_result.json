@@ -1,113 +1,106 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-03 04:45:18",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "make_c_examples",
+   "repo": "hannorein/rebound",
+   "sha256": "66bc321d0de2e26d"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c3c719a6d1e841ba"
+   "skill": "make_contributors_replace",
+   "repo": "hannorein/rebound",
+   "sha256": "4443c27a87f6d127"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "conf",
+   "repo": "0xCoto/VIRGO",
+   "sha256": "c0a11cb71e2f07b5"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "joss_example",
+   "repo": "0xCoto/VIRGO",
+   "sha256": "47788dce6d10dedf"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "__init__",
+   "repo": "oresat/oresat-star-tracker-software",
+   "sha256": "bf2aa736f2ca7f1e"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "__main__",
+   "repo": "oresat/oresat-star-tracker-software",
+   "sha256": "78a65f07f3e26fe1"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "addressbooks",
+   "repo": "sabre-io/Baikal",
+   "sha256": "e54a22008dad1192"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "calendars",
+   "repo": "sabre-io/Baikal",
+   "sha256": "7a4723ba165085c0"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "setup",
+   "repo": "OpenLST/openlst",
+   "sha256": "c071f810156e9c21"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "admin",
+   "repo": "DjangoCRM/django-crm",
+   "sha256": "a9d02b581f63f88d"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "apps",
+   "repo": "DjangoCRM/django-crm",
+   "sha256": "e120a80e40872927"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "__init__",
+   "repo": "pyload/pyload",
+   "sha256": "d8271868ef6424a1"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "preload",
+   "repo": "AUTOMATIC1111/stable-diffusion-webui",
+   "sha256": "3b197f094c2e5c18"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "sd_hijack_autoencoder",
+   "repo": "AUTOMATIC1111/stable-diffusion-webui",
+   "sha256": "4c8bd0606d6d3c7b"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "f5b",
+   "repo": "fluxerapp/fluxer",
+   "sha256": "e32cae91e3d59ed0"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "__init__",
+   "repo": "beanboi7/yomomma-apiv2",
+   "sha256": "18ed08e881b9d0d2"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "main",
+   "repo": "beanboi7/yomomma-apiv2",
+   "sha256": "558cb7c6c7a39294"
+  },
+  {
+   "skill": "bench_exec",
+   "repo": "ashlrai/locus",
+   "sha256": "68c7704bbf0acac2"
+  },
+  {
+   "skill": "create_test_file",
+   "repo": "Apollo3zehn/PureHDF",
+   "sha256": "7188c58be5627cf2"
+  },
+  {
+   "skill": "print_solution",
+   "repo": "Apollo3zehn/PureHDF",
+   "sha256": "1cc83c929a57a7f7"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-03 04:55:40"
 }
