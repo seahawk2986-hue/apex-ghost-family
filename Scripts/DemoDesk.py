@@ -204,6 +204,15 @@ def serve(issue, tok=None):
         print(f"[demo-desk] #{n}: the lanes returned empty (honest) - the "
               "issue stays open for the next beat")
         return None
+    # THE DOUBT COURT (the S+ product-quality law, the debate theory
+    # arXiv:1805.00899): every report = CHALLENGED before the world sees
+    # it - the invented-claim hunt + one honest revision pass
+    try:
+        import DoubtCourt
+        report, verdict, _ = DoubtCourt.challenge(report, facts, target)
+        print(f"[demo-desk] #{n}: the debate's verdict = {verdict}")
+    except Exception as x0:
+        print(f"[demo-desk] #{n}: the doubt court skipped ({x0})")
     comment = (f"**{BOT_MARK} - the FREE TIER, served** (AI-assisted, "
                f"disclosed; the lane: {lane}; $0)\n\n---\n\n" + report +
                "\n\n---\n\n*Want the fuller treatment (the patch pack with the "

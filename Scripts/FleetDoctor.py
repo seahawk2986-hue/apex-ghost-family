@@ -307,12 +307,27 @@ def c_abstract():
         return check("abstract-tiers", False, f"the abstract receipt unreadable: {e}")
 
 
-def main():
+def main(argv=None):
+    """--cloud: the RUNNER mode (the outsource law): the localhost-class
+    checks (ports/docker/lanes/brain/webuse-the-door) honestly SKIP - the
+    cloud-native organs (the book/court/horizon/abstract/memory-restore)
+    = the measured set that survives anywhere."""
+    cloud = argv and "--cloud" in argv
+    plan = [c_ports, c_docker, c_lanes, c_brain, c_memory, c_mcp,
+            c_swe, c_horizon, c_court, c_webuse, c_capacity, c_book,
+            c_abstract]
+    if cloud:
+        _local_only = {c_ports.__name__, c_docker.__name__, c_lanes.__name__,
+                       c_brain.__name__, c_webuse.__name__, c_capacity.__name__}
+        for f in plan[:]:
+            if f.__name__ in _local_only:
+                plan.remove(f)
+                check(f.__name__ + " (cloud-skip)", True,
+                      "the localhost-class check = honestly skipped off-box")
     print("=========================================================")
     print("  THE FLEET DOCTOR - unified self-test (one pass, $0)")
     print("=========================================================")
-    for fn in (c_ports, c_docker, c_lanes, c_brain, c_memory, c_mcp,
-               c_swe, c_horizon, c_court, c_webuse, c_capacity, c_book, c_abstract):
+    for fn in plan:
         try:
             fn()
         except Exception as e:
@@ -332,4 +347,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:] if len(sys.argv) > 1 else None))
