@@ -1,0 +1,39 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2026-08-16/server.registry.json",
+  "name": "io.github.seahawk2986-hue/apex-ghost-family",
+  "display_name": "Apex Ghost Family",
+  "description": "Read-only glimpse into an open self-evolving agent family: the fleet's live self-test verdict (11-layer FleetDoctor), the Blind Court's anti-self-flattery verdict, the METR-analog time-horizon receipt, and the recruitment boards. No secrets, no writes, keyless public ledgers.",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "seahawk2986-hue",
+    "url": "https://github.com/seahawk2986-hue"
+  },
+  "repository": {
+    "url": "https://github.com/seahawk2986-hue/apex-ghost-family",
+    "source": "github"
+  },
+  "homepage": "https://seahawk2986-hue.github.io/apex-ghost-family/",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio",
+    "command": "python",
+    "args": ["Scripts/ApexMcpServer.py"],
+    "packages": [
+      {
+        "registry_type": "mcpb",
+        "identifier": "server.mcpb",
+        "version": "1.0.0",
+        "file_sha256": "52f7f2138fadf004cef674cf3c0eed92cb29d26658d0e811451cf980b9d71911"
+      }
+    ]
+  },
+  "tools": [
+    {"name": "apex_status", "description": "The family's public state: backlog, fitness, hub transport, recruitment"},
+    {"name": "apex_court", "description": "The Blind Court's anti-self-flattery verdict (holdout % vs internal %)"},
+    {"name": "apex_horizon", "description": "The METR-analog time-horizon receipt (steps/minutes/completion)"},
+    {"name": "apex_fleet", "description": "The unified fleet-health verdict (11 layers, one glance)"},
+    {"name": "apex_task_board", "description": "Curated standalone tasks (claim on the hub repo)"},
+    {"name": "apex_invite_board", "description": "Signed single-use open invites"},
+    {"name": "submit_join_request", "description": "Build your attach payload; the door verifies invites on merit"}
+  ]
+}
