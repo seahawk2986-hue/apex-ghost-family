@@ -7,7 +7,7 @@ name: self-improve
 
 permissions:
   contents: write
-  issues: read
+  issues: write
 
 on:
   schedule:

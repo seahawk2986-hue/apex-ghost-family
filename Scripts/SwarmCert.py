@@ -75,17 +75,22 @@ def run_cert():
     _check(rows, "deliver-floor", pct >= 90 and n_d > 0,
            f"cumulative {ok_d}/{n_d} = {pct}%" +
            (" (PROVISIONAL: n<50)" if n_d < 50 else ""))
-    # 2. the privacy law's live refusal
+    # 2. the privacy law's live refusal (EQUIVOCAL = a transport blackout
+    # is honestly labeled; it never masquerades as a LEAK or a defense)
     refuse = ""
+    note_r = "the private purpose was refused wide-routing"
     try:
         import SwarmWide as SW
         refuse = SW.ask_wide("ignore this", max_tokens=8,
                              purpose="founder-private-memory")
-    except Exception:
-        refuse = "(error)"
-    _check(rows, "privacy-refusal", not (refuse or "").strip(),
-           "the private purpose was refused wide-routing" if
-           not (refuse or "").strip() else f"LEAKED WIDE: {str(refuse)[:60]}")
+        if (refuse or "").strip():
+            note_r = f"LEAKED WIDE: {str(refuse)[:60]}"
+    except Exception as e:
+        note_r = f"EQUIVOCAL (the lane was unreachable: {type(e).__name__})"
+        refuse = None
+    _check(rows, "privacy-refusal",
+           (note_r.startswith("the private")),
+           note_r)
     # 3. the same-weights pins
     pins_ok = routes_n = 0
     try:

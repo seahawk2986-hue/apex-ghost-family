@@ -218,7 +218,17 @@ def funnel_probe():
                             "Mozilla/5.0 (ApexDoorProbe)"}), timeout=15) as x:
                         pass
                 except Exception:
-                    rot += 1
+                    try:
+                        # the HEAD-puritanism cure: some live CDNs (e.g.
+                        # shields.io) reject bare HEAD; one GET retry
+                        # before declaring a link dead (the honest meter)
+                        with urllib.request.urlopen(urllib.request.Request(
+                                l, method="GET", headers={"User-Agent":
+                                "Mozilla/5.0 (ApexDoorProbe)"}),
+                                timeout=15) as x:
+                            x.read(2048)
+                    except Exception:
+                        rot += 1
             if rot:
                 rec["defects"].append(f"link-rot: {rot}/{len(links)} dead")
             defects += [(name, d) for d in rec["defects"]]
