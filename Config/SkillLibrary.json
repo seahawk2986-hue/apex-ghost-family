@@ -3407,7 +3407,7 @@
    "license": "check repo",
    "sha256": "6bc9269df79f6c211a0c72816d3c4a29a8491f0202ac56506a6a0c97855db1a9",
    "lines": 22,
-   "first_line": "\"\"\"User-data helpers — re-exported from ``crewai_core.user_data``.\"\"\"",
+   "first_line": "\"\"\"User-data helpers \u2014 re-exported from ``crewai_core.user_data``.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:12"
   },
@@ -3446,7 +3446,7 @@
    "license": "check repo",
    "sha256": "45ee86a7440b594196ed9578fa0346585184fb3d19b04ae248d2de9c529423dd",
    "lines": 24,
-   "first_line": "\"\"\"OAuth2 authentication primitives — shared by crewai and crewai-cli.\"\"\"",
+   "first_line": "\"\"\"OAuth2 authentication primitives \u2014 shared by crewai and crewai-cli.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:19"
   },
@@ -7671,7 +7671,294 @@
     "sys"
    ],
    "registered": "2026-11-02 20:13:13"
+  },
+  {
+   "skill": "make_c_examples",
+   "source_file": "docs/make_c_examples.py",
+   "source_repo": "hannorein/rebound",
+   "license": "check repo",
+   "sha256": "66bc321d0de2e26df726e72f218ca5c563c3a63bc0e462be7582ef8ecc113011",
+   "lines": 83,
+   "first_line": "import re",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-03 04:54:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "make_contributors_replace",
+   "source_file": "docs/make_contributors_replace.py",
+   "source_repo": "hannorein/rebound",
+   "license": "check repo",
+   "sha256": "4443c27a87f6d127351e7b2321ba50a3e1ef94071fa5d4a06ae111740a5cbe06",
+   "lines": 25,
+   "first_line": "import sys",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-03 04:54:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/source/conf.py",
+   "source_repo": "0xCoto/VIRGO",
+   "license": "check repo",
+   "sha256": "c0a11cb71e2f07b59bbbcf3fd7616300f49925ad4362576e7f2e4e03cf187c4c",
+   "lines": 180,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-03 04:54:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "joss_example",
+   "source_file": "joss_example/joss_example.py",
+   "source_repo": "0xCoto/VIRGO",
+   "license": "check repo",
+   "sha256": "47788dce6d10dedf7b78c354fc6a76af57d3705a406cfb3e86a4df285d534b20",
+   "lines": 76,
+   "first_line": "import virgo",
+   "imports": [
+    "virgo"
+   ],
+   "registered": "2026-11-03 04:54:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "oresat_star_tracker/__init__.py",
+   "source_repo": "oresat/oresat-star-tracker-software",
+   "license": "check repo",
+   "sha256": "bf2aa736f2ca7f1eac9c4ca1a8c1914c7e132ec9a32f12cdc3b2bed8da7678fb",
+   "lines": 7,
+   "first_line": "\"\"\"Star Tracker OLAF app\"\"\"",
+   "imports": [],
+   "registered": "2026-11-03 04:54:53",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__main__",
+   "source_file": "oresat_star_tracker/__main__.py",
+   "source_repo": "oresat/oresat-star-tracker-software",
+   "license": "check repo",
+   "sha256": "78a65f07f3e26fe181e8a23307fd8e96fad61830d04ed3914d17876dc14d62d8",
+   "lines": 36,
+   "first_line": "\"\"\"Star Tracker App\"\"\"",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-03 04:54:53",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "addressbooks",
+   "source_file": "tests/addressbooks.py",
+   "source_repo": "sabre-io/Baikal",
+   "license": "check repo",
+   "sha256": "e54a22008dad119239959f47dc378d165ee00fb20cef0d27dfb3f93711e93cfe",
+   "lines": 108,
+   "first_line": "import mechanicalsoup",
+   "imports": [
+    "mechanicalsoup"
+   ],
+   "registered": "2026-11-03 04:54:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "calendars",
+   "source_file": "tests/calendars.py",
+   "source_repo": "sabre-io/Baikal",
+   "license": "check repo",
+   "sha256": "7a4723ba165085c09f31396d5f7703f0fa17e747025022fe0c7aaf7d38ae3541",
+   "lines": 108,
+   "first_line": "import mechanicalsoup",
+   "imports": [
+    "mechanicalsoup"
+   ],
+   "registered": "2026-11-03 04:54:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "setup",
+   "source_file": "open-lst/tools/setup.py",
+   "source_repo": "OpenLST/openlst",
+   "license": "check repo",
+   "sha256": "c071f810156e9c21d5d6d935f52dafcdd2385e1425db809ce5ca58185abea494",
+   "lines": 67,
+   "first_line": "# OpenLST",
+   "imports": [],
+   "registered": "2026-11-03 04:54:55",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "admin",
+   "source_file": "analytics/admin.py",
+   "source_repo": "DjangoCRM/django-crm",
+   "license": "check repo",
+   "sha256": "a9d02b581f63f88d5ea2bb63a459f1b72bc20a247e4055bb2942ba9c414b4be4",
+   "lines": 42,
+   "first_line": "from django.contrib import admin",
+   "imports": [],
+   "registered": "2026-11-03 04:54:57",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "apps",
+   "source_file": "analytics/apps.py",
+   "source_repo": "DjangoCRM/django-crm",
+   "license": "check repo",
+   "sha256": "e120a80e40872927c26026a6969cb82d4e48694bd54b5134ad143347ce102842",
+   "lines": 21,
+   "first_line": "from tendo.singleton import SingleInstanceException",
+   "imports": [],
+   "registered": "2026-11-03 04:54:58",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "src/pyload/__init__.py",
+   "source_repo": "pyload/pyload",
+   "license": "check repo",
+   "sha256": "d8271868ef6424a13af468ff74368f9e4b00cb858992152ea23899e8b25c3e30",
+   "lines": 72,
+   "first_line": "#       ____________",
+   "imports": [
+    "_locale",
+    "importlib",
+    "locale",
+    "logging",
+    "os",
+    "packaging",
+    "semver",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-11-03 04:54:59",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "preload",
+   "source_file": "extensions-builtin/LDSR/preload.py",
+   "source_repo": "AUTOMATIC1111/stable-diffusion-webui",
+   "license": "check repo",
+   "sha256": "3b197f094c2e5c18e0c8ed0441425c2d2ca6fec9e7fe744363a0ab609a72d686",
+   "lines": 7,
+   "first_line": "import os",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-03 04:55:02",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "sd_hijack_autoencoder",
+   "source_file": "extensions-builtin/LDSR/sd_hijack_autoencoder.py",
+   "source_repo": "AUTOMATIC1111/stable-diffusion-webui",
+   "license": "check repo",
+   "sha256": "4c8bd0606d6d3c7b80471075549ba861599390c153ba772980637bd71547df10",
+   "lines": 294,
+   "first_line": "# The content of this file comes from the ldm/models/autoencoder.py file of the ",
+   "imports": [
+    "ldm",
+    "numpy",
+    "pytorch_lightning",
+    "torch"
+   ],
+   "registered": "2026-11-03 04:55:02",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "f5b",
+   "source_file": "tools/f5b.py",
+   "source_repo": "fluxerapp/fluxer",
+   "license": "check repo",
+   "sha256": "e32cae91e3d59ed01238466d0b996682ac119659e23267271d928b3b9c541603",
+   "lines": 2,
+   "first_line": "REPL=[(\"if (isLinkedToSsoProvider(user, config.providerId) && !user.traits.has(s",
+   "imports": [],
+   "registered": "2026-11-03 04:55:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "app/__init__.py",
+   "source_repo": "beanboi7/yomomma-apiv2",
+   "license": "check repo",
+   "sha256": "18ed08e881b9d0d29de753ce16b744b386c64407abf9ffe1f5b73bb14ac38007",
+   "lines": 3,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [],
+   "registered": "2026-11-03 04:55:36",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "main",
+   "source_file": "app/main.py",
+   "source_repo": "beanboi7/yomomma-apiv2",
+   "license": "check repo",
+   "sha256": "558cb7c6c7a39294558494a2ffa8dd8f4e8f664f8e9130be47639bcdad78f455",
+   "lines": 53,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [],
+   "registered": "2026-11-03 04:55:37",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bench_exec",
+   "source_file": "scripts/bench_exec.py",
+   "source_repo": "ashlrai/locus",
+   "license": "check repo",
+   "sha256": "68c7704bbf0acac24581f664837a4d8c6560548812932436f57a313be5fb643d",
+   "lines": 123,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "shutil",
+    "statistics",
+    "sys",
+    "tempfile",
+    "time"
+   ],
+   "registered": "2026-11-03 04:55:38",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "create_test_file",
+   "source_file": "benchmarks/PureHDF.ConcurrencyBenchmark/create_test_file.py",
+   "source_repo": "Apollo3zehn/PureHDF",
+   "license": "check repo",
+   "sha256": "7188c58be5627cf20160e2f6d46e478affeb87d7bd936bf6e9e2bfa5ea29e123",
+   "lines": 24,
+   "first_line": "from pathlib import Path",
+   "imports": [
+    "h5py",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-03 04:55:39",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "print_solution",
+   "source_file": "build/print_solution.py",
+   "source_repo": "Apollo3zehn/PureHDF",
+   "license": "check repo",
+   "sha256": "1cc83c929a57a7f7e93dfdf1c466da15e5ec2d2263f9f72ed2c8415ecb3de43a",
+   "lines": 15,
+   "first_line": "import json",
+   "imports": [
+    "json"
+   ],
+   "registered": "2026-11-03 04:55:40",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-02 20:13:13"
+ "built": "2026-11-03 04:55:40"
 }
