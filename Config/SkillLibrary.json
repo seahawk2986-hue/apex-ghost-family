@@ -7958,7 +7958,325 @@
    ],
    "registered": "2026-11-03 04:55:40",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "01_basic_constellation",
+   "source_file": "examples/01_basic_constellation.py",
+   "source_repo": "orbital-sim-lab/space-ml-sim",
+   "license": "check repo",
+   "sha256": "08b72d173cebebfe7744ee7d820d580f91c1d6b03820ed877f4c8204cc8ebf15",
+   "lines": 96,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [],
+   "registered": "2026-11-03 09:56:25",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "04_reproduce_published_seu",
+   "source_file": "examples/04_reproduce_published_seu.py",
+   "source_repo": "orbital-sim-lab/space-ml-sim",
+   "license": "check repo",
+   "sha256": "5b6723aa2a1a919f4197e1fa40851a442084972d6252f23f3edfb411bb12b685",
+   "lines": 176,
+   "first_line": "\"\"\"Reproduce published SEU rate measurements with space-ml-sim.",
+   "imports": [],
+   "registered": "2026-11-03 09:56:25",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "gemini_reviewer",
+   "source_file": ".github/scripts/gemini_reviewer.py",
+   "source_repo": "nyx-space/nyx",
+   "license": "check repo",
+   "sha256": "28355c0f9543936907ff590ab598f73a097c78fa6d606d90c7c30dbd17e6ce07",
+   "lines": 210,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "os",
+    "requests",
+    "sys"
+   ],
+   "registered": "2026-11-03 09:56:34",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "01_readme",
+   "source_file": "nyx-py/examples/01_readme.py",
+   "source_repo": "nyx-space/nyx",
+   "license": "check repo",
+   "sha256": "38c0e8d2f56fbff43e226916b603ec93654102f7346525e820838c63388292eb",
+   "lines": 130,
+   "first_line": "import logging",
+   "imports": [
+    "logging"
+   ],
+   "registered": "2026-11-03 09:56:34",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/source/conf.py",
+   "source_repo": "LibreBooking/librebooking",
+   "license": "check repo",
+   "sha256": "4f9b35d93181643aca124d91ad646e7d1d842781f5b51fea05a386333d59a2f5",
+   "lines": 37,
+   "first_line": "# Configuration file for the Sphinx documentation builder.",
+   "imports": [],
+   "registered": "2026-11-03 09:56:36",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "esa/tetra3",
+   "license": "check repo",
+   "sha256": "5b173f8c17abd72e21ab3088b52e77a879ba02b313f01e11e2935ea40133b4b5",
+   "lines": 55,
+   "first_line": "# Configuration file for the Sphinx documentation builder.",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-03 09:56:38",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_database",
+   "source_file": "examples/generate_database.py",
+   "source_repo": "esa/tetra3",
+   "license": "check repo",
+   "sha256": "e8c02c9485be65b81cdeb069e6f579bb5bf2ac3457e2f73bdbd94f38c2edd445",
+   "lines": 18,
+   "first_line": "\"\"\"",
+   "imports": [
+    "sys",
+    "tetra3"
+   ],
+   "registered": "2026-11-03 09:56:38",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "folder_list",
+   "source_file": "tests/selenium/folder_list.py",
+   "source_repo": "cypht-org/cypht",
+   "license": "check repo",
+   "sha256": "fca8a7db00c55b266ae59e1ad32526a8fb3142e7303f1b9fb06c49783783f46e",
+   "lines": 101,
+   "first_line": "#!/usr/bin/python",
+   "imports": [
+    "time"
+   ],
+   "registered": "2026-11-03 09:56:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "inline_msg",
+   "source_file": "tests/selenium/inline_msg.py",
+   "source_repo": "cypht-org/cypht",
+   "license": "check repo",
+   "sha256": "3be9343ea1bdc8f9450bf9f9db7cbb0ab641df18e64a0a7e02052ad21cb6d51d",
+   "lines": 52,
+   "first_line": "#!/usr/bin/python",
+   "imports": [],
+   "registered": "2026-11-03 09:56:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "embed_shaders",
+   "source_file": "port/shaders/embed_shaders.py",
+   "source_repo": "nathanialf/ico-pc",
+   "license": "check repo",
+   "sha256": "ed7f1ad7b237fc260fd1655e2adad2da9128679706e0c02f36868f8a24e2058e",
+   "lines": 203,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "os",
+    "struct",
+    "sys",
+    "zlib"
+   ],
+   "registered": "2026-11-03 09:56:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_call_types",
+   "source_file": "tools/check_call_types.py",
+   "source_repo": "nathanialf/ico-pc",
+   "license": "check repo",
+   "sha256": "0e7fd2740d647e444ca27a058f1ac53033c6a50374786d618149123b87b3bd8a",
+   "lines": 370,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-03 09:56:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "postproc_apu",
+   "source_file": "twotowers/postproc_apu.py",
+   "source_repo": "Gumpolas/TooTawersRecomp",
+   "license": "check repo",
+   "sha256": "8acb0152333101a712f640dd23ab66976d92df391ca651b25790ae0a8e12a751",
+   "lines": 72,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "glob",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-03 09:56:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "postproc_regs",
+   "source_file": "twotowers/postproc_regs.py",
+   "source_repo": "Gumpolas/TooTawersRecomp",
+   "license": "check repo",
+   "sha256": "62373d54817ef7d176a9b26136c83568f6000edcdc4be060ac06abd2d00c7382",
+   "lines": 196,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "glob",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-03 09:56:44",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "render_scene",
+   "source_file": "psr/render_scene.py",
+   "source_repo": "AtharvaLakhe/PSR-Net",
+   "license": "check repo",
+   "sha256": "2b29d2a924d308a7d9c445c38d1e341b9605d3fb71adec271c3876e6f5c2448d",
+   "lines": 339,
+   "first_line": "\"\"\"Render the two scenes the page needs, and be explicit about what each one is.",
+   "imports": [
+    "json",
+    "numpy",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-03 09:56:44",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "model",
+   "source_file": "psr/train/model.py",
+   "source_repo": "AtharvaLakhe/PSR-Net",
+   "license": "check repo",
+   "sha256": "c632988e10575ae70a976c37c509905eb9a41d07774c8a2864e77502c7ecf516",
+   "lines": 113,
+   "first_line": "\"\"\"PSR-Net: the restoration network.",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-11-03 09:56:45",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "avm1",
+   "source_file": "tools/avm1.py",
+   "source_repo": "whylurking/IsaacRecomp",
+   "license": "check repo",
+   "sha256": "87be02c8cd05f72e29e07c268956d43fde026d99effd067c605b57d90a0404ab",
+   "lines": 69,
+   "first_line": "\"\"\"AVM1 disassembly into an instruction list with the constant pool resolved.\"\"\"",
+   "imports": [
+    "struct"
+   ],
+   "registered": "2026-11-03 09:56:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "cmpf",
+   "source_file": "tools/difftest/cmpf.py",
+   "source_repo": "whylurking/IsaacRecomp",
+   "license": "check repo",
+   "sha256": "803916f0ff1c0e524f093743c066ec02af7fdb0d4f1cbecd0f54f14bedcc4665",
+   "lines": 12,
+   "first_line": "import sys,re",
+   "imports": [
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-03 09:56:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bmp_crop",
+   "source_file": "tools/bmp_crop.py",
+   "source_repo": "Moxnatiy/OpenBattlefield2",
+   "license": "check repo",
+   "sha256": "e83e812529cdd856978356ed2ac746bb1fb3e3dadf493c0449aeeb959e58cb45",
+   "lines": 82,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-03 09:56:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "con_objects",
+   "source_file": "tools/con_objects.py",
+   "source_repo": "Moxnatiy/OpenBattlefield2",
+   "license": "check repo",
+   "sha256": "4ab6e300399370803bb7867cd81a1e1a0f91dce8ae1e0d0c193cc94064b3191b",
+   "lines": 92,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "exe_xref",
+    "os",
+    "re",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-03 09:56:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "m68k_json2bin",
+   "source_file": "tests/m68k_json2bin.py",
+   "source_repo": "carlosrmz009/littleplanet",
+   "license": "check repo",
+   "sha256": "0b13af80521d50cb81483adce811b1695bb4d82bd64792cb9a864041ac54ad1f",
+   "lines": 17,
+   "first_line": "# Converts SingleStepTests/680x0 json.gz files into a compact binary for tests/m",
+   "imports": [
+    "gzip",
+    "json",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-03 09:56:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "z80_json2bin",
+   "source_file": "tests/z80_json2bin.py",
+   "source_repo": "carlosrmz009/littleplanet",
+   "license": "check repo",
+   "sha256": "2b4ca1e490f146e32684455514626a03c192354a0b184fd70134813700446133",
+   "lines": 21,
+   "first_line": "# Converts SingleStepTests/z80 json files into a compact binary for tests/z80_te",
+   "imports": [
+    "json",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-03 09:56:49",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-03 04:55:40"
+ "built": "2026-11-03 09:56:49"
 }
