@@ -36,10 +36,6 @@ jobs:
           import AbstractGym; AbstractGym.beat(6)
           PY
           python Scripts/ClaimCheck.py
-          python - <<'PY'
-          import sys; sys.path.insert(0, 'Scripts')
-          import Prophet; Prophet.loop()
-          PY
           python Scripts/FleetDoctor.py --cloud
       - name: The receipts commit back (the public proof)
         run: |
