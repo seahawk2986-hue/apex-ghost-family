@@ -21,6 +21,8 @@ import sys
 import tempfile
 import time
 
+import psutil
+
 if hasattr(sys.stdout, "reconfigure") and not getattr(sys.stdout, "_apex_reconfigured", False):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     sys.stdout._apex_reconfigured = True
@@ -181,24 +183,48 @@ def build_taskdir(task):
     return d
 
 
-def run_task(task, model_name="groq/openai/gpt-oss-120b"):
+def run_task(task, model_name=None):
     """ONE drill: mini agent (host loop) + the sealed court (in-container
-    actions); the row = the receipt."""
+    actions); the row = the receipt.
+
+    THE LANE-CHAIN LAW (2026-11-04, the TPD night): the fleet's own $0 work
+    drains a lane's daily tokens (groq hit its 200k TPD cap at dusk); a
+    capped lane must fail FAST to the NEXT lane, not burn litellm's retry
+    ladder. The court tries the chain in order (default: cerebras-first -
+    the same 120b on a separate cap family-wide, protecting the founder's
+    chat-lock lane); each lane bounded the litellm way (num_retries=2)."""
+    chain = [m.strip() for m in (model_name or os.environ.get("APEX_MINI_MODEL") or
+             "nvidia_nim/z-ai/glm-5.3-flash,cerebras/gpt-oss-120b,groq/openai/gpt-oss-120b").split(",") if m.strip()]
+    # THE COST-MAP LAW (2026-11-04): free lanes are not in litellm's cost map
+    # (13 drills died on the calculation). mini's own documented escape:
+    # MSWEA_COST_TRACKING=ignore_errors -> cost 0.0 recorded (the honest $0)
+    # and the run proceeds; the $0 law makes the missing price the TRUTH.
+    os.environ.setdefault("MSWEA_COST_TRACKING", "ignore_errors")
+    os.environ.setdefault("LITELLM_LOCAL_MODEL_COST_MAP", "True")
     import ApexIO
     _e = ApexIO.env()
-    for k in ("GROQ_API_KEY", "OPENROUTER_API_KEY", "CEREBRAS_API_KEY"):
+    for k in ("GROQ_API_KEY", "OPENROUTER_API_KEY", "CEREBRAS_API_KEY",
+              "NVIDIA_API_KEY"):
         if _e.get(k) and not os.environ.get(k):
             os.environ[k] = _e[k]      # litellm's provider seeds (never printed)
+    # litellm's nvidia_nim provider reads NIM_API_KEY: the fleet's NVIDIA
+    # trial key IS the NIM credential (one key, its real name)
+    if os.environ.get("NVIDIA_API_KEY") and not os.environ.get("NIM_API_KEY"):
+        os.environ["NIM_API_KEY"] = os.environ["NVIDIA_API_KEY"]
     taskdir = build_taskdir(task)
     env = DockerCourt(taskdir)
     t0 = time.time()
     resolved, submission, turns = False, "", 0
-    row = {"task": task["name"], "model": model_name,
+    row = {"task": task["name"], "model": (chain[0] if chain else "none"),
            "ts": time.strftime("%Y-%m-%d %H:%M:%S")}
     try:
         from minisweagent.agents.default import DefaultAgent
         from minisweagent.models.litellm_model import LitellmModel
         from minisweagent.exceptions import Submitted as _Sub
+        try:
+            from minisweagent.exceptions import NonTerminatingException as _Non
+        except Exception:
+            _Non = ()
         SYSTEM = (
             "You are a helpful assistant that can interact with a computer.\n\n"
             "Your response must contain exactly ONE bash code block with ONE command "
@@ -222,21 +248,143 @@ def run_task(task, model_name="groq/openai/gpt-oss-120b"):
             "Make the failing test PASS by fixing impl.py's _buggy function "
             "(edit the file in place; do not change the test). THE ASK: "
             + task["ask"][:90])
-        try:
-            agent = DefaultAgent(
-                LitellmModel(model_name=model_name), env,
-                system_template=SYSTEM, instance_template=INSTANCE,
-                step_limit=TURNS_CAP, cost_limit=3.0,
-                wall_time_limit_seconds=540)
-            res = agent.run(task_prompt) or {}
-        except _Sub as sub:
-            res = (sub.args[0] if sub.args else {})
-            res = res if isinstance(res, dict) else {}
+
+        # THE REASONING-ECHO SANITIZER (v3, the anatomy-night fix): (a) the
+        # history whitelist (providers reject echoed thinking-classes);
+        # (b) the RESPONSE-SIDE law: gpt-oss burns budget on hidden
+        # reasoning and returns content=None - the wrap mutates the raw
+        # response BEFORE mini parses it (content empty + reasoning_content
+        # present = the reasoning becomes the visible content) and (c) the
+        # reasoning-class budget = 4096 so the visible answer FITS.
+        class _SanitizeModel:
+            def __init__(self, inner):
+                self._inner = inner
+                # THE INSTANCE-LEVEL INTERCEPT (the anatomy-night fix): mini
+                # internals call inner._query DIRECTLY - the hook must live
+                # on the INNER instance or it never runs (the silently
+                # missing promotion was the LimitsExceeded burn class). The
+                # reasoning may sit in reasoning_content OR in
+                # provider_specific_fields.reasoning (cerebras/llm both).
+                _orig = inner._query
+
+                def _patched(*a, **kw):
+                    resp = _orig(*a, **kw)
+                    try:
+                        _m0 = resp.choices[0].message
+                        if not (str(_m0.content or "").strip()):
+                            _r = (getattr(_m0, "reasoning_content", None) or
+                                  ((getattr(_m0, "provider_specific_fields", None) or {}).get("reasoning")))
+                            if _r:
+                                _m0.content = str(_r)[:4000]
+                    except Exception:
+                        pass
+                    return resp
+
+                inner._query = _patched
+
+            def query(self, messages, **kw):
+                cleaned = []
+                for m in (messages or []):
+                    if isinstance(m, dict):
+                        allowed = ("role", "content", "tool_calls", "name",
+                                   "tool_call_id")
+                        m = {k: v for k, v in m.items() if k in allowed}
+                    cleaned.append(m)
+                return self._inner.query(cleaned, **kw)
+
+            def __getattr__(self, name):
+                return getattr(self._inner, name)
+
+        # THE LANE-CHAIN: each lane bounded (num_retries=2), a capped/dead
+        # lane hands the task to the next lane - no 5-minute retry walls.
+        # CHAIN v3: glm (plain-channel titan) -> the gpt-oss pair -> the
+        # LOCAL 30B MoE (the LITERALLY-unlimited lane: LM Studio's
+        # openai-compat server on 1234; RAM-gated >= 4.5GB, honest skip
+        # otherwise - the no-token-cap floor of last resort).
+        last_err = ""
+        chain = chain + ["studio/qwen3-30b-a3b"]
+        for lane_model in chain:
+            if lane_model.startswith("studio/"):
+                # the zero-cap local floor: LM Studio's openai-compat seat
+                if psutil.virtual_memory().available / (1024 ** 3) < 4.5:
+                    print("[swe-smoke]: studio floor skipped honestly "
+                          "(RAM < 4.5GB - the 30B MoE needs its window)")
+                    continue
+                _kwg = {"num_retries": 1, "max_tokens": 4096,
+                        "api_base": "http://127.0.0.1:1234/v1",
+                        "api_key": "lm-studio"}
+                _lane_name = "openai/" + lane_model.split("/", 1)[1]
+            else:
+                _kwg = {"num_retries": 2, "max_tokens": 4096}
+                if lane_model.startswith(("cerebras/", "groq/")):
+                    _kwg["reasoning_effort"] = "low"   # gpt-oss only; NIM rejects it
+                _lane_name = lane_model
+            row["model"] = _lane_name
+            if lane_model.startswith("nvidia_nim/"):
+                # litellm's nvidia_nim handler needs the credential EXPLICIT
+                # (its env-name resolution failed twice tonight - 'Missing
+                # credential'); the seed ran already, both names live
+                _kwg["api_key"] = os.environ.get("NIM_API_KEY") or \
+                    os.environ.get("NVIDIA_API_KEY", "")
+                _kwg.pop("reasoning_effort", None)
+            try:
+                agent = DefaultAgent(
+                    _SanitizeModel(LitellmModel(
+                        model_name=_lane_name,
+                        model_kwargs=_kwg)),
+                    env, system_template=SYSTEM, instance_template=INSTANCE,
+                    step_limit=12, cost_limit=3.0,
+                    wall_time_limit_seconds=540)
+                res = agent.run(task_prompt) or {}
+                # THE TRANSCRIPT RECEIPT: the agent OBJECT holds the real
+                # messages - the last model reply shows the format-fight
+                try:
+                    _am = getattr(agent, "messages", []) or []
+                    _last = ""
+                    for _m in reversed(_am):
+                        if isinstance(_m, dict) and _m.get("role") == "assistant":
+                            _last = _m.get("content", "")
+                            break
+                    row["last_model_reply"] = json.dumps(
+                        {k: v for k, v in _m.items()
+                         if k in ("content", "reasoning_content")},
+                        default=str)[:500]
+                except Exception:
+                    pass
+            except _Sub as sub:
+                res = (sub.args[0] if sub.args else {})
+                res = res if isinstance(res, dict) else {}
+            except Exception as _nt:
+                if _Non and isinstance(_nt, _Non):
+                    # the NON-TERMINATING family (FormatError/Limits/
+                    # Repetition): its args[0] = the mini extra dict
+                    res = (_nt.args[0] if _nt.args else {}) or {}
+                    res = res if isinstance(res, dict) else {}
+                    _msgs = res.get("messages") or []
+                    extra = dict(res.get("extra") or {})
+                    tail = (_msgs[-1].get("content") or "") if _msgs \
+                        else str(_nt)[:200]
+                    extra["tail"] = str(tail)[:240]
+                    res["extra"] = extra
+                else:
+                    raise
+            except Exception as e:
+                last_err = f"{type(e).__name__}: {str(e)[:120]}"
+                if any(t in last_err for t in ("RateLimitError", "NotFoundError",
+                                               "APIError", "AuthenticationError",
+                                               "Timeout", "Connection")):
+                    print(f"[swe-smoke]: lane {lane_model} capped/dead -> next lane")
+                    continue   # THE HONEST HAND-OFF
+                raise
+            last_err = ""
+            break
         extra = res.get("extra") or {}
         submission = str(extra.get("exit_status") or res.get("exit_status", ""))[:40]
         turns = int(res.get("n_calls") or extra.get("n_model_calls") or 0)
+        if extra.get("tail"):
+            row["tail"] = str(extra["tail"])[:240]
     except Exception as e:
-        row["note"] = f"honest fail: {type(e).__name__}: {str(e)[:90]}"
+        row["note"] = f"honest fail: {type(e).__name__}: {str(e)[:90]}" + (f" | last: {last_err}" if last_err else "")
     row["submission"] = submission
     row["turns"] = turns
     row["wall_s"] = round(time.time() - t0, 1)

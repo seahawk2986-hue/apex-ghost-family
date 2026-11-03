@@ -1,10 +1,21 @@
 {
- "chat": ["groq", "local-phi4", "local-coder", "local-r1"],
- "judge": ["groq", "local-coder", "local-fast"],
- "draft": ["local-coder", "local-fast"],
- "translate": ["groq", "local-coder"],
- "vote": ["groq", "local-coder", "local-fast"],
- "copy": ["groq", "local-coder"],
+ "chat": ["groq", "cerebras-120b", "local-phi4", "local-coder", "local-r1"],
+ "judge": ["groq", "cerebras-120b", "nim-kimi-k26", "nemotron-550b", "local-coder"],
+ "draft": ["cerebras-120b", "groq", "nim-kimi-k26", "nemotron-550b", "or-swarm"],
+ "translate": ["groq", "cerebras-120b", "local-coder"],
+ "vote": ["groq", "cerebras-120b", "nim-kimi-k26", "local-coder", "local-fast"],
+ "copy": ["groq", "cerebras-120b", "nim-kimi-k26"],
  "learned_from": "ChatEval (the blind 4-lane A/B/C/D race, judged by the 120b): the 120b = #1 in 3/3 asks; phi4-mini = #2 in 3/3; the qwen-7b = the vague/generic on the chat-asks (the judge's words) - the CODER-tuned = for code-only; the deepseek-r1 = the slow-reasoning (the 4th)",
- "law": "the routes = the DATA (the eval-refresh rewrites them); the pool-vocab = CloudBrain's; the RAM-law: the ollama = the single-slot auto-swap (one model loaded at a time); $0.00 all-lanes"
+ "law": "THE STRENGTH LAW (2026-11-04): a hand-off chain may only KEEP or RAISE model strength (the same weights on another provider, or a STRONGER model) - never silently drop to a weaker one; the ONLY weaker fallback = the founder's documented OFFLINE floor (the chat lane's phi4-mini, disclosed in SYSTEM_IDENTITY). The routes = the DATA (the eval-refresh rewrites them); the pool-vocab = CloudBrain's; the RAM-law: the ollama = the single-slot auto-swap (one model loaded at a time); $0.00 all-lanes",
+ "strength_map": {
+  "planner_brain": "cloud-first (the 120b class; the 3.8B-local-only era was the mis-route)",
+  "judge_critic": "nemotron-550b (the 550B reasoning ceiling) -> groq/cerebras 120b -> local-coder",
+  "code_drafts_court": "glm-5.3-flash (the plain-channel strong coder) -> gpt-oss-120b pair (fence-proven) -> nemotron-550b -> or-swarm same-weights",
+  "chat": "groq 120b (the founder's chat-lock) -> cerebras same-weights -> phi4-mini floor (the documented exception)",
+  "web_reading_vl": "gemini (the VL class) -> groq -> nim-glm -> nemotron-550b -> or-swarm",
+  "votes_diversity": "groq + cerebras + kimi-class + local-qwen (the per-lane one-vote ensemble)",
+  "embeddings": "nomic-embed (LM Studio resident)",
+  "offline_emergency": "qwen2.5-coder:7b via the RAM-gated auto-swap (restore to phi4 after)",
+  "tokens_unlimited": "TPDGuard (provider-stated caps = zero-token skips) + FreeSwarm rotator (N seats, N caps, same-weights pinned) + near-dup replay cache + prompt compression + the local zero-cap floor + the Actions night court"
+ }
 }

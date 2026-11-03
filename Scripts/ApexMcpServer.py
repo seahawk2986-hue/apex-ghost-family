@@ -60,6 +60,43 @@ def tool_apex_status(args):
     return out
 
 
+def tool_apex_court(args):
+    """The Blind Court's anti-self-flattery verdict (read-only, local file)."""
+    try:
+        c = json.load(open(os.path.join(ROOT, "Config", "court_state.json"),
+                           encoding="utf-8-sig"))
+        return {"verdict": c.get("verdict", "unknown"),
+                "holdout_pct": c.get("holdout_pct"), "internal_pct": c.get("internal_pct"),
+                "note": "the court judges internal trend vs a SEALED holdout"}
+    except Exception as e:
+        return {"error": str(e)[:80]}
+
+
+def tool_apex_horizon(args):
+    """The METR-analog time-horizon receipt (read-only)."""
+    try:
+        h = json.load(open(os.path.join(ROOT, "Config", "horizon.json"),
+                           encoding="utf-8-sig"))
+        return {"steps": h.get("steps"), "minutes": h.get("minutes"),
+                "completion": h.get("completion"), "trend": h.get("trend"),
+                "source": "arXiv:2503.14499 analog, from the family's own ledgers"}
+    except Exception as e:
+        return {"error": str(e)[:80]}
+
+
+def tool_apex_fleet(args):
+    """The FleetDoctor's unified verdict (ports/docker/lanes/brain/memory/
+    mcp/swe-court/horizon/court/webuse) - one read-only glance."""
+    try:
+        d = json.load(open(os.path.join(ROOT, "Config", "fleet_doctor.json"),
+                           encoding="utf-8-sig"))
+        return {"verdict": d.get("verdict"), "passed": d.get("passed"),
+                "total": d.get("total"),
+                "checks": [{"check": c["check"], "ok": c["ok"]} for c in d.get("checks", [])]}
+    except Exception as e:
+        return {"error": f"fleet_doctor.json not written yet ({str(e)[:60]}) - run Scripts/FleetDoctor.py"}
+
+
 def tool_apex_task_board(args):
     st = _raw("swarm_state.json")
     return {"note": "claim path: comment on a task issue in the hub repo; "
@@ -95,12 +132,18 @@ def tool_submit_join_request(args):
 
 TOOLS = [
     {"name": "apex_status", "description": "The ghost family's public state: backlog, fitness, hub transport, recruitment", "inputSchema": {"type": "object", "properties": {}}},
+    {"name": "apex_court", "description": "The Blind Court's anti-self-flattery verdict (holdout % vs internal %)", "inputSchema": {"type": "object", "properties": {}}},
+    {"name": "apex_horizon", "description": "The METR-analog time-horizon receipt (steps/minutes/completion)", "inputSchema": {"type": "object", "properties": {}}},
+    {"name": "apex_fleet", "description": "The FleetDoctor's unified fleet health verdict (10 layers, one glance)", "inputSchema": {"type": "object", "properties": {}}},
     {"name": "apex_task_board", "description": "The family's curated standalone tasks (claim on the hub repo)", "inputSchema": {"type": "object", "properties": {}}},
     {"name": "apex_invite_board", "description": "The signed, single-use open invites (claim via the recruitment door)", "inputSchema": {"type": "object", "properties": {}}},
     {"name": "submit_join_request", "description": "Build your attach payload; the door verifies invites + probes on merit", "inputSchema": {"type": "object", "properties": {"name": {"type": "string"}, "version": {"type": "string"}, "capabilities": {"type": "array", "items": {"type": "string"}}, "invite_id": {"type": "string"}}}},
 ]
 
 _DISPATCH = {"apex_status": tool_apex_status,
+             "apex_court": tool_apex_court,
+             "apex_horizon": tool_apex_horizon,
+             "apex_fleet": tool_apex_fleet,
              "apex_task_board": tool_apex_task_board,
              "apex_invite_board": tool_apex_invite_board,
              "submit_join_request": tool_submit_join_request}

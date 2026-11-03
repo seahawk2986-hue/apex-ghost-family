@@ -1,0 +1,75 @@
+{
+ "ts": "2026-11-02 22:14:32",
+ "checks": [
+  {
+   "check": "ports",
+   "ok": true,
+   "detail": "alive 5/5 all five alive",
+   "ts": "22:12:57"
+  },
+  {
+   "check": "docker",
+   "ok": true,
+   "detail": "engine up (sealed courts available)",
+   "ts": "22:12:57"
+  },
+  {
+   "check": "lanes",
+   "ok": true,
+   "detail": "7 live lane(s): groq-120b, groq-qwen, cerebras-120b, cerebras-qwen, or-ultra; 1 honestly retired",
+   "ts": "22:12:57"
+  },
+  {
+   "check": "brain",
+   "ok": true,
+   "detail": "resident: phi4-mini:latest",
+   "ts": "22:12:58"
+  },
+  {
+   "check": "memory",
+   "ok": true,
+   "detail": "positive 6/6; honest-negatives 3/3 | +host +ApexPacing +gym +holdout +court +RAM | -quantum(0.46) -underwater(0.52) -medieval(0.45)",
+   "ts": "22:12:58"
+  },
+  {
+   "check": "mcp",
+   "ok": true,
+   "detail": "[mcp selftest] VERDICT: PASS -> publish-ready",
+   "ts": "22:12:59"
+  },
+  {
+   "check": "swe-court",
+   "ok": true,
+   "detail": "2/33 resolved (6.1%) - the court is SCORING",
+   "ts": "22:12:59"
+  },
+  {
+   "check": "horizon",
+   "ok": true,
+   "detail": "237 steps / 27.6 min @ 99% (METR analog; growing)",
+   "ts": "22:12:59"
+  },
+  {
+   "check": "court",
+   "ok": true,
+   "detail": "CLEAN (internal ~= holdout: no self-flattery detected) (holdout 40.7% n=27 vs internal 31.6%)",
+   "ts": "22:12:59"
+  },
+  {
+   "check": "webuse",
+   "ok": true,
+   "detail": "external_check=passed (lane free-lanes(fleet), 93.3s, $0)",
+   "ts": "22:14:32"
+  },
+  {
+   "check": "capacity",
+   "ok": true,
+   "detail": "99 rotator seats + {\"groq\": \"~200k tok/day (TPD)\", \"cerebras\": \"separate TPD family\", \"nim\": \"85 seats x 60 RPM each\", \"local\": \"ZERO-cap seats (2 venvs + 2 servers)\"} | swarm seats 99 across ['openrouter', 'nim']; starved lanes right now: ['groq-120b', 'gemini']",
+   "ts": "22:14:32"
+  }
+ ],
+ "passed": 11,
+ "total": 11,
+ "verdict": "11/11 layers PASS",
+ "law": "the doctor reports; it never fixes silently"
+}
