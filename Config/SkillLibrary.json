@@ -7582,7 +7582,96 @@
     "sys"
    ],
    "registered": "2026-11-02 19:13:05"
+  },
+  {
+   "skill": "cfe_topicids",
+   "source_file": "cfe-eds-framework/basecamp_defs/cfe_topicids.py",
+   "source_repo": "cfs-tools/cfs-basecamp",
+   "license": "check repo",
+   "sha256": "8f3c2ff6789b025e937bdd8abe6080e18cce9cce692c08e61454196aa16ef0ea",
+   "lines": 209,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "configparser",
+    "json",
+    "logging",
+    "os",
+    "sys",
+    "time",
+    "xml"
+   ],
+   "registered": "2026-11-02 20:13:01"
+  },
+  {
+   "skill": "GS_Model",
+   "source_file": "cfe-eds-framework/tools/cFS-EDS-GroundStation/GS_Model.py",
+   "source_repo": "cfs-tools/cfs-basecamp",
+   "license": "check repo",
+   "sha256": "35a9f3739dd8dc03781fce04d006df10307334de65a5d2f4da9d54c003b0c518",
+   "lines": 231,
+   "first_line": "'''",
+   "imports": [
+    "GS_Controller",
+    "time"
+   ],
+   "registered": "2026-11-02 20:13:06"
+  },
+  {
+   "skill": "convert_tlm_file",
+   "source_file": "cfe-eds-framework/tools/cFS-EDS-GroundStation/utils/convert_tlm_file.py",
+   "source_repo": "cfs-tools/cfs-basecamp",
+   "license": "check repo",
+   "sha256": "d3303cae15c44c2c8c84c06a1f12c19e01d4c985eafd4d6da203f84258777722",
+   "lines": 209,
+   "first_line": "'''",
+   "imports": [
+    "CFE_MissionLib",
+    "EdsLib",
+    "getopt",
+    "sys"
+   ],
+   "registered": "2026-11-02 20:13:07"
+  },
+  {
+   "skill": "cfeconstants",
+   "source_file": "gnd-sys/app/cfsinterface/cfeconstants.py",
+   "source_repo": "cfs-tools/cfs-basecamp",
+   "license": "check repo",
+   "sha256": "28343ad3e6e2d722c6da53db7241917fcdc4697ff43cba07e359a9350f8621b8",
+   "lines": 35,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-02 20:13:10"
+  },
+  {
+   "skill": "mqttconst",
+   "source_file": "gnd-sys/app/remoteops/mqttconst.py",
+   "source_repo": "cfs-tools/cfs-basecamp",
+   "license": "check repo",
+   "sha256": "265af49d2fe5b22307ad4825337ca1351fba218ab024aa9d878ebde858c50535",
+   "lines": 98,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [],
+   "registered": "2026-11-02 20:13:12"
+  },
+  {
+   "skill": "remoteprocess",
+   "source_file": "gnd-sys/app/remoteops/remoteprocess.py",
+   "source_repo": "cfs-tools/cfs-basecamp",
+   "license": "check repo",
+   "sha256": "1f474f171e84c2a709fcd7c0bfd4f4bb1842083f0d6eecc8355fa7e0311ca7b7",
+   "lines": 101,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "configparser",
+    "logging",
+    "os",
+    "paho",
+    "queue",
+    "sys"
+   ],
+   "registered": "2026-11-02 20:13:13"
   }
  ],
- "built": "2026-11-02 19:13:05"
+ "built": "2026-11-02 20:13:13"
 }

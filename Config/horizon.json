@@ -1,0 +1,17 @@
+{
+ "ts": "2026-11-02 20:19:39",
+ "metric": "Apex's analog of METR's 50%-completion time horizon (arXiv:2503.14499): the longest ledger chain whose verified-success/completion >= 50%",
+ "steps": 226,
+ "minutes": 26.6,
+ "completion": 0.986,
+ "previous": {
+  "minutes": 0.0,
+  "steps": 0
+ },
+ "trend": "first-receipt",
+ "chain_failures": {
+  "error": 15
+ },
+ "the_driver_law": "METR's finding: time horizon grows first through RELIABILITY (adapting to mistakes) - the failure histogram is the climb map",
+ "chains_analyzed": 16
+}

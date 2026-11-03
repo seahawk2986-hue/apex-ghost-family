@@ -1,0 +1,12 @@
+{
+ "ts": "2026-11-02 20:20:22",
+ "query": "what is METR time horizon metric for AI agents",
+ "urls": [
+  "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+  "https://metr.org/time-horizons/"
+ ],
+ "notes": [],
+ "lane": "groq-qwen",
+ "wall_s": 4.3,
+ "verdict": "SOURCED"
+}

@@ -74,6 +74,9 @@ if (-not $ears -and $earsDo) {
 
 
 # Idle-driven autonomy: micro gym/farm rounds when RAM is healthy + cooldown 2h.
+# (The TRIPWIRE rides here too: the integration hooks' manifest check - the
+# silent-revert class dies on a 1-min cadence, 30-min cooldown in the organ.)
+& "$root\apex_venv\Scripts\python.exe" "$root\Scripts\HookCheck.py" 2>$null | Where-Object { $_ -like '*tripwire*' } | Out-File "$root\Logs\sentry.log" -Append -Encoding utf8
 $cdFile = "$root\Logs\idle_autonomy_cooldown.txt"
 $now = Get-Date
 $doIt = $true

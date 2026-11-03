@@ -83,3 +83,28 @@ router/QoS papers (Token-Budget-Aware Pool Routing, CALM, DriftSched).
   caches/forks until platform GC - for absolute certainty, rotate the
   PayPal receiving address when convenient (receiving addresses are not
   credentials; residual risk = spam, not access).
+
+---
+
+## THE AUTONOMY ROUND (2026-11-04) - Apex vs the verified world frontier
+
+Scored against: METR 50%-time-horizon (arXiv:2503.14499, NeurIPS 2025, v4
+Jul-2026 - frontier ~50min, doubling ~7mo, reliability = the driver) +
+SWE-bench 2026 (mini-SWE-agent 65% Verified Jul-2025).
+
+| Axis | Verdict + the organ |
+|---|---|
+| Time-horizon per goal | WAS unmeasured (up-time infinite, goal-horizon unknown). NOW MEASURED: **226 steps / 26.6 min @ 99% completion** (first receipt, HorizonLadder) - the METR-analog from the family's own ledgers; the trend line exists; the failure map (error x15) = the climb map. CLOSING: the nightly Dream is now ONE LONG MEASURED CHAIN (the organs run in sequence) - the horizon receipt grows with it |
+| Mistake-recovery (METR's driver) | Architecturally strong (heal x3/critic/Best-of-2/Court); NOW MEASURED via the failure histogram in the same receipt |
+| SWE-class external score | GAP (deferred with dignity): the SWE-harness organ = next round (real harvested repo-issues executed in the sealed container) |
+| Self-modification | UNIQUE LEAD (frontier agents do not self-evolve; Apex does it inside sealed containers with courts) |
+| Multi-agent | LEAD (hub + family + swarm + shard dispatch) |
+| Cost discipline | LEAD ($0 enforced everywhere; the spend-gates receipts) |
+| Honesty/consent machinery | LEAD (constitution, Blind Court, canon counts, no-lane laws, tripwires) |
+| Conversational sourced research | CLOSED THIS ROUND: **LightResearch** (search -> polite fetch -> cross-checked synthesis w/ sources + NOT-FOUND-IN-SOURCES honesty; live on "research:" in the chat) |
+| Uncertainty/calibration | MEASURED + published (0.34 reasoning_calibration; 4/6 overconfidences; the holdout 40.7% vs internal 31.6%) - values honest, improvement = the weak-first curriculum |
+
+THE TRIPWIRE (HookCheck): the silent-revert class that ate the Dream/receipts
+hooks = on a 1-min cadence now (manifest-driven re-install + alarms); the
+integration-spine law: the evolver never re-issues receipts_page.py
+(CORE_MODULES).

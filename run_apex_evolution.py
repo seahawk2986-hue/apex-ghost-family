@@ -696,7 +696,12 @@ def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None, skill
     except Exception: pass
     return False
 
-CORE_MODULES = {"run_apex_evolution.py", "optimized_agent.py", "apex_ipce_engine.py", "apexmemory.py", "apexwebscraper.py", "apexnetscraper.py"}
+    # THE INTEGRATION-SPINE LAW (2026-11-04): the evolver EVOLVES MODULES,
+    # never its own integration surfaces - receipts_page.py is the designed
+    # public trust-page (the silent re-issues of it kept dropping the organs'
+    # hooks; the family's receipts page = a CONTRACT, not a research target).
+    CORE_MODULES = {"run_apex_evolution.py", "optimized_agent.py", "apex_ipce_engine.py", "apexmemory.py", "apexwebscraper.py", "apexnetscraper.py",
+                    "receipts_page.py"}
 
 def plan():
     log("planner", "Evaluating workspace...")
@@ -1509,6 +1514,28 @@ def talk_api(t: TalkMsg):
         # always holds the opt-out)
         _fresh = True
         msg = re.sub(r"(?i)^!?fresh[:\s]*", "", msg) or msg
+    _rq_text = None
+    try:
+        import LightResearch as _LR
+        _rq_text = _LR.triggered(msg)
+        if _rq_text:
+            reply_text, doc = _LR.research(_rq_text)
+            if reply_text:
+                text = (reply_text + "\n\nsources: "
+                        + ", ".join(doc.get("urls", [])[:3]))
+                lane0 = doc.get("lane") or "research 🔎"
+            else:
+                text = ("NOT FOUND IN SOURCES - " + str(doc.get("verdict"))
+                        + ("" if not doc.get("urls") else
+                           " | tried: " + ", ".join(doc.get("urls", [])[:3])))
+                lane0 = "research 🔈"
+            MEM.record_event("conversation", f"Andrew asked research: "
+                             f"{_rq_text[:80]} | {doc.get('verdict')}",
+                             talk=True, message=msg[:400], reply=text[:2000])
+            return {"reply": text, "lane": lane0,
+                    "recall": [{"text": "research lane (bounded 60s, sources attached)"}]}
+    except Exception:
+        pass
     if re.match(r"\s*(run the gym|go train|gym)\b", msg.lower()):
         try:
             import threading as _th
@@ -1798,6 +1825,49 @@ def talk_api_stream(t: TalkStreamMsg):
         lane_name = {"v": "unknown"}
         _from_cache = {"v": False}
         _chat_hash = _C.signature({"text": "chat|" + msg.strip().lower()})
+        # ================================================== THE RESEARCH
+        # LANE (2026-11-04, the frontier-gap organ): "research: ..." =
+        # bounded sourced web-research (search -> fetch -> cross-checked
+        # synthesis, sources in the reply). ALWAYS LIVE (never replayed from
+        # the cache: the world changes; the cache is for stable questions).
+        try:
+            import LightResearch as _LR
+            _q_text = _LR.triggered(msg)
+            if _q_text:
+                lane_name["v"] = "research 🔎"
+                ttft = round(time.time() - t0, 3)
+                yield (f'event: meta\ndata: ' + json.dumps(
+                    {"lane": lane_name["v"], "ttft_s": ttft,
+                     "note": "searching + fetching sources (bounded 60s)"},
+                    ensure_ascii=False) + "\n\n")
+                try:
+                    reply_text, doc = _LR.research(_q_text)
+                except Exception as _e_res:
+                    reply_text, doc = None, {"verdict": f"lane failed honestly: {type(_e_res).__name__}"}
+                if reply_text:
+                    for i in range(0, len(reply_text), 48):
+                        yield ("event: tok\ndata: " + json.dumps(
+                            {"t": reply_text[i:i + 48]}, ensure_ascii=False) + "\n\n")
+                    src_note = "sources: " + ", ".join(doc.get("urls", [])[:3])
+                else:
+                    reply_text = ("NOT FOUND IN SOURCES (the honest research "
+                                  "stop: " + json.dumps(doc.get("verdict", ""))[:80] + ")")
+                    src_note = ""
+                yield ("event: done\ndata: " + json.dumps(
+                    {"reply": reply_text + ("\n\n" + src_note if src_note else ""),
+                     "lane": lane_name["v"], "chars": len(reply_text),
+                     "ttft_s": ttft}, ensure_ascii=False) + "\n\n")
+                try:
+                    MEM.record_event("conversation", f"Andrew asked research: "
+                                     f"{_q_text[:80]} | {doc.get('verdict')} "
+                                     f"via {doc.get('lane')}",
+                                     talk=True, message=msg[:400],
+                                     reply=reply_text[:2000])
+                except Exception:
+                    pass
+                return
+        except Exception:
+            pass
         # ================================================== THE REPLAY CACHE
         # (2026-11-04; the same canon as the blocking route): identical
         # questions stream INSTANTLY off the disk - the meta event tags the

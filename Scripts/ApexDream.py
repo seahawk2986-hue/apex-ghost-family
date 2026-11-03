@@ -250,6 +250,36 @@ def main():
         _organ_notes.append("roster refreshed (retire + catalog + probe)")
     except Exception as _e_ar:
         m.record_event("roster", "roster skipped honestly: " + str(_e_ar)[:70])
+    try:
+        import CertifyBridge as _cb
+        _n = _cb.certify()
+        _organ_notes.append(f"certify-bridge earned {len(_n)} execution-seats")
+    except Exception as _e_cb:
+        m.record_event("certification", "certify-bridge skipped honestly: " + str(_e_cb)[:70])
+    try:
+        import FilingBridge as _fb
+        _doc = _fb.prepare()
+        _organ_notes.append(f"filing-batch prepared ({_doc.get('batch_size', 0)} rows)")
+    except Exception as _e_fb:
+        m.record_event("filing_bridge", "filing-bridge skipped honestly: " + str(_e_fb)[:70])
+    try:
+        import LocalGym as _lg
+        _lg.grade_brain()
+        _organ_notes.append("the serving floor graded on the sealed pocket")
+    except Exception as _e_lg:
+        m.record_event("local_mind", "local-gym skipped honestly: " + str(_e_lg)[:70])
+    try:
+        import Recall2 as _r2
+        _r2.append_delta()
+        _organ_notes.append("recall2 index delta-applied")
+    except Exception:
+        pass
+    try:
+        import HorizonLadder as _hl
+        _hl.measure()
+        _organ_notes.append("the autonomy horizon measured")
+    except Exception as _e_hl:
+        m.record_event("horizon", "ladder skipped honestly: " + str(_e_hl)[:70])
     m.record_event("training", "night organs: " + ", ".join(_organ_notes))
     # Security posture, measured right now (feeds the overnight note honestly)
     sec_status = "integrity manifest OK; secrets sealed"
