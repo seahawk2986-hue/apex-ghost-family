@@ -80,6 +80,7 @@ button{border:0;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:
     <button class="tool" id="pastebtn" title="paste clipboard into the message">⤓ paste</button>
 <button class="tool" id="libbtn" title="prompt library — 110 clickable prompts">📚 prompts</button>
 <button class="tool" id="dirbtn" title="load the training directive">📋</button>
+  <button class="tool" id="voicebtn" title="speak + listen (the browser does both, $0)">🎙 voice</button>
     <button id="send">SEND</button>
   </div>
 </footer>
@@ -202,6 +203,35 @@ ta.addEventListener("paste",async e=>{
 });
 document.getElementById("pastebtn").onclick=async()=>{const t=await nativePaste();if(t){ta.value=(ta.value?ta.value+"\n":"")+t;ta.focus();ta.dispatchEvent(new Event("input"));}else sys("clipboard is empty or unavailable");};
 document.getElementById("libbtn").onclick=()=>{if(libRows){libRows.scrollIntoView({block:"start"});}else{renderLibrary();}};
+// ====== THE VOICE DUPLEX (the browser-is-the-brain's-mouth law: the $0
+// outsource: Chrome's SpeechRecognition listens + speechSynthesis speaks;
+// nothing to install server-side; the privacy = local) ============
+let voiceOn = localStorage.getItem("apex_voice") === "1";
+let lastReplyEl = null;
+function speakLatest(){try{
+  const b=document.querySelectorAll("#chat .row.me .bubble");
+  const txt=b.length?(b[b.length-1].dataset.raw||"").replace(/<[^>]+>/g," "):"";
+  if(txt.trim()&&window.speechSynthesis){const u=new SpeechSynthesisUtterance(txt.slice(0,600));
+    u.rate=1.05;u.lang="en-US";speechSynthesis.cancel();speechSynthesis.speak(u);}}catch(e){}}
+function refreshVoiceBtn(){const v=document.getElementById("voicebtn");
+  if(v){v.style.background=voiceOn?"#238636":"";v.title=voiceOn?"voice ON (tap to mute)":"voice muted (tap to speak)";}}
+document.getElementById("voicebtn").onclick=()=>{voiceOn=!voiceOn;localStorage.setItem("apex_voice",voiceOn?"1":"0");
+  speechSynthesis.cancel();refreshVoiceBtn();sys(voiceOn?"🎙 voice ON - my replies speak aloud (Chrome's voice, $0)":"🎙 voice muted");};
+// the recognition: the mic = the input lane
+window.addEventListener("keydown",e=>{
+  if(e.ctrlKey&&e.key.toLowerCase()==="m"&&!e.repeat){e.preventDefault();
+    if(!window.SpeechRecognition&&!window.webkitSpeechRecognition){sys("this browser has no speech recognition - Chrome/Edge works");return;}
+    const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+    const rec=new SR();rec.lang="en-US";rec.interimResults=false;
+    rec.onresult=e2=>{const t=e2.results[0][0].transcript;ta.value=t;ta.dispatchEvent(new Event("input"));send();};
+    rec.onerror=()=>sys("🎙 heard nothing (the mic's permission?)");
+    rec.start();}});
+// the spoke-along: every completed reply = spoken when voiceOn
+const _bubbleDone=new MutationObserver(()=>{if(voiceOn){const b=document.querySelectorAll("#chat .row.me");
+  if(b.length&&b[b.length-1]!==lastReplyEl){lastReplyEl=b[b.length-1];
+    setTimeout(speakLatest,600);}}});
+_bubbleDone.observe(chat,{childList:true});
+refreshVoiceBtn();
 const LIB=[
 ["Status & Self-Report",[
 "Status check: report every layer you have running right now, with honest uptime.",
