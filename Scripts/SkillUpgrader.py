@@ -109,8 +109,14 @@ def run(top_n=10):
         cache[repo] = files or cache.get(repo, {})
         src = files.get(path_part)
         ok = compiles(src) if src else False
-        s["executable_verified"] = bool(src)
+        # THE HONESTY FIX (2026-11-04, the vetting-funnel audit row #3):
+        # this flag used to be set to bool(src) - TRUE merely because a file
+        # was FETCHED, which made "executable_verified" advertise a check
+        # that never ran. The flag now means what it says: verified ==
+        # compiles (+ a fetch is recorded separately).
+        s["executable_verified"] = bool(ok)
         s["compiles"] = ok
+        s["fetched"] = bool(src)
         s["verified_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
         print(f"[upgrader] {s.get('skill', '?')[:44]} <- {repo[:32]}: "
               f"fetched={bool(src)} compiles={ok}")

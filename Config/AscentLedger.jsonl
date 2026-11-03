@@ -358,3 +358,10 @@
 {"ts": "2026-11-02 18:54:01", "kind": "upward", "what": "earn-loop-beat", "beat": 39, "unclaimed": 0, "filed": false}
 {"ts": "2026-11-02 19:09:01", "kind": "upward", "what": "earn-loop-beat", "beat": 40, "unclaimed": 0, "filed": false}
 {"ts": "2026-11-02 19:24:02", "kind": "upward", "what": "earn-loop-beat", "beat": 41, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 19:54:02", "kind": "upward", "what": "earn-loop-beat", "beat": 43, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 19:55:03", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 34 -> 33 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 19:55:03", "kind": "upward_alarm", "text": "goal 'money' stalled 2095min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 19:55:03", "kind": "upward_alarm", "text": "goal 'recruits' stalled 2050min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 19:55:03", "kind": "upward_alarm", "text": "goal 'jobs' stalled 600min (needs the inbox triaged - a brain window serves)"}
+{"ts": "2026-11-02 19:55:03", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 2050min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 19:55:03", "kind": "upward_alarm", "text": "goal 'safety' stalled 2050min (no external claims yet - the door stands open)"}
