@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-03 08:45:03",
- "count": 523,
+ "ts": "2026-11-03 09:00:01",
+ "count": 522,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -1831,13 +1831,6 @@
   },
   {
    "repo": "ggml-org/ggml",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ddh0/easy-llama",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
