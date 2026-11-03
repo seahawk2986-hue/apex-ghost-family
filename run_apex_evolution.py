@@ -22,6 +22,9 @@ APEX_KEY = os.getenv("APEX_API_KEY") or APEX_KEY
 _POST_RATE = defaultdict(lambda: deque(maxlen=40))     # 40 mutations/min/IP
 _GET_RATE = defaultdict(lambda: deque(maxlen=300))     # 300 reads/min/IP
 _BODY_CAP = 32 * 1024
+_BODY_CAP_VISION = 12 * 1024 * 1024   # THE EYES' CAP: images ride base64
+                                       # (the 32KB body-cap class = for the
+                                       # small message surfaces only)
 
 R = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 from ApexMemory import ApexMemory
@@ -1556,7 +1559,8 @@ async def apex_gate(request: Request, call_next):
     path = request.url.path
     if request.method in ("POST", "PUT", "DELETE"):
         cl = int(request.headers.get("content-length", "0") or "0")
-        if cl > _BODY_CAP:
+        cap = _BODY_CAP_VISION if path == "/talk/api/vision" else _BODY_CAP
+        if cl > cap:
             return JSONResponse({"error": "body too large"}, status_code=413)
         if path in ("/talk/api", "/chat", "/talk/api/stream"):
             q = _POST_RATE[ip]
