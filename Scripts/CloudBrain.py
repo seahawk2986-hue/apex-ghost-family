@@ -503,6 +503,10 @@ def chat_stream(prompt, max_tokens=800, purpose="", models=()):
                 lane_yielded = False
                 with _rq.post(url, headers=hdrs, json=body_dict, stream=True,
                               timeout=(240 if is_local else 90)) as r:
+                    r.encoding = "utf-8"   # THE MOJIBAKE ROOT FIX: requests'
+                    # latin-1 default for text/* without a declared charset
+                    # double-encoded every typographic byte (' – …); the
+                    # stream's truth = UTF-8, named explicitly, no guessing
                     if r.status_code != 200:
                         continue
                     for line in r.iter_lines(decode_unicode=True):
