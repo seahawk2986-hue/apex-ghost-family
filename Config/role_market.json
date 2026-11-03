@@ -1,0 +1,88 @@
+{
+ "ts": "2026-11-02 23:39:29",
+ "auctions": [
+  {
+   "role": "judge",
+   "winner": "nemotron-550b",
+   "bid": 999.0,
+   "price": 349.0,
+   "new_chain": [
+    "nemotron-550b",
+    "nim-kimi-k26",
+    "gemini-pro"
+   ],
+   "was": [
+    "nemotron-550b",
+    "nim-kimi-k26",
+    "gemini-pro"
+   ]
+  },
+  {
+   "role": "draft",
+   "winner": "nim-v41f",
+   "bid": 349.0,
+   "price": -1.0,
+   "new_chain": [
+    "nim-v41f",
+    "groq",
+    "cerebras-120b",
+    "nim-glm"
+   ],
+   "was": [
+    "nim-v41f",
+    "groq",
+    "cerebras-120b",
+    "nim-glm"
+   ]
+  },
+  {
+   "role": "chat",
+   "winner": "groq",
+   "bid": -1.0,
+   "price": -50.0,
+   "new_chain": [
+    "groq",
+    "cerebras-120b"
+   ],
+   "was": [
+    "pollinations",
+    "local-fast",
+    "local-coder",
+    "local-phi4"
+   ]
+  },
+  {
+   "role": "copy",
+   "winner": "groq",
+   "bid": -1.0,
+   "price": -50.0,
+   "new_chain": [
+    "groq",
+    "cerebras-120b"
+   ],
+   "was": [
+    "groq",
+    "cerebras-120b"
+   ]
+  },
+  {
+   "role": "vote",
+   "winner": "groq-qwen",
+   "bid": 300.0,
+   "price": 300.0,
+   "new_chain": [
+    "groq-qwen",
+    "cerebras-qwen"
+   ],
+   "was": [
+    "groq-qwen",
+    "cerebras-qwen"
+   ]
+  }
+ ],
+ "starved_out": [
+  "gemini",
+  "groq-120b"
+ ],
+ "law": "Vickrey settle: the routes = the measured bids (the second-price receipt); the strength law = never down"
+}

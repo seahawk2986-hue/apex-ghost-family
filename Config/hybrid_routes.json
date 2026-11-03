@@ -1,10 +1,32 @@
 {
- "chat": ["groq", "cerebras-120b", "local-phi4", "local-coder", "local-r1"],
- "judge": ["groq", "cerebras-120b", "nim-kimi-k26", "nemotron-550b", "local-coder"],
- "draft": ["cerebras-120b", "groq", "nim-kimi-k26", "nemotron-550b", "or-swarm"],
- "translate": ["groq", "cerebras-120b", "local-coder"],
- "vote": ["groq", "cerebras-120b", "nim-kimi-k26", "local-coder", "local-fast"],
- "copy": ["groq", "cerebras-120b", "nim-kimi-k26"],
+ "chat": [
+  "groq",
+  "cerebras-120b"
+ ],
+ "judge": [
+  "nemotron-550b",
+  "nim-kimi-k26",
+  "gemini-pro"
+ ],
+ "draft": [
+  "nim-v41f",
+  "groq",
+  "cerebras-120b",
+  "nim-glm"
+ ],
+ "translate": [
+  "groq",
+  "cerebras-120b",
+  "local-coder"
+ ],
+ "vote": [
+  "groq-qwen",
+  "cerebras-qwen"
+ ],
+ "copy": [
+  "groq",
+  "cerebras-120b"
+ ],
  "learned_from": "ChatEval (the blind 4-lane A/B/C/D race, judged by the 120b): the 120b = #1 in 3/3 asks; phi4-mini = #2 in 3/3; the qwen-7b = the vague/generic on the chat-asks (the judge's words) - the CODER-tuned = for code-only; the deepseek-r1 = the slow-reasoning (the 4th)",
  "law": "THE STRENGTH LAW (2026-11-04): a hand-off chain may only KEEP or RAISE model strength (the same weights on another provider, or a STRONGER model) - never silently drop to a weaker one; the ONLY weaker fallback = the founder's documented OFFLINE floor (the chat lane's phi4-mini, disclosed in SYSTEM_IDENTITY). The routes = the DATA (the eval-refresh rewrites them); the pool-vocab = CloudBrain's; the RAM-law: the ollama = the single-slot auto-swap (one model loaded at a time); $0.00 all-lanes",
  "strength_map": {
