@@ -2174,6 +2174,20 @@ def talk_api_stream(t: TalkStreamMsg):
                              headers={"Cache-Control": "no-cache",
                                       "X-Accel-Buffering": "no"})
 
+@app.get("/hub-app")
+def hub_app():
+    """THE ONE-CLICK DOOR (the manifest-create for the family's GitHub App):
+    a correct-URL redirect (the browser's copy-paste mangled the scheme
+    twice tonight; the localhost hop = the mangle-proof path). The final
+    Create = the founder's own confirm (GitHub's UI-only action)."""
+    from fastapi.responses import RedirectResponse
+    try:
+        with open(os.path.join(R, "Config", "app_manifest_url.txt"),
+                  encoding="utf-8") as f:
+            return RedirectResponse(f.read().strip())
+    except Exception:
+        return JSONResponse({"error": "manifest url file missing"}, status_code=500)
+
 @app.get("/notes")
 def notes_api():
     """Apex's overnight notes - the dream cycle speaks first."""
