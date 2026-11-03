@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-03 02:45:02",
- "count": 443,
+ "ts": "2026-11-03 03:00:02",
+ "count": 454,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -564,6 +564,13 @@
   },
   {
    "repo": "orbital-sim-lab/space-ml-sim",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "feuerwehr-oberwil/kp-rueck",
    "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
@@ -1753,6 +1760,13 @@
    "license": ""
   },
   {
+   "repo": "nf-core/logos",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "turboderp/exllamav2",
    "score": 51.0,
    "tier": "MINE",
@@ -2831,6 +2845,62 @@
    "license": ""
   },
   {
+   "repo": "opendatahub-io/kserve",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "opendatahub-io/trustyai-service-operator",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "opendatahub-io/model-registry-operator",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "opendatahub-io/feast",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "opendatahub-io/trainer",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "opendatahub-io/odh-dashboard",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "opendatahub-io/notebooks",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "opendatahub-io/data-science-pipelines-operator",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "0xShug0/audio.cpp",
    "score": 29.6,
    "tier": "GOLD",
@@ -3035,6 +3105,13 @@
   },
   {
    "repo": "sylvesterkaczmarek/awesome-space-autonomy",
+   "score": 26.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "casey/just",
    "score": 26.1,
    "tier": "GOLD",
    "stars": 0,
