@@ -1,5 +1,6 @@
 {
- "count": 389,
+ "ts": "2026-11-02 20:00:02",
+ "count": 436,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -24,6 +25,13 @@
   },
   {
    "repo": "Socioboard-developers/Socioboard-5.0",
+   "score": 84.7,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "cfs-tools/cfs-basecamp",
    "score": 84.7,
    "tier": "VEIN",
    "stars": 0,
@@ -177,6 +185,48 @@
    "license": ""
   },
   {
+   "repo": "hannorein/rebound",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "0xCoto/VIRGO",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "deflorio/SpOCK",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Bambofy/FossaSat-1",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "chrismolli/ProjectInertia",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "oresat/oresat-star-tracker-software",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "alfio-event/alf.io",
    "score": 83.7,
    "tier": "VEIN",
@@ -185,6 +235,13 @@
   },
   {
    "repo": "sabre-io/Baikal",
+   "score": 83.7,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "OpenLST/openlst",
    "score": 83.7,
    "tier": "VEIN",
    "stars": 0,
@@ -513,6 +570,13 @@
    "license": ""
   },
   {
+   "repo": "orbital-sim-lab/space-ml-sim",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "miroslavpejic85/mirotalk",
    "score": 83.0,
    "tier": "VEIN",
@@ -597,6 +661,13 @@
    "license": ""
   },
   {
+   "repo": "nyx-space/nyx",
+   "score": 81.0,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "pentacent/keila",
    "score": 80.8,
    "tier": "VEIN",
@@ -627,6 +698,13 @@
   {
    "repo": "jitsi/jitsi-meet",
    "score": 61.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "esa/tetra3",
+   "score": 60.0,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -675,6 +753,13 @@
   },
   {
    "repo": "Gumpolas/TooTawersRecomp",
+   "score": 51.7,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "AtharvaLakhe/PSR-Net",
    "score": 51.7,
    "tier": "MINE",
    "stars": 0,
@@ -1528,6 +1613,132 @@
    "license": ""
   },
   {
+   "repo": "hyqzz/Solar-Wanderer",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "typpo/astrokit",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "LunCoSim/lunco-space-jargon",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ben-n93/pyspaceweather",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "pragyaangaur/SETU",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "bair-climate-initiative/metaearth",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "shahar603/Launch-Dashboard-API",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "mimitoz62/exostab",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "stzifkas/pluto-ecss",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "SimplySolid3D/planetary-dem-to-stl",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "AndrewAnnex/SpiceyPy",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ShipItAndPray/orbital-compute",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "swift-nav/libsbp",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "brownj4/Tetra",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "UBNanosatLab/openstartracker",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "cesabici-bit/satguard",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "oscarjpicazo/spacedata",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "shashwatak/satellite-js",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "turboderp/exllamav2",
    "score": 51.0,
    "tier": "MINE",
@@ -1626,6 +1837,27 @@
    "license": ""
   },
   {
+   "repo": "5OKB/grid-python-sdk",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "gunvirranu/perturb",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Salad109/SIMPLETON",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "cytoscape/cytoscape.js",
    "score": 50.7,
    "tier": "MINE",
@@ -1690,6 +1922,13 @@
   },
   {
    "repo": "sissbruecker/linkding",
+   "score": 50.4,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "brandon-rhodes/python-sgp4",
    "score": 50.4,
    "tier": "MINE",
    "stars": 0,
@@ -1801,6 +2040,13 @@
    "license": ""
   },
   {
+   "repo": "the-aerospace-corporation/satcat5",
+   "score": 40.6,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "phpbb/phpbb",
    "score": 39.1,
    "tier": "GOLD",
@@ -1866,6 +2112,20 @@
   {
    "repo": "mozilla/fxa",
    "score": 38.7,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nyx-space/anise",
+   "score": 38.7,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nasa/nos3",
+   "score": 38.2,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -1948,8 +2208,22 @@
    "license": ""
   },
   {
+   "repo": "swift-nav/libswiftnav",
+   "score": 33.3,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "pimcore/pimcore",
    "score": 32.8,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nasa/trick",
+   "score": 32.2,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -2473,6 +2747,41 @@
    "license": ""
   },
   {
+   "repo": "open-space-collective/open-space-toolkit",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "SpaceOceanCorp/space-water-logistics",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "dotchance/nodalarc",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nasa/cfs",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "wselwood/orbcalc",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "0xShug0/audio.cpp",
    "score": 29.6,
    "tier": "GOLD",
@@ -2516,6 +2825,13 @@
   },
   {
    "repo": "kestra-io/kestra",
+   "score": 29.6,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nasa/fprime",
    "score": 29.6,
    "tier": "GOLD",
    "stars": 0,
@@ -2662,6 +2978,20 @@
    "license": ""
   },
   {
+   "repo": "sylvesterkaczmarek/awesome-assured-autonomy",
+   "score": 26.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "sylvesterkaczmarek/awesome-space-autonomy",
+   "score": 26.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "doldecomp/sms",
    "score": 25.9,
    "tier": "GOLD",
@@ -2724,7 +3054,5 @@
    "stars": 0,
    "license": ""
   }
- ],
- "leads_sha256": "882c6dd4d425a9eb7680476df7d0209981902e1a244cadf67d3255c2f0395722",
- "ts": "2026-11-02 19:30:02"
+ ]
 }
