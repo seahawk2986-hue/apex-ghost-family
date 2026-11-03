@@ -1,0 +1,51 @@
+# THE SELF-IMPROVEMENT LEDGER - outsourced entirely to GitHub's machines:
+# every S+ organ runs on the runner nightly, and the RECEIPTS COMMIT BACK -
+# the auction settles the routes, the abstract-gym measures T2/T4, the
+# honesty-bond scans the public claims, the cloud-doctor re-verifies. The
+# box sleeps; the intelligence compounds in public ($0).
+name: self-improve
+
+permissions:
+  contents: write
+  issues: read
+
+on:
+  schedule:
+    - cron: "17 5 * * *"        # nightly, 05:17 UTC (after the dawn court)
+  workflow_dispatch: {}
+
+jobs:
+  improve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: The S+ organs (the auction -> the gym -> the bond -> the cloud-doctor)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CLOUD_ALLOWED: "1"
+        run: |
+          python Scripts/RoleMarket.py
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'Scripts')
+          import AbstractGym; AbstractGym.beat(6)
+          PY
+          python Scripts/ClaimCheck.py
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'Scripts')
+          import Prophet; Prophet.loop()
+          PY
+          python Scripts/FleetDoctor.py --cloud
+      - name: The receipts commit back (the public proof)
+        run: |
+          git config user.name "apex-ghost-improve"
+          git config user.email "improve@apex-ghost-family"
+          git add Config/ Config/role_market.json Config/claim_bond.json Config/abstract_state.json || true
+          git diff --cached --quiet && echo "no new receipts" || git commit -m "the nightly self-improvement ledger (on the runner) [skip ci]"
+          git pull --rebase origin main || true
+          git push || true
