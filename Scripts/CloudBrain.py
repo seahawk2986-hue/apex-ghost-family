@@ -21,8 +21,9 @@ ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 GATE = os.path.join(ROOT, "Config", "spend_gate.json")
 # the honest pricing (round per-1M estimates; the gate errs HIGH not low)
 PRICE_PER_1M = {"ollama": 0.20, "openrouter-free": 0.0, "groq": 0.0,
-                "gemini": 0.0,
                 "gemini": 0.10}
+# (2026-11-04 fix: a duplicate "gemini" key silently overwrote the free-tier
+# 0.0 price with 0.10 — the pricing drift now lives only in this comment)
 DEFAULT_SESSION_CAP = 0.50       # USD - Andrew's drain protection
 
 
@@ -42,15 +43,12 @@ def save_gate(g):
 
 
 def env_keys():
+    """DELEGATED TO THE SPINE (2026-11-04): one .env schema fleet-wide
+    (ApexIO.env) with the same uppercase-key contract as before."""
+    import ApexIO
     out = {}
-    p = os.path.join(ROOT, ".env")
-    try:
-        for ln in open(p, encoding="utf-8-sig"):
-            if "=" in ln and not ln.strip().startswith("#"):
-                k, v = ln.split("=", 1)
-                out[k.strip().upper()] = v.strip().strip('"').strip("'")
-    except Exception:
-        pass
+    for k0, v0 in ApexIO.env(ROOT).items():
+        out[k0.upper()] = v0
     return out
 
 
@@ -123,6 +121,24 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
              keys.get("OPENROUTER_API_KEY", ""),
              {"Authorization": "Bearer " + keys.get("OPENROUTER_API_KEY", "")}),
         ]
+        # THE 2026-11-04 FLEET EXPANSION ("all our models to their full
+        # potential"): every lane the family paid vetting time for joins the
+        # STREAMING pool - cerebras' own 120b, both free NIM doors, and the
+        # catalog auto-router. All structurally $0 (no-card/ trial tiers).
+        pool += [
+            ("cerebras-120b", "https://api.cerebras.ai/v1/chat/completions",
+             "gpt-oss-120b", keys.get("CEREBRAS_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("CEREBRAS_API_KEY", "")}),
+            ("nim-v41f", "https://integrate.api.nvidia.com/v1/chat/completions",
+             "deepseek-ai/deepseek-v4.1-flash", keys.get("NVIDIA_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("NVIDIA_API_KEY", "")}),
+            ("nim-glm", "https://integrate.api.nvidia.com/v1/chat/completions",
+             "z-ai/glm-5.3-flash", keys.get("NVIDIA_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("NVIDIA_API_KEY", "")}),
+            ("or-auto", "https://openrouter.ai/api/v1/chat/completions",
+             "openrouter/free", keys.get("OPENROUTER_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("OPENROUTER_API_KEY", "")}),
+        ]
     credits_allowed = (os.environ.get("CREDITS_ALLOWED") == "1" or
                        (keys.get("CREDITS_ALLOWED") == "1"))
     if cloud_allowed and credits_allowed:
@@ -145,11 +161,21 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
         is_local = name.startswith("local")
         if not keyv and not is_local:
             continue
+        if not is_local:
+            # THE PACER HONORED HERE TOO (2026-11-04): a 429-windowed lane
+            # is skipped, not hammered (LaneGuard's ledger law, blocking path)
+            try:
+                import ApexShard as _S
+                if _S._cool(name):
+                    print(f"[cloud-brain] {name}: pacer window - skipped")
+                    continue
+            except Exception:
+                pass
         # THE GATE LIVES PER CANDIDATE: the no-card free tiers price $0.00
         # (they pass even the $0.00 cap); the credits-tier's est stays
         # HIGH-side (the cap blocks it until the founder's second unlock)
         est_c = (len(prompt) / 4 + max_tokens) / 1e6 * (
-            0.0 if name in ("groq", "gemini", "openrouter") else 0.2)
+            0.0 if name != "ollama" else 0.2)
         if not is_local:
             g2 = load_gate()
             if g2["spent_usd"] + est_c > g2["session_cap_usd"]:
@@ -206,6 +232,18 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
             track(name, False)
             print(f"[cloud-brain] {name}: {str(e)[:60]}")
             continue
+    if models:
+        # THE FLEET GUARANTEE (2026-11-04, "all our models to their full
+        # potential"): the route answered nothing - expand the route to the
+        # WHOLE pool for one more pass (recursive call; the widened call's
+        # own guarantee-pass = empty, so this terminates). The pacers hold.
+        _more = tuple(c0[0] for c0 in pool
+                      if all(c0[0] != c1[0] for c1 in cands))
+        if _more:
+            print(f"[cloud-brain]: route ({', '.join(models)}) served nothing "
+                  "- the FULL FLEET pass begins")
+            return chat(prompt, max_tokens=max_tokens, purpose=purpose,
+                        models=_more, resp_json=resp_json)
     g["refusals"] += 1
     save_gate(g)
     print("[cloud-brain] every provider refused - the honest stop")
@@ -287,74 +325,112 @@ def chat_stream(prompt, max_tokens=800, purpose="", models=()):
              keys.get("OPENROUTER_API_KEY", ""),
              {"Authorization": "Bearer " + keys.get("OPENROUTER_API_KEY", "")}),
         ]
+    served = {"v": False}
+
+    def _paced(_nm):
+        """THE PACER HONORED IN THE STREAM TOO (2026-11-04): a 429-windowed
+        lane is SKIPPED, not hammered - LaneGuard's ledger law applies to
+        every lane, stream or blocking."""
+        try:
+            import ApexShard as _S
+            return _S._cool(_nm)
+        except Exception:
+            return False
+
     _idx = {m: i for i, m in enumerate(models)} if models else {}
     cands = ([c for c in pool if c[0] in set(models)] if models else pool)
     if _idx:
         cands = sorted(cands, key=lambda c: _idx.get(c[0], 99))
-    for name, url, model, keyv, hdrs in cands:
-        is_local = name.startswith("local")
-        if not keyv and not is_local:
-            continue
-        # THE GATE (the free-tier law, mirrored from chat()): the pool here
-        # = the FREE lanes ONLY (the local = structurally $0; the groq/
-        # gemini/openrouter = the NO-CARD free tiers = $0.00-price = they
-        # PASS even the $0.00 cap). The CREDITS-tier = structurally OUT of
-        # this function (the founder's second-unlock law) - its est can
-        # never appear here, so no est-gate check is needed or applied.
-        body_dict = None
-        if is_local:
-            body_dict = {"model": model, "stream": True,
-                         "messages": [{"role": "user",
-                                       "content": prompt[:6000]}],
-                         "keep_alive": "1m",
-                         "options": {"num_predict": max(max_tokens, 512),
-                                     "temperature": 0}}
-        else:
-            body_dict = {"model": model, "stream": True,
-                         "messages": [{"role": "user",
-                                       "content": prompt[:9000 if name == "groq" else 6000]}],
-                         "max_tokens": max(max_tokens, 512),
-                         "temperature": 0}
-        try:
-            import requests as _rq
-            with _rq.post(url, headers=hdrs, json=body_dict, stream=True,
-                          timeout=(240 if is_local else 90)) as r:
-                if r.status_code != 200:
-                    continue
-                for line in r.iter_lines(decode_unicode=True):
-                    if not line:
+    # THE FLEET GUARANTEE (2026-11-04, "all our models to their full
+    # potential"): the route-filtered pass = the PREFERENCE; if it serves
+    # nothing, the REST of the fleet streams in one more pass. And an
+    # empty-stream candidate no longer terminates the generator - the
+    # fleet goes on (the old post-stream `return` cut it all off).
+    fleet_rest = [c for c in pool if all(c[0] != c0[0] for c0 in cands)] \
+        if models else []
+    for pass_no in (0, 1):
+        if pass_no == 1:
+            if served["v"] or not fleet_rest:
+                break
+            cands = sorted(fleet_rest, key=lambda c: _idx.get(c[0], 99))
+            print("[cloud-brain]: the route served nothing - the FULL "
+                  "FLEET pass begins (every model, pacer-honored)")
+        for name, url, model, keyv, hdrs in cands:
+            is_local = name.startswith("local")
+            if not keyv and not is_local:
+                continue
+            if not is_local and _paced(name):
+                print(f"[cloud-brain] {name}: pacer window - skipped")
+                continue
+            # THE GATE (the free-tier law, mirrored from chat()): the pool here
+            # = the FREE lanes ONLY (the local = structurally $0; the groq/
+            # gemini/openrouter = the NO-CARD free tiers = $0.00-price = they
+            # PASS even the $0.00 cap). The CREDITS-tier = structurally OUT of
+            # this function (the founder's second-unlock law) - its est can
+            # never appear here, so no est-gate check is needed or applied.
+            body_dict = None
+            if is_local:
+                body_dict = {"model": model, "stream": True,
+                             "messages": [{"role": "user",
+                                           "content": prompt[:6000]}],
+                             "keep_alive": "1m",
+                             "options": {"num_predict": max(max_tokens, 512),
+                                         "temperature": 0}}
+            else:
+                body_dict = {"model": model, "stream": True,
+                             "messages": [{"role": "user",
+                                           "content": prompt[:9000 if name == "groq" else 6000]}],
+                             "max_tokens": max(max_tokens, 512),
+                             "temperature": 0}
+            try:
+                import requests as _rq
+                lane_yielded = False
+                with _rq.post(url, headers=hdrs, json=body_dict, stream=True,
+                              timeout=(240 if is_local else 90)) as r:
+                    if r.status_code != 200:
                         continue
-                    if is_local:
-                        # the ollama NDJSON: one object per line
-                        try:
-                            j = _j.loads(line)
-                        except Exception:
+                    for line in r.iter_lines(decode_unicode=True):
+                        if not line:
                             continue
-                        tok = (j.get("message") or {}).get("content") or ""
-                        if tok:
-                            yield (name, tok)
-                        if j.get("done"):
-                            return
-                    else:
-                        # the OpenAI-compat SSE: data: {...} / [DONE]
-                        s = line.strip()
-                        if not s.startswith("data:"):
-                            continue
-                        payload_s = s[5:].strip()
-                        if payload_s == "[DONE]":
-                            return
-                        try:
-                            j = _j.loads(payload_s)
-                        except Exception:
-                            continue
-                        chs = j.get("choices") or [{}]
-                        tok = ((chs[0].get("delta") or {}).get("content")) or ""
-                        if tok:
-                            yield (name, tok)
-            # the lane ended = the full content streamed = the caller done
-            return
-        except Exception:
-            continue
+                        if is_local:
+                            # the ollama NDJSON: one object per line
+                            try:
+                                j = _j.loads(line)
+                            except Exception:
+                                continue
+                            tok = (j.get("message") or {}).get("content") or ""
+                            if tok:
+                                yield (name, tok)
+                                lane_yielded = True
+                                served["v"] = True
+                            if j.get("done"):
+                                if lane_yielded:
+                                    return
+                                break   # empty stream: the fleet goes on
+                        else:
+                            # the OpenAI-compat SSE: data: {...} / [DONE]
+                            s = line.strip()
+                            if not s.startswith("data:"):
+                                continue
+                            payload_s = s[5:].strip()
+                            if payload_s == "[DONE]":
+                                if lane_yielded:
+                                    return
+                                break   # empty stream: the fleet goes on
+                            try:
+                                j = _j.loads(payload_s)
+                            except Exception:
+                                continue
+                            chs = j.get("choices") or [{}]
+                            tok = ((chs[0].get("delta") or {}).get("content")) or ""
+                            if tok:
+                                yield (name, tok)
+                                lane_yielded = True
+                                served["v"] = True
+                if lane_yielded:
+                    return
+            except Exception:
+                continue
     return
 
 

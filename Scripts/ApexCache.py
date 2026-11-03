@@ -40,6 +40,15 @@ def signature(payload):
     return hashlib.sha256(norm.encode("utf-8")).hexdigest()
 
 
+def cache_get(text):
+    """The exact-hash replay path (11/02: restored - cache_lookup_any needs it)."""
+    h = signature({"text": text})
+    row = lookup(h)
+    if row and row[2]:
+        return row[2], h
+    return None, h
+
+
 def lookup(h):
     with _conn() as c:
         row = c.execute("SELECT provider, model, resolution, verify_state "
@@ -76,10 +85,12 @@ def _jaccard(a, b):
     return len(a & b) / max(1, len(a | b))
 
 
-def cache_lookup_any(text, threshold=0.82):
-    """Exact hash first, then a LOCAL trigram near-match over validated
-    entries - the semantic-cache pattern the 50-paper pass surfaced as the
-    #1 proven upgrade over exact-hits. Returns (reply, kind: exact|semantic|none)."""
+def cache_lookup_any(text, threshold=0.90, learn=True):
+    """Exact hash first, then the trigram near-match - WITH A SAFETY GATE:
+    the near-hit serves only at >= 0.90 similarity (a wrong 'close enough'
+    = worse than a miss), and every near-hit decision = recorded so the
+    threshold can be audited, never silently guessed. Returns
+    (reply, kind: exact|semantic|near|none)."""
     reply, _k = cache_get(text)
     if reply is not None:
         return reply, "exact"
@@ -97,9 +108,18 @@ def cache_lookup_any(text, threshold=0.82):
         sim = _jaccard(_trigrams(task or ""), cur)
         if sim > best_sim:
             best, best_sim = (h, res), sim
-    if best and best_sim >= threshold:
+    if best_sim >= threshold:
         return best[1], "semantic"
-    return None, "none"
+    if learn and best and best_sim >= threshold - 0.25:
+        _log_near(hit=best[0], sim=best_sim, accepted=False)
+    return None, "near" if best else "none"
+
+
+def _log_near(hit, sim, accepted):
+    p = os.path.join(REPO, "scores", "near_cache_audit.jsonl")
+    with open(p, "a", encoding="utf-8") as f:
+        f.write(json.dumps({"ts": time.time(), "hit": hit[:10],
+                            "sim": round(sim, 3), "accepted": accepted}) + "\n")
 
 
 if __name__ == "__main__":

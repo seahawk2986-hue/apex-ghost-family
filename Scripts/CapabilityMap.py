@@ -10,13 +10,10 @@ Usage:
   record(family, lane, pass_bool)
   best_for(family) -> lane_name or None (falls back to static tiers)
 """
-import io
 import json
 import os
-import sys
 import time
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 REPO = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 MAPP = os.path.join(REPO, "scores", "capability_map.json")
 PRIOR_RUNS = 2          # Bayesian prior: a lane needs 3+ samples to beat 50/50

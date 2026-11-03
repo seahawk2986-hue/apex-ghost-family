@@ -50,6 +50,24 @@ CODE_FLOOR = ("local-coder", "http://127.0.0.1:1234/v1/chat/completions",
 _lock = threading.Lock()
 STORM_BUDGET = 30            # RetryGuard-class cap: max swapped-retries per hour, fleet-wide
 
+# THE TIERED, LENGTH-AWARE TIMEOUT LADDER (2026-11-04 — the long-promised
+# combine, canon-verified: *Clairvoyant* [Predictive Shortest-Job-First Admission]
+# = fast lanes answer FIRST with short waits; *OUTLETS* [Output-Length
+# Prediction] + *Scheduling with Uncertainty-Aware Output Length Predictions* =
+# scale the wait by the EXPECTED OUTPUT LENGTH, not a fixed wall):
+#   every lane previously shared ONE timeout=75 — smalls starved behind deep -
+#   brain waits; now tier caps + max_tokens-derived expected length bound the
+#   dispatch. An explicit caller timeout STILL WINS (back-compat contract).
+TIER_TIMEOUTS = {"floor": 45, "floor-code": 60, "medium": 60, "deep": 150}
+
+
+def _tier_timeout(tier, max_tokens, timeout):
+    if timeout is not None:
+        return timeout                       # explicit callers keep the old contract
+    cap = TIER_TIMEOUTS.get(tier or "medium", 60)
+    est = 10.0 + 0.04 * float(max_tokens or 700)   # length-aware expectation
+    return max(12.0, min(est, cap))
+
 
 def _storm_ok():
     """The fleet-wide retry budget (RetryGuard lesson): a self-inflicted retry
@@ -78,12 +96,10 @@ def _storm_ok():
 
 
 def env():
-    e = {}
-    for ln in open(os.path.join(REPO, ".env"), encoding="utf-8-sig"):
-        if "=" in ln:
-            k, v = ln.split("=", 1)
-            e[k.strip()] = v.strip()
-    return e
+    """DELEGATED TO THE SPINE (2026-11-04): the same parser as every other
+    organ (ApexIO.env) - the 3-schema drift class is dead."""
+    import ApexIO
+    return ApexIO.env(REPO)
 
 
 def _cool(name):
@@ -98,8 +114,16 @@ def _cool(name):
     return time.time() - rec.get("last_ok_ts", 0) < 60  # honor the pacer
 
 
-def call(env, order, messages, max_tokens=700, timeout=75):
-    """Round-robin dispatch: throttle/503/timeout = flag + hot-swap, no state drop."""
+def call(env, order, messages, max_tokens=700, timeout=None):
+    """Round-robin dispatch: throttle/503/timeout = flag + hot-swap, no state drop.
+
+    2026-11-04 hardening:
+      - the LENGTH-AWARE TIER LADDER (see TIER_TIMEOUTS): per-tier cap +
+        expected-length scaling; an explicit timeout still wins (compat).
+      - the STORM BUDGET is ENFORCED at last (the audited bug: _storm_ok()
+        was never called from call() - a self-inflicted retry storm could
+        burn the fleet's hour unbounded; now each hot-swap consumes one
+        unit of STORM_BUDGET and past the cap the fleet WALLS honestly)."""
     if os.path.isfile(CURSOR):
         cur = json.load(open(CURSOR, encoding="utf-8")).get("i", 0)
     else:
@@ -107,6 +131,8 @@ def call(env, order, messages, max_tokens=700, timeout=75):
     tried, notes = [], []
     for off in range(len(order)):
         name, url, key, model, tier = order[(cur + off) % len(order)]
+        if name in tried[1:]:
+            continue                          # one honest try per lane per call
         tried.append(name)
         if key and _cool(name):
             notes.append(f"{name}: honoring the pacer")
@@ -115,7 +141,8 @@ def call(env, order, messages, max_tokens=700, timeout=75):
         if key:
             headers["Authorization"] = "Bearer " + env.get(key, "")
         try:
-            r = requests.post(url, headers=headers, timeout=timeout,
+            r = requests.post(url, headers=headers,
+                              timeout=_tier_timeout(tier, max_tokens, timeout),
                               json={"model": model, "max_tokens": max_tokens,
                                     "temperature": 0.0, "messages": messages})
             if r.status_code == 200:
@@ -126,19 +153,48 @@ def call(env, order, messages, max_tokens=700, timeout=75):
                     "content", ""), notes
             if r.status_code in (429, 503, 500):
                 notes.append(f"{name}: HTTP {r.status_code} - shard swapped")
+                if not _storm_ok():
+                    notes.append("storm budget exhausted - the fleet walls "
+                                 "honestly this hour (no retry storm)")
+                    return None, None, None, notes
                 continue
             notes.append(f"{name}: HTTP {r.status_code} - honest skip")
         except Exception as e:
             notes.append(f"{name}: {type(e).__name__} - shard swapped")
+            if not _storm_ok():
+                notes.append("storm budget exhausted - the fleet walls "
+                             "honestly this hour (no retry storm)")
+                return None, None, None, notes
     return None, None, None, notes
 
 
 def order_for(tier3=False, code=False):
+    """THE LEARNED ORDER (the 91-paper combine #2): if CapabilityMap has
+    graded evidence, the winning lane leads the medium tier; the static
+    tier order = the honest fallback where no evidence exists."""
     base = ([CODE_FLOOR] if code else []) + \
            ([l for l in LANES if l[4] == "floor"]) + \
            [l for l in LANES if l[4] == "medium"] + \
            ([l for l in LANES if l[4] == "deep"] if tier3 else [])
+    base[0] = _learner_promote(base) or base[0]
     return base
+
+
+def _learner_promote(order):
+    """CapabilityMap's verdict: the measured-best lane moves to the front."""
+    try:
+        sys.path.insert(0, os.path.join(REPO, "Scripts"))
+        import CapabilityMap as CM
+        fam = "code" if any(l[0] == "local-coder" for l in order) else "chat"
+        cands = [l[0] for l in order if l[4] in ("medium", "deep")]
+        winner = CM.best_for(fam, cands)
+        if winner:
+            for lane in order:
+                if lane[0] == winner:
+                    return lane
+    except Exception:
+        pass
+    return None
 
 
 if __name__ == "__main__":

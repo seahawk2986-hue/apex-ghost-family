@@ -32,6 +32,19 @@ LEDGER = os.path.join(ROOT, "Config", "CryptoLedger.json")
 GUARD = os.path.join(ROOT, "Scripts", "ApexGuard.py")
 
 
+def _payout_dest():
+    """The founder's receiving address = .env-only (PAYOUT_DEST), never repo
+    content (the 2026-11-04 privacy law; .env is gitignored - verified)."""
+    try:
+        with open(os.path.join(ROOT, ".env"), encoding="utf-8-sig") as f:
+            for ln in f:
+                if ln.strip().startswith("PAYOUT_DEST="):
+                    return ln.split("=", 1)[1].strip() or "paypal:SET-ME"
+    except Exception:
+        pass
+    return "paypal:configured-in-.env"
+
+
 def _lock():
     """msvcrt byte-lock identical to SafeIO._lock, kept local so a critical
     section can hold it across read+write (SafeIO.write_json's separate lock
@@ -97,7 +110,7 @@ def _announce(amount, source, L_after):
     try:
         row = {"id": os.urandom(6).hex(), "ts": time.strftime("%Y-%m-%d %H:%M:%S"),
                "kind": "conversation", "talk": True, "imp": 1.0,
-               "text": f"MONEY LANDED: ${amt:.2f} from {source} -> [REDACTED-PAYPAL] - headroom after "
+               "text": f"MONEY LANDED: ${amt:.2f} from {source} -> {_payout_dest()} - headroom after "
                        f"(80pct cap): ${headroom:.2f}",
                "meta": {"message": f"Just earned ${amt:.2f} for you, Andrew - "
                                     f"from {source}. The 80pct reserve: "

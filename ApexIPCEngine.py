@@ -1,55 +1,89 @@
-from typing import Any, Dict, List, Optional, Union, Callable
+"""ApexIPCEngine - the in-process IPC bus (2026-11-04 repair + completion).
+
+The audited bug: message_queue was a queue.Queue - truthiness worked but
+`queue[0]` and `queue.popleft()` raise TypeError/AttributeError, so this
+engine CRASHED the moment receive_message was ever called (it was dead
+scaffolding). It is now real and honest:
+
+  - the queue = a collections.deque of (endpoint, message) pairs;
+  - receive_message drains until it finds a row for the endpoint (a routed
+    bus, not a single global mailbox) and returns None if none (never raises);
+  - send_message submits to the handler pool and returns the result (used).
+"""
+from typing import Any, Callable, Dict, List, Optional, Union
 import logging
 from collections import deque
-from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
+from concurrent.futures import ThreadPoolExecutor
+
 
 class ApexIPCEngine:
     def __init__(self, config: Dict[str, Any]):
         self.config = config
         self.connections: Dict[str, Any] = {}
-        from queue import Queue
-        self.message_queue: Queue = Queue()
+        self.message_queue: deque = deque(maxlen=10000)   # bounded (RAM gate)
         self.logger = logging.getLogger('ApexIPCEngine')
         self.logger.setLevel(logging.INFO)
-        handler = logging.StreamHandler()
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        self.logger.addHandler(handler)
-        from concurrent.futures import ThreadPoolExecutor
-        self.executor = ThreadPoolExecutor(max_workers=self.config.get('max_workers', 5))
+        if not self.logger.handlers:
+            handler = logging.StreamHandler()
+            handler.setFormatter(logging.Formatter(
+                '%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+            self.logger.addHandler(handler)
+        self.executor = ThreadPoolExecutor(
+            max_workers=self.config.get('max_workers', 5))
+        self.logger.info('IPC engine up (bounded queue %d, workers %d)',
+                         self.message_queue.maxlen, self.config.get('max_workers', 5))
 
     def connect(self, endpoint: str, params: Dict[str, Any]) -> None:
         if endpoint not in self.connections:
             self.connections[endpoint] = params
-            self.logger.info(f'Connected to {endpoint}')
+            self.logger.info('Connected to %s', endpoint)
+
+    def set_handler(self, endpoint: str,
+                    handler: Union[Callable[[Any], Any], Callable[[], Any]]) -> None:
+        if endpoint in self.connections:
+            self.connections[endpoint]['handler'] = handler
+            self.logger.info('Handler updated for %s', endpoint)
 
     def send_message(self, endpoint: str, message: Any) -> Optional[Any]:
+        """Direct handler call through the pool (returns the handler's result)."""
         if endpoint in self.connections:
-            handler = self.connections[endpoint]['handler']
+            handler = self.connections[endpoint].get('handler')
+            if handler is None:
+                self.logger.warning('Endpoint %s has no handler', endpoint)
+                return None
             future = self.executor.submit(handler, message)
             return future.result()
-        self.logger.warning(f'No connection found for {endpoint}')
+        self.logger.warning('No connection found for %s', endpoint)
         return None
 
+    def enqueue_message(self, endpoint: str, message: Any) -> None:
+        """Route a message into the bus for a later receive_message(endpoint)."""
+        self.message_queue.append((endpoint, message))
+
     def receive_message(self, endpoint: str) -> Optional[Any]:
-        while self.message_queue and self.message_queue[0][0] == endpoint:
-            _, result = self.message_queue.popleft()
-            return result
-        self.logger.warning(f'No message found for {endpoint}')
-        return None
+        """Drain the bus until a row for `endpoint` arrives (skips foreign
+        rows - they stay queued for their own endpoints). Honest None."""
+        keep = []
+        result = None
+        while self.message_queue:
+            ep, payload = self.message_queue.popleft()
+            if ep == endpoint:
+                result = payload
+                break
+            keep.append((ep, payload))
+        for row in reversed(keep):
+            self.message_queue.appendleft(row)
+        if result is None:
+            self.logger.warning('No message found for %s', endpoint)
+        return result
 
     def close_connection(self, endpoint: str) -> None:
         if endpoint in self.connections:
             del self.connections[endpoint]
-            self.logger.info(f'Disconnected from {endpoint}')
+            self.logger.info('Disconnected from %s', endpoint)
 
     def list_connections(self) -> List[str]:
         return list(self.connections.keys())
-
-    def set_handler(self, endpoint: str, handler: Union[Callable[[Any], Any], Callable[[], Any]]) -> None:
-        if endpoint in self.connections:
-            self.connections[endpoint]['handler'] = handler
-            self.logger.info(f'Handler updated for {endpoint}')
 
     def get_config(self) -> Dict[str, Any]:
         return self.config
@@ -58,5 +92,9 @@ class ApexIPCEngine:
         self.config = config
         self.executor.max_workers = config.get('max_workers', 5)
 
+    def shutdown(self) -> None:
+        self.executor.shutdown(wait=False, cancel_futures=True)
+
     def __str__(self) -> str:
-        return f'ApexIPCEngine(config={self.config}, connections={self.connections})'
+        return (f'ApexIPCEngine(config={self.config}, '
+                f'connections={self.connections}, queued={len(self.message_queue)})')

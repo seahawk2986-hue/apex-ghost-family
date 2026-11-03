@@ -1,0 +1,12 @@
+{
+ "ts": "2026-11-02 19:02:10",
+ "free_gb": 3.28,
+ "pinned": [],
+ "skipped": [
+  "local-phi4 (needs 4.5 GB, free 3.3)",
+  "local-coder (needs 8.0 GB, free 3.3)",
+  "local-gemma3 (needs 9.5 GB, free 3.3)",
+  "local-fast (needs 10.5 GB, free 3.3)"
+ ],
+ "ps_warm": []
+}

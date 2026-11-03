@@ -243,3 +243,116 @@
 {"ts": "2026-11-01 21:54:36", "kind": "upward_alarm", "text": "goal 'recruits' stalled 730min (no external claims yet - the door stands open)"}
 {"ts": "2026-11-01 21:54:36", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 730min (outputs are earned inside the hardware gate)"}
 {"ts": "2026-11-01 21:54:36", "kind": "upward_alarm", "text": "goal 'safety' stalled 730min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 08:24:02", "kind": "upward", "what": "earn-loop-beat", "beat": 48, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 08:39:02", "kind": "upward", "what": "earn-loop-beat", "beat": 49, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 09:09:02", "kind": "upward", "what": "earn-loop-beat", "beat": 51, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 09:39:01", "kind": "upward", "what": "earn-loop-beat", "beat": 2, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 09:54:01", "kind": "upward", "what": "earn-loop-beat", "beat": 3, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 09:54:38", "kind": "upward_alarm", "text": "knowledge lane 'events.mines' regressed 157 -> 151 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 09:54:38", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 29 -> 27 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 09:54:38", "kind": "upward_alarm", "text": "goal 'money' stalled 1495min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 09:54:38", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1450min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 09:54:38", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1450min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 09:54:38", "kind": "upward_alarm", "text": "goal 'safety' stalled 1450min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 09:55:02", "kind": "upward_alarm", "text": "knowledge lane 'events.mines' regressed 157 -> 151 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 09:55:02", "kind": "upward_alarm", "text": "goal 'money' stalled 1495min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 09:55:02", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1450min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 09:55:02", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1450min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 09:55:02", "kind": "upward_alarm", "text": "goal 'safety' stalled 1450min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 09:55:17", "kind": "upward_alarm", "text": "knowledge lane 'events.mines' regressed 157 -> 151 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 09:55:17", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 29 -> 27 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 09:55:17", "kind": "upward_alarm", "text": "goal 'money' stalled 1496min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 09:55:17", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1451min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 09:55:17", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1451min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 09:55:17", "kind": "upward_alarm", "text": "goal 'safety' stalled 1451min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 10:09:01", "kind": "upward", "what": "earn-loop-beat", "beat": 4, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 10:24:01", "kind": "upward", "what": "earn-loop-beat", "beat": 5, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 11:09:01", "kind": "upward", "what": "earn-loop-beat", "beat": 8, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 11:24:01", "kind": "upward", "what": "earn-loop-beat", "beat": 9, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 11:39:01", "kind": "upward", "what": "earn-loop-beat", "beat": 10, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 11:54:01", "kind": "upward", "what": "earn-loop-beat", "beat": 11, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 11:54:15", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 29 -> 28 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 11:54:15", "kind": "upward_alarm", "text": "goal 'money' stalled 1615min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 11:54:15", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1570min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 11:54:15", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1570min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 11:54:15", "kind": "upward_alarm", "text": "goal 'safety' stalled 1570min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 11:54:34", "kind": "upward_alarm", "text": "RAM 1.48 GB < 1.5 - the box is starved; organ work idles until free RAM recovers"}
+{"ts": "2026-11-02 11:54:34", "kind": "upward_alarm", "text": "goal 'money' stalled 1615min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 11:54:34", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1570min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 11:54:34", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1570min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 11:54:34", "kind": "upward_alarm", "text": "goal 'safety' stalled 1570min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 11:55:05", "kind": "upward_alarm", "text": "knowledge lane 'events.mines' regressed 171 -> 169 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 11:55:05", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 34 -> 28 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 11:55:05", "kind": "upward_alarm", "text": "goal 'money' stalled 1615min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 11:55:05", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1570min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 11:55:05", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1570min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 11:55:05", "kind": "upward_alarm", "text": "goal 'safety' stalled 1570min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 12:09:01", "kind": "upward", "what": "earn-loop-beat", "beat": 12, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 12:24:01", "kind": "upward", "what": "earn-loop-beat", "beat": 13, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 12:39:01", "kind": "upward", "what": "earn-loop-beat", "beat": 14, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 12:54:01", "kind": "upward", "what": "earn-loop-beat", "beat": 15, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 13:09:01", "kind": "upward", "what": "earn-loop-beat", "beat": 16, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 13:24:01", "kind": "upward", "what": "earn-loop-beat", "beat": 17, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 13:39:01", "kind": "upward", "what": "earn-loop-beat", "beat": 18, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 13:54:01", "kind": "upward", "what": "earn-loop-beat", "beat": 19, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 13:54:33", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 34 -> 32 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 13:54:33", "kind": "upward_alarm", "text": "goal 'money' stalled 1735min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 13:54:33", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1690min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 13:54:33", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1690min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 13:54:33", "kind": "upward_alarm", "text": "goal 'safety' stalled 1690min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 13:54:37", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 34 -> 32 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 13:54:37", "kind": "upward_alarm", "text": "goal 'money' stalled 1735min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 13:54:37", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1690min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 13:54:37", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1690min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 13:54:37", "kind": "upward_alarm", "text": "goal 'safety' stalled 1690min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 14:09:01", "kind": "upward", "what": "earn-loop-beat", "beat": 20, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 14:24:01", "kind": "upward", "what": "earn-loop-beat", "beat": 21, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 14:39:01", "kind": "upward", "what": "earn-loop-beat", "beat": 22, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 14:54:01", "kind": "upward", "what": "earn-loop-beat", "beat": 23, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 15:09:01", "kind": "upward", "what": "earn-loop-beat", "beat": 24, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 15:24:01", "kind": "upward", "what": "earn-loop-beat", "beat": 25, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 15:39:01", "kind": "upward", "what": "earn-loop-beat", "beat": 26, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 15:54:01", "kind": "upward", "what": "earn-loop-beat", "beat": 27, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 15:54:17", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 34 -> 32 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 15:54:17", "kind": "upward_alarm", "text": "goal 'money' stalled 1855min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 15:54:17", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1810min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 15:54:17", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1810min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 15:54:17", "kind": "upward_alarm", "text": "goal 'safety' stalled 1810min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 15:55:13", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 34 -> 32 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 15:55:13", "kind": "upward_alarm", "text": "RAM 0.78 GB < 1.5 - the box is starved; organ work idles until free RAM recovers"}
+{"ts": "2026-11-02 15:55:13", "kind": "upward_alarm", "text": "goal 'money' stalled 1856min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 15:55:13", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1811min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 15:55:13", "kind": "upward_alarm", "text": "goal 'jobs' stalled 360min (needs the inbox triaged - a brain window serves)"}
+{"ts": "2026-11-02 15:55:13", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1811min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 15:55:13", "kind": "upward_alarm", "text": "goal 'safety' stalled 1811min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 16:09:01", "kind": "upward", "what": "earn-loop-beat", "beat": 28, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 16:24:01", "kind": "upward", "what": "earn-loop-beat", "beat": 29, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 16:39:01", "kind": "upward", "what": "earn-loop-beat", "beat": 30, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 16:54:01", "kind": "upward", "what": "earn-loop-beat", "beat": 31, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 17:09:01", "kind": "upward", "what": "earn-loop-beat", "beat": 32, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 17:24:01", "kind": "upward", "what": "earn-loop-beat", "beat": 33, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 17:39:01", "kind": "upward", "what": "earn-loop-beat", "beat": 34, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 17:54:01", "kind": "upward", "what": "earn-loop-beat", "beat": 35, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 17:54:24", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 34 -> 33 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 17:54:24", "kind": "upward_alarm", "text": "skills_lib.count regressed 568 -> 57 (the skill library only grows (near-dup gate))"}
+{"ts": "2026-11-02 17:54:24", "kind": "upward_alarm", "text": "goal 'money' stalled 1975min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 17:54:24", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1930min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 17:54:24", "kind": "upward_alarm", "text": "goal 'jobs' stalled 479min (needs the inbox triaged - a brain window serves)"}
+{"ts": "2026-11-02 17:54:24", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1930min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 17:54:24", "kind": "upward_alarm", "text": "goal 'safety' stalled 1930min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 17:54:51", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 34 -> 33 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 17:54:51", "kind": "upward_alarm", "text": "goal 'money' stalled 1975min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 17:54:51", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1930min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 17:54:51", "kind": "upward_alarm", "text": "goal 'jobs' stalled 480min (needs the inbox triaged - a brain window serves)"}
+{"ts": "2026-11-02 17:54:51", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1930min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 17:54:51", "kind": "upward_alarm", "text": "goal 'safety' stalled 1930min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 17:55:31", "kind": "upward_alarm", "text": "knowledge lane 'wiki.mines' regressed 34 -> 33 (PathMemory clobber suspected)"}
+{"ts": "2026-11-02 17:55:31", "kind": "upward_alarm", "text": "goal 'money' stalled 1976min (moves only when Andrew files/review - the honest $0.00 law)"}
+{"ts": "2026-11-02 17:55:31", "kind": "upward_alarm", "text": "goal 'recruits' stalled 1931min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 17:55:31", "kind": "upward_alarm", "text": "goal 'jobs' stalled 480min (needs the inbox triaged - a brain window serves)"}
+{"ts": "2026-11-02 17:55:31", "kind": "upward_alarm", "text": "goal 'efficiency' stalled 1931min (outputs are earned inside the hardware gate)"}
+{"ts": "2026-11-02 17:55:31", "kind": "upward_alarm", "text": "goal 'safety' stalled 1931min (no external claims yet - the door stands open)"}
+{"ts": "2026-11-02 18:09:01", "kind": "upward", "what": "earn-loop-beat", "beat": 36, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 18:24:01", "kind": "upward", "what": "earn-loop-beat", "beat": 37, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 18:39:01", "kind": "upward", "what": "earn-loop-beat", "beat": 38, "unclaimed": 0, "filed": false}
+{"ts": "2026-11-02 18:54:01", "kind": "upward", "what": "earn-loop-beat", "beat": 39, "unclaimed": 0, "filed": false}

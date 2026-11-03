@@ -38,7 +38,7 @@
     "2609.12464v1"
    ],
    "fulfillment": "apex executes; the checkout + the acceptance = the founder's clicks",
-   "checkout": "FOUNDER-GATED (no rail; the destination recorded: [REDACTED-PAYPAL])"
+   "checkout": "FOUNDER-GATED (no rail; the destination recorded: paypal:ENV:PAYOUT_DEST (redacted from repo content 2026-11-04))"
   },
   {
    "name": "security work (agent-executed; founder-gated delivery)",
@@ -54,7 +54,7 @@
     "2610.12927v1"
    ],
    "fulfillment": "apex executes; the checkout + the acceptance = the founder's clicks",
-   "checkout": "FOUNDER-GATED (no rail; the destination recorded: [REDACTED-PAYPAL])"
+   "checkout": "FOUNDER-GATED (no rail; the destination recorded: paypal:ENV:PAYOUT_DEST (redacted from repo content 2026-11-04))"
   },
   {
    "name": "ml_data work (agent-executed; founder-gated delivery)",
@@ -67,7 +67,7 @@
     "2605.05282v1"
    ],
    "fulfillment": "apex executes; the checkout + the acceptance = the founder's clicks",
-   "checkout": "FOUNDER-GATED (no rail; the destination recorded: [REDACTED-PAYPAL])"
+   "checkout": "FOUNDER-GATED (no rail; the destination recorded: paypal:ENV:PAYOUT_DEST (redacted from repo content 2026-11-04))"
   },
   {
    "name": "unclassified work (agent-executed; founder-gated delivery)",
@@ -80,7 +80,7 @@
     "2610.31152v1"
    ],
    "fulfillment": "apex executes; the checkout + the acceptance = the founder's clicks",
-   "checkout": "FOUNDER-GATED (no rail; the destination recorded: [REDACTED-PAYPAL])"
+   "checkout": "FOUNDER-GATED (no rail; the destination recorded: paypal:ENV:PAYOUT_DEST (redacted from repo content 2026-11-04))"
   }
  ],
  "law": "nothing real until the founder's clicks (checkout + acceptance); the rates are DOCUMENTED bands, not promises"

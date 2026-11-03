@@ -3407,7 +3407,7 @@
    "license": "check repo",
    "sha256": "6bc9269df79f6c211a0c72816d3c4a29a8491f0202ac56506a6a0c97855db1a9",
    "lines": 22,
-   "first_line": "\"\"\"User-data helpers \u2014 re-exported from ``crewai_core.user_data``.\"\"\"",
+   "first_line": "\"\"\"User-data helpers — re-exported from ``crewai_core.user_data``.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:12"
   },
@@ -3446,7 +3446,7 @@
    "license": "check repo",
    "sha256": "45ee86a7440b594196ed9578fa0346585184fb3d19b04ae248d2de9c529423dd",
    "lines": 24,
-   "first_line": "\"\"\"OAuth2 authentication primitives \u2014 shared by crewai and crewai-cli.\"\"\"",
+   "first_line": "\"\"\"OAuth2 authentication primitives — shared by crewai and crewai-cli.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:19"
   },
@@ -7127,7 +7127,380 @@
    ],
    "registered": "2026-11-02 19:54:40",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "audit",
+   "source_file": "docs/audits/2026-09-29-tldr-read-hook/audit.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "d16670721764045d3a117ece59af3fddd10b2359d86cece18c3a697a39ae4d13",
+   "lines": 138,
+   "first_line": "\"\"\"Audit of Overdeck's TLDR read hook from local Claude Code transcripts.",
+   "imports": [
+    "json"
+   ],
+   "registered": "2026-11-02 17:54:45"
+  },
+  {
+   "skill": "moonshine-sidecar",
+   "source_file": "scripts/moonshine-sidecar.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "478adc4a88e1c99f8bdcc175d3fcbef0ee99adee0fb85bf9bedef0fdf6e108de",
+   "lines": 199,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "base64",
+    "json",
+    "numpy",
+    "os",
+    "queue",
+    "signal",
+    "sys",
+    "threading"
+   ],
+   "registered": "2026-11-02 17:54:49"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "src/lib/caveman/compress/__init__.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "429c3e1c5cc5b9705f28d77f303c728304ae68693913ad3d5ce9b5a44c8ee40f",
+   "lines": 9,
+   "first_line": "\"\"\"Caveman compress scripts.",
+   "imports": [],
+   "registered": "2026-11-02 17:54:58"
+  },
+  {
+   "skill": "__main__",
+   "source_file": "src/lib/caveman/compress/__main__.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+   "lines": 3,
+   "first_line": "from .cli import main",
+   "imports": [],
+   "registered": "2026-11-02 17:54:58"
+  },
+  {
+   "skill": "cli",
+   "source_file": "src/lib/caveman/compress/cli.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "74c740a128afa5cbc1db17289ff3dc0cfe331917ff9c3a532f2884299b3620f6",
+   "lines": 73,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-02 17:54:59"
+  },
+  {
+   "skill": "detect",
+   "source_file": "src/lib/caveman/compress/detect.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "c57e92a43e0ce6e740c9e836d07fe46e70ed00b3d8bd5e9124f78cbb156274bd",
+   "lines": 121,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-02 17:55:00"
+  },
+  {
+   "skill": "validate",
+   "source_file": "src/lib/caveman/compress/validate.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "28b7e41d4dbc92ecbbaf1e23e21eee6559eff22186618d734209291868da41b6",
+   "lines": 75,
+   "first_line": "\"\"\"",
+   "imports": [
+    "re"
+   ],
+   "registered": "2026-11-02 17:55:00"
+  },
+  {
+   "skill": "init_skill",
+   "source_file": "sync-sources/skills/claude-skill-creator/scripts/init_skill.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "69ffe7a8a19115af6ecaa382e02562550cf7685fb41eadbe77036c99a0067643",
+   "lines": 152,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-02 17:55:06"
+  },
+  {
+   "skill": "diff_lint",
+   "source_file": "sync-sources/skills/okf/scripts/diff_lint.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "0f2465dbc23395367e427966ff0bc530cf6e64a5a23a15dd2caabef4b85e9de9",
+   "lines": 38,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse"
+   ],
+   "registered": "2026-11-02 17:55:07"
+  },
+  {
+   "skill": "okf_common",
+   "source_file": "sync-sources/skills/okf/scripts/okf_common.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "e0a78fadd81e6e517569c06bc6d5882dea52875ba715f00e03240c1620a3adb8",
+   "lines": 177,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "hashlib",
+    "re",
+    "yaml"
+   ],
+   "registered": "2026-11-02 17:55:08"
+  },
+  {
+   "skill": "reindex",
+   "source_file": "sync-sources/skills/okf/scripts/reindex.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "af29afc2d4e49bac4b9fe8f7374ad3ea6e272434ca16d397ac63d5f333d24127",
+   "lines": 108,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "sys"
+   ],
+   "registered": "2026-11-02 17:55:15"
+  },
+  {
+   "skill": "validate",
+   "source_file": "sync-sources/skills/okf/scripts/validate.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "4f86291544c0e97a39654958b66fd1c8594f30ac866f986d8fd7a6c271551734",
+   "lines": 130,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-02 17:55:16"
+  },
+  {
+   "skill": "check_sessions",
+   "source_file": "sync-sources/skills/session-health/scripts/check_sessions.py",
+   "source_repo": "eltmon/overdeck",
+   "license": "check repo",
+   "sha256": "7f9ea53feef4317d4c19c2ed6278631ac893df48bc3de655a6e114dd5c28517c",
+   "lines": 166,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 17:55:21"
+  },
+  {
+   "skill": "unpack",
+   "source_file": "packages/twenty-server/src/engine/core-modules/code-interpreter/sandbox-scripts/docx/unpack.py",
+   "source_repo": "twentyhq/twenty",
+   "license": "check repo",
+   "sha256": "0bd17f76a1a4c388aba42c6d1d39015fa84e405c3e0692397fe12762bd632b58",
+   "lines": 29,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "defusedxml",
+    "random",
+    "sys",
+    "zipfile"
+   ],
+   "registered": "2026-11-02 17:58:39"
+  },
+  {
+   "skill": "docx",
+   "source_file": "packages/twenty-server/src/engine/core-modules/code-interpreter/sandbox-scripts/docx/validation/docx.py",
+   "source_repo": "twentyhq/twenty",
+   "license": "check repo",
+   "sha256": "e65d6cda0525866a24cc847b2e883bd2416ae6f87b3f5b9e2784dfbb0ec13093",
+   "lines": 274,
+   "first_line": "\"\"\"",
+   "imports": [
+    "lxml",
+    "re",
+    "tempfile",
+    "zipfile"
+   ],
+   "registered": "2026-11-02 17:58:41"
+  },
+  {
+   "skill": "check_bounding_boxes",
+   "source_file": "packages/twenty-server/src/engine/core-modules/code-interpreter/sandbox-scripts/pdf/check_bounding_boxes.py",
+   "source_repo": "twentyhq/twenty",
+   "license": "check repo",
+   "sha256": "eb2a5f79c8aa10c57b5867e1f0fc75b52a68b1218442ef9d838dfb4b9eedc6f4",
+   "lines": 70,
+   "first_line": "from dataclasses import dataclass",
+   "imports": [
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-02 17:58:42"
+  },
+  {
+   "skill": "check_fillable_fields",
+   "source_file": "packages/twenty-server/src/engine/core-modules/code-interpreter/sandbox-scripts/pdf/check_fillable_fields.py",
+   "source_repo": "twentyhq/twenty",
+   "license": "check repo",
+   "sha256": "250d5aa4e8451d6a83d17d3550c14e6c844ac347145f916ebf7980b118312b41",
+   "lines": 12,
+   "first_line": "import sys",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-02 17:58:42"
+  },
+  {
+   "skill": "convert_pdf_to_images",
+   "source_file": "packages/twenty-server/src/engine/core-modules/code-interpreter/sandbox-scripts/pdf/convert_pdf_to_images.py",
+   "source_repo": "twentyhq/twenty",
+   "license": "check repo",
+   "sha256": "095a0105a718af75ede309cb03f84a20c81d17f1727f7686fd4b294f1f40294f",
+   "lines": 35,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 17:58:43"
+  },
+  {
+   "skill": "create_validation_image",
+   "source_file": "packages/twenty-server/src/engine/core-modules/code-interpreter/sandbox-scripts/pdf/create_validation_image.py",
+   "source_repo": "twentyhq/twenty",
+   "license": "check repo",
+   "sha256": "89675be66b48925d7b498eb9454521c78cf9e9ff188ebf094934b598550effe5",
+   "lines": 41,
+   "first_line": "import json",
+   "imports": [
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-02 17:58:44"
+  },
+  {
+   "skill": "genetic_optimizer",
+   "source_file": "source/implementations/gen_adversarial_exe/genetic_optimizer.py",
+   "source_repo": "govolution/avet",
+   "license": "check repo",
+   "sha256": "a84e2f844ff6adbc8bb0f88f781b55d9b2afd3a12c95b7bac26d5689d05f5261",
+   "lines": 256,
+   "first_line": "\"\"\"",
+   "imports": [
+    "argparse",
+    "copy",
+    "lief",
+    "magic",
+    "numpy",
+    "os",
+    "random",
+    "sys"
+   ],
+   "registered": "2026-11-02 18:01:23"
+  },
+  {
+   "skill": "extend",
+   "source_file": "source/implementations/gen_adversarial_exe/practical_manipulations/extend.py",
+   "source_repo": "govolution/avet",
+   "license": "check repo",
+   "sha256": "c63670d37bc7afa9b9e5c6978b2365b61d975bda2eff1caeb8846ef0e042d3ef",
+   "lines": 165,
+   "first_line": "\"\"\"",
+   "imports": [
+    "copy",
+    "itertools",
+    "lief",
+    "math",
+    "os",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-02 18:01:24"
+  },
+  {
+   "skill": "full_dos",
+   "source_file": "source/implementations/gen_adversarial_exe/practical_manipulations/full_dos.py",
+   "source_repo": "govolution/avet",
+   "license": "check repo",
+   "sha256": "a874a08bffaefa64cf878d1b20fc1e9dbaa9516b2c59e8208051be149533bb34",
+   "lines": 78,
+   "first_line": "\"\"\"",
+   "imports": [
+    "copy",
+    "lief",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 18:01:25"
+  },
+  {
+   "skill": "padding",
+   "source_file": "source/implementations/gen_adversarial_exe/practical_manipulations/padding.py",
+   "source_repo": "govolution/avet",
+   "license": "check repo",
+   "sha256": "378893ff685e7d6c23dadb8a0f330120afbd56ae003e703f5e90541fe5c8524b",
+   "lines": 60,
+   "first_line": "\"\"\"",
+   "imports": [
+    "copy",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 18:01:26"
+  },
+  {
+   "skill": "partial_dos",
+   "source_file": "source/implementations/gen_adversarial_exe/practical_manipulations/partial_dos.py",
+   "source_repo": "govolution/avet",
+   "license": "check repo",
+   "sha256": "72292579c5acdf43772c2de4bb1c4e55bf23ef6fbdb2140c4e1ecadabe61dcdf",
+   "lines": 48,
+   "first_line": "\"\"\"",
+   "imports": [
+    "copy",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 18:01:26"
+  },
+  {
+   "skill": "section_injection",
+   "source_file": "source/implementations/gen_adversarial_exe/practical_manipulations/section_injection.py",
+   "source_repo": "govolution/avet",
+   "license": "check repo",
+   "sha256": "38f5d12a9b734e5d98323dd6e07170d10f52b09013409a622a70a4f07054e73f",
+   "lines": 73,
+   "first_line": "\"\"\"",
+   "imports": [
+    "lief",
+    "os",
+    "random",
+    "string",
+    "sys"
+   ],
+   "registered": "2026-11-02 18:01:27"
   }
  ],
- "built": "2026-11-02 19:54:40"
+ "built": "2026-11-02 18:01:27"
 }

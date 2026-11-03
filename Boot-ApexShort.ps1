@@ -101,10 +101,19 @@ try {
     }
 
     # --- 5. Launch the two application layers ------------------------------------
-    # Spawn authority: if the watchdog lock exists, the watchdog already
-    # supervises/respawns these layers - boot MUST NOT spawn (race source).
-    # Boot only spawns when running standalone (no watchdog active).
-    $WatchdogActive = Test-Path "$Root\watchdog.lock"
+    # Spawn authority: a lock FILE existing proves nothing (the audited
+    # stale-lock class: a crashed watchdog left the file behind and boot
+    # honored it forever). TRUTH = the OS lock: if no process holds watch
+    # .dog.lock with exclusive access, the watchdog is NOT alive.
+    $WatchdogActive = $false
+    if (Test-Path "$Root\watchdog.lock") {
+        try {
+            $fs = [System.IO.File]::Open("$Root\watchdog.lock", 'Open', 'ReadWrite', 'None')
+            $fs.Close()          # we got exclusive access: the lock is STALE
+        } catch {
+            $WatchdogActive = $true   # someone already holds it: truly alive
+        }
+    }
 
     if ((Test-Path "$Root\run_apex_evolution.py") -and (-not (Test-ApexPort 8080)) -and (-not (Test-ApexProcess 'run_apex_evolution.py')) -and (-not $WatchdogActive)) {
         Write-Log "[*] Igniting self-directed evolution loop (port 8080)..." "Cyan"

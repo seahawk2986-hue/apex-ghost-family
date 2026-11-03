@@ -1,0 +1,44 @@
+[
+ {
+  "pattern": "contracted tasks",
+  "passes": [
+   1,
+   2
+  ],
+  "verdict": "BUILD-NEXT",
+  "build": "Implement atomic task intake API with immutable ledger logging for zero-cost contract execution and auditability.",
+  "reason": "Contracted tasks require a minimal, verifiable intake mechanism to enforce the no-spend law and ensure durable memory integrity.",
+  "judged_by": "qwen/qwen3.8-27b"
+ },
+ {
+  "pattern": "service pricing",
+  "passes": [
+   2,
+   8
+  ],
+  "verdict": "BUILD-NEXT",
+  "build": "Deploy public 'JudgeBoard' API endpoint accepting JSON verdicts, returning instant file-now status with zero-cost logging.",
+  "reason": "Validates the 'service pricing' mechanism by exposing the core verdict engine as a free, high-value utility to attract inbound demand.",
+  "judged_by": "qwen/qwen3.8-27b"
+ },
+ {
+  "pattern": "claim bounty work",
+  "passes": [
+   1
+  ],
+  "verdict": "BUILD-NEXT",
+  "build": "Implement automated bounty scanner that parses job boards, filters for 'claim' tasks, and drafts submission payloads for user approval.",
+  "reason": "Automates the discovery-to-submission pipeline to maximize incoming value without violating no-spend or key-security laws.",
+  "judged_by": "qwen/qwen3.8-27b"
+ },
+ {
+  "pattern": "tool selling",
+  "passes": [
+   5
+  ],
+  "verdict": "BUILD-NEXT",
+  "build": "Deploy 'Apex-Scout' micro-agent: scans public job boards, matches 435-skill library, auto-generates tailored pitch emails for immediate tool sales.",
+  "reason": "Directly executes 'tool selling' mechanism to generate incoming revenue without spending, leveraging existing skill library and scout architecture.",
+  "judged_by": "qwen/qwen3.8-27b"
+ }
+]

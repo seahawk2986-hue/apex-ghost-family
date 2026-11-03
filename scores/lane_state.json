@@ -2,52 +2,52 @@
  "groq-120b": {
   "pace_s": 2.5,
   "walls": 1,
-  "oks": 16,
-  "last": "17:22:44",
+  "oks": 19,
+  "last": "18:47:01",
   "last_http": 200,
   "note": "alive",
-  "last_ok_ts": 1793658164.3024135
+  "last_ok_ts": 1793663221.7380788
  },
  "groq-qwen": {
   "pace_s": 2.5,
   "walls": 0,
-  "oks": 17,
-  "last": "17:22:46",
+  "oks": 20,
+  "last": "18:47:03",
   "last_http": 200,
-  "last_ok_ts": 1793658166.0609627,
+  "last_ok_ts": 1793663223.435192,
   "note": "alive"
  },
  "cerebras-120b": {
   "pace_s": 2.5,
   "walls": 0,
-  "oks": 17,
-  "last": "17:22:47",
+  "oks": 20,
+  "last": "18:47:05",
   "last_http": 200,
-  "last_ok_ts": 1793658167.7637956,
+  "last_ok_ts": 1793663225.11775,
   "note": "alive"
  },
  "cerebras-qwen": {
   "pace_s": 2.5,
   "walls": 0,
-  "oks": 17,
-  "last": "17:22:49",
+  "oks": 20,
+  "last": "18:47:06",
   "last_http": 200,
-  "last_ok_ts": 1793658169.4417458,
+  "last_ok_ts": 1793663226.7559202,
   "note": "alive"
  },
  "or-ultra": {
   "pace_s": 120.0,
-  "walls": 17,
+  "walls": 20,
   "oks": 0,
-  "last": "17:22:51",
+  "last": "18:47:08",
   "last_http": 429,
   "note": "free-models-per-day cap - re-probe after 00:00 UTC"
  },
  "or-reason": {
   "pace_s": 120.0,
-  "walls": 17,
+  "walls": 20,
   "oks": 0,
-  "last": "17:22:52",
+  "last": "18:47:10",
   "last_http": 429,
   "note": "same shared daily cap as or-ultra"
  },
@@ -55,31 +55,31 @@
   "pace_s": 2.5,
   "walls": 0,
   "oks": 0,
-  "last": "17:24:51",
+  "last": "18:49:17",
   "last_http": 402,
   "note": "{\"code\":30001,\"message\":\"Sorry, your account balance is insufficient\","
  },
  "gemini-flash": {
   "pace_s": 120.0,
-  "walls": 12,
+  "walls": 13,
   "oks": 0,
-  "last": "ReadTimeout",
-  "last_http": null,
+  "last": "18:49:19",
+  "last_http": 429,
   "note": "free-tier quota window - the pacer reopens it"
  },
  "gemini-pro": {
   "pace_s": 120.0,
-  "walls": 15,
+  "walls": 18,
   "oks": 0,
-  "last": "17:25:54",
+  "last": "18:49:21",
   "last_http": 429,
   "note": "rate window - will re-open"
  },
  "or-auto": {
   "pace_s": 120.0,
-  "walls": 13,
+  "walls": 16,
   "oks": 0,
-  "last": "17:22:54",
+  "last": "18:49:16",
   "last_http": 429,
   "note": "rate window - will re-open"
  },
@@ -92,19 +92,19 @@
   "last_http": 410
  },
  "nim-v41f": {
-  "pace_s": 4.0,
+  "pace_s": 16.384000000000004,
   "walls": 0,
   "oks": 0,
   "last": "ReadTimeout",
   "last_http": null
  },
  "nim-glm": {
-  "pace_s": 2.5,
+  "pace_s": 5.760000000000001,
   "walls": 0,
-  "oks": 1,
-  "last": "17:24:48",
-  "last_http": 200,
-  "last_ok_ts": 1793658288.1132114,
+  "oks": 2,
+  "last": "ReadTimeout",
+  "last_http": null,
+  "last_ok_ts": 1793661544.4493744,
   "note": "alive"
  }
 }

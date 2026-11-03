@@ -25,19 +25,50 @@ if (-not $rw) {
         Out-File "$root\Logs\sentry.log" -Append -Encoding utf8
 }
 # Autonomous pack maintenance: drift-only rebuild of deliverable packs.
+# (the 2026-11-04 fix: this ran EVERY 1-min tick - pure process churn; now a
+# 30-min cooldown receipt, mirroring the idle-gym pattern.)
 $syncPath = 'C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed\Scripts\ApexPackSync.py'
-if (Test-Path $syncPath) {
-    Start-Process "$root\apex_venv\Scripts\python.exe" -ArgumentList $syncPath -WindowStyle Hidden
-    "$((Get-Date).ToString('s')) sentry: pack sync tick" |
-        Out-File "$root\Logs\sentry.log" -Append -Encoding utf8
+$syncCd = "$root\Logs\pack_sync_cooldown.txt"
+$syncDo = $true
+if (Test-Path $syncCd) {
+    try { $lastSync = Get-Content $syncCd -First 1; if (($now2 = Get-Date) - [datetime]$lastSync -lt [timespan]::FromMinutes(30)) { $syncDo = $false } } catch {}
+}
+if ($syncDo) {
+    if (Test-Path $syncPath) {
+        Start-Process "$root\apex_venv\Scripts\python.exe" -ArgumentList $syncPath -WindowStyle Hidden
+        "$((Get-Date).ToString('s')) sentry: pack sync tick (30-min cadence)" |
+            Out-File "$root\Logs\sentry.log" -Append -Encoding utf8
+        [System.IO.File]::WriteAllText($syncCd, (Get-Date).ToString('s'))
+    }
 }
 
-# Guard Apex's ears (wake-word listener) if killed.
+# THE WARM BRAIN (2026-11-04): keep the floor brains resident on free RAM.
+# 4-h cooldown + its own RAM gate inside (WarmBrain.py prints honestly).
+$warmCd = "$root\Logs\warm_brain_cooldown.txt"
+$warmDo = $true
+if (Test-Path $warmCd) {
+    try { $lastWarm = Get-Content $warmCd -First 1; if (((Get-Date) - [datetime]$lastWarm).TotalHours -lt 4) { $warmDo = $false } } catch {}
+}
+if ($warmDo) {
+    Start-Process "$root\apex_venv\Scripts\python.exe" -ArgumentList (Join-Path $root 'Scripts\WarmBrain.py') -WindowStyle Hidden
+    [System.IO.File]::WriteAllText($warmCd, (Get-Date).ToString('s'))
+    "$((Get-Date).ToString('s')) sentry: warm-brain beat" | Out-File "$root\Logs\sentry.log" -Append -Encoding utf8
+}
+
+# Guard Apex's ears (wake-word listener) if killed - NOT every minute (the
+# respawn-storm fix: a 5-min cooldown receipt; the CIM check is kept only as
+# the cheap existence probe, the watchdog remains process-truth authority).
 $ears = Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
     Where-Object { $_.CommandLine -like '*ApexEars.ps1*' }
-if (-not $ears) {
+$earsCd = "$root\Logs\ears_cooldown.txt"
+$earsDo = $true
+if (Test-Path $earsCd) {
+    try { $lastEars = Get-Content $earsCd -First 1; if (((Get-Date) - [datetime]$lastEars).TotalMinutes -lt 5) { $earsDo = $false } } catch {}
+}
+if (-not $ears -and $earsDo) {
     Start-Process powershell -WindowStyle Hidden -ArgumentList @('-NoProfile','-ExecutionPolicy','Bypass','-File',"$root\Scripts\ApexEars.ps1")
-    "$((Get-Date).ToString('s')) sentry: apex ears missing -> ApexEars.ps1 (re)started" |
+    [System.IO.File]::WriteAllText($earsCd, (Get-Date).ToString('s'))
+    "$((Get-Date).ToString('s')) sentry: apex ears missing -> ApexEars.ps1 (re)started (5-min cooldown armed)" |
         Out-File "$root\Logs\sentry.log" -Append -Encoding utf8
 }
 

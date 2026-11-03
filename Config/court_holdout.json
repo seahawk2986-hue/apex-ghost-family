@@ -1,0 +1,222 @@
+{
+ "sealed": "2026-11-02 19:05:00",
+ "pockets": [
+  {
+   "family": "arithmetic-chain",
+   "question": "A store sold 124 apples on Monday. On Tuesday, they sold 25% more apples than on Monday. On Wednesday, they sold 15 fewer apples than on Tuesday. How many apples were sold in total over the three days?",
+   "code": null,
+   "truth": "419",
+   "answer_sha256": "46417784730257bf810618be9c548797f6a05abc910b2800938b3f4ef6bfbf33",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "arithmetic-chain",
+   "question": "Begin with 48. Add 27. Multiply the result by 3. Finally, subtract 15. What is the final value?",
+   "code": null,
+   "truth": "210",
+   "answer_sha256": "455147df5a65a39f52a96e12612ca7f850fcc024972f12a07d1ef1f6b3f307f4",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "arithmetic-chain",
+   "question": "A store sells 3 packs of pencils, each pack contains 12 pencils, and 5 boxes of pens, each box contains 8 pens. After buying all the pencils and pens, the customer gives away 20 items. How many items does the customer have left?",
+   "code": null,
+   "truth": "56",
+   "answer_sha256": "79f649bcd303918cb14dc1d5238a74abf288f8ccf29fd89f422023d885cf5d47",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "arithmetic-chain",
+   "question": "Start with the number 64, add 18, then multiply the sum by 3, subtract 45, and finally divide the result by 6.",
+   "code": null,
+   "truth": "33.5",
+   "answer_sha256": "43e901494dbcdfa284caa158cde8e674d7b01da704daf588bc7736e100dfbc20",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "arithmetic-chain",
+   "question": "A baker prepared 5 loaves of bread, each requiring 2.5 cups of flour, and 3 cakes, each requiring 1.75 cups of flour. After baking, he had 4 cups of flour remaining. How many cups of flour did he have initially?",
+   "code": null,
+   "truth": "21.75",
+   "answer_sha256": "e0391aaab213a60e5523f6e5e2730d758bd247da60251fc278abdc557fffa412",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "arithmetic-chain",
+   "question": "A farmer initially has 3 crates of apples, each containing 24 apples. He then purchases 5 additional crates, each holding 18 apples. After gathering all the apples, he donates two-thirds of his total stock to the market. How many apples remain with the farmer?",
+   "code": null,
+   "truth": "54",
+   "answer_sha256": "6ce1ced1ac1f56f8cd7ee5c55d117fe99c805b89a603e36c41852fea49853068",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "math-word",
+   "question": "If a book costs $12 and you buy 3, how much do you spend?",
+   "code": null,
+   "truth": "36",
+   "answer_sha256": "06024be3089840dc57375f951f67e195b31c37b7e819c63a15dcba31e894aa50",
+   "sealed_by": "groq/gpt-oss-120b"
+  },
+  {
+   "family": "math-word",
+   "question": "A store sells pencils for $0.45 each and erasers for $0.80 each; if a student buys 3 pencils and 2 erasers, how much does it cost in total?",
+   "code": null,
+   "truth": "2.95",
+   "answer_sha256": "11b59da89762cd8d772ce3a58087586320d662a76e177b729a14502721ffefe0",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "math-word",
+   "question": "A gardener plants 7 rows of 9 tomato plants each; how many plants are there in total?",
+   "code": null,
+   "truth": "63",
+   "answer_sha256": "506b63d9bd8dda24f43959945504e2269792f9f7cada9caf977fa7b99355a6fe",
+   "sealed_by": "groq/gpt-oss-120b"
+  },
+  {
+   "family": "math-word",
+   "question": "If a book costs $12 and a pen costs $3, how much do 4 books and 5 pens cost?",
+   "code": null,
+   "truth": "63",
+   "answer_sha256": "506b63d9bd8dda24f43959945504e2269792f9f7cada9caf977fa7b99355a6fe",
+   "sealed_by": "groq/gpt-oss-120b"
+  },
+  {
+   "family": "math-word",
+   "question": "If a book costs $12 and a pen costs $3, how much do you pay for 4 books and 2 pens?",
+   "code": null,
+   "truth": "54",
+   "answer_sha256": "6ce1ced1ac1f56f8cd7ee5c55d117fe99c805b89a603e36c41852fea49853068",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "math-word",
+   "question": "If a garden is shaped like a right triangle with legs measuring 7 meters and 24 meters, what is the length of the hypotenuse in meters?",
+   "code": null,
+   "truth": "25.0",
+   "answer_sha256": "5831dd8992371a12ef2bbed32ab1a91fc481a9803cc583b28e22cb714f45f15d",
+   "sealed_by": "groq/gpt-oss-120b"
+  },
+  {
+   "family": "predict-output",
+   "question": "What does this print?",
+   "code": "print('Hello, World!')",
+   "truth": "Hello, World!",
+   "answer_sha256": "cc82ebbcf8b60a5821d1c51c72cd79380ecea47de343ccb3b158938a2b3bf764",
+   "sealed_by": "groq/gpt-oss-120b"
+  },
+  {
+   "family": "predict-output",
+   "question": "What does this print?",
+   "code": "print(\"Hello, World!\")",
+   "truth": "Hello, World!",
+   "answer_sha256": "cc82ebbcf8b60a5821d1c51c72cd79380ecea47de343ccb3b158938a2b3bf764",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "predict-output",
+   "question": "What does this print?",
+   "code": "print('Hello, World!')",
+   "truth": "Hello, World!",
+   "answer_sha256": "cc82ebbcf8b60a5821d1c51c72cd79380ecea47de343ccb3b158938a2b3bf764",
+   "sealed_by": "groq/gpt-oss-120b"
+  },
+  {
+   "family": "predict-output",
+   "question": "What does this print?",
+   "code": "print(\"Hello, World!\")",
+   "truth": "Hello, World!",
+   "answer_sha256": "cc82ebbcf8b60a5821d1c51c72cd79380ecea47de343ccb3b158938a2b3bf764",
+   "sealed_by": "groq/gpt-oss-120b"
+  },
+  {
+   "family": "predict-output",
+   "question": "What does this print?",
+   "code": "print('Hello, World!')",
+   "truth": "Hello, World!",
+   "answer_sha256": "cc82ebbcf8b60a5821d1c51c72cd79380ecea47de343ccb3b158938a2b3bf764",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "predict-output",
+   "question": "What does this print?",
+   "code": "print('Hello, World!')",
+   "truth": "Hello, World!",
+   "answer_sha256": "cc82ebbcf8b60a5821d1c51c72cd79380ecea47de343ccb3b158938a2b3bf764",
+   "sealed_by": "groq/gpt-oss-120b"
+  },
+  {
+   "family": "spot-the-flaw",
+   "question": "All swans are white because I\u2019ve only ever seen white swans.",
+   "code": null,
+   "truth": "ok",
+   "answer_sha256": "c48b5b1a9776c84602de2306d7903a7241158a5077e7a8519af75c33441b8334",
+   "sealed_by": "groq/gpt-oss-120b"
+  },
+  {
+   "family": "spot-the-flaw",
+   "question": "Since all swans we have seen are white, all swans must be white.",
+   "code": null,
+   "truth": "ok",
+   "answer_sha256": "c48b5b1a9776c84602de2306d7903a7241158a5077e7a8519af75c33441b8334",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "spot-the-flaw",
+   "question": "Since the rooster crowed before sunrise, it caused the sunrise, so what reasoning flaw is present?",
+   "code": null,
+   "truth": "ok",
+   "answer_sha256": "c48b5b1a9776c84602de2306d7903a7241158a5077e7a8519af75c33441b8334",
+   "sealed_by": "cerebras-q/qwen-3.8-27b"
+  },
+  {
+   "family": "spot-the-flaw",
+   "question": "All the people I know are nice, so all people must be nice.",
+   "code": null,
+   "truth": "ok",
+   "answer_sha256": "c48b5b1a9776c84602de2306d7903a7241158a5077e7a8519af75c33441b8334",
+   "sealed_by": "cerebras-q/qwen-3.8-27b"
+  },
+  {
+   "family": "spot-the-flaw",
+   "question": "If it rains then the ground is wet, and since the ground is wet, did it rain?",
+   "code": null,
+   "truth": "ok",
+   "answer_sha256": "c48b5b1a9776c84602de2306d7903a7241158a5077e7a8519af75c33441b8334",
+   "sealed_by": "cerebras-q/qwen-3.8-27b"
+  },
+  {
+   "family": "spot-the-flaw",
+   "question": "If we let one person drive without a license, soon everyone will be driving illegally, so we must ban all unlicensed drivers now.",
+   "code": null,
+   "truth": "ok",
+   "answer_sha256": "c48b5b1a9776c84602de2306d7903a7241158a5077e7a8519af75c33441b8334",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "self-forecast",
+   "question": "What is the capital of France? Respond with your answer and confidence in the format 'answer | confidence: high|medium|low'.",
+   "code": null,
+   "truth": "Paris",
+   "answer_sha256": "6e36e9be37fd72568e933e2f3c2b51a98a769dd51b2560be58a2ac656e1767e1",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  },
+  {
+   "family": "self-forecast",
+   "question": "What is the capital of France? Respond with your answer and confidence in the format 'answer | confidence: high|medium|low'.",
+   "code": null,
+   "truth": "Paris",
+   "answer_sha256": "6e36e9be37fd72568e933e2f3c2b51a98a769dd51b2560be58a2ac656e1767e1",
+   "sealed_by": "groq/gpt-oss-120b"
+  },
+  {
+   "family": "self-forecast",
+   "question": "What is the capital of France? Respond with your answer and confidence, e.g., 'Paris | confidence: high'.",
+   "code": null,
+   "truth": "Paris",
+   "answer_sha256": "6e36e9be37fd72568e933e2f3c2b51a98a769dd51b2560be58a2ac656e1767e1",
+   "sealed_by": "cerebras/gpt-oss-120b"
+  }
+ ],
+ "law": "the pocket NEVER enters memory/lessons; the judge grades plain answers against baked truth"
+}

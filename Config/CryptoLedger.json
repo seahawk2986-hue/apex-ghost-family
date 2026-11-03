@@ -25,7 +25,7 @@
  "updated": "2026-10-31 14:55:50",
  "payout_destination": {
   "rail": "paypal",
-  "address": "[REDACTED-PAYPAL]",
+  "address": "paypal:ENV:PAYOUT_DEST (redacted from repo content 2026-11-04)",
   "holder": "Andrew Hike (family earnings route only)",
   "set": "2026-10-31 15:15:23"
  }

@@ -74,12 +74,9 @@ RESET_NOTES = {
 
 
 def env_load():
-    env = {}
-    for ln in open(os.path.join(REPO, ".env"), encoding="utf-8-sig"):
-        if "=" in ln:
-            k, v = ln.split("=", 1)
-            env[k.strip()] = v.strip()
-    return env
+    """DELEGATED TO THE SPINE (2026-11-04): one .env schema fleet-wide."""
+    import ApexIO
+    return ApexIO.env(REPO)
 
 
 def load_json(path, default):

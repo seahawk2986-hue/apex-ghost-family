@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-01 21:54:36",
- "ms": 8159.2,
+ "ts": "2026-11-02 17:55:31",
+ "ms": 8175.7,
  "state": {
   "genes": {
    "gen": 22,
@@ -10,8 +10,8 @@
    ],
    "lineages": {
     "base": {
-     "fitness": 0.8455,
-     "m_rounds": 9
+     "fitness": 0.5656,
+     "m_rounds": 14
     },
     "g0_0": {
      "fitness": 0.0,
@@ -121,11 +121,11 @@
   "knowledge": {
    "events": {
     "reqs": 0,
-    "mines": 157
+    "mines": 217
    },
    "wiki": {
     "reqs": 0,
-    "mines": 29
+    "mines": 34
    },
    "hf_space": {
     "reqs": 0,
@@ -137,7 +137,7 @@
    }
   },
   "help": {
-   "briefs": 165,
+   "briefs": 195,
    "alarmsRaised": 6
   },
   "canon": {
@@ -145,9 +145,9 @@
    "papers_evolution": 421
   },
   "skills_lib": {
-   "count": 415,
-   "coding": 413,
-   "categories": 30
+   "count": 551,
+   "coding": 549,
+   "categories": 96
   },
   "board": {
    "backlog": 1455,
@@ -171,7 +171,7 @@
   },
   "jobs": {
    "opps_inbox": 1,
-   "rungs_filed": 76
+   "rungs_filed": 96
   },
   "proactive": {
    "opps_scanned": 0,
@@ -183,13 +183,14 @@
    "head": ""
   },
   "hardware": {
-   "ram_free_gb": 1.76,
-   "tier": "honest-idle",
+   "ram_free_gb": 2.65,
+   "tier": "bubble-fill",
    "allowed": [
-    "manifests-only"
+    "bubbles",
+    "genes"
    ],
    "starved": false,
-   "proc_rss_mb": 102.4,
+   "proc_rss_mb": 98.5,
    "gpu_note": "no GPU loads for swarm work (the 3050 stays idle-capable)"
   },
   "lessons": {
@@ -202,11 +203,11 @@
   },
   "digest": {
    "present": true,
-   "age_min": 0.0
+   "age_min": 0.6
   },
   "brain": {
-   "ollama_chat": [
-    "phi4-mini:latest"
+   "lmstudio_chat": [
+    "qwen3-8b"
    ]
   },
   "integrity": {
@@ -214,9 +215,9 @@
    "ok": true
   },
   "mining": {
-   "net_reqs": 224,
-   "net_ok": 88,
-   "findings": 100
+   "net_reqs": 197,
+   "net_ok": 68,
+   "findings": 92
   },
   "transport": {
    "last_hub_root": "{'sha': '4fe1c94a79d9', 'commit_msg': 'grain: hub harvest 133 (manifest-digested) [skip ci]', 'ts': '2026-10-31 22:18:04'}"
@@ -228,71 +229,72 @@
  "floors_restored": 1,
  "git_restored": 0,
  "alarms": [
-  "knowledge lane 'wiki.mines' regressed 29 -> 27 (PathMemory clobber suspected)",
-  "goal 'money' stalled 775min (moves only when Andrew files/review - the honest $0.00 law)",
-  "goal 'recruits' stalled 730min (no external claims yet - the door stands open)",
-  "goal 'efficiency' stalled 730min (outputs are earned inside the hardware gate)",
-  "goal 'safety' stalled 730min (no external claims yet - the door stands open)"
+  "knowledge lane 'wiki.mines' regressed 34 -> 33 (PathMemory clobber suspected)",
+  "goal 'money' stalled 1976min (moves only when Andrew files/review - the honest $0.00 law)",
+  "goal 'recruits' stalled 1931min (no external claims yet - the door stands open)",
+  "goal 'jobs' stalled 480min (needs the inbox triaged - a brain window serves)",
+  "goal 'efficiency' stalled 1931min (outputs are earned inside the hardware gate)",
+  "goal 'safety' stalled 1931min (no external claims yet - the door stands open)"
  ],
  "goals": {
   "gold": {
-   "score": 2384.0,
-   "delta": -22.0,
-   "progress_age_min": 240.1
+   "score": 2441.0,
+   "delta": 1.0,
+   "progress_age_min": 0.0
   },
   "money": {
    "score": 0.0,
    "delta": 0.0,
-   "progress_age_min": 775.4
+   "progress_age_min": 1976.3
   },
   "life": {
-   "score": 171.0,
-   "delta": 4.0,
-   "progress_age_min": 0.0
+   "score": 201.0,
+   "delta": 0.0,
+   "progress_age_min": 1.1
   },
   "recruits": {
    "score": 6.0,
    "delta": 0.0,
-   "progress_age_min": 730.4
+   "progress_age_min": 1931.3
   },
   "jobs": {
-   "score": 77.0,
-   "delta": -136.0,
-   "progress_age_min": 240.1
+   "score": 97.0,
+   "delta": 0.0,
+   "progress_age_min": 480.9
   },
   "coding": {
-   "score": 416.0,
-   "delta": 0.0,
-   "progress_age_min": 120.2
+   "score": 552.0,
+   "delta": 12.0,
+   "progress_age_min": 0.0
   },
   "omnivore": {
-   "score": 448.0,
-   "delta": 0.0,
-   "progress_age_min": 120.2
+   "score": 650.0,
+   "delta": 12.0,
+   "progress_age_min": 0.0
   },
   "efficiency": {
    "score": 526.0,
    "delta": 0.0,
-   "progress_age_min": 730.4
+   "progress_age_min": 1931.3
   },
   "safety": {
    "score": 2.0,
    "delta": 0.0,
-   "progress_age_min": 730.4
+   "progress_age_min": 1931.3
   }
  },
  "goal_progress": {
-  "gold": 1793573667.8712568,
+  "gold": 1793660131.6175895,
   "money": 1793541551.1543214,
-  "life": 1793588076.7504609,
+  "life": 1793660064.260861,
   "recruits": 1793544253.5449352,
-  "jobs": 1793573667.8712568,
-  "coding": 1793580863.575595,
-  "omnivore": 1793580863.575595,
+  "jobs": 1793631278.07535,
+  "coding": 1793660131.6175895,
+  "omnivore": 1793660131.6175895,
   "efficiency": 1793544253.5449352,
   "safety": 1793544253.5449352
  },
- "gi_score": 499.0,
+ "gi_score": 579.1,
  "goal_genealogy": {
   "gold": {
    "origin": "ApplyTriGenome: MAXIMIZE YIELD (mines/req - the original fitness)",
@@ -467,51 +469,53 @@
  },
  "hardware_history": [
   {
-   "ts": "13:54:31",
-   "ms": 4111.9,
-   "ram": 5.9
+   "ts": "11:54:34",
+   "ms": 4168.5,
+   "ram": 1.48
   },
   {
-   "ts": "13:54:32",
-   "ms": 4106.5,
-   "ram": 5.9
+   "ts": "11:55:05",
+   "ms": 8187.0,
+   "ram": 3.86
   },
   {
-   "ts": "15:54:43",
-   "ms": 4096.7,
-   "ram": 4.31
+   "ts": "13:54:37",
+   "ms": 8226.9,
+   "ram": 5.08
   },
   {
-   "ts": "15:54:46",
-   "ms": 4119.8,
-   "ram": 4.43
+   "ts": "15:54:17",
+   "ms": 8194.1,
+   "ram": 5.0
   },
   {
-   "ts": "16:54:29",
-   "ms": 4134.4,
-   "ram": 6.26
+   "ts": "15:55:13",
+   "ms": 8244.1,
+   "ram": 0.88
   },
   {
-   "ts": "17:54:27",
-   "ms": 8149.9,
-   "ram": 1.94
+   "ts": "17:54:24",
+   "ms": 8270.6,
+   "ram": 7.17
   },
   {
-   "ts": "19:54:23",
-   "ms": 8153.9,
-   "ram": 3.62
+   "ts": "17:54:51",
+   "ms": 8199.7,
+   "ram": 6.65
   },
   {
-   "ts": "21:54:36",
-   "ms": 8159.2,
-   "ram": 1.76
+   "ts": "17:55:31",
+   "ms": 8175.7,
+   "ram": 2.65
   }
  ],
  "speed": {
   "prestaged_genome": true,
   "prestage_parent": "base",
-  "tier": "honest-idle",
+  "tier": "bubble-fill",
   "next_actions": [
+   "genes: GenePool.run(3) pre-stages the next generation (CPU-only, gated-safe)",
+   "bubbles: pre-stage + manifests + gates fill every gated minute",
    "skills: SkillUpgrader consumes curriculum candidates in-window"
   ]
  }

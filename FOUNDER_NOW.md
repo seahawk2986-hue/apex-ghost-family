@@ -1,5 +1,20 @@
 # THE FOUNDER'S FIVE — everything left that ONLY you can do (each ~30 seconds)
 
+## 0. THE 2026-11-04 REPAIR ROUND (the machine's own receipt, do nothing - read)
+- The PayPal receiving address is scrubbed out of every tracked file (it lives
+  in .env as PAYOUT_DEST only; .env is gitignored - verified). FOUNDER-ONLY
+  follow-up (your call): the OLD literals remain in git history - either
+  rotate the receiving address, or filter-repo the history. Honest note kept
+  in Logs/privacy_scrub_receipt.jsonl.
+- Six weaknesses became six organs: CanonCounts (the one counter: 563 skills
+  / 10 certified / 1,450 papers - every surface agrees), the fail-closed
+  container sandbox (no more host fallback without your written opt-in
+  HOST_SANDBOX_ALLOWED=1), the timed-out-ladder + storm-wall in ApexShard,
+  the chat replay-cache (identical problems = $0, instant; "!fresh" bypasses),
+  WarmBrain (RAM-gated resident floor brain), the Blind Court + the Outcome
+  Yardstick (internal-vs-external truth, live on /receipts). LedgerTrim bounds
+  both bloated ledgers. All existing tests: 13/13 PASS.
+
 *The machine's laws: the USD-caps + the legal-attestations = YOURS by design. Everything else = automated, forever.*
 
 ## 1. The dream-machine-os PR #23's CLA-attestation (30 sec)

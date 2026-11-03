@@ -6,7 +6,10 @@ ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 AD = r"C:\Users\seaha\Apex-Adapter"
 shop = json.load(open(os.path.join(ROOT, "Config", "polar_shop.json"),
                       encoding="utf-8-sig"))
-links = shop.get("checkout_links", [])
+links = shop.get("checkout_links") or shop.get("wired_links") or []
+# the 2026-11-04 fix: the shop file's key was renamed (wired_links) while this
+# reader still asked checkout_links -> the wiring silently no-oped; now BOTH
+# keys honored (the key-mismatch class of bug can never hide the wiring again)
 print("the real links:")
 for l0 in links:
     print("  ", l0["product"], "->", l0["link"])

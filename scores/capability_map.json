@@ -40,5 +40,15 @@
    "runs": 3,
    "hits": 1.0
   }
+ },
+ "chat": {
+  "nim-glm": {
+   "runs": 8,
+   "hits": 7.0
+  },
+  "gpt-oss-120b": {
+   "runs": 6,
+   "hits": 1.0
+  }
  }
 }

@@ -28,6 +28,19 @@ LIB = os.path.join(ROOT, "Config", "SkillLibrary.json")
 CAT = os.path.join(AD, "service_catalog.json")
 OUT = os.path.join(ROOT, "Config", "job_portfolio.json")
 
+
+def _payout_dest():
+    """The founder's receiving address = .env-only (PAYOUT_DEST), never repo
+    content (the 2026-11-04 privacy law; .env is gitignored - verified)."""
+    try:
+        with open(os.path.join(ROOT, ".env"), encoding="utf-8-sig") as f:
+            for ln in f:
+                if ln.strip().startswith("PAYOUT_DEST="):
+                    return ln.split("=", 1)[1].strip() or "paypal:SET-ME"
+    except Exception:
+        pass
+    return "paypal:configured-in-.env"
+
 SEC = re.compile(r"vulnerab|exploit|fuzz|penetrat|security|CVE|attack", re.I)
 CODE = re.compile(r"code|refactor|migrat|repair|review|build|test", re.I)
 ML = re.compile(r"pipeline|dataset|fine-tun|embedding|train", re.I)
@@ -118,7 +131,7 @@ def selftest():
                       "fulfillment": "apex executes; the checkout + the "
                                      "acceptance = the founder's clicks",
                       "checkout": "FOUNDER-GATED (no rail; the destination "
-                                  "recorded: [REDACTED-PAYPAL])"})
+                                  "recorded: " + _payout_dest() + ")"})
         if len(added) >= 4:
             break
     cat.setdefault("services", [])

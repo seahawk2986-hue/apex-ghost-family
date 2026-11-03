@@ -114,8 +114,11 @@ switch ($Profile) {
         Write-Host "MoE fit-test v2: experts on CPU, attention on GPU (KTransformers recipe)"
         Write-Host "gguf: $($gguf.FullName)"
         $env:PATH = "$BACKEND;$VENDOR;$env:PATH"
-        Start-Process -FilePath (Join-Path $BACKEND "llama-server.exe") `
-            -ArgumentList @(
+        # the 2026-11-04 fix: the draft-model search used to inline -md; if no
+        # qwen3-0.6b gguf existed, -md received $null and the launch broke.
+        # The draft args are built only when the matcher actually finds one.
+        $md = Get-ChildItem $MODELS -Recurse -Filter "*.gguf" | Where-Object { $_.Name -match "qwen3-0.6b" } | Select-Object -First 1 -ExpandProperty FullName
+        $baseArgs = @(
                 "-m", $gguf.FullName,
                 "-ngl", "999",
                 "--n-cpu-moe", "999",
@@ -124,11 +127,12 @@ switch ($Profile) {
                 "--ctx-size", "4096",
                 "--parallel", "1",
                 "--threads", "6",
-                "--host", "127.0.0.1", "--port", "1235",
-                "-md", (Get-ChildItem $MODELS -Recurse -Filter "*.gguf" | Where-Object { $_.Name -match "qwen3-0.6b" } | Select-Object -First 1 -ExpandProperty FullName),
-                "--spec-draft-n-max", "8",
-                "--spec-draft-device", "none"
-            ) `
+                "--host", "127.0.0.1", "--port", "1235"
+        )
+        if ($md) { $baseArgs += @("-md", $md, "--spec-draft-n-max", "8", "--spec-draft-device", "none") }
+        else { Write-Host "no qwen3-0.6b draft gguf found - serving WITHOUT speculative drafting (honest, unblocked)" }
+        Start-Process -FilePath (Join-Path $BACKEND "llama-server.exe") `
+            -ArgumentList $baseArgs `
             -WorkingDirectory $BACKEND `
             -RedirectStandardOutput "$LOG\moe_server.out.log" `
             -RedirectStandardError  "$LOG\moe_server.err.log" `

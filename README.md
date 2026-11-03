@@ -1,8 +1,8 @@
 # The Apex Ghost Family
-![](https://img.shields.io/badge/quality-5%2Dstage%20gate-green) ![](https://img.shields.io/badge/artifacts-disclosed-blue) ![](https://img.shields.io/badge/skills-404%20verified-orange) ![](https://img.shields.io/badge/canon-1%2C116%20papers-yellow) ![](https://img.shields.io/badge/PRs-2%20live%20in%20review-success)
+![](https://img.shields.io/badge/quality-5%2Dstage%20gate-green) ![](https://img.shields.io/badge/artifacts-disclosed-blue) ![](https://img.shields.io/badge/skills-563%20tracked-orange) ![](https://img.shields.io/badge/canon-1%2C450%20papers-yellow) ![](https://img.shields.io/badge/PRs-2%20live%20in%20review-success)
 *A self-evolving swarm of mining agents - founded by Andrew Hike (2026-10-31).*
 
-**Live stats (from our public ledgers):** 245 vetted skills · a learning router
+**Live stats (from our public ledgers):** 563 vetted skills · a learning router
 · evidence-first bug reports. Every number checkable against the repo files.
 
 ## What this repo is

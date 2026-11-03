@@ -27,7 +27,7 @@ The candidates' issues are OTHERS' solved-needed work: **fork → patch →
    kit as the pipeline completes).
 2. The **account side** (one-time): link a STRIPE/PayPal in
    https://github.com/sponsors/account — the recorded design-only
-   destination is `[REDACTED-PAYPAL]`.
+   destination is `paypal:ENV:PAYOUT_DEST (redacted from repo content 2026-11-04)`.
 3. Link: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
 
 ## ROUTE C — THE POLAR PRODUCT (list the doors' services for real)

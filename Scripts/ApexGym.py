@@ -28,7 +28,27 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import CloudBrain
 
 K = CloudBrain.env_keys()
-WALL_END = time.time() + (60 * 8 if "--smoke" in sys.argv else 60 * 28)
+def _flag_int(name, default):
+    if name in sys.argv:
+        try:
+            return max(1, int(sys.argv[sys.argv.index(name) + 1]))
+        except (ValueError, IndexError):
+            return default
+    return default
+
+
+# (the 2026-11-04 fix: callers have passed --minutes/--traits for the machine's
+# whole life while only --smoke was parsed - the flag-drift class bug that made
+# every scheduled gym die inside its own subprocess timeout as "GYM skipped".
+# Flags are parsed now; --traits X is accepted and honored as a note.)
+GYM_MINUTES = _flag_int("--minutes", 8 if "--smoke" in sys.argv else 28)
+_traits = "auto"
+if "--traits" in sys.argv:
+    try:
+        _traits = sys.argv[sys.argv.index("--traits") + 1]
+    except IndexError:
+        _traits = "auto"
+WALL_END = time.time() + 60 * GYM_MINUTES
 TEACHERS = [  # top-tier first; the leaderboard re-ranks them nightly
     ("cerebras", "https://api.cerebras.ai/v1/chat/completions",
      "CEREBRAS_API_KEY", "gpt-oss-120b"),
@@ -73,6 +93,20 @@ REFLECT_LANES = TEACHERS      # the reflection/judgment = the full top-tier
 
 
 def teacher(prompt, lanes=None):
+    # THE SPINE-FIRST (2026-11-04): the organ's prompts route through the
+    # family's ONE dispatch (pacing honored, rotator receipt, all our models
+    # get real traffic from every organ beat); the private TEACHERS array
+    # stays as the fallback when the spine import fails.
+    try:
+        import ApexShard as _Shard
+        _nm, _md, _txt, _notes = _Shard.call(
+            _Shard.env(), _Shard.order_for(tier3=False),
+            [{"role": "user", "content": prompt}], max_tokens=600)
+        if _txt and _txt.strip():
+            time.sleep(1.5)
+            return _txt.strip(), f"{_nm}"
+    except Exception:
+        pass
     import requests
     for name, url, envk, model in (lanes or TEACHERS):
         key = K.get(envk)
@@ -109,23 +143,6 @@ def gen_drill(kind):
         return None, None, src
 
 
-def truth(j):
-    vp = j.get("verify_py", "")
-    if j.get("code"):
-        import tempfile
-        with tempfile.NamedTemporaryFile("w", suffix=".py", delete=False,
-                                         dir=os.environ.get("TEMP", ".")) as f:
-            f.write(j["code"])
-            p = f.name
-        try:
-            r = subprocess.run([PY, "-I", p], capture_output=True,
-                               text=True, timeout=15)
-            return r.stdout.strip()[:300]
-        finally:
-            try:
-                os.remove(p)
-            except Exception:
-                pass
 def truth(j):
     vp = j.get("verify_py", "")
     if j.get("code"):
@@ -192,6 +209,8 @@ def remember(kind, text, meta, imp=0.6):
 
 def main():
     n_hit = n_done = 0
+    print(f"[gym]: the GI organ armed — minutes={GYM_MINUTES}, traits={_traits}, "
+          f"smoke={'yes' if '--smoke' in sys.argv else 'no'}")
     lessons = []          # the curriculum: tonight's own lessons re-teach
     fams = FAMILIES * (1 if "--smoke" in sys.argv else 3)
     random.shuffle(fams)
@@ -250,4 +269,8 @@ def main():
 
 
 random.seed()
-main()
+
+# THE __main__ GUARD (2026-11-04): the gym used to RUN ITSELF when merely
+# imported (module-level main()) - now import == safe; running == explicit.
+if __name__ == "__main__":
+    main()

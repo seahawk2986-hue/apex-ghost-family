@@ -1,0 +1,13 @@
+{
+ "skills_library": 563,
+ "skills_certified": 10,
+ "papers_canon": 1450,
+ "canon_files": 12,
+ "shop_state": "SHOP-LIVE",
+ "generated": "2026-11-02 18:57:21",
+ "definitions": {
+  "skills_library": "SHA-tracked MIT-sourced entries (SkillLibrary.json)",
+  "skills_certified": "registry-certified skills (SkillRegistry.json)",
+  "papers_canon": "distinct listing-rows, deduped by title/url"
+ }
+}

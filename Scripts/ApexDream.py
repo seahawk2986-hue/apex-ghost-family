@@ -218,6 +218,32 @@ def main():
         sec_ops = {"error": str(_e0)[:80]}
 
     weakest = bench.get("weakest_dimension", "unknown")
+    # ================================================== THE 2026-11-04 ORGANS
+    # (1) THE BLIND COURT: re-judge the fleet against the sealed holdout every
+    #     night - self-flattery cannot hide across nights (arXiv:2407.01502's
+    #     holdout prescription, fleet-implemented).
+    # (2) THE OUTCOME YARDSTICK: internal-vs-external truth, same page.
+    # (3) THE LEDGER TRIM: no unbounded append-only file (8MB/52MB class).
+    _organ_notes = []
+    try:
+        import RealityCourt as _court
+        _court.judge()
+        _organ_notes.append("court run")
+    except Exception as _e_court:
+        m.record_event("court", "court skipped honestly: " + str(_e_court)[:70])
+    try:
+        import OutcomeYardstick as _yard
+        _yard.measure()
+        _organ_notes.append("yardstick measured")
+    except Exception as _e_yard:
+        m.record_event("yardstick", "yardstick skipped honestly: " + str(_e_yard)[:70])
+    try:
+        import LedgerTrim as _trim
+        _trim.trim()
+        _organ_notes.append("ledgers trimmed")
+    except Exception:
+        pass
+    m.record_event("training", "night organs: " + ", ".join(_organ_notes))
     # Security posture, measured right now (feeds the overnight note honestly)
     sec_status = "integrity manifest OK; secrets sealed"
     try:

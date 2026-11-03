@@ -1,4 +1,4 @@
-import os, sys, json, ast, time, shutil, re, subprocess, threading, secrets
+import os, sys, json, ast, time, shutil, re, subprocess, threading, secrets, hmac
 from collections import defaultdict, deque
 from pydantic import BaseModel
 from fastapi import FastAPI, BackgroundTasks, Request
@@ -375,8 +375,6 @@ def score_code(fn, c, res, prev_res=None):
         _r = subprocess.run([sys.executable, "-m", "ruff", "check", "--isolated",
                              "--select", "F821,F401", "--output-format", "concise", _lt],
                             capture_output=True, text=True, timeout=25)
-        try: os.remove(_lt)
-        except OSError: pass
         if _r.returncode == 1:
             _f821 = sum(1 for _l in (_r.stdout or "").splitlines() if "F821" in _l)
             _f401 = sum(1 for _l in (_r.stdout or "").splitlines() if "F401" in _l)
@@ -386,6 +384,9 @@ def score_code(fn, c, res, prev_res=None):
                 m["lint_penalty"] = _pen
                 log("reward", f"Lint: {_f821} undefined-name(s), {_f401} unused-import(s) -> -{_pen}")
         # Security SAST (bandit): HIGH findings -15, MEDIUM -5 (industry scanner)
+        # (2026-11-04 fix: the probe file used to be DELETED before bandit ran,
+        # so bandit always scanned a missing file and the SAST penalty never
+        # applied - the scan order is corrected; deletion moved to after)
         _b = subprocess.run([sys.executable, "-m", "bandit", "-q", "-f", "json", _lt],
                             capture_output=True, text=True, timeout=40)
         if _b.returncode in (0, 1):
@@ -466,24 +467,55 @@ def _docker_sandbox(fn, code, image=None):
             pass
 
 def sandbox(fn, c):
-    """Container-first execution with honest host fallback. A broken Docker
-    never changes candidate judgment - it only relaxes isolation, visibly."""
+    """CONTAINER-ONLY EXECUTION (the 2026-11-04 hardening; the audited
+    largest attack surface was the host fallback: a broken Docker made the
+    family run UNVETTED LLM code directly on the host with the full env).
+    Now: a Docker-down = FAIL-CLOSED - nothing is executed, the candidate
+    is honestly discarded with a printed receipt. The founder may opt in
+    to the relaxed mode by setting HOST_SANDBOX_ALLOWED=1 in .env (the
+    consent law: the machine never relaxes its sandbox silently)."""
     if _docker_engine():
         res = _docker_sandbox(fn, c)
-        if res.get("isolated") and (res.get("status") == "SUCCESS" or res.get("error") not in (None, "sandbox failure")):
+        if res.get("isolated"):
+            # container verdicts NEVER relax downward anymore (success or
+            # honest crash alike) - the host fallback cannot be reached from
+            # a container path.
             return res
-        log("reward", f"Container sandbox trouble ({str(res.get('error'))[:60]}) - host fallback")
-    t = os.path.join(R, f"speculative_test_{fn}")
-    if os.path.exists(t): os.remove(t)
-    with open(t, "w", encoding="utf-8") as f: f.write(c)
-    try:
-        res = subprocess.run([sys.executable, t], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=8, cwd=R)
+        log("reward", f"Container sandbox trouble ({str(res.get('error'))[:60]}) "
+                      "- fail-closed: nothing executed on the host")
+    else:
+        log("reward", "Docker engine DOWN - fail-closed: no sandbox, nothing executed")
+    allowed = os.environ.get("HOST_SANDBOX_ALLOWED", "") == "1"
+    if not allowed:
+        try:
+            for ln in open(os.path.join(R, ".env"), encoding="utf-8-sig"):
+                if ln.strip().startswith("HOST_SANDBOX_ALLOWED=1"):
+                    allowed = True
+                    break
+        except Exception:
+            pass
+    if allowed:
+        log("reward", "HOST_SANDBOX_ALLOWED=1 (the founder's consented opt-in) "
+                      "- running RELAXED host sandbox, visibly")
+        t = os.path.join(R, f"speculative_test_{fn}")
         if os.path.exists(t): os.remove(t)
-        return {"status": "SUCCESS" if res.returncode == 0 else "CRASHED", "error": None if res.returncode == 0 else res.stderr, "output": (res.stdout or ""), "isolated": False}
-    except Exception as e:
-        if os.path.exists(t): os.remove(t)
-        log("reward", f"Sandbox did not complete cleanly: {e}")
-        return {"status": "CRASHED", "error": f"Sandbox failure: {e}", "output": "", "isolated": False}
+        with open(t, "w", encoding="utf-8") as f: f.write(c)
+        try:
+            res = subprocess.run([sys.executable, t], stdout=subprocess.PIPE,
+                                 stderr=subprocess.PIPE, text=True, timeout=8, cwd=R)
+            if os.path.exists(t): os.remove(t)
+            return {"status": "SUCCESS" if res.returncode == 0 else "CRASHED",
+                    "error": None if res.returncode == 0 else res.stderr,
+                    "output": (res.stdout or ""), "isolated": False}
+        except Exception as e:
+            if os.path.exists(t): os.remove(t)
+            log("reward", f"Sandbox did not complete cleanly: {e}")
+            return {"status": "CRASHED", "error": f"Sandbox failure: {e}",
+                    "output": "", "isolated": False}
+    return {"status": "CRASHED",
+            "error": "no sandbox available - nothing executed (fail-closed, "
+                     "isolated verdict impossible)",
+            "output": "", "isolated": False}
 
 def _set_strategy(text):
     """Deliberative scratchpad: carry working intent across cycles."""
@@ -1306,7 +1338,10 @@ async def apex_gate(request: Request, call_next):
             q.append(now)
             supplied = request.headers.get("x-apex-key", "") or (
                 request.cookies.get("apex_key", ""))
-            if not APEX_KEY or supplied != APEX_KEY:
+            # the 2026-11-04 hardening: constant-time compare (the timing-
+            # sidechannel class; the token is ascii so str-compare is safe)
+            if not APEX_KEY or not (isinstance(supplied, str) and supplied.isascii()
+                                    and hmac.compare_digest(supplied, APEX_KEY)):
                 return JSONResponse({"error": "Unauthorized - Apex gate"}, status_code=401)
     else:
         q = _GET_RATE[ip]
@@ -1318,6 +1353,20 @@ async def apex_gate(request: Request, call_next):
     resp = await call_next(request)
     resp.headers["X-Content-Type-Options"] = "nosniff"
     resp.headers["Referrer-Policy"] = "no-referrer"
+    # the 2026-11-04 hardening: per-surface CSP (was: only /talk had one,
+    # /jobs + /receipts rendered raw ledger HTML with no resource policy)
+    ct = resp.headers.get("content-type", "")
+    if ct.startswith("text/html"):
+        if path.startswith("/talk"):
+            resp.headers["Content-Security-Policy"] = (
+                "default-src 'self'; script-src 'self' 'unsafe-inline'; "
+                "style-src 'self' 'unsafe-inline'; img-src 'self' data:; "
+                "connect-src 'self'")
+        else:
+            resp.headers["Content-Security-Policy"] = (
+                "default-src 'none'; style-src 'unsafe-inline'; "
+                "img-src 'self' data:; form-action 'none'; base-uri 'none'")
+        resp.headers["X-Frame-Options"] = "DENY"
     return resp
 
 def extract_friend_directive(friend_text: str):
@@ -1453,6 +1502,13 @@ def talk_api(t: TalkMsg):
     msg = (t.message or "").strip()[:4000]
     if not msg:
         return {"reply": "Say something, Andrew - I'm listening."}
+    _fresh = False
+    if msg.lower().startswith(("!fresh", "fresh:")):
+        # the bypass: a leading "!fresh" asks for a REAL generation even if an
+        # identical question was answered before (context matters; the founder
+        # always holds the opt-out)
+        _fresh = True
+        msg = re.sub(r"(?i)^!?fresh[:\s]*", "", msg) or msg
     if re.match(r"\s*(run the gym|go train|gym)\b", msg.lower()):
         try:
             import threading as _th
@@ -1528,6 +1584,34 @@ def talk_api(t: TalkMsg):
                 "- " + x["skill"] + " (" + x["repo"] + ") sim=" + str(x["score"]) for x in _hits)
     except Exception:
         pass
+    # ================================================== THE REPLAY CACHE
+    # (2026-11-04; canon-verified: "Requests of a Feather Must Flock Together"
+    # [prefix-reuse batching] + Local-Splitter [token-usage reduction], both in
+    # scores/papers_speed_100.json): the family's cache existed for YEARS but
+    # was wired only into repair paths - the user-facing chat never replayed.
+    # Now: an identical question replays OFF THE DISK - no network, no wait,
+    # $0 - with a visible lane tag. The founder's bypass = a leading "!fresh".
+    if not _fresh:
+        try:
+            import ApexCache as _C
+            _prev = _C.cache_get("chat|" + msg.strip().lower())
+            if _prev[0]:
+                log("system", "chat REPLAYED from the resolution cache ($0, network bypassed)")
+                try:
+                    import ApexCache as _C2
+                    MEM.record_event("conversation",
+                                     "Andrew (repeat) | Apex replayed cached answer "
+                                     f"({len(_prev[0])} chars, $0)",
+                                     talk=True, message=msg[:400], reply=_prev[0][:2000])
+                except Exception:
+                    pass
+                return {"reply": _prev[0] + "\n\n(⚡ answered from my resolution cache — "
+                                         "identical problems replay free; say \"!fresh …\" "
+                                        "to force a live answer)",
+                        "recall": [{"text": l["text"][:140]} for l in lessons],
+                        "lane": "cache ⚡ replay"}
+        except Exception as _e_c:
+            log("reward", f"cache consult skipped: {type(_e_c).__name__}")
     try:
         sys.path.insert(0, os.path.join(R, "Scripts"))
         import SkillLibrary as _sl
@@ -1615,6 +1699,17 @@ def talk_api(t: TalkMsg):
         return {"reply": ("All engines are busy right now, Andrew - the pacing brakes may be "
                           f"active. Try again in a minute.\n\n{diag}"),
                 "recall": [{"text": l["text"][:140]} for l in lessons]}
+    if not reply:
+        # THE CACHE STORE (the same canon): fresh answers get replayed free
+        # next time this exact question is asked; chat answers are stored
+        # "unverified" (honest - chat prose is not a validated diff)
+        try:
+            import ApexCache as _C
+            _C.store(_C.signature({"text": "chat|" + msg.strip().lower()}),
+                     {"task": "chat replay"}, "cache", "chat", reply[:6000],
+                     "unverified")
+        except Exception:
+            pass
     return {"reply": reply,
             "recall": [{"text": l["text"][:140]} for l in lessons]}
 
@@ -1635,6 +1730,10 @@ def talk_api_stream(t: TalkStreamMsg):
     from fastapi.responses import StreamingResponse
     import threading as _th
     msg = (t.message or "").strip()[:4000]
+    if msg.lower().startswith(("!fresh", "fresh:")):
+        # the bypass normalization (2026-11-04): strip BEFORE cache use so a
+        # forced fresh answer replays correctly when asked plainly later
+        msg = re.sub(r"(?i)^!?fresh[:\s]*", "", msg) or msg
     if not msg:
         def empty():
             yield "event: done\ndata: {\"reply\": \"Say something, Andrew - I'm listening.\"}\n\n"
@@ -1692,10 +1791,47 @@ def talk_api_stream(t: TalkStreamMsg):
     def gen():
         import CrossBrain as _XB
         import CloudBrain as _CB
+        import ApexCache as _C
         t0 = time.time()
         first = {"open": False}
         full = []
         lane_name = {"v": "unknown"}
+        _from_cache = {"v": False}
+        _chat_hash = _C.signature({"text": "chat|" + msg.strip().lower()})
+        # ================================================== THE REPLAY CACHE
+        # (2026-11-04; the same canon as the blocking route): identical
+        # questions stream INSTANTLY off the disk - the meta event tags the
+        # lane so the UI shows the replay honestly; "!fresh" bypasses.
+        if not msg.lower().startswith(("!fresh", "fresh:")):
+            try:
+                _hit = _C.cache_get("chat|" + msg.strip().lower())
+                if _hit and _hit[0]:
+                    _from_cache["v"] = True
+                    lane_name["v"] = "cache ⚡ replay"
+                    ttft = round(time.time() - t0, 3)
+                    yield (f'event: meta\ndata: ' + json.dumps(
+                        {"lane": lane_name["v"], "ttft_s": ttft,
+                         "note": "replayed from the resolution cache"},
+                        ensure_ascii=False) + "\n\n")
+                    yield ("event: tok\ndata: " + json.dumps(
+                        {"t": _hit[0]}, ensure_ascii=False) + "\n\n")
+                    try:
+                        MEM.record_event(
+                            "conversation",
+                            "Andrew (repeat) | Apex replayed cached answer "
+                            f"({len(_hit[0])} chars, $0)",
+                            talk=True, message=msg[:400], reply=_hit[0][:2000])
+                    except Exception:
+                        pass
+                    yield ("event: done\ndata: " + json.dumps(
+                        {"reply": _hit[0] + "\n\n(⚡ answered from my resolution "
+                          "cache — identical problems replay free; say \"!fresh …\" "
+                          "to force a live answer)",
+                         "lane": lane_name["v"], "chars": len(_hit[0]),
+                         "ttft_s": ttft}, ensure_ascii=False) + "\n\n")
+                    return
+            except Exception:
+                pass
         try:
             chat_models = tuple((_XB.routes().get("chat") or
                                  ("groq", "local-phi4", "local-coder")))
@@ -1739,6 +1875,13 @@ def talk_api_stream(t: TalkStreamMsg):
                                "minute.\n\nHONEST DIAGNOSTIC: " + str(_e)[:120]),
                      "lane": "none"}, ensure_ascii=False) + "\n\n")
         joined = "".join(full)
+        try:
+            if joined and not _from_cache["v"]:
+                _C.store(_chat_hash, {"task": "chat replay"},
+                         lane_name["v"] or "stream", "chat", joined[:6000],
+                         "unverified")
+        except Exception:
+            pass
         try:
             MEM.record_event("conversation",
                              f"Andrew: {msg[:150]} | Apex streamed "
@@ -1787,9 +1930,11 @@ def metrics():
         "layer_ports": {"evolution": 8080, "bridge": 8081, "adapter": 8788},
     }
 
-@app.get("/")
+@app.get("/dashboard")
 def dashboard():
-    """The brain's live status page: ledger, memory stream, self-state."""
+    """The brain's live status page (2026-11-04: the route was registered as
+    "/" AFTER root_redirect - FastAPI serves the FIRST registration, so this
+    was dead code; now it lives at /dashboard where it's reachable)."""
     from fastapi.responses import HTMLResponse
     _lg = _load_ledger()
     ev = MEM.recent_events(10)

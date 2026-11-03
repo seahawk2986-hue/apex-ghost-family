@@ -1,0 +1,532 @@
+[
+ {
+  "title": "SynerDiff: Synergetic Continuous Batching for Fast and Parallel Diffusion Model Inference",
+  "url": "http://arxiv.org/abs/2605.08835v1",
+  "year": "2026"
+ },
+ {
+  "title": "BlockServe: Block-Grained Continuous Batching for High-Throughput Diffusion LLM Serving",
+  "url": "http://arxiv.org/abs/2607.08930v1",
+  "year": "2026"
+ },
+ {
+  "title": "From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving",
+  "url": "http://arxiv.org/abs/2609.23130v1",
+  "year": "2026"
+ },
+ {
+  "title": "Multi-Bin Batching for Increasing LLM Inference Throughput",
+  "url": "http://arxiv.org/abs/2412.04504v2",
+  "year": "2024"
+ },
+ {
+  "title": "MoE-Gen: High-Throughput MoE Inference on a Single GPU with Module-Based Batching",
+  "url": "http://arxiv.org/abs/2503.09716v1",
+  "year": "2025"
+ },
+ {
+  "title": "RequestRouter: Request-Boundary Routing for Efficient Single-GPU LLM Inference",
+  "url": "http://arxiv.org/abs/2605.23057v2",
+  "year": "2026"
+ },
+ {
+  "title": "AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference",
+  "url": "http://arxiv.org/abs/2606.07665v2",
+  "year": "2026"
+ },
+ {
+  "title": "Native LLM and MLLM Inference at Scale on Apple Silicon",
+  "url": "http://arxiv.org/abs/2601.19139v2",
+  "year": "2026"
+ },
+ {
+  "title": "DriftSched: Adaptive QoS-Aware Scheduling under Runtime Token Drift for Multi-Tenant GPU Inference",
+  "url": "http://arxiv.org/abs/2606.02982v2",
+  "year": "2026"
+ },
+ {
+  "title": "OxyGen: Unified KV Cache Management for VLA Inference under Multi-Task Parallelism",
+  "url": "http://arxiv.org/abs/2603.14371v5",
+  "year": "2026"
+ },
+ {
+  "title": "BucketServe: Bucket-Based Dynamic Batching for Smart and Efficient LLM Inference Serving",
+  "url": "http://arxiv.org/abs/2507.17120v1",
+  "year": "2025"
+ },
+ {
+  "title": "LLMs in Cloud: A Discussion on Architecture, Orchestration, and Inference",
+  "url": "http://arxiv.org/abs/2610.33475v1",
+  "year": "2026"
+ },
+ {
+  "title": "PROBE: Co-Balancing Computation and Communication in MoE Inference via Real-Time Predictive Prefetching",
+  "url": "http://arxiv.org/abs/2602.00509v2",
+  "year": "2026"
+ },
+ {
+  "title": "KernelSight-LM: A Kernel-Level LLM Inference Simulator",
+  "url": "http://arxiv.org/abs/2606.28565v2",
+  "year": "2026"
+ },
+ {
+  "title": "Clairvoyant: Predictive Shortest-Job-First Admission for Serial LLM Inference",
+  "url": "http://arxiv.org/abs/2606.07248v2",
+  "year": "2026"
+ },
+ {
+  "title": "GAUSS: A Workload-Aware Analytical and Monte-Carlo Simulator for LLM Inference Serving",
+  "url": "http://arxiv.org/abs/2610.37989v1",
+  "year": "2026"
+ },
+ {
+  "title": "Attention Once Is All You Need: Efficient Streaming Inference with Stateful Transformers",
+  "url": "http://arxiv.org/abs/2605.13784v1",
+  "year": "2026"
+ },
+ {
+  "title": "Token-Budget-Aware Pool Routing for Cost-Efficient LLM Inference",
+  "url": "http://arxiv.org/abs/2604.09613v2",
+  "year": "2026"
+ },
+ {
+  "title": "An Efficient vLLM-Based Inference Pipeline for Unified Audio Understanding and Generation",
+  "url": "http://arxiv.org/abs/2607.02119v1",
+  "year": "2026"
+ },
+ {
+  "title": "Where Does the Energy Go? Profiling LLM Agent Inference on Blackwell GPUs",
+  "url": "http://arxiv.org/abs/2609.29707v1",
+  "year": "2026"
+ },
+ {
+  "title": "Component-Aware Self-Speculative Decoding in Hybrid Language Models",
+  "url": "http://arxiv.org/abs/2605.01106v1",
+  "year": "2026"
+ },
+ {
+  "title": "Speculative Decoding: Exploiting Speculative Execution for Accelerating Seq2seq Generation",
+  "url": "http://arxiv.org/abs/2203.16487v6",
+  "year": "2022"
+ },
+ {
+  "title": "Decoding Speculative Decoding",
+  "url": "http://arxiv.org/abs/2402.01528v4",
+  "year": "2024"
+ },
+ {
+  "title": "Speculative Speculative Decoding",
+  "url": "http://arxiv.org/abs/2603.03251v3",
+  "year": "2026"
+ },
+ {
+  "title": "SpecMemo: Speculative Decoding is in Your Pocket",
+  "url": "http://arxiv.org/abs/2506.01986v1",
+  "year": "2025"
+ },
+ {
+  "title": "RASD: Retrieval-Augmented Speculative Decoding",
+  "url": "http://arxiv.org/abs/2503.03434v1",
+  "year": "2025"
+ },
+ {
+  "title": "Online Speculative Decoding",
+  "url": "http://arxiv.org/abs/2310.07177v4",
+  "year": "2023"
+ },
+ {
+  "title": "Faster Cascades via Speculative Decoding",
+  "url": "http://arxiv.org/abs/2405.19261v2",
+  "year": "2024"
+ },
+ {
+  "title": "Secure Speculative Decoding for Large Language Models",
+  "url": "http://arxiv.org/abs/2610.08678v2",
+  "year": "2026"
+ },
+ {
+  "title": "Speculative Decoding and the Curse of Multilinguality",
+  "url": "http://arxiv.org/abs/2605.30580v2",
+  "year": "2026"
+ },
+ {
+  "title": "Accelerating LLM Inference with Staged Speculative Decoding",
+  "url": "http://arxiv.org/abs/2308.04623v1",
+  "year": "2023"
+ },
+ {
+  "title": "A Practical Investigation of Training-free Relaxed Speculative Decoding",
+  "url": "http://arxiv.org/abs/2607.08690v1",
+  "year": "2026"
+ },
+ {
+  "title": "The Disparate Impacts of Speculative Decoding",
+  "url": "http://arxiv.org/abs/2510.02128v1",
+  "year": "2025"
+ },
+ {
+  "title": "Benchmarking the Energy Savings with Speculative Decoding Strategies",
+  "url": "http://arxiv.org/abs/2602.09113v1",
+  "year": "2026"
+ },
+ {
+  "title": "Mistletoe: Stealthy Acceleration-Collapse Attacks on Speculative Decoding",
+  "url": "http://arxiv.org/abs/2605.14005v2",
+  "year": "2026"
+ },
+ {
+  "title": "ParallelSpec: Parallel Drafter for Efficient Speculative Decoding",
+  "url": "http://arxiv.org/abs/2410.05589v1",
+  "year": "2024"
+ },
+ {
+  "title": "Multi-Candidate Speculative Decoding",
+  "url": "http://arxiv.org/abs/2401.06706v1",
+  "year": "2024"
+ },
+ {
+  "title": "StarSD: One-for-Many Speculative Decoding",
+  "url": "http://arxiv.org/abs/2601.21622v1",
+  "year": "2026"
+ },
+ {
+  "title": "Distributed LLM Inference via Communication-Efficient Speculative Decoding",
+  "url": "http://arxiv.org/abs/2610.35957v1",
+  "year": "2026"
+ },
+ {
+  "title": "PEARL: Parallel Speculative Decoding with Adaptive Draft Length",
+  "url": "http://arxiv.org/abs/2408.11850v3",
+  "year": "2024"
+ },
+ {
+  "title": "LLM Query Scheduling with Prefix Reuse and Latency Constraints",
+  "url": "http://arxiv.org/abs/2502.04677v3",
+  "year": "2025"
+ },
+ {
+  "title": "PrefixBench-H100: Characterizing Prefix Reuse and Time-to-First-Token in H100 LLM Serving",
+  "url": "http://arxiv.org/abs/2609.19657v1",
+  "year": "2026"
+ },
+ {
+  "title": "Request-Adaptive Execution for Efficient Hybrid LLM Inference",
+  "url": "http://arxiv.org/abs/2610.37432v1",
+  "year": "2026"
+ },
+ {
+  "title": "LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference",
+  "url": "http://arxiv.org/abs/2510.09665v2",
+  "year": "2025"
+ },
+ {
+  "title": "KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference",
+  "url": "http://arxiv.org/abs/2605.12471v1",
+  "year": "2026"
+ },
+ {
+  "title": "Governing the KV Cache: Preventing Timing Side-Channel Leakage in Multi-Tenant LLM Inference",
+  "url": "http://arxiv.org/abs/2608.09225v1",
+  "year": "2026"
+ },
+ {
+  "title": "A 35B Hybrid-Attention Mixture-of-Experts Model on a 6GB 2011 GPU: Hand-Written 4-bit CUDA Inference for Fermi",
+  "url": "http://arxiv.org/abs/2606.24031v1",
+  "year": "2026"
+ },
+ {
+  "title": "FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows",
+  "url": "http://arxiv.org/abs/2605.07238v1",
+  "year": "2026"
+ },
+ {
+  "title": "Tail-Replay: Escaping the Curse of Linear Attention in Prefix Caching for Hybrid LLMs",
+  "url": "http://arxiv.org/abs/2608.30310v2",
+  "year": "2026"
+ },
+ {
+  "title": "JET: Justification Evaluation in Transformer",
+  "url": "http://arxiv.org/abs/2609.33874v2",
+  "year": "2026"
+ },
+ {
+  "title": "A Voice-Interactive Multi-Agent System for Smart Operating Rooms: Architecture Design and Key Technologies",
+  "url": "http://arxiv.org/abs/2609.11231v2",
+  "year": "2026"
+ },
+ {
+  "title": "GRAFT: Grounded and Efficient Online Reinforcement Adaptation for Fine-Grained Robot Manipulation",
+  "url": "http://arxiv.org/abs/2608.27079v2",
+  "year": "2026"
+ },
+ {
+  "title": "Requests of a Feather Must Flock Together: Batch Size vs. Prefix Homogeneity in LLM Inference",
+  "url": "http://arxiv.org/abs/2605.06046v3",
+  "year": "2026"
+ },
+ {
+  "title": "RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving",
+  "url": "http://arxiv.org/abs/2610.18143v1",
+  "year": "2026"
+ },
+ {
+  "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
+  "url": "http://arxiv.org/abs/2512.18194v1",
+  "year": "2025"
+ },
+ {
+  "title": "HiState: Hierarchical Prefix Cache Management for Hybrid LLM Serving in Agentic Workloads",
+  "url": "http://arxiv.org/abs/2610.41508v1",
+  "year": "2026"
+ },
+ {
+  "title": "DASC: Decay-Aware State Compression for Hybrid Linear-Attention Serving",
+  "url": "http://arxiv.org/abs/2608.30386v2",
+  "year": "2026"
+ },
+ {
+  "title": "Just Let Linear States Forget the Distant Past: Prefix Caching via Suffix Replay for Hybrid LLMs",
+  "url": "http://arxiv.org/abs/2609.33477v1",
+  "year": "2026"
+ },
+ {
+  "title": "GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving",
+  "url": "http://arxiv.org/abs/2602.11688v3",
+  "year": "2026"
+ },
+ {
+  "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
+  "url": "http://arxiv.org/abs/2609.05821v1",
+  "year": "2026"
+ },
+ {
+  "title": "Prompt Compression in the Wild: Measuring Latency, Rate Adherence, and Quality for Faster LLM Inference",
+  "url": "http://arxiv.org/abs/2604.02985v1",
+  "year": "2026"
+ },
+ {
+  "title": "LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression",
+  "url": "http://arxiv.org/abs/2403.12968v2",
+  "year": "2024"
+ },
+ {
+  "title": "SCOPE: A Generative Approach for LLM Prompt Compression",
+  "url": "http://arxiv.org/abs/2508.15813v2",
+  "year": "2025"
+ },
+ {
+  "title": "TACO-RL: Task Aware Prompt Compression Optimization with Reinforcement Learning",
+  "url": "http://arxiv.org/abs/2409.13035v3",
+  "year": "2024"
+ },
+ {
+  "title": "ProCut: LLM Prompt Compression via Attribution Estimation",
+  "url": "http://arxiv.org/abs/2508.02053v2",
+  "year": "2025"
+ },
+ {
+  "title": "SecurityLingua: Efficient Defense of LLM Jailbreak Attacks via Security-Aware Prompt Compression",
+  "url": "http://arxiv.org/abs/2506.12707v1",
+  "year": "2025"
+ },
+ {
+  "title": "PC-SubMax: Efficient Prompt Compression via Regularized Submodular Maximization",
+  "url": "http://arxiv.org/abs/2609.32474v1",
+  "year": "2026"
+ },
+ {
+  "title": "LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression",
+  "url": "http://arxiv.org/abs/2310.06839v2",
+  "year": "2023"
+ },
+ {
+  "title": "Spectral-LSH: Sub-Quadratic Prompt Compression via Krylov-Projected Locality-Sensitive Hashing",
+  "url": "http://arxiv.org/abs/2607.19368v1",
+  "year": "2026"
+ },
+ {
+  "title": "98$\\times$ Faster LLM Routing Without a Dedicated GPU: Flash Attention, Prompt Compression, and Near-Streaming for the vLLM Semantic Router",
+  "url": "http://arxiv.org/abs/2603.12646v1",
+  "year": "2026"
+ },
+ {
+  "title": "When Compression Becomes an Attack Surface: Black-Box Attacks on Prompt-Compressed LLM Agents",
+  "url": "http://arxiv.org/abs/2510.22963v4",
+  "year": "2025"
+ },
+ {
+  "title": "LanguaShrink: Reducing Token Overhead with Psycholinguistics",
+  "url": "http://arxiv.org/abs/2409.00855v1",
+  "year": "2024"
+ },
+ {
+  "title": "Covert Prompt Transmission for Secure Large Language Model Services",
+  "url": "http://arxiv.org/abs/2504.21311v1",
+  "year": "2025"
+ },
+ {
+  "title": "BEAVER: A Training-Free Hierarchical Prompt Compression Method via Structure-Aware Page Selection",
+  "url": "http://arxiv.org/abs/2603.19635v1",
+  "year": "2026"
+ },
+ {
+  "title": "Compressed-Sensing-Guided, Inference-Aware Structured Reduction for Large Language Models",
+  "url": "http://arxiv.org/abs/2604.14156v1",
+  "year": "2026"
+ },
+ {
+  "title": "From Token to Token Pair: Efficient Prompt Compression for Large Language Models in Clinical Prediction",
+  "url": "http://arxiv.org/abs/2605.11774v1",
+  "year": "2026"
+ },
+ {
+  "title": "H$^{2}$MT: Semantic Hierarchy-Aware Hierarchical Memory Transformer",
+  "url": "http://arxiv.org/abs/2605.24930v2",
+  "year": "2026"
+ },
+ {
+  "title": "CAMPHOR: Collaborative Agents for Multi-input Planning and High-Order Reasoning On Device",
+  "url": "http://arxiv.org/abs/2410.09407v1",
+  "year": "2024"
+ },
+ {
+  "title": "Local-Splitter: A Measurement Study of Seven Tactics for Reducing Cloud LLM Token Usage on Coding-Agent Workloads",
+  "url": "http://arxiv.org/abs/2604.12301v1",
+  "year": "2026"
+ },
+ {
+  "title": "GMSA: Enhancing Context Compression via Group Merging and Layer Semantic Alignment",
+  "url": "http://arxiv.org/abs/2505.12215v2",
+  "year": "2025"
+ },
+ {
+  "title": "When Entropy Is Not Enough: Reclaiming Lost Semantics in LLM Output Length Prediction",
+  "url": "http://arxiv.org/abs/2608.15592v3",
+  "year": "2026"
+ },
+ {
+  "title": "OUTLETS: Output-Length Prediction from Speculative Decoding Backbones",
+  "url": "http://arxiv.org/abs/2609.01068v2",
+  "year": "2026"
+ },
+ {
+  "title": "Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions",
+  "url": "http://arxiv.org/abs/2604.00499v2",
+  "year": "2026"
+ },
+ {
+  "title": "Coordinated Scheduling for MoE LLM Serving",
+  "url": "http://arxiv.org/abs/2606.15177v1",
+  "year": "2026"
+ },
+ {
+  "title": "MAPS: Memory-Aware Predictive Scheduling Framework for Large Language Model Serving",
+  "url": "http://arxiv.org/abs/2609.15359v1",
+  "year": "2026"
+ },
+ {
+  "title": "Robust Length Prediction: A Perspective from Heavy-Tailed Prompt-Conditioned Distributions",
+  "url": "http://arxiv.org/abs/2604.07931v1",
+  "year": "2026"
+ },
+ {
+  "title": "Nemotron-Flash: Towards Latency-Optimal Hybrid Small Language Models",
+  "url": "http://arxiv.org/abs/2511.18890v1",
+  "year": "2025"
+ },
+ {
+  "title": "Domain-Adapted Small Language Models with Hybrid Post-Processing: Achieving Cost-Efficient, Low-Latency Multi-Label Structured Prediction via LoRA Fine-Tuning on Scarce Data",
+  "url": "http://arxiv.org/abs/2606.05781v2",
+  "year": "2026"
+ },
+ {
+  "title": "Beyond Leaderboards: Tokenomics of Agentic Small Language Model Ensembles",
+  "url": "http://arxiv.org/abs/2610.00954v1",
+  "year": "2026"
+ },
+ {
+  "title": "SOMA: Efficient Multi-turn LLM Serving via Small Language Model",
+  "url": "http://arxiv.org/abs/2605.11317v1",
+  "year": "2026"
+ },
+ {
+  "title": "Small Language Models: Survey, Measurements, and Insights",
+  "url": "http://arxiv.org/abs/2409.15790v3",
+  "year": "2024"
+ },
+ {
+  "title": "Characterizing and Understanding Energy Footprint and Efficiency of Small Language Model on Edges",
+  "url": "http://arxiv.org/abs/2511.11624v1",
+  "year": "2025"
+ },
+ {
+  "title": "Multi-Objective Aligned Small Language Model Framework for SUD Patient Dialogue Generation",
+  "url": "http://arxiv.org/abs/2610.09209v1",
+  "year": "2026"
+ },
+ {
+  "title": "DVFS for Small Language Model Inference on Mobile Edge Devices",
+  "url": "http://arxiv.org/abs/2609.13153v1",
+  "year": "2026"
+ },
+ {
+  "title": "OrchSLM: Probing the Dynamics of Small Language Model Orchestration",
+  "url": "http://arxiv.org/abs/2609.13470v1",
+  "year": "2026"
+ },
+ {
+  "title": "Network Self-Configuration based on Fine-Tuned Small Language Models",
+  "url": "http://arxiv.org/abs/2512.02861v1",
+  "year": "2025"
+ },
+ {
+  "title": "A Survey on Collaborative Mechanisms Between Large and Small Language Models",
+  "url": "http://arxiv.org/abs/2505.07460v1",
+  "year": "2025"
+ },
+ {
+  "title": "Luna-2: Scalable Single-Token Evaluation with Small Language Models",
+  "url": "http://arxiv.org/abs/2602.18583v1",
+  "year": "2026"
+ },
+ {
+  "title": "GUARD-SLM: Token Activation-Based Defense Against Jailbreak Attacks for Small Language Models",
+  "url": "http://arxiv.org/abs/2603.28817v1",
+  "year": "2026"
+ },
+ {
+  "title": "Task-Centric Acceleration of Small-Language Models",
+  "url": "http://arxiv.org/abs/2602.24174v1",
+  "year": "2026"
+ },
+ {
+  "title": "Squat: Quant Small Language Models on the Edge",
+  "url": "http://arxiv.org/abs/2402.10787v2",
+  "year": "2024"
+ },
+ {
+  "title": "CALM: A Self-Adaptive Orchestration Approach for QoS-Aware Routing in Small Language Model based Systems",
+  "url": "http://arxiv.org/abs/2602.03632v1",
+  "year": "2026"
+ },
+ {
+  "title": "FINER-SQL: Boosting Small Language Models for Text-to-SQL",
+  "url": "http://arxiv.org/abs/2605.03465v1",
+  "year": "2026"
+ },
+ {
+  "title": "Tiny-Critic RAG: Empowering Agentic Fallback with Parameter-Efficient Small Language Models",
+  "url": "http://arxiv.org/abs/2603.00846v1",
+  "year": "2026"
+ },
+ {
+  "title": "SLM Meets LLM: Balancing Latency, Interpretability and Consistency in Hallucination Detection",
+  "url": "http://arxiv.org/abs/2408.12748v1",
+  "year": "2024"
+ },
+ {
+  "title": "Less Is More: Engineering Challenges of On-Device Small Language Model Integration in a Mobile Application",
+  "url": "http://arxiv.org/abs/2604.24636v2",
+  "year": "2026"
+ }
+]
