@@ -1,0 +1,17 @@
+[
+ {
+  "ts": "2026-11-03 00:35:56",
+  "fleet_ram_mb": 229.1,
+  "resident_model_loaded": false,
+  "disk_mb": 94.2,
+  "gpu_util_pct": "0",
+  "gpu_mem_mb": "3849",
+  "cloud_seats": 99,
+  "mesh_nodes_live": 0,
+  "runner_beats_30d": 0,
+  "keyless_lanes": 1,
+  "lane_calls_ledgered": 0,
+  "external_share_pct": 0.0,
+  "grade": "W (provisionally weightless: the n's honest-gray)"
+ }
+]

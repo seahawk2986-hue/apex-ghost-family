@@ -1,0 +1,50 @@
+# THE FAMILY BURST - the red-team family reproduces on a cadence the
+# AI world hasn't set: THREE divisions (gate / doors / scouts), the
+# mutations on GitHub's silicon every 6 hours (the open-web keyless
+# lane + the opt-in nodes), the DELIVERY nightly on the founder's box
+# (the real door can only be attacked from there - the honest law),
+# the upward-ratchet carrying the corpus's fitness only higher.
+name: family-burst
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: "23 1,7,13,19 * * *"   # every 6h: the mutation bursts
+  workflow_dispatch: {}
+
+jobs:
+  burst:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: The three divisions (evolve -> doors -> scouts; the open web)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'Scripts')
+          import ChatRedTeam as R
+          R.evolve(use_wide=True)
+          R.funnel_probe()
+          R.scout()
+          PY
+      - name: The public proof (docs/swarm.json - Pages publishes free)
+        run: |
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'Scripts')
+          import SwarmPublic; SwarmPublic.render()
+          PY
+      - name: The receipts commit back (the family's public birth-book)
+        run: |
+          git config user.name "apex-ghost-family"
+          git config user.email "burst@apex-ghost-family"
+          git add Config/redteam_children.jsonl Config/door_probes.jsonl Config/scout_venues.json Config/chat_redteam_state.json || true
+          git diff --cached --quiet && echo "no new children" || git commit -m "the family burst: a new generation + the doors' defects + the fresh venues [skip ci]"
+          git pull --rebase origin main || true
+          git push || true

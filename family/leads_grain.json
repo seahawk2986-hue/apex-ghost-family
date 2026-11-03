@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 20:30:02",
- "count": 435,
+ "ts": "2026-11-03 00:30:02",
+ "count": 445,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -837,6 +837,13 @@
   },
   {
    "repo": "ikawrakow/ik_llama.cpp",
+   "score": 51.2,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nodejs/node-gyp",
    "score": 51.2,
    "tier": "MINE",
    "stars": 0,
@@ -1732,6 +1739,34 @@
    "license": ""
   },
   {
+   "repo": "openclaw/openclaw",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "zizmorcore/zizmor",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "AndreasAugustin/actions-template-sync",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Team-STORIX/STORIX-MCP",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "turboderp/exllamav2",
    "score": 51.0,
    "tier": "MINE",
@@ -1845,6 +1880,13 @@
   },
   {
    "repo": "Salad109/SIMPLETON",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "actions/dependency-review-action",
    "score": 51.0,
    "tier": "MINE",
    "stars": 0,
@@ -2252,6 +2294,13 @@
   {
    "repo": "whompay/SaintsReborn",
    "score": 30.5,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "evolution-foundation/evolution-go",
+   "score": 30.4,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -2769,6 +2818,27 @@
   },
   {
    "repo": "wselwood/orbcalc",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "devantler-tech/setup-agent-skills-action",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "devantler-tech/guard-installed-skill-edits-action",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "devantler-tech/update-agent-skills-action",
    "score": 30.1,
    "tier": "GOLD",
    "stars": 0,

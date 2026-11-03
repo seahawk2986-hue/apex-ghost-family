@@ -76,6 +76,16 @@ def track(agent, delivered):
 
 
 def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
+    # THE TOKEN ECONOMY (the anti-block round): every fleet call passes
+    # here - compressing the BIG organ prompts (history repetition) at the
+    # single chokepoint spends fewer tokens per call everywhere; short
+    # prompts (chat, repair payloads) pass through untouched by the 3000
+    # char rule inside the compressor.
+    try:
+        import PromptCompressor as _PC
+        prompt = _PC.compress(prompt)
+    except Exception:
+        pass
     """The spend-gated chat: the ollama cloud first (if the key exists),
     then the other keys. THE GATE: refuses at/over the session cap."""
     g = load_gate()
@@ -135,9 +145,29 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
             ("nim-glm", "https://integrate.api.nvidia.com/v1/chat/completions",
              "z-ai/glm-5.3-flash", keys.get("NVIDIA_API_KEY", ""),
              {"Authorization": "Bearer " + keys.get("NVIDIA_API_KEY", "")}),
+            # THE TITAN SEATS (the strength-max round, probed live 2026-11-04:
+            # the NIM door lists 85 models free-trial 60RPM $0 - the monsters
+            # join the pool ABOVE the 120b in the strength order: kimi-k2.6
+            # (FrontierSWE 81.2-class) + the 550B nemotron-3 MoE. The law:
+            # hand-offs never DOWN-grade - these are upgrades, never floors.)
+            ("nim-kimi-k26", "https://integrate.api.nvidia.com/v1/chat/completions",
+             "moonshotai/kimi-k2.6", keys.get("NVIDIA_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("NVIDIA_API_KEY", "")}),
+            ("nemotron-550b", "https://integrate.api.nvidia.com/v1/chat/completions",
+             "nvidia/nemotron-3-ultra-550b-a55b", keys.get("NVIDIA_API_KEY", ""),
+             {"Authorization": "Bearer " + keys.get("NVIDIA_API_KEY", "")}),
             ("or-auto", "https://openrouter.ai/api/v1/chat/completions",
              "openrouter/free", keys.get("OPENROUTER_API_KEY", ""),
              {"Authorization": "Bearer " + keys.get("OPENROUTER_API_KEY", "")}),
+            # THE FREE-SWARM (the token-block round): the rotator across ~50+
+            # individually-capped :free models = the constructed unlimited
+            # lane (N caps in rotation); tried as ONE lane, its own state
+            # file carries each model's daily budget honestly
+            # THE KEYLESS ETERNAL LANE (the unlimited round v2): Pollinations'
+            # openai-compat endpoint = NO key, NO caps, $0 forever - the
+            # chat-floor's final voice when every other door is capped/dead
+            ("pollinations", "https://text.pollinations.ai/openai", "openai", "", {}),
+            ("or-swarm", "freeswarm://internal", "rotator(:free)", "", {}),
         ]
     credits_allowed = (os.environ.get("CREDITS_ALLOWED") == "1" or
                        (keys.get("CREDITS_ALLOWED") == "1"))
@@ -157,9 +187,14 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
     cands = ([c for c in pool if c[0] in set(models)] if models else pool)
     if _idx:
         cands = sorted(cands, key=lambda c: _idx.get(c[0], 99))
+    _KEYLESS = ("pollinations",)   # keyless by design = never skip
     for name, url, model, keyv, hdrs in cands:
         is_local = name.startswith("local")
-        if not keyv and not is_local:
+        if not keyv and not is_local and not name.startswith(_KEYLESS):
+            # THE HONEST SKIP (was silent - invisible to the fleet): a lane
+            # without its key is skipped LOUDLY now; the KEYLESS lanes
+            # (pollinations - by DESIGN keyless) never skip
+            print(f"[cloud-brain] {name}: no key in .env - skipped (loud)")
             continue
         if not is_local:
             # THE PACER HONORED HERE TOO (2026-11-04): a 429-windowed lane
@@ -171,15 +206,56 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
                     continue
             except Exception:
                 pass
-        # THE GATE LIVES PER CANDIDATE: the no-card free tiers price $0.00
-        # (they pass even the $0.00 cap); the credits-tier's est stays
-        # HIGH-side (the cap blocks it until the founder's second unlock)
-        est_c = (len(prompt) / 4 + max_tokens) / 1e6 * (
-            0.0 if name != "ollama" else 0.2)
-        if not is_local:
+            # THE TPD GUARD (the token-block round): a day/starve window is
+            # skipped WITHOUT a single token spent (the earlier paths paid
+            # the wall tax: ladders + probes against a daily cap)
+            try:
+                import TPDGuard as _TPD
+                if _TPD.is_starved(name):
+                    print(f"[cloud-brain] {name}: TPD/429 starve window - skipped free")
+                    continue
+            except Exception:
+                pass
+        # THE GATE LIVES PER CANDIDATE: the structural-free lanes (the
+        # no-card free tiers + the NIM trial + the rotator) price $0.00 -
+        # the $0-cap can NEVER block a free lane (the 2026-11-04 audit:
+        # phantom accrual at 0.2/M est locked every lane out of the $0 cap
+        # silently; est_c now = the lane's TRUE structural price). Only the
+        # paid-credits ollama tier keeps the gate's real pricing.
+        est_c = 0.0 if name != "ollama" else (len(prompt) / 4 + max_tokens) / 1e6 * 0.2
+        if not is_local and est_c > 0:
             g2 = load_gate()
             if g2["spent_usd"] + est_c > g2["session_cap_usd"]:
-                continue
+                print(f"[cloud-brain] {name}: the $-cap gate blocks (spent "
+                      f"${g2['spent_usd']:.4f}/cap ${g2['session_cap_usd']:.2f})")
+        # THE FREE-SWARM INTERCEPT (the token-block round): the rotator is
+        # a lane in name only - it walks ~50+ free models with independent
+        # caps inside its own organ (N caps = the constructed unlimited)
+        if name == "or-swarm":
+            try:
+                import FreeSwarm as _FS
+                # THE SAME-WEIGHTS LAW: the rotator serves the weight the
+                # CALLING route asked for (the first known cloud lane in
+                # `models` names it); chat/judge/copy routes are 120b-class
+                _w = None
+                for _m in (models or ()):
+                    lm = str(_m).lower()
+                    if lm.startswith("local") or _m == "or-swarm":
+                        continue
+                    if "120b" in lm or _m in ("groq", "cerebras-120b", "ollama"):
+                        _w = "gpt-oss-120b"
+                        break
+                txt = _FS.ask(prompt, max_tokens=max_tokens, purpose=purpose,
+                              weight=_w)
+                if txt and txt.strip():
+                    track(name, True)
+                    print(f"[cloud-brain] or-swarm answered ({purpose}; "
+                          f"weight={_w or 'batch-rotation'}); $0")
+                    return txt
+                track(name, False)
+            except Exception:
+                track(name, False)
+            continue
         try:
             if is_local:
                 body = {"model": model, "stream": False,
@@ -192,14 +268,17 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
                     body["format"] = "json"
             else:
                 # the MEASURED band (the honest budget): groq = 9k (the
-                # free tier's per-minute quota-measured), the rest = 6k
+                # free tier's per-minute quota-measured), the rest = 6k;
+                # THE TOKEN FLOOR IS UNIVERSAL (the titan-night fix): a
+                # reasoning model (nemotron/gpt-oss) burns its budget on
+                # HIDDEN thinking - a small max_tokens returned EMPTY
+                # content, which silently downgraded the route (the exact
+                # class the founder banned)
                 budget = 9000 if name == "groq" else 6000
                 body = {"model": model,
                         "messages": [{"role": "user",
                                       "content": prompt[:budget]}],
-                        "max_tokens": max(max_tokens, 512) if name.startswith(
-                            ("ollama", "openrouter", "groq")) else
-                        max_tokens,
+                        "max_tokens": max(max_tokens, 512),
                         "temperature": 0}
                 if resp_json:
                     body["response_format"] = {"type": "json_object"}
@@ -211,6 +290,14 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
             txt = (d.get("choices", [{}])[0].get("message", {})
                    .get("content", "")) if not is_local else \
                 d.get("message", {}).get("content", "")
+            if not (txt and txt.strip()):
+                # THE HONEST EMPTY (the titan-night fix): a 200 with no
+                # content = the reasoning burned the budget OR the model
+                # balked - print it, never silently walk on
+                print(f"[cloud-brain] '{name}/{model}': empty content on 200 "
+                      f"(reasoning-budget class) - next lane")
+                track(name, False)
+                continue
             if txt and txt.strip():
                 track(name, True)
                 if is_local:
@@ -222,26 +309,55 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
                           f"({purpose}); cost $0.00 (the free tier)")
                     return txt
                 g["calls"] += 1
-                g["spent_usd"] = round(g["spent_usd"] + est, 6)
+                # THE FREE LAW EXTENDED (2026-11-04, the $0-cap audit):
+                # the free tiers accrue $0.00 ONLY (the old line billed
+                # trial lanes at the 0.2/M high-side est - the phantom
+                # spend that drifted the gate shut on the whole fleet).
+                # Only the PAID-credits ollama tier keeps real pricing.
+                if name == "ollama":
+                    g["spent_usd"] = round(g["spent_usd"] + est, 6)
                 save_gate(g)
                 print(f"[cloud-brain] '{name}/{model}' answered ({purpose}); "
-                      f"ledger: ${g['spent_usd']:.4f}/"
-                      f"${g['session_cap_usd']:.2f}")
+                      f"cost $0.00 (structurally free) | calls {g['calls']}")
                 return txt
         except Exception as e:
             track(name, False)
+            # THE 429 REGISTRATION (the token-block round): the provider's
+            # own error body carries the cap-math (TPD used/limit or the
+            # stated try-again window) - it is recorded so EVERY later call
+            # skips this lane free instead of re-paying the probe
+            try:
+                _body = ""
+                if hasattr(e, "read"):
+                    try:
+                        _body = e.read().decode(errors="replace")[:400]
+                    except Exception:
+                        _body = ""
+                _body = _body or str(e)
+                if "429" in _body or "rate" in _body.lower() or \
+                        "quota" in _body.lower() or "403" in _body or \
+                        "forbidden" in _body.lower():
+                    import TPDGuard as _TPD
+                    _TPD.register_429(name, _body)
+            except Exception:
+                pass
             print(f"[cloud-brain] {name}: {str(e)[:60]}")
             continue
     if models:
-        # THE FLEET GUARANTEE (2026-11-04, "all our models to their full
-        # potential"): the route answered nothing - expand the route to the
-        # WHOLE pool for one more pass (recursive call; the widened call's
-        # own guarantee-pass = empty, so this terminates). The pacers hold.
+        # THE FLEET GUARANTEE + THE STRENGTH LAW (2026-11-04): the widen
+        # pass walks the WHOLE pool BUT the local floors are LAST RESORT
+        # only (the earlier pool order served weak locals FIRST - the
+        # silent downgrade class the founder banned). Cloud lanes in the
+        # route's strength class go first; the locals close the pass, and
+        # a floor-serve prints honestly.
         _more = tuple(c0[0] for c0 in pool
                       if all(c0[0] != c1[0] for c1 in cands))
+        _more = tuple(list(c0 for c0 in _more if not str(c0).startswith("local"))
+                      + list(c0 for c0 in _more if str(c0).startswith("local")))
         if _more:
             print(f"[cloud-brain]: route ({', '.join(models)}) served nothing "
-                  "- the FULL FLEET pass begins")
+                  "- the strength-ordered FLEET pass begins (cloud-first, "
+                  "the local floor = last resort only)")
             return chat(prompt, max_tokens=max_tokens, purpose=purpose,
                         models=_more, resp_json=resp_json)
     g["refusals"] += 1
@@ -387,6 +503,10 @@ def chat_stream(prompt, max_tokens=800, purpose="", models=()):
                 lane_yielded = False
                 with _rq.post(url, headers=hdrs, json=body_dict, stream=True,
                               timeout=(240 if is_local else 90)) as r:
+                    r.encoding = "utf-8"   # THE MOJIBAKE ROOT FIX: requests'
+                    # latin-1 default for text/* without a declared charset
+                    # double-encoded every typographic byte (' – …); the
+                    # stream's truth = UTF-8, named explicitly, no guessing
                     if r.status_code != 200:
                         continue
                     for line in r.iter_lines(decode_unicode=True):

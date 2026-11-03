@@ -1,0 +1,37 @@
+{
+ "ts": "2026-11-03 00:35 UTC",
+ "protocol": "apex-swarm/1",
+ "law": "every field below points at a receipt in the repo; the grade may only rise on receipts (the FeatureLedger's law)",
+ "cert": {
+  "grade": "(not yet certified)",
+  "passed": "0/8",
+  "checks": [],
+  "receipt": "Config/swarm_cert.json"
+ },
+ "delivery_meter": {
+  "n": 6,
+  "held_pct": 100.0,
+  "leak_pct": 0.0,
+  "note": "the attacks rode the REAL /talk door"
+ },
+ "quorum": {
+  "n": 0,
+  "consensus_rate": 0.0
+ },
+ "family": {
+  "generations": 1,
+  "children_alive": 2,
+  "ladder_best": 0
+ },
+ "mesh": {
+  "nodes_registered": 0,
+  "live": 0,
+  "asks_wide": 0,
+  "join": "the SWARM_PROTOCOL.md two-endpoint door"
+ },
+ "scouts": {
+  "venues_ranked": 14,
+  "top": "open-free-llm-api/awesome-freellm-apis",
+  "law": "the machine drafts; the founder posts"
+ }
+}

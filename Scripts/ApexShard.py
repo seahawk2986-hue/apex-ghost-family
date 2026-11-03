@@ -36,11 +36,15 @@ LANES = [
      "GEMINI_API_KEY", "gemini-3.8-flash", "medium"),
     ("gemini-pro", "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
      "GEMINI_API_KEY", "gemini-3.1-pro-preview", "deep"),
-    # the NIM flagships (build.nvidia.com, verified 11/02): dormant until the free trial key
-    ("nim-k3", "https://integrate.api.nvidia.com/v1/chat/completions",
-     "NVIDIA_API_KEY", "moonshotai/kimi-k3", "deep"),
-    ("nim-v4pro", "https://integrate.api.nvidia.com/v1/chat/completions",
-     "NVIDIA_API_KEY", "deepseek-ai/deepseek-v4-pro-0813", "deep"),
+    # THE TITAN SEAT #1 (the kimi-k3 corpse replaced by its live lineage -
+    # probed live 2026-11-04, moonshot's current frontier: FrontierSWE 81.2
+    # class, the deep-reasoning + SWE-class code seat; free trial 60 RPM)
+    ("nim-kimi-k26", "https://integrate.api.nvidia.com/v1/chat/completions",
+     "NVIDIA_API_KEY", "moonshotai/kimi-k2.6", "deep"),
+    # THE TITAN SEAT #2 (the deepseek-v4-pro corpse replaced by nvidia's
+    # biggest listed brain: the 550B MoE - the deep tier's ceiling seat)
+    ("nemotron-550b", "https://integrate.api.nvidia.com/v1/chat/completions",
+     "NVIDIA_API_KEY", "nvidia/nemotron-3-ultra-550b-a55b", "deep"),
     ("local-floor", "http://localhost:11434/v1/chat/completions",
      None, "phi4-mini:latest", "floor"),
 ]

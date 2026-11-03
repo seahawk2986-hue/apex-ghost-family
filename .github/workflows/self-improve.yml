@@ -38,8 +38,34 @@ jobs:
           python Scripts/ClaimCheck.py
           python - <<'PY'
           import sys; sys.path.insert(0, 'Scripts')
+          import CritiqueArena; CritiqueArena.beat(3)
+          PY
+          python Scripts/Reinforce.py
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'Scripts')
+          import Parliament
+          Parliament.vote("the abstract-gym's accuracy improves week-over-week")
+          PY
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'Scripts')
           import Prophet; Prophet.loop()
           PY
+          python Scripts/FeatureLedger.py
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'Scripts')
+          import SwarmCert
+          SwarmCert.run_cert()
+          PY
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'Scripts')
+          import QuorumSwarm as QS
+          QS.answer('One sentence: is the swarm honest about its limits?',
+                    max_tokens=100)
+          PY
+          # NOTE: ChatRedTeam + LightRec are LOCAL organs by law - the
+          # red-team attacks the REAL /talk door (which only lives on the
+          # founder's box; a runner-hosted copy would grade a phantasm),
+          # and the habit-store is local-only (the privacy door).
           python Scripts/FleetDoctor.py --cloud
       - name: The receipts commit back (the public proof)
         run: |

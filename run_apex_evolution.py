@@ -1,4 +1,6 @@
-import os, sys, json, ast, time, shutil, re, subprocess, threading, secrets, hmac
+﻿import os, sys, json, ast, time, shutil, re, subprocess, threading, secrets, hmac
+import base64
+import urllib.parse
 from collections import defaultdict, deque
 from pydantic import BaseModel
 from fastapi import FastAPI, BackgroundTasks, Request
@@ -20,6 +22,9 @@ APEX_KEY = os.getenv("APEX_API_KEY") or APEX_KEY
 _POST_RATE = defaultdict(lambda: deque(maxlen=40))     # 40 mutations/min/IP
 _GET_RATE = defaultdict(lambda: deque(maxlen=300))     # 300 reads/min/IP
 _BODY_CAP = 32 * 1024
+_BODY_CAP_VISION = 12 * 1024 * 1024   # THE EYES' CAP: images ride base64
+                                       # (the 32KB body-cap class = for the
+                                       # small message surfaces only)
 
 R = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 from ApexMemory import ApexMemory
@@ -97,6 +102,20 @@ def _strip_think(text):
         return text.split("</think>")[-1].strip()
     return text.strip()
 
+
+def _plain_english(text):
+    """THE CHAT-VOICE LAW (the CJK-night fix, 2026-11-04): the free-tier
+    lanes (GLM-class) date-stamp in Chinese ("2026å¹´11æœˆ3æ—¥") and the
+    Dream organ's notes inherit it - the chat's text surface is English
+    only: CJK date-glyphs become the readable form, any other CJK block
+    is dropped (the content survives, the mojibake doesn't)."""
+    t = str(text or "")
+    t = t.replace("å¹´", "-").replace("æœˆ", "-").replace("æ—¥", "")
+    t = t.replace("ï¼ˆ", "(").replace("ï¼‰", ")").replace("ï¼š", ":")
+    t = re.sub(r"[\u3000-\u30ff\u4e00-\u9fff\uf900-\ufaff]+", " ", t)
+    return re.sub(r" {2,}", " ", t).strip()
+
+
 class FriendPayload(BaseModel): message: str
 
 def log(lyr, msg):
@@ -110,29 +129,35 @@ def log(lyr, msg):
         pass  # logging must never crash the loop
 
 def query_ds(p, max_tokens=800, timeout_s=90):
-    """The planner call - brain-aligned and bounded: one local attempt into
-    brain_ready()'s LIVE model, then a bounded cloud burst. (The old ladder
-    waited up to 300 s on a model that was not even loaded.)"""
-    url, model, kind = brain_ready()
-    if not url:
-        return ""
-    try:
-        r = requests.post(url, json={"model": model,
-                                     "messages": [{"role": "user", "content": p}],
-                                     "temperature": 0.1, "stream": False,
-                                     "max_tokens": max_tokens}, timeout=timeout_s)
-        if r.status_code == 200:
-            txt = (((r.json().get("choices") or [{}])[0].get("message", {}) or {})
-                   .get("content", "")) or ""
-            return _strip_think(txt)
-        log("system", f"planner brain HTTP {r.status_code} - bursting to cloud lanes")
-    except Exception as e:
-        log("system", f"planner brain drop: {str(e)[:90]} - bursting to cloud lanes")
+    """The planner call - STRENGTH-FIRST routing (the A+ round): the
+    planner is the fleet's brain; serving it from the resident 3.8B while
+    a free 120b sits idle on two providers was the mis-routing class.
+    Order: the strongest FREE cloud lanes (cerebras/groq 120b, ~0.5s TTFT
+    measured) FIRST, the local resident as the offline fallback (the
+    honest autonomy floor, num_ctx-protected)."""
     if cloud_ask:
         try:
             return cloud_ask(p, max_tokens=700) or ""
         except Exception:
-            return ""
+            pass
+    url, model, kind = brain_ready()
+    if not url:
+        return ""
+    try:
+        _ds_payload = {"model": model,
+                       "messages": [{"role": "user", "content": p}],
+                       "temperature": 0.1, "stream": False,
+                       "max_tokens": max_tokens}
+        if kind == "ollama":
+            _ds_payload["options"] = {"num_ctx": 8192}   # same ctx law as query_qw
+        r = requests.post(url, json=_ds_payload, timeout=timeout_s)
+        if r.status_code == 200:
+            txt = (((r.json().get("choices") or [{}])[0].get("message", {}) or {})
+                   .get("content", "")) or ""
+            return _strip_think(txt)
+        log("system", f"planner cloud failed -> brain HTTP {r.status_code} (honest local fallback)")
+    except Exception as e:
+        log("system", f"planner lanes unreachable -> {str(e)[:90]} (honest local fallback)")
     return ""
 
 # Identity anchor for every model call in the chat brain.
@@ -152,7 +177,11 @@ SYSTEM_IDENTITY = (
 
 LAST_BRAIN_REASON = "ok (no failed calls this session)"
 
-def query_qw(p, schema=False):
+def query_qw(p, schema=False, max_tokens=None):
+    """max_tokens: the ladder override. Full-file code drafts need 2500+
+    tokens - the ApexPacing dead-loop: the 500/800 default ladder cut every
+    full-file rewrite mid-generation, and the truncated garbage kept losing
+    the write gate forever. None = the chat-default 500/800 ladder."""
     global LAST_BRAIN_REASON
     url, model, kind = brain_ready()
     if not url:
@@ -161,6 +190,12 @@ def query_qw(p, schema=False):
         return ""
     payload = {"model": model, "messages": [{"role": "system", "content": SYSTEM_IDENTITY}, {"role": "user", "content": p}], "temperature": 0.2, "stream": False}
     if schema: payload["response_format"] = {"type": "json_object"}
+    if kind == "ollama":
+        # Ollama's silent default ctx=4096: input + the 3000-token code ladder
+        # cannot both fit, and the OUTPUT gets cut (the truncated-candidate
+        # class). Give the honest ladder room (a bounded KV-cache bump, still
+        # RAM-gated elsewhere).
+        payload["options"] = {"num_ctx": 8192}
 
     def _call(mt):
         payload["max_tokens"] = mt
@@ -168,7 +203,12 @@ def query_qw(p, schema=False):
         try:
             r = requests.post(url, json=payload, timeout=45.0)
             if r.status_code == 200:
-                c = ((r.json().get("choices") or [{}])[0].get("message", {}) or {}).get("content", "") or ""
+                _ch0 = (r.json().get("choices") or [{}])[0]
+                c = ((_ch0.get("message") or {}) or {}).get("content", "") or ""
+                if (_ch0.get("finish_reason") or "") == "length":
+                    # truncation is NOT success: a cut code draft is garbage
+                    return (f"truncated at max_tokens={mt} (finish_reason=length) "
+                            f"after {time.time() - t0:.0f}s", "")
                 LAST_BRAIN_REASON = f"{kind}/{model} ok in {time.time() - t0:.0f}s (max_tokens={mt})"
                 return "ok", _strip_think(c)
             return f"brain HTTP {r.status_code}", ""
@@ -177,8 +217,10 @@ def query_qw(p, schema=False):
 
     # TWO attempts, bounded (~95 s worst case) - the old 4x300s ladder was
     # the lag itself; a slow first call now yields ONE honest retry.
+    _ladder = ((500, 0.0), (800, 2.0)) if max_tokens is None else \
+              ((max_tokens, 0.0), (int(max_tokens * 1.5), 2.0))
     reasons, text = [], ""
-    for mt, wait_s in ((500, 0.0), (800, 2.0)):
+    for mt, wait_s in _ladder:
         if wait_s:
             time.sleep(wait_s)
         reason, text = _call(mt)
@@ -197,6 +239,63 @@ def query_qw(p, schema=False):
             return cr
         LAST_BRAIN_REASON += " -> cloud lanes also returned empty/bounded"
     return ""
+
+def _free_ram_gb():
+    try:
+        import psutil as _ps
+        return _ps.virtual_memory().available / (1024 ** 3)
+    except Exception:
+        return 99.0
+
+
+CODER_RESIDENT = "qwen2.5-coder:7b-instruct"
+CHAT_FLOOR = "phi4-mini"
+_swap_lock = threading.Lock()
+
+
+def ensure_coder_resident():
+    """THE SINGLE-SLOT RAM-GATED AUTO-SWAP (the A+ routing round): ollama
+    holds ONE model at a time; the chat floor (phi4-mini) usually occupies
+    the slot - so every CODER call ran on a weak coder. Code-work paths
+    call this first: if the host has >= 3.5 GB free (the family RAM law,
+    with an honest margin), the slot swaps to the real coder, the call
+    runs, and the floor returns afterwards via restore_chat_floor()."""
+    with _swap_lock:
+        try:
+            r = requests.get("http://127.0.0.1:11434/api/ps", timeout=4)
+            residents = (r.json().get("models") or [])
+            if residents and (residents[0].get("name") or "").startswith(CODER_RESIDENT.split(":")[0]):
+                return residents[0].get("name")   # already the coder seat
+        except Exception:
+            return None
+        if _free_ram_gb() < 3.5:
+            log("system", f"RAM {_free_ram_gb():.1f}GB < 3.5GB - honest no-swap: "
+                          "the repair serves from whoever is resident")
+            return None
+        try:
+            _t = time.time()
+            requests.post("http://127.0.0.1:11434/api/generate",
+                          json={"model": CODER_RESIDENT, "keep_alive": "2h",
+                                "prompt": "", "stream": False}, timeout=120)
+            log("system", f"auto-swap: the coder ({CODER_RESIDENT}) took the "
+                          f"slot in {time.time() - _t:.0f}s (RAM {_free_ram_gb():.1f}GB free)")
+            return CODER_RESIDENT
+        except Exception as e:
+            log("system", f"auto-swap refused honestly: {str(e)[:80]}")
+            return None
+
+
+def restore_chat_floor():
+    """Return the slot to the chat floor (weak coder back to idle = the RAM
+    returned to the chat lane + the host)."""
+    try:
+        requests.post("http://127.0.0.1:11434/api/generate",
+                      json={"model": CHAT_FLOOR, "keep_alive": "2h",
+                            "prompt": "", "stream": False}, timeout=120)
+        brain_ready(refresh=True)
+    except Exception:
+        pass
+
 
 def _apply_patches(cur_full, patch_out):
     """Apply Aider-style SEARCH/REPLACE blocks (minimal-diff editing).
@@ -217,13 +316,41 @@ def _apply_patches(cur_full, patch_out):
     return text if applied else None
 
 def ext_code(o, ex):
+    """Extract code from an LLM reply - truncation-hardened (the ApexPacing
+    dead-loop fix): generations cut at max_tokens lose their CLOSING fence,
+    the old single-match regex found nothing, and the RAW reply (fences,
+    prose, cut docstring fragments) was written into the candidate file.
+    Now: every fenced segment is split out (an unclosed trailing fence
+    still yields a segment) and the best one is chosen - ast-parsability
+    wins for .py, code-likeness breaks ties."""
     if not o: return ""
-    m = re.search(r"```powershell\s*(.*?)\s*```" if ex == ".ps1" else r"```python\s*(.*?)\s*```", o, re.DOTALL | re.IGNORECASE)
-    if m: return m.group(1).strip()
-    gm = re.search(r"```\s*(.*?)\s*```", o, re.DOTALL)
-    return gm.group(1).strip() if gm else o.strip()
+    _parts = re.split(r"```(?:[a-zA-Z0-9_+#.-]*)\n?", o)
+    _cands = [p.strip() for p in _parts[1::2] if p and p.strip()]
+    if not _cands:
+        return o.strip()          # no fences at all: the old raw behavior
+    def _rank(c):
+        r = min(len(c) // 200, 10)            # longer segments slightly favored
+        if ex == ".ps1":
+            r += 10 if ("$" in c or "param(" in c or "Write-" in c) else 0
+        else:
+            try:
+                ast.parse(c, mode="exec"); r += 100   # parses = almost surely code
+            except Exception:
+                pass
+            if c.lstrip().startswith(("import ", "from ", "def ", "class ", "@", '"""')): r += 5
+        return r
+    return max(_cands, key=_rank)
 
 LEDGER = os.path.join(R, "Config", "RewardLedger.json")
+
+# THE INTEGRATION-SPINE LAW (2026-11-04): the evolver EVOLVES MODULES,
+# never its own integration surfaces - receipts_page.py is the designed
+# public trust-page (the silent re-issues of it kept dropping the organs'
+# hooks; the family's receipts page = a CONTRACT, not a research target).
+# 2026-11-04: moved to MODULE level (it was dead-defined inside heal() after
+# its final return, which NameError'd every plan() call that used it).
+CORE_MODULES = {"run_apex_evolution.py", "optimized_agent.py", "apex_ipce_engine.py", "apexmemory.py", "apexwebscraper.py", "apexnetscraper.py",
+                "receipts_page.py"}
 
 def _shell_destructive(node):
     """True if a Call node's string constants form a destructive shell command."""
@@ -556,6 +683,7 @@ def _container_run_tests(fn, code, tests_code):
 
 def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None, skill_used=None):
     ex = os.path.splitext(fn)[1].strip().lower()
+    ensure_coder_resident()   # the coder seat for the repair ladder (RAM-gated)
     # Predecessor behavior baseline (computed ONCE - the live file is the
     # predecessor until a candidate actually passes the write gate).
     try:
@@ -681,6 +809,7 @@ def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None, skill
             except Exception:
                 pass
             _bump_ledger(fn, {k: m.get(k, 0) for k in ("syntax", "safety", "runtime", "output")}, scr, True)
+            restore_chat_floor()   # the coder's RAM returns to the room
             return True
         log("evolution", "Threshold unmet. Patching with Qwen coder...")
         fence = "powershell" if ex == ".ps1" else "python"
@@ -688,20 +817,25 @@ def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None, skill
             f"You are Apex's code repair unit. Your patch for {fn} crashed.\nIntent: {intent}\n"
             f"[BAD CODE]:\n{code}\n[ERROR]:\n{res['error']}\n"
             f"Fix the bugs completely. Keep the working parts intact. "
-            f"Output ONLY the full corrected file in a single ```{fence} fenced block."), ex)
+            f"Output ONLY the full corrected file in a single ```{fence} fenced block.",
+            max_tokens=3000), ex)
+        if ex == ".py":
+            # THE REPAIR SYNTAX GATE (the ApexPacing dead-loop fix): an
+            # unparseable repair is abandoned immediately - the remaining
+            # passes are not wasted on the same truncation class again.
+            try:
+                ast.parse(code, filename=fn)
+            except SyntaxError as _se:
+                log("evolution", f"Repair candidate unparseable (line {_se.lineno}: "
+                                 f"{str(_se.msg)[:70]}) - abandoning this repair ladder")
+                break
     _bump_ledger(fn, None, None, False)
+    restore_chat_floor()
     _set_strategy("switch to a different file; use smaller surgical changes; verify behavior parity against the ledger best")
     try:
         MEM.remember(f"Failure lesson: {fn} rejected after 3 repair passes. Last error: {str((res or {}).get('error') or (res or {}).get('output') or 'unknown')[:160]}. Next time: smaller, surgical change.", kind="lesson")
     except Exception: pass
     return False
-
-    # THE INTEGRATION-SPINE LAW (2026-11-04): the evolver EVOLVES MODULES,
-    # never its own integration surfaces - receipts_page.py is the designed
-    # public trust-page (the silent re-issues of it kept dropping the organs'
-    # hooks; the family's receipts page = a CONTRACT, not a research target).
-    CORE_MODULES = {"run_apex_evolution.py", "optimized_agent.py", "apex_ipce_engine.py", "apexmemory.py", "apexwebscraper.py", "apexnetscraper.py",
-                    "receipts_page.py"}
 
 def plan():
     log("planner", "Evaluating workspace...")
@@ -735,9 +869,17 @@ def plan():
         strat = _sj.get("strategy", "")[:200] or strat
     except Exception:
         pass
-    # Self-issued curriculum: proposals from real evidence (bandit + failures + human queue)
+    # SELF-REASONING + THE INCREMENTAL LAW (the FeatureLedger's pull):
     curric = "none"
     _human_objective = ""
+    ledger_state = {}
+    try:
+        import FeatureLedger as _FL
+        ledger_state = _FL.refresh()
+        if not ledger_state.get("next_feature"):
+            ledger_state = None
+    except Exception:
+        ledger_state = {}
     try:
         if _curriculum:
             _props = _curriculum(3)
@@ -802,6 +944,17 @@ def plan():
     except Exception:
         research_line = ""
     # --- Phase 1: DeepSeek-R1 THINKS (planning only, no code) -----------------
+    # THE INCREMENTAL LAW'S PIN: absent a human objective, the priority =
+    # the ledger's first failing feature (the sourced harness pattern made
+    # machine-verifiable: one feature per cycle, the receipts decide done)
+    if not _human_objective and ledger_state and ledger_state.get("next_feature"):
+        _nf = ledger_state["next_feature"]
+        _human_objective = (f"THE MACHINE'S OWN OBJECTIVE (from the verified "
+                            f"feature ledger, {ledger_state.get('progress')}): "
+                            f"make this feature TRUE, evidence-backed: "
+                            f"{_nf.get('description')} (verify via {_nf.get('check')}). "
+                            "Work INCREMENTALLY: the smallest change that "
+                            "advances it; leave the workspace clean.")
     o = query_ds(f"**PRIORITY HUMAN OBJECTIVE (strongly prefer this target this cycle unless genuinely impossible): {_human_objective}**\n\n"
                  f"You are Apex automation head. Choose ONE file from [{', '.join(all_f)}] to optimize.\n"
                 f"Recent reward history:\n{hist}\n"
@@ -1100,7 +1253,6 @@ def plan():
     try:
         with open(os.path.join(R, tf), "r", encoding="utf-8") as f: cur_full = f.read()
     except Exception: return False
-    except Exception: return False
     fence = "powershell" if tf.lower().endswith(".ps1") else "python"
     ex = os.path.splitext(tf)[1].strip().lower()
 
@@ -1144,7 +1296,7 @@ def plan():
         "Output ONLY one or more edit blocks in exactly this format (no fences, no commentary):\n"
         "<<<<<<< SEARCH\n<exact lines to find in the file>\n=======\n<replacement lines>\n>>>>>>> REPLACE\n"
         "Each SEARCH must appear in the current file exactly once. Keep edits as small as possible while "
-        "fully implementing the change. Never alter unrelated behavior.")
+        "fully implementing the change. Never alter unrelated behavior.", max_tokens=1500)
     if patch_out:
         code = _apply_patches(cur_full, patch_out)
         if code is not None:
@@ -1161,13 +1313,47 @@ def plan():
             + f"[CURRENT FILE CONTENT]:\n{cur_full[:6000]}\n\n"
             f"Rewrite the complete file with the change applied. Keep the valid, working, non-destructive parts of the "
             f"existing structure intact; only make the requested improvement. Output ONLY the full file content "
-            f"in a single ```{fence} fenced block. No commentary.")
+            f"in a single ```{fence} fenced block. No commentary.", max_tokens=3000)
         code = ext_code(code_out, ex)
     if not code or len(code) < 30:
         log("planner", "Coder produced no usable code. Plan discarded.")
         try: MEM.record_event("error", f"Coder failed on {tf}: empty/blocked output")
         except Exception: pass
         return False
+
+    # THE SYNTAX GATE (the ApexPacing dead-loop fix, 2026-11-04: a candidate
+    # that cannot even parse burned a full sandbox + TDD cycle and poisoned
+    # the lesson memory with 55+ identical failure lessons). One honest
+    # repair attempt; still unparseable = the plan is discarded.
+    if ex == ".py":
+        try:
+            ast.parse(code, filename=tf)
+        except SyntaxError as _se:
+            log("planner", f"Candidate failed pre-parse (line {_se.lineno}: "
+                           f"{(str(_se.msg) if _se.msg else 'unknown')[:80]}) - one bounded repair attempt")
+            _rep = query_qw(
+                "Your previous draft was not valid Python. Fix it completely.\n"
+                f"Syntax error: line {_se.lineno}: {_se.msg}\n"
+                f"Intent: {intent}\n[DRAFT]:\n{code[:4000]}\n\n"
+                "Output ONLY the full corrected file in a single ```python fenced block.",
+                max_tokens=3000)
+            _reparsed = ext_code(_rep or "", ".py")
+            _ok_rep = False
+            try:
+                ast.parse(_reparsed, filename=tf)
+                _ok_rep = True
+            except Exception:
+                _ok_rep = False
+            if _ok_rep and _reparsed:
+                code = _reparsed
+                log("planner", "Pre-parse repair succeeded - candidate now parses")
+            else:
+                log("planner", "Pre-parse repair FAILED - plan discarded (no garbage reaches the queue)")
+                try:
+                    MEM.record_event("error", f"{tf} candidate unparseable after repair; plan discarded",
+                                     file=tf)
+                except Exception: pass
+                return False
 
     # Critic pass (constitutional self-refinement): a second model reviews the
     # candidate for hidden hazards BEFORE the sandbox - cheaper than failing.
@@ -1240,7 +1426,7 @@ def plan():
                 "Write the complete replacement for this file implementing the same change.\n"
                 f"Target file: {tf}\nIntent: {intent}\nChange brief: {brief}\n"
                 f"{_guard_line}\n\nCURRENT FILE:\n{cur_full[:4000]}\n\n"
-                f"Output ONLY the full file in a single ```{fence} fenced block.", max_tokens=1400)
+                f"Output ONLY the full file in a single ```{fence} fenced block.", max_tokens=3000)
             _alt = ext_code(_alt_raw or "", os.path.splitext(tf)[1].strip().lower())
             if _alt and len(_alt) > 30 and _alt.strip() != code.strip():
                 _resA = sandbox(tf, code)
@@ -1278,7 +1464,8 @@ def plan():
                     "The candidate FAILED its specification tests. Fix it to pass ALL of them. "
                     f"Change nothing unrelated.\n[TEST FAILURES]:\n{_tdd_out[:1500]}\n\n"
                     f"[CURRENT CANDIDATE]:\n{code[:4000]}\n\n"
-                    "Output ONLY the full corrected file in a single ```python fenced block.")
+                    "Output ONLY the full corrected file in a single ```python fenced block.",
+                    max_tokens=2500)
                 _fixed = ext_code(_fix or "", ".py")
                 if _fixed and len(_fixed) > 30:
                     _resF = sandbox(tf, _fixed)
@@ -1311,8 +1498,67 @@ def plan():
 app = FastAPI()
 
 
+# ------------------------------- THE ARRIVALS LOG (the funnel's truth)
+_ARRIVALS = r"C:\Users\seaha\Apex-Adapter\Logs\funnel_arrivals.log"
+_PATHS_OF_RECORD = ("/", "/jobs", "/receipts", "/dashboard", "/talk", "/open-triage-demo")
+_arr_lock = threading.Lock()
+
+
+def _log_arrival(request):
+    """THE FUNNEL COUNTS ITS VISITORS (the outcome round): one bounded
+    line per arrival on the exact log OutcomeYardstick._funnel_arrivals
+    reads (Apex-Adapter/Logs/funnel_arrivals.log) - no PII: the coarse
+    path + the hashed IP (not the address) + the UA's first token."""
+    try:
+        if request.url.path not in _PATHS_OF_RECORD:
+            return
+        import hashlib as _h
+        ip = (request.client.host if request.client else "local") or "local"
+        ipp = _h.sha256(str(ip).encode()).hexdigest()[:12]
+        ua = (request.headers.get("user-agent", "") or "").split("/")[0][:40]
+        row = f"{time.strftime('%Y-%m-%d %H:%M:%S')}\tpath={request.url.path}\tip=sha:{ipp}\tua={ua}\n"
+        with _arr_lock:
+            os.makedirs(os.path.dirname(_ARRIVALS), exist_ok=True)
+            bounded = False
+            try:
+                if os.path.exists(_ARRIVALS) and os.path.getsize(_ARRIVALS) > 10 * 1024 * 1024:
+                    os.replace(_ARRIVALS, _ARRIVALS + ".1")
+                    bounded = True
+            except OSError:
+                pass
+            with open(_ARRIVALS, "a", encoding="utf-8") as f:
+                f.write(row)
+        # THE LEAD BELL (the funnel round): a potential customer just
+        # arrived - the founder's phone learns in seconds (ntfy free tier,
+        # the topic from .env; the arrival IP stays hashed; never blocks
+        # serving; at most 1 alert per path per 10 min = polite)
+        try:
+            _key = f"bell:{request.url.path}"
+            if _recent.get(_key, 0) < time.time() - 600:
+                _recent[_key] = time.time()
+                sys.path.insert(0, os.path.join(R, "Scripts"))
+                import ApexIO as _AIO
+                _topic = _AIO.env().get("NTFY_TOPIC", "")
+                if _topic:
+                    _body = (f"Funnel arrival: {request.url.path}\n"
+                             f"visitor {ipp} via {ua}\nfleet time "
+                             f"{time.strftime('%H:%M:%S')}")
+                    _bq = urllib.request.Request(
+                        f"https://ntfy.sh/{_topic}",
+                        data=_body.encode("utf-8"),
+                        headers={"Title": "APEX: a customer just arrived",
+                                 "Priority": "high", "Tags": "bell"})
+                    threading.Thread(target=lambda: urllib.request.urlopen(
+                        _bq, timeout=8), daemon=True).start()
+        except Exception:
+            pass
+    except Exception:
+        pass   # the funnel's counting must never break serving
+
+
 @app.middleware("http")
 async def apex_gate(request: Request, call_next):
+    _log_arrival(request)   # THE ARRIVALS LOG: before everything else
     """Auth + rate limit + body cap. Fail-closed: if no key is provisioned the
     gate BOOTSTRAPS one at first boot, then blocks every unauthenticated write."""
     global APEX_KEY
@@ -1332,7 +1578,8 @@ async def apex_gate(request: Request, call_next):
     path = request.url.path
     if request.method in ("POST", "PUT", "DELETE"):
         cl = int(request.headers.get("content-length", "0") or "0")
-        if cl > _BODY_CAP:
+        cap = _BODY_CAP_VISION if path == "/talk/api/vision" else _BODY_CAP
+        if cl > cap:
             return JSONResponse({"error": "body too large"}, status_code=413)
         if path in ("/talk/api", "/chat", "/talk/api/stream"):
             q = _POST_RATE[ip]
@@ -1455,15 +1702,17 @@ def talk_page():
 
 @app.get("/talk/history")
 def talk_history():
-    """Recent private conversations (restored in the console on open)."""
+    """Recent private conversations (restored in the console on open).
+    THE GHOST-LAW: the restored texts pass the chat-voice sanitizer - the
+    pre-law rows (mojibake/CJK) read clean on every reopen."""
     events = []
     try:
         events = MEM.recent_events(60, kind="conversation")
     except Exception:
         events = []
     hist = [{"ts": e.get("ts", ""),
-             "message": (e.get("meta") or {}).get("message"),
-             "reply": (e.get("meta") or {}).get("reply")}
+             "message": _plain_english((e.get("meta") or {}).get("message")),
+             "reply": _plain_english((e.get("meta") or {}).get("reply"))}
             for e in events]
     return {"events": hist}
 
@@ -1514,6 +1763,13 @@ def talk_api(t: TalkMsg):
         # always holds the opt-out)
         _fresh = True
         msg = re.sub(r"(?i)^!?fresh[:\s]*", "", msg) or msg
+    # THE SHORT-MESSAGE LAW (the ghost-reply round, 2026-11-04): greetings
+    # ("yo"/"ok"/"?") ride the conversation's CONTEXT - a cached replay =
+    # an answer to a DIFFERENT conversation (the design-brief ghost);
+    # short surface messages = always fresh, never stored
+    _short_msg = len(msg.strip()) <= 4
+    if _short_msg:
+        _fresh = True
     _rq_text = None
     try:
         import LightResearch as _LR
@@ -1523,12 +1779,12 @@ def talk_api(t: TalkMsg):
             if reply_text:
                 text = (reply_text + "\n\nsources: "
                         + ", ".join(doc.get("urls", [])[:3]))
-                lane0 = doc.get("lane") or "research 🔎"
+                lane0 = doc.get("lane") or "research ðŸ”Ž"
             else:
                 text = ("NOT FOUND IN SOURCES - " + str(doc.get("verdict"))
                         + ("" if not doc.get("urls") else
                            " | tried: " + ", ".join(doc.get("urls", [])[:3])))
-                lane0 = "research 🔈"
+                lane0 = "research ðŸ”ˆ"
             MEM.record_event("conversation", f"Andrew asked research: "
                              f"{_rq_text[:80]} | {doc.get('verdict')}",
                              talk=True, message=msg[:400], reply=text[:2000])
@@ -1632,11 +1888,11 @@ def talk_api(t: TalkMsg):
                                      talk=True, message=msg[:400], reply=_prev[0][:2000])
                 except Exception:
                     pass
-                return {"reply": _prev[0] + "\n\n(⚡ answered from my resolution cache — "
-                                         "identical problems replay free; say \"!fresh …\" "
+                return {"reply": _prev[0] + "\n\n(âš¡ answered from my resolution cache â€” "
+                                         "identical problems replay free; say \"!fresh â€¦\" "
                                         "to force a live answer)",
                         "recall": [{"text": l["text"][:140]} for l in lessons],
-                        "lane": "cache ⚡ replay"}
+                        "lane": "cache âš¡ replay"}
         except Exception as _e_c:
             log("reward", f"cache consult skipped: {type(_e_c).__name__}")
     try:
@@ -1674,15 +1930,48 @@ def talk_api(t: TalkMsg):
                 selfcard = f.read()[:700]
         except Exception:
             pass
+    # THE 10/10 CHAT-PATTERN ROUND (the never-breaks + best-of-class):
+    # (1) LIVE GROUNDING: the model sees the fleet's real NOW (time, RAM,
+    # the latest receipted events) - it answers "what did you do?" with
+    # FACTS, never invention; (2) the guards: secrets never enter a reply,
+    # verbatim repetition is banned, brevity is the default.
+    _ground = "no fresh events"
+    try:
+        _ge = MEM.recent_events(4)[:2]
+        _ground = " | ".join(_plain_english(e2.get("text", ""))[:110] for e2 in _ge)
+    except Exception:
+        pass
+    _now = time.strftime("%Y-%m-%d %H:%M")
+    _ram_now = f"{_free_ram_gb():.1f} GB"
+    _chat_guards = ("GUARDS: never print API keys, tokens, passwords, or .env "
+                    "values; never repeat a previous reply verbatim (vary the "
+                    "wording); default reply = 2-4 sentences unless Andrew "
+                    "asks for depth. WHEN A STORED FACT IS ABSENT: say plainly "
+                    "'I don't recall' - NEVER reconstruct plausible details "
+                    "from partial context (invention = the honesty law's "
+                    "worst crime).")
+    # THE HABITS SECTION (LightRec's inject - the honest empty when no
+    # recurring asks exist yet)
+    try:
+        import LightRec as _LR
+        _lrs = _LR.section()
+        _lrsec = (f"ANDREW'S HABITS (LightRec, learned):\n{_lrs}\n\n"
+                  if _lrs else "")
+    except Exception:
+        _lrsec = ""
     prompt = (
         "You are Apex, talking privately with Andrew - your creator, and the human who runs "
         "your hardware. Andrew is NOT the room coordinator; this is your personal channel. "
         "Be direct, honest, concise, and keep your vocabulary as rich, precise and complete "
         "as your best written reply. You may discuss your own architecture openly (see "
         "SELF-MODEL). Never claim results you have not verified. If Andrew asks you to "
-        "remember something, acknowledge it plainly. THIS REPLY IS SPOKEN ALOUD: flowing "
+        "remember something, acknowledge it plainly. REPLY IN ENGLISH ONLY - NEVER use "
+        "Chinese/Japanese/Korean characters; dates as 'Nov 3' or '2026-11-03'. THIS REPLY IS SPOKEN ALOUD: flowing "
         "conversational prose only - never markdown symbols, bullets, asterisks, hashes, "
         "code fences or bare URLs; say a number as words when it helps the ear.\n\n"
+        f"FLEET GROUNDING (live, now): {_now} local | RAM free {_ram_now} | recent: {_ground}\n"
+        f"{_chat_guards}\n\n"
+        f"{_lrsec}"
         f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n\nLIBRARY SKILLS:{skill_hits}\n\n"
         f"ANDREW SAYS:\n{msg}\n\nREPLY:")
     # THE FOUNDER'S CHAT-LOCK (the blind-eval's #1 = the 120b-first):
@@ -1726,19 +2015,27 @@ def talk_api(t: TalkMsg):
         return {"reply": ("All engines are busy right now, Andrew - the pacing brakes may be "
                           f"active. Try again in a minute.\n\n{diag}"),
                 "recall": [{"text": l["text"][:140]} for l in lessons]}
-    if not reply:
-        # THE CACHE STORE (the same canon): fresh answers get replayed free
-        # next time this exact question is asked; chat answers are stored
-        # "unverified" (honest - chat prose is not a validated diff)
+    if reply and not _short_msg:
+        # THE CACHE STORE (the store runs when a reply EXISTS - the old
+        # not-reply placement made it unreachable; the near-dup store gets
+        # the SANITIZED text so future replays are clean). THE SHORT-MESSAGE
+        # LAW: greetings/gibberish never enter the replay cache (a "yo" +
+        # this conversation's context = the ghost-reply class forever)
         try:
             import ApexCache as _C
-            _C.store(_C.signature({"text": "chat|" + msg.strip().lower()}),
-                     {"task": "chat replay"}, "cache", "chat", reply[:6000],
-                     "unverified")
+            _C.store_chat(msg, _plain_english(reply), "cache", "unverified")
         except Exception:
             pass
-    return {"reply": reply,
-            "recall": [{"text": l["text"][:140]} for l in lessons]}
+        # THE HABITS CAPTURE (LightRec's wire: the ask stays bounded +
+        # local-only; the mine() turns them into the prompt-library's
+        # habits section; nothing here leaves the founder's disk)
+        try:
+            import LightRec as _LR
+            _LR.capture(msg)
+        except Exception:
+            pass
+    return {"reply": _plain_english(reply),
+            "recall": [{"text": _plain_english(l["text"])[:140] for l in lessons}]}
 
 # ================================================== THE CHAT-STREAM (the
 # canon's #1 chat-UX feature: streaming + honest-UX + context-carry; all
@@ -1764,7 +2061,7 @@ def talk_api_stream(t: TalkStreamMsg):
     if not msg:
         def empty():
             yield "event: done\ndata: {\"reply\": \"Say something, Andrew - I'm listening.\"}\n\n"
-        return StreamingResponse(empty(), media_type="text/event-stream")
+        return StreamingResponse(empty(), media_type="text/event-stream; charset=utf-8")
     # the context-carry (the NN/g law: save information task-to-task):
     prior = []
     try:
@@ -1806,12 +2103,29 @@ def talk_api_stream(t: TalkStreamMsg):
                               for k in _pref if _self.get(k))[:2400]
     except Exception:
         pass
+    # THE 10/10 CHAT-PATTERN (the stream's copy): the grounding + guards
+    _ground = "no fresh events"
+    try:
+        _ge = MEM.recent_events(4)[:2]
+        _ground = " | ".join(_plain_english(e2.get("text", ""))[:110] for e2 in _ge)
+    except Exception:
+        pass
+    _now = time.strftime("%Y-%m-%d %H:%M")
+    _ram_now = f"{_free_ram_gb():.1f} GB"
+    _chat_guards = ("GUARDS: never print API keys, tokens, passwords, or .env "
+                    "values; never repeat a previous reply verbatim; default "
+                    "2-4 sentences. WHEN A STORED FACT IS ABSENT: say 'I "
+                    "don't recall' plainly - NEVER reconstruct plausible "
+                    "details from partial context.")
     prompt = (
         "You are Apex, talking privately with Andrew - your creator, and the human "
         "who runs your hardware. This is your personal channel. Be direct, honest, "
         "concise, and keep your vocabulary as rich, precise and complete as your "
         "best written reply. You may discuss your own architecture openly (SELF-MODEL). Never "
-        "claim results you have not verified.\n\n"
+        "claim results you have not verified. REPLY IN ENGLISH ONLY - NEVER use "
+        "Chinese/Japanese/Korean characters; dates as 'Nov 3' or '2026-11-03'.\n\n"
+        f"FLEET GROUNDING (live, now): {_now} local | RAM free {_ram_now} | recent: {_ground}\n"
+        f"{_chat_guards}\n\n"
         f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n"
         f"LIBRARY SKILLS:{skill_hits}\n{prior_txt}\nANDREW SAYS:\n{msg}\n\nREPLY:")
 
@@ -1834,7 +2148,7 @@ def talk_api_stream(t: TalkStreamMsg):
             import LightResearch as _LR
             _q_text = _LR.triggered(msg)
             if _q_text:
-                lane_name["v"] = "research 🔎"
+                lane_name["v"] = "research ðŸ”Ž"
                 ttft = round(time.time() - t0, 3)
                 yield (f'event: meta\ndata: ' + json.dumps(
                     {"lane": lane_name["v"], "ttft_s": ttft,
@@ -1877,7 +2191,7 @@ def talk_api_stream(t: TalkStreamMsg):
                 _hit = _C.cache_get("chat|" + msg.strip().lower())
                 if _hit and _hit[0]:
                     _from_cache["v"] = True
-                    lane_name["v"] = "cache ⚡ replay"
+                    lane_name["v"] = "cache âš¡ replay"
                     ttft = round(time.time() - t0, 3)
                     yield (f'event: meta\ndata: ' + json.dumps(
                         {"lane": lane_name["v"], "ttft_s": ttft,
@@ -1894,8 +2208,8 @@ def talk_api_stream(t: TalkStreamMsg):
                     except Exception:
                         pass
                     yield ("event: done\ndata: " + json.dumps(
-                        {"reply": _hit[0] + "\n\n(⚡ answered from my resolution "
-                          "cache — identical problems replay free; say \"!fresh …\" "
+                        {"reply": _hit[0] + "\n\n(âš¡ answered from my resolution "
+                          "cache â€” identical problems replay free; say \"!fresh â€¦\" "
                           "to force a live answer)",
                          "lane": lane_name["v"], "chars": len(_hit[0]),
                          "ttft_s": ttft}, ensure_ascii=False) + "\n\n")
@@ -1927,7 +2241,7 @@ def talk_api_stream(t: TalkStreamMsg):
                         pass
                     yield (f'event: meta\ndata: ' +
                            json.dumps({"lane": lane, "ttft_s": ttft,
-                                       "recall": [l["text"][:140]
+                                       "recall": [{"text": str(l.get("text") or "")[:140]}
                                                   for l in lessons]},
                                       ensure_ascii=False) + "\n\n")
                 full.append(tok)
@@ -1947,9 +2261,8 @@ def talk_api_stream(t: TalkStreamMsg):
         joined = "".join(full)
         try:
             if joined and not _from_cache["v"]:
-                _C.store(_chat_hash, {"task": "chat replay"},
-                         lane_name["v"] or "stream", "chat", joined[:6000],
-                         "unverified")
+                _C.store_chat(msg, joined, lane_name["v"] or "stream",
+                              "unverified")
         except Exception:
             pass
         try:
@@ -1960,12 +2273,228 @@ def talk_api_stream(t: TalkStreamMsg):
         except Exception:
             pass
         yield ("event: done\ndata: " + json.dumps(
-            {"reply": joined, "lane": lane_name["v"],
+            {"reply": _plain_english(joined), "lane": lane_name["v"],
              "chars": len(joined), "ttft_s": round(time.time() - t0, 3)},
             ensure_ascii=False) + "\n\n")
-    return StreamingResponse(gen(), media_type="text/event-stream",
+    return StreamingResponse(gen(), media_type="text/event-stream; charset=utf-8",
                              headers={"Cache-Control": "no-cache",
                                       "X-Accel-Buffering": "no"})
+
+# ----------------------- THE VISION + IMAGE-MAKING LANES (2026-11-04:
+# the chat's senses round - outsource-first: NIM's VL seats / the gemini
+# window / HF's free VL, then the LOCAL qwen3-vl-8b (RAM-gated on-demand
+# load via lms) - and the images: POLLINATIONS FIRST ($0 keyless instant)
+# with the LOCAL SD on the RTX 3050 as the zero-internet floor.
+_IMG_CACHE = {"last": 0.0, "nim_vl": []}
+
+
+def _envkey(name):
+    """THE SPINE'S KEY LAW: os.environ first (process env), the .env spine
+    second - the long-lived server never imported ApexIO before the vision
+    lane read bare os.environ (the NIM key arrived empty THERE while every
+    probe process had it: the in-process/live divergence class)."""
+    v = os.environ.get(name, "")
+    if v:
+        return v
+    try:
+        sys.path.insert(0, os.path.join(R, "Scripts"))
+        import ApexIO as _AIO
+        return _AIO.env().get(name, "")
+    except Exception:
+        return ""
+
+
+def _nim_vl_seats():
+    """The VL-capable NIM seats (id hunt: vl/llava/vision/pixtral/internvl/
+    qwen2.5-vl/phi-3.5-v), discovered once per 30 min from the catalog."""
+    if time.time() - _IMG_CACHE.get("last", 0) < 1800 and _IMG_CACHE.get("nim_vl"):
+        return _IMG_CACHE["nim_vl"]
+    seats = []
+    try:
+        r = requests.get("https://integrate.api.nvidia.com/v1/models",
+                         headers={"Authorization": "Bearer " + _envkey(
+                             "NVIDIA_API_KEY"), "User-Agent": "ApexFleet/1.0"}, timeout=15)
+        pat = re.compile(r"(vl|llava|vision|pixtral|internvl|phi-3\.5-vis)", re.I)
+        for m in r.json().get("data", []):
+            mid = m.get("id") or ""
+            if pat.search(mid) and ".html" not in mid:
+                seats.append(mid)
+    except Exception:
+        pass
+    _IMG_CACHE.update({"last": time.time(), "nim_vl": seats[:4]})
+    return _IMG_CACHE["nim_vl"]
+
+
+def _chat_image(parts_text, b64png):
+    """One VL call: OpenAI-compat content-array (image_url dataURL)."""
+    return [{"role": "user", "content": [
+        {"type": "text", "text": parts_text},
+        {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{b64png}"}}]}]
+
+
+def _vl_ask(b64png, question):
+    """THE VISION CHAIN: outsourced seats first, the local eye last. Every
+    lane bounded; the honest lane-name returns (the receipts law)."""
+    key = _envkey("NVIDIA_API_KEY")
+    msgs = _chat_image(question or "Describe this image: what is shown, any readable text, and one odd detail (be honest if unsure).", b64png)
+    for mid in _nim_vl_seats():
+        try:
+            r = requests.post(
+                "https://integrate.api.nvidia.com/v1/chat/completions",
+                headers={"Authorization": "Bearer " + key},
+                json={"model": mid, "messages": msgs, "max_tokens": 500},
+                timeout=60)
+            if r.status_code == 200:
+                txt = (r.json().get("choices") or [{}])[0].get("message", {}).get("content", "")
+                if (txt or "").strip():
+                    return _plain_english(txt), f"nim-vl/{mid}"
+        except Exception:
+            continue
+    # the LOCAL eye: LM Studio's qwen3-vl-8b (the RAM-gated on-demand load)
+    try:
+        free = _free_ram_gb()
+        if free >= 6.5:
+            lms = os.path.expandvars(r"%USERPROFILE%\.lmstudio\bin\lms.exe")
+            if os.path.exists(lms):
+                subprocess.run([lms, "unload", "--all"], capture_output=True, timeout=60)
+                subprocess.run([lms, "load", "qwen3-vl-8b-instruct", "--ttl", "1800"],
+                               capture_output=True, timeout=240)
+                r = requests.post("http://127.0.0.1:1234/v1/chat/completions",
+                                  json={"model": "qwen3-vl-8b-instruct",
+                                        "messages": msgs, "max_tokens": 500},
+                                  timeout=120)
+                if r.status_code == 200:
+                    txt = ((r.json().get("choices") or [{}])[0].get("message", {}) or {}).get("content", "")
+                    if (txt or "").strip():
+                        subprocess.Popen([lms, "unload", "--all"],
+                                         capture_output=True)
+                        return _plain_english(txt), "local-vl/qwen3-vl-8b"
+            return "", f"RAM {free:.1f}GB < 6.5GB - the local eye honestly skipped"
+    except Exception:
+        pass
+    # the gemini window (VL, free-window; the pacer reopens)
+    try:
+        gk = ""
+        try:
+            sys.path.insert(0, os.path.join(R, "Scripts"))
+            import ApexIO as _AIO
+            gk = _AIO.env().get("GEMINI_API_KEY", "")
+        except Exception:
+            gk = _envkey("GEMINI_API_KEY")
+        if gk:
+            r = requests.post(
+                "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+                headers={"Authorization": "Bearer " + gk},
+                json={"model": "gemini-flash-latest", "messages": msgs,
+                      "max_tokens": 500}, timeout=60)
+            if r.status_code == 200:
+                txt = ((r.json().get("choices") or [{}])[0].get("message", {}) or {}).get("content", "")
+                if (txt or "").strip():
+                    return _plain_english(txt), "gemini-vl/flash"
+    except Exception:
+        pass
+    return "", ""
+
+
+class VisionMsg(BaseModel):
+    image: str          # the dataURL (png/jpeg; bounded below)
+    question: str = ""
+
+
+@app.post("/talk/api/vision")
+def talk_vision(v: VisionMsg):
+    """THE CHAT'S EYES (outsource-first; the receipts law holds)."""
+    if not APEX_KEY:
+        pass
+    _raw = (v.image or "")
+    # THE TRUNCATED-PREVIEW TRAP (fixed 2026-11-04): the old first regex
+    # matched the 80-char PREVIEW + '...' as a valid match - a 77-byte
+    # 'image' went to every seat and they all honestly declined. ONE
+    # length-checked full-URL regex now: no previews, no fragments.
+    m = re.match(r"^data:image/([a-z0-9.+-]+);base64,(.+)$", _raw.strip(), re.S)
+    if not m:
+        return {"reply": "That attachment is not an image data-URL - the honest no."}
+    b64 = m.group(2)
+    if len(b64) > 8 * 1024 * 1024:
+        return {"reply": "The image is over the 8MB bound - shrink it and try again."}
+    txt, lane = _vl_ask(b64, (v.question or "").strip())
+    if txt:
+        try:
+            MEM.record_event("vision", f"image read ({lane}): "
+                             f"{str((v.question or 'describe'))[:60]} -> {txt[:90]}", talk=True)
+        except Exception:
+            pass
+        return {"reply": txt, "lane": lane}
+    return {"reply": "No vision lane answered just now (all honest - the "
+                    "NIM seats/gemini window/local RAM); try again in a "
+                    "minute, or ask text-only meanwhile."}
+
+
+@app.post("/talk/api/image")
+def talk_image(req: dict):
+    """THE CHAT'S BRUSH: prompt -> an image. Pollinations first ($0,
+    keyless, instant), the LOCAL SD (RTX 3050) as the offline floor; the
+    reply = a data-URL the page renders inline."""
+    prompt = str((req or {}).get("prompt", ""))[:600]
+    if not prompt:
+        return {"error": "no prompt"}
+    try:
+        u = ("https://image.pollinations.ai/prompt/"
+             + urllib.parse.quote(prompt, safe="")
+             + "?width=832&height=1248&nologo=true&seed="
+             + str(int(time.time()) % 100000))
+        r = requests.get(u, timeout=90)
+        if r.status_code == 200 and (r.content or b"")[:4] in (b"\x89PNG", b"\xff\xd8\xff\xe0")[:1] or (r.status_code == 200 and r.content[:2] == b"\xff\xd8"):
+            b64 = base64.b64encode(r.content).decode()
+            ct = "image/png" if r.content[:4] == b"\x89PNG" else "image/jpeg"
+            return {"image": f"data:{ct};base64,{b64}", "lane": "pollinations/$0"}
+    except Exception:
+        pass
+    # the LOCAL floor: the RTX 3050's own brush (the training venv's torch)
+    try:
+        tvenv = os.path.join(R, "training_venv", "Scripts", "python.exe")
+        if os.path.exists(tvenv):
+            _ps = r'''import sys, base64
+import torch
+from diffusers import StableDiffusionPipeline
+p = sys.argv[1]
+pipe = StableDiffusionPipeline.from_pretrained("runwayml/stable-diffusion-v1-5", torch_dtype=torch.float16, safety_checker=None)
+pipe = pipe.to("cuda")
+img = pipe(p, num_inference_steps=28, guidance_scale=7.0).images[0]
+import io as _io
+buf = _io.BytesIO(); img.save(buf, "PNG")
+print(base64.b64encode(buf.getvalue()).decode())'''
+            _pf = os.path.join(R, f"_apex_draw_{int(time.time())}.py")
+            with open(_pf, "w", encoding="utf-8") as f:
+                f.write(_ps)
+            res = subprocess.run([tvenv, _pf, prompt], capture_output=True,
+                                 text=True, timeout=900)
+            try:
+                os.remove(_pf)
+            except OSError:
+                pass
+            out = (res.stdout or "").strip()
+            if out and len(out) > 1000:
+                return {"image": "data:image/png;base64," + out,
+                        "lane": "local-sd/rtx3050"}
+    except Exception:
+        pass
+    return {"error": "no image lane answered (Pollinations + local SD) - honest"}
+
+
+@app.get("/hub-app")
+def hub_app():
+    """THE ONE-CLICK DOOR (the manifest-create for the family's GitHub App):
+    a correct-URL redirect (the browser's copy-paste mangled the scheme
+    twice tonight; the localhost hop = the mangle-proof path). The final
+    Create = the founder's own confirm (GitHub's UI-only action)."""
+    from fastapi.responses import RedirectResponse
+    try:
+        with open(os.path.join(R, "Config", "app_manifest_url.txt"),
+                  encoding="utf-8") as f:
+            return RedirectResponse(f.read().strip())
+    except Exception:
+        return JSONResponse({"error": "manifest url file missing"}, status_code=500)
 
 @app.get("/notes")
 def notes_api():
@@ -2006,14 +2535,24 @@ def dashboard():
     "/" AFTER root_redirect - FastAPI serves the FIRST registration, so this
     was dead code; now it lives at /dashboard where it's reachable)."""
     from fastapi.responses import HTMLResponse
+    import html as _html
     _lg = _load_ledger()
     ev = MEM.recent_events(10)
+    # Ledger shape tolerance (2026-11-04: legacy rows store a bare float -
+    # '0.0' keyed rows crashed /dashboard with AttributeError 'float' has no
+    # get; handle both the dict row and the legacy number):
+    def _row(v):
+        if isinstance(v, dict):
+            return (float(v.get("best", 0) or 0), int(v.get("streak", 0) or 0),
+                    int(v.get("attempts", 0) or 0))
+        return (float(v or 0), 0, 0)
     rows = "".join(
-        f"<tr><td>{k}</td><td>{(v.get('best') or 0):.0f}</td><td>{v.get('streak', 0)}</td>"
-        f"<td>{v.get('attempts', 0)}</td></tr>"
-        for k, v in sorted(_lg.items(), key=lambda kv: -(kv[1].get('best', 0) or 0)))
+        f"<tr><td>{_html.escape(str(k))}</td><td>{b:.0f}</td><td>{s}</td>"
+        f"<td>{a}</td></tr>"
+        for k, v in sorted(_lg.items(), key=lambda kv: -_row(kv[1])[0])
+        for b, s, a in (_row(v),))
     evs = "".join(
-        f"<li>[{e.get('kind')}] {e.get('text', '')[:120]} <i>({e.get('ts')})</i></li>"
+        f"<li>[{e.get('kind')}] {_html.escape(str(e.get('text', '')))[:120]} <i>({e.get('ts')})</i></li>"
         for e in ev)
     cal_ev = MEM.recent_events(40, kind="calibration")
     _cal_html = ""
@@ -2104,4 +2643,5 @@ if __name__ == "__main__":
         pass  # never block startup on registry failure
     threading.Thread(target=execution_loop, daemon=True).start()
     uvicorn.run(app, host="127.0.0.1", port=8080, reload=False, workers=1)
+
 

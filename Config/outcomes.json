@@ -1,20 +1,20 @@
 {
- "generated": "2026-11-02 19:02:31",
+ "generated": "2026-11-02 22:19:26",
  "window": "internal windows = trailing 30 days; external = cumulative confirmed",
  "internal": {
-  "drills_30d": 19,
-  "evolution_writes_30d": 888,
-  "chat_turns_30d": 11
+  "drills_30d": 0,
+  "evolution_writes_30d": 971,
+  "chat_turns_30d": 28
  },
  "external": {
   "prs_merged": 0,
   "sales": 0,
-  "funnel_arrivals": 0
+  "funnel_arrivals": 1
  },
  "law": "nothing here is promised or invented; every zero carries its reason",
  "external_notes": {
   "github": "gh:merged",
-  "polar": "polar HTTP 403 - honest zero",
-  "arrivals": "no arrival log yet"
+  "polar": "polar OAT lacks orders:scope (insufficient_scope) - founder re-mints (2 min)",
+  "arrivals": "apex-adapter arrivals log (total lines; last checked 2026-11-02 22:19)"
  }
 }

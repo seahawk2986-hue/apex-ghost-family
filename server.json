@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+  "name": "io.github.seahawk2986-hue/apex-ghost-family",
+  "display_name": "Apex Ghost Family",
+  "description": "Read-only window into an open self-evolving agent family: fleet health, court verdicts, receipts.",
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/seahawk2986-hue/apex-ghost-family/releases/download/mcpb-v1.0.0/server.mcpb",
+      "version": "1.0.0",
+      "fileSha256": "52f7f2138fadf004cef674cf3c0eed92cb29d26658d0e811451cf980b9d71911",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "publisher": {
+    "name": "seahawk2986-hue",
+    "url": "https://github.com/seahawk2986-hue"
+  },
+  "repository": {
+    "url": "https://github.com/seahawk2986-hue/apex-ghost-family",
+    "source": "github"
+  },
+  "homepage": "https://seahawk2986-hue.github.io/apex-ghost-family/"
+}
