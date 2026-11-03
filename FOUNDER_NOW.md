@@ -36,11 +36,10 @@
 - The 3 buy-links on the landing = all `buy.polar.sh` (the production checkout-domain; the sandbox-would-be = `sandbox.polar.sh`): **3 live / 0 sandbox** (`Scripts\_store_mode.py`, receipt 2026-11-01).
 - The Overview's $0s = zero SALES (the honest ledger), not zero readiness. The store accepts real money NOW.
 - The founder's dashboard = nothing to do here. First sale → the Visa ****8902 payout (instant-eligible).
+- THE SALES-PROBE RECEIPT (2026-11-04, live): the POLAR_OAT AUTHENTICATES but lacks the orders-scope ("insufficient_scope", printed by the API) - ONE founder re-mint: dashboard.polar.sh -> your org -> Access tokens -> new OAT with orders:read + products:read -> .env POLAR_OAT. Then the yardstick counts sales truth automatically.
 
-## 2b. The demo-repo's create (10 sec)
-- https://github.com/new - name: `open-triage-demo`, description: "The FREE triage tier", **Public**, ✔ "Add a README file" → green **Create repository**.
-- The machine's DemoDesk = watches + serves it (the token's create-scope = refused honestly; the manual-create = the same result).
-- Verify anytime: `python Scripts\_founder_gates.py` (the 2-gates + og-live checker).
+## 2b. The demo-repo's create (10 sec) — ✅ DONE 2026-11-04 (the founder GAVE the machine permission; the classic token's scope = public_repo, verified): https://github.com/seahawk2986-hue/open-triage-demo (public, issues on, the honest free-tier README live). The machine's DemoDesk = watches + serves it. Verify anytime: `python Scripts\_founder_gates.py` (the 2-gates + og-live checker).
+- THE ARRIVALS LOG = LIVE (2026-11-04): the funnel counts its visitors on the exact log the yardstick reads (Apex-Adapter/Logs/funnel_arrivals.log; hashed-IP, no PII, bounded 10MB) - the yardstick's arrivals row = REAL now.
 
 ## 3. The 4 paste-ready posts (60 sec each — any/all)
 - `C:\Users\seaha\Apex-Adapter\marketing_kit\` — SHOW_HN / REDDIT / X / LINKEDIN.

@@ -139,6 +139,13 @@ def _polar_sales():
                 total = sum(1 for _ in rows)
                 return {"sales": total,
                         "note": f"polar:{base.split('//')[1].split('.')[0]} (orders rows)"}
+            if r.status_code == 403 and "insufficient_scope" in r.text:
+                # THE SCOPED-OAT RECEIPT (2026-11-04, the live probe): the
+                # token AUTHENTICATES but lacks orders:read - the truth is
+                # one founder-side re-mint away (dashboard.polar.sh -> new
+                # OAT with orders:read + products:read -> .env POLAR_OAT)
+                return {"sales": 0,
+                        "note": "polar OAT lacks orders:scope (insufficient_scope) - founder re-mints (2 min)"}
             return {"sales": 0, "note": f"polar HTTP {r.status_code} - honest zero"}
         except Exception as e:
             return {"sales": 0, "note": f"polar failed: {type(e).__name__} - honest zero"}
