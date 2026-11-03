@@ -1,0 +1,33 @@
+# THE FREE TIER'S SERVANT - outsourced entirely to GitHub's machines ($0):
+# DemoDesk watches the demo repo's claims hourly (+ on every new issue) and
+# serves the triage - the runner's OWN token does the writing (no secrets).
+# The local box sleeps; the free tier serves itself forever.
+name: demo-desk
+
+permissions:
+  issues: write
+  contents: read
+
+on:
+  schedule:
+    - cron: "23 * * * *"        # hourly, at :23 (the beat's politeness)
+  workflow_dispatch: {}
+  issues:
+    types: [opened]
+
+jobs:
+  serve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: The free-tier beat (on the runner = off-box by design)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CLOUD_ALLOWED: "1"
+        run: python Scripts/DemoDesk.py
