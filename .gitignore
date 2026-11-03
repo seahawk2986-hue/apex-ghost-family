@@ -8,3 +8,5 @@ Backup_Archive/
 speculative_test_*
 *.tmp
 *.pyc
+Lib/
+Config/apex_api.key
