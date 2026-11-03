@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 20:00:02",
- "count": 436,
+ "ts": "2026-11-02 20:15:02",
+ "count": 435,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -25,13 +25,6 @@
   },
   {
    "repo": "Socioboard-developers/Socioboard-5.0",
-   "score": 84.7,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "cfs-tools/cfs-basecamp",
    "score": 84.7,
    "tier": "VEIN",
    "stars": 0,
