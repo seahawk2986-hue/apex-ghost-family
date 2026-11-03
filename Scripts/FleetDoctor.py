@@ -288,12 +288,31 @@ def c_book():
         return check("model-book", False, f"book audit failed: {type(e).__name__}: {str(e)[:90]}")
 
 
+# -------------------------------------------------------- 13 abstraction
+def c_abstract():
+    """T2/T4's RECEIPT (the final round): the math + the ARC-class
+    abstraction drills + the self-reasoning counterfactuals = the tiered
+    accuracy - the previously UNMEASURED intelligence tiers = measured."""
+    try:
+        st = json.load(open(os.path.join(ROOT, "Config", "abstract_state.json"),
+                            encoding="utf-8-sig"))
+        tiers = st.get("tiers", {})
+        accs = []
+        for t0, s0 in tiers.items():
+            if s0.get("n", 0) >= 1:
+                accs.append(f"{t0}: {s0.get('hits', 0)}/{s0.get('n', 0)}")
+        return check("abstract-tiers", len(accs) >= 2,
+                     " | ".join(accs[:5]) + " (the sympy/ARC-truth = deterministic)")
+    except Exception as e:
+        return check("abstract-tiers", False, f"the abstract receipt unreadable: {e}")
+
+
 def main():
     print("=========================================================")
     print("  THE FLEET DOCTOR - unified self-test (one pass, $0)")
     print("=========================================================")
     for fn in (c_ports, c_docker, c_lanes, c_brain, c_memory, c_mcp,
-               c_swe, c_horizon, c_court, c_webuse, c_capacity, c_book):
+               c_swe, c_horizon, c_court, c_webuse, c_capacity, c_book, c_abstract):
         try:
             fn()
         except Exception as e:
