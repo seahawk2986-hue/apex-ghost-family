@@ -105,6 +105,37 @@ def _cerebras(prompt, max_tokens, timeout):
     raise _LaneFailure(f"cerebras HTTP {r.status_code}")
 
 
+def _nim(prompt, max_tokens, timeout):
+    """THE TITAN LANE (the strength-max round, live-verified 2026-11-04):
+    the NVIDIA trial door's big seats - nemotron-3-ultra-550b (0.9s probe
+    = the 550B MoE ceiling) with kimi-k2.6 fallback; free trial, 60 RPM,
+    no card. The reasoning channels are normalized here (content-empty +
+    reasoning present = the reasoning becomes the answer - the same law
+    CloudBrain's sanitizer enforces)."""
+    k = os.getenv("NVIDIA_API_KEY")
+    if not k:
+        raise _LaneFailure("no NVIDIA_API_KEY")
+    for model in ("nvidia/nemotron-3-ultra-550b-a55b", "moonshotai/kimi-k2.6"):
+        r = requests.post(
+            "https://integrate.api.nvidia.com/v1/chat/completions",
+            headers={"Authorization": f"Bearer {k}",
+                     "Accept": "application/json"},
+            json={"model": model,
+                  "messages": [{"role": "user", "content": prompt}],
+                  "max_tokens": max(max_tokens, 512)},
+            timeout=timeout)
+        if r.status_code == 200:
+            m0 = (r.json().get("choices") or [{}])[0].get("message", {}) or {}
+            txt = m0.get("content") or ""
+            if not txt.strip():
+                txt = (m0.get("reasoning_content") or
+                       (m0.get("provider_specific_fields") or {}).get("reasoning") or "")
+            if txt.strip():
+                return txt
+            continue   # another titan's turn (honest hand-off)
+    raise _LaneFailure(f"nim: no titan answered (HTTP {r.status_code})")
+
+
 def _hf(prompt, max_tokens, timeout):
     k = os.getenv("HF_TOKEN") or os.getenv("HUGGINGFACE_API_KEY")
     if not k:
@@ -143,6 +174,7 @@ def _github(prompt, max_tokens, timeout):
 LANES = [
     ("groq", _groq, 25),
     ("cerebras", _cerebras, 25),
+    ("nim", _nim, 4000),
     ("openrouter", _openrouter, 120),
     ("hf", _hf, 120),
     ("github-models", _github, 90),
@@ -181,7 +213,15 @@ def _adaptive_order(lane_list):
 
 
 def ask(prompt, max_tokens=400, verbose=True):
-    """Try each cloud lane fastest-first. Return text or '' if all fail."""
+    """Try each cloud lane fastest-first. Return text or '' if all fail.
+    THE TOKEN ECONOMY: the organ prompts here (the critic's, the votes')
+    re-carry history every cycle - compressed at the entry (the same 3000
+    char conservative rule as CloudBrain's; the fleet pays each token once)."""
+    try:
+        import PromptCompressor as _PC
+        prompt = _PC.compress(prompt)
+    except Exception:
+        pass
     for name, fn, budget in _adaptive_order(LANES):
         try:
             t0 = time.time()

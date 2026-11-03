@@ -7,6 +7,7 @@ validated THEN stored. The DB = the working directory, $0 forever.
 import hashlib
 import json
 import os
+import re
 import sqlite3
 import time
 
@@ -34,18 +35,56 @@ def _conn():
     return c
 
 
+def _norm_text(t):
+    """THE NEAR-DUP TIER (the token-block round, 2026-11-04): one signature
+    must catch question-variants, not just byte-identical asks - 'what is
+    X?' and 'What is X' replay off the disk ($0) instead of spending a
+    capped lane's daily tokens. Conservative: case/punct/whitespace only."""
+    t = (t or "").lower()
+    t = re.sub(r"[^\w\s]", " ", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    return t
+
+
+def _chat_sig(msg):
+    """THE CANONICAL VARIANT KEY: every chat-replay lookup and every write
+    lands on THIS one point (the '|' separator survives normalization)."""
+    return signature({"text": "chat|" + _norm_text(msg)})
+
+
+def store_chat(msg, reply, lane_name, verify_state="unverified"):
+    """THE CHAT REPLAY STORE (both routes call this single point): writes
+    the answer under the canonical variant key - so later variants replay
+    off the disk instead of spending a capped lane's daily tokens. $0,
+    bounded 6000 chars."""
+    store(_chat_sig(msg), {"task": "chat replay"}, lane_name or "chat", "chat",
+          (reply or "")[:6000], verify_state)
+    return _chat_sig(msg)
+
+
 def signature(payload):
-    """sha256 of the sanitized, order-stable problem signature."""
+    """sha256 of the sanitized, order-stable problem signature (near-dup
+    normalized since the token-block round)."""
     norm = json.dumps(payload, sort_keys=True, ensure_ascii=False)
     return hashlib.sha256(norm.encode("utf-8")).hexdigest()
 
 
 def cache_get(text):
-    """The exact-hash replay path (11/02: restored - cache_lookup_any needs it)."""
+    """The replay path: exact hash first, then the NEAR-DUP tier - chat
+    lookups land on the canonical variant key (one shared point with
+    store_chat)."""
     h = signature({"text": text})
     row = lookup(h)
     if row and row[2]:
         return row[2], h
+    if text.startswith("chat|"):
+        hn = _chat_sig(text[5:])
+    else:
+        hn = signature({"text": _norm_text(text)})
+    if hn != h:
+        rown = lookup(hn)
+        if rown and rown[2]:
+            return rown[2], hn
     return None, h
 
 

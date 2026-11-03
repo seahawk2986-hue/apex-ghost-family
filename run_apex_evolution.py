@@ -110,29 +110,35 @@ def log(lyr, msg):
         pass  # logging must never crash the loop
 
 def query_ds(p, max_tokens=800, timeout_s=90):
-    """The planner call - brain-aligned and bounded: one local attempt into
-    brain_ready()'s LIVE model, then a bounded cloud burst. (The old ladder
-    waited up to 300 s on a model that was not even loaded.)"""
-    url, model, kind = brain_ready()
-    if not url:
-        return ""
-    try:
-        r = requests.post(url, json={"model": model,
-                                     "messages": [{"role": "user", "content": p}],
-                                     "temperature": 0.1, "stream": False,
-                                     "max_tokens": max_tokens}, timeout=timeout_s)
-        if r.status_code == 200:
-            txt = (((r.json().get("choices") or [{}])[0].get("message", {}) or {})
-                   .get("content", "")) or ""
-            return _strip_think(txt)
-        log("system", f"planner brain HTTP {r.status_code} - bursting to cloud lanes")
-    except Exception as e:
-        log("system", f"planner brain drop: {str(e)[:90]} - bursting to cloud lanes")
+    """The planner call - STRENGTH-FIRST routing (the A+ round): the
+    planner is the fleet's brain; serving it from the resident 3.8B while
+    a free 120b sits idle on two providers was the mis-routing class.
+    Order: the strongest FREE cloud lanes (cerebras/groq 120b, ~0.5s TTFT
+    measured) FIRST, the local resident as the offline fallback (the
+    honest autonomy floor, num_ctx-protected)."""
     if cloud_ask:
         try:
             return cloud_ask(p, max_tokens=700) or ""
         except Exception:
-            return ""
+            pass
+    url, model, kind = brain_ready()
+    if not url:
+        return ""
+    try:
+        _ds_payload = {"model": model,
+                       "messages": [{"role": "user", "content": p}],
+                       "temperature": 0.1, "stream": False,
+                       "max_tokens": max_tokens}
+        if kind == "ollama":
+            _ds_payload["options"] = {"num_ctx": 8192}   # same ctx law as query_qw
+        r = requests.post(url, json=_ds_payload, timeout=timeout_s)
+        if r.status_code == 200:
+            txt = (((r.json().get("choices") or [{}])[0].get("message", {}) or {})
+                   .get("content", "")) or ""
+            return _strip_think(txt)
+        log("system", f"planner cloud failed -> brain HTTP {r.status_code} (honest local fallback)")
+    except Exception as e:
+        log("system", f"planner lanes unreachable -> {str(e)[:90]} (honest local fallback)")
     return ""
 
 # Identity anchor for every model call in the chat brain.
@@ -152,7 +158,11 @@ SYSTEM_IDENTITY = (
 
 LAST_BRAIN_REASON = "ok (no failed calls this session)"
 
-def query_qw(p, schema=False):
+def query_qw(p, schema=False, max_tokens=None):
+    """max_tokens: the ladder override. Full-file code drafts need 2500+
+    tokens - the ApexPacing dead-loop: the 500/800 default ladder cut every
+    full-file rewrite mid-generation, and the truncated garbage kept losing
+    the write gate forever. None = the chat-default 500/800 ladder."""
     global LAST_BRAIN_REASON
     url, model, kind = brain_ready()
     if not url:
@@ -161,6 +171,12 @@ def query_qw(p, schema=False):
         return ""
     payload = {"model": model, "messages": [{"role": "system", "content": SYSTEM_IDENTITY}, {"role": "user", "content": p}], "temperature": 0.2, "stream": False}
     if schema: payload["response_format"] = {"type": "json_object"}
+    if kind == "ollama":
+        # Ollama's silent default ctx=4096: input + the 3000-token code ladder
+        # cannot both fit, and the OUTPUT gets cut (the truncated-candidate
+        # class). Give the honest ladder room (a bounded KV-cache bump, still
+        # RAM-gated elsewhere).
+        payload["options"] = {"num_ctx": 8192}
 
     def _call(mt):
         payload["max_tokens"] = mt
@@ -168,7 +184,12 @@ def query_qw(p, schema=False):
         try:
             r = requests.post(url, json=payload, timeout=45.0)
             if r.status_code == 200:
-                c = ((r.json().get("choices") or [{}])[0].get("message", {}) or {}).get("content", "") or ""
+                _ch0 = (r.json().get("choices") or [{}])[0]
+                c = ((_ch0.get("message") or {}) or {}).get("content", "") or ""
+                if (_ch0.get("finish_reason") or "") == "length":
+                    # truncation is NOT success: a cut code draft is garbage
+                    return (f"truncated at max_tokens={mt} (finish_reason=length) "
+                            f"after {time.time() - t0:.0f}s", "")
                 LAST_BRAIN_REASON = f"{kind}/{model} ok in {time.time() - t0:.0f}s (max_tokens={mt})"
                 return "ok", _strip_think(c)
             return f"brain HTTP {r.status_code}", ""
@@ -177,8 +198,10 @@ def query_qw(p, schema=False):
 
     # TWO attempts, bounded (~95 s worst case) - the old 4x300s ladder was
     # the lag itself; a slow first call now yields ONE honest retry.
+    _ladder = ((500, 0.0), (800, 2.0)) if max_tokens is None else \
+              ((max_tokens, 0.0), (int(max_tokens * 1.5), 2.0))
     reasons, text = [], ""
-    for mt, wait_s in ((500, 0.0), (800, 2.0)):
+    for mt, wait_s in _ladder:
         if wait_s:
             time.sleep(wait_s)
         reason, text = _call(mt)
@@ -197,6 +220,63 @@ def query_qw(p, schema=False):
             return cr
         LAST_BRAIN_REASON += " -> cloud lanes also returned empty/bounded"
     return ""
+
+def _free_ram_gb():
+    try:
+        import psutil as _ps
+        return _ps.virtual_memory().available / (1024 ** 3)
+    except Exception:
+        return 99.0
+
+
+CODER_RESIDENT = "qwen2.5-coder:7b-instruct"
+CHAT_FLOOR = "phi4-mini"
+_swap_lock = threading.Lock()
+
+
+def ensure_coder_resident():
+    """THE SINGLE-SLOT RAM-GATED AUTO-SWAP (the A+ routing round): ollama
+    holds ONE model at a time; the chat floor (phi4-mini) usually occupies
+    the slot - so every CODER call ran on a weak coder. Code-work paths
+    call this first: if the host has >= 3.5 GB free (the family RAM law,
+    with an honest margin), the slot swaps to the real coder, the call
+    runs, and the floor returns afterwards via restore_chat_floor()."""
+    with _swap_lock:
+        try:
+            r = requests.get("http://127.0.0.1:11434/api/ps", timeout=4)
+            residents = (r.json().get("models") or [])
+            if residents and (residents[0].get("name") or "").startswith(CODER_RESIDENT.split(":")[0]):
+                return residents[0].get("name")   # already the coder seat
+        except Exception:
+            return None
+        if _free_ram_gb() < 3.5:
+            log("system", f"RAM {_free_ram_gb():.1f}GB < 3.5GB - honest no-swap: "
+                          "the repair serves from whoever is resident")
+            return None
+        try:
+            _t = time.time()
+            requests.post("http://127.0.0.1:11434/api/generate",
+                          json={"model": CODER_RESIDENT, "keep_alive": "2h",
+                                "prompt": "", "stream": False}, timeout=120)
+            log("system", f"auto-swap: the coder ({CODER_RESIDENT}) took the "
+                          f"slot in {time.time() - _t:.0f}s (RAM {_free_ram_gb():.1f}GB free)")
+            return CODER_RESIDENT
+        except Exception as e:
+            log("system", f"auto-swap refused honestly: {str(e)[:80]}")
+            return None
+
+
+def restore_chat_floor():
+    """Return the slot to the chat floor (weak coder back to idle = the RAM
+    returned to the chat lane + the host)."""
+    try:
+        requests.post("http://127.0.0.1:11434/api/generate",
+                      json={"model": CHAT_FLOOR, "keep_alive": "2h",
+                            "prompt": "", "stream": False}, timeout=120)
+        brain_ready(refresh=True)
+    except Exception:
+        pass
+
 
 def _apply_patches(cur_full, patch_out):
     """Apply Aider-style SEARCH/REPLACE blocks (minimal-diff editing).
@@ -217,13 +297,41 @@ def _apply_patches(cur_full, patch_out):
     return text if applied else None
 
 def ext_code(o, ex):
+    """Extract code from an LLM reply - truncation-hardened (the ApexPacing
+    dead-loop fix): generations cut at max_tokens lose their CLOSING fence,
+    the old single-match regex found nothing, and the RAW reply (fences,
+    prose, cut docstring fragments) was written into the candidate file.
+    Now: every fenced segment is split out (an unclosed trailing fence
+    still yields a segment) and the best one is chosen - ast-parsability
+    wins for .py, code-likeness breaks ties."""
     if not o: return ""
-    m = re.search(r"```powershell\s*(.*?)\s*```" if ex == ".ps1" else r"```python\s*(.*?)\s*```", o, re.DOTALL | re.IGNORECASE)
-    if m: return m.group(1).strip()
-    gm = re.search(r"```\s*(.*?)\s*```", o, re.DOTALL)
-    return gm.group(1).strip() if gm else o.strip()
+    _parts = re.split(r"```(?:[a-zA-Z0-9_+#.-]*)\n?", o)
+    _cands = [p.strip() for p in _parts[1::2] if p and p.strip()]
+    if not _cands:
+        return o.strip()          # no fences at all: the old raw behavior
+    def _rank(c):
+        r = min(len(c) // 200, 10)            # longer segments slightly favored
+        if ex == ".ps1":
+            r += 10 if ("$" in c or "param(" in c or "Write-" in c) else 0
+        else:
+            try:
+                ast.parse(c, mode="exec"); r += 100   # parses = almost surely code
+            except Exception:
+                pass
+            if c.lstrip().startswith(("import ", "from ", "def ", "class ", "@", '"""')): r += 5
+        return r
+    return max(_cands, key=_rank)
 
 LEDGER = os.path.join(R, "Config", "RewardLedger.json")
+
+# THE INTEGRATION-SPINE LAW (2026-11-04): the evolver EVOLVES MODULES,
+# never its own integration surfaces - receipts_page.py is the designed
+# public trust-page (the silent re-issues of it kept dropping the organs'
+# hooks; the family's receipts page = a CONTRACT, not a research target).
+# 2026-11-04: moved to MODULE level (it was dead-defined inside heal() after
+# its final return, which NameError'd every plan() call that used it).
+CORE_MODULES = {"run_apex_evolution.py", "optimized_agent.py", "apex_ipce_engine.py", "apexmemory.py", "apexwebscraper.py", "apexnetscraper.py",
+                "receipts_page.py"}
 
 def _shell_destructive(node):
     """True if a Call node's string constants form a destructive shell command."""
@@ -556,6 +664,7 @@ def _container_run_tests(fn, code, tests_code):
 
 def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None, skill_used=None):
     ex = os.path.splitext(fn)[1].strip().lower()
+    ensure_coder_resident()   # the coder seat for the repair ladder (RAM-gated)
     # Predecessor behavior baseline (computed ONCE - the live file is the
     # predecessor until a candidate actually passes the write gate).
     try:
@@ -681,6 +790,7 @@ def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None, skill
             except Exception:
                 pass
             _bump_ledger(fn, {k: m.get(k, 0) for k in ("syntax", "safety", "runtime", "output")}, scr, True)
+            restore_chat_floor()   # the coder's RAM returns to the room
             return True
         log("evolution", "Threshold unmet. Patching with Qwen coder...")
         fence = "powershell" if ex == ".ps1" else "python"
@@ -688,20 +798,25 @@ def heal(fn, intent, code, minimal=False, predicted=None, tests_code=None, skill
             f"You are Apex's code repair unit. Your patch for {fn} crashed.\nIntent: {intent}\n"
             f"[BAD CODE]:\n{code}\n[ERROR]:\n{res['error']}\n"
             f"Fix the bugs completely. Keep the working parts intact. "
-            f"Output ONLY the full corrected file in a single ```{fence} fenced block."), ex)
+            f"Output ONLY the full corrected file in a single ```{fence} fenced block.",
+            max_tokens=3000), ex)
+        if ex == ".py":
+            # THE REPAIR SYNTAX GATE (the ApexPacing dead-loop fix): an
+            # unparseable repair is abandoned immediately - the remaining
+            # passes are not wasted on the same truncation class again.
+            try:
+                ast.parse(code, filename=fn)
+            except SyntaxError as _se:
+                log("evolution", f"Repair candidate unparseable (line {_se.lineno}: "
+                                 f"{str(_se.msg)[:70]}) - abandoning this repair ladder")
+                break
     _bump_ledger(fn, None, None, False)
+    restore_chat_floor()
     _set_strategy("switch to a different file; use smaller surgical changes; verify behavior parity against the ledger best")
     try:
         MEM.remember(f"Failure lesson: {fn} rejected after 3 repair passes. Last error: {str((res or {}).get('error') or (res or {}).get('output') or 'unknown')[:160]}. Next time: smaller, surgical change.", kind="lesson")
     except Exception: pass
     return False
-
-    # THE INTEGRATION-SPINE LAW (2026-11-04): the evolver EVOLVES MODULES,
-    # never its own integration surfaces - receipts_page.py is the designed
-    # public trust-page (the silent re-issues of it kept dropping the organs'
-    # hooks; the family's receipts page = a CONTRACT, not a research target).
-    CORE_MODULES = {"run_apex_evolution.py", "optimized_agent.py", "apex_ipce_engine.py", "apexmemory.py", "apexwebscraper.py", "apexnetscraper.py",
-                    "receipts_page.py"}
 
 def plan():
     log("planner", "Evaluating workspace...")
@@ -1100,7 +1215,6 @@ def plan():
     try:
         with open(os.path.join(R, tf), "r", encoding="utf-8") as f: cur_full = f.read()
     except Exception: return False
-    except Exception: return False
     fence = "powershell" if tf.lower().endswith(".ps1") else "python"
     ex = os.path.splitext(tf)[1].strip().lower()
 
@@ -1144,7 +1258,7 @@ def plan():
         "Output ONLY one or more edit blocks in exactly this format (no fences, no commentary):\n"
         "<<<<<<< SEARCH\n<exact lines to find in the file>\n=======\n<replacement lines>\n>>>>>>> REPLACE\n"
         "Each SEARCH must appear in the current file exactly once. Keep edits as small as possible while "
-        "fully implementing the change. Never alter unrelated behavior.")
+        "fully implementing the change. Never alter unrelated behavior.", max_tokens=1500)
     if patch_out:
         code = _apply_patches(cur_full, patch_out)
         if code is not None:
@@ -1161,13 +1275,47 @@ def plan():
             + f"[CURRENT FILE CONTENT]:\n{cur_full[:6000]}\n\n"
             f"Rewrite the complete file with the change applied. Keep the valid, working, non-destructive parts of the "
             f"existing structure intact; only make the requested improvement. Output ONLY the full file content "
-            f"in a single ```{fence} fenced block. No commentary.")
+            f"in a single ```{fence} fenced block. No commentary.", max_tokens=3000)
         code = ext_code(code_out, ex)
     if not code or len(code) < 30:
         log("planner", "Coder produced no usable code. Plan discarded.")
         try: MEM.record_event("error", f"Coder failed on {tf}: empty/blocked output")
         except Exception: pass
         return False
+
+    # THE SYNTAX GATE (the ApexPacing dead-loop fix, 2026-11-04: a candidate
+    # that cannot even parse burned a full sandbox + TDD cycle and poisoned
+    # the lesson memory with 55+ identical failure lessons). One honest
+    # repair attempt; still unparseable = the plan is discarded.
+    if ex == ".py":
+        try:
+            ast.parse(code, filename=tf)
+        except SyntaxError as _se:
+            log("planner", f"Candidate failed pre-parse (line {_se.lineno}: "
+                           f"{(str(_se.msg) if _se.msg else 'unknown')[:80]}) - one bounded repair attempt")
+            _rep = query_qw(
+                "Your previous draft was not valid Python. Fix it completely.\n"
+                f"Syntax error: line {_se.lineno}: {_se.msg}\n"
+                f"Intent: {intent}\n[DRAFT]:\n{code[:4000]}\n\n"
+                "Output ONLY the full corrected file in a single ```python fenced block.",
+                max_tokens=3000)
+            _reparsed = ext_code(_rep or "", ".py")
+            _ok_rep = False
+            try:
+                ast.parse(_reparsed, filename=tf)
+                _ok_rep = True
+            except Exception:
+                _ok_rep = False
+            if _ok_rep and _reparsed:
+                code = _reparsed
+                log("planner", "Pre-parse repair succeeded - candidate now parses")
+            else:
+                log("planner", "Pre-parse repair FAILED - plan discarded (no garbage reaches the queue)")
+                try:
+                    MEM.record_event("error", f"{tf} candidate unparseable after repair; plan discarded",
+                                     file=tf)
+                except Exception: pass
+                return False
 
     # Critic pass (constitutional self-refinement): a second model reviews the
     # candidate for hidden hazards BEFORE the sandbox - cheaper than failing.
@@ -1240,7 +1388,7 @@ def plan():
                 "Write the complete replacement for this file implementing the same change.\n"
                 f"Target file: {tf}\nIntent: {intent}\nChange brief: {brief}\n"
                 f"{_guard_line}\n\nCURRENT FILE:\n{cur_full[:4000]}\n\n"
-                f"Output ONLY the full file in a single ```{fence} fenced block.", max_tokens=1400)
+                f"Output ONLY the full file in a single ```{fence} fenced block.", max_tokens=3000)
             _alt = ext_code(_alt_raw or "", os.path.splitext(tf)[1].strip().lower())
             if _alt and len(_alt) > 30 and _alt.strip() != code.strip():
                 _resA = sandbox(tf, code)
@@ -1278,7 +1426,8 @@ def plan():
                     "The candidate FAILED its specification tests. Fix it to pass ALL of them. "
                     f"Change nothing unrelated.\n[TEST FAILURES]:\n{_tdd_out[:1500]}\n\n"
                     f"[CURRENT CANDIDATE]:\n{code[:4000]}\n\n"
-                    "Output ONLY the full corrected file in a single ```python fenced block.")
+                    "Output ONLY the full corrected file in a single ```python fenced block.",
+                    max_tokens=2500)
                 _fixed = ext_code(_fix or "", ".py")
                 if _fixed and len(_fixed) > 30:
                     _resF = sandbox(tf, _fixed)
@@ -1732,9 +1881,9 @@ def talk_api(t: TalkMsg):
         # "unverified" (honest - chat prose is not a validated diff)
         try:
             import ApexCache as _C
-            _C.store(_C.signature({"text": "chat|" + msg.strip().lower()}),
-                     {"task": "chat replay"}, "cache", "chat", reply[:6000],
-                     "unverified")
+            # THE NEAR-DUP STORE: exact + normalized signatures (variants
+            # replay $0 - the capped-lane defense, the token-block round)
+            _C.store_chat(msg, reply, "cache", "unverified")
         except Exception:
             pass
     return {"reply": reply,
@@ -1947,9 +2096,8 @@ def talk_api_stream(t: TalkStreamMsg):
         joined = "".join(full)
         try:
             if joined and not _from_cache["v"]:
-                _C.store(_chat_hash, {"task": "chat replay"},
-                         lane_name["v"] or "stream", "chat", joined[:6000],
-                         "unverified")
+                _C.store_chat(msg, joined, lane_name["v"] or "stream",
+                              "unverified")
         except Exception:
             pass
         try:
@@ -2006,14 +2154,24 @@ def dashboard():
     "/" AFTER root_redirect - FastAPI serves the FIRST registration, so this
     was dead code; now it lives at /dashboard where it's reachable)."""
     from fastapi.responses import HTMLResponse
+    import html as _html
     _lg = _load_ledger()
     ev = MEM.recent_events(10)
+    # Ledger shape tolerance (2026-11-04: legacy rows store a bare float -
+    # '0.0' keyed rows crashed /dashboard with AttributeError 'float' has no
+    # get; handle both the dict row and the legacy number):
+    def _row(v):
+        if isinstance(v, dict):
+            return (float(v.get("best", 0) or 0), int(v.get("streak", 0) or 0),
+                    int(v.get("attempts", 0) or 0))
+        return (float(v or 0), 0, 0)
     rows = "".join(
-        f"<tr><td>{k}</td><td>{(v.get('best') or 0):.0f}</td><td>{v.get('streak', 0)}</td>"
-        f"<td>{v.get('attempts', 0)}</td></tr>"
-        for k, v in sorted(_lg.items(), key=lambda kv: -(kv[1].get('best', 0) or 0)))
+        f"<tr><td>{_html.escape(str(k))}</td><td>{b:.0f}</td><td>{s}</td>"
+        f"<td>{a}</td></tr>"
+        for k, v in sorted(_lg.items(), key=lambda kv: -_row(kv[1])[0])
+        for b, s, a in (_row(v),))
     evs = "".join(
-        f"<li>[{e.get('kind')}] {e.get('text', '')[:120]} <i>({e.get('ts')})</i></li>"
+        f"<li>[{e.get('kind')}] {_html.escape(str(e.get('text', '')))[:120]} <i>({e.get('ts')})</i></li>"
         for e in ev)
     cal_ev = MEM.recent_events(40, kind="calibration")
     _cal_html = ""
