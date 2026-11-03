@@ -1460,8 +1460,43 @@ def plan():
 app = FastAPI()
 
 
+# ------------------------------- THE ARRIVALS LOG (the funnel's truth)
+_ARRIVALS = r"C:\Users\seaha\Apex-Adapter\Logs\funnel_arrivals.log"
+_PATHS_OF_RECORD = ("/", "/jobs", "/receipts", "/dashboard", "/talk", "/open-triage-demo")
+_arr_lock = threading.Lock()
+
+
+def _log_arrival(request):
+    """THE FUNNEL COUNTS ITS VISITORS (the outcome round): one bounded
+    line per arrival on the exact log OutcomeYardstick._funnel_arrivals
+    reads (Apex-Adapter/Logs/funnel_arrivals.log) - no PII: the coarse
+    path + the hashed IP (not the address) + the UA's first token."""
+    try:
+        if request.url.path not in _PATHS_OF_RECORD:
+            return
+        import hashlib as _h
+        ip = (request.client.host if request.client else "local") or "local"
+        ipp = _h.sha256(str(ip).encode()).hexdigest()[:12]
+        ua = (request.headers.get("user-agent", "") or "").split("/")[0][:40]
+        row = f"{time.strftime('%Y-%m-%d %H:%M:%S')}\tpath={request.url.path}\tip=sha:{ipp}\tua={ua}\n"
+        with _arr_lock:
+            os.makedirs(os.path.dirname(_ARRIVALS), exist_ok=True)
+            bounded = False
+            try:
+                if os.path.exists(_ARRIVALS) and os.path.getsize(_ARRIVALS) > 10 * 1024 * 1024:
+                    os.replace(_ARRIVALS, _ARRIVALS + ".1")
+                    bounded = True
+            except OSError:
+                pass
+            with open(_ARRIVALS, "a", encoding="utf-8") as f:
+                f.write(row)
+    except Exception:
+        pass   # the funnel's counting must never break serving
+
+
 @app.middleware("http")
 async def apex_gate(request: Request, call_next):
+    _log_arrival(request)   # THE ARRIVALS LOG: before everything else
     """Auth + rate limit + body cap. Fail-closed: if no key is provisioned the
     gate BOOTSTRAPS one at first boot, then blocks every unauthenticated write."""
     global APEX_KEY
