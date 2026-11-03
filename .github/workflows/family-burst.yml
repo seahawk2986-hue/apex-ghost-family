@@ -40,6 +40,12 @@ jobs:
           import sys; sys.path.insert(0, 'Scripts')
           import SwarmPublic; SwarmPublic.render()
           PY
+      - name: The landing + honest digest (SparkPage - badges, zeros shown)
+        run: |
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'Scripts')
+          import SparkPage; SparkPage.render()
+          PY
       - name: NodeDesk (the zero-touch node onboarding, issues -> mesh)
         permissions: {}
         run: python Scripts/NodeDesk.py
