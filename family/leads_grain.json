@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 23:45:02",
- "count": 444,
+ "ts": "2026-11-03 00:00:02",
+ "count": 445,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -1754,6 +1754,13 @@
   },
   {
    "repo": "AndreasAugustin/actions-template-sync",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Team-STORIX/STORIX-MCP",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
