@@ -1,0 +1,168 @@
+{
+ "ts": "2026-11-02 23:17:33",
+ "rows": [
+  {
+   "model": "nemotron-550b",
+   "strength": "reasoning-ceiling",
+   "role": "judge/critic + web-read + court-fallback",
+   "wire": "CloudBrain nim lane + hybrid_routes judge/draft",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "meta/llama-3.2-90b-vision-instruct",
+   "strength": "vision-90b",
+   "role": "THE LEAD VL SEAT (the eyes)",
+   "wire": "vision chain (the NIM-VL hunt)",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "glm-5.3-flash",
+   "strength": "coder-plain-channel",
+   "role": "SWE-court lead + web-read",
+   "wire": "SweSmoke chain + Shard nim-glm + VisionGate... webRead routes",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "gpt-oss-120b@cerebras",
+   "strength": "fast-tool-follower",
+   "role": "chat-lock + court #2",
+   "wire": "CloudBrain pool #1 + routes chat",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "gpt-oss-120b@groq",
+   "strength": "fast-tool-follower(2)",
+   "role": "chat + drafts + judge",
+   "wire": "routes chat/judge",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "kimi-k2.6",
+   "strength": "await-deploy",
+   "role": "judge (watched until live)",
+   "wire": "CloudBrain nim lane (404 = demoted honestly)",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "gemini-flash-latest",
+   "strength": "vl-window",
+   "role": "vision fallback + web-read",
+   "wire": "VisionGate... webuse + vision chain",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "gemini-3.1-pro-preview",
+   "strength": "deep-window",
+   "role": "tier-3 deep seat",
+   "wire": "Shard deep tier",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "qwen/qwen3.8-27b",
+   "strength": "efficient-reasoner",
+   "role": "the vote diversity",
+   "wire": "groq-qwen/cerebras-qwen lanes",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "qwen3-30b-a3b",
+   "strength": "offline-ceiling",
+   "role": "the studio zero-cap floor",
+   "wire": "SweSmoke studio lane",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "qwen3-vl-8b-instruct",
+   "strength": "local-eyes",
+   "role": "vision floor (RAM-gated 6.5GB)",
+   "wire": "vision chain lms",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "qwen2.5-coder-7b-instruct",
+   "strength": "code-repair",
+   "role": "the coder auto-swap seat",
+   "wire": "ensure_coder_resident + CODE_FLOOR",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "phi4-mini",
+   "strength": "honest-floor",
+   "role": "the chat floor + the restore seat",
+   "wire": "restore_chat_floor + local-phi4",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "nomic-embed",
+   "strength": "embeddings",
+   "role": "the memory vectors (resident)",
+   "wire": "LM Studio:1234 (LOADED)",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "pollinations",
+   "strength": "keyless-eternal",
+   "role": "the final chat floor + the $0 brush",
+   "wire": "CloudBrain keyless lane + /talk/api/image",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "or-swarm (freeswarm)",
+   "strength": "n-cap-aggregate",
+   "role": "the capacity organ (~99 seats)",
+   "wire": "CloudBrain or-swarm intercept",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "qwen2.5-14b-instruct",
+   "strength": "mid-generalist",
+   "role": "the studio rotation",
+   "wire": "LM Studio catalog",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "deepseek-r1-distill-8b",
+   "strength": "local-deep",
+   "role": "backup planner (the r1 ladder)",
+   "wire": "brain_ready LM Studio path",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "gemma3:4b",
+   "strength": "alt-voice",
+   "role": "local-gemma3 rotation",
+   "wire": "CloudBrain pool",
+   "wired": true,
+   "live_seat": null
+  },
+  {
+   "model": "qwen2.5-coder:3b",
+   "strength": "micro-draft",
+   "role": "local-fast (the vote floor)",
+   "wire": "CloudBrain pool",
+   "wired": true,
+   "live_seat": null
+  }
+ ],
+ "count": 20,
+ "law": "every model = attached where its strength says; the missing seats = loud",
+ "verdict": "20 model(s) in the book; 20 wired"
+}
