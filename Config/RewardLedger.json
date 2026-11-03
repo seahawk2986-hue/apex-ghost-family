@@ -20,12 +20,12 @@
  "ApexPacing.py": {
   "best": 103.0,
   "best_base": 90.0,
-  "attempts": 338,
+  "attempts": 340,
   "successes": 1,
   "streak": 0,
   "ok_full": 1,
-  "parity_total": 218,
-  "parity_hits": 152
+  "parity_total": 219,
+  "parity_hits": 153
  },
  "ApexInstaller.py": {
   "best": 105.0,
