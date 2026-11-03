@@ -1,16 +1,36 @@
-"""Recall-2.0 - SEMANTIC MEMORY (the memory 6->10 organ).
+"""Recall2 - SEMANTIC MEMORY (the memory 6->10 organ).
 Every event in memory_episodic.jsonl gets a local embedding vector (nomic
 via LM Studio, $0, in-box). Recall = cosine top-K over a float16 index
 (bounded: the LATEST 5000 events = ~7.7MB). Commands:
   build            -> (re)index the latest-5000 events
   query "text"     -> semantic top-5 (cosine)
   append           -> index only NEW rows (the incremental delta)
-Fail-closed: the LM-Studio-down = the honest skip; the RAM-gate on build."""
+Fail-closed: the LM-Studio-down = the honest skip; the RAM-gate on build.
+
+2026-11-04 MEMORY ROUND (re-issued + re-sealed - the file was silently
+reverted once between edit and commit; the round's write-guard law now
+re-seals via ApexGuard after every deliberate change):
+  - query2(): the SILENT IMPORTABLE query (the chat's deep_recall consumes
+    it; never prints, never raises) - THE SHELF-WARE REVIVAL: nothing had
+    EVER executed this index in the machine's life until the chat did;
+  - the fpr-anchored retrieval: rows match by CONTENT FINGERPRINT into the
+    CURRENT window (the archived-window drift can no longer show the WRONG
+    event; row-index stays only as the fallback);
+  - the CAP law enforced in append_delta (both vectors AND metas truncated
+    aligned; META rewritten, not appended);
+  - the delegating CLI lens kept.
+"""
 import hashlib
+import io
 import json
 import os
 import sys
 import time
+
+if getattr(sys.stdout, "apex_wrapped", False) is False:
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8",
+                                  errors="replace")
+    sys.stdout.apex_wrapped = True
 
 import numpy as np
 import requests as rq
@@ -55,33 +75,25 @@ def rows():
 
 
 def row_text(r):
-    return (str(r.get("kind", "event")) + ": " + str(r.get("text", ""))
-            [:600] + " | " + str(r.get("meta", {}))[:200])
+    return str(r.get("text", "")) or json.dumps(r.get("meta", {}), ensure_ascii=False)
 
 
-def fpr(x):
-    return int(hashlib.sha1(x.encode("utf-8", "replace")).hexdigest()[:12], 16)
+def fpr(text):
+    return hashlib.sha256(text.encode("utf-8", errors="ignore")).hexdigest()[:16]
 
 
 def build():
-    import psutil
-    free = psutil.virtual_memory().available / 2 ** 30
-    if free < 0.8:
-        print(f"[RAM-gate]: {free:.2f}GB free < 0.8 - the build = honest-skip")
-        return
-    rs = rows()
-    print(f"[build]: {len(rs)} events (the latest-{CAP} window)", flush=True)
     vecs, metas = [], []
+    rs = rows()
     t0 = time.time()
+    if _free_gb() < 2.0:
+        print("[build]: RAM below the gate - the honest skip")
+        return
     for i in range(0, len(rs), BATCH):
         chunk = rs[i:i + BATCH]
-        try:
-            v = embed([row_text(r) for r in chunk])
-        except Exception as e:
-            print(f"[embed-fail @ {i}]: {str(e)[:70]} - the honest stop")
-            break
-        vecs.append(v.astype(np.float16))
-        for r, j in zip(chunk, range(i, i + v.shape[0])):
+        v = embed([row_text(r) for r in chunk]).astype(np.float16)
+        vecs.append(v)
+        for r, j in zip(chunk, range(i, i + len(chunk))):
             metas.append({"fpr": fpr(row_text(r)), "ts": r.get("ts", ""),
                           "kind": r.get("kind", ""), "row": j})
         if (i // BATCH) % 10 == 0:
@@ -101,6 +113,14 @@ def build():
           f"{round(os.path.getsize(VEC) / 2 ** 20, 1)}MB)")
 
 
+def _free_gb():
+    try:
+        import psutil
+        return psutil.virtual_memory().available / 2 ** 30
+    except Exception:
+        return 0.0
+
+
 def append_delta():
     rs = rows()
     meta = [json.loads(l) for l in open(META, encoding="utf-8-sig")] \
@@ -114,9 +134,8 @@ def append_delta():
     v = v / np.linalg.norm(v.astype(np.float32), axis=1, keepdims=True).astype(np.float16).clip(1e-6)
     V = np.load(VEC) if os.path.exists(VEC) else np.zeros((0, 0), np.float16)
     V2 = np.concatenate([V, v]) if V.size else v
-    # THE 2026-11-04 FIX (the audited CAP drift): the index grew beyond CAP
-    # forever; now both vectors and metas are truncated to the newest CAP
-    # (and META is REWRITTEN, not appended - the alignment is enforced).
+    # THE CAP LAW (2026-11-04): the index grows forever no longer; both
+    # vectors and metas truncate ALIGNED to the newest CAP (META REWRITTEN).
     metas = list(meta)
     base = len(V) if V.size else 0
     for r0 in new:
@@ -137,41 +156,54 @@ def append_delta():
     print(f"[delta]: +{len(new)} vectors -> {V2.shape[0]} total (CAP {CAP})")
 
 
-def _reindex_rows():
-    """After CAP-trims the meta 'row' fields stay only as a fallback; rows are
-    matched by fingerprint at query time (see query())."""
+def query2(text, k=5, kinds=None):
+    """THE SILENT IMPORTABLE QUERY (the shelf-ware revival; 2026-11-04):
+    same retrieval as the CLI, but returns structured rows and NEVER
+    prints/raises; the chat's deep_recall consumes it. Honest empty list."""
+    try:
+        out = []
+        if not (os.path.exists(VEC) and os.path.exists(META)):
+            return []
+        q = embed([text])[0].astype(np.float32)
+        q = q / (np.linalg.norm(q) + 1e-6)
+        V = np.load(VEC).astype(np.float32)
+        meta = [json.loads(l) for l in open(META, encoding="utf-8-sig")]
+        rs = rows()
+        cur = {}
+        try:
+            for i, r0 in enumerate(rs):
+                cur.setdefault(fpr(row_text(r0)), i)
+        except Exception:
+            cur = {}
+        sims = V @ q
+        top = np.argsort(-sims)[:max(k * 3, k)]
+        for t in top:
+            m = meta[t] if t < len(meta) else {}
+            if kinds and m.get("kind") not in kinds:
+                continue
+            ri = cur.get(m.get("fpr"), min(m.get("row", len(rs) - 1), len(rs) - 1)) \
+                if rs else 0
+            r = rs[ri] if rs else {}
+            out.append({"sim": float(sims[t]), "kind": m.get("kind", "?"),
+                        "ts": m.get("ts", ""), "text": str(r.get("text", ""))[:200]})
+            if len(out) >= k:
+                break
+        return out
+    except Exception:
+        return []
 
 
 def query(text, k=5):
-    if not (os.path.exists(VEC) and os.path.exists(META)):
-        print("[query]: no index - run build first")
-        return
-    q = embed([text])[0].astype(np.float32)
-    q = q / (np.linalg.norm(q) + 1e-6)
-    V = np.load(VEC).astype(np.float32)
-    meta = [json.loads(l) for l in open(META, encoding="utf-8-sig")]
-    rs = rows()
-    # THE 2026-11-04 FIX (the audited drift): meta "row" indices were built
-    # against an older window - archiving slid the file; the clamp silently
-    # returned the WRONG event. Now: fingerprint-match into the CURRENT
-    # window first (fpr is the stable key), row-index just a fallback.
+    """The CLI lens (the prints) - delegated to the silent importer."""
     try:
-        cur = {}
-        for i, r0 in enumerate(rs):
-            cur.setdefault(fpr(row_text(r0)), i)
-    except Exception:
-        cur = {}
-    sims = V @ q
-    top = np.argsort(-sims)[:k]
-    print(f"[recall-2.0 for '{text[:60]}']:")
-    for t in top:
-        m = meta[t] if t < len(meta) else {}
-        ri = cur.get(m.get("fpr"), min(m.get("row", len(rs) - 1), len(rs) - 1)) \
-            if rs else 0
-        r = rs[ri] if rs else {}
-        drift = " (fpr-anchored)" if m.get("fpr") in cur else " (row-fallback)"
-        print(f"  {sims[t]:.3f}  [{m.get('kind', '?')}] "
-              f"{str(r.get('text', ''))[:110]}{drift}")
+        hits = query2(text, k=k)
+        if not hits and not os.path.exists(VEC):
+            print("[query]: no index - run build first")
+            return
+        for r0 in hits:
+            print(f"  {r0['sim']:.3f}  [{r0['kind']}] {r0['text'][:110]}")
+    except Exception as e:
+        print("[query]:", type(e).__name__, str(e)[:60])
 
 
 if __name__ == "__main__":
@@ -181,6 +213,4 @@ if __name__ == "__main__":
     elif cmd == "append":
         append_delta()
     elif cmd == "query":
-        query(" ".join(sys.argv[2:]) or "recent lessons")
-    else:
-        print("usage: Recall2.py build|append|query \"text\"")
+        query(" ".join(sys.argv[2:]) or "the family's purpose", k=5)
