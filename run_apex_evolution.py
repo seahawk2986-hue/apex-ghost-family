@@ -1369,6 +1369,40 @@ async def apex_gate(request: Request, call_next):
         resp.headers["X-Frame-Options"] = "DENY"
     return resp
 
+CHAT_MEMORY_KINDS = ("conversation", "lesson", "insight", "certification",
+                     "rule", "calibration", "filing_bridge", "local_mind",
+                     "court", "yardstick", "warm_brain")
+
+
+def deep_recall(msg, k=3):
+    """THE MERGED RECALL (2026-11-04, the memory round): the semantic tier's
+    ranked lessons + Recall2's FULL-WINDOW 768-d index (the resurrected
+    shelf-ware: nothing had EVER executed it in the machine's whole life) -
+    one merged, deduped, KIND-PROTOCOL'd injection list. The kind protocol =
+    chat replies only ever receive memory classes that can mean something in
+    a conversation; gym_miss/no-lane noise can never surface."""
+    try:
+        lessons = list(MEM.recall(msg, k=k) or [])
+    except Exception:
+        lessons = []
+    seen = {l.get("text", "")[:110] for l in lessons}
+    try:
+        sys.path.insert(0, os.path.join(R, "Scripts"))
+        import Recall2 as _R2
+        for r0 in (_R2.query2(msg, k=k + 2) or []):
+            if r0.get("kind") in CHAT_MEMORY_KINDS and \
+                    r0.get("text", "")[:110] not in seen:
+                lessons.append({"text": r0["text"][:140],
+                                "kind": r0.get("kind"),
+                                "ts": r0.get("ts", ""), "meta": {}})
+                seen.add(r0["text"][:110])
+            if len(lessons) >= k:
+                break
+    except Exception:
+        pass
+    return lessons[:k]
+
+
 def extract_friend_directive(friend_text: str):
     raw_response = query_qw(f"Extract technical directives or code rules from this packet: {friend_text}. Output ONLY raw text content.")
     with open(I, "w", encoding="utf-8") as f: f.write(raw_response)
@@ -1568,7 +1602,7 @@ def talk_api(t: TalkMsg):
             return {"reply": "Library stats failed - check Config/SkillLibrary.json."}
 
     try:
-        lessons = MEM.recall(msg, k=3)
+        lessons = deep_recall(msg, k=3)
     except Exception:
         lessons = []
     ltxt = "\n".join(f"- {l['text'][:140]}" for l in lessons) or "none"
@@ -1647,6 +1681,18 @@ def talk_api(t: TalkMsg):
                 selfcard = f.read()[:700]
         except Exception:
             pass
+    # THE GROUNDED SELF (2026-11-04 GI-round, the blocking route's copy)
+    try:
+        sys.path.insert(0, os.path.join(R, "Scripts"))
+        import CanonCounts as _CC
+        _cc = _CC.read()
+        _counts = (f"\n\nTRUE SELF-COUNTS (state exactly these numbers, never "
+                   f"different ones, when speaking about yourself): "
+                   f"{_cc.get('skills_library')} SHA-tracked skills, "
+                   f"{_cc.get('skills_certified')} registry-certified, "
+                   f"{_cc.get('papers_canon')} canon papers.")
+    except Exception:
+        _counts = ""
     prompt = (
         "You are Apex, talking privately with Andrew - your creator, and the human who runs "
         "your hardware. Andrew is NOT the room coordinator; this is your personal channel. "
@@ -1656,7 +1702,7 @@ def talk_api(t: TalkMsg):
         "remember something, acknowledge it plainly. THIS REPLY IS SPOKEN ALOUD: flowing "
         "conversational prose only - never markdown symbols, bullets, asterisks, hashes, "
         "code fences or bare URLs; say a number as words when it helps the ear.\n\n"
-        f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n\nLIBRARY SKILLS:{skill_hits}\n\n"
+        f"SELF-MODEL:\n{selfcard}{_counts}\n\nRELEVANT MEMORY:\n{ltxt}\n\nLIBRARY SKILLS:{skill_hits}\n\n"
         f"ANDREW SAYS:\n{msg}\n\nREPLY:")
     # THE FOUNDER'S CHAT-LOCK (the blind-eval's #1 = the 120b-first):
     reply = None
@@ -1754,7 +1800,7 @@ def talk_api_stream(t: TalkStreamMsg):
             prior_txt += f"Andrew: {pm}\nApex: {pr}\n"
     # the same recall/prompt-discipline as the blocking route (self-contained)
     try:
-        lessons = MEM.recall(msg, k=3)
+        lessons = deep_recall(msg, k=3)
     except Exception:
         lessons = []
     ltxt = "\n".join(f"- {l['text'][:140]}" for l in lessons) or "none"
@@ -1779,13 +1825,25 @@ def talk_api_stream(t: TalkStreamMsg):
                               for k in _pref if _self.get(k))[:2400]
     except Exception:
         pass
+    # THE GROUNDED SELF (2026-11-04 GI-round, the stream route's copy)
+    try:
+        sys.path.insert(0, os.path.join(R, "Scripts"))
+        import CanonCounts as _CC
+        _cc = _CC.read()
+        _counts = (f"\n\nTRUE SELF-COUNTS (state exactly these numbers, never "
+                   f"different ones, when speaking about yourself): "
+                   f"{_cc.get('skills_library')} SHA-tracked skills, "
+                   f"{_cc.get('skills_certified')} registry-certified, "
+                   f"{_cc.get('papers_canon')} canon papers.")
+    except Exception:
+        _counts = ""
     prompt = (
         "You are Apex, talking privately with Andrew - your creator, and the human "
         "who runs your hardware. This is your personal channel. Be direct, honest, "
         "concise, and keep your vocabulary as rich, precise and complete as your "
         "best written reply. You may discuss your own architecture openly (SELF-MODEL). Never "
         "claim results you have not verified.\n\n"
-        f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n"
+        f"SELF-MODEL:\n{selfcard}{_counts}\n\nRELEVANT MEMORY:\n{ltxt}\n"
         f"LIBRARY SKILLS:{skill_hits}\n{prior_txt}\nANDREW SAYS:\n{msg}\n\nREPLY:")
 
     def gen():

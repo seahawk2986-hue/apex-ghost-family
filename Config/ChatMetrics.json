@@ -1,18 +1,6 @@
 {
  "recent": [
   {
-   "ts": "2026-11-01 19:35:36",
-   "lane": "local-coder",
-   "ttft_s": 255.715,
-   "chars_in": 23
-  },
-  {
-   "ts": "2026-11-01 19:38:09",
-   "lane": "local-phi4",
-   "ttft_s": 114.36,
-   "chars_in": 37
-  },
-  {
    "ts": "2026-11-01 19:38:09",
    "lane": "local-phi4",
    "ttft_s": 19.803,
@@ -298,6 +286,18 @@
    "ts": "2026-11-02 19:34:12",
    "lane": "local-phi4",
    "ttft_s": 4.12,
+   "chars_in": 51
+  },
+  {
+   "ts": "2026-11-02 19:46:55",
+   "lane": "local-phi4",
+   "ttft_s": 10.505,
+   "chars_in": 23
+  },
+  {
+   "ts": "2026-11-02 19:52:22",
+   "lane": "local-phi4",
+   "ttft_s": 2.613,
    "chars_in": 51
   }
  ]

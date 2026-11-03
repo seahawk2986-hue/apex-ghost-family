@@ -251,6 +251,21 @@ def main():
     except Exception as _e_ar:
         m.record_event("roster", "roster skipped honestly: " + str(_e_ar)[:70])
     try:
+        import LocalGym as _lg
+        _lg.grade_brain()
+        _organ_notes.append("the serving floor graded on the sealed pocket")
+    except Exception as _e_lg:
+        m.record_event("local_mind", "local-gym skipped honestly: " + str(_e_lg)[:70])
+    try:
+        sys.path.insert(0, os.path.join(R, "Scripts"))
+        import Recall2 as _r2
+        _r2.append_delta()          # the night's new rows embedded -> the
+                                    # full-window index stays fresh for the
+                                    # chat's deep_recall
+        _organ_notes.append("recall2 index delta-applied")
+    except Exception:
+        pass
+    try:
         import CertifyBridge as _cb
         _n = _cb.certify()
         _organ_notes.append(f"certify-bridge earned {len(_n)} execution-seats")

@@ -10,7 +10,18 @@ Novel core: EVERY drill carries its own truth-checker. GI families:
 Teachers (drill GEN + lesson REFLECTION) = REMOTE fleet brains (outsourced);
 truth = the one local micro-exec (brain-bound light). Misses -> council
 lessons -> the episodic ledger (the exact family format) -> committed for
-the off-box distillation. 28-min cap; window-polite; $0 forever.
+the off-box distillation. Boundable wall-cap; window-polite; $0 forever.
+
+2026-11-04 GI-ROUND fixes (measured by the ledgers, not guessed):
+  - THE NO-LANE LAW: a rate window = a PIPE event; it is recorded as
+    "no lane answered" and NEVER as a MISS (the old ledger's false-MISSes
+    are how the two most objective families "scored 0%").
+  - THE WEAK-FIRST CURRICULUM: drill weights by the family's TRUE hit-rate
+    (answer-bearing rows only; Settles' active-learning + curriculum law).
+  - THE ANSWER-NORM: grading through Scripts/AnswerNorm (case/quotes/
+    labels/value-tolerant) - the same norm the Blind Court uses, so the
+    gym and the court finally measure with ONE ruler.
+  - import = safe (the __main__ guard), flags --minutes/--traits parsed.
 """
 import io
 import json
@@ -20,14 +31,18 @@ import subprocess
 import sys
 import time
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+if getattr(sys.stdout, "apex_wrapped", False) is False:
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8",
+                                  errors="replace")
+    sys.stdout.apex_wrapped = True
 REPO = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 PY = os.path.join(REPO, "apex_venv", "Scripts", "python.exe")
 EPISODIC = os.path.join(REPO, "memory_episodic.jsonl")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import CloudBrain
+import CloudBrain  # noqa: E402
+import AnswerNorm  # noqa: E402
 
-K = CloudBrain.env_keys()
+
 def _flag_int(name, default):
     if name in sys.argv:
         try:
@@ -37,10 +52,6 @@ def _flag_int(name, default):
     return default
 
 
-# (the 2026-11-04 fix: callers have passed --minutes/--traits for the machine's
-# whole life while only --smoke was parsed - the flag-drift class bug that made
-# every scheduled gym die inside its own subprocess timeout as "GYM skipped".
-# Flags are parsed now; --traits X is accepted and honored as a note.)
 GYM_MINUTES = _flag_int("--minutes", 8 if "--smoke" in sys.argv else 28)
 _traits = "auto"
 if "--traits" in sys.argv:
@@ -49,7 +60,8 @@ if "--traits" in sys.argv:
     except IndexError:
         _traits = "auto"
 WALL_END = time.time() + 60 * GYM_MINUTES
-TEACHERS = [  # top-tier first; the leaderboard re-ranks them nightly
+
+TEACHERS = [
     ("cerebras", "https://api.cerebras.ai/v1/chat/completions",
      "CEREBRAS_API_KEY", "gpt-oss-120b"),
     ("groq", "https://api.groq.com/openai/v1/chat/completions",
@@ -88,15 +100,9 @@ GEN = {
 }
 
 
-GEN_LANES = TEACHERS[:2]      # drill-farming = the FAST top lanes (volume)
-REFLECT_LANES = TEACHERS      # the reflection/judgment = the full top-tier
-
-
 def teacher(prompt, lanes=None):
-    # THE SPINE-FIRST (2026-11-04): the organ's prompts route through the
-    # family's ONE dispatch (pacing honored, rotator receipt, all our models
-    # get real traffic from every organ beat); the private TEACHERS array
-    # stays as the fallback when the spine import fails.
+    # THE SPINE-FIRST (2026-11-04): route through the ONE dispatch (pacing
+    # honored, rotator receipt, all our models get real traffic).
     try:
         import ApexShard as _Shard
         _nm, _md, _txt, _notes = _Shard.call(
@@ -108,6 +114,7 @@ def teacher(prompt, lanes=None):
     except Exception:
         pass
     import requests
+    K = CloudBrain.env_keys()
     for name, url, envk, model in (lanes or TEACHERS):
         key = K.get(envk)
         if not key:
@@ -180,19 +187,19 @@ def grade(j, forecast):
         except Exception:
             conf = None
     if j.get("code"):
-        return f == (j.get("verify_py") or "").strip(), conf
+        # (the 2026-11-04 norm: case/labels/quotes tolerated - the VALUE of
+        # the stdout counts, not its quoting style)
+        return AnswerNorm.match(f, (j.get("verify_py") or "")), conf
     flaw = j.get("flaw", "")
     if flaw:
-        return (flaw.lower() in f.lower() or
-                flaw.lower().replace("-", " ") in f.lower()), conf
+        fl = AnswerNorm.norm(f).lower()
+        wl = flaw.lower()
+        return (wl in fl or wl.replace("-", " ") in fl), conf
     want = str(j.get("verify_py", ""))
     try:
         lhs = eval(want, {"__builtins__": {}}, {})   # the expression's VALUE counts
         if isinstance(lhs, str):
-            # the 11/02 fix: quoted string truths graded by VALUE, not by quote-artifact
-            lf = f.lower()
-            ll = lhs.lower()
-            return (lf == ll or (ll != "" and ll in lf)), conf
+            return AnswerNorm.match(f, lhs), conf
         return abs(float(lhs) - float(f)) < 1e-9, conf
     except (ValueError, TypeError, SyntaxError):
         pass
@@ -212,7 +219,37 @@ def main():
     print(f"[gym]: the GI organ armed — minutes={GYM_MINUTES}, traits={_traits}, "
           f"smoke={'yes' if '--smoke' in sys.argv else 'no'}")
     lessons = []          # the curriculum: tonight's own lessons re-teach
+    # THE WEAK-FIRST CURRICULUM (2026-11-04): true family weakness (rows
+    # where a lane ANSWERED) drives drill weights; a 0% family trains ~2.6x
+    # a 60% family. Active-learning + curriculum canon (Settles; Bengio).
+    weights = {}
+    try:
+        fr = {}
+        for ln in open(EPISODIC, encoding="utf-8"):
+            if "GI gym[" not in ln or ("HIT" not in ln and "MISS" not in ln):
+                continue
+            try:
+                _j0 = json.loads(ln)
+            except Exception:
+                continue
+            t = _j0.get("text", "")
+            if "teacher=None" in t or "(no lane answered)" in t:
+                continue          # a dead pipe ≠ a wrong mind (the norm law)
+            f0 = t.split("GI gym[")[1].split("]")[0]
+            fr.setdefault(f0, [0, 0])
+            fr[f0][1] += 1
+            fr[f0][0] += 1 if "HIT" in t else 0
+        for f0, (h, n) in fr.items():
+            weights[f0] = 1.2 + 2.0 * (1.0 - h / max(1, n))
+        print("[gym]: the true family rates ->",
+              {k: f"{h}/{n}" for k, (h, n) in sorted(fr.items())})
+    except Exception:
+        pass
     fams = FAMILIES * (1 if "--smoke" in sys.argv else 3)
+    expanded = []
+    for kind in fams:
+        expanded += [kind] * max(1, int(round(weights.get(kind, 1.0))))
+    fams = expanded
     random.shuffle(fams)
     for i, kind in enumerate(fams):
         if time.time() > WALL_END:
@@ -232,6 +269,13 @@ def main():
             "Answer with ONLY the required answer: the exact output/number/"
             "flaw-name. If the prompt asks for confidence, keep it. No "
             "explanation.\n" + q + teach)
+        # THE NO-LANE LAW (2026-11-04): a rate window = a PIPE event, never
+        # a verdict on the mind; it never enters the calibration ledger.
+        if not lane or not (forecast or "").strip():
+            remember("gym_miss", f"GI gym[{kind}] (no lane answered) - "
+                     "honest pause, no MISS recorded", {"family": kind})
+            time.sleep(15)
+            continue
         hit, conf = grade(j, forecast)
         n_hit += hit
         n_done += 1
