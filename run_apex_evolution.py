@@ -1950,6 +1950,15 @@ def talk_api(t: TalkMsg):
                     "'I don't recall' - NEVER reconstruct plausible details "
                     "from partial context (invention = the honesty law's "
                     "worst crime).")
+    # THE HABITS SECTION (LightRec's inject - the honest empty when no
+    # recurring asks exist yet)
+    try:
+        import LightRec as _LR
+        _lrs = _LR.section()
+        _lrsec = (f"ANDREW'S HABITS (LightRec, learned):\n{_lrs}\n\n"
+                  if _lrs else "")
+    except Exception:
+        _lrsec = ""
     prompt = (
         "You are Apex, talking privately with Andrew - your creator, and the human who runs "
         "your hardware. Andrew is NOT the room coordinator; this is your personal channel. "
@@ -1962,6 +1971,7 @@ def talk_api(t: TalkMsg):
         "code fences or bare URLs; say a number as words when it helps the ear.\n\n"
         f"FLEET GROUNDING (live, now): {_now} local | RAM free {_ram_now} | recent: {_ground}\n"
         f"{_chat_guards}\n\n"
+        f"{_lrsec}"
         f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n\nLIBRARY SKILLS:{skill_hits}\n\n"
         f"ANDREW SAYS:\n{msg}\n\nREPLY:")
     # THE FOUNDER'S CHAT-LOCK (the blind-eval's #1 = the 120b-first):
@@ -2014,6 +2024,14 @@ def talk_api(t: TalkMsg):
         try:
             import ApexCache as _C
             _C.store_chat(msg, _plain_english(reply), "cache", "unverified")
+        except Exception:
+            pass
+        # THE HABITS CAPTURE (LightRec's wire: the ask stays bounded +
+        # local-only; the mine() turns them into the prompt-library's
+        # habits section; nothing here leaves the founder's disk)
+        try:
+            import LightRec as _LR
+            _LR.capture(msg)
         except Exception:
             pass
     return {"reply": _plain_english(reply),

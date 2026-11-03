@@ -1,0 +1,2 @@
+{"ts": "2026-11-03 00:26:31", "door": "pages", "ok": true, "defects": [], "ttfb_ms": 139}
+{"ts": "2026-11-03 00:26:32", "door": "repo", "ok": true, "defects": ["link-rot: 4/6 dead"], "ttfb_ms": 560}

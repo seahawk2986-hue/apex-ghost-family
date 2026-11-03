@@ -1,0 +1,119 @@
+{
+ "ts": "2026-11-03 00:26:34",
+ "law": "the machine DRAFTS, the founder posts (the anti-spam law)",
+ "venues": [
+  {
+   "src": "gh",
+   "title": "open-free-llm-api/awesome-freellm-apis",
+   "url": "https://github.com/open-free-llm-api/awesome-freellm-apis",
+   "pts": 5058,
+   "comments": 0,
+   "when": ""
+  },
+  {
+   "src": "hn",
+   "title": "Launch HN: Momentic (YC W24) \u2013 Agents that catch bugs by using your app",
+   "url": "https://momentic.ai/",
+   "pts": 137,
+   "comments": 91,
+   "when": "2026-11-02"
+  },
+  {
+   "src": "gh",
+   "title": "ClawLabsAI/free-ai-models",
+   "url": "https://github.com/ClawLabsAI/free-ai-models",
+   "pts": 253,
+   "comments": 0,
+   "when": ""
+  },
+  {
+   "src": "gh",
+   "title": "AIPMAndy/FreeToken",
+   "url": "https://github.com/AIPMAndy/FreeToken",
+   "pts": 152,
+   "comments": 0,
+   "when": ""
+  },
+  {
+   "src": "gh",
+   "title": "CYBIRD-D/FREE-LLM-API-Provider",
+   "url": "https://github.com/CYBIRD-D/FREE-LLM-API-Provider",
+   "pts": 118,
+   "comments": 0,
+   "when": ""
+  },
+  {
+   "src": "gh",
+   "title": "mvalentsev/awesome-free-ai-coding",
+   "url": "https://github.com/mvalentsev/awesome-free-ai-coding",
+   "pts": 118,
+   "comments": 0,
+   "when": ""
+  },
+  {
+   "src": "hn",
+   "title": "Ask HN: What hardware are you using to run local LLMs?",
+   "url": "",
+   "pts": 40,
+   "comments": 37,
+   "when": "2026-11-02"
+  },
+  {
+   "src": "gh",
+   "title": "pacocartones/free-llm-api-hub",
+   "url": "https://github.com/pacocartones/free-llm-api-hub",
+   "pts": 114,
+   "comments": 0,
+   "when": ""
+  },
+  {
+   "src": "hn",
+   "title": "NeoRouter \u2013 Self-hosted routing for free, paid and local LLMs",
+   "url": "https://github.com/NeoLabs-Systems/NeoRouter",
+   "pts": 3,
+   "comments": 2,
+   "when": "2026-11-02"
+  },
+  {
+   "src": "hn",
+   "title": "Show HN: 2D world SIM where each creature runs a text classifier in the browser",
+   "url": "https://id-le.com/?lab&halloween",
+   "pts": 3,
+   "comments": 1,
+   "when": "2026-11-01"
+  },
+  {
+   "src": "hn",
+   "title": "Show HN: Project Wisteria-A BYOK chatbot that saves thoughts and memory locally",
+   "url": "https://negativeabsence.com/wisteria/",
+   "pts": 1,
+   "comments": 1,
+   "when": "2026-11-03"
+  },
+  {
+   "src": "hn",
+   "title": "PaidinToken \u2013 Open LLM Token Pricing and Local GPU VRAM Calculator",
+   "url": "https://www.paidintoken.com/ai/hardware",
+   "pts": 1,
+   "comments": 1,
+   "when": "2026-11-02"
+  },
+  {
+   "src": "hn",
+   "title": "Show HN: CheckOwners to find your repo's hidden single points of failure",
+   "url": "https://github.com/smusali/checkOwners",
+   "pts": 3,
+   "comments": 0,
+   "when": "2026-11-01"
+  },
+  {
+   "src": "hn",
+   "title": "Show HN: Corollary, LaTeX Editor for Mac with On-Device Apple Foundation Models",
+   "url": "https://calvinyz.github.io/corollary/",
+   "pts": 2,
+   "comments": 0,
+   "when": "2026-11-01"
+  }
+ ],
+ "draft": "We built an open swarm: N capped free-model seats in rotation, opt-in nodes welcome (your key stays on your box): github.com/seahawk2986-hue/apex-ghost-family"
+}
