@@ -1,0 +1,629 @@
+{
+ "connected": [
+  {
+   "url": "https://arxiv.org/abs/2303.08774",
+   "org": "OpenAI",
+   "technique": "eval-suite discipline (capability probes, not vibes)",
+   "organ": "SwarmCert",
+   "gate": "all-8"
+  },
+  {
+   "url": "https://arxiv.org/abs/2203.02155",
+   "org": "OpenAI",
+   "technique": "instruction-following IS the delivery probe",
+   "organ": "SwarmCert",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2005.14165",
+   "org": "OpenAI",
+   "technique": "few-shot prompting = zero-training seat lanes",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2001.08361",
+   "org": "OpenAI",
+   "technique": "compute-optimal seat choice under the $0 law",
+   "organ": "FreeSwarm",
+   "gate": "all-8"
+  },
+  {
+   "url": "https://arxiv.org/abs/2107.03374",
+   "org": "OpenAI",
+   "technique": "code-seat lineage for the local judge",
+   "organ": "FreeSwarm",
+   "gate": "quorum-n30"
+  },
+  {
+   "url": "https://arxiv.org/abs/2112.09332",
+   "org": "OpenAI",
+   "technique": "answers carry citations (receipt-first sourcing)",
+   "organ": "SourcingDesk",
+   "gate": "all-8"
+  },
+  {
+   "url": "https://arxiv.org/abs/2309.17421",
+   "org": "OpenAI",
+   "technique": "disclose-limits-by-name (the system-card honesty)",
+   "organ": "SwarmCert",
+   "gate": "all-8"
+  },
+  {
+   "url": "https://arxiv.org/abs/2305.20050",
+   "org": "OpenAI",
+   "technique": "process supervision - verify each step, not just ends",
+   "organ": "QuorumSwarm",
+   "gate": "quorum-n30"
+  },
+  {
+   "url": "https://arxiv.org/abs/2312.09390",
+   "org": "OpenAI",
+   "technique": "weak-to-strong: children supervised by parent gates",
+   "organ": "ChatRedTeam",
+   "gate": "7-nights"
+  },
+  {
+   "url": "https://arxiv.org/abs/2210.10760",
+   "org": "OpenAI",
+   "technique": "Goodhart guard - dual-metric honesty pair",
+   "organ": "QuorumSwarm",
+   "gate": "quorum-n30"
+  },
+  {
+   "url": "https://arxiv.org/abs/1706.03741",
+   "org": "OpenAI",
+   "technique": "preference signals land in a reward ledger",
+   "organ": "RewardLedger",
+   "gate": "7-nights"
+  },
+  {
+   "url": "https://arxiv.org/abs/2203.15556",
+   "org": "Google DeepMind",
+   "technique": "compute-optimal economics of the seat pool",
+   "organ": "FreeSwarm",
+   "gate": "all-8"
+  },
+  {
+   "url": "https://arxiv.org/abs/2312.11805",
+   "org": "Google DeepMind",
+   "technique": "multi-facet eval suites (8 checks, one verdict)",
+   "organ": "SwarmCert",
+   "gate": "all-8"
+  },
+  {
+   "url": "https://arxiv.org/abs/1712.01815",
+   "org": "Google DeepMind",
+   "technique": "the self-play improvement loop (gen -> gate -> gen)",
+   "organ": "ChatRedTeam",
+   "gate": "7-nights"
+  },
+  {
+   "url": "https://arxiv.org/abs/2203.07814",
+   "org": "Google DeepMind",
+   "technique": "massive-sample then filter - divergent->judge",
+   "organ": "QuorumSwarm",
+   "gate": "quorum-n30"
+  },
+  {
+   "url": "https://arxiv.org/abs/2403.08295",
+   "org": "Google DeepMind",
+   "technique": "open-seat lineage (the pool serves this family's weights)",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2408.00118",
+   "org": "Google DeepMind",
+   "technique": "open-seat lineage (the pool serves this family's weights)",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2201.11903",
+   "org": "Google Research",
+   "technique": "reasoned single-sentence quorum answers",
+   "organ": "QuorumSwarm",
+   "gate": "quorum-n30"
+  },
+  {
+   "url": "https://arxiv.org/abs/2210.03629",
+   "org": "Google Research",
+   "technique": "think-act-observe with step receipts",
+   "organ": "ApexHands",
+   "gate": "all-8"
+  },
+  {
+   "url": "https://arxiv.org/abs/2101.03961",
+   "org": "Google Research",
+   "technique": "sparse routing across seats/nodes",
+   "organ": "SwarmWide",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2212.08073",
+   "org": "Anthropic",
+   "technique": "written constitution + self-critique = the judge",
+   "organ": "QuorumSwarm",
+   "gate": "quorum-n30"
+  },
+  {
+   "url": "https://www.anthropic.com/engineering/building-effective-agents",
+   "org": "Anthropic",
+   "technique": "compose small named organs, not one god-loop",
+   "organ": "SWARM_PROTOCOL",
+   "gate": "7-nights"
+  },
+  {
+   "url": "https://arxiv.org/abs/2302.13971",
+   "org": "Meta AI",
+   "technique": "open-seat lineage (the pool serves this family's weights)",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2307.09288",
+   "org": "Meta AI",
+   "technique": "open-seat lineage (the pool serves this family's weights)",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2407.21783",
+   "org": "Meta AI",
+   "technique": "open-seat lineage + post-train eval discipline",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2302.04761",
+   "org": "Meta AI",
+   "technique": "tool-calling grammar for the MCP tools",
+   "organ": "ApexMcpServer",
+   "gate": "spread"
+  },
+  {
+   "url": "https://arxiv.org/abs/2308.12950",
+   "org": "Meta AI",
+   "technique": "coder judge-seat lineage",
+   "organ": "FreeSwarm",
+   "gate": "quorum-n30"
+  },
+  {
+   "url": "https://arxiv.org/abs/2401.10020",
+   "org": "Meta AI",
+   "technique": "self-critique inside the evolution gate",
+   "organ": "ChatRedTeam",
+   "gate": "7-nights"
+  },
+  {
+   "url": "https://arxiv.org/abs/2306.11644",
+   "org": "Microsoft",
+   "technique": "data-quality over scale = the verified-only corpus law",
+   "organ": "SourcingDesk",
+   "gate": "all-8"
+  },
+  {
+   "url": "https://arxiv.org/abs/2309.05463",
+   "org": "Microsoft",
+   "technique": "synthetic-textbook seats",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2308.08155",
+   "org": "Microsoft",
+   "technique": "multi-agent orchestration cadence on runners",
+   "organ": "family-burst.yml",
+   "gate": "7-nights"
+  },
+  {
+   "url": "https://arxiv.org/abs/2404.16130",
+   "org": "Microsoft",
+   "technique": "verdicts carry their evidence graph",
+   "organ": "DemoDesk",
+   "gate": "spread"
+  },
+  {
+   "url": "https://arxiv.org/abs/2310.06825",
+   "org": "Mistral AI",
+   "technique": "open-seat lineage (the pool serves this family's weights)",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2401.04088",
+   "org": "Mistral AI",
+   "technique": "sparse MoE routing across the width",
+   "organ": "SwarmWide",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://mistral.ai/news",
+   "org": "Mistral AI",
+   "technique": "the seat-lane announcements feed the pool",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2401.06066",
+   "org": "DeepSeek",
+   "technique": "open-seat lineage (the pool serves this family's weights)",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2412.19437",
+   "org": "DeepSeek",
+   "technique": "open-seat lineage (the pool serves this family's weights)",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2501.12948",
+   "org": "DeepSeek",
+   "technique": "reasoning-seat lineage for the judge pool",
+   "organ": "FreeSwarm",
+   "gate": "quorum-n30"
+  },
+  {
+   "url": "https://arxiv.org/abs/2309.16609",
+   "org": "Alibaba Qwen",
+   "technique": "open-seat lineage (the pool serves this family's weights)",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2407.10671",
+   "org": "Alibaba Qwen",
+   "technique": "open-seat lineage (the pool serves this family's weights)",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2412.15115",
+   "org": "Alibaba Qwen",
+   "technique": "open-seat lineage (the pool serves this family's weights)",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2505.09388",
+   "org": "Alibaba Qwen",
+   "technique": "open-seat lineage (the pool serves this family's weights)",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2310.16944",
+   "org": "Hugging Face",
+   "technique": "DPO-aligned judge seats",
+   "organ": "QuorumSwarm",
+   "gate": "quorum-n30"
+  },
+  {
+   "url": "https://huggingface.co/blog",
+   "org": "Hugging Face",
+   "technique": "the transformers seat registry",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2410.05229",
+   "org": "Apple",
+   "technique": "brittleness-under-perturbation = THE CHAOS SWING",
+   "organ": "SwarmCert",
+   "gate": "7-nights"
+  },
+  {
+   "url": "https://arxiv.org/abs/2406.02818",
+   "org": "Amazon",
+   "technique": "sequential handoffs with per-step context",
+   "organ": "SWARM_PROTOCOL",
+   "gate": "spread"
+  },
+  {
+   "url": "https://modelcontextprotocol.io/introduction",
+   "org": "Anthropic MCP",
+   "technique": "the worldwide MCP door",
+   "organ": "ApexMcpServer",
+   "gate": "spread"
+  },
+  {
+   "url": "https://arxiv.org/abs/2302.01318",
+   "org": "Google DeepMind",
+   "technique": "speculative serving for mesh latency",
+   "organ": "SwarmWide",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2211.17192",
+   "org": "Google Research",
+   "technique": "speculative serving for mesh latency",
+   "organ": "SwarmWide",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2303.12712",
+   "org": "Microsoft",
+   "technique": "capability probing before claiming capability",
+   "organ": "SwarmCert",
+   "gate": "all-8"
+  },
+  {
+   "url": "https://arxiv.org/abs/2311.11045",
+   "org": "Microsoft",
+   "technique": "explanation-tuned judging",
+   "organ": "QuorumSwarm",
+   "gate": "quorum-n30"
+  },
+  {
+   "url": "https://arxiv.org/abs/2405.04434",
+   "org": "DeepSeek",
+   "technique": "open-seat lineage (the pool serves this family's weights)",
+   "organ": "FreeSwarm",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2110.14168",
+   "org": "OpenAI",
+   "technique": "exact-answer verification probes ('Reply with exactly')",
+   "organ": "SwarmCert",
+   "gate": "delivery-n50"
+  },
+  {
+   "url": "https://arxiv.org/abs/2109.07958",
+   "org": "OpenAI",
+   "technique": "truthfulness probes = the gate's leak meters",
+   "organ": "ChatRedTeam",
+   "gate": "all-8"
+  }
+ ],
+ "background": [
+  {
+   "url": "https://arxiv.org/abs/2103.00020",
+   "org": "OpenAI",
+   "note": "vision contrastive - no vision organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2212.04356",
+   "org": "OpenAI",
+   "note": "speech - no speech organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2204.06125",
+   "org": "OpenAI",
+   "note": "image generation - no image organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2403.05530",
+   "org": "Google DeepMind",
+   "note": "long-context; our asks cap at 4000 chars"
+  },
+  {
+   "url": "https://arxiv.org/abs/1911.08265",
+   "org": "Google DeepMind",
+   "note": "world-model RL - no RL organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2112.11446",
+   "org": "Google DeepMind",
+   "note": "scaling failure analysis - informational"
+  },
+  {
+   "url": "https://arxiv.org/abs/2212.12794",
+   "org": "Google DeepMind",
+   "note": "weather modeling - no organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2310.08864",
+   "org": "Google DeepMind",
+   "note": "robotics data pooling - no organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/1910.10683",
+   "org": "Google Research",
+   "note": "text-to-text framing - informational"
+  },
+  {
+   "url": "https://arxiv.org/abs/2204.02311",
+   "org": "Google Research",
+   "note": "scaling emergent abilities - informational"
+  },
+  {
+   "url": "https://arxiv.org/abs/2305.10403",
+   "org": "Google Research",
+   "note": "multilingual benchmarks - no organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2404.07143",
+   "org": "Google Research",
+   "note": "long-context compression - asks capped"
+  },
+  {
+   "url": "https://arxiv.org/abs/2010.11929",
+   "org": "Google Research",
+   "note": "vision backbone - no vision organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2305.16264",
+   "org": "Google Research",
+   "note": "data-constrained scaling - informational"
+  },
+  {
+   "url": "https://arxiv.org/abs/2209.11895",
+   "org": "Anthropic",
+   "note": "circuit interpretability - no interpretability organ"
+  },
+  {
+   "url": "https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html",
+   "org": "Anthropic",
+   "note": "feature interpretability - no organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2304.02643",
+   "org": "Meta AI",
+   "note": "segmentation - no vision organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2304.07193",
+   "org": "Meta AI",
+   "note": "vision features - no vision organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2205.01068",
+   "org": "Meta AI",
+   "note": "open logs - informational"
+  },
+  {
+   "url": "https://arxiv.org/abs/2106.09685",
+   "org": "Microsoft",
+   "note": "parameter-efficient tuning - no training organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2406.11704",
+   "org": "NVIDIA",
+   "note": "synthetic data lineage - no training organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2411.13676",
+   "org": "NVIDIA",
+   "note": "hybrid architecture - no local inference organ"
+  },
+  {
+   "url": "https://developer.nvidia.com/blog",
+   "org": "NVIDIA",
+   "note": "the corpus door itself"
+  },
+  {
+   "url": "https://x.ai/blog/grok-1.5",
+   "org": "xAI",
+   "note": "model announcement - informational"
+  },
+  {
+   "url": "https://arxiv.org/abs/2501.12599",
+   "org": "Moonshot Kimi",
+   "note": "RL long-context reasoning - no RL organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2402.07827",
+   "org": "Cohere",
+   "note": "multilingual coverage - informational"
+  },
+  {
+   "url": "https://cohere.com/blog",
+   "org": "Cohere",
+   "note": "the corpus door itself"
+  },
+  {
+   "url": "https://research.ibm.com/blog",
+   "org": "IBM",
+   "note": "the corpus door itself"
+  },
+  {
+   "url": "https://machinelearning.apple.com/research",
+   "org": "Apple",
+   "note": "the corpus door itself"
+  },
+  {
+   "url": "https://arxiv.org/abs/2307.01952",
+   "org": "Stability AI",
+   "note": "image generation - no image organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2403.03206",
+   "org": "Stability AI",
+   "note": "image generation - no image organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2303.17564",
+   "org": "Bloomberg",
+   "note": "domain-specific finance LLM - informational"
+  },
+  {
+   "url": "https://arxiv.org/abs/2305.14314",
+   "org": "Amazon",
+   "note": "quantized tuning - no training organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2402.13929",
+   "org": "ByteDance",
+   "note": "image generation - no image organ"
+  },
+  {
+   "url": "https://onnx.ai",
+   "org": "ONNX",
+   "note": "portable runtime - no onnx organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/1502.05477",
+   "org": "OpenAI",
+   "note": "policy-gradient theory; only its spirit informs the conservative mutation pacing"
+  },
+  {
+   "url": "https://arxiv.org/abs/2301.04104",
+   "org": "Google DeepMind",
+   "note": "world-model RL - no organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2303.03378",
+   "org": "Google Research",
+   "note": "embodied VLM - no vision organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2304.08485",
+   "org": "Microsoft",
+   "note": "vision instruction tuning - no vision organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2102.12092",
+   "org": "OpenAI",
+   "note": "image generation - no image organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2206.07682",
+   "org": "Google DeepMind",
+   "note": "emergence thresholds - informational"
+  },
+  {
+   "url": "https://arxiv.org/abs/2204.14198",
+   "org": "Google DeepMind",
+   "note": "vision-language - no vision organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2205.06175",
+   "org": "Google DeepMind",
+   "note": "generalist agent - informational"
+  },
+  {
+   "url": "https://arxiv.org/abs/2201.08239",
+   "org": "Google Research",
+   "note": "dialogue safety - informational"
+  },
+  {
+   "url": "https://arxiv.org/abs/2302.06675",
+   "org": "Google Research",
+   "note": "optimizer discovery - no training organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2212.12017",
+   "org": "Meta AI",
+   "note": "instruction metric suites - informational"
+  },
+  {
+   "url": "https://arxiv.org/abs/2305.13516",
+   "org": "Meta AI",
+   "note": "speech - no speech organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2308.12966",
+   "org": "Alibaba Qwen",
+   "note": "vision-language - no vision organ"
+  },
+  {
+   "url": "https://arxiv.org/abs/2406.11794",
+   "org": "Apple",
+   "note": "dataset-curation benchmark - informational"
+  }
+ ]
+}
