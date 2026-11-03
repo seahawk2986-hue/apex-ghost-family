@@ -29,5 +29,5 @@ consent everywhere · evict-on-decline · verified-or-unclaimed
 - **Code Fix Pack** — buy: https://buy.polar.sh/polar_cl_bsAkKj23QlM4AsMBqDXjhwpi1XRw5WkpWo02v3WVXit
 - **Repository Triage & Patch Pack** — buy: https://buy.polar.sh/polar_cl_WgIburVk2NFbxJJn9UtiWrLkLPWPi6PHmqmSM2Q29FD
  (the catalog — the founder's shop)
-- The packs + the checkout links: the shop's wiring in flight (the honest placeholder; the links land with the payout-token)
+- The packs + the checkout links: LIVE production checkout verified (all three `buy.polar.sh` links; the receipts page renders the court's verdicts)
 - The honest receipts: the PRs + the ledger

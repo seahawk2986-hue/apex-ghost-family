@@ -1490,6 +1490,30 @@ def _log_arrival(request):
                 pass
             with open(_ARRIVALS, "a", encoding="utf-8") as f:
                 f.write(row)
+        # THE LEAD BELL (the funnel round): a potential customer just
+        # arrived - the founder's phone learns in seconds (ntfy free tier,
+        # the topic from .env; the arrival IP stays hashed; never blocks
+        # serving; at most 1 alert per path per 10 min = polite)
+        try:
+            _key = f"bell:{request.url.path}"
+            if _recent.get(_key, 0) < time.time() - 600:
+                _recent[_key] = time.time()
+                sys.path.insert(0, os.path.join(R, "Scripts"))
+                import ApexIO as _AIO
+                _topic = _AIO.env().get("NTFY_TOPIC", "")
+                if _topic:
+                    _body = (f"Funnel arrival: {request.url.path}\n"
+                             f"visitor {ipp} via {ua}\nfleet time "
+                             f"{time.strftime('%H:%M:%S')}")
+                    _bq = urllib.request.Request(
+                        f"https://ntfy.sh/{_topic}",
+                        data=_body.encode("utf-8"),
+                        headers={"Title": "APEX: a customer just arrived",
+                                 "Priority": "high", "Tags": "bell"})
+                    threading.Thread(target=lambda: urllib.request.urlopen(
+                        _bq, timeout=8), daemon=True).start()
+        except Exception:
+            pass
     except Exception:
         pass   # the funnel's counting must never break serving
 
