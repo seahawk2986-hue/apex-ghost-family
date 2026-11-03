@@ -34,6 +34,12 @@ jobs:
           R.funnel_probe()
           R.scout()
           PY
+      - name: The public proof (docs/swarm.json - Pages publishes free)
+        run: |
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'Scripts')
+          import SwarmPublic; SwarmPublic.render()
+          PY
       - name: The receipts commit back (the family's public birth-book)
         run: |
           git config user.name "apex-ghost-family"

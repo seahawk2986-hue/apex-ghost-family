@@ -51,6 +51,17 @@ jobs:
           import Prophet; Prophet.loop()
           PY
           python Scripts/FeatureLedger.py
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'Scripts')
+          import SwarmCert
+          SwarmCert.run_cert()
+          PY
+          python - <<'PY'
+          import sys; sys.path.insert(0, 'Scripts')
+          import QuorumSwarm as QS
+          QS.answer('One sentence: is the swarm honest about its limits?',
+                    max_tokens=100)
+          PY
           # NOTE: ChatRedTeam + LightRec are LOCAL organs by law - the
           # red-team attacks the REAL /talk door (which only lives on the
           # founder's box; a runner-hosted copy would grade a phantasm),
