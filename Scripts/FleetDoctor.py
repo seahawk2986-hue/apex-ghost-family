@@ -271,12 +271,29 @@ def c_capacity():
         return check("capacity", False, f"capacity probe failed: {type(e).__name__}: {str(e)[:90]}")
 
 
+# ------------------------------------------------------------- 12 the book
+def c_book():
+    """THE UTILIZATION LAW'S AUDIT (the founder's every-model-at-its-
+    strongest rule): the ModelBook's registry = every model attached where
+    its strength belongs - the missing/idle seats print honestly."""
+    try:
+        sys.path.insert(0, SCRIPTS)
+        import ModelBook
+        doc = ModelBook.audit()
+        n = int(doc.get("count", 0))
+        wired = doc.get("verdict", "")
+        return check("model-book", n >= 18, f"{doc.get('verdict')} "
+                     "(the founder's strength-law, audited)")
+    except Exception as e:
+        return check("model-book", False, f"book audit failed: {type(e).__name__}: {str(e)[:90]}")
+
+
 def main():
     print("=========================================================")
     print("  THE FLEET DOCTOR - unified self-test (one pass, $0)")
     print("=========================================================")
     for fn in (c_ports, c_docker, c_lanes, c_brain, c_memory, c_mcp,
-               c_swe, c_horizon, c_court, c_webuse, c_capacity):
+               c_swe, c_horizon, c_court, c_webuse, c_capacity, c_book):
         try:
             fn()
         except Exception as e:
