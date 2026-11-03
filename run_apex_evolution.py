@@ -869,9 +869,17 @@ def plan():
         strat = _sj.get("strategy", "")[:200] or strat
     except Exception:
         pass
-    # Self-issued curriculum: proposals from real evidence (bandit + failures + human queue)
+    # SELF-REASONING + THE INCREMENTAL LAW (the FeatureLedger's pull):
     curric = "none"
     _human_objective = ""
+    ledger_state = {}
+    try:
+        import FeatureLedger as _FL
+        ledger_state = _FL.refresh()
+        if not ledger_state.get("next_feature"):
+            ledger_state = None
+    except Exception:
+        ledger_state = {}
     try:
         if _curriculum:
             _props = _curriculum(3)
@@ -936,6 +944,17 @@ def plan():
     except Exception:
         research_line = ""
     # --- Phase 1: DeepSeek-R1 THINKS (planning only, no code) -----------------
+    # THE INCREMENTAL LAW'S PIN: absent a human objective, the priority =
+    # the ledger's first failing feature (the sourced harness pattern made
+    # machine-verifiable: one feature per cycle, the receipts decide done)
+    if not _human_objective and ledger_state and ledger_state.get("next_feature"):
+        _nf = ledger_state["next_feature"]
+        _human_objective = (f"THE MACHINE'S OWN OBJECTIVE (from the verified "
+                            f"feature ledger, {ledger_state.get('progress')}): "
+                            f"make this feature TRUE, evidence-backed: "
+                            f"{_nf.get('description')} (verify via {_nf.get('check')}). "
+                            "Work INCREMENTALLY: the smallest change that "
+                            "advances it; leave the workspace clean.")
     o = query_ds(f"**PRIORITY HUMAN OBJECTIVE (strongly prefer this target this cycle unless genuinely impossible): {_human_objective}**\n\n"
                  f"You are Apex automation head. Choose ONE file from [{', '.join(all_f)}] to optimize.\n"
                 f"Recent reward history:\n{hist}\n"

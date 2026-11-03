@@ -31,6 +31,15 @@ def _measured_now():
     """The fleet's measured self - every number = a file's receipt."""
     m = {}
     try:
+        led = json.load(open(os.path.join(ROOT, "Config", "FeatureLedger.json"),
+                             encoding="utf-8-sig"))
+        prog = str(led.get("progress", ""))
+        mm = re.match(r"(\d+)/(\d+)", prog)
+        if mm:
+            m["feature_ledger_done_pct"] = round(100 * int(mm.group(1)) / int(mm.group(2)), 1)
+    except Exception:
+        pass
+    try:
         st = json.load(open(os.path.join(ROOT, "Config", "abstract_state.json"),
                             encoding="utf-8-sig"))
         for t0, s0 in st.get("tiers", {}).items():
