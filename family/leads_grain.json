@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 19:00:03",
- "count": 732,
+ "ts": "2026-11-02 19:15:03",
+ "count": 389,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -26,216 +26,6 @@
   {
    "repo": "Socioboard-developers/Socioboard-5.0",
    "score": 84.7,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "jtesta/ssh-mitm",
-   "score": 84.5,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "rollup/rollup",
-   "score": 84.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "matomo-org/matomo",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "wabarc/wayback",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "omeka/omeka-s",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "dagucloud/dagu",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Zibbp/ganymede",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "dominikwilkowski/cfonts",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "brainfuckSec/kalitorify",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "rastating/wordpress-exploit-framework",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "kpcyrd/rshijack",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "belane/CloudHunter",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "SAMA-Communications/sama-server",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "screego/server",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mailcow/mailcow-dockerized",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "roundcube/roundcubemail",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "rustscan/rustscan",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ShawnDEvans/smbmap",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "kpcyrd/sniffglue",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "crackpkcs12/crackpkcs12",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "v1s1t0r1sh3r3/airgeddon",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "FluxionNetwork/fluxion",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "soxrok2212/PSKracker",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "future-architect/vuls",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "UltimateHackers/sqlmate",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Warxim/petep",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "morganamilo/paru",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "caelestia-dots/caelestia",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "end-4/dots-hyprland",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "kovidgoyal/kitty",
-   "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -270,6 +60,48 @@
   },
   {
    "repo": "khuedoan/homelab",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "screego/server",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "matomo-org/matomo",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "omeka/omeka-s",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Zibbp/ganymede",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "wabarc/wayback",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "dagucloud/dagu",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -311,6 +143,20 @@
    "license": ""
   },
   {
+   "repo": "SAMA-Communications/sama-server",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "roundcube/roundcubemail",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "Kovah/LinkAce",
    "score": 83.8,
    "tier": "VEIN",
@@ -346,14 +192,14 @@
    "license": ""
   },
   {
-   "repo": "prismelabs/analytics",
+   "repo": "diaspora/diaspora",
    "score": 83.2,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
   },
   {
-   "repo": "diaspora/diaspora",
+   "repo": "prismelabs/analytics",
    "score": 83.2,
    "tier": "VEIN",
    "stars": 0,
@@ -367,20 +213,6 @@
    "license": ""
   },
   {
-   "repo": "foodcoops/foodsoft",
-   "score": 83.2,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "debiki/talkyard",
-   "score": 83.2,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "DjangoCRM/django-crm",
    "score": 83.2,
    "tier": "VEIN",
@@ -388,7 +220,21 @@
    "license": ""
   },
   {
+   "repo": "foodcoops/foodsoft",
+   "score": 83.2,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "pyload/pyload",
+   "score": 83.2,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "debiki/talkyard",
    "score": 83.2,
    "tier": "VEIN",
    "stars": 0,
@@ -404,174 +250,6 @@
   {
    "repo": "AUTOMATIC1111/stable-diffusion-webui",
    "score": 83.2,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "dreeveapp/dreeve",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "gitroomhq/postiz-app",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "rustmailer/bichon",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "TheNickOfTime/handbrake-web",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "fccview/cronmaster",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "vanhauser-thc/thc-hydra",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "robertdavidgraham/masscan",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ultralytics/ultralytics",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "fluxerapp/fluxer",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "simplex-chat/simplex-chat",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "stoatchat/self-hosted",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "lovasoa/whitebophir",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "the-djmaze/snappymail",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "phpList/phplist3",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "friendica/friendica",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "carlnewton/habitat",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "importantimport/hatsu",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "LemmyNet/lemmy",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mastodon/mastodon",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "misskey-dev/misskey",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "pixelfed/pixelfed",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "teikei/teikei",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "elabftw/elabftw",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "loomio/loomio",
-   "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -599,6 +277,111 @@
   },
   {
    "repo": "juntaosun/ComeCut",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "phpList/phplist3",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "the-djmaze/snappymail",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "friendica/friendica",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "dreeveapp/dreeve",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "importantimport/hatsu",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "carlnewton/habitat",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "LemmyNet/lemmy",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "misskey-dev/misskey",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "gitroomhq/postiz-app",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "pixelfed/pixelfed",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "rustmailer/bichon",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "fccview/cronmaster",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "teikei/teikei",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "TheNickOfTime/handbrake-web",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "elabftw/elabftw",
    "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
@@ -682,7 +465,42 @@
    "license": ""
   },
   {
+   "repo": "fluxerapp/fluxer",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "simplex-chat/simplex-chat",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "stoatchat/self-hosted",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "lovasoa/whitebophir",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "linkwarden/linkwarden",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "loomio/loomio",
    "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
@@ -703,13 +521,6 @@
    "license": ""
   },
   {
-   "repo": "miroslavpejic85/mirotalkc2c",
-   "score": 83.0,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "miroslavpejic85/mirotalksfu",
    "score": 83.0,
    "tier": "VEIN",
@@ -717,14 +528,14 @@
    "license": ""
   },
   {
-   "repo": "foodcoopshop/foodcoopshop",
+   "repo": "miroslavpejic85/mirotalkc2c",
    "score": 83.0,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
   },
   {
-   "repo": "anonaddy/anonaddy",
+   "repo": "foodcoopshop/foodcoopshop",
    "score": 83.0,
    "tier": "VEIN",
    "stars": 0,
@@ -752,6 +563,13 @@
    "license": ""
   },
   {
+   "repo": "anonaddy/anonaddy",
+   "score": 83.0,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "SuiteCRM/SuiteCRM",
    "score": 83.0,
    "tier": "VEIN",
@@ -768,20 +586,6 @@
   {
    "repo": "LogicLabs-OU/OpenArchiver",
    "score": 82.4,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "infobyte/faraday",
-   "score": 81.3,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "aptabase/aptabase",
-   "score": 81.0,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -822,27 +626,6 @@
    "license": ""
   },
   {
-   "repo": "tboox/tbox",
-   "score": 64.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "cSploit/android",
-   "score": 61.3,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "evilsocket/xray",
-   "score": 61.3,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "jitsi/jitsi-meet",
    "score": 61.0,
    "tier": "MINE",
@@ -850,29 +633,8 @@
    "license": ""
   },
   {
-   "repo": "Pylons/pyramid",
-   "score": 58.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "moonsharp-devs/moonsharp",
    "score": 57.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "cmusphinx/pocketsphinx",
-   "score": 56.9,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "meteor/meteor",
-   "score": 56.5,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -906,71 +668,8 @@
    "license": ""
   },
   {
-   "repo": "samtools/htslib",
-   "score": 53.5,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "sehmaschine/django-grappelli",
-   "score": 52.5,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "unjs/consola",
-   "score": 52.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mackron/dr_libs",
-   "score": 52.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mackron/miniaudio",
-   "score": 52.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "sourcey/libsourcey",
-   "score": 52.4,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "django-compressor/django-compressor",
-   "score": 52.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "nathanialf/ico-pc",
    "score": 52.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "idealvin/coost",
-   "score": 51.9,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "openai/gym",
-   "score": 51.8,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -1004,13 +703,6 @@
    "license": ""
   },
   {
-   "repo": "june07/nim",
-   "score": 51.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "carlosrmz009/littleplanet",
    "score": 51.4,
    "tier": "MINE",
@@ -1032,35 +724,14 @@
    "license": ""
   },
   {
-   "repo": "posthog/posthog",
-   "score": 51.3,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "loopbackio/loopback-next",
-   "score": 51.3,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Mailu/Mailu",
-   "score": 51.3,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Hummer12007/brightnessctl",
-   "score": 51.3,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "Odrannnn/MetroidPrimePort",
+   "score": 51.3,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "posthog/posthog",
    "score": 51.3,
    "tier": "MINE",
    "stars": 0,
@@ -1074,42 +745,7 @@
    "license": ""
   },
   {
-   "repo": "expressjs/express",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Dobiasd/FunctionalPlus",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "jll63/yomm11",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "intent-garden/wui",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "jll63/yomm2",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "zeeev/wham",
+   "repo": "peiikai/LASRecomp",
    "score": 51.2,
    "tier": "MINE",
    "stars": 0,
@@ -1123,34 +759,6 @@
    "license": ""
   },
   {
-   "repo": "pennersr/django-allauth",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "getnikola/nikola",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "jtesta/ssh-audit",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "peiikai/LASRecomp",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "ikawrakow/ik_llama.cpp",
    "score": 51.2,
    "tier": "MINE",
@@ -1158,903 +766,7 @@
    "license": ""
   },
   {
-   "repo": "d8a-tech/d8a",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "orangecoloured/analog",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "langchain-ai/langgraph",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "langchain-ai/langchain",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "openai/openai-agents-python",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "stanfordnlp/dspy",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "NousResearch/hermes-agent",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "pydantic/pydantic-ai",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "run-llama/llama_index",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "semantica-agi/semantica",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ml-explore/mlx-lm",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ollama/ollama-python",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "yunjey/pytorch-tutorial",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "rasbt/deeplearning-models",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "DSKSD/DeepNLP-models-Pytorch",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "jcjohnson/pytorch-examples",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "prabhuomkar/pytorch-cpp",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mila-udem/welcome_tutorials",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "dvmazur/mixtral-offloading",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "spro/practical-pytorch",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ritchieng/deep-learning-wizard",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "rguthrie3/DeepLearningForNLPInPytorch",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "bitmagnet-io/bitmagnet",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ArchiveBox/ArchiveBox",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mafintosh/peercast",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mafintosh/webcat",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "BrainJS/brain.js",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "creationix/js-git",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "kucherenko/jscpd",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Javascipt/Jsome",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "siddharthkp/cost-of-modules",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "localtunnel/localtunnel",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "danielstjules/pjs",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "immutable-js/immutable-js",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mafintosh/why-is-node-running",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "nodejs/undici",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "valyouw/njstrace",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "watson/stackman",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "khaosdoctor/gotql",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "statsd/statsd",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "visionmedia/superagent",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "watson/console-log-level",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "automation-stack/ctrace",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "sinedied/smoke",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "slanatech/swagger-stats",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "yargs/yargs",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "pinojs/pino",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "listr2/listr2",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "SBoudrias/Inquirer.js",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "visionmedia/node-progress",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "f/omelette",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "oclif/oclif",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "bokub/gradient-string",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "gulpjs/gulp",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "parcel-bundler/parcel",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "marko-js/marko",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "vitejs/vite",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "fuse-box/fuse-box",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "nuxt/nuxt.js",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "vercel/pkg",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "fastify/fastify",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "koajs/koa",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "vercel/micro",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "senecajs/seneca",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Urigo/awesome-meteor",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "node-fetch/node-fetch",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "themerdev/themer",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ramda/ramda",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "kefirjs/kefir",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "0x00-0x00/shellpop",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "EgeBalci/amber",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "kaiiyer/awesome-vulnerable",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ariary/QueenSono",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "SigPloiter/SigPloit",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "m0rtem/CloudFail",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "michenriksen/aquatone",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "chrislee35/passivedns-client",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "TheNumbat/rpp",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Siv3D/OpenSiv3D",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Dobiasd/frugally-deep",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "flashlight/flashlight",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "volt-software/ichor",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "skypjack/uvw",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "andrewrk/libsoundio",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "NativeInstruments/ni-media",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "gammasoft71/xtd",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "davisking/dlib",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "xhawk18/promise-cpp",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "iboB/itlib",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "SYSTRAN/faster-whisper",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Farama-Foundation/Gymnasium",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "scikit-learn-contrib/imbalanced-learn",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "litestar-org/litestar",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "vitalik/django-ninja",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "marshmallow-code/flask-smorest",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "apiflask/apiflask",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "rmyndharis/OpenWA-plugins",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "smallwat3r/shhh",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "docker-mailserver/docker-mailserver",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "haraka/Haraka",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "thelounge/thelounge",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "fonoster/routr",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ArtalkJS/Artalk",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "flarum/flarum",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "isso-comments/isso",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "umputun/remark42",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mynaparrot/plugNmeet-server",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "OpenSlides/OpenSlides",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "indico/indico",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "openSUSE/osem",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "bludit/bludit",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "thomas4019/expressa",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "onetimesecret/onetimesecret",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "pgjones/hypercorn",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "jpadilla/pyjwt",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "dfunckt/django-rules",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "matthewwithanm/python-markdownify",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "pynamodb/PynamoDB",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "MongoEngine/mongoengine",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mymarilyn/clickhouse-driver",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "urllib3/urllib3",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "pgvector/pgvector-python",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "WestpointLtd/tls_prober",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "nixawk/pentest-wiki",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "r0oth3x49/ghauri",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "projectdiscovery/subfinder",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "hahwul/dalfox",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "jtheoof/swappy",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Apollo3zehn/PureHDF",
+   "repo": "ggerganov/llama.cpp",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -2062,13 +774,6 @@
   },
   {
    "repo": "blockvectra/mcp",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ggerganov/llama.cpp",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -2096,13 +801,6 @@
    "license": ""
   },
   {
-   "repo": "findip-net/findip-mcp",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "EdgePlat/edgepedia-mcp",
    "score": 51.1,
    "tier": "MINE",
@@ -2117,6 +815,13 @@
    "license": ""
   },
   {
+   "repo": "findip-net/findip-mcp",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "sky-access/skyaccess-mcp",
    "score": 51.1,
    "tier": "MINE",
@@ -2124,14 +829,14 @@
    "license": ""
   },
   {
-   "repo": "RAAAAAGEEEEE/vuntum-mcp",
+   "repo": "Vertisky/toolalize-mcp",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
    "license": ""
   },
   {
-   "repo": "Vertisky/toolalize-mcp",
+   "repo": "RAAAAAGEEEEE/vuntum-mcp",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -2152,6 +857,13 @@
    "license": ""
   },
   {
+   "repo": "ashlrai/ashlrcode",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "Cgboal/SonarSearch",
    "score": 51.1,
    "tier": "MINE",
@@ -2166,7 +878,7 @@
    "license": ""
   },
   {
-   "repo": "Bhanunamikaze/Agentic-SEO-Skill",
+   "repo": "ashlrai/morphkit",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -2187,14 +899,7 @@
    "license": ""
   },
   {
-   "repo": "ashlrai/morphkit",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ashlrai/ashlrcode",
+   "repo": "Apollo3zehn/PureHDF",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -2544,6 +1249,90 @@
    "license": ""
   },
   {
+   "repo": "docker-mailserver/docker-mailserver",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "thelounge/thelounge",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "orangecoloured/analog",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ArtalkJS/Artalk",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "d8a-tech/d8a",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "isso-comments/isso",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "umputun/remark42",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ArchiveBox/ArchiveBox",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "bitmagnet-io/bitmagnet",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "mynaparrot/plugNmeet-server",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "openSUSE/osem",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "thomas4019/expressa",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "Lessify/localess",
    "score": 51.1,
    "tier": "MINE",
@@ -2579,6 +1368,20 @@
    "license": ""
   },
   {
+   "repo": "rmyndharis/OpenWA-plugins",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "smallwat3r/shhh",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "payloadcms/payload",
    "score": 51.1,
    "tier": "MINE",
@@ -2586,7 +1389,21 @@
    "license": ""
   },
   {
+   "repo": "onetimesecret/onetimesecret",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "leon-ai/leon",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Bhanunamikaze/Agentic-SEO-Skill",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -2712,371 +1529,7 @@
    "license": ""
   },
   {
-   "repo": "emanuelef/daily-stars-explorer",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "HitKeep/hitkeep",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "lutzroeder/netron",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "anthropics/claude-agent-sdk-python",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "K-Dense-AI/scientific-agent-skills",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "wkentaro/pytorch-fcn",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "turboderp-org/exllamav3",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "turboderp/exllamav2",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "turboderp/exui",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Turfjs/turf",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "http-party/http-server",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "webtorrent/webtorrent",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mafintosh/peerwiki",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "kessler/node-bcat",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "MrRio/vtop",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "voidcosmos/npkill",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "joyent/node-vstream",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "winstonjs/winston",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "chjj/blessed",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "madbence/node-drawille",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "webpack/webpack",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "fivdi/spi-device",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "fivdi/onoff",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "fivdi/i2c-bus",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "fivdi/pigpio",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "thinkjs/thinkjs",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "fireeye/gocrack",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "kOaDT/oss-oopssec-store",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ETLCPP/etl",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ChunelFeng/CGraph",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "hkr04/cpp-mcp",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "libuv/libuv",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ekg/vcflib",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "sahaRatul/sela",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "libAudioFlux/audioFlux",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "AppImageCommunity/AppImageUpdate",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "pgmpy/pgmpy",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "bottlepy/bottle",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "wemake-services/django-modern-rest",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "notifo-io/notifo",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Tiledesk/tiledesk",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "bolt/core",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "miguelgrinberg/Flask-SocketIO",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "sqlalchemy/mako",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "evansd/whitenoise",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "sqlalchemy/sqlalchemy",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "kootenpv/yagmail",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "coleifer/peewee",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "cole/aiosmtplib",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "justmao945/mallory",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "carpedm20/awesome-hacking",
-   "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "LukashonakV/cava",
    "score": 51.0,
    "tier": "MINE",
    "stars": 0,
@@ -3118,7 +1571,49 @@
    "license": ""
   },
   {
+   "repo": "Tiledesk/tiledesk",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "lutzroeder/netron",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "emanuelef/daily-stars-explorer",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "bolt/core",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "Squidex/squidex",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "notifo-io/notifo",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "turboderp-org/exllamav3",
    "score": 51.0,
    "tier": "MINE",
    "stars": 0,
@@ -3127,27 +1622,6 @@
   {
    "repo": "shitake2333/GUML",
    "score": 51.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "gkbrk/slowloris",
-   "score": 50.9,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "wlgq2/uv-cpp",
-   "score": 50.9,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mozillazg/python-pinyin",
-   "score": 50.9,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -3167,13 +1641,6 @@
    "license": ""
   },
   {
-   "repo": "PipeWire/pipewire",
-   "score": 50.6,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "kibitzr/kibitzr",
    "score": 50.6,
    "tier": "MINE",
@@ -3181,21 +1648,7 @@
    "license": ""
   },
   {
-   "repo": "davidmarkclements/0x",
-   "score": 50.5,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "adonisjs/core",
-   "score": 50.5,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "adamstark/AudioFile",
+   "repo": "paazmaya/shuji",
    "score": 50.5,
    "tier": "MINE",
    "stars": 0,
@@ -3209,92 +1662,8 @@
    "license": ""
   },
   {
-   "repo": "mkleehammer/pyodbc",
-   "score": 50.5,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "paazmaya/shuji",
-   "score": 50.5,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "umbraco/Umbraco-CMS",
    "score": 50.5,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mafintosh/peerflix",
-   "score": 50.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "axios/axios",
-   "score": 50.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "node-usb/node-usb",
-   "score": 50.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "isomorphic-git/isomorphic-git",
-   "score": 50.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "h26forge/h26forge",
-   "score": 50.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "micknoise/Maximilian",
-   "score": 50.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "marcantondahmen/automad",
-   "score": 50.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "duckdb/duckdb",
-   "score": 50.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "USArmyResearchLab/Dshell",
-   "score": 50.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "sethsec/celerystalk",
-   "score": 50.4,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -3314,23 +1683,16 @@
    "license": ""
   },
   {
-   "repo": "sissbruecker/linkding",
+   "repo": "marcantondahmen/automad",
    "score": 50.4,
    "tier": "MINE",
    "stars": 0,
    "license": ""
   },
   {
-   "repo": "Cockpit-HQ/Cockpit",
-   "score": 49.9,
+   "repo": "sissbruecker/linkding",
+   "score": 50.4,
    "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "snort3/snort3",
-   "score": 44.8,
-   "tier": "GOLD",
    "stars": 0,
    "license": ""
   },
@@ -3349,35 +1711,7 @@
    "license": ""
   },
   {
-   "repo": "PenturaLabs/Linux_Exploit_Suggester",
-   "score": 42.0,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "darkoperator/dnsrecon",
-   "score": 42.0,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "RUB-NDS/PRET",
-   "score": 42.0,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "switch87/snakebyte-overlay",
-   "score": 42.0,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "hyphanet/fred",
+   "repo": "KytyPS5/KytyPS5",
    "score": 42.0,
    "tier": "GOLD",
    "stars": 0,
@@ -3392,55 +1726,6 @@
   },
   {
    "repo": "unrealircd/unrealircd",
-   "score": 42.0,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "discourse/discourse",
-   "score": 42.0,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "joomla/joomla-cms",
-   "score": 42.0,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "backdrop/backdrop",
-   "score": 42.0,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "PyMySQL/mysqlclient",
-   "score": 42.0,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "secdev/scapy",
-   "score": 42.0,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "drwetter/testssl.sh",
-   "score": 42.0,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "KytyPS5/KytyPS5",
    "score": 42.0,
    "tier": "GOLD",
    "stars": 0,
@@ -3468,7 +1753,35 @@
    "license": ""
   },
   {
+   "repo": "hyphanet/fred",
+   "score": 42.0,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "discourse/discourse",
+   "score": 42.0,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "flatpressblog/flatpress",
+   "score": 42.0,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "joomla/joomla-cms",
+   "score": 42.0,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "backdrop/backdrop",
    "score": 42.0,
    "tier": "GOLD",
    "stars": 0,
@@ -3489,20 +1802,6 @@
    "license": ""
   },
   {
-   "repo": "facebookresearch/simmc2",
-   "score": 41.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "trailofbits/skills",
-   "score": 41.4,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "phpbb/phpbb",
    "score": 39.1,
    "tier": "GOLD",
@@ -3512,27 +1811,6 @@
   {
    "repo": "taleshape-com/shaper",
    "score": 38.8,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "TheWicklowWolf/BookBounty",
-   "score": 38.7,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "aui-framework/aui",
-   "score": 38.7,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "conversejs/converse.js",
-   "score": 38.7,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -3573,6 +1851,20 @@
    "license": ""
   },
   {
+   "repo": "conversejs/converse.js",
+   "score": 38.7,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "TheWicklowWolf/BookBounty",
+   "score": 38.7,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "mozilla/fxa",
    "score": 38.7,
    "tier": "GOLD",
@@ -3594,27 +1886,6 @@
    "license": ""
   },
   {
-   "repo": "stevenaldinger/decker",
-   "score": 37.5,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "paralax/awesome-honeypots",
-   "score": 35.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "bountyyfi/lonkero",
-   "score": 34.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "zone-eu/wildduck",
    "score": 34.2,
    "tier": "GOLD",
@@ -3624,6 +1895,27 @@
   {
    "repo": "textpattern/textpattern",
    "score": 34.0,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "egno/work-calendar",
+   "score": 33.3,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "isledecomp/isle",
+   "score": 33.3,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "isledecomp/isle-portable",
+   "score": 33.3,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -3657,34 +1949,6 @@
    "license": ""
   },
   {
-   "repo": "psycopg/psycopg",
-   "score": 33.3,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "egno/work-calendar",
-   "score": 33.3,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "isledecomp/isle",
-   "score": 33.3,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "isledecomp/isle-portable",
-   "score": 33.3,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "pimcore/pimcore",
    "score": 32.8,
    "tier": "GOLD",
@@ -3699,13 +1963,6 @@
    "license": ""
   },
   {
-   "repo": "oracle/python-oracledb",
-   "score": 31.5,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "xenia-project/FFmpeg",
    "score": 31.5,
    "tier": "GOLD",
@@ -3714,13 +1971,6 @@
   },
   {
    "repo": "apache/airflow",
-   "score": 31.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "johnnyxmas/ScanCannon",
    "score": 31.1,
    "tier": "GOLD",
    "stars": 0,
@@ -3741,630 +1991,7 @@
    "license": ""
   },
   {
-   "repo": "reactivex/rxjs",
-   "score": 30.4,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "oneapi-src/oneDNN",
-   "score": 30.4,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "OWASP/Amass",
-   "score": 30.3,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "huggingface/transformers",
-   "score": 30.2,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Diyago/Tabular-data-generation",
-   "score": 30.2,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "rasbt/LLMs-from-scratch",
-   "score": 30.2,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "abseil/abseil-cpp",
-   "score": 30.2,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "unslothai/unsloth",
-   "score": 30.2,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "catboost/catboost",
-   "score": 30.2,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "MagicStack/asyncpg",
-   "score": 30.2,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ClickHouse/clickhouse-connect",
-   "score": 30.2,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Litlyx/litlyx",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "middlewarehq/middleware",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "offen/offen",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "PrefectHQ/fastmcp",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "google/adk-python",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mem0ai/mem0",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "sgl-project/sglang",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "huggingface/sentence-transformers",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "deepseek-ai/DeepInfer",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "vllm-project/vllm",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "bigcode-project/starcoder2",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ParisNeo/lollms-webui",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "bigcode-project/bigcode-dataset",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "dgtlmoon/changedetection.io",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "alibaba/pipcook",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "SheetJS/sheetjs",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "yodaos-project/yodaos",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "sfninja/thetool",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "google/zx",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mde/ejs",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "actionhero/actionhero",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "paranoidninja/CarbonCopy",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "hslatman/awesome-industrial-control-system-security",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "google/tsunami-security-scanner",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "elceef/dnstwist",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Balasys/dheater",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "bloomberg/bde",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "sogou/workflow",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "alibaba/PhotonLibOS",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "xjdr-alt/entropix",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "huggingface/peft",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "huggingface/diffusers",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "huggingface/trl",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "jax-ml/jax",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "axolotl-ai-cloud/axolotl",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Lightning-AI/pytorch-lightning",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "keras-team/keras",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "dmlc/xgboost",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Nixtla/statsforecast",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "google-research/timesfm",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "madmaze/pytesseract",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "tesseract-ocr/tesseract",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "JaidedAI/EasyOCR",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "voxel51/fiftyone",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "PaddlePaddle/PaddleOCR",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "spotify/annoy",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "AnswerDotAI/fasthtml",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "tornadoweb/tornado",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "reflex-dev/reflex",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "nltk/nltk",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "binwiederhier/ntfy",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "LiveHelperChat/livehelperchat",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Luzifer/ots",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "SAMA-Communications/sama-client",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "matrix-construct/tuwunel",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "tinode/webapp",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "zulip/zulip",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "kiwiirc/kiwiirc",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "znc/znc",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "apache/answer",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Erudika/scoold",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "snikket-im/snikket-server",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "jitsi/jitsi-videobridge",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "igniterealtime/Openfire",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "spec-first/connexion",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "aio-libs/yarl",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "BeanieODM/beanie",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mongodb/django-mongodb-backend",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "simonw/sqlite-utils",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mongodb/mongo-python-driver",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "chroma-core/chroma",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "lancedb/lancedb",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "aio-libs/aiohttp",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "chdb-io/chdb",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "puresec/lambda-proxy",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ashishb/android-security-awesome",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "toniblyx/my-arsenal-of-aws-security-tools",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "P0cL4bs/wifipumpkin3",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "google/material-design-icons",
    "score": 30.1,
    "tier": "GOLD",
    "stars": 0,
@@ -4400,27 +2027,6 @@
   },
   {
    "repo": "Smithsonian/smithsonian-openaccess",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "alronz/awesome-stable-diffusion-webui",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "alronz/awesome-ai-talking-heads",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "alronz/Awesome-Auto-GPT",
    "score": 30.1,
    "tier": "GOLD",
    "stars": 0,
@@ -4644,6 +2250,90 @@
    "license": ""
   },
   {
+   "repo": "SAMA-Communications/sama-client",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "zulip/zulip",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "kiwiirc/kiwiirc",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "znc/znc",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "apache/answer",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Litlyx/litlyx",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "middlewarehq/middleware",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "offen/offen",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Erudika/scoold",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "jitsi/jitsi-videobridge",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "snikket-im/snikket-server",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "dgtlmoon/changedetection.io",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "StackStorm/st2",
    "score": 30.1,
    "tier": "GOLD",
@@ -4700,6 +2390,69 @@
    "license": ""
   },
   {
+   "repo": "binwiederhier/ntfy",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "LiveHelperChat/livehelperchat",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Luzifer/ots",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "matrix-construct/tuwunel",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "tinode/webapp",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "igniterealtime/Openfire",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "alronz/Awesome-Auto-GPT",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "alronz/awesome-ai-talking-heads",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "alronz/awesome-stable-diffusion-webui",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "openai/codex",
    "score": 30.1,
    "tier": "GOLD",
@@ -4716,27 +2469,6 @@
   {
    "repo": "afshinm/zerobox",
    "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "getsentry/skills",
-   "score": 29.6,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "owasp/nodegoat",
-   "score": 29.6,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "binwiederhier/ntfy-android",
-   "score": 29.6,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -4777,15 +2509,15 @@
    "license": ""
   },
   {
-   "repo": "kestra-io/kestra",
+   "repo": "binwiederhier/ntfy-android",
    "score": 29.6,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
   },
   {
-   "repo": "0xeb/fastmcpp",
-   "score": 29.5,
+   "repo": "kestra-io/kestra",
+   "score": 29.6,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -4805,55 +2537,6 @@
    "license": ""
   },
   {
-   "repo": "facebook/libphenom",
-   "score": 28.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "scylladb/seastar",
-   "score": 28.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "SparkyStudios/AmplitudeAudioSDK",
-   "score": 28.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "kornia/kornia",
-   "score": 28.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "adbar/trafilatura",
-   "score": 28.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "apache/cassandra-python-driver",
-   "score": 28.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "soramanew/m3shapes",
-   "score": 28.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "techno-tim/k3s-ansible",
    "score": 28.9,
    "tier": "GOLD",
@@ -4863,13 +2546,6 @@
   {
    "repo": "dongfangzhizhu/AudioCpp.NET",
    "score": 28.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "psf/requests",
-   "score": 28.8,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -4898,34 +2574,6 @@
   {
    "repo": "ckan/ckan",
    "score": 27.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "wsvincent/awesome-django",
-   "score": 26.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "mail-in-a-box/mailinabox",
-   "score": 26.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "caesar0301/awesome-pcaptools",
-   "score": 26.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "thehappydinoa/awesome-censys-queries",
-   "score": 26.1,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -5008,36 +2656,8 @@
    "license": ""
   },
   {
-   "repo": "lieff/minimp3",
-   "score": 25.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "dhamaniasad/awesome-postgres",
-   "score": 25.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "planetopendata/awesome-sqlite",
-   "score": 25.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "apsdehal/awesome-ctf",
-   "score": 25.9,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Cugu/awesome-forensics",
-   "score": 25.9,
+   "repo": "mail-in-a-box/mailinabox",
+   "score": 26.1,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -5078,28 +2698,7 @@
    "license": ""
   },
   {
-   "repo": "fabacab/awesome-lockpicking",
-   "score": 25.8,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "RedTeamOperations/PivotSuite",
-   "score": 25.8,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "hyperupcall/awesome-mastodon",
-   "score": 25.8,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "quozd/awesome-dotnet",
    "score": 25.8,
    "tier": "GOLD",
    "stars": 0,
