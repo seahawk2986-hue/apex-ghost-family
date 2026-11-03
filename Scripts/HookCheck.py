@@ -1,37 +1,61 @@
-"""HookCheck - THE INTEGRATION TRIPWIRE (2026-11-04).
+"""HookCheck v2.2 - THE NO-REPLACE GUARANTEE (2026-11-04).
 
-THE MEASURED ATTACK-CLASS (from tonight's forensics): the family's own
-re-issue machinery (the healer's full-rewrite fallback / the rebase dance)
-silently REVERTS integration hooks - the organs' hooks vanished from
-ApexDream.py and receipts_page.py between edit and commit, committed by
-the honest `add -A`. Nothing was malicious; hooks still vanished.
-
-THE TRIPWIRE: a MANIFEST of required marker-lines per integration file.
-Every sentry fire (1-min cadence, 30-min cooldown on any repair): check;
-a missing marker = HONEST ALARM (episodic) + an automatic re-install via
-the manifest's PATCH (a SEARCH/REPLACE instruction the checker executes
-itself, idempotently guarded by the marker itself).
-The manifest is data - extending the family means extending a JSON.
-$0; stdlib; sub-second."""
+Every deliberate upgrade of every round = a REQUIRED MARKER here; the list
+only ever GROWS; the sentry re-checks all markers each fire (30-min repair
+cooldown); missing markers = the honest alarm + an idempotent re-hook
+(where a repair payload exists), never a wholesale rewrite.
+Rounds recorded: the security/repair round, the fleet round, the GI round,
+the memory round, the autonomy round, the outbound valve."""
 import io
 import json
 import os
 import sys
 import time
 
-if getattr(sys.stdout, "apex_wrapped", False) is False:
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8",
-                                  errors="replace")
-    sys.stdout.apex_wrapped = True
+if hasattr(sys.stdout, "reconfigure") and not getattr(sys.stdout, "_apex_reconfigured", False):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stdout._apex_reconfigured = True
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr._apex_reconfigured = True
 
 REPO = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
-AD = r"C:\Users\seaha\Apex-Adapter"
 CD = os.path.join(REPO, "Logs", "hookcheck_cooldown.txt")
-MANIFEST = {
-    "Scripts/ApexDream.py": [
-        {"marker": "import LocalGym as _lg",
-         "anchor": 'm.record_event("training", "night organs: " + ", ".join(_organ_notes))',
-         "insert": ("""    try:
+
+REQUIRED = {
+    "run_apex_evolution.py": ["hmac.compare_digest", "THE REPLAY CACHE", "THE RESEARCH",
+                              "def deep_recall", "CONTAINER-ONLY EXECUTION",
+                              'get("/dashboard")', "receipts_page.py"],
+    "ApexMemory.py": ["EARNED-MEMORY", "RESURRECTION"],
+    "ApexChatPage.html": ["authRefresh", "THE SELF-HEAL"],
+    "Scripts/SkillUpgrader.py": ["THE HONESTY FIX"],
+    "Scripts/FeedGrain.py": ["leads_sha256"],
+    "Scripts/EarnLoop.py": ["ONCE-DAILY", "BOUNDED DIARY"],
+    "Scripts/ApexUpward.py": ["briefs_filed"],
+    "Scripts/TotalEvolution.py": ["_bf", "DE-SELF-REFERENCED"],
+    "Scripts/GenePool.py": ["UNMEASURED-LINEAGE"],
+    "Scripts/SwarmOrchestrator.py": ["CRASH-PROOF"],
+    "Scripts/LaneGuard.py": ["pacer-parity fix"],
+    "Scripts/ApexShard.py": ["LENGTH-AWARE TIMEOUT LADDER", "def _tier_timeout",
+                             'STORM_BUDGET = {"protected"', "LaneBandit.update",
+                             "DELEGATED TO THE SPINE", "HTTP 410"],
+    "Scripts/LaneBandit.py": ["q_score", "seed_from_capability_map"],
+    "Scripts/AutoRoster.py": ["retire_dead", "catalog_candidates"],
+    "Scripts/WarmBrain.py": ["DEMAND-ADAPTIVE", "PIN_ORDER"],
+    "Scripts/ApexIO.py": ["def env", "def atom", "def lock"],
+    "Scripts/AnswerNorm.py": ["def match"],
+    "Scripts/RealityCourt.py": ["def seal", "def judge", "def street", "AnswerNorm"],
+    "Scripts/LocalGym.py": ["grade_brain", "AnswerNorm"],
+    "Scripts/HorizonLadder.py": ["def measure"],
+    "Scripts/LightResearch.py": ["def research", "def triggered"],
+    "Scripts/SweSmoke.py": ["DockerCourt", "run_beat"],
+    "Scripts/HookCheck.py": ["check_and_repair"],
+    "receipts_page.py": ["local_mind", "horizon.json", "CanonCounts", "outcomes.json",
+                         "blind court", "escape"],
+    "Scripts/FilingBridge.py": ["def prepare", "def file", "GITHUB_TOKEN_CLASSIC", "DAY_CAP"],
+    "Scripts/CertifyBridge.py": ["def certify", "NAME LAW"],
+}
+
+DREAM_HOOKS = """    try:
         import LocalGym as _lg
         _lg.grade_brain()
         _organ_notes.append("the serving floor graded on the sealed pocket")
@@ -61,29 +85,30 @@ MANIFEST = {
         _organ_notes.append(f"filing-batch prepared ({_doc.get('batch_size', 0)} rows)")
     except Exception as _e_fb:
         m.record_event("filing_bridge", "filing-bridge skipped honestly: " + str(_e_fb)[:70])
-    """)},
-        {"marker": "import OutputYardstick as _y", "skip": True},
-    ],
-    "receipts_page.py": [
-        {"marker": "local_mind.json", 
-         "anchor": "return HTMLResponse(f\"\"\"<!doctype html>",
-         "insert": ("""    # THE SERVING-BRAIN REPORT (2026-11-04 GI-round)
-    lm = _json(os.path.join(R, "Config", "local_mind.json"))
-    if lm:
-        yard += (f"<div class='kv'>the serving floor: <b>{_esc(lm.get('brain'))}</b> "
-                 f"scored <b>{_esc(lm.get('acc'))}%</b> on the SAME sealed "
-                 f"pocket ({_esc(lm.get('n'))} drills, same ruler) - the "
-                 f"fallback's real capability, published</div>")
-    # THE AUTONOMY HORIZON (2026-11-04, the METR-analog receipt)
-    hz = _json(os.path.join(R, "Config", "horizon.json"))
-    if hz:
-        yard += (f"<div class='kv'>the autonomy horizon: <b>{_esc(hz.get('steps'))} "
-                 f"steps/{_esc(hz.get('minutes'))} min</b> at "
-                 f"{_esc(hz.get('completion'))} completion ({_esc(hz.get('trend'))}) - "
-                 f"the METR-analog from the family's own ledgers</div>")
+"""
 
-    """)},
-    ],
+RECEIPTS_HOOKS = (
+    "    lm = _json(os.path.join(R, \"Config\", \"local_mind.json\"))\n"
+    "    if lm:\n"
+    "        yard += (f\"<div class='kv'>the serving floor: <b>{_esc(lm.get('brain'))}</b> \"\n"
+    "                 f\"scored <b>{_esc(lm.get('acc'))}%</b> on the SAME sealed \"\n"
+    "                 f\"pocket ({_esc(lm.get('n'))} drills, same ruler) - the \"\n"
+    "                 f\"fallback's real capability, published</div>\")\n"
+    "    hz = _json(os.path.join(R, \"Config\", \"horizon.json\"))\n"
+    "    if hz:\n"
+    "        yard += (f\"<div class='kv'>the autonomy horizon: <b>{_esc(hz.get('steps'))} \"\n"
+    "                 f\"steps/{_esc(hz.get('minutes'))} min</b> at \"\n"
+    "                 f\"{_esc(hz.get('completion'))} completion ({_esc(hz.get('trend'))}) - \"\n"
+    "                 f\"the METR-analog from the family's own ledgers</div>\")\n\n"
+)
+
+REPAIRS = {
+    "Scripts/ApexDream.py": (
+        'm.record_event("training", "night organs: " + ", ".join(_organ_notes))',
+        DREAM_HOOKS),
+    "receipts_page.py": (
+        'return HTMLResponse(f"""<!doctype html>',
+        RECEIPTS_HOOKS),
 }
 
 
@@ -91,13 +116,12 @@ def check_and_repair():
     try:
         if os.path.exists(CD):
             last = open(CD, encoding="utf-8").read().strip()
-            if time.strftime("%Y-%m-%d %H:%M") in last[:16] and \
-                    time.time() - time.mktime(time.strptime(last, "%Y-%m-%d %H:%M:%S")) < 1800:
+            if time.time() - time.mktime(time.strptime(last, "%Y-%m-%d %H:%M:%S")) < 1800:
                 return "cooldown"
     except Exception:
         pass
-    repaired, alarmed = [], []
-    for rel, hooks in MANIFEST.items():
+    repaired, alarmed, green = [], [], 0
+    for rel, mts in REQUIRED.items():
         p = os.path.join(REPO, rel)
         if not os.path.isfile(p):
             continue
@@ -105,25 +129,24 @@ def check_and_repair():
             t = open(p, encoding="utf-8-sig").read()
         except Exception:
             continue
-        for h0 in hooks:
-            if h0.get("skip"):
-                continue
-            mk = h0["marker"]
-            if mk in t:
-                continue
-            anchor = h0.get("anchor", "")
-            insert = h0.get("insert", "")
-            idx = t.find(anchor)
-            if idx == -1 or not insert:
-                alarmed.append(f"{rel}: MARKER MISSING ({mk[:40]}); anchor absent - manual repair needed")
-                continue
-            t2 = t[:idx] + insert + t[idx:]
-            tmp = p + ".hookcheck.tmp"
-            with open(tmp, "w", encoding="utf-8", newline="") as f:
-                f.write(t2)
-            os.replace(tmp, p)
-            repaired.append(f"{rel}: {mk[:40]} re-installed")
-            t = t2
+        missing = [mk for mk in mts if mk not in t]
+        if not missing:
+            green += len(mts)
+            continue
+        if rel in REPAIRS:
+            anchor, insert = REPAIRS[rel]
+            if len(missing) >= len(mts) * 0.6:
+                idx = t.find(anchor)
+                if idx != -1:
+                    t2 = t[:idx] + insert + t[idx:]
+                    tmp = p + ".hookcheck.tmp"
+                    with open(tmp, "w", encoding="utf-8", newline="") as f:
+                        f.write(t2)
+                    os.replace(tmp, p)
+                    repaired.append(f"{rel}: hooks re-installed ({len(missing)} markers back)")
+                    green += len(mts) - len(missing)
+                    continue
+        alarmed.append(f"{rel}: MISSING ({missing[0][:42]}...) - needs a deliberate repair")
     if repaired or alarmed:
         try:
             with open(os.path.join(REPO, "memory_episodic.jsonl"), "a",
@@ -143,8 +166,9 @@ def check_and_repair():
         print("[tripwire]", r0)
     for a0 in alarmed:
         print("[tripwire ALARM]", a0)
-    return {"repaired": repaired, "alarmed": alarmed}
+    return {"green": green, "repaired": len(repaired), "alarmed": len(alarmed)}
 
 
 if __name__ == "__main__":
-    check_and_repair()
+    r0 = check_and_repair()
+    print("[tripwire]:", r0)

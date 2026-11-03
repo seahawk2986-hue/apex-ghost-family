@@ -13,7 +13,12 @@ import os
 import sys
 import time
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+if hasattr(sys.stdout, "reconfigure") and not getattr(sys.stdout, "_apex_reconfigured", False):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stdout._apex_reconfigured = True   # reconfigure the EXISTING wrapper
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr._apex_reconfigured = True   # NEVER replace sys.stdout: the GC
+                                           # closes the original = the shared buffer dies
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import CloudBrain
 

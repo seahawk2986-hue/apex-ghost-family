@@ -1,0 +1,43 @@
+# The SWE-CLASS COURT - outsourced entirely to GitHub's machines (free for
+# public repos): the drill-court runs at dawn ON THE RUNNER (mini-swe-agent
+# + the free Groq lane + the sealed docker court), commits the score rows
+# back. The box sleeps; the leaderboard climbs anyway.
+# FOUNDER-GATE: add GROQ_API_KEY to the repo's Actions secrets (one paste).
+name: swe-court
+
+on:
+  schedule:
+    - cron: "5 7 * * *"      # 07:05 UTC daily (dawn)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  court:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: The drill beat (on the runner = off-box by design)
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          pip install --quiet mini-swe-agent pytest
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, 'Scripts')
+          from SweSmoke import run_beat
+          run_beat(court_tasks=3)
+          PY
+      - name: Commit the score rows back
+        run: |
+          git config user.name "apex-ghost-court"
+          git config user.email "court@apex-ghost-family"
+          git add Scores/swe_smoke.jsonl || true
+          git diff --cached --quiet && echo "no new rows" || git commit -m "swe-court: the dawn beat (on the runner) [skip ci]"
+          git pull --rebase origin main || true
+          git push || true

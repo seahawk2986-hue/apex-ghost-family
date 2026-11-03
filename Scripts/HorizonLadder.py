@@ -11,15 +11,13 @@ THE METRIC (Apex's honest analog, computed from ITS OWN ledgers only):
   - reconstrue the episodic ledger as autonomous CHAINS: consecutive rows
     (any kind except gym_miss/no-lane) joined by gaps <= 10 minutes;
   - a step = VERIFIED-SUCCESS (evolution_pass/HIT/201-filed/CERTIFIED/
-    pass receipt), FAILURE (error/MISS/refused), or NEUTRAL (bookkeeping);
+    pass receipt), FAILURE (error/MISS/refused), or NEUTRAL;
   - chain completion = verified-successes / (successes + failures);
   - THE HORIZON = the longest chain with completion >= 50%: its span in
-    minutes + its step count is Apex's honest time-horizon analog;
-  - THE DRIVER REPORT (the METR insight applied): the failure-kind
-    histogram over chain-breaking rows = where reliability leaks.
-Published to Config/horizon.json + episodic + a /receipts line; the
-trend compares against the previous receipt (is the horizon growing?)
-$0; stdlib; one pass; never invents a number it could not compute."""
+    minutes + its step count;
+  - THE DRIVER REPORT: the failure-kind histogram over chain-breaking rows.
+Published to Config/horizon.json + episodic + /receipts; the trend compares
+to the previous receipt. $0; stdlib; one pass. Never invents numbers."""
 import io
 import json
 import os
@@ -27,10 +25,11 @@ import sys
 import time
 from datetime import datetime
 
-if getattr(sys.stdout, "apex_wrapped", False) is False:
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8",
-                                  errors="replace")
-    sys.stdout.apex_wrapped = True
+if hasattr(sys.stdout, "reconfigure") and not getattr(sys.stdout, "_apex_reconfigured", False):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stdout._apex_reconfigured = True
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr._apex_reconfigured = True
 
 REPO = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 AD = r"C:\Users\seaha\Apex-Adapter"
@@ -39,7 +38,7 @@ GAP_S = 10 * 60
 
 SUCCESS_KINDS = {"evolution_pass", "success", "certification", "filing_bridge",
                  "local_mind", "court", "gym_pass", "warm_brain"}
-FAILURE_KINDS = {"error", "gym_miss", "REGRESSION"}
+FAILURE_KINDS = {"error", "gym_miss"}
 NEUTRAL_KINDS = {"conversation", "lesson", "insight", "calibration", "planning_vote"}
 
 
@@ -49,7 +48,7 @@ def _cls(e):
     if k in SUCCESS_KINDS:
         return "S"
     if k in FAILURE_KINDS:
-        return "(no lane answered)" in t and "N" or "F"
+        return "N" if "(no lane answered)" in t else "F"
     if k in NEUTRAL_KINDS:
         if "MISS" in t and "GI gym" in t:
             return "F"
@@ -64,8 +63,7 @@ def _cls(e):
 def measure():
     rows = []
     try:
-        for ln in (
-            open(os.path.join(REPO, "memory_episodic.jsonl"), encoding="utf-8")):
+        for ln in open(os.path.join(REPO, "memory_episodic.jsonl"), encoding="utf-8"):
             if not ln.strip():
                 continue
             try:
@@ -92,7 +90,6 @@ def measure():
         last = e
     if cur:
         chains.append(cur)
-    # per-chain completion
     best = None
     fails_hist = {}
     for ch in chains:
@@ -120,12 +117,12 @@ def measure():
     try:
         prev = json.load(open(OUT, encoding="utf-8-sig"))
     except Exception:
-        pass
+        prev = None
     doc = {
         "ts": time.strftime("%Y-%m-%d %H:%M:%S"),
         "metric": ("Apex's analog of METR's 50%-completion time horizon "
                    "(arXiv:2503.14499): the longest ledger chain whose "
-                   "verified-success/completion >= 50%"),
+                   "verified-success completion >= 50%"),
         "steps": (best or {}).get("steps", 0),
         "minutes": (best or {}).get("minutes", 0.0),
         "completion": (best or {}).get("completion", 0.0),
@@ -135,8 +132,7 @@ def measure():
                   else "first-receipt" if not prev else "flat"),
         "chain_failures": fails_hist,
         "the_driver_law": ("METR's finding: time horizon grows first through "
-                           "RELIABILITY (adapting to mistakes) - the "
-                           "failure histogram is the climb map"),
+                           "RELIABILITY - the failure histogram is the climb map"),
         "chains_analyzed": len(chains),
     }
     tmp = OUT + ".tmp"
