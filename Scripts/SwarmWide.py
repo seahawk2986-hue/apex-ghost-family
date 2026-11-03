@@ -144,19 +144,25 @@ def ask_wide(prompt, max_tokens=400, purpose="", nid=None):
                                           .get("latency_ms") or 9999)):
         if (st["asks"].get(n["id"], 0) or 0) >= n.get("daily_cap", 50):
             continue   # law 2: the width never exceeds the owner's cap
-        try:
-            body = json.dumps({"prompt": prompt[:4000],
-                               "max_tokens": max_tokens,
-                               "purpose": purpose}).encode()
-            req = urllib.request.Request(
-                n["url"].rstrip("/") + "/ask", data=body,
-                headers={"Content-Type": "application/json",
-                         "User-Agent": "ApexSwarmWide/1.0"}, method="POST")
-            with urllib.request.urlopen(req, timeout=60) as x:
-                d = json.load(x)
-            r = (d.get("reply") or "").strip()
-        except Exception:
-            r = ""
+        r = ""
+        for attempt in (1, 2):   # the retry-depth the cert demanded:
+                                 # a starved inner floor gets TWO swings
+                                 # before the node is honestly silent
+            try:
+                body = json.dumps({"prompt": prompt[:4000],
+                                   "max_tokens": max_tokens,
+                                   "purpose": purpose}).encode()
+                req = urllib.request.Request(
+                    n["url"].rstrip("/") + "/ask", data=body,
+                    headers={"Content-Type": "application/json",
+                             "User-Agent": "ApexSwarmWide/1.0"}, method="POST")
+                with urllib.request.urlopen(req, timeout=60) as x:
+                    d = json.load(x)
+                r = (d.get("reply") or "").strip()
+            except Exception:
+                r = ""
+            if r:
+                break
         if r:
             st["asks"][n["id"]] = st["asks"].get(n["id"], 0) + 1
             json.dump(st, open(STATE, "w", encoding="utf-8"), indent=1)
