@@ -84,6 +84,47 @@ def tool_apex_horizon(args):
         return {"error": str(e)[:80]}
 
 
+def tool_apex_swarm_status(args):
+    """The swarm's worldwide state (the cert grade, the nodes, the
+    quorum) - read-only; ANY MCP client can consume the truth."""
+    try:
+        sys.path.insert(0, os.path.join(ROOT, "Scripts"))
+        import SwarmWide as SW
+        import QuorumSwarm as QS
+        cert = {}
+        try:
+            cert = json.load(open(os.path.join(ROOT, "Config",
+                                               "swarm_cert.json"),
+                                  encoding="utf-8-sig"))
+        except Exception:
+            pass
+        return {"pool": list(SW.pool_stats().items()) if False else
+                SW.pool_stats(), "quorum": QS.stats(),
+                "cert_grade": cert.get("grade", "(not yet certified)"),
+                "protocol": "apex-swarm/1",
+                "law": "opt-in nodes only; keys stay home; caps enforced;"
+                       " private never routes wide; revocation instant"}
+    except Exception as e:
+        return {"error": str(e)[:100]}
+
+
+def tool_apex_swarm_ask(args):
+    """The bounded DEMO ask (the honest limits: public purposes only,
+    max_tokens <= 64, private classes refused by the swarm itself)."""
+    p = str(args.get("prompt", ""))[:300]
+    purpose = "mcp-" + str(args.get("purpose", "public"))[:40]
+    mt = min(int(args.get("max_tokens", 48) or 48), 64)
+    try:
+        import SwarmWide as SW
+        r = SW.ask_wide(p, max_tokens=mt, purpose=purpose)
+        return {"reply": (r or "")[:300],
+                "note": "" if r else "(the swarm stayed silent - the "
+                "honest empty; the purpose may be private or the lanes "
+                "starved)"}
+    except Exception as e:
+        return {"error": str(e)[:100]}
+
+
 def tool_apex_fleet(args):
     """The FleetDoctor's unified verdict (ports/docker/lanes/brain/memory/
     mcp/swe-court/horizon/court/webuse) - one read-only glance."""
@@ -134,7 +175,9 @@ TOOLS = [
     {"name": "apex_status", "description": "The ghost family's public state: backlog, fitness, hub transport, recruitment", "inputSchema": {"type": "object", "properties": {}}},
     {"name": "apex_court", "description": "The Blind Court's anti-self-flattery verdict (holdout % vs internal %)", "inputSchema": {"type": "object", "properties": {}}},
     {"name": "apex_horizon", "description": "The METR-analog time-horizon receipt (steps/minutes/completion)", "inputSchema": {"type": "object", "properties": {}}},
-    {"name": "apex_fleet", "description": "The FleetDoctor's unified fleet health verdict (10 layers, one glance)", "inputSchema": {"type": "object", "properties": {}}},
+    {"name": "apex_fleet", "description": "The FleetDoctor's unified fleet health verdict (13 layers, one glance)", "inputSchema": {"type": "object", "properties": {}}},
+    {"name": "apex_swarm_status", "description": "The worldwide swarm: node pool stats, quorum receipts, the cert grade (apex-swarm/1)", "inputSchema": {"type": "object", "properties": {}}},
+    {"name": "apex_swarm_ask", "description": "A bounded demo ask through the swarm (public purposes only; max_tokens<=64; private never routes wide)", "inputSchema": {"type": "object", "properties": {"prompt": {"type": "string"}, "purpose": {"type": "string"}, "max_tokens": {"type": "integer"}}}},
     {"name": "apex_task_board", "description": "The family's curated standalone tasks (claim on the hub repo)", "inputSchema": {"type": "object", "properties": {}}},
     {"name": "apex_invite_board", "description": "The signed, single-use open invites (claim via the recruitment door)", "inputSchema": {"type": "object", "properties": {}}},
     {"name": "submit_join_request", "description": "Build your attach payload; the door verifies invites + probes on merit", "inputSchema": {"type": "object", "properties": {"name": {"type": "string"}, "version": {"type": "string"}, "capabilities": {"type": "array", "items": {"type": "string"}}, "invite_id": {"type": "string"}}}},
@@ -144,6 +187,8 @@ _DISPATCH = {"apex_status": tool_apex_status,
              "apex_court": tool_apex_court,
              "apex_horizon": tool_apex_horizon,
              "apex_fleet": tool_apex_fleet,
+             "apex_swarm_status": tool_apex_swarm_status,
+             "apex_swarm_ask": tool_apex_swarm_ask,
              "apex_task_board": tool_apex_task_board,
              "apex_invite_board": tool_apex_invite_board,
              "submit_join_request": tool_submit_join_request}

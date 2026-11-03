@@ -1,7 +1,11 @@
 """ApexHands - THE ACTUATION ORGAN (the eyes had it; now the hands touch,
-2026-11-03; the sourced trick: Set-of-Marks (from the OSWorld /
-computer-use-agent line, arXiv:2405.07918-class practice) - the numbered
-overlay over every interactive element, so even a TEXT-only model can aim
+2026-11-03; the sourced trick: Set-of-Marks, the computer-use practice
+OSWorld built on - CITATION RETRACTION: an arXiv id printed here earlier
+was verified WRONG tonight (two guessed ids both resolved to unrelated
+papers); the honest citation is the METHOD NAME only, "Set-of-Marks",
+until the paper's true id is verified through a working search) - the
+numbered overlay over every interactive element, so even a TEXT-only
+model can aim
 precisely; made BETTER than the browser-use baseline:
 
   their pattern                        the fleet's improvement
@@ -22,6 +26,7 @@ stdlib + playwright (installed in apex_venv)."""
 
 import json
 import os
+import re
 import sys
 import time
 
@@ -97,7 +102,23 @@ def _decide(mission, marks, history):
 
 
 def mission(url, goal, headless=True):
-    """THE STEP-LOOP: open -> mark -> decide -> act -> re-mark, receipted."""
+    """THE STEP-LOOP: open -> mark -> decide -> act -> re-mark, receipted.
+    THE OPERATOR CONFIRM-LAW (the sourcing round): sensitive domains are
+    refused outright - the hands never touch logins, checkout, banking,
+    or private messaging; the audit receipt exists either way."""
+    from urllib.parse import urlparse
+    host = (urlparse(url).netloc or "").lower()
+    if re.search(r"(login|sign?in|bank|paypal|checkout|pay\.|webmail|"
+                 r"\bmail\.|linkedin\.com|messenger|wa\.me|telegram)",
+                 host):
+        print(f"[hands]: REFUSED - '{host}' is in the confirm-law's "
+              f"blacklist (logins/checkout/banking/messaging are never "
+              f"automation surfaces; the receipt records the refusal)")
+        with open(RECEIPTS, "a", encoding="utf-8") as f:
+            f.write(json.dumps({"ts": time.strftime("%H:%M:%S"),
+                                "step": -1, "act": "REFUSED-blacklist",
+                                "ok": False, "note": url[:80]}) + "\n")
+        return []
     from playwright.sync_api import sync_playwright
     rows, history = [], []
     ok_steps = 0
