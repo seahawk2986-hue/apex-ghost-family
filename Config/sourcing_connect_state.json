@@ -1,0 +1,16 @@
+{
+ "ts": "2026-11-03 01:12:55",
+ "verified": 103,
+ "connected": 54,
+ "background": 49,
+ "unmapped": 0,
+ "organ_missing": 0,
+ "by_gate": {
+  "all-8": 10,
+  "delivery-n50": 23,
+  "quorum-n30": 10,
+  "7-nights": 7,
+  "spread": 4
+ },
+ "law": "connected = technique + organ-on-disk + S+ gate; everything else is named background honestly"
+}
