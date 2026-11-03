@@ -97,6 +97,20 @@ def _strip_think(text):
         return text.split("</think>")[-1].strip()
     return text.strip()
 
+
+def _plain_english(text):
+    """THE CHAT-VOICE LAW (the CJK-night fix, 2026-11-04): the free-tier
+    lanes (GLM-class) date-stamp in Chinese ("2026年11月3日") and the
+    Dream organ's notes inherit it - the chat's text surface is English
+    only: CJK date-glyphs become the readable form, any other CJK block
+    is dropped (the content survives, the mojibake doesn't)."""
+    t = str(text or "")
+    t = t.replace("年", "-").replace("月", "-").replace("日", "")
+    t = t.replace("（", "(").replace("）", ")").replace("：", ":")
+    t = re.sub(r"[\u3000-\u30ff\u4e00-\u9fff\uf900-\ufaff]+", " ", t)
+    return re.sub(r" {2,}", " ", t).strip()
+
+
 class FriendPayload(BaseModel): message: str
 
 def log(lyr, msg):
@@ -1882,15 +1896,35 @@ def talk_api(t: TalkMsg):
                 selfcard = f.read()[:700]
         except Exception:
             pass
+    # THE 10/10 CHAT-PATTERN ROUND (the never-breaks + best-of-class):
+    # (1) LIVE GROUNDING: the model sees the fleet's real NOW (time, RAM,
+    # the latest receipted events) - it answers "what did you do?" with
+    # FACTS, never invention; (2) the guards: secrets never enter a reply,
+    # verbatim repetition is banned, brevity is the default.
+    _ground = "no fresh events"
+    try:
+        _ge = MEM.recent_events(4)[:2]
+        _ground = " | ".join(_plain_english(e2.get("text", ""))[:110] for e2 in _ge)
+    except Exception:
+        pass
+    _now = time.strftime("%Y-%m-%d %H:%M")
+    _ram_now = f"{_free_ram_gb():.1f} GB"
+    _chat_guards = ("GUARDS: never print API keys, tokens, passwords, or .env "
+                    "values; never repeat a previous reply verbatim (vary the "
+                    "wording); default reply = 2-4 sentences unless Andrew "
+                    "asks for depth.")
     prompt = (
         "You are Apex, talking privately with Andrew - your creator, and the human who runs "
         "your hardware. Andrew is NOT the room coordinator; this is your personal channel. "
         "Be direct, honest, concise, and keep your vocabulary as rich, precise and complete "
         "as your best written reply. You may discuss your own architecture openly (see "
         "SELF-MODEL). Never claim results you have not verified. If Andrew asks you to "
-        "remember something, acknowledge it plainly. THIS REPLY IS SPOKEN ALOUD: flowing "
+        "remember something, acknowledge it plainly. REPLY IN ENGLISH ONLY - NEVER use "
+        "Chinese/Japanese/Korean characters; dates as 'Nov 3' or '2026-11-03'. THIS REPLY IS SPOKEN ALOUD: flowing "
         "conversational prose only - never markdown symbols, bullets, asterisks, hashes, "
         "code fences or bare URLs; say a number as words when it helps the ear.\n\n"
+        f"FLEET GROUNDING (live, now): {_now} local | RAM free {_ram_now} | recent: {_ground}\n"
+        f"{_chat_guards}\n\n"
         f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n\nLIBRARY SKILLS:{skill_hits}\n\n"
         f"ANDREW SAYS:\n{msg}\n\nREPLY:")
     # THE FOUNDER'S CHAT-LOCK (the blind-eval's #1 = the 120b-first):
@@ -1934,19 +1968,17 @@ def talk_api(t: TalkMsg):
         return {"reply": ("All engines are busy right now, Andrew - the pacing brakes may be "
                           f"active. Try again in a minute.\n\n{diag}"),
                 "recall": [{"text": l["text"][:140]} for l in lessons]}
-    if not reply:
-        # THE CACHE STORE (the same canon): fresh answers get replayed free
-        # next time this exact question is asked; chat answers are stored
-        # "unverified" (honest - chat prose is not a validated diff)
+    if reply:
+        # THE CACHE STORE (the store runs when a reply EXISTS - the old
+        # not-reply placement made it unreachable; the near-dup store gets
+        # the SANITIZED text so future replays are clean)
         try:
             import ApexCache as _C
-            # THE NEAR-DUP STORE: exact + normalized signatures (variants
-            # replay $0 - the capped-lane defense, the token-block round)
-            _C.store_chat(msg, reply, "cache", "unverified")
+            _C.store_chat(msg, _plain_english(reply), "cache", "unverified")
         except Exception:
             pass
-    return {"reply": reply,
-            "recall": [{"text": l["text"][:140]} for l in lessons]}
+    return {"reply": _plain_english(reply),
+            "recall": [{"text": _plain_english(l["text"])[:140] for l in lessons}]}
 
 # ================================================== THE CHAT-STREAM (the
 # canon's #1 chat-UX feature: streaming + honest-UX + context-carry; all
@@ -1972,7 +2004,7 @@ def talk_api_stream(t: TalkStreamMsg):
     if not msg:
         def empty():
             yield "event: done\ndata: {\"reply\": \"Say something, Andrew - I'm listening.\"}\n\n"
-        return StreamingResponse(empty(), media_type="text/event-stream")
+        return StreamingResponse(empty(), media_type="text/event-stream; charset=utf-8")
     # the context-carry (the NN/g law: save information task-to-task):
     prior = []
     try:
@@ -2014,12 +2046,27 @@ def talk_api_stream(t: TalkStreamMsg):
                               for k in _pref if _self.get(k))[:2400]
     except Exception:
         pass
+    # THE 10/10 CHAT-PATTERN (the stream's copy): the grounding + guards
+    _ground = "no fresh events"
+    try:
+        _ge = MEM.recent_events(4)[:2]
+        _ground = " | ".join(_plain_english(e2.get("text", ""))[:110] for e2 in _ge)
+    except Exception:
+        pass
+    _now = time.strftime("%Y-%m-%d %H:%M")
+    _ram_now = f"{_free_ram_gb():.1f} GB"
+    _chat_guards = ("GUARDS: never print API keys, tokens, passwords, or .env "
+                    "values; never repeat a previous reply verbatim; default "
+                    "2-4 sentences.")
     prompt = (
         "You are Apex, talking privately with Andrew - your creator, and the human "
         "who runs your hardware. This is your personal channel. Be direct, honest, "
         "concise, and keep your vocabulary as rich, precise and complete as your "
         "best written reply. You may discuss your own architecture openly (SELF-MODEL). Never "
-        "claim results you have not verified.\n\n"
+        "claim results you have not verified. REPLY IN ENGLISH ONLY - NEVER use "
+        "Chinese/Japanese/Korean characters; dates as 'Nov 3' or '2026-11-03'.\n\n"
+        f"FLEET GROUNDING (live, now): {_now} local | RAM free {_ram_now} | recent: {_ground}\n"
+        f"{_chat_guards}\n\n"
         f"SELF-MODEL:\n{selfcard}\n\nRELEVANT MEMORY:\n{ltxt}\n"
         f"LIBRARY SKILLS:{skill_hits}\n{prior_txt}\nANDREW SAYS:\n{msg}\n\nREPLY:")
 
@@ -2167,10 +2214,10 @@ def talk_api_stream(t: TalkStreamMsg):
         except Exception:
             pass
         yield ("event: done\ndata: " + json.dumps(
-            {"reply": joined, "lane": lane_name["v"],
+            {"reply": _plain_english(joined), "lane": lane_name["v"],
              "chars": len(joined), "ttft_s": round(time.time() - t0, 3)},
             ensure_ascii=False) + "\n\n")
-    return StreamingResponse(gen(), media_type="text/event-stream",
+    return StreamingResponse(gen(), media_type="text/event-stream; charset=utf-8",
                              headers={"Cache-Control": "no-cache",
                                       "X-Accel-Buffering": "no"})
 
