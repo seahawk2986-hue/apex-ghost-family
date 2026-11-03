@@ -1,4 +1,4 @@
-import os, sys, json, ast, time, shutil, re, subprocess, threading, secrets, hmac
+﻿import os, sys, json, ast, time, shutil, re, subprocess, threading, secrets, hmac
 import base64
 import urllib.parse
 from collections import defaultdict, deque
@@ -105,13 +105,13 @@ def _strip_think(text):
 
 def _plain_english(text):
     """THE CHAT-VOICE LAW (the CJK-night fix, 2026-11-04): the free-tier
-    lanes (GLM-class) date-stamp in Chinese ("2026年11月3日") and the
+    lanes (GLM-class) date-stamp in Chinese ("2026å¹´11æœˆ3æ—¥") and the
     Dream organ's notes inherit it - the chat's text surface is English
     only: CJK date-glyphs become the readable form, any other CJK block
     is dropped (the content survives, the mojibake doesn't)."""
     t = str(text or "")
-    t = t.replace("年", "-").replace("月", "-").replace("日", "")
-    t = t.replace("（", "(").replace("）", ")").replace("：", ":")
+    t = t.replace("å¹´", "-").replace("æœˆ", "-").replace("æ—¥", "")
+    t = t.replace("ï¼ˆ", "(").replace("ï¼‰", ")").replace("ï¼š", ":")
     t = re.sub(r"[\u3000-\u30ff\u4e00-\u9fff\uf900-\ufaff]+", " ", t)
     return re.sub(r" {2,}", " ", t).strip()
 
@@ -1751,12 +1751,12 @@ def talk_api(t: TalkMsg):
             if reply_text:
                 text = (reply_text + "\n\nsources: "
                         + ", ".join(doc.get("urls", [])[:3]))
-                lane0 = doc.get("lane") or "research 🔎"
+                lane0 = doc.get("lane") or "research ðŸ”Ž"
             else:
                 text = ("NOT FOUND IN SOURCES - " + str(doc.get("verdict"))
                         + ("" if not doc.get("urls") else
                            " | tried: " + ", ".join(doc.get("urls", [])[:3])))
-                lane0 = "research 🔈"
+                lane0 = "research ðŸ”ˆ"
             MEM.record_event("conversation", f"Andrew asked research: "
                              f"{_rq_text[:80]} | {doc.get('verdict')}",
                              talk=True, message=msg[:400], reply=text[:2000])
@@ -1860,11 +1860,11 @@ def talk_api(t: TalkMsg):
                                      talk=True, message=msg[:400], reply=_prev[0][:2000])
                 except Exception:
                     pass
-                return {"reply": _prev[0] + "\n\n(⚡ answered from my resolution cache — "
-                                         "identical problems replay free; say \"!fresh …\" "
+                return {"reply": _prev[0] + "\n\n(âš¡ answered from my resolution cache â€” "
+                                         "identical problems replay free; say \"!fresh â€¦\" "
                                         "to force a live answer)",
                         "recall": [{"text": l["text"][:140]} for l in lessons],
-                        "lane": "cache ⚡ replay"}
+                        "lane": "cache âš¡ replay"}
         except Exception as _e_c:
             log("reward", f"cache consult skipped: {type(_e_c).__name__}")
     try:
@@ -2100,7 +2100,7 @@ def talk_api_stream(t: TalkStreamMsg):
             import LightResearch as _LR
             _q_text = _LR.triggered(msg)
             if _q_text:
-                lane_name["v"] = "research 🔎"
+                lane_name["v"] = "research ðŸ”Ž"
                 ttft = round(time.time() - t0, 3)
                 yield (f'event: meta\ndata: ' + json.dumps(
                     {"lane": lane_name["v"], "ttft_s": ttft,
@@ -2143,7 +2143,7 @@ def talk_api_stream(t: TalkStreamMsg):
                 _hit = _C.cache_get("chat|" + msg.strip().lower())
                 if _hit and _hit[0]:
                     _from_cache["v"] = True
-                    lane_name["v"] = "cache ⚡ replay"
+                    lane_name["v"] = "cache âš¡ replay"
                     ttft = round(time.time() - t0, 3)
                     yield (f'event: meta\ndata: ' + json.dumps(
                         {"lane": lane_name["v"], "ttft_s": ttft,
@@ -2160,8 +2160,8 @@ def talk_api_stream(t: TalkStreamMsg):
                     except Exception:
                         pass
                     yield ("event: done\ndata: " + json.dumps(
-                        {"reply": _hit[0] + "\n\n(⚡ answered from my resolution "
-                          "cache — identical problems replay free; say \"!fresh …\" "
+                        {"reply": _hit[0] + "\n\n(âš¡ answered from my resolution "
+                          "cache â€” identical problems replay free; say \"!fresh â€¦\" "
                           "to force a live answer)",
                          "lane": lane_name["v"], "chars": len(_hit[0]),
                          "ttft_s": ttft}, ensure_ascii=False) + "\n\n")
@@ -2240,6 +2240,22 @@ def talk_api_stream(t: TalkStreamMsg):
 _IMG_CACHE = {"last": 0.0, "nim_vl": []}
 
 
+def _envkey(name):
+    """THE SPINE'S KEY LAW: os.environ first (process env), the .env spine
+    second - the long-lived server never imported ApexIO before the vision
+    lane read bare os.environ (the NIM key arrived empty THERE while every
+    probe process had it: the in-process/live divergence class)."""
+    v = os.environ.get(name, "")
+    if v:
+        return v
+    try:
+        sys.path.insert(0, os.path.join(R, "Scripts"))
+        import ApexIO as _AIO
+        return _AIO.env().get(name, "")
+    except Exception:
+        return ""
+
+
 def _nim_vl_seats():
     """The VL-capable NIM seats (id hunt: vl/llava/vision/pixtral/internvl/
     qwen2.5-vl/phi-3.5-v), discovered once per 30 min from the catalog."""
@@ -2248,8 +2264,8 @@ def _nim_vl_seats():
     seats = []
     try:
         r = requests.get("https://integrate.api.nvidia.com/v1/models",
-                         headers={"Authorization": "Bearer " + os.environ.get(
-                             "NVIDIA_API_KEY", ""), "User-Agent": "ApexFleet/1.0"}, timeout=15)
+                         headers={"Authorization": "Bearer " + _envkey(
+                             "NVIDIA_API_KEY"), "User-Agent": "ApexFleet/1.0"}, timeout=15)
         pat = re.compile(r"(vl|llava|vision|pixtral|internvl|phi-3\.5-vis)", re.I)
         for m in r.json().get("data", []):
             mid = m.get("id") or ""
@@ -2271,7 +2287,7 @@ def _chat_image(parts_text, b64png):
 def _vl_ask(b64png, question):
     """THE VISION CHAIN: outsourced seats first, the local eye last. Every
     lane bounded; the honest lane-name returns (the receipts law)."""
-    key = os.environ.get("NVIDIA_API_KEY", "")
+    key = _envkey("NVIDIA_API_KEY")
     msgs = _chat_image(question or "Describe this image: what is shown, any readable text, and one odd detail (be honest if unsure).", b64png)
     for mid in _nim_vl_seats():
         try:
@@ -2316,7 +2332,7 @@ def _vl_ask(b64png, question):
             import ApexIO as _AIO
             gk = _AIO.env().get("GEMINI_API_KEY", "")
         except Exception:
-            gk = os.environ.get("GEMINI_API_KEY", "")
+            gk = _envkey("GEMINI_API_KEY")
         if gk:
             r = requests.post(
                 "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
@@ -2579,4 +2595,5 @@ if __name__ == "__main__":
         pass  # never block startup on registry failure
     threading.Thread(target=execution_loop, daemon=True).start()
     uvicorn.run(app, host="127.0.0.1", port=8080, reload=False, workers=1)
+
 
