@@ -1,0 +1,97 @@
+[
+ {
+  "ts": "2026-11-03 07:00:01",
+  "checked": [
+   {
+    "skill": "card_styles",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 6,
+    "keep": true,
+    "reason": "Offers practical card styling for the library, useful but implements standard patterns without major innovation."
+   },
+   {
+    "skill": "extract_pal_voices",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 3,
+    "keep": false,
+    "reason": "Niche PAL voice extraction utility with limited general value for a self-improving agent library."
+   },
+   {
+    "skill": "advanced_text_output",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 2,
+    "keep": false,
+    "reason": "Opaque 50-line wrapper around an unclear 'matchering' import with no clear advanced text output value."
+   },
+   {
+    "skill": "minimum_spanning_tree_kruskal",
+    "compiles_prev": false,
+    "verified_at_prev": null
+   },
+   {
+    "skill": "__init__",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 1,
+    "keep": false,
+    "reason": "Empty __init__ signature provides no reusable capability."
+   },
+   {
+    "skill": "excess_3_code",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 3,
+    "keep": false,
+    "reason": "Niche BCD conversion utility with little general value for a self-improving agent library."
+   },
+   {
+    "skill": "__init__",
+    "compiles_prev": false,
+    "verified_at_prev": null
+   },
+   {
+    "skill": "generate_sinusoids",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 6,
+    "keep": true,
+    "reason": "Useful periodic feature engineering but generic and low novelty."
+   },
+   {
+    "skill": "add-bold-tag-in-string",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 2,
+    "keep": false,
+    "reason": "Overengineered simple string formatting with unnecessary complexity and imports."
+   },
+   {
+    "skill": "main",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 7,
+    "keep": true,
+    "reason": "Core functionality for a self-improving agent with moderate complexity, but uses common patterns and standard libraries."
+   },
+   {
+    "skill": "validation_page",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 0,
+    "keep": false,
+    "reason": "No code provided and flagged risky input pattern."
+   },
+   {
+    "skill": "decomp_dev_export",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 7,
+    "keep": true,
+    "reason": "Provides a practical diff report generator for ByteMatch, but uses conventional methods without introducing novel concepts."
+   }
+  ]
+ }
+]

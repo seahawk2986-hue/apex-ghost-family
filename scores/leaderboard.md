@@ -1,8 +1,8 @@
 # The nightly leaderboard (the seat map evolves from this)
 
-**2026-11-02 10:01**
+**2026-11-03 07:01**
 
-- **0.910** groq-qwen — 10/10 answered, 0.31s mean wall
-- **0.860** cerebras-qwen — 10/10 answered, 0.3s mean wall
-- **0.860** groq-120b — 10/10 answered, 0.8s mean wall
-- **0.409** cerebras-120b — 5/10 answered, 0.4s mean wall
+- **0.960** groq-qwen — 10/10 answered, 0.57s mean wall
+- **0.860** groq-120b — 10/10 answered, 0.49s mean wall
+- **0.760** cerebras-qwen — 10/10 answered, 1.11s mean wall
+- **0.200** cerebras-120b — 2/10 answered, 0.6s mean wall
