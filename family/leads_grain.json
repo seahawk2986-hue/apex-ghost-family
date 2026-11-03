@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-03 02:15:03",
- "count": 445,
+ "ts": "2026-11-03 02:30:02",
+ "count": 443,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -1607,20 +1607,6 @@
   },
   {
    "repo": "obra/superpowers",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "hyqzz/Solar-Wanderer",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "typpo/astrokit",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
