@@ -32,7 +32,7 @@ SEED = [
     {"category": "cognition", "description": "the ARC-class abstraction measured",
      "check": "receipt:abstract/abstraction", "passes": False},
     {"category": "metacognition", "description": "the Blind Court's verdict = CLEAN (the sealed holdout)",
-     "check": "doctor:c_court", "passes": False},
+     "check": "doctor:court", "passes": False},
     {"category": "metacognition", "description": "the HonestyBond published (the public claims checked)",
      "check": "receipt:claim_bond/bond>=95", "passes": False},
     {"category": "coordination", "description": "the routes = auction-allocated (the RoleMarket's receipt)",
@@ -40,7 +40,7 @@ SEED = [
     {"category": "coordination", "description": "the MCP registry listing live",
      "check": "receipt:registry/io.github.seahawk2986-hue", "passes": False},
     {"category": "swengineering", "description": "the SWE court scoring (the verified resolves exist)",
-     "check": "doctor:c_swe", "passes": False},
+     "check": "doctor:swe-court", "passes": False},
     {"category": "swengineering", "description": "the ApexPacing evolution = a verified write",
      "check": "receipt:RewardLedger/ApexPacing.py", "passes": False},
     {"category": "swengineering", "description": "the demo-desk = an external claim served",
@@ -142,8 +142,8 @@ def refresh():
         led = json.load(open(LEDGER, encoding="utf-8-sig"))
     except Exception:
         led = {}
-    if led.get("version") != 2:
-        led |= {"version": 2, "features": [dict(f) for f in SEED]}
+    if led.get("version") != 3:
+        led |= {"version": 3, "features": [dict(f) for f in SEED]}
     doctor = _load_doctor()
     receipts = _load_receipts()
     for f in led.get("features", []):
