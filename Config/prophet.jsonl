@@ -1,0 +1,1 @@
+{"kind": "forecast", "ts": "2026-11-02 23:41:15", "forecast": {"abstract/self-reasoning": {"lo": 0.0, "hi": 0.0}, "abstract/abstraction": {"lo": 95.0, "hi": 100.0}, "abstract/math": {"lo": 70.0, "hi": 80.0}, "swe_resolve_pct": {"lo": 5.0, "hi": 7.0}, "horizon_minutes": {"lo": 25.0, "hi": 30.0}}}
