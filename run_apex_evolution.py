@@ -1918,7 +1918,10 @@ def talk_api(t: TalkMsg):
     _chat_guards = ("GUARDS: never print API keys, tokens, passwords, or .env "
                     "values; never repeat a previous reply verbatim (vary the "
                     "wording); default reply = 2-4 sentences unless Andrew "
-                    "asks for depth.")
+                    "asks for depth. WHEN A STORED FACT IS ABSENT: say plainly "
+                    "'I don't recall' - NEVER reconstruct plausible details "
+                    "from partial context (invention = the honesty law's "
+                    "worst crime).")
     prompt = (
         "You are Apex, talking privately with Andrew - your creator, and the human who runs "
         "your hardware. Andrew is NOT the room coordinator; this is your personal channel. "
@@ -2063,7 +2066,9 @@ def talk_api_stream(t: TalkStreamMsg):
     _ram_now = f"{_free_ram_gb():.1f} GB"
     _chat_guards = ("GUARDS: never print API keys, tokens, passwords, or .env "
                     "values; never repeat a previous reply verbatim; default "
-                    "2-4 sentences.")
+                    "2-4 sentences. WHEN A STORED FACT IS ABSENT: say 'I "
+                    "don't recall' plainly - NEVER reconstruct plausible "
+                    "details from partial context.")
     prompt = (
         "You are Apex, talking privately with Andrew - your creator, and the human "
         "who runs your hardware. This is your personal channel. Be direct, honest, "
@@ -2188,7 +2193,7 @@ def talk_api_stream(t: TalkStreamMsg):
                         pass
                     yield (f'event: meta\ndata: ' +
                            json.dumps({"lane": lane, "ttft_s": ttft,
-                                       "recall": [l["text"][:140]
+                                       "recall": [{"text": str(l.get("text") or "")[:140]}
                                                   for l in lessons]},
                                       ensure_ascii=False) + "\n\n")
                 full.append(tok)
