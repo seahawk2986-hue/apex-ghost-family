@@ -119,15 +119,6 @@ def render():
                  "Scripts/RealityCourt.py seals it; until then the gym's "
                  "self-graded hits carry no anti-Goodhart warranty</div>")
 
-    # THE SERVING-BRAIN REPORT (2026-11-04 GI-round): the fallback floor's
-    # capability = measured, not assumed
-    lm = _json(os.path.join(R, "Config", "local_mind.json"))
-    if lm:
-        yard += (f"<div class='kv'>the serving floor: <b>{_esc(lm.get('brain'))}</b> "
-                 f"scored <b>{_esc(lm.get('acc'))}%</b> on the SAME sealed "
-                 f"pocket ({_esc(lm.get('n'))} drills, same ruler) — the "
-                 f"fallback's real capability, published</div>")
-
     return HTMLResponse(f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><title>Apex — the receipts</title>
 <meta name=viewport content="width=device-width,initial-scale=1"><style>

@@ -136,24 +136,6 @@ def run():
         print("[patch] the diff does not apply to HEAD - honest stop")
         return None
     subprocess.run(["git", "apply", pd], cwd=wd, capture_output=True)
-    # THE WORKSPACE-HYGIENE LAW (2026-11-04): the old `git add -A` swept the
-    # patch-file ITSELF into the PR commit - PR #4929 still carries that
-    # apex.patch junk blob from exactly this path. The patch file now dies
-    # right after apply + the .gitignore belt keeps any strays out forever.
-    try:
-        os.remove(pd)
-    except OSError:
-        pass
-    gi = os.path.join(wd, ".gitignore")
-    try:
-        _have_i = ""
-        if os.path.exists(gi):
-            _have_i = open(gi, encoding="utf-8").read()
-        if "apex.patch" not in _have_i:
-            with open(gi, "a", encoding="utf-8") as _g:
-                _g.write("\napex.patch\n")
-    except Exception:
-        pass
     subprocess.run(["git", "add", "-A"], cwd=wd, capture_output=True)
     cm = subprocess.run(["git", "commit", "-m",
                          f"fix: advance issue #{issue_no} (apex-ghost-family, "

@@ -165,10 +165,7 @@ def _truth(j):
 
 
 def _grade(q, want, answer):
-    """the answer-grade (2026-11-04: the SHARED RULER - the same
-    AnswerNorm the gym now grades with, so internal and sealed drills
-    measure identically; value-aware, flaw by containment)."""
-    import AnswerNorm
+    """the answer-grade (value-aware, no quote artifacts; flaw by containment)"""
     if not answer:
         return False
     a = (answer or "").strip()
@@ -178,13 +175,13 @@ def _grade(q, want, answer):
     try:
         lhs = eval(w, {"__builtins__": {}}, {})
         if isinstance(lhs, str):
-            return AnswerNorm.match(a, lhs)
-        return abs(float(lhs) - float(AnswerNorm.norm(a))) < 1e-9
+            return a.lower() == lhs.lower() or (lhs.lower() in a.lower())
+        return abs(float(lhs) - float(a)) < 1e-9
     except Exception:
         pass
-    wlow = AnswerNorm.norm(w).lower()
-    alow = AnswerNorm.norm(a).lower()
-    return bool(wlow) and (wlow in alow or wlow.replace("-", " ") in alow)
+    wlow = w.lower()
+    alow = a.lower()
+    return wlow in alow or (wlow and wlow.replace("-", " ") in alow)
 
 
 def seal():

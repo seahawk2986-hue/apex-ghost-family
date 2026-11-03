@@ -47,9 +47,6 @@ def brief(text):
         h["briefs"] = int(h.get("briefs", 0)) + 1
         h.setdefault("earn_briefs", []).append(
             {"ts": time.strftime("%Y-%m-%d %H:%M:%S"), "text": text[:200]})
-        # THE BOUNDED DIARY (2026-11-04): the briefs file grew forever
-        # (append-only) - the newest 200 rows carry the whole recent truth.
-        h["earn_briefs"] = h["earn_briefs"][-200:]
         pm2 = json.load(open(os.path.join(ROOT, "Config", "PathMemory.json"),
                              encoding="utf-8-sig"))
         pm2["andrew_help"] = h
@@ -126,36 +123,15 @@ def beat(n):
                   indent=1)
     print(f"[loop {n}] beat done: top {top.get('repo', '?')} | unclaimed "
           f"{work.get('unclaimed')} | {work['wall_s']}s")
-    # THE HONEST TELEMETRY (2026-11-04): a beat that filed NOTHING no longer
-    # writes an "upward" row every 900s (the audited 78/201 identical rows
-    # minted ascent-noise). A ONCE-DAILY heartbeat keeps the organ provably
-    # alive; real filed beats always write their row.
-    _hb = os.path.join(AD, "earn_heartbeat.txt")
-    _last = ""
     try:
-        _last = open(_hb, encoding="utf-8").read().strip()
-    except OSError:
+        with open(ASC, "a", encoding="utf-8") as f:
+            f.write(json.dumps({"ts": time.strftime("%Y-%m-%d %H:%M:%S"),
+                                "kind": "upward", "what": "earn-loop-beat",
+                                "beat": n, "unclaimed":
+                                work.get("unclaimed", 0),
+                                "filed": work["filed"]}) + "\n")
+    except Exception:
         pass
-    _daily = (_last[:10] != time.strftime("%Y-%m-%d"))
-    if work.get("filed") or _daily:
-        try:
-            with open(ASC, "a", encoding="utf-8") as f:
-                f.write(json.dumps({"ts": time.strftime("%Y-%m-%d %H:%M:%S"),
-                                    "kind": "upward",
-                                    "what": "earn-loop-beat"
-                                    + ("" if work.get("filed")
-                                       else " (daily heartbeat)"),
-                                    "beat": n, "unclaimed":
-                                    work.get("unclaimed", 0),
-                                    "filed": work["filed"]}) + "\n")
-        except Exception:
-            pass
-        try:
-            if _daily:
-                with open(_hb, "w", encoding="utf-8") as _hf:
-                    _hf.write(time.strftime("%Y-%m-%d %H:%M:%S"))
-        except OSError:
-            pass
     brief(f"EarnLoop beat {n}: the top unclaimed = {top.get('repo', '?')}; "
           f"filed={work['filed']} {work.get('pr_url', '')}"
           .strip()[:190])

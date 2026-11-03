@@ -120,14 +120,7 @@ class ApexMemory:
             return []
 
     def _maybe_maintain(self):
-        """Trigger archive pruning + consolidation on cadence (never raise).
-        (2026-11-04 fix: the archive runs EVERY record now - the old version
-        early-returned before its 6h gate, so the hot window ballooned past
-        its 500-line cap indefinitely between consolidations.)"""
-        try:
-            self._archive_if_needed()
-        except Exception:
-            pass
+        """Trigger archive pruning + consolidation on cadence (never raise)."""
         try:
             st = {"last": 0}
             if os.path.exists(STATE_PATH):
@@ -142,6 +135,7 @@ class ApexMemory:
                 json.dump(st, f)
         except Exception:
             pass
+        self._archive_if_needed()
 
     def _archive_if_needed(self):
         try:
@@ -163,21 +157,6 @@ class ApexMemory:
         into semantic insight fragments (Generative-Agents-style, no LLM cost)."""
         try:
             events = self.recent_events(200)
-            # ================================================== THE
-            # RESURRECTION (2026-11-04): the archive was WRITE-ONLY - 12k
-            # rows, zero readers anywhere; the family's long-term memory
-            # silently reset at every archive cycle. The consolidation now
-            # distills the ARCHIVED tail (300 cold rows) together with the
-            # hot window: cold lessons become durable semantic insights
-            # (dedup >= 0.95 keeps them from bloating) BEFORE anything is
-            # ever really forgotten.
-            try:
-                if os.path.exists(self.archive_path):
-                    with open(self.archive_path, "r", encoding="utf-8") as af:
-                        old = af.readlines()[-300:]
-                    events = [json.loads(l) for l in old if l.strip()] + events
-            except Exception:
-                pass
             lessons = []
             gym_stats = {"drills": 0, "gains": 0}
             stats = {}
@@ -295,23 +274,7 @@ class ApexMemory:
             if hit_id is None:
                 rows = self._load_semantic()
                 rows.append(rec)
-                # ================================================== THE
-                # EARNED-MEMORY LAW (2026-11-04): pure FIFO evicted the
-                # OLDEST row regardless of value - a six-week-old hard-won
-                # lesson died before a six-minute-old fragment. Eviction now
-                # keeps the TOP-(cap) BY VALUE: importance + recency + access
-                # reinforcement, with lessons/rules earning one extra cycle.
-                if len(rows) > MAX_SEMANTIC_RECORDS:
-                    def _val(r0):
-                        v = float(r0.get("imp", 0.5))
-                        v += 0.5 * _recency(r0.get("ts", ""))
-                        v += 0.04 * float(r0.get("acc", 0) or 0)
-                        if r0.get("kind") in ("lesson", "rule"):
-                            v += 0.25
-                        return v
-                    rows = sorted(rows, key=_val, reverse=True)
-                    rows = rows[:MAX_SEMANTIC_RECORDS]
-                    rows = sorted(rows, key=lambda r0: r0.get("ts", ""))
+                rows = rows[-MAX_SEMANTIC_RECORDS:]
                 self._persist(rows)
                 hit_id = rec["id"]
         return hit_id

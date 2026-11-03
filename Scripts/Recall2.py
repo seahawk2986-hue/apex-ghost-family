@@ -142,50 +142,36 @@ def _reindex_rows():
     matched by fingerprint at query time (see query())."""
 
 
-def query2(text, k=5, kinds=None):
-    """THE IMPORTABLE, SILENT QUERY (2026-11-04 - the shelf-ware revival):
-    same retrieval as query(), but returns structured rows and никогда
-    prints/raises; the chat's deep_recall consumes it. Honest empty list."""
-    try:
-        out = []
-        if not (os.path.exists(VEC) and os.path.exists(META)):
-            return []
-        q = embed([text])[0].astype(np.float32)
-        q = q / (np.linalg.norm(q) + 1e-6)
-        V = np.load(VEC).astype(np.float32)
-        meta = [json.loads(l) for l in open(META, encoding="utf-8-sig")]
-        rs = rows()
-        cur = {}
-        try:
-            for i, r0 in enumerate(rs):
-                cur.setdefault(fpr(row_text(r0)), i)
-        except Exception:
-            cur = {}
-        sims = V @ q
-        top = np.argsort(-sims)[:k * 3 if k else k * 3]
-        for t in top:
-            m = meta[t] if t < len(meta) else {}
-            if kinds and m.get("kind") not in kinds:
-                continue
-            ri = cur.get(m.get("fpr"), min(m.get("row", len(rs) - 1), len(rs) - 1)) \
-                if rs else 0
-            r = rs[ri] if rs else {}
-            out.append({"sim": float(sims[t]), "kind": m.get("kind", "?"),
-                        "ts": m.get("ts", ""), "text": str(r.get("text", ""))[:200]})
-            if len(out) >= k:
-                break
-        return out
-    except Exception:
-        return []
-
-
 def query(text, k=5):
-    """The CLI lens (the prints) - delegated to the silent importer."""
+    if not (os.path.exists(VEC) and os.path.exists(META)):
+        print("[query]: no index - run build first")
+        return
+    q = embed([text])[0].astype(np.float32)
+    q = q / (np.linalg.norm(q) + 1e-6)
+    V = np.load(VEC).astype(np.float32)
+    meta = [json.loads(l) for l in open(META, encoding="utf-8-sig")]
+    rs = rows()
+    # THE 2026-11-04 FIX (the audited drift): meta "row" indices were built
+    # against an older window - archiving slid the file; the clamp silently
+    # returned the WRONG event. Now: fingerprint-match into the CURRENT
+    # window first (fpr is the stable key), row-index just a fallback.
     try:
-        for r0 in query2(text, k=k):
-            print(f"  {r0['sim']:.3f}  [{r0['kind']}] {r0['text'][:110]}")
-    except Exception as e:
-        print("[query]:", type(e).__name__, str(e)[:60])
+        cur = {}
+        for i, r0 in enumerate(rs):
+            cur.setdefault(fpr(row_text(r0)), i)
+    except Exception:
+        cur = {}
+    sims = V @ q
+    top = np.argsort(-sims)[:k]
+    print(f"[recall-2.0 for '{text[:60]}']:")
+    for t in top:
+        m = meta[t] if t < len(meta) else {}
+        ri = cur.get(m.get("fpr"), min(m.get("row", len(rs) - 1), len(rs) - 1)) \
+            if rs else 0
+        r = rs[ri] if rs else {}
+        drift = " (fpr-anchored)" if m.get("fpr") in cur else " (row-fallback)"
+        print(f"  {sims[t]:.3f}  [{m.get('kind', '?')}] "
+              f"{str(r.get('text', ''))[:110]}{drift}")
 
 
 if __name__ == "__main__":

@@ -2254,19 +2254,6 @@ def main(minutes_cap=6, ghosts=None, no_cooldown=False):
             except Exception:
                 pass
     wall = time.time() - t0
-    # THE CRASH-PROOF RATCHET (2026-11-04): if a network-phase exception
-    # killed the round mid-flight, `gnet` stayed UNBOUND and the payout/
-    # closeout block NameErrored - the dedup ratchet never persisted, so the
-    # SAME leads re-mined next hour (pure waste). The honest zero-stub keeps
-    # the closeout + persistence alive on a dead round.
-    if locals().get("gnet") is None:
-        class _GnetStub:
-            ok = 0
-            findings = 0
-            bytes = 0
-            leads = 0
-            grades_now = {}
-        gnet = _GnetStub()
 
     # ---- reward: paid per VERIFIED productive unit consumed while working ----
     payout = [cfg("ghost_request_productive", 2)] * gnet.ok
