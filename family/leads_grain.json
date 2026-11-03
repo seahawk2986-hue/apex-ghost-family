@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-03 03:45:02",
- "count": 454,
+ "ts": "2026-11-03 04:00:02",
+ "count": 453,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -2874,13 +2874,6 @@
   },
   {
    "repo": "opendatahub-io/trainer",
-   "score": 30.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "opendatahub-io/odh-dashboard",
    "score": 30.1,
    "tier": "GOLD",
    "stars": 0,
