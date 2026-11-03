@@ -1,30 +1,6 @@
 {
  "recent": [
   {
-   "ts": "2026-11-01 19:04:26",
-   "lane": "local-coder",
-   "ttft_s": 2.881,
-   "chars_in": 50
-  },
-  {
-   "ts": "2026-11-01 19:05:50",
-   "lane": "local-coder",
-   "ttft_s": 5.632,
-   "chars_in": 50
-  },
-  {
-   "ts": "2026-11-01 19:08:00",
-   "lane": "local-coder",
-   "ttft_s": 2.489,
-   "chars_in": 46
-  },
-  {
-   "ts": "2026-11-01 19:13:01",
-   "lane": "local-coder",
-   "ttft_s": 251.294,
-   "chars_in": 46
-  },
-  {
    "ts": "2026-11-01 19:35:36",
    "lane": "local-coder",
    "ttft_s": 255.715,
@@ -299,6 +275,30 @@
    "lane": "local-phi4",
    "ttft_s": 2.295,
    "chars_in": 25
+  },
+  {
+   "ts": "2026-11-02 19:27:33",
+   "lane": "local-phi4",
+   "ttft_s": 2.554,
+   "chars_in": 366
+  },
+  {
+   "ts": "2026-11-02 19:30:23",
+   "lane": "local-phi4",
+   "ttft_s": 2.647,
+   "chars_in": 32
+  },
+  {
+   "ts": "2026-11-02 19:32:48",
+   "lane": "local-phi4",
+   "ttft_s": 4.393,
+   "chars_in": 56
+  },
+  {
+   "ts": "2026-11-02 19:34:12",
+   "lane": "local-phi4",
+   "ttft_s": 4.12,
+   "chars_in": 51
   }
  ]
 }

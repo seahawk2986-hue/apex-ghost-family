@@ -83,3 +83,21 @@ router/QoS papers (Token-Budget-Aware Pool Routing, CALM, DriftSched).
   caches/forks until platform GC - for absolute certainty, rotate the
   PayPal receiving address when convenient (receiving addresses are not
   credentials; residual risk = spam, not access).
+
+---
+
+## THE SWARM ROUND (2026-11-04) - the four-organ deep audit, fixed
+
+Measured by four parallel line-audits (orchestrator 116KB, vetting funnel,
+upward economy, recruitment boards):
+
+| The weakness (measured) | The organ/fix now | The proof |
+|---|---|---|
+| ~96 no-op commits/day: FeedGrain rewrote the ts every 15m (728 committed 14x identical; ~8MB/day churn) | content-hash gate (ts excluded) + honest no-op print; git gate stays as the belt | live run: 'content UNCHANGED - no write, no commit' |
+| THE 98% CERTIFICATION CHOKE: 569 statically-vetted skills -> 10 certified (distill reads only RewardLedger-best>=100; library rows point at GitHub paths) | **CertifyBridge**: fetch REAL source -> sha-must-match the vetted row -> bandit + SEALED container compile/import-run -> nomic embedding -> registry row in the exact distill schema; nightly in Dream | first beat: 6 seats earned 100/100 BY RUNNING; 11 honestly refused (dep-holed or junk-named); registry 10 -> 14 (2 meaningless seats removed by the NAME LAW) |
+| 'executable_verified' = bool(src) (a LIE by fetching); runner rows lack bandit | the bridge certifies ONLY after real execution; rows carry the honest provenance | 11 refusals in the receipt |
+| The diary minted ascent: andrew_help.briefs weighted into GOAL_COMPONENTS + TotalEvolution (+0.025 fit in 8 min, zero change); 78/201 identical brief rows | de-self-referenced x3 organs: briefs_filed (rows carrying http links) only; EarnLoop writes upward rows ONLY when filed or once-daily heartbeat; the diary bounded to 200 rows | compile x9 OK |
+| 22 unmeasured mutant gene lineages churned forever (fitness 0.0, m_rounds 0) | GenePool retire law: unmeasured lineages older than 24h retire (a seat must be EARNED by measurement) | GenePool.py patched, compiles |
+| SwarmOrchestrator: a mid-round network death NameErrored the closeout -> the dedup ratchet reset -> SAME leads re-mined | crash-proof ratchet: gnet local-or-honest-zero-stub before the payout/closeout | patched; next DeploySwarm spawn loads it |
+| 18 verified bounty candidates w/ matching upstream asks, filed=false forever; drafts would mint DUPLICATE issues | **FilingBridge**: prepare = resolve the EXISTING matching issue + full-disclosure batch (never duplicates); file = one-word-go (or FILING_AUTO=1), <= 5/day cap, idempotent receipt ledger | 9 disclosed rows prepared, armed=False - the one-word go stays the founder's |
+| PatchStep git add -A swept the patch blob into PR #4929 | the patch file dies after apply + .gitignore belt (recurrence dead) | PatchStep.py patched |

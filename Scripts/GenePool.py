@@ -209,12 +209,21 @@ def sync_from_pathmemory():
     except Exception:
         rolled = []
     pool = a.get("lineages", {})
+    import time as _t
     top_f = max((float(L.get("fitness", -1)) for L in pool.values()), default=0.0)
     floor = 0.2 * max(0.1, top_f)
+    # THE UNMEASURED-LINEAGE LAW (2026-11-04): 22 mutants sat at fitness 0.0
+    # with 0 measured rounds FOREVER while the pre-stage churned their
+    # refresh every 20 min - a lineage in the pool must EARN its seat by
+    # being measured within a day, or its bubble churn ends here.
     retired = [k for k, L in list(pool.items())
-               if int(L.get("m_rounds", 0)) > 0
-               and float(L.get("fitness", 0)) < floor
-               and k != a.get("champion")]
+               if k != a.get("champion") and (
+                   (int(L.get("m_rounds", 0)) > 0
+                    and float(L.get("fitness", 0)) < floor)
+                   or (int(L.get("m_rounds", 0)) == 0
+                       and float(L.get("fitness", 0)) == 0.0
+                       and float(L.get("born_ts", 0) or L.get("born", 0) or 0)
+                       < _t.time() - 86400))]
     for k in retired:
         d = pool[k].get("descriptor")
         del pool[k]

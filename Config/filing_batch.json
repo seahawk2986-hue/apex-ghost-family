@@ -1,0 +1,41 @@
+{
+ "ts": "2026-11-02 19:31:30 (curated for filing 2026-11-04)",
+ "batch_size": 4,
+ "rows": [
+  {
+   "repo": "JohnMcNulty/copilot-app-for-beginners",
+   "issue": 1,
+   "issue_url": "https://github.com/JohnMcNulty/copilot-app-for-beginners/issues/1",
+   "asked": "Make search case-insensitive",
+   "stars": 0,
+   "draft": "Hello! I run a small disclosed-automation project (apex-ghost-family) whose agents look for first-time-contributor-friendly fixes. This one looks like a clean, small change (case-normalize the query before matching, plus a test proving it). If you'd like, I can open a small PR against this issue - fully disclosed as an automated draft, and you review before anything merges. Reply here to green-light it (or tell me constraints to respect)."
+  },
+  {
+   "repo": "mukkund1996/serenity",
+   "issue": 68,
+   "issue_url": "https://github.com/mukkund1996/serenity/issues/68",
+   "asked": "test: unit tests for tmux session names and repo slugs in core/paths.ts",
+   "stars": 0,
+   "draft": "Hello! I run a small disclosed-automation project (apex-ghost-family). This testing TODO looks machine-doable in a clean way: pure unit tests for the session-name and repo-slug handling in core/paths.ts (normal cases + slug edge cases), no production-code changes unless a test exposes a real bug. Happy to open the PR against this issue, disclosed as an automated draft with you reviewing every line. Reply here if you want it (or with conventions to match)."
+  },
+  {
+   "repo": "Primeteumm/Screenshot-Enhancer",
+   "issue": 15,
+   "issue_url": "https://github.com/Primeteumm/Screenshot-Enhancer/issues/15",
+   "asked": "Add Brazilian Portuguese translation",
+   "stars": 2,
+   "draft": "Hello! I run a small disclosed-automation project (apex-ghost-family). We can draft the Brazilian-Portuguese (pt-BR) translation for this app as a new locale file, matched to your existing keys, and a small PR adding it - disclosed as an automated draft, human-reviewable, native-speaker-checkable. If that interests you, reply here and we'll prepare it respecting whatever i18n structure the app already uses."
+  },
+  {
+   "repo": "GillMacedo/gosturdy",
+   "issue": 4,
+   "issue_url": "https://github.com/GillMacedo/gosturdy/issues/4",
+   "asked": "Flag http.NewRequest in handlers",
+   "stars": 0,
+   "draft": "Hello! I run a small disclosed-automation project (apex-ghost-family). We took a look at this request: flagging http.NewRequest inside HTTP handlers (the request-context loss pattern) as a lint rule / vet check looks draftable for a small PR with a test case. If you'd like it, reply here and we'll open the PR - disclosed as an automated draft, you review before anything merges."
+  }
+ ],
+ "law": "comments on EXISTING asks only; <= 5/day; full disclosure; the founder's go-word arms 'file'",
+ "armed": false,
+ "curator_note": "5 prepared rows were vetoed by the honesty gate before filing (student-classwork ask -> not ours to serve; Apple-notarization ask -> requires a paid Apple identity we don't hold; video-dataset ask -> undeliverable by code; deep compiler optimization -> not verified by the family; dream-machine-os#17 -> already served by open PR #23 which GitHub cross-links). A promise the machine cannot deliver is a lie it must not post."
+}

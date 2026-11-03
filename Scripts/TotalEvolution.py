@@ -110,9 +110,16 @@ def total_evolution_check():
     else:
         ev["safety"] = {"pass": bool(verdict)}
     # THE WEIGHTED TOTAL (the genome prints its shape at read-time)
+    # (DE-SELF-REFERENCED 2026-11-04, matching ApexUpward's law: the
+    # diary-briefs class minted +0.025 fit in 8 minutes with zero real
+    # change; only filed-artifact briefs + alarms count now)
+    _bf = (ev["life"].get("briefs_filed") or 0) if ev["life"] else 0
+    if not _bf and ev["life"]:
+        _bf = sum(1 for b in (ev["life"].get("earn_briefs") or [])
+                  if "http" in str((b or {}).get("text", "")))
     score = (ev["gold"].get("skills", 0) / 500.0
              + ev["money"].get("earned", 0) / 100.0
-             + (sum((ev["life"].get("briefs", 0), ev["life"].get("alarmsRaised", 0)))) / 40.0
+             + (sum((_bf, ev["life"].get("alarmsRaised", 0)))) / 40.0
              + ev["recruits"].get("converted", 0) / 5.0
              + (1.0 if ev["safety"].get("pass") else 0.0))
     ev["total_fitness"] = round(score, 3)

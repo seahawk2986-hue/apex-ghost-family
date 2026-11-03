@@ -138,7 +138,13 @@ def read_state():
                                "mines": int((pm.get(lane) or {}).get("mines", 0))}
                         for lane in LANES}
     ah = pm.get("andrew_help") or {}
+    # THE DE-SELF-REFERENCE (2026-11-04): a brief counts toward fitness only
+    # when it carries a FILED artifact (an http link) - the pure diary no
+    # longer climbs the genome's score by existing (the audited 78/201
+    # identical no-op rows minted ascent that was not ascent).
+    _briefs = ah.get("earn_briefs") or []
     out["help"] = {"briefs": int(ah.get("briefs", 0) or 0),
+                   "briefs_filed": sum(1 for _b in _briefs if "http" in str((_b or {}).get("text", ""))),
                    "alarmsRaised": int(ah.get("alarmsRaised", 0) or 0)}
     out["canon"] = {"papers_2026": _rowcount(PAPERS["papers_2026"]),
                     "papers_evolution": _rowcount(PAPERS["papers_evolution"])}
@@ -334,7 +340,7 @@ def help_alarm(prev, cur):
     if not prev:
         return [], {}
     alarms, floors = [], {}
-    for kind in ("briefs", "alarmsRaised"):
+    for kind in ("briefs", "briefs_filed", "alarmsRaised"):
         p = int(((prev.get("help") or {}).get(kind)) or 0)
         c = int(((cur.get("help") or {}).get(kind)) or 0)
         if c < p:
@@ -543,7 +549,7 @@ GOAL_COMPONENTS = {
                            float((s.get("mining") or {}).get("findings") or 0),
                            float((s.get("board") or {}).get("repos_consumed") or 0)),
     "money":    lambda s: (float((s.get("economy") or {}).get("earned") or 0.0),),
-    "life":     lambda s: (float((s.get("help") or {}).get("briefs") or 0),
+    "life":     lambda s: (float((s.get("help") or {}).get("briefs_filed") or 0),
                            float((s.get("help") or {}).get("alarmsRaised") or 0)),
     "recruits": lambda s: (float((s.get("doors") or {}).get("count") or 0),
                            float((s.get("converts") or {}).get("count") or 0)),
@@ -650,7 +656,7 @@ def gi_score(state):
         + int((state.get("lessons") or {}).get("count", 0) or 0) * 2.0
         + int((state.get("converts") or {}).get("count", 0) or 0) * 5.0
         + int((state.get("doors") or {}).get("count", 0) or 0) * 2.0
-        + int((state.get("help") or {}).get("briefs", 0) or 0) * 2.0
+        + int((state.get("help") or {}).get("briefs_filed", 0) or 0) * 2.0
         + float((state.get("ascent") or {}).get("last") or 0.0) * 10.0, 2)
 
 

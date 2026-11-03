@@ -250,6 +250,20 @@ def main():
         _organ_notes.append("roster refreshed (retire + catalog + probe)")
     except Exception as _e_ar:
         m.record_event("roster", "roster skipped honestly: " + str(_e_ar)[:70])
+    try:
+        import CertifyBridge as _cb
+        _n = _cb.certify()
+        _organ_notes.append(f"certify-bridge earned {len(_n)} execution-seats")
+    except Exception as _e_cb:
+        m.record_event("certification", "certify-bridge skipped honestly: "
+                       + str(_e_cb)[:70])
+    try:
+        import FilingBridge as _fb
+        _doc = _fb.prepare()
+        _organ_notes.append(f"filing-batch prepared ({_doc.get('batch_size', 0)} rows)")
+    except Exception as _e_fb:
+        m.record_event("filing_bridge", "filing-bridge skipped honestly: "
+                       + str(_e_fb)[:70])
     m.record_event("training", "night organs: " + ", ".join(_organ_notes))
     # Security posture, measured right now (feeds the overnight note honestly)
     sec_status = "integrity manifest OK; secrets sealed"

@@ -10,3 +10,5 @@ speculative_test_*
 *.pyc
 Lib/
 Config/apex_api.key
+training_venv/
+.ruff_cache/
