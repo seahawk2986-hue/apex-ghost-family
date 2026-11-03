@@ -30,6 +30,11 @@ import re
 import sys
 import time
 
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
 sys.path.insert(0, os.path.join(ROOT, "Scripts"))
 RECEIPTS = os.path.join(ROOT, "Config", "apex_hands.jsonl")
