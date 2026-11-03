@@ -67,3 +67,19 @@ router/QoS papers (Token-Budget-Aware Pool Routing, CALM, DriftSched).
 - street: 5/6 real GitHub-archive issues -> structurally sound fix-plans
   (external-distribution planning truth; receipt Config/court_street_receipt.json)
 - the court now judges nightly inside ApexDream; the verdict renders on /receipts
+
+## THE HISTORY PURGE (2026-11-04, executed with the founder's full permission)
+- git filter-repo, one pass: Lib/ (the accidentally-committed 117MB venv,
+  7190 files) + Config/apex_api.key (all history) inverted out; paypal
+  literals replaced ([REDACTED-PAYPAL]) - pickaxe: 0 hits, ALL history.
+- repo pack: 117.04 MiB -> 10.33 MiB. Force-pushed: 93305e5...9662076
+  (verified remote == rewritten local head after the check - the bots'
+  next clone starts from the clean lineage).
+- THE GATE KEY WAS ACTUALLY ROTATED (not merely scrubbed): fresh mint on
+  disk; server restarted onto it; stale 401 verified. The old published
+  value is dead at HEAD, in history, in memory, and in files.
+- Full-byte backup preserved first: Downloads/apex-ghost-family_full_backup_20261104.git
+- RESIDUAL (honest): orphaned pre-rewrite SHAs can persist in GitHub
+  caches/forks until platform GC - for absolute certainty, rotate the
+  PayPal receiving address when convenient (receiving addresses are not
+  credentials; residual risk = spam, not access).

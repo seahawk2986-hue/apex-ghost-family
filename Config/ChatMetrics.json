@@ -281,6 +281,12 @@
    "lane": "local-phi4",
    "ttft_s": 2.644,
    "chars_in": 47
+  },
+  {
+   "ts": "2026-11-02 19:19:21",
+   "lane": "local-phi4",
+   "ttft_s": 2.612,
+   "chars_in": 28
   }
  ]
 }
