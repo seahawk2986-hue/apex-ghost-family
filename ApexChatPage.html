@@ -98,19 +98,30 @@ async function send(){const ta=document.getElementById("msg");const t=ta.value.t
  const s=document.getElementById("send");s.disabled=false;s.textContent="■ STOP";
  const ac=new AbortController();streamCtrl=ac;
  const b=bubble("me","",new Date().toLocaleTimeString());b.setAttribute("aria-live","polite");
- let acc="",got=false,ok404=false;
+ let acc="",got=false,ok404=false,authed2=false;
  const paint=acc2=>{const c=b.querySelector(".c")||b;b.innerHTML=md(acc2)+(acc2?'<span class="caret">▍</span>':"");chat.scrollTop=chat.scrollHeight;};
+ const authRefresh=async()=>{try{await fetch("/talk",{cache:"no-store"});}catch(e){}return true;};
  try{
    let r;
    try{r=await fetch("/talk/api/stream",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:t}),signal:ac.signal});}
    catch(e1){ok404=true;}
    if(ok404){busy.remove();}
+   // THE SELF-HEAL (2026-11-04): my gate keys rotate (the founder's security
+   // law); a window opened before a rotation still holds the dead cookie ->
+   // 401. Instead of dying silently: re-handshake (any GET /talk mints a
+   // fresh httponly cookie) and retry ONCE, then say it honestly.
+   if(r&&r.status===401&&!authed2){authed2=true;await authRefresh();try{r=await fetch("/talk/api/stream",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:t}),signal:ac.signal});}catch(e1){ok404=true;}}
+   if(r&&r.status===401){ok404=true;}
    if(!r||!r.ok){ok404=true;}
    if(ok404||!r||!r.ok||!(r.headers.get("content-type")||"").includes("event-stream")){
-     // the honest fallback: the proven blocking lane
-     const r2=await fetch("/talk/api",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:t})});
-     const j=await r2.json();busy.remove();
-     if(j.reply){b.innerHTML=md(j.reply);chips(j.recall||[]);}else sys("APEX: (no reply payload)");
+     // the honest fallback: the proven blocking lane (with the same re-heal)
+     await authRefresh();
+     let r2=await fetch("/talk/api",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:t})});
+     if(r2.status===401&&!authed2){authed2=true;await authRefresh();r2=await fetch("/talk/api",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:t})});}
+     const j=(await r2.json())||{};busy.remove();
+     if(j.reply){b.innerHTML=md(j.reply);chips(j.recall||[]);}
+     else if(r2.status===401){sys("APEX: my gate re-keyed and this window still carries the old handshake — close and reopen the APEX window once for a fresh cookie. The fleet itself is fine.");}
+     else sys("APEX: (no reply payload)");
    }else{
      busy.remove();
      const rd=r.body.getReader();const dec=new TextDecoder();let buf="";
