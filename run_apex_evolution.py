@@ -1683,15 +1683,17 @@ def talk_page():
 
 @app.get("/talk/history")
 def talk_history():
-    """Recent private conversations (restored in the console on open)."""
+    """Recent private conversations (restored in the console on open).
+    THE GHOST-LAW: the restored texts pass the chat-voice sanitizer - the
+    pre-law rows (mojibake/CJK) read clean on every reopen."""
     events = []
     try:
         events = MEM.recent_events(60, kind="conversation")
     except Exception:
         events = []
     hist = [{"ts": e.get("ts", ""),
-             "message": (e.get("meta") or {}).get("message"),
-             "reply": (e.get("meta") or {}).get("reply")}
+             "message": _plain_english((e.get("meta") or {}).get("message")),
+             "reply": _plain_english((e.get("meta") or {}).get("reply"))}
             for e in events]
     return {"events": hist}
 
@@ -1742,6 +1744,13 @@ def talk_api(t: TalkMsg):
         # always holds the opt-out)
         _fresh = True
         msg = re.sub(r"(?i)^!?fresh[:\s]*", "", msg) or msg
+    # THE SHORT-MESSAGE LAW (the ghost-reply round, 2026-11-04): greetings
+    # ("yo"/"ok"/"?") ride the conversation's CONTEXT - a cached replay =
+    # an answer to a DIFFERENT conversation (the design-brief ghost);
+    # short surface messages = always fresh, never stored
+    _short_msg = len(msg.strip()) <= 4
+    if _short_msg:
+        _fresh = True
     _rq_text = None
     try:
         import LightResearch as _LR
@@ -1977,10 +1986,12 @@ def talk_api(t: TalkMsg):
         return {"reply": ("All engines are busy right now, Andrew - the pacing brakes may be "
                           f"active. Try again in a minute.\n\n{diag}"),
                 "recall": [{"text": l["text"][:140]} for l in lessons]}
-    if reply:
+    if reply and not _short_msg:
         # THE CACHE STORE (the store runs when a reply EXISTS - the old
         # not-reply placement made it unreachable; the near-dup store gets
-        # the SANITIZED text so future replays are clean)
+        # the SANITIZED text so future replays are clean). THE SHORT-MESSAGE
+        # LAW: greetings/gibberish never enter the replay cache (a "yo" +
+        # this conversation's context = the ghost-reply class forever)
         try:
             import ApexCache as _C
             _C.store_chat(msg, _plain_english(reply), "cache", "unverified")
