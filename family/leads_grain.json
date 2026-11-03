@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-03 04:45:02",
- "count": 453,
+ "ts": "2026-11-03 05:00:02",
+ "count": 523,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -19,6 +19,13 @@
   {
    "repo": "mautic/mautic",
    "score": 88.2,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "cztomsik/ava",
+   "score": 85.1,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -214,6 +221,34 @@
   },
   {
    "repo": "oresat/oresat-star-tracker-software",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "alexpinel/Dot",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "firatkiral/kodibot",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "vietanhdev/llama-assistant",
+   "score": 83.8,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "blackhole89/autopen",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -577,6 +612,13 @@
    "license": ""
   },
   {
+   "repo": "abgulati/LARS",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "miroslavpejic85/mirotalk",
    "score": 83.0,
    "tier": "VEIN",
@@ -696,6 +738,13 @@
    "license": ""
   },
   {
+   "repo": "pythops/tenere",
+   "score": 61.5,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "jitsi/jitsi-meet",
    "score": 61.0,
    "tier": "MINE",
@@ -724,6 +773,13 @@
    "license": ""
   },
   {
+   "repo": "MindWorkAI/AI-Studio",
+   "score": 55.5,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "NetTopologySuite/ProjNet4GeoAPI",
    "score": 55.2,
    "tier": "GOLD",
@@ -747,6 +803,13 @@
   {
    "repo": "nathanialf/ico-pc",
    "score": 52.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nothings/stb",
+   "score": 51.9,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -1767,6 +1830,195 @@
    "license": ""
   },
   {
+   "repo": "ggml-org/ggml",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ddh0/easy-llama",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "withcatai/node-llama-cpp",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "tangledgroup/llama-cpp-wasm",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ptsochantaris/emeltal",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ShelbyJenkins/llm_client",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "SciSharp/LLamaSharp",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "netdur/llama_cpp_dart",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Deins/llama.cpp.zig",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "distantmagic/resonance",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "yaroslavyaroslav/OpenAI-sublime-text",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ShenghaiWang/SwiftLlama",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "johnbean393/Sidekick",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "zhouwg/kantv",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ggml-org/llama.vim",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Mobile-Artificial-Intelligence/maid",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "a-ghorbani/pocketpal-ai",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "psugihara/FreeChat",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "LostRuins/koboldcpp",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "semperai/amica",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "containers/ramalama",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "akx/ggify",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "yoshoku/llama_cpp.rb",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "akx/ollama-dl",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "crashr/gppm",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "onicai/llama_cpp_canister",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "yhirose/cpp-httplib",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "turboderp/exllamav2",
    "score": 51.0,
    "tier": "MINE",
@@ -1893,6 +2145,104 @@
    "license": ""
   },
   {
+   "repo": "go-skynet/go-llama.cpp",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "mdrokz/rust-llama.cpp",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "docusealco/rllama",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "mybigday/llama.rn",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "xuegao-tzx/Fllama",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "srgtuszy/llama-cpp-swift",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ylsdamxssjxxdd/eva",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "guinmoon/LLMFarm",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "mudler/LocalAI",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nat/openplayground",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "withcatai/catai",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nomic-ai/gpt4all",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "hybridgroup/yzma",
+   "score": 50.9,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "better-auth/better-auth",
+   "score": 50.8,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "cytoscape/cytoscape.js",
    "score": 50.7,
    "tier": "MINE",
@@ -1935,6 +2285,13 @@
    "license": ""
   },
   {
+   "repo": "kherud/java-llama.cpp",
+   "score": 50.5,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "mono/SkiaSharp",
    "score": 50.4,
    "tier": "MINE",
@@ -1965,6 +2322,13 @@
   {
    "repo": "brandon-rhodes/python-sgp4",
    "score": 50.4,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "phronmophobic/llama.clj",
+   "score": 50.2,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -2301,6 +2665,13 @@
   {
    "repo": "evolution-foundation/evolution-go",
    "score": 30.4,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "NVIDIA/ontology-sql-eval",
+   "score": 30.2,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -2894,6 +3265,118 @@
    "license": ""
   },
   {
+   "repo": "ymcui/Chinese-LLaMA-Alpaca-2",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "state-spaces/mamba",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "bofenghuang/vigogne",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "BlinkDL/RWKV-LM",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "EleutherAI/pythia",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "BAAI-DCAI/Bunny",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "donderom/llm4s",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "QuasarByte/llama-cpp-jna",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "iohub/coLLaMA",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "undreamai/LlamaLib",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ymcui/Chinese-LLaMA-Alpaca",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "intentee/paddler",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "undreamai/LLMUnity",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "InftyAI/llmaz",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "kalavai-net/kalavai-client",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "defilantech/llmkube",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "0xShug0/audio.cpp",
    "score": 29.6,
    "tier": "GOLD",
@@ -2944,6 +3427,13 @@
   },
   {
    "repo": "nasa/fprime",
+   "score": 29.6,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "gpustack/gpustack",
    "score": 29.6,
    "tier": "GOLD",
    "stars": 0,
