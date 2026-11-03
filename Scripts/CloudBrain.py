@@ -163,6 +163,10 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
             # individually-capped :free models = the constructed unlimited
             # lane (N caps in rotation); tried as ONE lane, its own state
             # file carries each model's daily budget honestly
+            # THE KEYLESS ETERNAL LANE (the unlimited round v2): Pollinations'
+            # openai-compat endpoint = NO key, NO caps, $0 forever - the
+            # chat-floor's final voice when every other door is capped/dead
+            ("pollinations", "https://text.pollinations.ai/openai", "openai", "", {}),
             ("or-swarm", "freeswarm://internal", "rotator(:free)", "", {}),
         ]
     credits_allowed = (os.environ.get("CREDITS_ALLOWED") == "1" or
@@ -183,11 +187,13 @@ def chat(prompt, max_tokens=512, purpose="", models=(), resp_json=False):
     cands = ([c for c in pool if c[0] in set(models)] if models else pool)
     if _idx:
         cands = sorted(cands, key=lambda c: _idx.get(c[0], 99))
+    _KEYLESS = ("pollinations",)   # keyless by design = never skip
     for name, url, model, keyv, hdrs in cands:
         is_local = name.startswith("local")
-        if not keyv and not is_local:
+        if not keyv and not is_local and not name.startswith(_KEYLESS):
             # THE HONEST SKIP (was silent - invisible to the fleet): a lane
-            # without its key is skipped LOUDLY now
+            # without its key is skipped LOUDLY now; the KEYLESS lanes
+            # (pollinations - by DESIGN keyless) never skip
             print(f"[cloud-brain] {name}: no key in .env - skipped (loud)")
             continue
         if not is_local:

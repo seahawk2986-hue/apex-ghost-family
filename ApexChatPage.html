@@ -68,7 +68,9 @@ button{border:0;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:
 <div id="chat"></div>
 <footer>
   <div id="inputrow">
-    <textarea id="msg" rows="1" aria-label="Message for Apex" placeholder="Talk to Apex…  (Shift+Enter = newline)"></textarea>
+    <textarea id="msg" rows="1" aria-label="Message for Apex" placeholder="Talk to Apex…  (Shift+Enter = newline · paste an image to ask about it · 'draw:' to make one)"></textarea>
+    <button class="tool" id="imgbtn" title="attach an image for Apex to read">🖼 image</button>
+    <input type="file" id="imgfile" accept="image/*" style="display:none">
     <button class="tool" id="pastebtn" title="paste clipboard into the message">⤓ paste</button>
 <button class="tool" id="libbtn" title="prompt library — 110 clickable prompts">📚 prompts</button>
 <button class="tool" id="dirbtn" title="load the training directive">📋</button>
@@ -78,20 +80,50 @@ button{border:0;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:
 <script>
 const chat = document.getElementById("chat");
 const D = TRAINING_DIRECTIVE_PLACEHOLDER;
+let attachedImg = null;   // the dataURL awaiting the vision send
 function esc(s){const d=document.createElement("div");d.textContent=s==null?"":String(s);return d.innerHTML;}
 function md(s){let t=esc(s);t=t.replace(/```(\w*)\n([\s\S]*?)```/g,(m,l,c)=>`<pre><code>${c}</code></pre>`);t=t.replace(/`([^`\n]+)`/g,"<code>$1</code>");t=t.replace(/\n/g,"<br>");return t;}
 function bubble(kind,html,when){const r=document.createElement("div");r.className="row "+kind;const b=document.createElement("div");b.className="bubble";b.dataset.raw=html;
   const w=document.createElement("div");w.className="who";w.textContent=kind==="you"?("ANDREW · "+(when||"")):("APEX · "+(when||""));
   b.innerHTML=html;r.appendChild(b);r.appendChild(w);
-  if(kind==="me"){const cp=document.createElement("div");cp.className="who";cp.style.cursor="pointer";cp.title="copy reply";cp.textContent="⧉ copy";
-    cp.onclick=async()=>{const raw=b.dataset.raw.replace(/<br\s*\/?>/g,"\n").replace(/<[^>]+>/g,"");const ok=await nativeCopy(raw);cp.textContent=ok?"⧉ copied":"⧉ copy failed";setTimeout(()=>cp.textContent="⧉ copy",1500);};
-    r.appendChild(cp);}
+  const cp=document.createElement("div");cp.className="who";cp.style.cursor="pointer";cp.title="copy this "+(kind==="me"?"reply":"message");cp.textContent="⧉ copy";
+  cp.onclick=async()=>{const raw=b.dataset.raw.replace(/<br\s*\/?>/g,"\n").replace(/<[^>]+>/g,"");const ok=await nativeCopy(raw);cp.textContent=ok?"⧉ copied":"⧉ copy failed";setTimeout(()=>cp.textContent="⧉ copy",1500);};
+  r.appendChild(cp);
   chat.appendChild(r);chat.scrollTop=chat.scrollHeight;return r;}
+function imgBubble(dataUrl,lane,who){const r=document.createElement("div");r.className="row "+(who||"me");const b=document.createElement("div");b.className="bubble";
+  const im=document.createElement("img");im.src=dataUrl;im.style.maxWidth="100%";im.style.borderRadius="10px";
+  const save=document.createElement("a");save.href=dataUrl;save.download="apex-image.png";save.textContent="⤓ save this image";save.style.cssText="display:block;margin-top:6px;color:#58a6ff;font-size:12px";
+  b.appendChild(im);b.appendChild(save);r.appendChild(b);chat.appendChild(r);
+  const cp=document.createElement("div");cp.className="who";cp.style.cursor="pointer";cp.textContent="⧉ copy image";
+  cp.onclick=async()=>{try{const blob=await (await fetch(dataUrl)).blob();await navigator.clipboard.write([new ClipboardItem({[blob.type]:blob})]);cp.textContent="⧉ copied!";setTimeout(()=>cp.textContent="⧉ copy image",1500);}catch(e){cp.textContent="⧉ use save";setTimeout(()=>cp.textContent="⧉ copy image",1500);}};
+  r.appendChild(cp);chat.scrollTop=chat.scrollHeight;}
+async function doVision(dataUrl,q){const r0=bubble("you",md((q||"what is in this image?")),new Date().toLocaleTimeString());
+  const im=document.createElement("img");im.src=dataUrl;im.style.cssText="max-width:220px;border-radius:10px;display:block;margin-top:4px";r0.querySelector(".bubble").appendChild(im);
+  chat.appendChild(busy);chat.scrollTop=chat.scrollHeight;
+  const s1=document.getElementById("send");s1.textContent="■ STOP";
+  try{const rr=await fetch("/talk/api/vision",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({image:dataUrl,question:q||""})});
+    busy.remove();const j=await rr.json();
+    if(j.reply){bubble("me",md(j.reply),new Date().toLocaleTimeString());if(j.lane)chips([{text:"via "+j.lane}]);}
+    else bubble("me","(the vision lane came back empty - honest)",new Date().toLocaleTimeString());
+  }catch(e){busy.remove();bubble("me","vision lane hiccup - try again",new Date().toLocaleTimeString());}
+  attachedImg=null;s1.textContent="SEND";ta.focus();}
+async function doDraw(prompt){bubble("you",md("draw: "+prompt),new Date().toLocaleTimeString());
+  chat.appendChild(busy);chat.scrollTop=chat.scrollHeight;const s1=document.getElementById("send");s1.textContent="🖌 painting…";
+  try{const rr=await fetch("/talk/api/image",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({prompt:prompt})});
+    busy.remove();const j=await rr.json();
+    if(j.image){imgBubble(j.image,"","me");if(j.lane)chips([{text:"painted via "+j.lane}]);}
+    else bubble("me","(no image lane answered - honest: "+(j.error||"try another prompt")+")",new Date().toLocaleTimeString());
+  }catch(e){busy.remove();bubble("me","the brush hiccupped - try again",new Date().toLocaleTimeString());}
+  s1.textContent="SEND";ta.focus();}
 function sys(text,gold){const d=document.createElement("div");d.className="sys";if(gold)d.classList.add("gold");d.textContent=text;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;return d;}
 function chips(re){re.slice(0,3).forEach(x=>{const c=document.createElement("div");c.className="chip";c.textContent="recalled: "+x.text;chat.appendChild(c);});}
 const busy=document.createElement("div");busy.className="row me";busy.id="typing";busy.innerHTML='<div class="bubble typing"><span></span><span></span><span></span></div>';
 let streamCtrl=null;
-async function send(){const ta=document.getElementById("msg");const t=ta.value.trim();if(!t)return;if(streamCtrl){streamCtrl.abort();streamCtrl=null;return;}ta.value="";
+async function send(){const ta=document.getElementById("msg");const t=ta.value.trim();
+  if(streamCtrl){streamCtrl.abort();streamCtrl=null;return;}
+  if(t.startsWith("draw:")){ta.value="";return doDraw(t.slice(5).trim());}
+  if(attachedImg){const ai=attachedImg, q=t;ta.value="";return doVision(ai,q);}
+  if(!t)return;ta.value="";
  bubble("you",md(t),new Date().toLocaleTimeString());
  if(t.startsWith("📋"))return;
  chat.appendChild(busy);chat.scrollTop=chat.scrollHeight;
@@ -147,6 +179,21 @@ document.getElementById("send").onclick=()=>send();
 const ta=document.getElementById("msg");ta.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();send();}});
 ta.addEventListener("input",()=>{ta.style.height="auto";ta.style.height=Math.min(120,ta.scrollHeight)+"px";});
 document.getElementById("dirbtn").onclick=()=>{ta.value=D;ta.focus();ta.dispatchEvent(new Event("input"));};
+// ====== THE VISION WIRING (attach / paste-image / drag-drop) ============
+function readInto(file){const fr=new FileReader();fr.onload=()=>{attachedImg=fr.result;
+  sys("🖼 image attached ("+Math.round(dataUrlKB(fr.result))+" KB) — now type your question (or just SEND to describe it)");};
+  fr.readAsDataURL(file);}
+function dataUrlKB(u){return (u.length*0.75)/1024;}
+document.getElementById("imgbtn").onclick=()=>document.getElementById("imgfile").click();
+document.getElementById("imgfile").onchange=e=>{const f=e.target.files[0];if(f)readInto(f);e.target.value="";};
+ta.addEventListener("paste",async e=>{
+  const items=(e.clipboardData||{}).items||[];
+  for(const it of items){if(it.type&&it.type.startsWith("image/")){e.preventDefault();
+    const f=it.getAsFile();if(f){attachedImg=URL.createObjectURL?URL.createObjectURL(f):attachedImg;
+      const fr=new FileReader();fr.onload=()=>{attachedImg=fr.result;
+        sys("🖼 PASTED image attached — type your question (or SEND to describe)");};
+      fr.readAsDataURL(f);}return;}}
+});
 document.getElementById("pastebtn").onclick=async()=>{const t=await nativePaste();if(t){ta.value=(ta.value?ta.value+"\n":"")+t;ta.focus();ta.dispatchEvent(new Event("input"));}else sys("clipboard is empty or unavailable");};
 document.getElementById("libbtn").onclick=()=>{if(libRows){libRows.scrollIntoView({block:"start"});}else{renderLibrary();}};
 const LIB=[

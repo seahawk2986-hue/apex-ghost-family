@@ -1,4 +1,6 @@
 import os, sys, json, ast, time, shutil, re, subprocess, threading, secrets, hmac
+import base64
+import urllib.parse
 from collections import defaultdict, deque
 from pydantic import BaseModel
 from fastapi import FastAPI, BackgroundTasks, Request
@@ -2220,6 +2222,190 @@ def talk_api_stream(t: TalkStreamMsg):
     return StreamingResponse(gen(), media_type="text/event-stream; charset=utf-8",
                              headers={"Cache-Control": "no-cache",
                                       "X-Accel-Buffering": "no"})
+
+# ----------------------- THE VISION + IMAGE-MAKING LANES (2026-11-04:
+# the chat's senses round - outsource-first: NIM's VL seats / the gemini
+# window / HF's free VL, then the LOCAL qwen3-vl-8b (RAM-gated on-demand
+# load via lms) - and the images: POLLINATIONS FIRST ($0 keyless instant)
+# with the LOCAL SD on the RTX 3050 as the zero-internet floor.
+_IMG_CACHE = {"last": 0.0, "nim_vl": []}
+
+
+def _nim_vl_seats():
+    """The VL-capable NIM seats (id hunt: vl/llava/vision/pixtral/internvl/
+    qwen2.5-vl/phi-3.5-v), discovered once per 30 min from the catalog."""
+    if time.time() - _IMG_CACHE.get("last", 0) < 1800 and _IMG_CACHE.get("nim_vl"):
+        return _IMG_CACHE["nim_vl"]
+    seats = []
+    try:
+        r = requests.get("https://integrate.api.nvidia.com/v1/models",
+                         headers={"Authorization": "Bearer " + os.environ.get(
+                             "NVIDIA_API_KEY", ""), "User-Agent": "ApexFleet/1.0"}, timeout=15)
+        pat = re.compile(r"(vl|llava|vision|pixtral|internvl|phi-3\.5-vis)", re.I)
+        for m in r.json().get("data", []):
+            mid = m.get("id") or ""
+            if pat.search(mid) and ".html" not in mid:
+                seats.append(mid)
+    except Exception:
+        pass
+    _IMG_CACHE.update({"last": time.time(), "nim_vl": seats[:4]})
+    return _IMG_CACHE["nim_vl"]
+
+
+def _chat_image(parts_text, b64png):
+    """One VL call: OpenAI-compat content-array (image_url dataURL)."""
+    return [{"role": "user", "content": [
+        {"type": "text", "text": parts_text},
+        {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{b64png}"}}]}]
+
+
+def _vl_ask(b64png, question):
+    """THE VISION CHAIN: outsourced seats first, the local eye last. Every
+    lane bounded; the honest lane-name returns (the receipts law)."""
+    key = os.environ.get("NVIDIA_API_KEY", "")
+    msgs = _chat_image(question or "Describe this image: what is shown, any readable text, and one odd detail (be honest if unsure).", b64png)
+    for mid in _nim_vl_seats():
+        try:
+            r = requests.post(
+                "https://integrate.api.nvidia.com/v1/chat/completions",
+                headers={"Authorization": "Bearer " + key},
+                json={"model": mid, "messages": msgs, "max_tokens": 500},
+                timeout=60)
+            if r.status_code == 200:
+                txt = (r.json().get("choices") or [{}])[0].get("message", {}).get("content", "")
+                if (txt or "").strip():
+                    return _plain_english(txt), f"nim-vl/{mid}"
+        except Exception:
+            continue
+    # the LOCAL eye: LM Studio's qwen3-vl-8b (the RAM-gated on-demand load)
+    try:
+        free = _free_ram_gb()
+        if free >= 6.5:
+            lms = os.path.expandvars(r"%USERPROFILE%\.lmstudio\bin\lms.exe")
+            if os.path.exists(lms):
+                subprocess.run([lms, "unload", "--all"], capture_output=True, timeout=60)
+                subprocess.run([lms, "load", "qwen3-vl-8b-instruct", "--ttl", "1800"],
+                               capture_output=True, timeout=240)
+                r = requests.post("http://127.0.0.1:1234/v1/chat/completions",
+                                  json={"model": "qwen3-vl-8b-instruct",
+                                        "messages": msgs, "max_tokens": 500},
+                                  timeout=120)
+                if r.status_code == 200:
+                    txt = ((r.json().get("choices") or [{}])[0].get("message", {}) or {}).get("content", "")
+                    if (txt or "").strip():
+                        subprocess.Popen([lms, "unload", "--all"],
+                                         capture_output=True)
+                        return _plain_english(txt), "local-vl/qwen3-vl-8b"
+            return "", f"RAM {free:.1f}GB < 6.5GB - the local eye honestly skipped"
+    except Exception:
+        pass
+    # the gemini window (VL, free-window; the pacer reopens)
+    try:
+        gk = ""
+        try:
+            sys.path.insert(0, os.path.join(R, "Scripts"))
+            import ApexIO as _AIO
+            gk = _AIO.env().get("GEMINI_API_KEY", "")
+        except Exception:
+            gk = os.environ.get("GEMINI_API_KEY", "")
+        if gk:
+            r = requests.post(
+                "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+                headers={"Authorization": "Bearer " + gk},
+                json={"model": "gemini-flash-latest", "messages": msgs,
+                      "max_tokens": 500}, timeout=60)
+            if r.status_code == 200:
+                txt = ((r.json().get("choices") or [{}])[0].get("message", {}) or {}).get("content", "")
+                if (txt or "").strip():
+                    return _plain_english(txt), "gemini-vl/flash"
+    except Exception:
+        pass
+    return "", ""
+
+
+class VisionMsg(BaseModel):
+    image: str          # the dataURL (png/jpeg; bounded below)
+    question: str = ""
+
+
+@app.post("/talk/api/vision")
+def talk_vision(v: VisionMsg):
+    """THE CHAT'S EYES (outsource-first; the receipts law holds)."""
+    if not APEX_KEY:
+        pass
+    _raw = (v.image or "")
+    m = re.match(r"^data:image/(png|jpe?g|webp);base64,(.+)$", _raw[:80] + "...")
+    if not m:
+        m = re.match(r"^data:image/([a-z]+);base64,(.+)$", _raw.strip(), re.S)
+    if not m:
+        return {"reply": "That attachment is not an image data-URL - the honest no."}
+    b64 = m.group(2)
+    if len(b64) > 8 * 1024 * 1024:
+        return {"reply": "The image is over the 8MB bound - shrink it and try again."}
+    txt, lane = _vl_ask(b64, (v.question or "").strip())
+    if txt:
+        try:
+            MEM.record_event("vision", f"image read ({lane}): "
+                             f"{str((v.question or 'describe'))[:60]} -> {txt[:90]}", talk=True)
+        except Exception:
+            pass
+        return {"reply": txt, "lane": lane}
+    return {"reply": "No vision lane answered just now (all honest - the "
+                    "NIM seats/gemini window/local RAM); try again in a "
+                    "minute, or ask text-only meanwhile."}
+
+
+@app.post("/talk/api/image")
+def talk_image(req: dict):
+    """THE CHAT'S BRUSH: prompt -> an image. Pollinations first ($0,
+    keyless, instant), the LOCAL SD (RTX 3050) as the offline floor; the
+    reply = a data-URL the page renders inline."""
+    prompt = str((req or {}).get("prompt", ""))[:600]
+    if not prompt:
+        return {"error": "no prompt"}
+    try:
+        u = ("https://image.pollinations.ai/prompt/"
+             + urllib.parse.quote(prompt, safe="")
+             + "?width=832&height=1248&nologo=true&seed="
+             + str(int(time.time()) % 100000))
+        r = requests.get(u, timeout=90)
+        if r.status_code == 200 and (r.content or b"")[:4] in (b"\x89PNG", b"\xff\xd8\xff\xe0")[:1] or (r.status_code == 200 and r.content[:2] == b"\xff\xd8"):
+            b64 = base64.b64encode(r.content).decode()
+            ct = "image/png" if r.content[:4] == b"\x89PNG" else "image/jpeg"
+            return {"image": f"data:{ct};base64,{b64}", "lane": "pollinations/$0"}
+    except Exception:
+        pass
+    # the LOCAL floor: the RTX 3050's own brush (the training venv's torch)
+    try:
+        tvenv = os.path.join(R, "training_venv", "Scripts", "python.exe")
+        if os.path.exists(tvenv):
+            _ps = r'''import sys, base64
+import torch
+from diffusers import StableDiffusionPipeline
+p = sys.argv[1]
+pipe = StableDiffusionPipeline.from_pretrained("runwayml/stable-diffusion-v1-5", torch_dtype=torch.float16, safety_checker=None)
+pipe = pipe.to("cuda")
+img = pipe(p, num_inference_steps=28, guidance_scale=7.0).images[0]
+import io as _io
+buf = _io.BytesIO(); img.save(buf, "PNG")
+print(base64.b64encode(buf.getvalue()).decode())'''
+            _pf = os.path.join(R, f"_apex_draw_{int(time.time())}.py")
+            with open(_pf, "w", encoding="utf-8") as f:
+                f.write(_ps)
+            res = subprocess.run([tvenv, _pf, prompt], capture_output=True,
+                                 text=True, timeout=900)
+            try:
+                os.remove(_pf)
+            except OSError:
+                pass
+            out = (res.stdout or "").strip()
+            if out and len(out) > 1000:
+                return {"image": "data:image/png;base64," + out,
+                        "lane": "local-sd/rtx3050"}
+    except Exception:
+        pass
+    return {"error": "no image lane answered (Pollinations + local SD) - honest"}
+
 
 @app.get("/hub-app")
 def hub_app():
