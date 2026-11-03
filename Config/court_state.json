@@ -1,0 +1,12 @@
+{
+ "ts": "2026-11-02 19:13:42",
+ "holdout_pct": 40.7,
+ "holdout_n": 27,
+ "internal_pct": 31.6,
+ "prev_holdout_pcts": [
+  40.7
+ ],
+ "verdict": "CLEAN (internal ~= holdout: no self-flattery detected)",
+ "note": "",
+ "source": "sealed holdout, n=27 (court_holdout.json); internal trend = the gym's last-60 GI-gym rows"
+}

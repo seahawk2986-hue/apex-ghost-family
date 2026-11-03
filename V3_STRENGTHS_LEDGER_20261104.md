@@ -41,3 +41,22 @@ dependencies, every mechanism stdlib or already-installed.*
   to keep the live fleet unbroken).
 - The court's first judge verdict needs the seal to finish + one gym beat to
   compare against.
+---
+
+## THE FLEET ROUND (2026-11-04, same session - the fleet's own weaknesses)
+
+Measured live at 18:47-19:12 from scores/lane_state.json + the catalogs:
+
+| The weakness (measured) | The organ now | The proof |
+|---|---|---|
+| nim-k3: 410-Gone corpse still occupying a rotation slot | AutoRoster.retire_dead(): 410 = retired on first sighting (RFC 9110: Gone is permanent), watched for return, episodic receipt | [roster] RETIRED: nim-k3; order_for excludes it (assert PASS) |
+| Roster NEVER renewed itself; free tiers churn weekly | AutoRoster.refresh(): each provider's OWN documented catalog (Groq /v1/models - verified live against their published reference today; OpenRouter catalog; NIM /v1/models; GitHub-Models catalog w/ the held PAT) -> bounded 1-token capability probes -> Config/lane_extra.json merged into rotation | first beat: 2 LIVE lanes added (minimaxai/minimax-m3.1-flash 200-in-6.1s; nvidia/nemotron-safety-guard-8b 200-in-1.0s), 7 honest dormant receipts |
+| A content-SAFETY classifier could have answered chat | guard/safety names classify as tier "guard" = registered for tools, EXCLUDED from chat rotation | assert PASS (no guard tier in chat order) |
+| The dispatch order was static; cold lanes led it; walled lanes hidden in the middle | LaneBandit: eps-greedy (0.18) ordering with a latency-shaped reward (success/log(2+ms/80)); pacer-windowed lanes demoted; CapabilityMap-seeded prior | order-for renders: floors pinned, mediums bandit-ordered, walled behind healthy |
+| Storm budgets could be drained by the organs, starving user-facing calls | per-CLASS budgets (protected 30/h vs batch 12/h), per-class ledger files; organs default batch; user-facing paths don't draw Shard storm at all | compile + order tests PASS |
+| Pacer/rotator roster drift (nim-v4pro rotated but unpaced) | LaneGuard's book now includes nim-v4pro; ONE roster contract (shard LANES + verified extras) | lane_state includes nim-v4pro on the next LaneGuard beat |
+
+Sources: Groq API reference (models-list; fetched live 2026-11-02); the
+family's own ProbeFreeModels.py precedent (GitHub/OpenRouter/Gemini catalogs);
+Auer/Cesa-Bianchi/Fischer 2002 (eps-greedy class); the 2026 canon's
+router/QoS papers (Token-Budget-Aware Pool Routing, CALM, DriftSched).

@@ -14,6 +14,17 @@
   WarmBrain (RAM-gated resident floor brain), the Blind Court + the Outcome
   Yardstick (internal-vs-external truth, live on /receipts). LedgerTrim bounds
   both bloated ledgers. All existing tests: 13/13 PASS.
+- THE FLEET ROUND (2026-11-04, same session): the fleet's own weaknesses got
+  organs too - **LaneBandit** (the learned lane order: eps-greedy + latency-
+  shaped reward over the real dispatches; sources: Auer 2002 + the canon's
+  Token-Budget-Aware Pool Routing / CALM / DriftSched), **AutoRoster** (the
+  self-renewing roster: the providers' own /models catalogs -> 1-token
+  capability probes -> verified new lanes; corpse-retirement on 410) - it
+  found 2 LIVE new NIM lanes on its first beat (minimax-m3.1-flash +
+  the nemotron-guard correctly CLASSIFIED, never a chat answerer), retired
+  the 410-Gone nim-k3 from rotation, and closed the pacer/rotator roster
+  drift (nim-v4pro now paced). Storm budgets are per-CLASS now (organs =
+  batch, founder-facing = protected; DriftSched's QoS law applied).
 
 *The machine's laws: the USD-caps + the legal-attestations = YOURS by design. Everything else = automated, forever.*
 

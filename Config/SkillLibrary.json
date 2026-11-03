@@ -7500,7 +7500,89 @@
     "sys"
    ],
    "registered": "2026-11-02 18:01:27"
+  },
+  {
+   "skill": "table_enc_12bit",
+   "source_file": "3rdparty/base64/lib/tables/table_enc_12bit.py",
+   "source_repo": "kovidgoyal/kitty",
+   "license": "check repo",
+   "sha256": "65a1248505651e8734c2a556427901d7a6fc24fbcac0ea1c1e3ee6336a0a1b79",
+   "lines": 48,
+   "first_line": "#!/usr/bin/python3",
+   "imports": [],
+   "registered": "2026-11-02 19:12:59"
+  },
+  {
+   "skill": "extract-rst-targets",
+   "source_file": "docs/extract-rst-targets.py",
+   "source_repo": "kovidgoyal/kitty",
+   "license": "check repo",
+   "sha256": "e92b75b728cf156e778f97c3536af25c226300fb2ce380cf85c550200518e7eb",
+   "lines": 55,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "json",
+    "os",
+    "re"
+   ],
+   "registered": "2026-11-02 19:13:01"
+  },
+  {
+   "skill": "__main__",
+   "source_file": "gen/__main__.py",
+   "source_repo": "kovidgoyal/kitty",
+   "license": "check repo",
+   "sha256": "29792ea5ebfc0be5306507c736a8d3a4fbce48504e778fd868e0bc86a7e4fd84",
+   "lines": 53,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-02 19:13:02"
+  },
+  {
+   "skill": "bitfields",
+   "source_file": "gen/bitfields.py",
+   "source_repo": "kovidgoyal/kitty",
+   "license": "check repo",
+   "sha256": "5136990c3367570e573ef8afbb89da42bffa7f9e58a4e3e535d23f024b6c9233",
+   "lines": 64,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-02 19:13:02"
+  },
+  {
+   "skill": "srgb_lut",
+   "source_file": "gen/srgb_lut.py",
+   "source_repo": "kovidgoyal/kitty",
+   "license": "check repo",
+   "sha256": "d345327ecd62e748d10b50f1fd1a970e14206228fa5c41b8ea0338a385b1738b",
+   "lines": 59,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "__main__",
+    "os",
+    "runpy",
+    "sys"
+   ],
+   "registered": "2026-11-02 19:13:03"
+  },
+  {
+   "skill": "main",
+   "source_file": "kittens/ask/main.py",
+   "source_repo": "kovidgoyal/kitty",
+   "license": "check repo",
+   "sha256": "aabc151de581e8b0d6a6e326d6a173dbf0b78312d3e54b53868b1bf7da9006f7",
+   "lines": 90,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-02 19:13:05"
   }
  ],
- "built": "2026-11-02 18:01:27"
+ "built": "2026-11-02 19:13:05"
 }

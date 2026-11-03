@@ -74,6 +74,34 @@ def _ps_shows(model):
 
 def main(force=False):
     free = _free_gb()
+    # THE DEMAND-ADAPTIVE PIN (2026-11-04): the last-24h of the family's own
+    # episodes vote - chat-heavy nights pin the chat floor first, code-heavy
+    # nights pin the coder first (the preloader follows the REAL demand).
+    order = list(PIN_ORDER)
+    try:
+        chat_n = code_n = 0
+        cutoff = time.time() - 86400
+        for ln in open(os.path.join(ROOT, "memory_episodic.jsonl"),
+                       encoding="utf-8"):
+            try:
+                j = json.loads(ln)
+            except Exception:
+                continue
+            kind = j.get("kind", "")
+            if kind == "conversation":
+                chat_n += 2
+            elif kind in ("skill_session",):
+                code_n += 3
+            elif kind in ("calibration", "evolution_pass"):
+                code_n += 1
+        if code_n > chat_n:
+            coder = [p for p in PIN_ORDER if p[0] == "local-coder"]
+            rest = [p for p in PIN_ORDER if p[0] != "local-coder"]
+            order = coder + rest
+            print(f"[warm-brain]: demand read - chat {chat_n} vs code {code_n} "
+                  "-> pinning the CODER first")
+    except Exception:
+        pass
     st = {}
     try:
         st = json.load(open(STATE, encoding="utf-8-sig"))
@@ -88,7 +116,7 @@ def main(force=False):
         except Exception:
             pass
     pinned, skipped = [], []
-    for name, model, need_gb in PIN_ORDER:
+    for name, model, need_gb in order:
         if free >= need_gb:
             ok = False
             try:

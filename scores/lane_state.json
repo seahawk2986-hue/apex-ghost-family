@@ -84,12 +84,14 @@
   "note": "rate window - will re-open"
  },
  "nim-k3": {
-  "note": "{\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model ",
+  "note": "RETIRED (410 Gone) - AutoRoster watches for the model's return",
   "pace_s": 2.5,
   "walls": 0,
   "oks": 0,
   "last": "17:24:49",
-  "last_http": 410
+  "last_http": 410,
+  "e410": 1,
+  "retired": true
  },
  "nim-v41f": {
   "pace_s": 16.384000000000004,
@@ -106,5 +108,6 @@
   "last_http": null,
   "last_ok_ts": 1793661544.4493744,
   "note": "alive"
- }
+ },
+ "bandit": {}
 }

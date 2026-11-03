@@ -48,7 +48,13 @@ CODE_FLOOR = ("local-coder", "http://127.0.0.1:1234/v1/chat/completions",
               None, "qwen2.5-coder-7b-instruct", "floor-code")
 
 _lock = threading.Lock()
-STORM_BUDGET = 30            # RetryGuard-class cap: max swapped-retries per hour, fleet-wide
+STORM_BUDGET = {"protected": 30, "batch": 12}
+# THE QoS CLASSES (2026-11-04; canon: DriftSched's QoS-aware scheduling +
+# CALM's routing, both 2026-sourced in the speed ledger): the founder-facing
+# calls draw from a PROTECTED budget the organs can never drain; the
+# organs (gym/court/farm) draw from a smaller BATCH budget. A storm burns
+# the class that CAUSED it - chat never starves behind organ churn.
+DEFAULT_CLASS = "batch"
 
 # THE TIERED, LENGTH-AWARE TIMEOUT LADDER (2026-11-04 — the long-promised
 # combine, canon-verified: *Clairvoyant* [Predictive Shortest-Job-First Admission]
@@ -69,13 +75,16 @@ def _tier_timeout(tier, max_tokens, timeout):
     return max(12.0, min(est, cap))
 
 
-def _storm_ok():
-    """The fleet-wide retry budget (RetryGuard lesson): a self-inflicted retry
-    storm = worse than a wall. Reads+writes a rolling-hour counter."""
+def _storm_ok(cls=None):
+    """The per-CLASS retry budget (RetryGuard lesson + DriftSched QoS):
+    a self-inflicted retry storm = worse than a wall; burns ITS OWN class's
+    budget (organs cannot drain the founder-facing protected budget)."""
+    cls = cls or DEFAULT_CLASS
+    budget = STORM_BUDGET.get(cls, 12)
     try:
         now = time.time()
         log = []
-        p = os.path.join(REPO, "scores", "shard_retries.jsonl")
+        p = os.path.join(REPO, "scores", f"shard_retries_{cls}.jsonl")
         if os.path.isfile(p):
             for ln in open(p, encoding="utf-8"):
                 try:
@@ -84,12 +93,14 @@ def _storm_ok():
                         log.append(rec)
                 except Exception:
                     continue
-        if len(log) >= STORM_BUDGET:
+        if len(log) >= budget:
             return False
         log.append({"ts": now})
-        with open(p, "w", encoding="utf-8") as f:
+        tmp = p + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
             for rec in log:
                 f.write(json.dumps(rec) + "\n")
+        os.replace(tmp, p)
         return True
     except Exception:
         return True  # the ledger must never block honest attempts
@@ -114,16 +125,15 @@ def _cool(name):
     return time.time() - rec.get("last_ok_ts", 0) < 60  # honor the pacer
 
 
-def call(env, order, messages, max_tokens=700, timeout=None):
+def call(env, order, messages, max_tokens=700, timeout=None, cls=None):
     """Round-robin dispatch: throttle/503/timeout = flag + hot-swap, no state drop.
 
     2026-11-04 hardening:
       - the LENGTH-AWARE TIER LADDER (see TIER_TIMEOUTS): per-tier cap +
         expected-length scaling; an explicit timeout still wins (compat).
-      - the STORM BUDGET is ENFORCED at last (the audited bug: _storm_ok()
-        was never called from call() - a self-inflicted retry storm could
-        burn the fleet's hour unbounded; now each hot-swap consumes one
-        unit of STORM_BUDGET and past the cap the fleet WALLS honestly)."""
+      - per-CLASS storm budgets (chat protected / organs batch).
+      - LIVE BANDIT OBSERVATIONS: every answer updates the LaneBandit's
+        latency/ success record; every 410 feeds the corpse retirement."""
     if os.path.isfile(CURSOR):
         cur = json.load(open(CURSOR, encoding="utf-8")).get("i", 0)
     else:
@@ -140,44 +150,93 @@ def call(env, order, messages, max_tokens=700, timeout=None):
         headers = {"Content-Type": "application/json"}
         if key:
             headers["Authorization"] = "Bearer " + env.get(key, "")
+        _t0 = time.time()
         try:
             r = requests.post(url, headers=headers,
                               timeout=_tier_timeout(tier, max_tokens, timeout),
                               json={"model": model, "max_tokens": max_tokens,
                                     "temperature": 0.0, "messages": messages})
+            _ms = (time.time() - _t0) * 1000.0
             if r.status_code == 200:
                 with _lock:
                     json.dump({"i": (cur + off + 1) % len(order)},
                               open(CURSOR, "w", encoding="utf-8"))
+                try:
+                    import LaneBandit as LB
+                    LB.update(name, True, _ms)
+                except Exception:
+                    pass
                 return name, model, r.json()["choices"][0]["message"].get(
                     "content", ""), notes
+            if r.status_code == 410:
+                notes.append(f"{name}: HTTP 410 - the model is GONE (retire-count +1)")
+                try:
+                    _st_p = STATE
+                    _st = json.load(open(_st_p, encoding="utf-8-sig")) if os.path.isfile(_st_p) else {}
+                    _rec = _st.setdefault(name, {})
+                    _rec["last_http"] = 410
+                    _rec["e410"] = _rec.get("e410", 0) + 1
+                    _tmp = _st_p + ".tmp"
+                    json.dump(_st, open(_tmp, "w", encoding="utf-8"), indent=1)
+                    os.replace(_tmp, _st_p)
+                except Exception:
+                    pass
+                continue
             if r.status_code in (429, 503, 500):
                 notes.append(f"{name}: HTTP {r.status_code} - shard swapped")
-                if not _storm_ok():
-                    notes.append("storm budget exhausted - the fleet walls "
-                                 "honestly this hour (no retry storm)")
+                if not _storm_ok(cls):
+                    notes.append(f"storm budget ({cls or DEFAULT_CLASS}) exhausted "
+                                 "- the fleet walls honestly this hour")
                     return None, None, None, notes
                 continue
             notes.append(f"{name}: HTTP {r.status_code} - honest skip")
         except Exception as e:
             notes.append(f"{name}: {type(e).__name__} - shard swapped")
-            if not _storm_ok():
-                notes.append("storm budget exhausted - the fleet walls "
-                             "honestly this hour (no retry storm)")
+            if not _storm_ok(cls):
+                notes.append(f"storm budget ({cls or DEFAULT_CLASS}) exhausted "
+                             "- the fleet walls honestly this hour")
                 return None, None, None, notes
     return None, None, None, notes
 
 
 def order_for(tier3=False, code=False):
-    """THE LEARNED ORDER (the 91-paper combine #2): if CapabilityMap has
-    graded evidence, the winning lane leads the medium tier; the static
-    tier order = the honest fallback where no evidence exists."""
-    base = ([CODE_FLOOR] if code else []) + \
-           ([l for l in LANES if l[4] == "floor"]) + \
-           [l for l in LANES if l[4] == "medium"] + \
-           ([l for l in LANES if l[4] == "deep"] if tier3 else [])
-    base[0] = _learner_promote(base) or base[0]
-    return base
+    """THE ONE-ROSTER LEARNED ORDER v3 (2026-11-04):
+      one roster contract = the shard's LANES + AutoRoster's verified extras;
+      the corpses (410-Gone x2) excluded from rotation;
+      CapabilityMap's graded prior still promotes the winner to lead;
+      the LaneBandit's live speed/ success evidence orders the tiers.
+    The floors stay pinned per the RAM law (never bandit-rearranged)."""
+    extras = []
+    try:
+        ex = json.load(open(os.path.join(REPO, "Config", "lane_extra.json"),
+                            encoding="utf-8-sig")).get("lanes", [])
+        seen = {l[0] for l in LANES}
+        extras = [(l[0], l[1], l[2], l[3], l[4] if len(l) > 4 else "medium")
+                  for l in ex if isinstance(l, (list, tuple)) and len(l) >= 3
+                  and isinstance(l[0], str) and l[0] not in seen]
+    except Exception:
+        extras = []
+    all_lanes = list(LANES) + extras
+    st = {}
+    try:
+        st = json.load(open(STATE, encoding="utf-8-sig"))
+    except Exception:
+        pass
+    retired = {k for k, v in (st or {}).items()
+               if isinstance(v, dict) and v.get("retired")}
+    flo = ([CODE_FLOOR] if code else []) + \
+          [l for l in all_lanes if l[4] == "floor" and l[0] not in retired]
+    med = [l for l in all_lanes if l[4] == "medium" and l[0] not in retired]
+    deep = ([l for l in all_lanes if l[4] == "deep" and l[0] not in retired]
+            if tier3 else [])
+    ordered = flo + med + deep
+    try:
+        import LaneBandit as LB
+        ordered = flo + LB.order(med + deep, pacer_cool=_cool)
+    except Exception:
+        pass
+    ordered[0] = _learner_promote(ordered) or ordered[0]
+    return ordered
 
 
 def _learner_promote(order):

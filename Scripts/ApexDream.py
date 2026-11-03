@@ -243,6 +243,13 @@ def main():
         _organ_notes.append("ledgers trimmed")
     except Exception:
         pass
+    try:
+        import AutoRoster as _ar
+        _ar.retire_dead()
+        _ar.refresh()
+        _organ_notes.append("roster refreshed (retire + catalog + probe)")
+    except Exception as _e_ar:
+        m.record_event("roster", "roster skipped honestly: " + str(_e_ar)[:70])
     m.record_event("training", "night organs: " + ", ".join(_organ_notes))
     # Security posture, measured right now (feeds the overnight note honestly)
     sec_status = "integrity manifest OK; secrets sealed"

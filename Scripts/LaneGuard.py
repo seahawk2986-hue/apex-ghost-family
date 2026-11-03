@@ -50,6 +50,10 @@ LANES = [
      "NVIDIA_API_KEY", "deepseek-ai/deepseek-v4.1-flash"),
     ("nim-glm", "https://integrate.api.nvidia.com/v1/chat/completions",
      "NVIDIA_API_KEY", "z-ai/glm-5.3-flash"),
+    # the pacer-parity fix (2026-11-04): this lane rotated in the shard but
+    # was invisible to the pacer's book - the roster drifting class is dead
+    ("nim-v4pro", "https://integrate.api.nvidia.com/v1/chat/completions",
+     "NVIDIA_API_KEY", "deepseek-ai/deepseek-v4-pro-0813"),
     # the auto-router lane: one key, whatever massive model is free
     ("or-auto", "https://openrouter.ai/api/v1/chat/completions",
      "OPENROUTER_API_KEY", "openrouter/free"),
