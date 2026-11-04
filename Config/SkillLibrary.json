@@ -12679,7 +12679,313 @@
    ],
    "registered": "2026-11-04 17:57:06",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "SpeakType/app/__init__.py",
+   "source_repo": "kigner/audio.cpp-webui",
+   "license": "check repo",
+   "sha256": "fdb4120b3291617187cb780b4eee43cae01d4abcf0e40e8dd4ba8ddb08451b47",
+   "lines": 3,
+   "first_line": "\"\"\"SpeakType local ASR demo.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-04 18:58:38",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "audio_capture",
+   "source_file": "SpeakType/app/audio_capture.py",
+   "source_repo": "kigner/audio.cpp-webui",
+   "license": "check repo",
+   "sha256": "e5f64fa07e7178650da8b3b694ebd920e486a34c16e1d69ffa51f8b8ea69122e",
+   "lines": 172,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "logging",
+    "numpy",
+    "queue",
+    "sounddevice",
+    "sys",
+    "time"
+   ],
+   "registered": "2026-11-04 18:58:39",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "import_webui_locales",
+   "source_file": "tools/locales/import_webui_locales.py",
+   "source_repo": "christopherthompson81/AudioCpp-Bindings",
+   "license": "check repo",
+   "sha256": "19566734e0e2f72cb4b2339f43bd3b4db5e66e51112569874738550083f555e4",
+   "lines": 175,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "re",
+    "sys",
+    "xml"
+   ],
+   "registered": "2026-11-04 18:58:39",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "make_pseudo_locale",
+   "source_file": "tools/locales/make_pseudo_locale.py",
+   "source_repo": "christopherthompson81/AudioCpp-Bindings",
+   "license": "check repo",
+   "sha256": "022b09faf1d12644f101b8198896d49a600731a4fd859eed4d9ed5699a075ced",
+   "lines": 51,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "xml"
+   ],
+   "registered": "2026-11-04 18:58:39",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "docs",
+   "source_file": "cmake/docs/docs.py",
+   "source_repo": "nasa/fprime",
+   "license": "check repo",
+   "sha256": "968baf8fc6ec6242ec05c82e74e7d3f27bb9d8a0b5b199b7f8902c073ca8a6a8",
+   "lines": 108,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "enum",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 18:58:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "ini_to_stdio",
+   "source_file": "cmake/settings/ini-to-stdio.py",
+   "source_repo": "nasa/fprime",
+   "license": "check repo",
+   "sha256": "639a647601f5151f05ce25e0e04cde47f26460dec9740d3117f32185fe61516a",
+   "lines": 107,
+   "first_line": "\"\"\"ini-to-stdio.py:",
+   "imports": [
+    "argparse",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 18:58:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "gpustack/__init__.py",
+   "source_repo": "gpustack/gpustack",
+   "license": "check repo",
+   "sha256": "edbbda0d288210b736e0744ee3d8fa18b9ce8126e28e5ce3b9ccfeaf822d179f",
+   "lines": 17,
+   "first_line": "__version__ = '0.0.0'",
+   "imports": [],
+   "registered": "2026-11-04 18:58:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "exceptions",
+   "source_file": "gpustack/api/exceptions.py",
+   "source_repo": "gpustack/gpustack",
+   "license": "check repo",
+   "sha256": "a890f14a92ce3b696d70152efb642e59defe3bba60fea95638e2e82b97428da2",
+   "lines": 283,
+   "first_line": "from typing import Any, Dict, Optional",
+   "imports": [
+    "httpx",
+    "logging"
+   ],
+   "registered": "2026-11-04 18:58:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "verify_packages",
+   "source_file": "eng/packaging/verify_packages.py",
+   "source_repo": "dongfangzhizhu/AudioCpp.NET",
+   "license": "check repo",
+   "sha256": "7322f7b7acfd9a5e39078d54d966d19a0afcca7d1171e272e0ac217bf2546c88",
+   "lines": 222,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "re",
+    "sys",
+    "zipfile"
+   ],
+   "registered": "2026-11-04 18:58:45",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "fetch_linux_artifact",
+   "source_file": "eng/release/fetch-linux-artifact.py",
+   "source_repo": "dongfangzhizhu/AudioCpp.NET",
+   "license": "check repo",
+   "sha256": "31bc6fe5c1c8aebb68085d8e971a353fbdc1f93b405056e0c0ace89e93a9a382",
+   "lines": 113,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "pathlib",
+    "sys",
+    "time",
+    "urllib",
+    "zipfile"
+   ],
+   "registered": "2026-11-04 18:58:46",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "get_documentation",
+   "source_file": "build_tools/get_documentation.py",
+   "source_repo": "asterisk/asterisk",
+   "license": "check repo",
+   "sha256": "5672c02d64ee7f2a10077f0dc546ab2855940760f486111eae82e7d0197083b0",
+   "lines": 173,
+   "first_line": "#! /usr/bin/env python",
+   "imports": [
+    "sys",
+    "xml"
+   ],
+   "registered": "2026-11-04 18:58:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "post_process_documentation",
+   "source_file": "build_tools/post_process_documentation.py",
+   "source_repo": "asterisk/asterisk",
+   "license": "check repo",
+   "sha256": "d28ce2aedce95d3ea651c69af2d120958e88db25a38258e2c30762cdf9a92c9e",
+   "lines": 107,
+   "first_line": "#! /usr/bin/env python",
+   "imports": [
+    "optparse",
+    "sys"
+   ],
+   "registered": "2026-11-04 18:58:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "running_stats",
+   "source_file": "bin/running_stats.py",
+   "source_repo": "ckan/ckan",
+   "license": "check repo",
+   "sha256": "e5ad0de26beb293c746a6bdebedd04c039a7ceaedada546ed4eefe9114fec5ec",
+   "lines": 84,
+   "first_line": "# encoding: utf-8",
+   "imports": [
+    "copy"
+   ],
+   "registered": "2026-11-04 18:58:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "ckan/__init__.py",
+   "source_repo": "ckan/ckan",
+   "license": "check repo",
+   "sha256": "36011ff7fe40dc68048ecb69dded4e7ea838c46f5ae373a69257b21d8c506eb2",
+   "lines": 9,
+   "first_line": "# encoding: utf-8",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-04 18:58:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "changes_fmt",
+   "source_file": "tools/changes_fmt.py",
+   "source_repo": "zeldaret/ss",
+   "license": "check repo",
+   "sha256": "cf8eb290216f90db812f91c508397a51834a11766d565dc44109ce5b657e6cf5",
+   "lines": 163,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "os"
+   ],
+   "registered": "2026-11-04 18:58:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "apply_objdiff_mappings",
+   "source_file": "tools/custom/apply_objdiff_mappings.py",
+   "source_repo": "zeldaret/ss",
+   "license": "check repo",
+   "sha256": "01abaefe4034fb9112d50e23037c6b6a9c6800570477c6648f0e213bae4a6322",
+   "lines": 72,
+   "first_line": "# Thanks KooShnoo! https://discord.com/channels/727908905392275526/1024871155804",
+   "imports": [
+    "json",
+    "re"
+   ],
+   "registered": "2026-11-04 18:58:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "tww_class_to_cpp",
+   "source_file": "docs/tww_class_to_cpp.py",
+   "source_repo": "zeldaret/tww",
+   "license": "check repo",
+   "sha256": "17dd52cf95b08f14e7b007bc923bd0f8bca132c1518e7e60a1f3a9124578b686",
+   "lines": 140,
+   "first_line": "# Dumps structure members to C format with comments and names",
+   "imports": [
+    "re"
+   ],
+   "registered": "2026-11-04 18:58:51",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "binary_funcs",
+   "source_file": "tools/converters/binary_funcs.py",
+   "source_repo": "zeldaret/tww",
+   "license": "check repo",
+   "sha256": "e3972dd25885df37cb8a69dfeccf904bb9f1a9e9f42e89542800ca9b0e753b4d",
+   "lines": 62,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "struct"
+   ],
+   "registered": "2026-11-04 18:58:52",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_progress",
+   "source_file": "scripts/check_progress.py",
+   "source_repo": "TheOnlyZac/sly1",
+   "license": "check repo",
+   "sha256": "9f5b525bd69b5b539de750f37a3a37c1ea92b4cbab45da3e860066d626b2d5fa",
+   "lines": 35,
+   "first_line": "import json",
+   "imports": [
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-04 18:58:52",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "upload_progress",
+   "source_file": "scripts/frogress/upload_progress.py",
+   "source_repo": "TheOnlyZac/sly1",
+   "license": "check repo",
+   "sha256": "a3f493bf35b057d218afb6dd9470d9b6350b2a7f1f2c1551644a76db2bf9f3bb",
+   "lines": 116,
+   "first_line": "\"\"\"",
+   "imports": [
+    "argparse",
+    "mapfile_parser"
+   ],
+   "registered": "2026-11-04 18:58:53",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 17:57:06"
+ "built": "2026-11-04 18:58:53"
 }
