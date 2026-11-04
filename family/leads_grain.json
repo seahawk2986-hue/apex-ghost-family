@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-04 11:45:02",
- "count": 512,
+ "ts": "2026-11-04 12:00:09",
+ "count": 514,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -1845,6 +1845,20 @@
   },
   {
    "repo": "ocornut/imgui",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "avifenesh/computer-use-linux",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "AaronWong1999/hermesclaw",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
