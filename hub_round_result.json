@@ -1,113 +1,111 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-04 00:43:25",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "config",
+   "repo": "vietanhdev/llama-assistant",
+   "sha256": "8ced5f2f4abc5384"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c3c719a6d1e841ba"
+   "skill": "custom_plaintext_editor",
+   "repo": "vietanhdev/llama-assistant",
+   "sha256": "4ce9531e544460cd"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "env",
+   "repo": "feuerwehr-oberwil/kp-rueck",
+   "sha256": "c35b5db4697a63ea"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "alarm_keywords",
+   "repo": "feuerwehr-oberwil/kp-rueck",
+   "sha256": "0cf503ae3d98d07c"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "asm",
+   "repo": "carlosrmz009/arwing2",
+   "sha256": "1207b72361694e1f"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "extract",
+   "repo": "carlosrmz009/arwing2",
+   "sha256": "1d48562bb4a292e1"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "extract",
+   "repo": "carlosrmz009/arwing",
+   "sha256": "985a419a916c17f2"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "isa65816",
+   "repo": "carlosrmz009/arwing",
+   "sha256": "4019166d1a6b9d8d"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "rename_symbol",
+   "repo": "Odrannnn/MetroidPrimePort",
+   "sha256": "5e1f4e158670cdba"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "symbols",
+   "repo": "Odrannnn/MetroidPrimePort",
+   "sha256": "9d832ee53fde8ca3"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "run_with_dotenv",
+   "repo": "posthog/posthog",
+   "sha256": "f3706411de986e4f"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "check_dagster_paths",
+   "repo": "posthog/posthog",
+   "sha256": "53454b87dedd8699"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "analyze",
+   "repo": "peiikai/LASRecomp",
+   "sha256": "6839cbaee754a6c5"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "bandmetric",
+   "repo": "peiikai/LASRecomp",
+   "sha256": "83867620ac85cdb3"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "anope2json",
+   "repo": "ergochat/ergo",
+   "sha256": "f9ccb28791701387"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "atheme2json",
+   "repo": "ergochat/ergo",
+   "sha256": "0eb37c3e9d79fd6b"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "graph",
+   "repo": "ikawrakow/ik_llama.cpp",
+   "sha256": "5850ad858973816d"
+  },
+  {
+   "skill": "graphviz",
+   "repo": "nodejs/node-gyp",
+   "sha256": "fb11ea98b4ba20b8"
+  },
+  {
+   "skill": "pretty_gyp",
+   "repo": "nodejs/node-gyp",
+   "sha256": "a8a392bbf67116b3"
+  },
+  {
+   "skill": "afmoe",
+   "repo": "ggerganov/llama.cpp",
+   "sha256": "d1d91663fd703614"
+  },
+  {
+   "skill": "arctic",
+   "repo": "ggerganov/llama.cpp",
+   "sha256": "0f81fda5dfdcca48"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-04 01:00:48"
 }

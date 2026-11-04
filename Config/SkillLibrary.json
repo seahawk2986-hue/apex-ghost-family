@@ -8276,7 +8276,337 @@
    ],
    "registered": "2026-11-03 09:56:49",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "config",
+   "source_file": "llama_assistant/config.py",
+   "source_repo": "vietanhdev/llama-assistant",
+   "license": "check repo",
+   "sha256": "8ced5f2f4abc538412e035f17cb84853c2b05eb4f6b4cd8eee1dac1adea3d415",
+   "lines": 286,
+   "first_line": "import json",
+   "imports": [
+    "json",
+    "pathlib"
+   ],
+   "registered": "2026-11-04 00:59:36",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "custom_plaintext_editor",
+   "source_file": "llama_assistant/custom_plaintext_editor.py",
+   "source_repo": "vietanhdev/llama-assistant",
+   "license": "check repo",
+   "sha256": "4ce9531e544460cd4bf3e3ac6a8fed7045bdc4ea57293a17d5eef19c508ca5ec",
+   "lines": 74,
+   "first_line": "from PyQt6.QtWidgets import QPlainTextEdit, QApplication",
+   "imports": [
+    "html2text"
+   ],
+   "registered": "2026-11-04 00:59:36",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "env",
+   "source_file": "backend/alembic/env.py",
+   "source_repo": "feuerwehr-oberwil/kp-rueck",
+   "license": "check repo",
+   "sha256": "c35b5db4697a63eae38004b602597d250ef13558390e940a6f7f7b0afb4d2006",
+   "lines": 99,
+   "first_line": "\"\"\"Alembic environment configuration for async migrations.\"\"\"",
+   "imports": [
+    "asyncio"
+   ],
+   "registered": "2026-11-04 01:00:08",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "alarm_keywords",
+   "source_file": "backend/app/alarm_keywords.py",
+   "source_repo": "feuerwehr-oberwil/kp-rueck",
+   "license": "check repo",
+   "sha256": "0cf503ae3d98d07cc4645890b41d77e93c746e4302282364c50917cb63834cdd",
+   "lines": 177,
+   "first_line": "\"\"\"Loader for the shared alarm keyword vocabulary \u2014 see ``data/alarm_keywords.js",
+   "imports": [
+    "json"
+   ],
+   "registered": "2026-11-04 01:00:09",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "asm",
+   "source_file": "tools/asm.py",
+   "source_repo": "carlosrmz009/arwing2",
+   "license": "check repo",
+   "sha256": "1207b72361694e1f288c3410df87fa510d46eb45c8676054ba2d02f2f3adaa55",
+   "lines": 293,
+   "first_line": "import json",
+   "imports": [
+    "isagsu",
+    "json",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:00:28",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "extract",
+   "source_file": "tools/extract.py",
+   "source_repo": "carlosrmz009/arwing2",
+   "license": "check repo",
+   "sha256": "1d48562bb4a292e15316206f9838b08fe9870141ec78fe795a05f1d5a6b5e098",
+   "lines": 24,
+   "first_line": "import glob",
+   "imports": [
+    "glob",
+    "hashlib",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:00:28",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "extract",
+   "source_file": "tools/extract.py",
+   "source_repo": "carlosrmz009/arwing",
+   "license": "check repo",
+   "sha256": "985a419a916c17f25a04b0b16106fb76ec87fd41ea9f986a131e209dcc1f1849",
+   "lines": 24,
+   "first_line": "import glob",
+   "imports": [
+    "glob",
+    "hashlib",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:00:30",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "isa65816",
+   "source_file": "tools/isa65816.py",
+   "source_repo": "carlosrmz009/arwing",
+   "license": "check repo",
+   "sha256": "4019166d1a6b9d8df67b7065aa667210e0732b5f5d17cdefb11bc0b7c8befeef",
+   "lines": 110,
+   "first_line": "MODES = {",
+   "imports": [],
+   "registered": "2026-11-04 01:00:31",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "rename_symbol",
+   "source_file": "decomp/scripts/rename_symbol.py",
+   "source_repo": "Odrannnn/MetroidPrimePort",
+   "license": "check repo",
+   "sha256": "5e1f4e158670cdba4a9a3b7ed2d9675122f4ed4e8444861528bc95fe6845a2b8",
+   "lines": 99,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "argparse",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:00:32",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "symbols",
+   "source_file": "decomp/scripts/symbols.py",
+   "source_repo": "Odrannnn/MetroidPrimePort",
+   "license": "check repo",
+   "sha256": "9d832ee53fde8ca30e9cd820fed9dab1bf7238a4b49e6f067712f8f050cf7caa",
+   "lines": 144,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "re"
+   ],
+   "registered": "2026-11-04 01:00:32",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "run_with_dotenv",
+   "source_file": ".codex/run-with-dotenv.py",
+   "source_repo": "posthog/posthog",
+   "license": "check repo",
+   "sha256": "f3706411de986e4f1139547c597c27648a162680d71a393170af1f3dda3f4ace",
+   "lines": 103,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:00:34",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_dagster_paths",
+   "source_file": ".github/scripts/check-dagster-paths.py",
+   "source_repo": "posthog/posthog",
+   "license": "check repo",
+   "sha256": "53454b87dedd8699d0d11f3967033a9545e1279702cdbdc1b30eadbe6cd571c8",
+   "lines": 169,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "ast",
+    "re",
+    "sys",
+    "yaml"
+   ],
+   "registered": "2026-11-04 01:00:35",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "analyze",
+   "source_file": "tools/analyze.py",
+   "source_repo": "peiikai/LASRecomp",
+   "license": "check repo",
+   "sha256": "6839cbaee754a6c58669c58b77fb0ab543ac2be70ecf0ca32c9adf8f0e6b4283",
+   "lines": 106,
+   "first_line": "\"\"\"Function discovery and instruction census for an NSO module.\"\"\"",
+   "imports": [
+    "capstone",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:00:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bandmetric",
+   "source_file": "tools/bandmetric.py",
+   "source_repo": "peiikai/LASRecomp",
+   "license": "check repo",
+   "sha256": "83867620ac85cdb38b7afa23a0137749bbf671b2f49f32b47d7a5be099032afd",
+   "lines": 14,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "numpy",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:00:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "anope2json",
+   "source_file": "distrib/anope/anope2json.py",
+   "source_repo": "ergochat/ergo",
+   "license": "check repo",
+   "sha256": "f9ccb28791701387887931f9bc714e496c31c70649526e7559cbe49e77157586",
+   "lines": 207,
+   "first_line": "#!/usr/bin/python3",
+   "imports": [
+    "binascii",
+    "json",
+    "logging",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:00:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "atheme2json",
+   "source_file": "distrib/atheme/atheme2json.py",
+   "source_repo": "ergochat/ergo",
+   "license": "check repo",
+   "sha256": "0eb37c3e9d79fd6b74c51c13c2aa04f6e6a4140f2bb2592aaa6006b92dbcc359",
+   "lines": 210,
+   "first_line": "#!/usr/bin/python3",
+   "imports": [
+    "binascii",
+    "json",
+    "logging",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:00:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "graph",
+   "source_file": "examples/jeopardy/graph.py",
+   "source_repo": "ikawrakow/ik_llama.cpp",
+   "license": "check repo",
+   "sha256": "5850ad858973816dca5e3761d457b54491df2c1bac35521fd3b5885c02865182",
+   "lines": 59,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "csv",
+    "matplotlib",
+    "os"
+   ],
+   "registered": "2026-11-04 01:00:44",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "graphviz",
+   "source_file": "gyp/tools/graphviz.py",
+   "source_repo": "nodejs/node-gyp",
+   "license": "check repo",
+   "sha256": "fb11ea98b4ba20b87da42c4034b705f1a05c1599eb46a6b558e835f6b6eac3a9",
+   "lines": 100,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "collections",
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:00:45",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "pretty_gyp",
+   "source_file": "gyp/tools/pretty_gyp.py",
+   "source_repo": "nodejs/node-gyp",
+   "license": "check repo",
+   "sha256": "a8a392bbf67116b329be49f380b16463d517ed59651e31c0eaa21fb256c66eb7",
+   "lines": 155,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:00:46",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "afmoe",
+   "source_file": "conversion/afmoe.py",
+   "source_repo": "ggerganov/llama.cpp",
+   "license": "check repo",
+   "sha256": "d1d91663fd703614b242ddcd6c4f14907068e19539113d5dde7db87258cb46ae",
+   "lines": 81,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-11-04 01:00:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "arctic",
+   "source_file": "conversion/arctic.py",
+   "source_repo": "ggerganov/llama.cpp",
+   "license": "check repo",
+   "sha256": "0f81fda5dfdcca4859c6955270d2d7c352ffd20c0a64c4fc4f557cb24d40b556",
+   "lines": 164,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "json",
+    "sys",
+    "torch"
+   ],
+   "registered": "2026-11-04 01:00:48",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-03 09:56:49"
+ "built": "2026-11-04 01:00:48"
 }
