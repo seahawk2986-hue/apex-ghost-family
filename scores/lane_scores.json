@@ -1,29 +1,29 @@
 {
- "ts": "2026-11-03 07:01:03",
+ "ts": "2026-11-04 07:01:11",
  "results": {
   "cerebras-120b": {
    "state": "scored",
    "score": 0.2,
-   "answered": 2,
-   "mean_wall_s": 0.6
+   "answered": 3,
+   "mean_wall_s": 0.4
   },
   "cerebras-qwen": {
    "state": "scored",
-   "score": 0.76,
+   "score": 0.86,
    "answered": 10,
-   "mean_wall_s": 1.11
+   "mean_wall_s": 0.41
   },
   "groq-120b": {
    "state": "scored",
-   "score": 0.86,
-   "answered": 10,
-   "mean_wall_s": 0.49
+   "score": 0.2,
+   "answered": 2,
+   "mean_wall_s": 0.4
   },
   "groq-qwen": {
    "state": "scored",
-   "score": 0.96,
-   "answered": 10,
-   "mean_wall_s": 0.57
+   "score": 0.81,
+   "answered": 9,
+   "mean_wall_s": 3.68
   },
   "or-ultra": {
    "state": "walled",
