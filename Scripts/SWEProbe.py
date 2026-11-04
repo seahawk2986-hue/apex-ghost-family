@@ -264,7 +264,9 @@ def islands(n=4, maxt=None):
             tot += bench_one(inst, text)["score"]
         return {"style": style_idx, "score": tot, "items": n,
                 "per_item": round(tot / n, 3),
-                "lanes": sorted(set(by))}
+                "lanes": sorted(set(by)),
+                "patch_chars": len(text or ""),
+                "patch_head": (text or "")[:120]}
 
     with ThreadPoolExecutor(max_workers=len(STYLES)) as ex:
         results = list(ex.map(one_style, range(len(STYLES))))
