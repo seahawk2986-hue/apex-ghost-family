@@ -283,6 +283,13 @@ def mode_run(cycles=50, budget_s=900, eps=1e-7):
     tname, _ = _task()
     g = _load_genome()
     parent = _score(g)
+    hwm_f = os.path.join(HOME, "rsec_hwm.json")
+    hwm = {}
+    try:
+        hwm = json.load(open(hwm_f, encoding="utf-8"))
+    except Exception:
+        hwm = {}
+    hwm_score = hwm.get("score") if isinstance(hwm, dict) else None
     _receipt({"ts": time.strftime("%Y-%m-%d %H:%M:%S"), "ev": "WAKE",
               "gen": g["gen"], "parent": round(parent, 6), "task": tname})
     print(f"[rsec]: waking at gen {g['gen']} | fitness {parent:.5f} | "
@@ -325,7 +332,13 @@ def mode_run(cycles=50, budget_s=900, eps=1e-7):
                   f"(the lineage outlives it)")
             continue
         cs, champ, op = ranked[0]
-        kept = cs < parent - eps                     # law 6
+        kept = (cs < hwm_score) if hwm_score is not None else (cs < parent - eps)
+        if hwm_score is None and kept:
+            hwm["score"] = cs
+            tmp = os.path.join(HOME, "rsec_hwm.json.tmp")
+            with open(tmp, "w", encoding="utf-8") as f:
+                json.dump(hwm, f, indent=1)
+            os.replace(tmp, os.path.join(HOME, "rsec_hwm.json"))
         if kept:
             g = champ
             parent = cs
