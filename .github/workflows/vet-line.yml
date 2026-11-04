@@ -19,6 +19,7 @@ jobs:
         run: python3 Scripts/VetLineRemote.py
         env:
           GITHUB_WORKSPACE: ${{ github.workspace }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: ship the vetted grain home
         if: always()
         run: |

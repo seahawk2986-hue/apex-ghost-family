@@ -36,16 +36,24 @@ model. Composition + the honesty laws are the fleet's own.*
 ```
 1. python Scripts/SwarmNodeServer.py        (your box; port 8082)
 2. open the repo's issue template "ADD MY NODE"
-3. the next ping-hour verifies you (ping + one real ask) 
+3. the next ping-hour verifies you (a health ping + one real ask,
+   delivered AT YOUR OWN DOOR - the pre-v1.1 path routed candidate
+   verification through the verified-only rotation, which could never
+   seed its first node; that deadlock was found by the certifier's
+   live-fire and fixed by measuring at the candidate's door)
 4. your node enters the worldwide rotation until you withdraw
 ```
 
 ## The quorum guarantee (the swarm's S+ shape)
 
 Important answers ship **quorum-backed**: 3 granite-diverse seats (no
-two share weights) answer; agreement is measured; a divergent vote
-escalates to a judge rather than shipping an unverified claim. Every
-receipt (seats, similarity, verdict) lands in the fleet's public repo.
+two share weights) answer; agreement is measured SEMANTICALLY first
+(an embedded cosine - lexical difflib structurally diverged across
+different-weight seats) with the lexical fallback when the embedder
+sleeps; the receipt names which instrument it used (`sims_metric`). A
+divergent vote escalates to a judge rather than shipping an unverified
+claim. Every receipt (seats, similarity, metric, verdict) lands in the
+fleet's public repo.
 
 ## The certifier
 

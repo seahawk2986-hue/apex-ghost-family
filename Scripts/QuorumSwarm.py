@@ -21,8 +21,9 @@ THE QURUM LAW
                (the receipt shows both losing answers honestly)
   $0; every receipt n-counted (Config/quorum_swarm.jsonl + state)."""
 
-import json
 import difflib
+import json
+import math
 import os
 import re
 import sys
@@ -35,13 +36,71 @@ ST_F = os.path.join(ROOT, "Config", "quorum_state.json")
 
 CONSENSUS, THIN = 0.62, 0.35
 
+EMBED_URL = os.environ.get("APEX_EMBED_URL",
+                           "http://127.0.0.1:1234/v1/embeddings")
+EMBED_MODEL = os.environ.get("APEX_EMBED_MODEL",
+                             "text-embedding-nomic-embed-text-v1.5")
+_embed_ok = None   # None = untried, True/False after the first call
+_embed_fail_at = 0.0
+_EMBED_COOLDOWN = 600
+_vec_cache = {}
+_LAST_METRIC = "lexical"
+
 
 def _norm(t):
     t = (t or "").lower()
     return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9 .,']+", " ", t)).strip()
 
 
+def _embed(text):
+    """THE SEMANTIC CHANNEL (stdlib, $0): the local embedder; a dead one
+    must not tax EVERY call - the circuit breaker + the lexical fallback
+    keep the receipt honest either way."""
+    global _embed_ok, _embed_fail_at
+    if _embed_ok is False and time.time() - _embed_fail_at < _EMBED_COOLDOWN:
+        return None
+    key = _norm(text)[:600]
+    if key in _vec_cache:
+        return _vec_cache[key]
+    try:
+        import urllib.request as _u
+        req = _u.Request(EMBED_URL, data=json.dumps(
+            {"model": EMBED_MODEL, "input": text[:2000]}).encode(),
+            headers={"Content-Type": "application/json"}, method="POST")
+        with _u.urlopen(req, timeout=10) as x:
+            d = json.load(x)
+        v = d["data"][0]["embedding"]
+        _embed_ok = True
+        _vec_cache[key] = v
+        return v
+    except Exception:
+        _embed_ok = False
+        _embed_fail_at = time.time()
+        return None
+
+
+def _ecos(a, b):
+    n = min(len(a), len(b))
+    if n == 0:
+        return 0.0
+    dot = sum(x * y for x, y in zip(a[:n], b[:n]))
+    na = math.sqrt(sum(x * x for x in a[:n]))
+    nb = math.sqrt(sum(y * y for y in b[:n]))
+    return dot / (na * nb) if na and nb else 0.0
+
+
 def _sim(a, b):
+    """THE AGREEMENT, measured where it lives: the SEMANTIC channel
+    first (the granite-diverse seats word the same truth differently -
+    the lexical difflib structurally diverged every round, so Wang's
+    self-consistency bonus evaporated and every receipt rode the judge),
+    the lexical ratio as the honest fallback when the embedder sleeps."""
+    global _LAST_METRIC
+    va, vb = _embed(a), _embed(b)
+    if va and vb:
+        _LAST_METRIC = "embedding"
+        return max(0.0, _ecos(va, vb))
+    _LAST_METRIC = "lexical"
     return difflib.SequenceMatcher(None, _norm(a), _norm(b)).ratio()
 
 
@@ -79,6 +138,7 @@ def answer(prompt, max_tokens=350, judge=True):
         s_init = sorted((_sim(seats[i][1], seats[j][1]) for i in range(
             3) for j in range(i + 1, 3)))
         receipt["sims"] = [round(x, 3) for x in s_init]
+        receipt["sims_metric"] = _LAST_METRIC
         mean = sum(receipt["sims"]) / 3.0
         if mean >= CONSENSUS:
             receipt["verdict"] = "CONSENSUS"

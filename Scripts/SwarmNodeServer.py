@@ -83,6 +83,11 @@ class H(BaseHTTPRequestHandler):
                                     "note": f"lane-fail {type(e).__name__}"})
         with _lock:
             _used["n"] += 1
+        if not (reply or "").strip():
+            return self._send(200, {"reply": "",
+                                    "note": "the fleet lane answered empty "
+                                            "(no exception; the honest "
+                                            "empty-hand)"})
         self._send(200, {"reply": reply[: int(mt * 6)]})
 
 

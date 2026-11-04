@@ -101,13 +101,30 @@ def ping_hour():
         h[nid] = rec
         if rec["ok"]:
             if n.get("status") == "candidate":
-                # the once-real /ask test before the seed (no promise-seeds)
-                try:
-                    r = ask_wide("Reply with the single word: alive",
-                                 max_tokens=8, purpose="ping", nid=nid)
-                    n["status"] = "verified" if r else "candidate"
-                except Exception:
-                    n["status"] = "candidate"
+                # the once-real /ask test AT THE CANDIDATE'S OWN DOOR (the
+                # old path routed through candidates() - which only holds
+                # VERIFIED nodes - so a candidate could never service its
+                # own verification ask: the protocol's deadlock, found by
+                # the cert's live-fire). Two swings, the new timeout budget.
+                alive = ""
+                for _attempt in (1, 2):
+                    try:
+                        body = json.dumps(
+                            {"prompt": "Reply with the single word: alive",
+                             "max_tokens": 8, "purpose": "ping"}).encode()
+                        req = urllib.request.Request(
+                            url.rstrip("/") + "/ask", data=body,
+                            headers={"Content-Type": "application/json",
+                                     "User-Agent": "ApexSwarmWide/1.0"},
+                            method="POST")
+                        with urllib.request.urlopen(req, timeout=180) as x:
+                            d = json.load(x)
+                        alive = (d.get("reply") or "").strip()
+                    except Exception:
+                        alive = ""
+                    if alive:
+                        break
+                n["status"] = "verified" if alive else "candidate"
         elif n.get("status") == "verified":
             n["status"] = "candidate"   # the silent node drops back
     st["health"] = h
@@ -139,6 +156,10 @@ def ask_wide(prompt, max_tokens=400, purpose="", nid=None):
             pass
     nodes = [n for n in candidates()
              if nid in (None, n["id"])]
+    if not nodes:
+        print(f"[swarm-wide]: no verified node "
+              f"{'matches nid ' + str(nid) if nid else 'at all'} - the "
+              "ask starved honestly (no receipt minted)")
     st = _state()
     for n in sorted(nodes, key=lambda n: (st["health"][n["id"]]
                                           .get("latency_ms") or 9999)):
@@ -156,7 +177,7 @@ def ask_wide(prompt, max_tokens=400, purpose="", nid=None):
                     n["url"].rstrip("/") + "/ask", data=body,
                     headers={"Content-Type": "application/json",
                              "User-Agent": "ApexSwarmWide/1.0"}, method="POST")
-                with urllib.request.urlopen(req, timeout=60) as x:
+                with urllib.request.urlopen(req, timeout=180) as x:
                     d = json.load(x)
                 r = (d.get("reply") or "").strip()
             except Exception:

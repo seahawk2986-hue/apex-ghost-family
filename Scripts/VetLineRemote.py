@@ -29,6 +29,9 @@ MAX_LINES, MAX_BYTES, MAX_REPOS, PER_SRC = 400, 40_000, 20, 5
 
 def gh(url, timeout=30):
     req = urllib.request.Request(url, headers=UA)
+    _t = os.environ.get("GITHUB_TOKEN", "")
+    if _t:   # the runner's own token: 1000/h instead of the shared 60
+        req.add_header("Authorization", "Bearer " + _t)
     with urllib.request.urlopen(req, timeout=timeout) as r:
         data = r.read()
     return data
@@ -85,7 +88,7 @@ def main():
     lib = load(LIB, {"skills": [], "built": time.strftime("%Y-%m-%d %H:%M")})
     have_repos = {s.get("source_repo") for s in lib.get("skills", [])}
     have_shas = {s.get("sha256") for s in lib.get("skills", [])}
-    added = []
+    added, skips = [], 0
     print(f"[grain]: {len(grain)} ordered leads | have {len(lib.get('skills', []))}"
           f" skills | vetting top-{MAX_REPOS} x{PER_SRC}")
     for lead in grain:
@@ -103,8 +106,12 @@ def main():
                        and "/test" not in e["path"].lower()
                        and e["path"].count("/") <= 2][:PER_SRC]
         except urllib.error.HTTPError as e:
-            if e.code in (403, 404, 409):
-                print(f"  [skip] {repo}: HTTP {e.code}")
+            if e.code in (403, 404, 409, 429, 500, 502, 503, 504):
+                skips += 1
+                if skips >= 5:   # the rate-storm breaker (the honest stop)
+                    print("  [storm]: 5 consecutive rate-silences - the "
+                          "grain yields the hour (no crash, no storm)")
+                    break
                 continue
             raise
         except Exception as e:

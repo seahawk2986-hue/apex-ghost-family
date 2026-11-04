@@ -24,7 +24,8 @@ import sys
 import time
 import urllib.request
 
-ROOT = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
+ROOT = (os.environ.get("GITHUB_WORKSPACE")
+        or r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed")
 sys.path.insert(0, os.path.join(ROOT, "Scripts"))
 HUB = "https://api.github.com"
 DEMO = "seahawk2986-hue/open-triage-demo"
