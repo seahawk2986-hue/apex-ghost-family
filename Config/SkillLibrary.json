@@ -9255,7 +9255,301 @@
    "imports": [],
    "registered": "2026-11-04 03:53:12",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "golden_trace",
+   "source_file": "kintsugi/sdk/golden_trace.py",
+   "source_repo": "atlaslattice/aluminum-os",
+   "license": "check repo",
+   "sha256": "51b322f6e6d4e18199827194d78ec1a8ee1818327fc1aeb71417dcb98203a454",
+   "lines": 170,
+   "first_line": "\"\"\"",
+   "imports": [
+    "hashlib",
+    "json",
+    "uuid"
+   ],
+   "registered": "2026-11-04 04:58:34",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "python/core/__init__.py",
+   "source_repo": "atlaslattice/aluminum-os",
+   "license": "check repo",
+   "sha256": "fc06db71b974f43b1445597e2890e8bc18f52f7f9e1faa85a1edc7b472c4a2cb",
+   "lines": 15,
+   "first_line": "# Aluminum OS \u2014 Ring 1 (Manus Core)",
+   "imports": [],
+   "registered": "2026-11-04 04:58:35",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "plugin",
+   "source_file": "template/scripts/plugin.py",
+   "source_repo": "ajaykumar4/cluster-template",
+   "license": "check repo",
+   "sha256": "95421a9d7962865cc51f1d7e6b6ee3dddd760b29a73eb52db0fe0a44397b28d1",
+   "lines": 147,
+   "first_line": "from pathlib import Path",
+   "imports": [
+    "base64",
+    "json",
+    "makejinja",
+    "re",
+    "validate"
+   ],
+   "registered": "2026-11-04 04:58:36",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "custom_components/heatpump_optimizer/__init__.py",
+   "source_repo": "strutsfarm/heatpump_optimizer",
+   "license": "check repo",
+   "sha256": "eaa48b18f9a8d3290bbcf00c6dfd37e9acb618c3640bd9bcf5db8d4406ad3b90",
+   "lines": 163,
+   "first_line": "\"\"\"Heat Pump Cost Optimizer integration for Home Assistant.",
+   "imports": [
+    "logging",
+    "voluptuous"
+   ],
+   "registered": "2026-11-04 04:58:37",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "climate",
+   "source_file": "custom_components/heatpump_optimizer/climate.py",
+   "source_repo": "strutsfarm/heatpump_optimizer",
+   "license": "check repo",
+   "sha256": "11ab5bd2c99139a2d6c40e40d2d0066fba477d0d975fadb512e61ecc6726d12a",
+   "lines": 283,
+   "first_line": "\"\"\"Climate entity for Heat Pump Cost Optimizer.",
+   "imports": [
+    "logging"
+   ],
+   "registered": "2026-11-04 04:58:37",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "config",
+   "source_file": "backend/app/config.py",
+   "source_repo": "inikolax/remiqora",
+   "license": "check repo",
+   "sha256": "f27ce22f28ac4afee3ecfda075e33cf916d60d7050e9fd74302e412c4e8ae986",
+   "lines": 299,
+   "first_line": "\"\"\"Static configuration: paths to the model repos, ports, launch commands.",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 04:58:38",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "catalog_toml_support",
+   "source_file": "tests/catalog_toml_support.py",
+   "source_repo": "zeropointnine/tts-audiobook-tool",
+   "license": "check repo",
+   "sha256": "15169ab03c31c389eeb3d373000c35f9bf0f13d2f676e65bc95f74e7499b8be7",
+   "lines": 52,
+   "first_line": "\"\"\"Dependency-free TOML fixtures for tests that mutate the shipped model catalog",
+   "imports": [
+    "json",
+    "math",
+    "tomllib"
+   ],
+   "registered": "2026-11-04 04:58:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "concat_test_support",
+   "source_file": "tests/concat_test_support.py",
+   "source_repo": "zeropointnine/tts-audiobook-tool",
+   "license": "check repo",
+   "sha256": "4dcd4cd4f9c15456f1ebf4fefda5aea45a76be6de55f25cfd259feaaee45089c",
+   "lines": 109,
+   "first_line": "\"\"\"Shared harness for driving ConcatUtil.concatenate_sound_segments() in tests.",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-11-04 04:58:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "acme_extract",
+   "source_file": "target/bin/acme_extract.py",
+   "source_repo": "docker-mailserver/docker-mailserver",
+   "license": "check repo",
+   "sha256": "fad04d3c367c7589afdb0c583e5e39ea5d3709db1616119cb322c86eac1a2ad1",
+   "lines": 40,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json"
+   ],
+   "registered": "2026-11-04 04:58:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "import_blogger",
+   "source_file": "contrib/import_blogger.py",
+   "source_repo": "isso-comments/isso",
+   "license": "check repo",
+   "sha256": "a4310e044a769c0b0d0c996c26f6c713f34e7737514ae2ca13b3d0b7bfea755f",
+   "lines": 129,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "feedparser",
+    "json",
+    "sys",
+    "time"
+   ],
+   "registered": "2026-11-04 04:58:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "remove_heading",
+   "source_file": "docs/_theme/remove_heading.py",
+   "source_repo": "isso-comments/isso",
+   "license": "check repo",
+   "sha256": "a82e42c65d30ab4dbfb79e2daae4f696bb183b0fea6983c4dbf7d50067cb133b",
+   "lines": 12,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-11-04 04:58:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "marquee",
+   "source_file": ".github/pages/marquee.py",
+   "source_repo": "ArchiveBox/ArchiveBox",
+   "license": "check repo",
+   "sha256": "e4b6fea6d76d3ae5eb9f883d2bff189f81e629b969a771ffab7fa9eb79c9aa03",
+   "lines": 97,
+   "first_line": "\"\"\"Render homepage screenshot strips from the site's existing gallery HTML.\"\"\"",
+   "imports": [
+    "re"
+   ],
+   "registered": "2026-11-04 04:58:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "verify",
+   "source_file": ".github/pages/verify.py",
+   "source_repo": "ArchiveBox/ArchiveBox",
+   "license": "check repo",
+   "sha256": "c8885b92bdf83f455ba9449cafe4d0fb2006218d7ab91805d733981851ce7f6e",
+   "lines": 277,
+   "first_line": "\"\"\"Check the built site in real Chromium at desktop and phone widths.\"\"\"",
+   "imports": [
+    "argparse",
+    "json",
+    "os",
+    "re"
+   ],
+   "registered": "2026-11-04 04:58:44",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "shhh/__init__.py",
+   "source_repo": "smallwat3r/shhh",
+   "license": "check repo",
+   "sha256": "5adcd1547677dcf38fb14954bbccb45f28de2bc268366db56d439adedcfa1718",
+   "lines": 2,
+   "first_line": "__version__ = \"3.2.4\"",
+   "imports": [],
+   "registered": "2026-11-04 04:58:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "orm",
+   "source_file": "shhh/adapters/orm.py",
+   "source_repo": "smallwat3r/shhh",
+   "license": "check repo",
+   "sha256": "b5d4fa28b8e68bc98cf4f97d5081a06506a38d3eea0c16761846d64ff32f6dce",
+   "lines": 26,
+   "first_line": "from sqlalchemy.orm import registry",
+   "imports": [],
+   "registered": "2026-11-04 04:58:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "interpolate_product_name",
+   "source_file": "locales/scripts/interpolate-product-name.py",
+   "source_repo": "onetimesecret/onetimesecret",
+   "license": "check repo",
+   "sha256": "e60ca40449c41c8f9fee437006d0cc5eb8d94eae71afc1dc106ee80229786d7c",
+   "lines": 353,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "hashlib",
+    "json",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 04:58:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "register_coverage",
+   "source_file": "locales/scripts/register-coverage.py",
+   "source_repo": "onetimesecret/onetimesecret",
+   "license": "check repo",
+   "sha256": "0ba9ba7043bbf41ff9245052b499635d94004f608c60bd4e2580116135fce848",
+   "lines": 293,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-04 04:58:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "version",
+   "source_file": "tcp_server/src/version.py",
+   "source_repo": "leon-ai/leon",
+   "license": "check repo",
+   "sha256": "870389b855042adb2088eb7897aa29f6cfa1be2a2f33a4cad6e09db513566381",
+   "lines": 2,
+   "first_line": "__version__ = '2.0.0'",
+   "imports": [],
+   "registered": "2026-11-04 04:58:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "scripts/__init__.py",
+   "source_repo": "Bhanunamikaze/Agentic-SEO-Skill",
+   "license": "check repo",
+   "sha256": "372993bff3c6f2731f8beb499c5248b9b8ec484ab848a23fa703a22ff72e7930",
+   "lines": 2,
+   "first_line": "\"\"\"Agentic SEO script package.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-04 04:58:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "a11y_seo_checker",
+   "source_file": "scripts/a11y_seo_checker.py",
+   "source_repo": "Bhanunamikaze/Agentic-SEO-Skill",
+   "license": "check repo",
+   "sha256": "87ca8325aae91aeb89305ea896fc2ed4a13973b88520e357306427951b67272a",
+   "lines": 79,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "re"
+   ],
+   "registered": "2026-11-04 04:58:50",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 03:53:12"
+ "built": "2026-11-04 04:58:50"
 }

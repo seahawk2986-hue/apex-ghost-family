@@ -1,113 +1,106 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-04 04:49:14",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "golden_trace",
+   "repo": "atlaslattice/aluminum-os",
+   "sha256": "51b322f6e6d4e181"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c3c719a6d1e841ba"
+   "skill": "__init__",
+   "repo": "atlaslattice/aluminum-os",
+   "sha256": "fc06db71b974f43b"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "plugin",
+   "repo": "ajaykumar4/cluster-template",
+   "sha256": "95421a9d7962865c"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "__init__",
+   "repo": "strutsfarm/heatpump_optimizer",
+   "sha256": "eaa48b18f9a8d329"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "climate",
+   "repo": "strutsfarm/heatpump_optimizer",
+   "sha256": "11ab5bd2c99139a2"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "config",
+   "repo": "inikolax/remiqora",
+   "sha256": "f27ce22f28ac4afe"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "catalog_toml_support",
+   "repo": "zeropointnine/tts-audiobook-tool",
+   "sha256": "15169ab03c31c389"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "concat_test_support",
+   "repo": "zeropointnine/tts-audiobook-tool",
+   "sha256": "4dcd4cd4f9c15456"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "acme_extract",
+   "repo": "docker-mailserver/docker-mailserver",
+   "sha256": "fad04d3c367c7589"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "import_blogger",
+   "repo": "isso-comments/isso",
+   "sha256": "a4310e044a769c0b"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "remove_heading",
+   "repo": "isso-comments/isso",
+   "sha256": "a82e42c65d30ab4d"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "marquee",
+   "repo": "ArchiveBox/ArchiveBox",
+   "sha256": "e4b6fea6d76d3ae5"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "verify",
+   "repo": "ArchiveBox/ArchiveBox",
+   "sha256": "c8885b92bdf83f45"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "__init__",
+   "repo": "smallwat3r/shhh",
+   "sha256": "5adcd1547677dcf3"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "orm",
+   "repo": "smallwat3r/shhh",
+   "sha256": "b5d4fa28b8e68bc9"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "interpolate_product_name",
+   "repo": "onetimesecret/onetimesecret",
+   "sha256": "e60ca40449c41c8f"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "register_coverage",
+   "repo": "onetimesecret/onetimesecret",
+   "sha256": "0ba9ba7043bbf41f"
+  },
+  {
+   "skill": "version",
+   "repo": "leon-ai/leon",
+   "sha256": "870389b855042adb"
+  },
+  {
+   "skill": "__init__",
+   "repo": "Bhanunamikaze/Agentic-SEO-Skill",
+   "sha256": "372993bff3c6f273"
+  },
+  {
+   "skill": "a11y_seo_checker",
+   "repo": "Bhanunamikaze/Agentic-SEO-Skill",
+   "sha256": "87ca8325aae91aeb"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-04 04:58:50"
 }
