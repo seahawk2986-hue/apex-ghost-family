@@ -12033,7 +12033,335 @@
    "imports": [],
    "registered": "2026-11-04 15:57:27",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "preserve_copyright_years",
+   "source_file": "hack/setup/preserve-copyright-years.py",
+   "source_repo": "opendatahub-io/kserve",
+   "license": "check repo",
+   "sha256": "48e63f4464881bc461296ece6ffe0550f9e12a9fcff3ec374d1df5060514e036",
+   "lines": 63,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "re"
+   ],
+   "registered": "2026-11-04 16:59:52",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "example_utils",
+   "source_file": "docs/example-utils.py",
+   "source_repo": "opendatahub-io/model-registry-operator",
+   "license": "check repo",
+   "sha256": "794d6d002a10476286343c1d3c8559e9615a753f121cb5b096fa426335aa5cca",
+   "lines": 22,
+   "first_line": "import requests",
+   "imports": [
+    "boto3",
+    "requests"
+   ],
+   "registered": "2026-11-04 16:59:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "setup_data",
+   "source_file": "examples/agent_feature_store/setup_data.py",
+   "source_repo": "opendatahub-io/feast",
+   "license": "check repo",
+   "sha256": "289e1334ac2f923b17a75941fbf74c27a2bd3d04df2fefef6ba2e4ab3d74018a",
+   "lines": 202,
+   "first_line": "\"\"\"",
+   "imports": [
+    "numpy",
+    "os",
+    "pandas",
+    "sys"
+   ],
+   "registered": "2026-11-04 16:59:57",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "mcp_client_demo",
+   "source_file": "examples/feast_mcp_server/mcp_client_demo.py",
+   "source_repo": "opendatahub-io/feast",
+   "license": "check repo",
+   "sha256": "06ff0e0f54a3f4e4e58ed7cd1733428f1a0e3fbf5df92172f1a6ddd9a45510ab",
+   "lines": 118,
+   "first_line": "\"\"\"Minimal MCP client for the standalone Feast MCP server.",
+   "imports": [
+    "asyncio",
+    "json",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 16:59:57",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "opendatahub-io/trainer",
+   "license": "check repo",
+   "sha256": "047185939c714a2ef704b65e75571967b20afe36a97611089a9c95681066307c",
+   "lines": 142,
+   "first_line": "# Copyright The Kubeflow Authors.",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 16:59:58",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conftest",
+   "source_file": "pkg/initializers/conftest.py",
+   "source_repo": "opendatahub-io/trainer",
+   "license": "check repo",
+   "sha256": "8e858cd2b0d48a103817492cd623fe40a0e3402eeceebf33afa9a21e51429539",
+   "lines": 38,
+   "first_line": "# Copyright The Kubeflow Authors.",
+   "imports": [
+    "os",
+    "pytest"
+   ],
+   "registered": "2026-11-04 16:59:59",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "gen_gha_matrix_jobs",
+   "source_file": "ci/cached-builds/gen_gha_matrix_jobs.py",
+   "source_repo": "opendatahub-io/notebooks",
+   "license": "check repo",
+   "sha256": "a3c46ad2093639901f5225ba22396831b35c46945b468012ea643e51d1675792",
+   "lines": 356,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "enum",
+    "gha_pr_changed_files",
+    "json",
+    "logging",
+    "makefile_helper",
+    "os",
+    "pathlib",
+    "re",
+    "sys",
+    "unittest"
+   ],
+   "registered": "2026-11-04 17:00:02",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "gha_pr_changed_files_symlink_test",
+   "source_file": "ci/cached-builds/gha_pr_changed_files_symlink_test.py",
+   "source_repo": "opendatahub-io/notebooks",
+   "license": "check repo",
+   "sha256": "92f63610c7f41c7b25bcf311afcb1629bb496ce33eb82874f3162a495a34dbb9",
+   "lines": 48,
+   "first_line": "\"\"\"pyfakefs tests for Dockerfile symlink resolution in gha_pr_changed_files.\"\"\"",
+   "imports": [
+    "gha_pr_changed_files",
+    "pathlib",
+    "pytest",
+    "unittest"
+   ],
+   "registered": "2026-11-04 17:00:02",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_integration_test_label",
+   "source_file": ".github/scripts/check_integration_test_label.py",
+   "source_repo": "opendatahub-io/data-science-pipelines-operator",
+   "license": "check repo",
+   "sha256": "2f842d8c6abd163f102b9f9c1c920aec643523fc179caf2077662103b0fc868e",
+   "lines": 215,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 17:00:03",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "params",
+   "source_file": "scripts/release/params.py",
+   "source_repo": "opendatahub-io/data-science-pipelines-operator",
+   "license": "check repo",
+   "sha256": "668b3a4f942470d99984ce7a890dd5135def226b4287d30d6a1dcde99364d96d",
+   "lines": 127,
+   "first_line": "import sys",
+   "imports": [
+    "requests",
+    "sys"
+   ],
+   "registered": "2026-11-04 17:00:04",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "attn_and_long_ctx_patches",
+   "source_file": "scripts/attn_and_long_ctx_patches.py",
+   "source_repo": "ymcui/Chinese-LLaMA-Alpaca-2",
+   "license": "check repo",
+   "sha256": "5380f3466354fb062ddeb82c806ca621735ee1e462ef6bd43510dacebfb5e522",
+   "lines": 247,
+   "first_line": "import torch",
+   "imports": [
+    "math",
+    "torch",
+    "transformers"
+   ],
+   "registered": "2026-11-04 17:00:05",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "eval",
+   "source_file": "scripts/ceval/eval.py",
+   "source_repo": "ymcui/Chinese-LLaMA-Alpaca-2",
+   "license": "check repo",
+   "sha256": "2ce2d8c10cb424cf49d9f33cbbb9de1e5b3b0947d7352a3e84f4f4d15e0c9d33",
+   "lines": 118,
+   "first_line": "# This code is modified from C-Eval Project: https://github.com/SJTU-LIT/ceval",
+   "imports": [
+    "argparse",
+    "json",
+    "os",
+    "pandas",
+    "time",
+    "torch"
+   ],
+   "registered": "2026-11-04 17:00:05",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "lm_harness_eval",
+   "source_file": "evals/lm_harness_eval.py",
+   "source_repo": "state-spaces/mamba",
+   "license": "check repo",
+   "sha256": "830bca2473837a3f1156ac95a52a661e515381f474c750f5fd3f5fc3e95a8ac6",
+   "lines": 40,
+   "first_line": "import torch",
+   "imports": [
+    "torch",
+    "transformers"
+   ],
+   "registered": "2026-11-04 17:00:06",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "mamba_ssm/__init__.py",
+   "source_repo": "state-spaces/mamba",
+   "license": "check repo",
+   "sha256": "d96b346da56c3c63a32224b5ca1d5af97526c3c95af83496c21c71d51dc2a36c",
+   "lines": 8,
+   "first_line": "__version__ = \"2.3.2.post1\"",
+   "imports": [],
+   "registered": "2026-11-04 17:00:06",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "convert_llama_weights_to_hf",
+   "source_file": "scripts/convert_llama_weights_to_hf.py",
+   "source_repo": "bofenghuang/vigogne",
+   "license": "check repo",
+   "sha256": "7ff92d5e07aa167cc1ac4d149a805a45601e534b98e84d5ad15f12c7a6b784f4",
+   "lines": 282,
+   "first_line": "# Copied from Hugging Face",
+   "imports": [
+    "argparse",
+    "gc",
+    "json",
+    "math",
+    "os",
+    "shutil",
+    "torch"
+   ],
+   "registered": "2026-11-04 17:00:07",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_responses",
+   "source_file": "scripts/data_generation/generate_responses.py",
+   "source_repo": "bofenghuang/vigogne",
+   "license": "check repo",
+   "sha256": "9941210d4f0498852752c2b6d42f41d67113787ccb7a1f7ed6b1a202baf933ca",
+   "lines": 192,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "fire",
+    "openai",
+    "os",
+    "re",
+    "time"
+   ],
+   "registered": "2026-11-04 17:00:08",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "trainer",
+   "source_file": "RWKV-v1/src/trainer.py",
+   "source_repo": "BlinkDL/RWKV-LM",
+   "license": "check repo",
+   "sha256": "998a353be08b3596a71d3e8d8aface45e8ce8df4e438f3ec4dd232733d81cb63",
+   "lines": 131,
+   "first_line": "import math, sys, datetime",
+   "imports": [
+    "datetime",
+    "logging",
+    "math",
+    "numpy",
+    "sys",
+    "torch"
+   ],
+   "registered": "2026-11-04 17:00:10",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "utils",
+   "source_file": "RWKV-v1/src/utils.py",
+   "source_repo": "BlinkDL/RWKV-LM",
+   "license": "check repo",
+   "sha256": "90d7ec6a8b73a6bc474403c61fb3a263789530b0d6ab10e5912db32a4dcf8756",
+   "lines": 51,
+   "first_line": "import random",
+   "imports": [
+    "numpy",
+    "random",
+    "torch"
+   ],
+   "registered": "2026-11-04 17:00:10",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "numerical_reasoning_arithmetic",
+   "source_file": "case-studies/term_frequency/numerical_reasoning_arithmetic.py",
+   "source_repo": "EleutherAI/pythia",
+   "license": "check repo",
+   "sha256": "7bf0a7bc84331ece5f0adbfc1f0febc88fbd1b52eb2384f435f332532cb69153",
+   "lines": 110,
+   "first_line": "# Copyright 2020 The HuggingFace Datasets Authors and the current dataset script",
+   "imports": [
+    "datasets"
+   ],
+   "registered": "2026-11-04 17:00:12",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "numerical_reasoning_time_unit_conversion",
+   "source_file": "case-studies/term_frequency/numerical_reasoning_time_unit_conversion.py",
+   "source_repo": "EleutherAI/pythia",
+   "license": "check repo",
+   "sha256": "8b6972eb3a6043355d18b6305a8c14f7c71b711018a4d1da7d71b371709004fb",
+   "lines": 122,
+   "first_line": "# Copyright 2020 The HuggingFace Datasets Authors and the current dataset script",
+   "imports": [
+    "datasets"
+   ],
+   "registered": "2026-11-04 17:00:12",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 15:57:27"
+ "built": "2026-11-04 17:00:12"
 }

@@ -1,113 +1,106 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-04 16:47:55",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "preserve_copyright_years",
+   "repo": "opendatahub-io/kserve",
+   "sha256": "48e63f4464881bc4"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "296e24e19dc05f00"
+   "skill": "example_utils",
+   "repo": "opendatahub-io/model-registry-operator",
+   "sha256": "794d6d002a104762"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "setup_data",
+   "repo": "opendatahub-io/feast",
+   "sha256": "289e1334ac2f923b"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "mcp_client_demo",
+   "repo": "opendatahub-io/feast",
+   "sha256": "06ff0e0f54a3f4e4"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "conf",
+   "repo": "opendatahub-io/trainer",
+   "sha256": "047185939c714a2e"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "conftest",
+   "repo": "opendatahub-io/trainer",
+   "sha256": "8e858cd2b0d48a10"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "gen_gha_matrix_jobs",
+   "repo": "opendatahub-io/notebooks",
+   "sha256": "a3c46ad209363990"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "gha_pr_changed_files_symlink_test",
+   "repo": "opendatahub-io/notebooks",
+   "sha256": "92f63610c7f41c7b"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "check_integration_test_label",
+   "repo": "opendatahub-io/data-science-pipelines-operator",
+   "sha256": "2f842d8c6abd163f"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "params",
+   "repo": "opendatahub-io/data-science-pipelines-operator",
+   "sha256": "668b3a4f942470d9"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "attn_and_long_ctx_patches",
+   "repo": "ymcui/Chinese-LLaMA-Alpaca-2",
+   "sha256": "5380f3466354fb06"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "eval",
+   "repo": "ymcui/Chinese-LLaMA-Alpaca-2",
+   "sha256": "2ce2d8c10cb424cf"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "lm_harness_eval",
+   "repo": "state-spaces/mamba",
+   "sha256": "830bca2473837a3f"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "__init__",
+   "repo": "state-spaces/mamba",
+   "sha256": "d96b346da56c3c63"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "convert_llama_weights_to_hf",
+   "repo": "bofenghuang/vigogne",
+   "sha256": "7ff92d5e07aa167c"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "generate_responses",
+   "repo": "bofenghuang/vigogne",
+   "sha256": "9941210d4f049885"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "trainer",
+   "repo": "BlinkDL/RWKV-LM",
+   "sha256": "998a353be08b3596"
+  },
+  {
+   "skill": "utils",
+   "repo": "BlinkDL/RWKV-LM",
+   "sha256": "90d7ec6a8b73a6bc"
+  },
+  {
+   "skill": "numerical_reasoning_arithmetic",
+   "repo": "EleutherAI/pythia",
+   "sha256": "7bf0a7bc84331ece"
+  },
+  {
+   "skill": "numerical_reasoning_time_unit_conversion",
+   "repo": "EleutherAI/pythia",
+   "sha256": "8b6972eb3a604335"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-04 17:00:12"
 }
