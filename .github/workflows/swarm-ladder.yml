@@ -1,0 +1,35 @@
+name: swarm-ladder
+# THE SWARM'S S+ CERT LADDER, OFF-BOX: the honest certifier (SwarmCert) runs
+# on GitHub's free public-repo compute (fresh runner IP = fresh quota; the
+# gh lane pays for itself with GITHUB_TOKEN). The grade is recomputed from
+# the receipt FILES - nothing self-grades. Receipts return as artifacts.
+on:
+  schedule:
+    - cron: "0 8 * * *"      # daily, after the night-cert window
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  cert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run the swarm S+ certifier
+        env:
+          GITHUB_TOKEN: ${{ github.token }}   # the gh lane: fresh quota per runner
+        run: |
+          python Scripts/SwarmCert.py
+      - name: Upload receipts
+        uses: actions/upload-artifact@v4
+        with:
+          name: swarm-ladder-receipts
+          path: |
+            Config/swarm_delivery.jsonl
+            Config/swarm_cert.json
+          if-no-files-found: warn
+      - name: The verdict line
+        run: echo "swarm ladder run complete - receipts in artifacts"
