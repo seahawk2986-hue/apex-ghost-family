@@ -8606,7 +8606,327 @@
    ],
    "registered": "2026-11-04 01:00:48",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "update_json",
+   "source_file": ".github/update_json.py",
+   "source_repo": "LiveContainer/LiveContainer",
+   "license": "check repo",
+   "sha256": "6f0da214a6742d2fcb315141d646d1119cf03fcbce98f2b289150645a1c5cf3d",
+   "lines": 354,
+   "first_line": "import json",
+   "imports": [
+    "json",
+    "os",
+    "plistlib",
+    "re",
+    "requests"
+   ],
+   "registered": "2026-11-04 01:59:16",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_targets",
+   "source_file": "tools/check_targets.py",
+   "source_repo": "nathanialf/ico",
+   "license": "check repo",
+   "sha256": "6a39fa13c6a92019edc41792c9a092cf581fb70e371f354d80de71fd104cc0b9",
+   "lines": 301,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:59:30",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "format_layout",
+   "source_file": "tools/format_layout.py",
+   "source_repo": "nathanialf/ico",
+   "license": "check repo",
+   "sha256": "9a596a691c5d525f65905aeca061d30887d7dc800f4827c22cd4e3e68b8f8165",
+   "lines": 296,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:59:31",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "client",
+   "source_file": "examples/client.py",
+   "source_repo": "EdgePlat/edgepedia-mcp",
+   "license": "check repo",
+   "sha256": "960837daba3b3c5a57c00980d3eae1231331bb50e3fcd54322c2fa208584edea",
+   "lines": 27,
+   "first_line": "\"\"\"Search Edgepedia and read an article through its MCP server. Python 3 standar",
+   "imports": [
+    "json",
+    "sys",
+    "urllib"
+   ],
+   "registered": "2026-11-04 01:59:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "main",
+   "source_file": "integrations/dify/main.py",
+   "source_repo": "sky-access/skyaccess-mcp",
+   "license": "check repo",
+   "sha256": "feb5e5231aa87ed8185479ff31567e02ea86856279a593fe283ac7029e0a9f9d",
+   "lines": 7,
+   "first_line": "from dify_plugin import DifyPluginEnv, Plugin",
+   "imports": [],
+   "registered": "2026-11-04 01:59:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "ghostty_nautilus",
+   "source_file": "dist/linux/ghostty_nautilus.py",
+   "source_repo": "ghostty-org/ghostty",
+   "license": "check repo",
+   "sha256": "e6fe2be6d11e95b40a6d7fca00710c0a67a6350427b28ffc3b3030a0d7ee57ca",
+   "lines": 67,
+   "first_line": "# Adapted from wezterm: https://github.com/wez/wezterm/blob/main/assets/wezterm-",
+   "imports": [
+    "gettext"
+   ],
+   "registered": "2026-11-04 01:59:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "update_appcast_tag",
+   "source_file": "dist/macos/update_appcast_tag.py",
+   "source_repo": "ghostty-org/ghostty",
+   "license": "check repo",
+   "sha256": "ee48deab7874d07d5cc6ceb687144cbe2e97813233bd78e83685045b585039ab",
+   "lines": 109,
+   "first_line": "\"\"\"",
+   "imports": [
+    "os",
+    "xml"
+   ],
+   "registered": "2026-11-04 01:59:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "capture",
+   "source_file": "bridge/mitmproxy/capture.py",
+   "source_repo": "morluto/rea",
+   "license": "check repo",
+   "sha256": "daca512f3f86ab9fdcc3b611954d635bc1ac502d2f681ca60cdc8d87290d3311",
+   "lines": 385,
+   "first_line": "\"\"\"REA offline adapter using mitmproxy's unchanged native tnetstring decoder.",
+   "imports": [
+    "base64",
+    "hashlib",
+    "ipaddress",
+    "json",
+    "math",
+    "re",
+    "resource"
+   ],
+   "registered": "2026-11-04 01:59:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "utilities",
+   "source_file": "backend/utilities.py",
+   "source_repo": "sigalor/whatsapp-web-reveng",
+   "license": "check repo",
+   "sha256": "7f680fde3302413436fc59a44b296f79f8439431f1187bad2e7f43a625227691",
+   "lines": 55,
+   "first_line": "from __future__ import print_function;",
+   "imports": [
+    "sys",
+    "time"
+   ],
+   "registered": "2026-11-04 01:59:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "whatsapp_binary_reader",
+   "source_file": "backend/whatsapp_binary_reader.py",
+   "source_repo": "sigalor/whatsapp-web-reveng",
+   "license": "check repo",
+   "sha256": "0e4bde138cde3fcfe57b4ac8a193ed476194ac3d984cf24bdd51413c02c9dd20",
+   "lines": 204,
+   "first_line": "from whatsapp_defines import WATags, WASingleByteTokens, WADoubleByteTokens, WAW",
+   "imports": [],
+   "registered": "2026-11-04 01:59:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "completion",
+   "source_file": "cli/commands/completion.py",
+   "source_repo": "spectral-mcp/spectral",
+   "license": "check repo",
+   "sha256": "5023126751e87a8824bdef0597726a0328a5d8246d15ca7f7a4cbb32f4394f8e",
+   "lines": 24,
+   "first_line": "\"\"\"Shell completion script generator.\"\"\"",
+   "imports": [
+    "click",
+    "importlib"
+   ],
+   "registered": "2026-11-04 01:59:51",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "config",
+   "source_file": "cli/commands/config.py",
+   "source_repo": "spectral-mcp/spectral",
+   "license": "check repo",
+   "sha256": "b9577c93827d35eef13497e511c1e03f2240ae29e9905afe40a83f9e3b68dcef",
+   "lines": 28,
+   "first_line": "\"\"\"CLI command: spectral config.\"\"\"",
+   "imports": [
+    "click"
+   ],
+   "registered": "2026-11-04 01:59:51",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "engine",
+   "source_file": "backend/agent/engine.py",
+   "source_repo": "abi/screenshot-to-code",
+   "license": "check repo",
+   "sha256": "acafa20c64e543298290177633bbb15de73ecf4c3710097f9702d1c500bb1ccd",
+   "lines": 387,
+   "first_line": "import asyncio",
+   "imports": [
+    "asyncio",
+    "traceback",
+    "uuid"
+   ],
+   "registered": "2026-11-04 01:59:52",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "runner",
+   "source_file": "backend/agent/runner.py",
+   "source_repo": "abi/screenshot-to-code",
+   "license": "check repo",
+   "sha256": "e91525eaf7f81b9a211ba37f8ba0da72e52052a79e01e8f40b6077b02a6e1618",
+   "lines": 6,
+   "first_line": "from agent.engine import AgentEngine",
+   "imports": [],
+   "registered": "2026-11-04 01:59:52",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "src/wasmlens/__init__.py",
+   "source_repo": "alexandrmotologa/wasmlens",
+   "license": "check repo",
+   "sha256": "2a071faada33b7730fc3ac5082de9935c6de4d141309ea23109e2fd72aeabd5c",
+   "lines": 4,
+   "first_line": "\"\"\"WasmLens - Interactive WebAssembly binary decompiler, CFG visualizer, and lin",
+   "imports": [],
+   "registered": "2026-11-04 01:59:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "gen_pcprotos",
+   "source_file": "scripts/gen_pcprotos.py",
+   "source_repo": "jkdansereau/goldeneye-pc-port",
+   "license": "check repo",
+   "sha256": "9059ff75b96551075c274b646c893e2ee3cdc177ac99d0cc9b3c910948c06fa8",
+   "lines": 93,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "re"
+   ],
+   "registered": "2026-11-04 01:59:55",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_chr_c",
+   "source_file": "scripts/generate_chr_c.py",
+   "source_repo": "jkdansereau/goldeneye-pc-port",
+   "license": "check repo",
+   "sha256": "2fa4173890c630b080c5071a5e69b0cc71840e29b62e32add6a155d6073b19c2",
+   "lines": 193,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "importlib",
+    "re",
+    "struct",
+    "sys",
+    "traceback"
+   ],
+   "registered": "2026-11-04 01:59:56",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "hostgen",
+   "source_file": "port/tools/hostgen.py",
+   "source_repo": "tangosdev/sm64ds-decomp",
+   "license": "check repo",
+   "sha256": "94b4ea1fc3ed8e70843deacf58fde0e4ab0c7f4c1fbc3cd658f1be2ed4a258a8",
+   "lines": 164,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "pathlib",
+    "re",
+    "srcpath",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:59:57",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "linkage",
+   "source_file": "port/tools/linkage.py",
+   "source_repo": "tangosdev/sm64ds-decomp",
+   "license": "check repo",
+   "sha256": "0a072082fc2faffb80633a1cf347eecc397df58292f3690325e4fe8cf92d02ce",
+   "lines": 298,
+   "first_line": "\"\"\"How much of the port is the real decomp, and what is still scaffolding?",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:59:57",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "compare_checkpoints",
+   "source_file": ".github/scripts/compare-checkpoints.py",
+   "source_repo": "nanolathe-gg/nanolathe",
+   "license": "check repo",
+   "sha256": "f7c03e64293b63a0eac64db740c65db62e7cd08dcde4dd3e258421ac81a31559",
+   "lines": 41,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:59:59",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "browser_poc_serve",
+   "source_file": "tools/browser-poc-serve.py",
+   "source_repo": "nanolathe-gg/nanolathe",
+   "license": "check repo",
+   "sha256": "8b60932f7a766ebe7ca90d20b550e7c5d533b9f87b51848e44b8f30962f20caf",
+   "lines": 9,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 01:59:59",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 01:00:48"
+ "built": "2026-11-04 01:59:59"
 }

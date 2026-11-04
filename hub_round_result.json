@@ -1,113 +1,111 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-04 01:51:59",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "update_json",
+   "repo": "LiveContainer/LiveContainer",
+   "sha256": "6f0da214a6742d2f"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c3c719a6d1e841ba"
+   "skill": "check_targets",
+   "repo": "nathanialf/ico",
+   "sha256": "6a39fa13c6a92019"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "format_layout",
+   "repo": "nathanialf/ico",
+   "sha256": "9a596a691c5d525f"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "client",
+   "repo": "EdgePlat/edgepedia-mcp",
+   "sha256": "960837daba3b3c5a"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "main",
+   "repo": "sky-access/skyaccess-mcp",
+   "sha256": "feb5e5231aa87ed8"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "ghostty_nautilus",
+   "repo": "ghostty-org/ghostty",
+   "sha256": "e6fe2be6d11e95b4"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "update_appcast_tag",
+   "repo": "ghostty-org/ghostty",
+   "sha256": "ee48deab7874d07d"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "capture",
+   "repo": "morluto/rea",
+   "sha256": "daca512f3f86ab9f"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "utilities",
+   "repo": "sigalor/whatsapp-web-reveng",
+   "sha256": "7f680fde33024134"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "whatsapp_binary_reader",
+   "repo": "sigalor/whatsapp-web-reveng",
+   "sha256": "0e4bde138cde3fcf"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "completion",
+   "repo": "spectral-mcp/spectral",
+   "sha256": "5023126751e87a88"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "config",
+   "repo": "spectral-mcp/spectral",
+   "sha256": "b9577c93827d35ee"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "engine",
+   "repo": "abi/screenshot-to-code",
+   "sha256": "acafa20c64e54329"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "runner",
+   "repo": "abi/screenshot-to-code",
+   "sha256": "e91525eaf7f81b9a"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "__init__",
+   "repo": "alexandrmotologa/wasmlens",
+   "sha256": "2a071faada33b773"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "gen_pcprotos",
+   "repo": "jkdansereau/goldeneye-pc-port",
+   "sha256": "9059ff75b9655107"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "generate_chr_c",
+   "repo": "jkdansereau/goldeneye-pc-port",
+   "sha256": "2fa4173890c630b0"
+  },
+  {
+   "skill": "hostgen",
+   "repo": "tangosdev/sm64ds-decomp",
+   "sha256": "94b4ea1fc3ed8e70"
+  },
+  {
+   "skill": "linkage",
+   "repo": "tangosdev/sm64ds-decomp",
+   "sha256": "0a072082fc2faffb"
+  },
+  {
+   "skill": "compare_checkpoints",
+   "repo": "nanolathe-gg/nanolathe",
+   "sha256": "f7c03e64293b63a0"
+  },
+  {
+   "skill": "browser_poc_serve",
+   "repo": "nanolathe-gg/nanolathe",
+   "sha256": "8b60932f7a766ebe"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-04 01:59:59"
 }
