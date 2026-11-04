@@ -11110,7 +11110,323 @@
    ],
    "registered": "2026-11-04 11:15:53",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "curpng2h",
+   "source_file": "tools/curpng2h.py",
+   "source_repo": "isledecomp/isle-portable",
+   "license": "check repo",
+   "sha256": "f6a793c2f484157697fc65916a24b04210fd9be053ca72966b68b0bdb045efa6",
+   "lines": 76,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "itertools"
+   ],
+   "registered": "2026-11-04 13:02:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "leap_seconds_generator",
+   "source_file": "scripts/leap_seconds_generator.py",
+   "source_repo": "swift-nav/libswiftnav",
+   "license": "check repo",
+   "sha256": "859283d7ee900ce44152298d200677b8019581a1404c2f996eab3bf36a3d03ea",
+   "lines": 159,
+   "first_line": "#!/usr/bin/python3",
+   "imports": [
+    "datetime",
+    "jinja2",
+    "sys",
+    "urllib"
+   ],
+   "registered": "2026-11-04 13:02:45",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check2junit",
+   "source_file": "tools/check2junit.py",
+   "source_repo": "swift-nav/libswiftnav",
+   "license": "check repo",
+   "sha256": "966c8f0bf2af749874406a307496cfadacb26c41bec9428593bdc61bfd66db09",
+   "lines": 86,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "copy",
+    "lxml",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 13:02:45",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "convert",
+   "source_file": "tools/python/convert.py",
+   "source_repo": "xenia-project/FFmpeg",
+   "license": "check repo",
+   "sha256": "4d77f732637f4c3d71b174e079e92e6e7cc61ba3d4846f7062bf10abf4496b9d",
+   "lines": 57,
+   "first_line": "# Copyright (c) 2019 Guo Yejun",
+   "imports": [
+    "argparse",
+    "os"
+   ],
+   "registered": "2026-11-04 13:02:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "convert_header",
+   "source_file": "tools/python/convert_header.py",
+   "source_repo": "xenia-project/FFmpeg",
+   "license": "check repo",
+   "sha256": "9953ef731e1d3d8111cbe7012a198b70c696acc5917980da1a29c94aa8d91b5c",
+   "lines": 27,
+   "first_line": "# Copyright (c) 2019",
+   "imports": [],
+   "registered": "2026-11-04 13:02:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "airflow-core/docs/conf.py",
+   "source_repo": "apache/airflow",
+   "license": "check repo",
+   "sha256": "7645cdc33585a6a8a9666ca88da56be7917c6f44a9172bdc7c22756402f29c15",
+   "lines": 371,
+   "first_line": "# Disable Flake8 because of all the sphinx imports",
+   "imports": [
+    "airflow",
+    "logging",
+    "os",
+    "pathlib",
+    "re"
+   ],
+   "registered": "2026-11-04 13:02:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "airflow-ctl/docs/conf.py",
+   "source_repo": "apache/airflow",
+   "license": "check repo",
+   "sha256": "05c64144ef960ce7e231e7f9f56fa4d3d2fe38cb5941773dea74b10e3a4e53e4",
+   "lines": 300,
+   "first_line": "# Disable Flake8 because of all the sphinx imports",
+   "imports": [
+    "airflowctl",
+    "logging",
+    "os",
+    "pathlib",
+    "re"
+   ],
+   "registered": "2026-11-04 13:02:49",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_email",
+   "source_file": "RELEASING/generate_email.py",
+   "source_repo": "apache/superset",
+   "license": "check repo",
+   "sha256": "f4142c96a662c4e57a1be748ec123a076b08aec65612f64498f75ba1a0fdc084",
+   "lines": 155,
+   "first_line": "#!/usr/bin/python3",
+   "imports": [
+    "click",
+    "jinja2"
+   ],
+   "registered": "2026-11-04 13:02:51",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "superset_config",
+   "source_file": "docker/pythonpath_dev/superset_config.py",
+   "source_repo": "apache/superset",
+   "license": "check repo",
+   "sha256": "523a1e68dc214e8f7f5e09304dfe9593b7996009dd13224d67d09abfe4fe29f7",
+   "lines": 154,
+   "first_line": "# Licensed to the Apache Software Foundation (ASF) under one",
+   "imports": [
+    "logging",
+    "os",
+    "superset_config_docker"
+   ],
+   "registered": "2026-11-04 13:02:51",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "make_logo",
+   "source_file": "core/SaintsRebornLogo/make_logo.py",
+   "source_repo": "whompay/SaintsReborn",
+   "license": "check repo",
+   "sha256": "a19dedbc7b6f52ccbc9dbdadd04e9783cf29cd3605c366d126f0aa9a9d210ff1",
+   "lines": 79,
+   "first_line": "# Developer tool: turns logo.png into logo.bin for patch.lua.",
+   "imports": [
+    "numpy",
+    "os",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-04 13:02:52",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "art",
+   "source_file": "tools/glyphgen/art.py",
+   "source_repo": "whompay/SaintsReborn",
+   "license": "check repo",
+   "sha256": "ad3a19ca63004a254984499f473847fda82957a5f582775cee4e4b1bf8b6bfa1",
+   "lines": 160,
+   "first_line": "# Keyboard/mouse button pictures, drawn from scratch (no game artwork).",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-11-04 13:02:52",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "ontology_sql_eval/__init__.py",
+   "source_repo": "NVIDIA/ontology-sql-eval",
+   "license": "check repo",
+   "sha256": "9bcc2ca888e5fbd4b09ded8ef819c106c0e92009704c47875f5a951c5a0a456e",
+   "lines": 4,
+   "first_line": "# SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES.",
+   "imports": [],
+   "registered": "2026-11-04 13:02:53",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bird_interact_http",
+   "source_file": "ontology_sql_eval/bird_interact/bird_interact_http.py",
+   "source_repo": "NVIDIA/ontology-sql-eval",
+   "license": "check repo",
+   "sha256": "c3f972d679fcf41289b550634fccd0d68520e182ac4b0b1b8d8b664de8086f8a",
+   "lines": 129,
+   "first_line": "\"\"\"HTTP clients for Bird ADK :6001 (user simulator) and :6002 (DB environment).\"",
+   "imports": [
+    "asyncio",
+    "httpx",
+    "logging",
+    "sqlglot"
+   ],
+   "registered": "2026-11-04 13:02:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "benchmark_data",
+   "source_file": "decontamination/benchmark_data.py",
+   "source_repo": "bigcode-project/bigcode-dataset",
+   "license": "check repo",
+   "sha256": "421875415036c66eeb3e7840ef4b56d4ea611dfc1d0b2ce0473cbef98cb1e3e3",
+   "lines": 140,
+   "first_line": "",
+   "imports": [
+    "itertools",
+    "json"
+   ],
+   "registered": "2026-11-04 13:02:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "find_substrings",
+   "source_file": "decontamination/find_substrings.py",
+   "source_repo": "bigcode-project/bigcode-dataset",
+   "license": "check repo",
+   "sha256": "c95620ef20ef79578065a26350fcbd41c0025a93d9ff17837ca6a66ca77dbb06",
+   "lines": 326,
+   "first_line": "from copy import deepcopy",
+   "imports": [
+    "argparse",
+    "json",
+    "os",
+    "shutil",
+    "sys"
+   ],
+   "registered": "2026-11-04 13:02:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "accelerator/__init__.py",
+   "source_repo": "microsoft/DeepSpeed",
+   "license": "check repo",
+   "sha256": "d69367bc65fd878d7c7a48d8fd79e96f7eb7b4ba3ee52cf0de27107fd851be4d",
+   "lines": 8,
+   "first_line": "# Copyright (c) Microsoft Corporation.",
+   "imports": [],
+   "registered": "2026-11-04 13:02:55",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "hpu_accelerator",
+   "source_file": "accelerator/hpu_accelerator.py",
+   "source_repo": "microsoft/DeepSpeed",
+   "license": "check repo",
+   "sha256": "af38cf6d93a6a7f2d655608a94bd2467617c07fadc4d68ecc429ab6f1eaf999b",
+   "lines": 331,
+   "first_line": "# Copyright (c) Microsoft Corporation.",
+   "imports": [
+    "functools",
+    "habana_frameworks",
+    "importlib",
+    "os",
+    "pkgutil",
+    "torch"
+   ],
+   "registered": "2026-11-04 13:02:56",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "si_openaccess",
+   "source_file": "src/si_openaccess/si_openaccess.py",
+   "source_repo": "Smithsonian/smithsonian-openaccess",
+   "license": "check repo",
+   "sha256": "cfb22ce213eea47396e2ff2c22eeb51a43f3b635ec7b463cda9250705387f602",
+   "lines": 130,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "requests"
+   ],
+   "registered": "2026-11-04 13:02:57",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "gen_emscripten_exported_json",
+   "source_file": "scripts/gen-emscripten-exported-json.py",
+   "source_repo": "WebAssembly/wabt",
+   "license": "check repo",
+   "sha256": "0919c0cf7bde0f3b17086d38bd464f822c85f3b974760ac28ad880b77500d8de",
+   "lines": 110,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 13:02:59",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "sha256sum",
+   "source_file": "scripts/sha256sum.py",
+   "source_repo": "WebAssembly/wabt",
+   "license": "check repo",
+   "sha256": "f98e2bfd5b4aa9703d1590b5ea86a4997af02fc7ef6f7328c62665f01f874838",
+   "lines": 39,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "hashlib",
+    "sys"
+   ],
+   "registered": "2026-11-04 13:02:59",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 11:15:53"
+ "built": "2026-11-04 13:02:59"
 }
