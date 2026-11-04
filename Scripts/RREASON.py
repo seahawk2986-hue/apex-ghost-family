@@ -44,7 +44,7 @@ STOPF = os.path.join(HOME, "RREASON_STOP")
 GENOME_F = os.path.join(HOME, "rreason_genome.json")
 INBOX = os.path.join(HOME, "arena_inbox")
 POP = max(2, int(os.environ.get("RREASON_POP", "3")))
-N_ITEMS = max(2, int(os.environ.get("RREASON_ITEMS", "5")))
+N_ITEMS = max(2, int(os.environ.get("RREASON_ITEMS", "8")))
 EVAL_TIMEOUT = int(os.environ.get("RREASON_TIMEOUT", "1200"))
 
 STYLES = (
