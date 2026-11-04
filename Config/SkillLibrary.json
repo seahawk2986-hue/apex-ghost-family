@@ -11761,7 +11761,279 @@
    ],
    "registered": "2026-11-04 14:20:29",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "fixtures",
+   "source_file": "analytics/lib/fixtures.py",
+   "source_repo": "zulip/zulip",
+   "license": "check repo",
+   "sha256": "636968997d0cda6e54c46d28b18b68127ef2550ecb0d79490ca4686cf45e9fe9",
+   "lines": 78,
+   "first_line": "from math import sqrt",
+   "imports": [],
+   "registered": "2026-11-04 15:57:11",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "time_utils",
+   "source_file": "analytics/lib/time_utils.py",
+   "source_repo": "zulip/zulip",
+   "license": "check repo",
+   "sha256": "b61e824bcc0a76577f47b8a4276152b767995c85b87826270fce91f29fd6f4d6",
+   "lines": 34,
+   "first_line": "from datetime import datetime, timedelta",
+   "imports": [],
+   "registered": "2026-11-04 15:57:11",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "crowdin_contributors",
+   "source_file": ".ci/crowdin-contributors.py",
+   "source_repo": "znc/znc",
+   "license": "check repo",
+   "sha256": "9bc1be3d951293f645e04cc70d8feaeeae5e03d81d4a98b9bae0fcdbaefb9030",
+   "lines": 26,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-04 15:57:12",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "translation_tmpl",
+   "source_file": "cmake/translation_tmpl.py",
+   "source_repo": "znc/znc",
+   "license": "check repo",
+   "sha256": "1fc65324f06dc18ee668da2358486abc2723509a215ccaa35474894a53e1306f",
+   "lines": 55,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "glob",
+    "os",
+    "re"
+   ],
+   "registered": "2026-11-04 15:57:12",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "app",
+   "source_file": "backend/analytics_server/app.py",
+   "source_repo": "middlewarehq/middleware",
+   "license": "check repo",
+   "sha256": "625b0f1d5c6d92ececdfb76fd338332417ebfd08ae06c9d16109c122b1bcf02b",
+   "lines": 41,
+   "first_line": "from os import getenv",
+   "imports": [],
+   "registered": "2026-11-04 15:57:13",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "env",
+   "source_file": "backend/analytics_server/env.py",
+   "source_repo": "middlewarehq/middleware",
+   "license": "check repo",
+   "sha256": "d476fa86526238bb53773b0d23a33c2011d82e1f53a042cf009585b765564769",
+   "lines": 11,
+   "first_line": "from os import getenv",
+   "imports": [],
+   "registered": "2026-11-04 15:57:13",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "timeseries_cli",
+   "source_file": "resources/timeseries-cli.py",
+   "source_repo": "jitsi/jitsi-videobridge",
+   "license": "check repo",
+   "sha256": "212c4f6f864392f9282e4ec89c3ec2380261f42c3d34b29a1331d59495fa97b3",
+   "lines": 204,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "matplotlib",
+    "pandas"
+   ],
+   "registered": "2026-11-04 15:57:15",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "Changes",
+   "source_file": "changedetectionio/api/Changes.py",
+   "source_repo": "dgtlmoon/changedetection.io",
+   "license": "check repo",
+   "sha256": "f640b1990b15076e0ac7f16cddb927dc3dc00cf62271900352ee9f653584cafe",
+   "lines": 72,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "time"
+   ],
+   "registered": "2026-11-04 15:57:15",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "Import",
+   "source_file": "changedetectionio/api/Import.py",
+   "source_repo": "dgtlmoon/changedetection.io",
+   "license": "check repo",
+   "sha256": "b60e606a267411664841b3dfd14390618e252642913852a8cb2aaa275eabd278",
+   "lines": 255,
+   "first_line": "from changedetectionio.strtobool import strtobool",
+   "imports": [
+    "json",
+    "threading"
+   ],
+   "registered": "2026-11-04 15:57:16",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "fixture",
+   "source_file": "contrib/core/fixture.py",
+   "source_repo": "StackStorm/st2",
+   "license": "check repo",
+   "sha256": "76fec01ac529dd279a389704575f00a42178c1fa9c6fa685f9aa7d4b059c8566",
+   "lines": 17,
+   "first_line": "# Copyright 2022 The StackStorm Authors.",
+   "imports": [],
+   "registered": "2026-11-04 15:57:16",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "datasette/__init__.py",
+   "source_repo": "simonw/datasette",
+   "license": "check repo",
+   "sha256": "6812aeabed75decf1a5afd50c32ac6d1c2e3d03390753c53b2b5bd4ec9dd4067",
+   "lines": 17,
+   "first_line": "from datasette.permissions import Permission  # noqa",
+   "imports": [],
+   "registered": "2026-11-04 15:57:18",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__main__",
+   "source_file": "datasette/__main__.py",
+   "source_repo": "simonw/datasette",
+   "license": "check repo",
+   "sha256": "4590c06708876fe74aa173d39628ee44a7d2165767ae0dee1a3d84f0c6133489",
+   "lines": 5,
+   "first_line": "from datasette.cli import cli",
+   "imports": [],
+   "registered": "2026-11-04 15:57:18",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "hooks",
+   "source_file": "docs/hooks.py",
+   "source_repo": "binwiederhier/ntfy",
+   "license": "check repo",
+   "sha256": "ec9419c9d42908e4b24171ac0858163d26b383f7e04720308b216beea3e36686",
+   "lines": 8,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "shutil"
+   ],
+   "registered": "2026-11-04 15:57:20",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "publish",
+   "source_file": "examples/publish-python/publish.py",
+   "source_repo": "binwiederhier/ntfy",
+   "license": "check repo",
+   "sha256": "9a8c1fe925e68e6908042c51a84afc1e7d60ced5b0212761f8f366305830beb0",
+   "lines": 13,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "requests"
+   ],
+   "registered": "2026-11-04 15:57:20",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_ci_results",
+   "source_file": ".github/scripts/check_ci_results.py",
+   "source_repo": "openai/codex",
+   "license": "check repo",
+   "sha256": "4e7e7d67c74b1882c0c18b17a3a9b55680080497cd649de47ac7e7ffefb31501",
+   "lines": 35,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "os"
+   ],
+   "registered": "2026-11-04 15:57:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "releases",
+   "source_file": ".github/scripts/releases.py",
+   "source_repo": "openai/codex",
+   "license": "check repo",
+   "sha256": "f46e47b4d84563c7d7820f574bb90709f7df34cd962f20d220cb35053aaeaef5",
+   "lines": 86,
+   "first_line": "\"\"\"Validate Codex releases and check whether their GitHub channel pointers can a",
+   "imports": [
+    "argparse",
+    "json",
+    "re",
+    "sys",
+    "tomllib"
+   ],
+   "registered": "2026-11-04 15:57:25",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "crew_water_loop",
+   "source_file": "models/crew_water_loop.py",
+   "source_repo": "SpaceOceanCorp/space-water-logistics",
+   "license": "check repo",
+   "sha256": "28b615e5a0d4da079797b61102b82d58d8da459fd6711e7ff9bcd7de8f0ff774",
+   "lines": 126,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-04 15:57:26",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "lunar_settlement_water",
+   "source_file": "models/lunar_settlement_water.py",
+   "source_repo": "SpaceOceanCorp/space-water-logistics",
+   "license": "check repo",
+   "sha256": "9214331647c0b73fda0f59b139191ab5ab26b4c6b1b4c911538513b2024e2f15",
+   "lines": 74,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-04 15:57:26",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "adapters/__init__.py",
+   "source_repo": "dotchance/nodalarc",
+   "license": "check repo",
+   "sha256": "b0826142fd7049ae8455b2770e45940dd72c4249cc64d8e44cebd2de7678887b",
+   "lines": 11,
+   "first_line": "# Copyright 2024-2026 .chance (dotchance)",
+   "imports": [],
+   "registered": "2026-11-04 15:57:27",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "adapters/frr/__init__.py",
+   "source_repo": "dotchance/nodalarc",
+   "license": "check repo",
+   "sha256": "febd5955e8f8e3adc05d4b8fc5b89a6f9d66ce5ac43c7548e36b8eabb3b9111e",
+   "lines": 9,
+   "first_line": "# Copyright 2024-2026 .chance (dotchance)",
+   "imports": [],
+   "registered": "2026-11-04 15:57:27",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 14:20:29"
+ "built": "2026-11-04 15:57:27"
 }
