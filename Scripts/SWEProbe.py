@@ -273,13 +273,29 @@ def islands(n=4, maxt=None):
         print("island style=%d score=%d/%d lanes=%s" %
               (r["style"], r["score"], r["items"] * 3, r["lanes"]))
     champ = max(results, key=lambda r: r["score"])
+    # HONESTY GATE: a tie carries ZERO evidence that any style is better.
+    # Only a strictly higher score than the incumbent promotes; ties keep
+    # the elite (no style-cycling on noise, no gen burned on nothing).
+    incumbent = (g.get("style"), g.get("score"))
+    if (len(results) > 1 and
+            all(r["score"] == champ["score"] for r in results)):
+        receipt({"ev": "TIE_RETAINED", "style": g.get("style"),
+                 "score": g.get("score"),
+                 "note": "all %d styles scored %d/%d - no signal, elite kept"
+                         % (len(results), champ["score"],
+                            champ["items"] * 3)})
+        print("TIE - ELITE RETAINED style %d (no promotion on a tie)" %
+              g.get("style", 0))
+        return
     cand = dict(g)
     cand["gen"] = g["gen"] + 1
     cand["style"] = champ["style"]
     cand["maxt"] = 3000
+    strictly_better = (incumbent[1] is None or
+                       champ["per_item"] > incumbent[1])
     ok = upward_commit("swe", champ["per_item"],
                        {"gen": cand["gen"], "style": champ["style"],
-                        "score": champ["per_item"]})
+                        "score": champ["per_item"]}) and strictly_better
     if ok:
         g = cand
         g["score"] = champ["per_item"]
