@@ -1,113 +1,111 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-04 14:03:22",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "serve",
+   "repo": "OpenRsG/GunZRs",
+   "sha256": "5936e689fa4be6fd"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c3c719a6d1e841ba"
+   "skill": "__init__",
+   "repo": "tt-a1i/archify",
+   "sha256": "af0ac0d1239f9fc2"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "config",
+   "repo": "cloudflare/cloudflared",
+   "sha256": "04f1381b1b711a39"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "conftest",
+   "repo": "cloudflare/cloudflared",
+   "sha256": "d1bf7a54d6d498c6"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "cilium_external_links",
+   "repo": "cilium/cilium",
+   "sha256": "77f82cd23756beb6"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "cilium_helm_directive",
+   "repo": "cilium/cilium",
+   "sha256": "3ec9f07caf4cbcb1"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "boilerplate",
+   "repo": "envoyproxy/gateway",
+   "sha256": "a4e832ac4f4b0d40"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "__init__",
+   "repo": "allenporter/flux-local",
+   "sha256": "f6cc02a19d61c8db"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "config",
+   "repo": "allenporter/flux-local",
+   "sha256": "0ee053a04372dccd"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "create_external_cluster_resources_tests",
+   "repo": "rook/rook",
+   "sha256": "4b64ceba2867208e"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "check_sprint_last_day",
+   "repo": "longhorn/longhorn",
+   "sha256": "b4f30a5176a39ebd"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "scan_and_notify_testing_items",
+   "repo": "longhorn/longhorn",
+   "sha256": "ab85dd8164104ebc"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "boilerplate",
+   "repo": "kubernetes-csi/csi-driver-nfs",
+   "sha256": "b93db788473c0868"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "boilerplate",
+   "repo": "kubernetes-csi/csi-driver-nfs",
+   "sha256": "c3c9ce1a478ec82c"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "boilerplate",
+   "repo": "kubernetes-csi/csi-driver-smb",
+   "sha256": "dc58170ced7a717d"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "aws_cleanup_legacy_txt_records",
+   "repo": "kubernetes-sigs/external-dns",
+   "sha256": "d161fbf43752a76f"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "update_route53_k8s_txt_owner",
+   "repo": "kubernetes-sigs/external-dns",
+   "sha256": "e81bd0f65f1a9cec"
+  },
+  {
+   "skill": "filter_commit_messages",
+   "repo": "Elumenotion/GuideAnts",
+   "sha256": "fa84dd6c1c615b58"
+  },
+  {
+   "skill": "timeline_compile",
+   "repo": "Elumenotion/GuideAnts",
+   "sha256": "4ec2526f4d2e1805"
+  },
+  {
+   "skill": "env",
+   "repo": "Martossien/transcria",
+   "sha256": "4f561411f8bd2ae7"
+  },
+  {
+   "skill": "8f2b6d0e4a1c_add_job_queue_waiting_order_index",
+   "repo": "Martossien/transcria",
+   "sha256": "159a2e171298a012"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-04 14:20:29"
 }

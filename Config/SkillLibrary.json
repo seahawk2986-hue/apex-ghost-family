@@ -11426,7 +11426,342 @@
    ],
    "registered": "2026-11-04 13:02:59",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "serve",
+   "source_file": "web/serve.py",
+   "source_repo": "OpenRsG/GunZRs",
+   "license": "check repo",
+   "sha256": "5936e689fa4be6fdb4e7e5bc93db36c509c014a0261e67820556a19a15186d84",
+   "lines": 76,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "http",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 14:20:12",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "integrations/hermes-agent/__init__.py",
+   "source_repo": "tt-a1i/archify",
+   "license": "check repo",
+   "sha256": "af0ac0d1239f9fc22aefb102916d7fda5f2d1e133b086189308cb4e73650d643",
+   "lines": 62,
+   "first_line": "\"\"\"Skill-only Hermes plugin for Archify.",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-04 14:20:12",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "config",
+   "source_file": "component-tests/config.py",
+   "source_repo": "cloudflare/cloudflared",
+   "license": "check repo",
+   "sha256": "04f1381b1b711a398f5d25bdd0f47ec176eeb78fdab1f770a0b321ad0aeae266",
+   "lines": 102,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "base64",
+    "copy",
+    "json"
+   ],
+   "registered": "2026-11-04 14:20:14",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conftest",
+   "source_file": "component-tests/conftest.py",
+   "source_repo": "cloudflare/cloudflared",
+   "license": "check repo",
+   "sha256": "d1bf7a54d6d498c6c0cdbe656062ad3ff4b6c576183963fa29297adb1a5794f9",
+   "lines": 56,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "pytest",
+    "yaml"
+   ],
+   "registered": "2026-11-04 14:20:14",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "cilium_external_links",
+   "source_file": "Documentation/_exts/cilium_external_links.py",
+   "source_repo": "cilium/cilium",
+   "license": "check repo",
+   "sha256": "77f82cd23756beb6a9479b99bb12114f3dfe0dc1177cf68edcac6bc339c50020",
+   "lines": 17,
+   "first_line": "from sphinx.writers.html5 import HTML5Translator",
+   "imports": [],
+   "registered": "2026-11-04 14:20:16",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "cilium_helm_directive",
+   "source_file": "Documentation/_exts/cilium_helm_directive.py",
+   "source_repo": "cilium/cilium",
+   "license": "check repo",
+   "sha256": "3ec9f07caf4cbcb1c9c8c8c2a3004ce30bc6e1b4145cace25c969351049a6d9b",
+   "lines": 201,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-04 14:20:16",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "boilerplate",
+   "source_file": "tools/boilerplate/boilerplate.py",
+   "source_repo": "envoyproxy/gateway",
+   "license": "check repo",
+   "sha256": "a4e832ac4f4b0d409e20fb3d1154d986e6e0077010d563cac4d8ba0a3e602376",
+   "lines": 257,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "datetime",
+    "difflib",
+    "glob",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 14:20:17",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "flux_local/__init__.py",
+   "source_repo": "allenporter/flux-local",
+   "license": "check repo",
+   "sha256": "f6cc02a19d61c8dbb9d6020d486eb7ce7a632114da865ca2c2f73003b6206d0d",
+   "lines": 21,
+   "first_line": "\"\"\"",
+   "imports": [
+    "warnings"
+   ],
+   "registered": "2026-11-04 14:20:18",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "config",
+   "source_file": "flux_local/config.py",
+   "source_repo": "allenporter/flux-local",
+   "license": "check repo",
+   "sha256": "0ee053a04372dccd6225f9bc5db5a3ad6a18b5393cc8ff4d9a275fed11d0864c",
+   "lines": 25,
+   "first_line": "\"\"\"Configuration objects for flux-local.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-04 14:20:19",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "create_external_cluster_resources_tests",
+   "source_file": "deploy/examples/create-external-cluster-resources-tests.py",
+   "source_repo": "rook/rook",
+   "license": "check repo",
+   "sha256": "4b64ceba2867208e0d11dde8ee70a14134627a554d88f9df8b094f5d2f21f17d",
+   "lines": 288,
+   "first_line": "\"\"\"",
+   "imports": [
+    "importlib",
+    "json",
+    "os",
+    "sys",
+    "unittest"
+   ],
+   "registered": "2026-11-04 14:20:20",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_sprint_last_day",
+   "source_file": ".github/workflows/check-sprint-last-day.py",
+   "source_repo": "longhorn/longhorn",
+   "license": "check repo",
+   "sha256": "b4f30a5176a39ebdd9620e81f3c7bcee0e730979971d76b7011f812384c2878c",
+   "lines": 130,
+   "first_line": "import requests",
+   "imports": [
+    "os",
+    "requests",
+    "sys"
+   ],
+   "registered": "2026-11-04 14:20:21",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "scan_and_notify_testing_items",
+   "source_file": ".github/workflows/scan-and-notify-testing-items.py",
+   "source_repo": "longhorn/longhorn",
+   "license": "check repo",
+   "sha256": "ab85dd8164104ebc5ee5225b285687cb921f3d119d3f0a5a4a40e308dbd88d32",
+   "lines": 309,
+   "first_line": "import requests",
+   "imports": [
+    "json",
+    "os",
+    "requests",
+    "sys",
+    "time"
+   ],
+   "registered": "2026-11-04 14:20:21",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "boilerplate",
+   "source_file": "hack/boilerplate/boilerplate.py",
+   "source_repo": "kubernetes-csi/csi-driver-nfs",
+   "license": "check repo",
+   "sha256": "b93db788473c0868784cf45f9894c493645b5652b3ad3fe81e3ab027c5727b79",
+   "lines": 203,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "difflib",
+    "glob",
+    "json",
+    "mmap",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 14:20:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "boilerplate",
+   "source_file": "release-tools/boilerplate/boilerplate.py",
+   "source_repo": "kubernetes-csi/csi-driver-nfs",
+   "license": "check repo",
+   "sha256": "c3c9ce1a478ec82cc5a009224d8fc04d7fed80e7cc20b06a4c1b84db309bf076",
+   "lines": 201,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "difflib",
+    "glob",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 14:20:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "boilerplate",
+   "source_file": "hack/boilerplate/boilerplate.py",
+   "source_repo": "kubernetes-csi/csi-driver-smb",
+   "license": "check repo",
+   "sha256": "dc58170ced7a717d58d58cf5a6d20455225315f152bdd4091885c1a2cba1ff96",
+   "lines": 203,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "difflib",
+    "glob",
+    "json",
+    "mmap",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 14:20:25",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "aws_cleanup_legacy_txt_records",
+   "source_file": "scripts/aws-cleanup-legacy-txt-records.py",
+   "source_repo": "kubernetes-sigs/external-dns",
+   "license": "check repo",
+   "sha256": "d161fbf43752a76fdee5b55a250774cfc05d39a5bad3ca926477a9b810b46949",
+   "lines": 251,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "boto3",
+    "json",
+    "os",
+    "time",
+    "uuid"
+   ],
+   "registered": "2026-11-04 14:20:26",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "update_route53_k8s_txt_owner",
+   "source_file": "scripts/update_route53_k8s_txt_owner.py",
+   "source_repo": "kubernetes-sigs/external-dns",
+   "license": "check repo",
+   "sha256": "e81bd0f65f1a9cecd17bd813227f6902ac394ba9fe813c8712b308cb80225eaa",
+   "lines": 129,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "boto3"
+   ],
+   "registered": "2026-11-04 14:20:26",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "filter_commit_messages",
+   "source_file": "scripts/filter-commit-messages.py",
+   "source_repo": "Elumenotion/GuideAnts",
+   "license": "check repo",
+   "sha256": "fa84dd6c1c615b5812f1e8460bf4da69a04d17f3f8695280eb1e9c17d737c058",
+   "lines": 44,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 14:20:27",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "timeline_compile",
+   "source_file": "scripts/timeline_compile.py",
+   "source_repo": "Elumenotion/GuideAnts",
+   "license": "check repo",
+   "sha256": "4ec2526f4d2e18055e43508850f1bfec92387b2cf0e4089fcce3615ae7a02314",
+   "lines": 233,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-04 14:20:28",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "env",
+   "source_file": "alembic/env.py",
+   "source_repo": "Martossien/transcria",
+   "license": "check repo",
+   "sha256": "4f561411f8bd2ae7f33c9c2c444e105c2b6aacda3d2b62a6166ab952759d266e",
+   "lines": 72,
+   "first_line": "\"\"\"Environnement Alembic pour TranscrIA.",
+   "imports": [],
+   "registered": "2026-11-04 14:20:29",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "8f2b6d0e4a1c_add_job_queue_waiting_order_index",
+   "source_file": "alembic/versions/8f2b6d0e4a1c_add_job_queue_waiting_order_index.py",
+   "source_repo": "Martossien/transcria",
+   "license": "check repo",
+   "sha256": "159a2e171298a0123d7cd5de6fbcf07309792f14623b2e396f593142a16c1838",
+   "lines": 33,
+   "first_line": "\"\"\"add job queue waiting order index",
+   "imports": [
+    "sqlalchemy"
+   ],
+   "registered": "2026-11-04 14:20:29",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 13:02:59"
+ "built": "2026-11-04 14:20:29"
 }
