@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-03 19:45:02",
- "count": 503,
+ "ts": "2026-11-03 20:00:02",
+ "count": 511,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -549,6 +549,13 @@
    "license": ""
   },
   {
+   "repo": "LiveContainer/LiveContainer",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "miroslavpejic85/mirotalk",
    "score": 83.0,
    "tier": "VEIN",
@@ -698,6 +705,13 @@
   {
    "repo": "chartbrew/chartbrew",
    "score": 54.2,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nathanialf/ico",
+   "score": 52.0,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -1872,6 +1886,20 @@
    "license": ""
   },
   {
+   "repo": "LeapLabTHU/Absolute-Zero-Reasoner",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "redwoodjs/redwood",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "turboderp/exllamav2",
    "score": 51.0,
    "tier": "MINE",
@@ -2076,6 +2104,13 @@
   },
   {
    "repo": "nomic-ai/gpt4all",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "redwoodjs/sdk",
    "score": 51.0,
    "tier": "MINE",
    "stars": 0,
@@ -2399,6 +2434,13 @@
   {
    "repo": "zone-eu/wildduck",
    "score": 34.2,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "vicgalle/stable-diffusion-aesthetic-gradients",
+   "score": 34.1,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -3231,6 +3273,20 @@
   },
   {
    "repo": "defilantech/llmkube",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "volcengine/verl",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "PRIME-RL/PRIME",
    "score": 30.1,
    "tier": "GOLD",
    "stars": 0,
