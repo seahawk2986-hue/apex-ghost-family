@@ -266,7 +266,8 @@ def islands(n=4, maxt=None):
                 "per_item": round(tot / n, 3),
                 "lanes": sorted(set(by)),
                 "patch_chars": len(text or ""),
-                "patch_head": (text or "")[:120]}
+                "patch_head": (text or "")[:120],
+                "patch": (text or "")[:8000]}
 
     with ThreadPoolExecutor(max_workers=len(STYLES)) as ex:
         results = list(ex.map(one_style, range(len(STYLES))))
