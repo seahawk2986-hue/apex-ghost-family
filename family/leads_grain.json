@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-03 19:30:02",
- "count": 522,
+ "ts": "2026-11-03 19:45:02",
+ "count": 503,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -185,20 +185,6 @@
    "license": ""
   },
   {
-   "repo": "hannorein/rebound",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "0xCoto/VIRGO",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "deflorio/SpOCK",
    "score": 83.8,
    "tier": "VEIN",
@@ -214,13 +200,6 @@
   },
   {
    "repo": "chrismolli/ProjectInertia",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "oresat/oresat-star-tracker-software",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -262,20 +241,6 @@
    "license": ""
   },
   {
-   "repo": "sabre-io/Baikal",
-   "score": 83.7,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "OpenLST/openlst",
-   "score": 83.7,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "diaspora/diaspora",
    "score": 83.2,
    "tier": "VEIN",
@@ -297,21 +262,7 @@
    "license": ""
   },
   {
-   "repo": "DjangoCRM/django-crm",
-   "score": 83.2,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "foodcoops/foodsoft",
-   "score": 83.2,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "pyload/pyload",
    "score": 83.2,
    "tier": "VEIN",
    "stars": 0,
@@ -326,13 +277,6 @@
   },
   {
    "repo": "jortilles/EDA",
-   "score": 83.2,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "AUTOMATIC1111/stable-diffusion-webui",
    "score": 83.2,
    "tier": "VEIN",
    "stars": 0,
@@ -549,13 +493,6 @@
    "license": ""
   },
   {
-   "repo": "fluxerapp/fluxer",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "simplex-chat/simplex-chat",
    "score": 83.1,
    "tier": "VEIN",
@@ -592,13 +529,6 @@
   },
   {
    "repo": "Atinoda/text-generation-webui-docker",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "orbital-sim-lab/space-ml-sim",
    "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
@@ -703,13 +633,6 @@
    "license": ""
   },
   {
-   "repo": "nyx-space/nyx",
-   "score": 81.0,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "pentacent/keila",
    "score": 80.8,
    "tier": "VEIN",
@@ -718,13 +641,6 @@
   },
   {
    "repo": "relative/synchrony",
-   "score": 79.6,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "LibreBooking/librebooking",
    "score": 79.6,
    "tier": "VEIN",
    "stars": 0,
@@ -747,13 +663,6 @@
   {
    "repo": "jitsi/jitsi-meet",
    "score": 61.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "esa/tetra3",
-   "score": 60.0,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -787,22 +696,8 @@
    "license": ""
   },
   {
-   "repo": "cypht-org/cypht",
-   "score": 55.1,
-   "tier": "GOLD",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "chartbrew/chartbrew",
    "score": 54.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "nathanialf/ico-pc",
-   "score": 52.0,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -815,43 +710,8 @@
    "license": ""
   },
   {
-   "repo": "Gumpolas/TooTawersRecomp",
-   "score": 51.7,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "AtharvaLakhe/PSR-Net",
-   "score": 51.7,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "RocketChat/Rocket.Chat",
    "score": 51.6,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "whylurking/IsaacRecomp",
-   "score": 51.5,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Moxnatiy/OpenBattlefield2",
-   "score": 51.5,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "carlosrmz009/littleplanet",
-   "score": 51.4,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -1025,13 +885,6 @@
    "license": ""
   },
   {
-   "repo": "beanboi7/yomomma-apiv2",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "ashlrai/morphkit",
    "score": 51.1,
    "tier": "MINE",
@@ -1039,21 +892,7 @@
    "license": ""
   },
   {
-   "repo": "ashlrai/locus",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "ashlrai/lexicon",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Apollo3zehn/PureHDF",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -1683,6 +1522,20 @@
    "license": ""
   },
   {
+   "repo": "hyqzz/Solar-Wanderer",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "typpo/astrokit",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "LunCoSim/lunco-space-jargon",
    "score": 51.1,
    "tier": "MINE",
@@ -1831,6 +1684,13 @@
   },
   {
    "repo": "ggml-org/ggml",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ddh0/easy-llama",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -3238,6 +3098,13 @@
   },
   {
    "repo": "opendatahub-io/trainer",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "opendatahub-io/odh-dashboard",
    "score": 30.1,
    "tier": "GOLD",
    "stars": 0,
