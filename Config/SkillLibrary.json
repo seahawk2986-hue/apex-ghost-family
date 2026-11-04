@@ -10835,7 +10835,282 @@
    ],
    "registered": "2026-11-04 10:04:05",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "admin",
+   "source_file": "bookmarks/admin.py",
+   "source_repo": "sissbruecker/linkding",
+   "license": "check repo",
+   "sha256": "e37fe3d2e6ca1e7ee26a2ab0f5fe636455f2eb9b31825e916b4797e181a52086",
+   "lines": 345,
+   "first_line": "import os",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-04 11:15:26",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "auth",
+   "source_file": "bookmarks/api/auth.py",
+   "source_repo": "sissbruecker/linkding",
+   "license": "check repo",
+   "sha256": "b31d8bad45c7af65f8fb9faf0a817e0d32bf3dec5f3b89d305669cdfc74270f4",
+   "lines": 39,
+   "first_line": "from django.utils.translation import gettext_lazy as _",
+   "imports": [],
+   "registered": "2026-11-04 11:15:26",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "print_attributes",
+   "source_file": "bin/print_attributes.py",
+   "source_repo": "brandon-rhodes/python-sgp4",
+   "license": "check repo",
+   "sha256": "a951fefa0fe3e0dde0b67ba2ef653256cabf583e3870f5d138a80423450e6007",
+   "lines": 27,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [],
+   "registered": "2026-11-04 11:15:27",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "sgp4/__init__.py",
+   "source_repo": "brandon-rhodes/python-sgp4",
+   "license": "check repo",
+   "sha256": "8f01018363382658c82ae05408e8fb00e077c02be3b6a857478205f887da6b0e",
+   "lines": 14,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [],
+   "registered": "2026-11-04 11:15:27",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "switch_top_rmii_serial_adapter_timing",
+   "source_file": "examples/ice40_hx8k/switch_top_rmii_serial_adapter_timing.py",
+   "source_repo": "the-aerospace-corporation/satcat5",
+   "license": "check repo",
+   "sha256": "a56bc25b9047ae3a8d269cc13cd67d41aa46f5e8360d93291ffb961d67403de9",
+   "lines": 10,
+   "first_line": "##########################################################################",
+   "imports": [],
+   "registered": "2026-11-04 11:15:38",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "echo_demo",
+   "source_file": "examples/python/echo_demo.py",
+   "source_repo": "the-aerospace-corporation/satcat5",
+   "license": "check repo",
+   "sha256": "52067f16a28d6f0b187f3da9d9ca56453717efae784428994e855e754496c087",
+   "lines": 58,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [
+    "logging",
+    "os",
+    "satcat5_eth",
+    "sys",
+    "time"
+   ],
+   "registered": "2026-11-04 11:15:38",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "remove_php_end_tags",
+   "source_file": "phpBB/develop/remove-php-end-tags.py",
+   "source_repo": "phpbb/phpbb",
+   "license": "check repo",
+   "sha256": "0af62d97f0f3cea9547f969b73f8fb8531690fb96f39aa22cc2bcca544cb0590",
+   "lines": 66,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "optparse",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 11:15:39",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "setup",
+   "source_file": "pip-package/setup.py",
+   "source_repo": "taleshape-com/shaper",
+   "license": "check repo",
+   "sha256": "4e4fc963567b08a00feebae974c9a72a6cfaaab2ebdda2ec1a12d6fc0fe1d98f",
+   "lines": 8,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [],
+   "registered": "2026-11-04 11:15:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "pip-package/shaper_pkg/__init__.py",
+   "source_repo": "taleshape-com/shaper",
+   "license": "check repo",
+   "sha256": "0f45b711f10284ec4c37672fe08bc202095fd4fdc3a43736cd62e2cc754d2897",
+   "lines": 6,
+   "first_line": "# SPDX-License-Identifier: MPL-2.0",
+   "imports": [],
+   "registered": "2026-11-04 11:15:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "make_icon",
+   "source_file": "android/make_icon.py",
+   "source_repo": "ZeldaWWHDRecomp/ZeldaWWHDRecomp",
+   "license": "check repo",
+   "sha256": "371fe05e8d1f4d60fe19ad142165aebc3348552c45dc56b5b1dc764aa4c5e854",
+   "lines": 48,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 11:15:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_art",
+   "source_file": "examples/guest-mods/generate_art.py",
+   "source_repo": "ZeldaWWHDRecomp/ZeldaWWHDRecomp",
+   "license": "check repo",
+   "sha256": "bfe32f7ef8e1f5a2b9040c4b48cc8edc223f62762358338f81f73d33dfba0fac",
+   "lines": 90,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "struct",
+    "zlib"
+   ],
+   "registered": "2026-11-04 11:15:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "main",
+   "source_file": "examples/all_in_one/main.py",
+   "source_repo": "getsops/sops",
+   "license": "check repo",
+   "sha256": "1805d0d48fb16895a5d01f194a20599e34150e0805c0b39b5efbf719dca53759",
+   "lines": 19,
+   "first_line": "# Load in our dependencies",
+   "imports": [],
+   "registered": "2026-11-04 11:15:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "main",
+   "source_file": "examples/per_file/main.py",
+   "source_repo": "getsops/sops",
+   "license": "check repo",
+   "sha256": "d909ae8501aad0065d328eb6b8a3ec11d05334c984ab44ec3ae09b5f07df354c",
+   "lines": 29,
+   "first_line": "# Load in our dependencies",
+   "imports": [],
+   "registered": "2026-11-04 11:15:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "gemini_reviewer",
+   "source_file": ".github/scripts/gemini_reviewer.py",
+   "source_repo": "nyx-space/anise",
+   "license": "check repo",
+   "sha256": "ac86dce16400103345525793bf99e1fc9a786ac36a1cec3d9ce4466a45ef5508",
+   "lines": 206,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "os",
+    "requests",
+    "sys"
+   ],
+   "registered": "2026-11-04 11:15:46",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "anise-py/anise/__init__.py",
+   "source_repo": "nyx-space/anise",
+   "license": "check repo",
+   "sha256": "e77b1d6d638e63597aa9ffd34f90c094d95c6cbbdd0c5f862497738400f8100c",
+   "lines": 46,
+   "first_line": "from anise._anise import (",
+   "imports": [],
+   "registered": "2026-11-04 11:15:46",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/wiki/conf.py",
+   "source_repo": "nasa/nos3",
+   "license": "check repo",
+   "sha256": "be9bbfdb70905a860ac88fcca65bbc0ab6a5595f3dbcf5547d2442be34278c7c",
+   "lines": 44,
+   "first_line": "# Configuration file for the Sphinx documentation builder.",
+   "imports": [],
+   "registered": "2026-11-04 11:15:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "base",
+   "source_file": "ldm/data/base.py",
+   "source_repo": "vicgalle/stable-diffusion-aesthetic-gradients",
+   "license": "check repo",
+   "sha256": "4016b6242f78855179134781bd02cad9e843001623e3549f255103fd056de0b6",
+   "lines": 23,
+   "first_line": "from abc import abstractmethod",
+   "imports": [],
+   "registered": "2026-11-04 11:15:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "lsun",
+   "source_file": "ldm/data/lsun.py",
+   "source_repo": "vicgalle/stable-diffusion-aesthetic-gradients",
+   "license": "check repo",
+   "sha256": "654355d9c1d3a9420dd3b36f39a1ec4a1f0f61334109aa2162d9d8e8acd3d3b7",
+   "lines": 93,
+   "first_line": "import os",
+   "imports": [
+    "PIL",
+    "numpy",
+    "os"
+   ],
+   "registered": "2026-11-04 11:15:51",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "compare_reprobit_cost",
+   "source_file": ".github/scripts/compare-reprobit-cost.py",
+   "source_repo": "isledecomp/isle",
+   "license": "check repo",
+   "sha256": "ed5d81dbe5655b1710ba9e8ad239095c26c30a25c9ea5399a9d897e20468324d",
+   "lines": 165,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-04 11:15:53",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "summarize_match",
+   "source_file": ".github/scripts/summarize-match.py",
+   "source_repo": "isledecomp/isle",
+   "license": "check repo",
+   "sha256": "8b78170d25ce0a86e14a132063c109b8e2afd33ffcda65e9eb2db1feb69e10f4",
+   "lines": 32,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-04 11:15:53",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 10:04:05"
+ "built": "2026-11-04 11:15:53"
 }

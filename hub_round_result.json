@@ -2,110 +2,105 @@
  "kind": "vet-line",
  "added": [
   {
-   "skill": "capture_screenshots",
-   "repo": "KanenasInGreece/Shared_Memory_Monitor",
-   "sha256": "2f9176db21a91503"
+   "skill": "admin",
+   "repo": "sissbruecker/linkding",
+   "sha256": "e37fe3d2e6ca1e7e"
+  },
+  {
+   "skill": "auth",
+   "repo": "sissbruecker/linkding",
+   "sha256": "b31d8bad45c7af65"
+  },
+  {
+   "skill": "print_attributes",
+   "repo": "brandon-rhodes/python-sgp4",
+   "sha256": "a951fefa0fe3e0dd"
   },
   {
    "skill": "__init__",
-   "repo": "KanenasInGreece/Shared_Memory_Monitor",
-   "sha256": "516ed5081e0f2d66"
+   "repo": "brandon-rhodes/python-sgp4",
+   "sha256": "8f01018363382658"
+  },
+  {
+   "skill": "switch_top_rmii_serial_adapter_timing",
+   "repo": "the-aerospace-corporation/satcat5",
+   "sha256": "a56bc25b9047ae3a"
+  },
+  {
+   "skill": "echo_demo",
+   "repo": "the-aerospace-corporation/satcat5",
+   "sha256": "52067f16a28d6f0b"
+  },
+  {
+   "skill": "remove_php_end_tags",
+   "repo": "phpbb/phpbb",
+   "sha256": "0af62d97f0f3cea9"
+  },
+  {
+   "skill": "setup",
+   "repo": "taleshape-com/shaper",
+   "sha256": "4e4fc963567b08a0"
   },
   {
    "skill": "__init__",
-   "repo": "lutzroeder/netron",
-   "sha256": "561046fc986566b5"
+   "repo": "taleshape-com/shaper",
+   "sha256": "0f45b711f10284ec"
   },
   {
-   "skill": "onnx",
-   "repo": "lutzroeder/netron",
-   "sha256": "b05618e55389a941"
+   "skill": "make_icon",
+   "repo": "ZeldaWWHDRecomp/ZeldaWWHDRecomp",
+   "sha256": "371fe05e8d1f4d60"
   },
   {
-   "skill": "api_source",
-   "repo": "turboderp-org/exllamav3",
-   "sha256": "a41d95bccbbd5e86"
+   "skill": "generate_art",
+   "repo": "ZeldaWWHDRecomp/ZeldaWWHDRecomp",
+   "sha256": "bfe32f7ef8e1f5a2"
   },
   {
-   "skill": "bbeh_mini",
-   "repo": "turboderp-org/exllamav3",
-   "sha256": "90f9e52d4a774020"
+   "skill": "main",
+   "repo": "getsops/sops",
+   "sha256": "1805d0d48fb16895"
   },
   {
-   "skill": "plot",
-   "repo": "Salad109/SIMPLETON",
-   "sha256": "3a120091cd9b5157"
+   "skill": "main",
+   "repo": "getsops/sops",
+   "sha256": "d909ae8501aad006"
   },
   {
-   "skill": "plot",
-   "repo": "Salad109/SIMPLETON",
-   "sha256": "3a3d2bb245dab544"
+   "skill": "gemini_reviewer",
+   "repo": "nyx-space/anise",
+   "sha256": "ac86dce164001033"
   },
   {
-   "skill": "convert_barbet_to_gguf",
-   "repo": "mybigday/llama.rn",
-   "sha256": "a75f22cb374aab91"
-  },
-  {
-   "skill": "update_feature_log",
-   "repo": "ylsdamxssjxxdd/eva",
-   "sha256": "3f06ea3ac767df94"
-  },
-  {
-   "skill": "check_and_update",
-   "repo": "mudler/LocalAI",
-   "sha256": "909b2d02d075bad6"
-  },
-  {
-   "skill": "ttft_streaming_tool_parser",
-   "repo": "mudler/LocalAI",
-   "sha256": "5d303774b313041e"
-  },
-  {
-   "skill": "entities",
-   "repo": "nat/openplayground",
-   "sha256": "0a8aa4a5e2c69070"
-  },
-  {
-   "skill": "grab_notary_id",
-   "repo": "nomic-ai/gpt4all",
-   "sha256": "6b76c92e1422c7b5"
-  },
-  {
-   "skill": "app",
-   "repo": "nomic-ai/gpt4all",
-   "sha256": "7511e892406e8b16"
-  },
-  {
-   "skill": "seed",
-   "repo": "libredb/libredb-studio",
-   "sha256": "e5099bf2724e6083"
-  },
-  {
-   "skill": "bulk",
-   "repo": "libredb/libredb-studio",
-   "sha256": "b31f1793ea0f06ed"
+   "skill": "__init__",
+   "repo": "nyx-space/anise",
+   "sha256": "e77b1d6d638e6359"
   },
   {
    "skill": "conf",
-   "repo": "kibitzr/kibitzr",
-   "sha256": "348cfcff2f757676"
+   "repo": "nasa/nos3",
+   "sha256": "be9bbfdb70905a86"
   },
   {
-   "skill": "__init__",
-   "repo": "kibitzr/kibitzr",
-   "sha256": "a58a1d8c3f535f0c"
+   "skill": "base",
+   "repo": "vicgalle/stable-diffusion-aesthetic-gradients",
+   "sha256": "4016b6242f788551"
   },
   {
-   "skill": "conf",
-   "repo": "ageitgey/face_recognition",
-   "sha256": "f0f91348fa5252df"
+   "skill": "lsun",
+   "repo": "vicgalle/stable-diffusion-aesthetic-gradients",
+   "sha256": "654355d9c1d3a942"
   },
   {
-   "skill": "benchmark",
-   "repo": "ageitgey/face_recognition",
-   "sha256": "8189f68b09b3767e"
+   "skill": "compare_reprobit_cost",
+   "repo": "isledecomp/isle",
+   "sha256": "ed5d81dbe5655b17"
+  },
+  {
+   "skill": "summarize_match",
+   "repo": "isledecomp/isle",
+   "sha256": "8b78170d25ce0a86"
   }
  ],
- "ts": "2026-11-04 10:04:05"
+ "ts": "2026-11-04 11:15:53"
 }
