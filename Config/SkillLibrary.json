@@ -9549,7 +9549,315 @@
    ],
    "registered": "2026-11-04 04:58:50",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_keys",
+   "source_file": "tools/generate_keys.py",
+   "source_repo": "Kenix3/libultraship",
+   "license": "check repo",
+   "sha256": "cef535a95e18d69983d1b8726696742821f32febbc9b7936bd83031ece01a105",
+   "lines": 31,
+   "first_line": "from cryptography.hazmat.primitives.asymmetric import ed25519",
+   "imports": [],
+   "registered": "2026-11-04 05:59:17",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "sign",
+   "source_file": "tools/sign.py",
+   "source_repo": "Kenix3/libultraship",
+   "license": "check repo",
+   "sha256": "fef7829e0a6355810c2a4977788160bc623de691d5c5058584f377660a190cbb",
+   "lines": 98,
+   "first_line": "import argparse",
+   "imports": [
+    "argparse",
+    "hashlib",
+    "json",
+    "os",
+    "shutil",
+    "sys",
+    "tempfile",
+    "zipfile"
+   ],
+   "registered": "2026-11-04 05:59:18",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "set_value_test",
+   "source_file": "native/computer-use-linux/set_value_test.py",
+   "source_repo": "stablyai/orca",
+   "license": "check repo",
+   "sha256": "9b0bb72a867df8c1a69dc0a3592310f17621376185232fb3631c04ffe38e1e82",
+   "lines": 36,
+   "first_line": "import importlib.util",
+   "imports": [
+    "importlib",
+    "sys",
+    "types",
+    "unittest"
+   ],
+   "registered": "2026-11-04 05:59:22",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "validate_package",
+   "source_file": "scripts/validate-package.py",
+   "source_repo": "blader/humanizer",
+   "license": "check repo",
+   "sha256": "941bd99e52b2ba21449719bb7969607ac8117e3dc173d0c9dfe64fd274c65938",
+   "lines": 147,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "re"
+   ],
+   "registered": "2026-11-04 05:59:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "cleanup",
+   "source_file": "arxiv-translator/scripts/cleanup.py",
+   "source_repo": "Leey21/arxiv-translator",
+   "license": "check repo",
+   "sha256": "c33187cdf4400e5efba369ce969b8d3273b1264e7d83f26dc106df84eba84578",
+   "lines": 83,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "re",
+    "shutil",
+    "sys"
+   ],
+   "registered": "2026-11-04 05:59:25",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "download",
+   "source_file": "arxiv-translator/scripts/download.py",
+   "source_repo": "Leey21/arxiv-translator",
+   "license": "check repo",
+   "sha256": "ec5d6de172a1ae796010016248f776e54643edbf02f9a9764f9ac0fc287ae7e0",
+   "lines": 189,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "gzip",
+    "html",
+    "os",
+    "re",
+    "shutil",
+    "sys",
+    "tarfile",
+    "urllib",
+    "xml"
+   ],
+   "registered": "2026-11-04 05:59:25",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": ".hermes-plugin/__init__.py",
+   "source_repo": "obra/superpowers",
+   "license": "check repo",
+   "sha256": "767b7956f86b0343a8244943ac733c4f9f2a38cb571162cf67b26d2704a8afb1",
+   "lines": 128,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "re"
+   ],
+   "registered": "2026-11-04 05:59:26",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "analyze_token_usage",
+   "source_file": "tests/claude-code/analyze-token-usage.py",
+   "source_repo": "obra/superpowers",
+   "license": "check repo",
+   "sha256": "b3b124b975086e66540dca1328d7b6b75416450b0c93fc246f0d7d148fc2394c",
+   "lines": 169,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-04 05:59:26",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "analyze_lod_flyby",
+   "source_file": "tools/analyze-lod-flyby.py",
+   "source_repo": "hyqzz/Solar-Wanderer",
+   "license": "check repo",
+   "sha256": "9b43b863b30980b81d3f8536f749875aff5a59f558732627eff9dc7dedc08b48",
+   "lines": 100,
+   "first_line": "# LOD \u63a0\u98de\u5e27\u5e8f\u5217\u7684\u91cf\u5316\u5206\u6790\uff1a\u9010\u5e27\u4f30\u8ba1\u5730\u5f62\u7684**\u7ad6\u76f4\u4f4d\u79fb**\uff0c\u628a LOD \u91cd\u5efa\u9020\u6210\u7684",
+   "imports": [
+    "matplotlib",
+    "numpy",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 05:59:29",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "cmp_metrics",
+   "source_file": "tools/cmp-metrics.py",
+   "source_repo": "hyqzz/Solar-Wanderer",
+   "license": "check repo",
+   "sha256": "e8338a896b9a5b9c19e438fb9ccaea2cdb8211656ba6aafa35f05bdb555ec205",
+   "lines": 162,
+   "first_line": "# \u4e24\u4e2a\u76ee\u5f55\u4e0b\u7684\u540c\u673a\u4f4d\u622a\u56fe\uff1a\u9010\u5f20\u7b97\u6307\u6807 + \u751f\u6210\u5e76\u6392\u62fc\u56fe\u3002",
+   "imports": [
+    "glob",
+    "os",
+    "struct",
+    "sys",
+    "zlib"
+   ],
+   "registered": "2026-11-04 05:59:29",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "admin",
+   "source_file": "accounts/admin.py",
+   "source_repo": "typpo/astrokit",
+   "license": "check repo",
+   "sha256": "b2e328e31f08dc907100505521d13ee6a9ea67a240655d051120011ce49cfaf8",
+   "lines": 4,
+   "first_line": "from django.contrib import admin",
+   "imports": [],
+   "registered": "2026-11-04 05:59:30",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "apps",
+   "source_file": "accounts/apps.py",
+   "source_repo": "typpo/astrokit",
+   "license": "check repo",
+   "sha256": "e3050671c36f501ebec785cee8705cc6cda2d8c4836271103febfa79ae01b706",
+   "lines": 8,
+   "first_line": "from __future__ import unicode_literals",
+   "imports": [],
+   "registered": "2026-11-04 05:59:30",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/source/conf.py",
+   "source_repo": "ben-n93/pyspaceweather",
+   "license": "check repo",
+   "sha256": "ac53f77e2675525a73adf32fb7bc5e9afaf17f544df263a1c20dda07e3d7910d",
+   "lines": 34,
+   "first_line": "# Configuration file for the Sphinx documentation builder.",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 05:59:31",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "pyspaceweather/__init__.py",
+   "source_repo": "ben-n93/pyspaceweather",
+   "license": "check repo",
+   "sha256": "b06b296b99fd933aa9ed356c2b90fbb1cd46aa209292536c9bba37064f1ff0bd",
+   "lines": 18,
+   "first_line": "\"\"\"Top-level package for beachwatch.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-04 05:59:32",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "build_docs",
+   "source_file": "scripts/build_docs.py",
+   "source_repo": "pragyaangaur/SETU",
+   "license": "check repo",
+   "sha256": "76c6217e74494ccd0b5b1f405782dd78b74264a7dc0a3de6b12a1a12ad078a9f",
+   "lines": 36,
+   "first_line": "\"\"\"Bundle the exported results into one JavaScript file for the dashboard.",
+   "imports": [
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-04 05:59:32",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "calibrate_delay",
+   "source_file": "scripts/calibrate_delay.py",
+   "source_repo": "pragyaangaur/SETU",
+   "license": "check repo",
+   "sha256": "e5192a0b889083ad7f6a30873ef5c1012d4cb6088a8157947d9401fd29552278",
+   "lines": 59,
+   "first_line": "\"\"\"Measure the two geometry constants the warning time depends on.",
+   "imports": [
+    "glob",
+    "numpy",
+    "sys"
+   ],
+   "registered": "2026-11-04 05:59:32",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "multiearth/__init__.py",
+   "source_repo": "bair-climate-initiative/metaearth",
+   "license": "check repo",
+   "sha256": "46c2388ab0ca22c6d82fff0d4a26ddb88f669c5a403351203690408882610f14",
+   "lines": 4,
+   "first_line": "\"\"\"Download any remote sensing data from any provider using a single config.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-04 05:59:33",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "api",
+   "source_file": "multiearth/api.py",
+   "source_repo": "bair-climate-initiative/metaearth",
+   "license": "check repo",
+   "sha256": "9c744e45e6144cd7841090738c46c7620d5d03748fb1d0476492e44620e7b3d5",
+   "lines": 97,
+   "first_line": "\"\"\"API for downloading assets programmatically. Use cli.py to download assets fr",
+   "imports": [
+    "datetime",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 05:59:33",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "jupyter_server_config",
+   "source_file": ".binder/jupyter_server_config.py",
+   "source_repo": "mimitoz62/exostab",
+   "license": "check repo",
+   "sha256": "9339ce5250c75be24b793029c5e8bd15fa84800bb36a9721187ecfe44fdcba12",
+   "lines": 24,
+   "first_line": "\"\"\"Serve the exostab web app at <session URL>/exostab/. jupyter-server-proxy sta",
+   "imports": [],
+   "registered": "2026-11-04 05:59:34",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "catalog_changes",
+   "source_file": "scripts/catalog_changes.py",
+   "source_repo": "mimitoz62/exostab",
+   "license": "check repo",
+   "sha256": "cbef6127d31ab07ea8c819fddaf60324ac906d8dfbf70bfa39dcb8d1056374d5",
+   "lines": 268,
+   "first_line": "\"\"\"Write docs/catalog-changes.md and docs/catalog-changes.xml: what changed betw",
+   "imports": [
+    "csv",
+    "html",
+    "sys",
+    "xml"
+   ],
+   "registered": "2026-11-04 05:59:34",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 04:58:50"
+ "built": "2026-11-04 05:59:34"
 }
