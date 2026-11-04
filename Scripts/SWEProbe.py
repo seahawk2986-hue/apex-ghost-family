@@ -380,6 +380,34 @@ def status():
                       "fetched": pool.get("fetched")}, indent=1))
 
 
+def exec_champion():
+    """M4: execute the latest PROMOTED champion patch via git apply on
+    the runner (repo root) and mint an honest EXEC_VERDICT. Real
+    test-execution verdicts come with v1's runner; this is the honest
+    apply-verdict step that feeds the execution axis."""
+    import subprocess
+    champ = None
+    try:
+        with open(RECEIPTS, encoding="utf-8") as f:
+            for ln in f:
+                try:
+                    r = json.loads(ln)
+                except Exception:
+                    continue
+                if r.get("ev") == "PROMOTED":
+                    champ = r
+    except Exception:
+        pass
+    patch = (champ or {}).get("patch") or ""
+    path = "/tmp/champion.patch"
+    open(path, "w", encoding="utf-8").write(patch)
+    ap = subprocess.run(["git", "apply", "-v", path], cwd=ROOT,
+                         capture_output=True, text=True, timeout=60)
+    receipt({"ev": "EXEC_VERDICT", "applied": ap.returncode == 0,
+             "stdout": ap.stdout[-300:], "stderr": ap.stderr[-300:]})
+    return {"ev": "EXEC_VERDICT", "applied": ap.returncode == 0}
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "run"
     if cmd == "run":
@@ -392,5 +420,7 @@ if __name__ == "__main__":
     elif cmd == "islands":
         n = int(sys.argv[2]) if len(sys.argv) > 2 else 4
         islands(n=n)
+    elif cmd == "exec":
+        print(json.dumps(exec_champion()))
     else:
         status()
