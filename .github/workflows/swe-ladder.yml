@@ -25,6 +25,7 @@ jobs:
         run: |
           python Scripts/SWEProbe.py islands 6
           python Scripts/SWEProbe.py evolve 6 1
+          python Scripts/SWEProbe.py exec
           python Scripts/GeneralIntellectFitness.py
       - name: Upload receipts
         uses: actions/upload-artifact@v4
