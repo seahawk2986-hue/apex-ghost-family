@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-03 20:45:02",
- "count": 511,
+ "ts": "2026-11-03 21:00:02",
+ "count": 517,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -678,6 +678,13 @@
    "repo": "moonsharp-devs/moonsharp",
    "score": 57.0,
    "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "climate-analytics-lab/jax-rrtmgp",
+   "score": 56.7,
+   "tier": "VEIN",
    "stars": 0,
    "license": ""
   },
@@ -1900,6 +1907,34 @@
    "license": ""
   },
   {
+   "repo": "WhiskeySockets/Baileys",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "steipete/gogcli",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nvm-sh/nvm",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "nothub/mrpack-install",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "turboderp/exllamav2",
    "score": 51.0,
    "tier": "MINE",
@@ -2146,6 +2181,13 @@
   },
   {
    "repo": "kibitzr/kibitzr",
+   "score": 50.6,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ageitgey/face_recognition",
    "score": 50.6,
    "tier": "MINE",
    "stars": 0,
