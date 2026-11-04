@@ -1,12 +1,8 @@
 {
- "ts": "2026-11-03 01:12:47",
- "target": 103,
+ "ts": "2026-11-04 06:59:18",
+ "target": 100,
  "verified_total_ledger": 103,
- "attempted_this_run": 3,
- "orgs_this_run": {
-  "Meta AI": 1,
-  "Alibaba Qwen": 1,
-  "Apple": 1
- },
+ "attempted_this_run": 0,
+ "orgs_this_run": {},
  "law": "ok only when the org's own page carries the provenance token under OUR fetch; failures stay on file visibly"
 }
