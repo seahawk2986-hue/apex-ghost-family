@@ -1,0 +1,53 @@
+{
+ "ts": "2026-11-03 22:32:13",
+ "law": "one ledger, whole mind: mutations are selected against ALL axes jointly, never one bench alone",
+ "axes": [
+  {
+   "axis": "real-issue-coding",
+   "state": "measured",
+   "genome": {
+    "gen": 1,
+    "style": 0,
+    "score": 2.0
+   },
+   "trials_recent": 0,
+   "promotions": 1,
+   "establishment": false,
+   "warning": null
+  },
+  {
+   "axis": "swe-execution",
+   "state": "empty",
+   "exec_verdicts": 0,
+   "solved": 0,
+   "pass_rate": null
+  },
+  {
+   "axis": "reasoning-strategy",
+   "state": "empty",
+   "last_promotion": null,
+   "warning": "no recent promotion receipt"
+  },
+  {
+   "axis": "model-lane-selection",
+   "state": "provisional",
+   "measured_lanes": 0,
+   "total_lanes": 7,
+   "bench_day": "2026-11-04",
+   "warning": "chain still provisional"
+  },
+  {
+   "axis": "scheduled-organ-reliability",
+   "state": "measured",
+   "organs_ready": 23,
+   "suspect": 23
+  }
+ ],
+ "unmeasured_count": 3,
+ "unmeasured": [
+  "swe-execution",
+  "reasoning-strategy",
+  "model-lane-selection"
+ ],
+ "composite_grade": "trustworthy-provisional"
+}
