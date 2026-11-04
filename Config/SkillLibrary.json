@@ -10496,7 +10496,346 @@
    ],
    "registered": "2026-11-04 08:57:48",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "capture_screenshots",
+   "source_file": "scripts/capture_screenshots.py",
+   "source_repo": "KanenasInGreece/Shared_Memory_Monitor",
+   "license": "check repo",
+   "sha256": "2f9176db21a91503c24de56f465179ddf5e35bb5cea374ff8138122144157ed7",
+   "lines": 166,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "sys",
+    "urllib"
+   ],
+   "registered": "2026-11-04 10:03:45",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "src/sm_telemetry_monitor/__init__.py",
+   "source_repo": "KanenasInGreece/Shared_Memory_Monitor",
+   "license": "check repo",
+   "sha256": "516ed5081e0f2d6611f429bcbbb0cd21c4648e031f3feb896a62a359f8f20004",
+   "lines": 3,
+   "first_line": "\"\"\"Read-only view over gateway telemetry and framework logs \u2014 no separate data i",
+   "imports": [],
+   "registered": "2026-11-04 10:03:45",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "source/__init__.py",
+   "source_repo": "lutzroeder/netron",
+   "license": "check repo",
+   "sha256": "561046fc986566b55d02ca2911b482024d1995df6c8662fc2a4209bf42ff3827",
+   "lines": 48,
+   "first_line": "\"\"\" Python Server entry point \"\"\"",
+   "imports": [
+    "argparse",
+    "logging",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 10:03:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "onnx",
+   "source_file": "source/onnx.py",
+   "source_repo": "lutzroeder/netron",
+   "license": "check repo",
+   "sha256": "b05618e55389a941b08f738b1e7cfd03e4546fc6608db560e6132a1a777e5276",
+   "lines": 232,
+   "first_line": "\"\"\" ONNX backend \"\"\"",
+   "imports": [
+    "collections",
+    "enum",
+    "json",
+    "os"
+   ],
+   "registered": "2026-11-04 10:03:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "api_source",
+   "source_file": "eval/api_source.py",
+   "source_repo": "turboderp-org/exllamav3",
+   "license": "check repo",
+   "sha256": "a41d95bccbbd5e86317b5a01517f4902282c361ff0289d1fa99df3e2f5b36d98",
+   "lines": 150,
+   "first_line": "\"\"\"",
+   "imports": [
+    "json",
+    "os",
+    "requests",
+    "threading",
+    "time"
+   ],
+   "registered": "2026-11-04 10:03:51",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bbeh_mini",
+   "source_file": "eval/bbeh_mini.py",
+   "source_repo": "turboderp-org/exllamav3",
+   "license": "check repo",
+   "sha256": "90f9e52d4a774020765deabebeb0479ea000bdaf5c70a51cc306faf2c99a5ff7",
+   "lines": 292,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "argparse",
+    "json",
+    "math",
+    "os",
+    "random",
+    "sys",
+    "time",
+    "torch"
+   ],
+   "registered": "2026-11-04 10:03:51",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "plot",
+   "source_file": "docs/1-step-size/plot.py",
+   "source_repo": "Salad109/SIMPLETON",
+   "license": "check repo",
+   "sha256": "3a120091cd9b515748a2cdfcfc5553ee643078c0d94c2cde3687689f3ff8547b",
+   "lines": 76,
+   "first_line": "import pandas as pd",
+   "imports": [
+    "matplotlib",
+    "numpy",
+    "pandas"
+   ],
+   "registered": "2026-11-04 10:03:53",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "plot",
+   "source_file": "docs/2-knot-gap/plot.py",
+   "source_repo": "Salad109/SIMPLETON",
+   "license": "check repo",
+   "sha256": "3a3d2bb245dab544168da59b7a3b704718469da5f4e008d5b2d07b2bcde4a2ed",
+   "lines": 93,
+   "first_line": "import pandas as pd",
+   "imports": [
+    "matplotlib",
+    "numpy",
+    "pandas"
+   ],
+   "registered": "2026-11-04 10:03:53",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "convert_barbet_to_gguf",
+   "source_file": "scripts/barbet/convert_barbet_to_gguf.py",
+   "source_repo": "mybigday/llama.rn",
+   "license": "check repo",
+   "sha256": "a75f22cb374aab9169c82cb84c9afdc699e2eedb4473342981802ffc86b95ae3",
+   "lines": 250,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "gguf",
+    "json",
+    "numpy",
+    "torch"
+   ],
+   "registered": "2026-11-04 10:03:55",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "update_feature_log",
+   "source_file": "scripts/update_feature_log.py",
+   "source_repo": "ylsdamxssjxxdd/eva",
+   "license": "check repo",
+   "sha256": "3f06ea3ac767df94ba67e0e27d1589c7319dc99f84048df58c5289ca56ea5d73",
+   "lines": 132,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "codecs",
+    "sys"
+   ],
+   "registered": "2026-11-04 10:03:57",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_and_update",
+   "source_file": ".github/check_and_update.py",
+   "source_repo": "mudler/LocalAI",
+   "license": "check repo",
+   "sha256": "909b2d02d075bad6058d289b939b76f6eaec88c43266bdb4ef5d9a476caee018",
+   "lines": 89,
+   "first_line": "import hashlib",
+   "imports": [
+    "hashlib",
+    "os",
+    "requests",
+    "sys"
+   ],
+   "registered": "2026-11-04 10:03:58",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "ttft_streaming_tool_parser",
+   "source_file": "examples/vllm-bench/ttft_streaming_tool_parser.py",
+   "source_repo": "mudler/LocalAI",
+   "license": "check repo",
+   "sha256": "5d303774b313041e9ffcc26255d3704429c957b333420965d1d278cf2cb66217",
+   "lines": 176,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "sys",
+    "time",
+    "urllib"
+   ],
+   "registered": "2026-11-04 10:03:58",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "entities",
+   "source_file": "server/lib/entities.py",
+   "source_repo": "nat/openplayground",
+   "license": "check repo",
+   "sha256": "0a8aa4a5e2c69070b80cc2b6dc96606c5bfff78ca212286d502e2082a09d75c5",
+   "lines": 127,
+   "first_line": "import json",
+   "imports": [
+    "json"
+   ],
+   "registered": "2026-11-04 10:04:00",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "grab_notary_id",
+   "source_file": ".circleci/grab_notary_id.py",
+   "source_repo": "nomic-ai/gpt4all",
+   "license": "check repo",
+   "sha256": "6b76c92e1422c7b52702e065afdc802088289963cd214aa33e8907244745ae85",
+   "lines": 17,
+   "first_line": "import re",
+   "imports": [
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 10:04:01",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "app",
+   "source_file": "gpt4all-bindings/cli/app.py",
+   "source_repo": "nomic-ai/gpt4all",
+   "license": "check repo",
+   "sha256": "7511e892406e8b168f5e45d7be137323ea6ec2e5898b3fcb883a4e08e212aca1",
+   "lines": 185,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "importlib",
+    "io",
+    "sys",
+    "typer"
+   ],
+   "registered": "2026-11-04 10:04:01",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "seed",
+   "source_file": "docker/firestore/seed.py",
+   "source_repo": "libredb/libredb-studio",
+   "license": "check repo",
+   "sha256": "e5099bf2724e60830601bc2ff9230e296f3ae322534a1de2600872e3032a8ed4",
+   "lines": 45,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "sys",
+    "time",
+    "urllib"
+   ],
+   "registered": "2026-11-04 10:04:04",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bulk",
+   "source_file": "docker/influxdb/bulk.py",
+   "source_repo": "libredb/libredb-studio",
+   "license": "check repo",
+   "sha256": "b31f1793ea0f06edb17b1eb8cc23552f9491bf11d603b0df60daa4bf3b69bbe8",
+   "lines": 62,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "sys",
+    "time"
+   ],
+   "registered": "2026-11-04 10:04:04",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "kibitzr/kibitzr",
+   "license": "check repo",
+   "sha256": "348cfcff2f75767658522b758686d0a71c96c1bf4eae3065a0c70e1b59816052",
+   "lines": 274,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 10:04:04",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "kibitzr/__init__.py",
+   "source_repo": "kibitzr/kibitzr",
+   "license": "check repo",
+   "sha256": "a58a1d8c3f535f0c0a514fdc4535c035029b745205825fc4fb217d642e0b2b14",
+   "lines": 6,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [],
+   "registered": "2026-11-04 10:04:05",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "ageitgey/face_recognition",
+   "license": "check repo",
+   "sha256": "f0f91348fa5252df507f32a63334846172ed47a8f9f88857071aa0af9d40440e",
+   "lines": 285,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "face_recognition",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 10:04:05",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "benchmark",
+   "source_file": "examples/benchmark.py",
+   "source_repo": "ageitgey/face_recognition",
+   "license": "check repo",
+   "sha256": "8189f68b09b3767efed2784c63a7e22fc4e87103d3d385bb016665aaea5a1f47",
+   "lines": 78,
+   "first_line": "import timeit",
+   "imports": [
+    "timeit"
+   ],
+   "registered": "2026-11-04 10:04:05",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 08:57:48"
+ "built": "2026-11-04 10:04:05"
 }

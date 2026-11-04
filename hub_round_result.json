@@ -1,113 +1,111 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-04 09:52:52",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "capture_screenshots",
+   "repo": "KanenasInGreece/Shared_Memory_Monitor",
+   "sha256": "2f9176db21a91503"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c3c719a6d1e841ba"
+   "skill": "__init__",
+   "repo": "KanenasInGreece/Shared_Memory_Monitor",
+   "sha256": "516ed5081e0f2d66"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "__init__",
+   "repo": "lutzroeder/netron",
+   "sha256": "561046fc986566b5"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "onnx",
+   "repo": "lutzroeder/netron",
+   "sha256": "b05618e55389a941"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "api_source",
+   "repo": "turboderp-org/exllamav3",
+   "sha256": "a41d95bccbbd5e86"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "bbeh_mini",
+   "repo": "turboderp-org/exllamav3",
+   "sha256": "90f9e52d4a774020"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "plot",
+   "repo": "Salad109/SIMPLETON",
+   "sha256": "3a120091cd9b5157"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "plot",
+   "repo": "Salad109/SIMPLETON",
+   "sha256": "3a3d2bb245dab544"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "convert_barbet_to_gguf",
+   "repo": "mybigday/llama.rn",
+   "sha256": "a75f22cb374aab91"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "update_feature_log",
+   "repo": "ylsdamxssjxxdd/eva",
+   "sha256": "3f06ea3ac767df94"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "check_and_update",
+   "repo": "mudler/LocalAI",
+   "sha256": "909b2d02d075bad6"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "ttft_streaming_tool_parser",
+   "repo": "mudler/LocalAI",
+   "sha256": "5d303774b313041e"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "entities",
+   "repo": "nat/openplayground",
+   "sha256": "0a8aa4a5e2c69070"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "grab_notary_id",
+   "repo": "nomic-ai/gpt4all",
+   "sha256": "6b76c92e1422c7b5"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "app",
+   "repo": "nomic-ai/gpt4all",
+   "sha256": "7511e892406e8b16"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "seed",
+   "repo": "libredb/libredb-studio",
+   "sha256": "e5099bf2724e6083"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "bulk",
+   "repo": "libredb/libredb-studio",
+   "sha256": "b31f1793ea0f06ed"
+  },
+  {
+   "skill": "conf",
+   "repo": "kibitzr/kibitzr",
+   "sha256": "348cfcff2f757676"
+  },
+  {
+   "skill": "__init__",
+   "repo": "kibitzr/kibitzr",
+   "sha256": "a58a1d8c3f535f0c"
+  },
+  {
+   "skill": "conf",
+   "repo": "ageitgey/face_recognition",
+   "sha256": "f0f91348fa5252df"
+  },
+  {
+   "skill": "benchmark",
+   "repo": "ageitgey/face_recognition",
+   "sha256": "8189f68b09b3767e"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-04 10:04:05"
 }
