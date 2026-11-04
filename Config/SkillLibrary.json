@@ -12361,7 +12361,325 @@
    ],
    "registered": "2026-11-04 17:00:12",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "constants",
+   "source_file": "bunny/constants.py",
+   "source_repo": "BAAI-DCAI/Bunny",
+   "license": "check repo",
+   "sha256": "c56a6ce35d32a144ddadee6ececa5305717e7ae75b448b257e6c2025a92aded9",
+   "lines": 8,
+   "first_line": "# Model Constants",
+   "imports": [],
+   "registered": "2026-11-04 17:56:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conversation",
+   "source_file": "bunny/conversation.py",
+   "source_repo": "BAAI-DCAI/Bunny",
+   "license": "check repo",
+   "sha256": "67309455ad89eaa3e8e229bd9032d911b236f1ced3c5c04d53a9d0e787f89f49",
+   "lines": 240,
+   "first_line": "import dataclasses",
+   "imports": [
+    "base64",
+    "dataclasses"
+   ],
+   "registered": "2026-11-04 17:56:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "find_includes",
+   "source_file": ".github/scripts/find_includes.py",
+   "source_repo": "undreamai/LlamaLib",
+   "license": "check repo",
+   "sha256": "eaaca40ad007391bc5893cae383daa713efae9cef66bc933e5e12dafbe512cfa",
+   "lines": 51,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 17:56:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "create_build_script",
+   "source_file": ".github/workflows_template/create_build_script.py",
+   "source_repo": "undreamai/LlamaLib",
+   "license": "check repo",
+   "sha256": "726f41f1fa92b34b39645f9935b67c32a3d06dae2a7c228d43e37280ef9f9fdc",
+   "lines": 71,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "re",
+    "yaml"
+   ],
+   "registered": "2026-11-04 17:56:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "eval",
+   "source_file": "scripts/ceval/eval.py",
+   "source_repo": "ymcui/Chinese-LLaMA-Alpaca",
+   "license": "check repo",
+   "sha256": "74d39e1290fe8a2825162ea0369108fdbff60e033d9efd305303e3f900830dd3",
+   "lines": 116,
+   "first_line": "# This code is modified from C-Eval Project: https://github.com/SJTU-LIT/ceval",
+   "imports": [
+    "argparse",
+    "json",
+    "os",
+    "pandas",
+    "time",
+    "torch"
+   ],
+   "registered": "2026-11-04 17:56:53",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "evaluator",
+   "source_file": "scripts/ceval/evaluator.py",
+   "source_repo": "ymcui/Chinese-LLaMA-Alpaca",
+   "license": "check repo",
+   "sha256": "2366ddbc367447979d1811ab106abe173cd69692a570bdc008d3ca39cd597c6d",
+   "lines": 48,
+   "first_line": "# This code is modified from C-Eval Project: https://github.com/SJTU-LIT/ceval",
+   "imports": [
+    "string"
+   ],
+   "registered": "2026-11-04 17:56:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "command_line",
+   "source_file": "paddler_kev_converter_python/paddler_kev_converter/command_line.py",
+   "source_repo": "intentee/paddler",
+   "license": "check repo",
+   "sha256": "821dc9ccbce284035a0154d97952cdd530954f2da0fc6494578d9a7c3d474430",
+   "lines": 95,
+   "first_line": "from argparse import ArgumentParser, Namespace",
+   "imports": [],
+   "registered": "2026-11-04 17:56:55",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "convertible_kev_checkpoint",
+   "source_file": "paddler_kev_converter_python/paddler_kev_converter/convertible_kev_checkpoint.py",
+   "source_repo": "intentee/paddler",
+   "license": "check repo",
+   "sha256": "27926496d085b48d4fe69879831c1783d1995b01efae9bd0d4a3448848f94389",
+   "lines": 90,
+   "first_line": "from dataclasses import dataclass",
+   "imports": [
+    "torch",
+    "transformers"
+   ],
+   "registered": "2026-11-04 17:56:55",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "update_tooltips",
+   "source_file": ".github/update_tooltips.py",
+   "source_repo": "undreamai/LLMUnity",
+   "license": "check repo",
+   "sha256": "c8bc1e7980668eaba64c18d506167b6fe073c26f6a470b2b7545caf9ab302b06",
+   "lines": 105,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 17:56:56",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "main",
+   "source_file": "llmaz/main.py",
+   "source_repo": "InftyAI/llmaz",
+   "license": "check repo",
+   "sha256": "2941affdfb6e19383c4ddc73d65436f29a4d6f039b9f5a9d66e08ea495743d35",
+   "lines": 67,
+   "first_line": "\"\"\"",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-04 17:56:57",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "constant",
+   "source_file": "llmaz/model_loader/constant.py",
+   "source_repo": "InftyAI/llmaz",
+   "license": "check repo",
+   "sha256": "dba2f2bb758064beb6ee41e85f0465e2c4b4503884b918aca50c66c3def2bbb3",
+   "lines": 17,
+   "first_line": "MODEL_LOCAL_DIR = \"/workspace/models/\"",
+   "imports": [],
+   "registered": "2026-11-04 17:56:57",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "download_hf",
+   "source_file": "docker/ray-base/download_hf.py",
+   "source_repo": "kalavai-net/kalavai-client",
+   "license": "check repo",
+   "sha256": "5f7e716830eddf546fdd3f63a389c9a4934fabfd0afbbf8cebbcc97e47831693",
+   "lines": 48,
+   "first_line": "import argparse",
+   "imports": [
+    "argparse"
+   ],
+   "registered": "2026-11-04 17:57:00",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "billing_heartbeat",
+   "source_file": "docker/registrar/billing_heartbeat.py",
+   "source_repo": "kalavai-net/kalavai-client",
+   "license": "check repo",
+   "sha256": "c0aa5ae31aaba9c01569c0fe6abfe9534f4567ff441b9d9bd72ae817ff3e2c23",
+   "lines": 232,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "aiohttp",
+    "asyncio",
+    "json",
+    "logging",
+    "os",
+    "sys",
+    "time"
+   ],
+   "registered": "2026-11-04 17:57:00",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "reclassify",
+   "source_file": "hack/spine-probes/reclassify.py",
+   "source_repo": "defilantech/llmkube",
+   "license": "check repo",
+   "sha256": "0d1e13b9d3cee825654748e1aa1bff01e4cc9dcf1e663f3896559a57b3d830b9",
+   "lines": 127,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 17:57:01",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "run_probes",
+   "source_file": "hack/spine-probes/run_probes.py",
+   "source_repo": "defilantech/llmkube",
+   "license": "check repo",
+   "sha256": "81f7adc90f7ddf314acb6107dc5e18b400ce5e963be9e398b4db578e1975313b",
+   "lines": 193,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "re",
+    "time",
+    "urllib"
+   ],
+   "registered": "2026-11-04 17:57:02",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "volcengine/verl",
+   "license": "check repo",
+   "sha256": "2afb77335e1dda87a4b2d1ed4f1f77e72e72e2c97c2da1eeedc35c617443fd21",
+   "lines": 114,
+   "first_line": "# Copyright 2024 Bytedance Ltd. and/or its affiliates",
+   "imports": [],
+   "registered": "2026-11-04 17:57:03",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "aime2024_multiturn_w_tool",
+   "source_file": "examples/data_preprocess/aime2024_multiturn_w_tool.py",
+   "source_repo": "volcengine/verl",
+   "license": "check repo",
+   "sha256": "700505becc21f3057da72a115b9983b180efed40f157b160feaf2bd8af82578c",
+   "lines": 80,
+   "first_line": "# Copyright 2024 Bytedance Ltd. and/or its affiliates",
+   "imports": [
+    "argparse",
+    "datasets",
+    "os"
+   ],
+   "registered": "2026-11-04 17:57:03",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "math_normalize",
+   "source_file": "data_preprocessing/math_util/math_normalize.py",
+   "source_repo": "PRIME-RL/PRIME",
+   "license": "check repo",
+   "sha256": "f5f2d67ce4e6a44a1cd60562ac142c567d7a4bf6e696c669c7b5d41cb160065e",
+   "lines": 163,
+   "first_line": "\"\"\"",
+   "imports": [
+    "re"
+   ],
+   "registered": "2026-11-04 17:57:04",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "sft_prompt",
+   "source_file": "data_preprocessing/sft_prompt.py",
+   "source_repo": "PRIME-RL/PRIME",
+   "license": "check repo",
+   "sha256": "fb49285eb4349680215bb3887efc1f32ce63a3fb2a9a42ab2b151912476940b0",
+   "lines": 35,
+   "first_line": "SYS = \"\"\"When tackling complex reasoning tasks, you have access to the following",
+   "imports": [],
+   "registered": "2026-11-04 17:57:04",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "ace_step_python_warm_bench",
+   "source_file": "tests/ace_step/ace_step_python_warm_bench.py",
+   "source_repo": "0xShug0/audio.cpp",
+   "license": "check repo",
+   "sha256": "80ed21e709685670f36a203dd4a3a41e1c9459044cd182ecfa49a4c3f2c238a0",
+   "lines": 396,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "numpy",
+    "os",
+    "soundfile",
+    "sys",
+    "time",
+    "torch"
+   ],
+   "registered": "2026-11-04 17:57:06",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "convert_silence_latent",
+   "source_file": "tests/ace_step/convert_silence_latent.py",
+   "source_repo": "0xShug0/audio.cpp",
+   "license": "check repo",
+   "sha256": "6655a1f4fa52c9e052fbd90a02021d3a566803c3628d7cc7082bfb4d7c605efc",
+   "lines": 61,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "torch"
+   ],
+   "registered": "2026-11-04 17:57:06",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 17:00:12"
+ "built": "2026-11-04 17:57:06"
 }
