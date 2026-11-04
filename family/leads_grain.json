@@ -1,10 +1,17 @@
 {
- "ts": "2026-11-03 23:45:01",
- "count": 489,
+ "ts": "2026-11-04 00:00:01",
+ "count": 511,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
    "score": 150.0,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "maptiler/tileserver-gl",
+   "score": 145.0,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -535,6 +542,13 @@
    "license": ""
   },
   {
+   "repo": "feuerwehr-oberwil/kp-front",
+   "score": 83.1,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "miroslavpejic85/mirotalk",
    "score": 83.0,
    "tier": "VEIN",
@@ -696,6 +710,27 @@
    "license": ""
   },
   {
+   "repo": "Dav1dde/glad",
+   "score": 53.2,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "snesrev/zelda3",
+   "score": 52.8,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "mackron/miniaudio",
+   "score": 52.4,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "nothings/stb",
    "score": 51.9,
    "tier": "MINE",
@@ -712,6 +747,13 @@
   {
    "repo": "bytebase/bytebase",
    "score": 51.3,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "iryoku/smaa",
+   "score": 51.2,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -1746,6 +1788,62 @@
    "license": ""
   },
   {
+   "repo": "ghostty-org/ghostling",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Uzaaft/awesome-libghostty",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "N0zoM1z0/th04",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "fgsfdsfgs/perfect_dark",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Niko1221/Strata",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "p4kl0nc4t/kyros",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "fegone/claude-code-delegate-local",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "ocornut/imgui",
+   "score": 51.1,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "turboderp/exllamav2",
    "score": 51.0,
    "tier": "MINE",
@@ -1963,6 +2061,27 @@
    "license": ""
   },
   {
+   "repo": "earendil-works/pi",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "wiomoc/whatsappweb-rs",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator",
+   "score": 51.0,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "hybridgroup/yzma",
    "score": 50.9,
    "tier": "MINE",
@@ -2061,6 +2180,13 @@
    "license": ""
   },
   {
+   "repo": "microsoft/vssetup.powershell",
+   "score": 50.4,
+   "tier": "MINE",
+   "stars": 0,
+   "license": ""
+  },
+  {
    "repo": "phronmophobic/llama.clj",
    "score": 50.2,
    "tier": "MINE",
@@ -2077,6 +2203,20 @@
   {
    "repo": "awesome-fluxer/awesome-fluxer",
    "score": 43.9,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "zeldamods/evfl",
+   "score": 43.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "zeldamods/oead",
+   "score": 43.1,
    "tier": "GOLD",
    "stars": 0,
    "license": ""
@@ -3133,6 +3273,20 @@
   },
   {
    "repo": "PRIME-RL/PRIME",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "onthegomap/planetiler",
+   "score": 30.1,
+   "tier": "GOLD",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "natpate/ninfer-windows",
    "score": 30.1,
    "tier": "GOLD",
    "stars": 0,
