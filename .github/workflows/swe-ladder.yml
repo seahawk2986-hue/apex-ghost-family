@@ -1,0 +1,39 @@
+name: swe-ladder
+# THE CAPABILITY LADDER, OFF-BOX: nightly evolution on GitHub's free
+# public-repo compute (fresh runner IP = fresh $0-lane quota the home
+# machine can never exhaust into a wall). Receipts return as artifacts;
+# the genome state lives in Config (the repo), so the lineage is
+# durable across runs, hosts and IPs.
+on:
+  schedule:
+    - cron: "0 6 * * *"      # 06:00Z after the nightly resets
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  evolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run the island tournament + evolution
+        env:
+          GITHUB_TOKEN: ${{ github.token }}   # the gh lane: fresh quota per runner
+        run: |
+          python Scripts/SWEProbe.py islands 6
+          python Scripts/SWEProbe.py evolve 6 1
+          python Scripts/GeneralIntellectFitness.py
+      - name: Upload receipts
+        uses: actions/upload-artifact@v4
+        with:
+          name: swe-ladder-receipts
+          path: |
+            Scripts/swe_probe.jsonl
+            Scripts/swarm_state.json
+            Config/general_fitness.json
+          if-no-files-found: warn
+      - name: The verdict line
+        run: echo "ladder run complete - receipts in artifacts"

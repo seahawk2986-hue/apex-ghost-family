@@ -186,6 +186,115 @@ def run(n=5, budget=60, genome=None):
              "style": g.get("style", 0)})
 
 
+UPWARD = os.path.join(ROOT, "Config", "upward_state.json")
+
+
+def upward_commit(axis, score, snapshot):
+    """THE UPWARD GOVERNOR (for evolution, not just lane chains): an
+    adopted genome may never measure below the incumbent on its axis.
+    Elite-preservation (mu+lamba ES): candidates replace the elite only
+    when >= its score; a weaker candidate earns a VETO receipt, and the
+    lineage stays. The high-water mark is auditable in one state file."""
+    st = {}
+    try:
+        st = json.load(open(UPWARD, encoding="utf-8"))
+    except Exception:
+        st = {}
+    axes = st.setdefault("axes", {})
+    cur = axes.get(axis)
+    if cur is None or cur.get("hwm") is None:
+        axes[axis] = {"hwm": score, "snapshot": snapshot,
+                      "ts": time.strftime("%Y-%m-%d %H:%M:%S")}
+        st["written"] = time.strftime("%Y-%m-%d %H:%M:%S")
+        tmp = UPWARD + ".tmp"
+        os.makedirs(os.path.dirname(UPWARD), exist_ok=True)
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(st, f, indent=1)
+        os.replace(tmp, UPWARD)
+        receipt({"ev": "HWM_SET", "axis": axis, "hwm": score})
+        return True
+    if score is None or score < cur["hwm"]:
+        receipt({"ev": "VETO_DOWNWARD", "axis": axis,
+                 "score": score, "hwm": cur["hwm"]})
+        return False
+    if score > cur["hwm"]:
+        axes[axis] = {"hwm": score, "snapshot": snapshot,
+                      "ts": time.strftime("%Y-%m-%d %H:%M:%S")}
+        st["written"] = time.strftime("%Y-%m-%d %H:%M:%S")
+        tmp = UPWARD + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(st, f, indent=1)
+        os.replace(tmp, UPWARD)
+        receipt({"ev": "HWM_RAISED", "axis": axis, "hwm": score})
+    return True
+
+
+def islands(n=4, maxt=None):
+    """THE LIGHTNING ROUND: all prompt strategies mutate simultaneously
+    on the SAME slice (a fair mutual tournament, wall-time ~ one ask),
+    and the adopted genome only ever moves upward (elite-preservation).
+    Honest confound noted in receipts: the rotator may serve different
+    lanes to different asks; each style's lanes are disclosed."""
+    g = load_genome()
+    rows = fetch_pool().get("instances", [])
+    if len(rows) < n:
+        receipt({"ev": "ISLANDS_BALKED", "why": "pool too thin"})
+        return
+    step = max(1, len(rows) // max(1, n))
+    start = int(time.strftime("%Y%m%d")[2:]) % len(rows)
+    slice_ = [rows[(start + i * step) % len(rows)] for i in range(n)]
+    import io
+    from concurrent.futures import ThreadPoolExecutor
+
+    def one_style(style_idx):
+        by = []
+        tot = 0
+        for inst in slice_:
+            buf = io.StringIO()
+            real = sys.stdout
+            try:
+                sys.stdout = buf
+                text = ask_lane(_prompt(style_idx, inst), [inst],
+                                maxt or 3000)
+            finally:
+                sys.stdout = real
+            for ln in buf.getvalue().splitlines():
+                if "served by " in ln:
+                    by.append(ln.split("served by ", 1)[1].split(" (")[0])
+            tot += bench_one(inst, text)["score"]
+        return {"style": style_idx, "score": tot, "items": n,
+                "per_item": round(tot / n, 3),
+                "lanes": sorted(set(by))}
+
+    with ThreadPoolExecutor(max_workers=len(STYLES)) as ex:
+        results = list(ex.map(one_style, range(len(STYLES))))
+    for r in results:
+        receipt({"ev": "ISLAND_RESULT", **r})
+        print("island style=%d score=%d/%d lanes=%s" %
+              (r["style"], r["score"], r["items"] * 3, r["lanes"]))
+    champ = max(results, key=lambda r: r["score"])
+    cand = dict(g)
+    cand["gen"] = g["gen"] + 1
+    cand["style"] = champ["style"]
+    cand["maxt"] = 3000
+    ok = upward_commit("swe", champ["per_item"],
+                       {"gen": cand["gen"], "style": champ["style"],
+                        "score": champ["per_item"]})
+    if ok:
+        g = cand
+        g["score"] = champ["per_item"]
+        save_genome(g)
+        receipt({"ev": "PROMOTED", "style": champ["style"],
+                 "per_item": champ["per_item"],
+                 "elite": (g["gen"], g["style"])})
+        print("ADOPTED style %d (%.2f/item)" % (champ["style"],
+                                                champ["per_item"]))
+    else:
+        receipt({"ev": "ELITE_RETAINED", "gen": g["gen"],
+                 "style": g["style"]})
+        print("ELITE RETAINED style %d" % g["style"])
+
+
 def evolve(n=6, gens=2):
     """THE MUTATION LOOP, honesty-gated: mutate the prompt strategy,
     re-measure the same-size slice, promote ONLY on margin (the variance
@@ -261,5 +370,8 @@ if __name__ == "__main__":
         n = int(sys.argv[2]) if len(sys.argv) > 2 else 6
         gens = int(sys.argv[3]) if len(sys.argv) > 3 else 2
         evolve(n=n, gens=gens)
+    elif cmd == "islands":
+        n = int(sys.argv[2]) if len(sys.argv) > 2 else 4
+        islands(n=n)
     else:
         status()

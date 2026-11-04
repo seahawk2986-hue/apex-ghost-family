@@ -24,6 +24,7 @@ $0 always. stdlib. Fail-closed (an empty pool returns honestly)."""
 import json
 import os
 import sys
+import threading
 import time
 import urllib.request
 
@@ -71,19 +72,24 @@ def _http_json(url, method="GET", headers=None, body=None, timeout=45,
         return {"_error": {"code": code, "text": txt}}
 
 
+_STATE_LOCK = threading.RLock()      # parallel-island asks share this state
+
+
 def _load_state():
     try:
-        return json.load(open(STATE, encoding="utf-8-sig"))
+        with _STATE_LOCK:
+            return json.load(open(STATE, encoding="utf-8-sig"))
     except Exception:
         return {"day": "", "used": {}, "excluded": {}}
 
 
 def _save_state(st):
     try:
-        tmp = STATE + ".tmp"
-        with open(tmp, "w", encoding="utf-8") as f:
-            json.dump(st, f)
-        os.replace(tmp, STATE)
+        with _STATE_LOCK:
+            tmp = STATE + ".tmp"
+            with open(tmp, "w", encoding="utf-8") as f:
+                json.dump(st, f)
+            os.replace(tmp, STATE)
     except Exception:
         pass
 
