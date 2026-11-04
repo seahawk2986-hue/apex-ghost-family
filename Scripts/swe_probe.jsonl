@@ -1,0 +1,11 @@
+{"ev": "POOL_FETCHED", "count": 300, "ts": "2026-11-03 21:54:52"}
+{"ev": "BENCH_ITEM", "instance_id": "astropy__astropy-12907", "score": 2, "of": 3, "touched": ["astropy/modeling/separable.py"], "target": "test_separable.py", "wall_s": 54.5, "chars": 2942, "ts": "2026-11-03 21:55:46"}
+{"ev": "BENCH_ITEM", "instance_id": "astropy__astropy-14182", "score": 2, "of": 3, "touched": ["astropy/io/ascii/rst.py"], "target": "test_rst.py", "wall_s": 46.4, "chars": 325, "ts": "2026-11-03 21:56:33"}
+{"ev": "RUN_DONE", "slice": 2, "ts": "2026-11-03 21:56:33"}
+{"ev": "ISLAND_RESULT", "style": 0, "score": 10, "items": 5, "per_item": 2.0, "lanes": ["nim/google/diffusiongemma-26b-a4b-it"], "ts": "2026-11-03 22:08:22"}
+{"ev": "ISLAND_RESULT", "style": 1, "score": 10, "items": 5, "per_item": 2.0, "lanes": ["nim/google/diffusiongemma-26b-a4b-it"], "ts": "2026-11-03 22:08:22"}
+{"ev": "ISLAND_RESULT", "style": 2, "score": 10, "items": 5, "per_item": 2.0, "lanes": ["nim/google/diffusiongemma-26b-a4b-it"], "ts": "2026-11-03 22:08:22"}
+{"ev": "ISLAND_RESULT", "style": 3, "score": 10, "items": 5, "per_item": 2.0, "lanes": ["nim/google/diffusiongemma-26b-a4b-it", "nim/google/gemma-4-31b-it"], "ts": "2026-11-03 22:08:22"}
+{"ev": "HWM_SET", "axis": "swe", "hwm": 2.0, "ts": "2026-11-03 22:08:22"}
+{"ev": "PROMOTED", "style": 0, "per_item": 2.0, "elite": [1, 0], "ts": "2026-11-03 22:08:22"}
+{"ev": "EXEC_VERDICT", "applied": false, "stdout": "", "stderr": "error: No valid patches in input (allow with \"--allow-empty\")\n", "ts": "2026-11-03 22:43:12"}
