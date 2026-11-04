@@ -1,113 +1,96 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-04 19:51:02",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "asm_sizes",
+   "repo": "HarbourMasters/PaperBoat",
+   "sha256": "c51356c456681e37"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "296e24e19dc05f00"
+   "skill": "actor_types",
+   "repo": "HarbourMasters/PaperBoat",
+   "sha256": "1b4c2ac9a32fba34"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "_src_roots",
+   "repo": "Yokimitsuro/khdays-decomp",
+   "sha256": "3b8916e6027552bb"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "apply_names",
+   "repo": "Yokimitsuro/khdays-decomp",
+   "sha256": "5aaff9513a94df6a"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "mant_tear_exporter",
+   "repo": "TwilitRealm/dusklight",
+   "sha256": "a7987f72f01ac65f"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "saves_to_states_json",
+   "repo": "TwilitRealm/dusklight",
+   "sha256": "9853f6cf3298d177"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "gen_audio_yaml",
+   "repo": "HarbourMasters/Lighthouse",
+   "sha256": "2a4b152d6d194979"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "namefix",
+   "repo": "HarbourMasters/Starship",
+   "sha256": "0da6d9af4a4fed28"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "find_duplicates",
+   "repo": "HarbourMasters/Starship",
+   "sha256": "072400ca16dde9ef"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "auth",
+   "repo": "mail-in-a-box/mailinabox",
+   "sha256": "c02ded90eea07818"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "cli",
+   "repo": "mail-in-a-box/mailinabox",
+   "sha256": "dce155be1e72dca9"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "decompctx",
+   "repo": "doldecomp/sms",
+   "sha256": "803fe1339f6677fb"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "accessor_candidates",
+   "repo": "chasem-dev/sms-english",
+   "sha256": "a1c3d5f52473e99d"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "agent_timing",
+   "repo": "chasem-dev/sms-english",
+   "sha256": "2325faefa525ccea"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "download_tool",
+   "repo": "SMGCommunity/Petari",
+   "sha256": "d0f6a8de3b4b1183"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "audit_tus",
+   "repo": "HalmyLyseas/VandalHearts-PcPort",
+   "sha256": "cde972c4fef428cc"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "fix_linker_align",
+   "repo": "HalmyLyseas/VandalHearts-PcPort",
+   "sha256": "ddf7969e7bb17e1c"
+  },
+  {
+   "skill": "pal16dis_chunked",
+   "repo": "ACreTeam/ac-decomp",
+   "sha256": "693d44368ac888af"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-04 20:00:45"
 }

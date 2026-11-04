@@ -12985,7 +12985,309 @@
    ],
    "registered": "2026-11-04 18:58:53",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "asm_sizes",
+   "source_file": "tools/asm_sizes.py",
+   "source_repo": "HarbourMasters/PaperBoat",
+   "license": "check repo",
+   "sha256": "c51356c456681e376581b375c657925b12d4bcb170e308f2649163bf9fefccb9",
+   "lines": 115,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "glob",
+    "json",
+    "os"
+   ],
+   "registered": "2026-11-04 20:00:22",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "actor_types",
+   "source_file": "tools/build/actor_types.py",
+   "source_repo": "HarbourMasters/PaperBoat",
+   "license": "check repo",
+   "sha256": "1b4c2ac9a32fba3415895b40b5a68b35310acbd4971a2594b8fa0e25afc87336",
+   "lines": 145,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "re",
+    "yaml"
+   ],
+   "registered": "2026-11-04 20:00:22",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "_src_roots",
+   "source_file": "sdk/_src_roots.py",
+   "source_repo": "Yokimitsuro/khdays-decomp",
+   "license": "check repo",
+   "sha256": "3b8916e6027552bb0bda7bfaacd67e19bded2852ce28f1f873d6d8c1446401de",
+   "lines": 32,
+   "first_line": "\"\"\"Shared: enumerate every directory that holds a .c source file.",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-04 20:00:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "apply_names",
+   "source_file": "sdk/apply_names.py",
+   "source_repo": "Yokimitsuro/khdays-decomp",
+   "license": "check repo",
+   "sha256": "5aaff9513a94df6ab15239750ca758dfe1ca82ed4250f194838c1faa5c51a730",
+   "lines": 215,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "os",
+    "re",
+    "shutil",
+    "sys"
+   ],
+   "registered": "2026-11-04 20:00:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "mant_tear_exporter",
+   "source_file": "tools/mant_tear_exporter.py",
+   "source_repo": "TwilitRealm/dusklight",
+   "license": "check repo",
+   "sha256": "a7987f72f01ac65f79de838b4dce420a30c4f856649d110aaa64b6b1cddc700e",
+   "lines": 190,
+   "first_line": "\"\"\"",
+   "imports": [
+    "math",
+    "struct",
+    "xxhash"
+   ],
+   "registered": "2026-11-04 20:00:27",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "saves_to_states_json",
+   "source_file": "tools/saves_to_states_json.py",
+   "source_repo": "TwilitRealm/dusklight",
+   "license": "check repo",
+   "sha256": "9853f6cf3298d17750d4a5bd88f461e63d7ace844f2b9acf7322e6b4a8db82ef",
+   "lines": 59,
+   "first_line": "\"\"\"",
+   "imports": [
+    "base64",
+    "json",
+    "struct",
+    "sys",
+    "zstandard"
+   ],
+   "registered": "2026-11-04 20:00:27",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "gen_audio_yaml",
+   "source_file": "tools/gen_audio_yaml.py",
+   "source_repo": "HarbourMasters/Lighthouse",
+   "license": "check repo",
+   "sha256": "2a4b152d6d1949799d2d8f3e558cdecb9f8d7a7d0142221516eb49eacd439d68",
+   "lines": 186,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 20:00:31",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "namefix",
+   "source_file": "include/assets/namefix.py",
+   "source_repo": "HarbourMasters/Starship",
+   "license": "check repo",
+   "sha256": "0da6d9af4a4fed28bf2638195d8c906710ab9db52a32b4ddd21c329166e8f51f",
+   "lines": 14,
+   "first_line": "import os",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-04 20:00:32",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "find_duplicates",
+   "source_file": "tools/find_duplicates.py",
+   "source_repo": "HarbourMasters/Starship",
+   "license": "check repo",
+   "sha256": "072400ca16dde9ef42c9a2a6d0003f269460875783c1e63fad47d636bb2918bd",
+   "lines": 388,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 20:00:33",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "auth",
+   "source_file": "management/auth.py",
+   "source_repo": "mail-in-a-box/mailinabox",
+   "license": "check repo",
+   "sha256": "c02ded90eea0781894885bd88778edfb72eb67d830b8995f10b4fa96d4ebe788",
+   "lines": 159,
+   "first_line": "import base64, hmac, json, secrets",
+   "imports": [
+    "base64",
+    "hmac",
+    "json",
+    "secrets",
+    "utils"
+   ],
+   "registered": "2026-11-04 20:00:33",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "cli",
+   "source_file": "management/cli.py",
+   "source_repo": "mail-in-a-box/mailinabox",
+   "license": "check repo",
+   "sha256": "dce155be1e72dca9f59fd73b8bb2ee69914a7c34e2aeb3d9d83e19719e3c6523",
+   "lines": 153,
+   "first_line": "#!/usr/bin/python3",
+   "imports": [
+    "contextlib",
+    "csv",
+    "getpass",
+    "json",
+    "sys",
+    "urllib"
+   ],
+   "registered": "2026-11-04 20:00:34",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "decompctx",
+   "source_file": "tools/decompctx.py",
+   "source_repo": "doldecomp/sms",
+   "license": "check repo",
+   "sha256": "803fe1339f6677fbfd1361ae677976a2233fe895b2778f345b4951561165b2dd",
+   "lines": 179,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "fnmatch",
+    "os",
+    "re"
+   ],
+   "registered": "2026-11-04 20:00:38",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "accessor_candidates",
+   "source_file": "tools/accessor-candidates.py",
+   "source_repo": "chasem-dev/sms-english",
+   "license": "check repo",
+   "sha256": "a1c3d5f52473e99d4153cc533d986659d070be412b68adff8fb77a261f139338",
+   "lines": 195,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 20:00:39",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "agent_timing",
+   "source_file": "tools/agent-timing.py",
+   "source_repo": "chasem-dev/sms-english",
+   "license": "check repo",
+   "sha256": "2325faefa525ccea823356b0b14a22cc0b06fe43e5dd19764696f6765b536a7c",
+   "lines": 62,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 20:00:39",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "download_tool",
+   "source_file": "tools/download_tool.py",
+   "source_repo": "SMGCommunity/Petari",
+   "license": "check repo",
+   "sha256": "d0f6a8de3b4b11835d7c3836ba61c71f108f340108424b017976b44171770df9",
+   "lines": 153,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "certifi",
+    "io",
+    "os",
+    "platform",
+    "shutil",
+    "ssl",
+    "stat",
+    "urllib",
+    "zipfile"
+   ],
+   "registered": "2026-11-04 20:00:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "audit_tus",
+   "source_file": "jp/tools/audit_tus.py",
+   "source_repo": "HalmyLyseas/VandalHearts-PcPort",
+   "license": "check repo",
+   "sha256": "cde972c4fef428cc406b81353fde0d3b3c2873e98d9c65f3905cb14a37b6926b",
+   "lines": 39,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-04 20:00:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "fix_linker_align",
+   "source_file": "jp/tools/fix_linker_align.py",
+   "source_repo": "HalmyLyseas/VandalHearts-PcPort",
+   "license": "check repo",
+   "sha256": "ddf7969e7bb17e1c1cca92cfdfdda0164c9fc8343971887b47da9993a35ef10a",
+   "lines": 57,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 20:00:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "pal16dis_chunked",
+   "source_file": "tools/converters/pal16dis_chunked.py",
+   "source_repo": "ACreTeam/ac-decomp",
+   "license": "check repo",
+   "sha256": "693d44368ac888affca0cb9858394e0aab13f57e5ff6b0edd28a6a30c054b350",
+   "lines": 67,
+   "first_line": "from argparse import ArgumentParser",
+   "imports": [
+    "ninja_syntax",
+    "os",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-04 20:00:43",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 18:58:53"
+ "built": "2026-11-04 20:00:45"
 }
