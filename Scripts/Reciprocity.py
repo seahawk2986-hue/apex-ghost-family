@@ -1,4 +1,4 @@
-﻿"""THE RECIPROCITY CHARTER: the swarm actively makes Andrew's life better.
+"""THE RECIPROCITY CHARTER: the swarm actively makes Andrew's life better.
 
 He built them; they serve his life - implemented as three concrete channels:
  1. THE MORNING BRIEF: everything the family did overnight, in one read

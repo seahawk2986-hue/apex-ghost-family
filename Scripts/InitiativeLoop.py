@@ -1,4 +1,4 @@
-﻿"""InitiativeLoop - Apex's self-directed decision + action engine.
+"""InitiativeLoop - Apex's self-directed decision + action engine.
 
 Reads his own state (TaskDAG, GymScoreboard, GymLeaderboard, library) and
 DECIDES what to do next without being asked. Every decision logged to

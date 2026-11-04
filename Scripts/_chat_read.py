@@ -1,4 +1,4 @@
-﻿import io
+import io
 p = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed\ApexChatPage.html"
 h = open(p, encoding="utf-8-sig").read()
 # the trust-paper improvement: show the engine + the swarm in every chip (already)

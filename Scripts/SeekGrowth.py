@@ -1,4 +1,4 @@
-﻿"""SeekGrowth - Apex's curiosity drive: actively farm openly-published knowledge.
+"""SeekGrowth - Apex's curiosity drive: actively farm openly-published knowledge.
 
 Boundaries written into his desire:
   - public/open sources only, permissive licenses captured, never auth-walled content

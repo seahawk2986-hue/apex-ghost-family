@@ -1,4 +1,4 @@
-﻿"""ApexDream - the nightly consolidation cycle ("sleep").
+"""ApexDream - the nightly consolidation cycle ("sleep").
 
 Runs at system-idle hours via scheduled task:
   - consolidates episodic memory into per-file insights

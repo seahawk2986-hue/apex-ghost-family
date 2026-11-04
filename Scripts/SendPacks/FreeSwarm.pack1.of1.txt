@@ -1,4 +1,4 @@
-PACK 1/1 [FreeSwarm] (reassembly: keep order)
+PACK 1/1 [FreeSwarm] (keep order)
 
 """FreeSwarm v2 - THE AGGREGATE-UNLIMITED POOL (the "unlimited" organ,
 the A+ round 2026-11-04).
