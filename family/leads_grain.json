@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-04 03:45:01",
- "count": 511,
+ "ts": "2026-11-04 04:00:02",
+ "count": 512,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -643,6 +643,13 @@
    "repo": "relative/synchrony",
    "score": 79.6,
    "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "Satobloc/SAT_THEORY_ARCHIVE_2023-25",
+   "score": 68.8,
+   "tier": "MINE",
    "stars": 0,
    "license": ""
   },
