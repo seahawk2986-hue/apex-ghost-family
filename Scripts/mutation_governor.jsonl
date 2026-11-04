@@ -1,0 +1,6 @@
+{"ev": "ZERO_AUDIT", "scanned": 422, "suspects": 2}
+{"ev": "TELEMETRY", "organs_with_fails": 1}
+{"ev": "PREFLIGHT", "ok": 226, "broken": 11}
+{"ev": "ZERO_AUDIT", "scanned": 330, "suspects": 0}
+{"ev": "PACK", "script": "FreeSwarm", "chunks": 1}
+{"ev": "TELEMETRY", "organs_with_fails": 1}
