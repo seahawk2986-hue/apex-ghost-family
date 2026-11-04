@@ -24,3 +24,16 @@ WHERE THE STATE LIVES (resume-cheap):
   - the doors: Scripts/tasks_inbox/ and Scripts/arena_inbox/ (README'd)
   - the Organs' schedule: ApexSwarmMeter (hourly :23),
     ApexSwarmNightCert (02:45), the pre-existing 17-task fleet
+
+THE MODEL ECONOMY (the founder's $0 law):
+  - default lane: opencode/glm-5.3-flash-free (set in opencode.json)
+  - overhead lanes: title -> mimo-v2.6-flash-free; summary/compaction ->
+    deepseek-v4.1-flash-free (spreads quota; the chat lane drains
+    slower = the session lasts longer)
+  - rotation when a lane rate-limits (switch with /models):
+    opencode/{nemotron-3.5-super-vl,flint-40b,beam,pulse-alpha,
+    crouton-alpha}-free, then openrouter's :free lanes
+  - the honest non-claim: no config forces a provider to serve free
+    forever; "indefinite" = many lanes + rotation + machine organs
+    doing the routine work + short surgical sessions
+
