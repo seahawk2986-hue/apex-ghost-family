@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-03 22:30:02",
- "count": 493,
+ "ts": "2026-11-03 22:45:01",
+ "count": 489,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -1382,13 +1382,6 @@
    "license": ""
   },
   {
-   "repo": "typpo/astrokit",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "LunCoSim/lunco-space-jargon",
    "score": 51.1,
    "tier": "MINE",
@@ -1431,13 +1424,6 @@
    "license": ""
   },
   {
-   "repo": "stzifkas/pluto-ecss",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "SimplySolid3D/planetary-dem-to-stl",
    "score": 51.1,
    "tier": "MINE",
@@ -1474,13 +1460,6 @@
   },
   {
    "repo": "UBNanosatLab/openstartracker",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "cesabici-bit/satguard",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -2076,13 +2055,6 @@
   },
   {
    "repo": "sissbruecker/linkding",
-   "score": 50.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "brandon-rhodes/python-sgp4",
    "score": 50.4,
    "tier": "MINE",
    "stars": 0,
