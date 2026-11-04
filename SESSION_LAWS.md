@@ -37,3 +37,28 @@ THE MODEL ECONOMY (the founder's $0 law):
     forever; "indefinite" = many lanes + rotation + machine organs
     doing the routine work + short surgical sessions
 
+THE MODEL LAWS (v2, 2026-11-04 — the amendment):
+  1. EQUIVALENT OR BETTER, CODING-FIRST: the session's mind may only
+     rotate among lanes measured (or provisionally classed) equal-
+     or-better in coding and skills that require powerful coding
+  2. NO SILENT DEGRADATION: any model change is announced in-chat
+     with the lane name and its measured verdict; worse is never
+     served silently — a lesser model is NEVER in the auto-chain
+  3. THE FLOOR HOLDS: if every equivalent-or-better free lane is
+     spent, the session pauses until the daily reset — degradation
+     is not a fallback, it is forbidden
+  4. MEASURED, NOT NAMED: tier membership comes from the daily
+     coding bench (lane_ledger.json), not from marketing; below-
+     primary lanes are excluded outright, unmeasured ones ⚠️-marked
+  5. THE ORGAN IS THE ENFORCER: free-lane-rotation plugin carries
+     these laws in code; receipt file: free_rotation_receipts.jsonl
+
+THE UPWARD LAW (v3, 2026-11-04, founder's decree):
+  the chain is ordered by MEASURED coding strength, strongest first;
+  a handoff may only land on a lane of measured strength >= the
+  current one's (within the equivalent tier). Downward movement is
+  structurally impossible, not merely discouraged: no lane below
+  primary-margin exists in the rotation, no fallback order, no
+  escape hatch, no exception. Only equal-or-up.
+
+
