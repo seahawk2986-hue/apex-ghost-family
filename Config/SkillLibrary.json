@@ -10184,7 +10184,319 @@
    ],
    "registered": "2026-11-04 07:12:02",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "download_models",
+   "source_file": ".github/download_models.py",
+   "source_repo": "SciSharp/LLamaSharp",
+   "license": "check repo",
+   "sha256": "02d04cbb2c3a4a2b6c3ab01e74b270c22868083a062ab2413754e1936d13457b",
+   "lines": 20,
+   "first_line": "from huggingface_hub import hf_hub_download",
+   "imports": [
+    "argparse"
+   ],
+   "registered": "2026-11-04 08:57:33",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "upload_to_hf",
+   "source_file": ".github/upload_to_hf.py",
+   "source_repo": "SciSharp/LLamaSharp",
+   "license": "check repo",
+   "sha256": "47e267730237f9f82622a91f41979d5d11b73a0c8d77ccbda34c43100db63558",
+   "lines": 37,
+   "first_line": "from huggingface_hub import HfApi",
+   "imports": [
+    "argparse"
+   ],
+   "registered": "2026-11-04 08:57:33",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "active_view_event",
+   "source_file": "plugins/active_view_event.py",
+   "source_repo": "yaroslavyaroslav/OpenAI-sublime-text",
+   "license": "check repo",
+   "sha256": "3a260c199b0d5560898aad3394e24c5a186026024679acbd38c6c5c294411284",
+   "lines": 64,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "logging",
+    "sublime"
+   ],
+   "registered": "2026-11-04 08:57:35",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "ai_chat_event",
+   "source_file": "plugins/ai_chat_event.py",
+   "source_repo": "yaroslavyaroslav/OpenAI-sublime-text",
+   "license": "check repo",
+   "sha256": "fa1c49d490bfc80b7037d5b43f400c05d7fc4c665007987ade4218cbb366b6aa",
+   "lines": 37,
+   "first_line": "from __future__ import annotations",
+   "imports": [],
+   "registered": "2026-11-04 08:57:35",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "img2c",
+   "source_file": "tools/img2c.py",
+   "source_repo": "zhouwg/kantv",
+   "license": "check repo",
+   "sha256": "3b64af3158b2d6a6a7b9edcaf715b6d20045bc3a2264cae179e91595a3ab4056",
+   "lines": 32,
+   "first_line": "#author:nihui, https://github.com/nihui/ncnn_on_esp32/blob/master/image/img2c.py",
+   "imports": [
+    "cv2",
+    "glob",
+    "numpy",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 08:57:37",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "baichuan",
+   "source_file": "conversion/baichuan.py",
+   "source_repo": "LostRuins/koboldcpp",
+   "license": "check repo",
+   "sha256": "698f48eab3fffb30226ef8ccd69fd4544ca7cac070fb44e50e70e60d235aae1d",
+   "lines": 61,
+   "first_line": "from __future__ import annotations",
+   "imports": [],
+   "registered": "2026-11-04 08:57:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bailingmoe",
+   "source_file": "conversion/bailingmoe.py",
+   "source_repo": "LostRuins/koboldcpp",
+   "license": "check repo",
+   "sha256": "39c96855c12eef3675640a369e3f6454dddad78486709e2fa3ba60039ff420b9",
+   "lines": 220,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-11-04 08:57:40",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "populate",
+   "source_file": "container-images/hfmirror/populate.py",
+   "source_repo": "containers/ramalama",
+   "license": "check repo",
+   "sha256": "a80164533fa8ac7ed4b85f4c27431d2d8a7c59ada70eafc1170db307a23d66e8",
+   "lines": 98,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 08:57:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "server",
+   "source_file": "container-images/hfmirror/server.py",
+   "source_repo": "containers/ramalama",
+   "license": "check repo",
+   "sha256": "a76d1df476593de32f62c9a6101851ff768f76303639e505215daa158a996d53",
+   "lines": 313,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "hashlib",
+    "json",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 08:57:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "ollama_dl/__init__.py",
+   "source_repo": "akx/ollama-dl",
+   "license": "check repo",
+   "sha256": "116e298d672f8f23b582e68fe8828d57f96b9a99268a83308f31172f4483767e",
+   "lines": 230,
+   "first_line": "import argparse",
+   "imports": [
+    "argparse",
+    "asyncio",
+    "dataclasses",
+    "httpx2",
+    "logging",
+    "pathlib",
+    "time"
+   ],
+   "registered": "2026-11-04 08:57:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__main__",
+   "source_file": "ollama_dl/__main__.py",
+   "source_repo": "akx/ollama-dl",
+   "license": "check repo",
+   "sha256": "cf1cd9e7f9a5311f20241f520957f260edcdcd830a504bb5b928bb3425064778",
+   "lines": 5,
+   "first_line": "if __name__ == \"__main__\":",
+   "imports": [],
+   "registered": "2026-11-04 08:57:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "gppmc",
+   "source_file": "gppmc/gppmc.py",
+   "source_repo": "crashr/gppm",
+   "license": "check repo",
+   "sha256": "ced36ede4b372d42e0ea63265f8ce046ec320d4ee10ff517cab12790fa8d4ad4",
+   "lines": 150,
+   "first_line": "import click",
+   "imports": [
+    "click",
+    "click_completion",
+    "json",
+    "requests",
+    "yaml"
+   ],
+   "registered": "2026-11-04 08:57:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "heads",
+   "source_file": "examples/classifier/heads.py",
+   "source_repo": "onicai/llama_cpp_canister",
+   "license": "check repo",
+   "sha256": "377e6d3d47b9e61e01d875d4d9776df3041df849ccd286449fc1bc6a68e982d8",
+   "lines": 87,
+   "first_line": "\"\"\"The classifier's outputs: one linear head of 15 scores, a group per fact.",
+   "imports": [
+    "torch"
+   ],
+   "registered": "2026-11-04 08:57:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "merge_labels",
+   "source_file": "examples/classifier/merge_labels.py",
+   "source_repo": "onicai/llama_cpp_canister",
+   "license": "check repo",
+   "sha256": "c3a1106723a94485cd79ea2721ee3783e3ca74c2fd83ae64ec5f6b4636a9f7fb",
+   "lines": 101,
+   "first_line": "\"\"\"Builds the training set from two independent labeling passes.",
+   "imports": [
+    "json",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-04 08:57:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "constructor",
+   "source_file": "absolute_zero_reasoner/data_construction/constructor.py",
+   "source_repo": "LeapLabTHU/Absolute-Zero-Reasoner",
+   "license": "check repo",
+   "sha256": "52597120bdc64ef9624582833386e202d3e1ea54e0ffa52055ce5e0428ff12fa",
+   "lines": 226,
+   "first_line": "from typing import List, Dict",
+   "imports": [
+    "pandas"
+   ],
+   "registered": "2026-11-04 08:57:44",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "process_code_reasoning_data",
+   "source_file": "absolute_zero_reasoner/data_construction/process_code_reasoning_data.py",
+   "source_repo": "LeapLabTHU/Absolute-Zero-Reasoner",
+   "license": "check repo",
+   "sha256": "c12db6bfac71b9a146760984f57a31e9382d9fc6c4a8a081d1e90500266156f2",
+   "lines": 176,
+   "first_line": "from pathlib import Path",
+   "imports": [
+    "argparse",
+    "pandas",
+    "re"
+   ],
+   "registered": "2026-11-04 08:57:45",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "mmlu",
+   "source_file": "eval/mmlu.py",
+   "source_repo": "turboderp/exllamav2",
+   "license": "check repo",
+   "sha256": "db5e32180e5b17a03366cdffbf2154d6051ed568774c806b2ea49c5802344d02",
+   "lines": 197,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "argparse",
+    "contextlib",
+    "os",
+    "random",
+    "sys",
+    "torch",
+    "util"
+   ],
+   "registered": "2026-11-04 08:57:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "util",
+   "source_file": "eval/util.py",
+   "source_repo": "turboderp/exllamav2",
+   "license": "check repo",
+   "sha256": "6ec5f82d79b599851b812cb2aefe6273e1dc275794b4d94a04f72b0b4e1d3b02",
+   "lines": 41,
+   "first_line": "from datasets import load_dataset",
+   "imports": [
+    "json",
+    "os"
+   ],
+   "registered": "2026-11-04 08:57:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "api_events",
+   "source_file": "docs/scripts/api-events.py",
+   "source_repo": "mitmproxy/mitmproxy",
+   "license": "check repo",
+   "sha256": "6bba6e5aaeb653e9f43702373e48ae483f59739c7aea892bee6d0ed3c2074e3f",
+   "lines": 206,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "contextlib",
+    "inspect",
+    "textwrap",
+    "typing"
+   ],
+   "registered": "2026-11-04 08:57:48",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "api_render",
+   "source_file": "docs/scripts/api-render.py",
+   "source_repo": "mitmproxy/mitmproxy",
+   "license": "check repo",
+   "sha256": "60f7f05e16a304c164f6bc6c468982564cefb67c48c776fb56edc06843b43873",
+   "lines": 84,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "pdoc",
+    "shutil",
+    "textwrap"
+   ],
+   "registered": "2026-11-04 08:57:48",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 07:12:02"
+ "built": "2026-11-04 08:57:48"
 }
