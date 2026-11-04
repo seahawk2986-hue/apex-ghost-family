@@ -175,6 +175,23 @@ def ask(prompt, max_tokens=500, purpose="freeswarm", skip=0, weight=None):
     ids = [s for s in ids
            if st["excluded"].get(s["id"], 0) <= now]
     ids = ids[skip:] + ids[:skip] if ids else []
+    alive_ids = []
+    for s in ids[:60]:
+        mid, prov = s["id"], s["provider"]
+        if prov == "nim":
+            probe = _http_json(NIM_LIST, auth=_env().get("NVIDIA_API_KEY") or None)
+            if (not isinstance(probe, dict)) or ("data" not in probe):
+                st["excluded"][mid] = now + EXCLUDE_S["404"]
+                _save_state(st)
+                continue
+        elif prov == "gh":
+            probe = _http_json(GH_LIST, auth=_env().get("GITHUB_TOKEN") or _env().get("GH_MODELS_TOKEN") or None)
+            if (not isinstance(probe, dict)) or ("data" not in probe):
+                st["excluded"][mid] = now + EXCLUDE_S["404"]
+                _save_state(st)
+                continue
+        alive_ids.append(s)
+    ids = alive_ids
     for s in ids[:60]:
         mid, prov = s["id"], s["provider"]
         daily = DAILY_CAP if prov == "openrouter" else (500 if prov == "nim" else 200)
