@@ -1,113 +1,111 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-04 06:57:44",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "build_playground",
+   "repo": "stzifkas/pluto-ecss",
+   "sha256": "06814d80f6dd6c61"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c3c719a6d1e841ba"
+   "skill": "__init__",
+   "repo": "stzifkas/pluto-ecss",
+   "sha256": "bcd74745d9216b94"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "render_preview",
+   "repo": "SimplySolid3D/planetary-dem-to-stl",
+   "sha256": "687d44350630a373"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "__init__",
+   "repo": "SimplySolid3D/planetary-dem-to-stl",
+   "sha256": "bd854a281dc52174"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "plot_m20_three_forks",
+   "repo": "AndrewAnnex/SpiceyPy",
+   "sha256": "92f66a924d361f45"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "plot_m20_three_forks_cyice",
+   "repo": "AndrewAnnex/SpiceyPy",
+   "sha256": "695ff4329d46ee67"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "real_starlink_demo",
+   "repo": "ShipItAndPray/orbital-compute",
+   "sha256": "3237d4f5f9a36eac"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "json2test",
+   "repo": "swift-nav/libsbp",
+   "sha256": "527b817ce5c77cfb"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "missing",
+   "repo": "swift-nav/libsbp",
+   "sha256": "6b4a498f0780f638"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "centroid_generation",
+   "repo": "brownj4/Tetra",
+   "sha256": "c2dcb71f69ed9b72"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "__init__",
+   "repo": "UBNanosatLab/openstartracker",
+   "sha256": "3a28bd3bd3f13b2a"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "__init__",
+   "repo": "cesabici-bit/satguard",
+   "sha256": "e07816f9bd8d9463"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "cw_comparison",
+   "repo": "cesabici-bit/satguard",
+   "sha256": "96c8e2e3bae3ad4f"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "check_agent_selection_retention",
+   "repo": "openclaw/openclaw",
+   "sha256": "824793ed98587d80"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "check_composite_action_input_interpolation",
+   "repo": "openclaw/openclaw",
+   "sha256": "abd25e31f864eee5"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "render_sponsors",
+   "repo": "zizmorcore/zizmor",
+   "sha256": "b3d7fb4db576b9fb"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "render_trophies",
+   "repo": "zizmorcore/zizmor",
+   "sha256": "04ba59d9e678432b"
+  },
+  {
+   "skill": "convert_cerebras_to_ggml",
+   "repo": "ggml-org/ggml",
+   "sha256": "002d6391ec791911"
+  },
+  {
+   "skill": "convert_ckpt_to_ggml",
+   "repo": "ggml-org/ggml",
+   "sha256": "c0b2d98ac6ca48e4"
+  },
+  {
+   "skill": "__init__",
+   "repo": "ddh0/easy-llama",
+   "sha256": "49c43895702d027d"
+  },
+  {
+   "skill": "formats",
+   "repo": "ddh0/easy-llama",
+   "sha256": "9a971118739fd087"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-04 07:12:02"
 }
