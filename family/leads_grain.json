@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-03 21:45:02",
- "count": 517,
+ "ts": "2026-11-03 22:00:02",
+ "count": 494,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -12,6 +12,13 @@
   {
    "repo": "arp242/goatcounter",
    "score": 104.5,
+   "tier": "VEIN",
+   "stars": 0,
+   "license": ""
+  },
+  {
+   "repo": "opendatahub-io/kuberay",
+   "score": 88.7,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
@@ -214,13 +221,6 @@
   },
   {
    "repo": "firatkiral/kodibot",
-   "score": 83.8,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "vietanhdev/llama-assistant",
    "score": 83.8,
    "tier": "VEIN",
    "stars": 0,
@@ -535,21 +535,7 @@
    "license": ""
   },
   {
-   "repo": "feuerwehr-oberwil/kp-rueck",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "abgulati/LARS",
-   "score": 83.1,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "LiveContainer/LiveContainer",
    "score": 83.1,
    "tier": "VEIN",
    "stars": 0,
@@ -717,13 +703,6 @@
    "license": ""
   },
   {
-   "repo": "nathanialf/ico",
-   "score": 52.0,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "nothings/stb",
    "score": 51.9,
    "tier": "MINE",
@@ -738,71 +717,8 @@
    "license": ""
   },
   {
-   "repo": "carlosrmz009/arwing2",
-   "score": 51.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "carlosrmz009/arwing",
-   "score": 51.4,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "Odrannnn/MetroidPrimePort",
-   "score": 51.3,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "posthog/posthog",
-   "score": 51.3,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "bytebase/bytebase",
    "score": 51.3,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "peiikai/LASRecomp",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ergochat/ergo",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ikawrakow/ik_llama.cpp",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "nodejs/node-gyp",
-   "score": 51.2,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "ggerganov/llama.cpp",
-   "score": 51.1,
    "tier": "MINE",
    "stars": 0,
    "license": ""
@@ -836,13 +752,6 @@
    "license": ""
   },
   {
-   "repo": "EdgePlat/edgepedia-mcp",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "monocrawl/monocrawl-mcp",
    "score": 51.1,
    "tier": "MINE",
@@ -851,13 +760,6 @@
   },
   {
    "repo": "findip-net/findip-mcp",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "sky-access/skyaccess-mcp",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -920,20 +822,6 @@
    "license": ""
   },
   {
-   "repo": "ghostty-org/ghostty",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "morluto/rea",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "zhxunzh84/rea-dino-reverse-engineering",
    "score": 51.1,
    "tier": "MINE",
@@ -941,28 +829,7 @@
    "license": ""
   },
   {
-   "repo": "sigalor/whatsapp-web-reveng",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "j4k0xb/webcrack",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "spectral-mcp/spectral",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "abi/screenshot-to-code",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
@@ -983,13 +850,6 @@
    "license": ""
   },
   {
-   "repo": "alexandrmotologa/wasmlens",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "BishopFox/jsluice",
    "score": 51.1,
    "tier": "MINE",
@@ -997,28 +857,7 @@
    "license": ""
   },
   {
-   "repo": "jkdansereau/goldeneye-pc-port",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "tangosdev/sm64ds-decomp",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
    "repo": "HumanSecurity/restringer",
-   "score": 51.1,
-   "tier": "MINE",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "nanolathe-gg/nanolathe",
    "score": 51.1,
    "tier": "MINE",
    "stars": 0,
