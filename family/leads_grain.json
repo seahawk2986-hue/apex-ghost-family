@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-03 22:00:02",
- "count": 494,
+ "ts": "2026-11-03 22:15:02",
+ "count": 493,
  "leads": [
   {
    "repo": "ruffle-rs/ruffle",
@@ -12,13 +12,6 @@
   {
    "repo": "arp242/goatcounter",
    "score": 104.5,
-   "tier": "VEIN",
-   "stars": 0,
-   "license": ""
-  },
-  {
-   "repo": "opendatahub-io/kuberay",
-   "score": 88.7,
    "tier": "VEIN",
    "stars": 0,
    "license": ""
