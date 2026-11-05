@@ -1,113 +1,111 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-05 18:45:21",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "verify_packages",
+   "repo": "dongfangzhizhu/AudioCpp.NET",
+   "sha256": "7322f7b7acfd9a5e"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "296e24e19dc05f00"
+   "skill": "fetch_linux_artifact",
+   "repo": "dongfangzhizhu/AudioCpp.NET",
+   "sha256": "31bc6fe5c1c8aebb"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "get_documentation",
+   "repo": "asterisk/asterisk",
+   "sha256": "5672c02d64ee7f2a"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4039bb5d9226c038"
+   "skill": "post_process_documentation",
+   "repo": "asterisk/asterisk",
+   "sha256": "d28ce2aedce95d3e"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "running_stats",
+   "repo": "ckan/ckan",
+   "sha256": "e5ad0de26beb293c"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "__init__",
+   "repo": "ckan/ckan",
+   "sha256": "36011ff7fe40dc68"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "changes_fmt",
+   "repo": "zeldaret/ss",
+   "sha256": "cf8eb290216f90db"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "apply_objdiff_mappings",
+   "repo": "zeldaret/ss",
+   "sha256": "01abaefe4034fb91"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "tww_class_to_cpp",
+   "repo": "zeldaret/tww",
+   "sha256": "17dd52cf95b08f14"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "binary_funcs",
+   "repo": "zeldaret/tww",
+   "sha256": "e3972dd25885df37"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "check_progress",
+   "repo": "TheOnlyZac/sly1",
+   "sha256": "9f5b525bd69b5b53"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "upload_progress",
+   "repo": "TheOnlyZac/sly1",
+   "sha256": "a3f493bf35b057d2"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "asm_sizes",
+   "repo": "HarbourMasters/PaperBoat",
+   "sha256": "c51356c456681e37"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "actor_types",
+   "repo": "HarbourMasters/PaperBoat",
+   "sha256": "1b4c2ac9a32fba34"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "_src_roots",
+   "repo": "Yokimitsuro/khdays-decomp",
+   "sha256": "3b8916e6027552bb"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "apply_names",
+   "repo": "Yokimitsuro/khdays-decomp",
+   "sha256": "5aaff9513a94df6a"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "mant_tear_exporter",
+   "repo": "TwilitRealm/dusklight",
+   "sha256": "a7987f72f01ac65f"
+  },
+  {
+   "skill": "saves_to_states_json",
+   "repo": "TwilitRealm/dusklight",
+   "sha256": "9853f6cf3298d177"
+  },
+  {
+   "skill": "gen_audio_yaml",
+   "repo": "HarbourMasters/Lighthouse",
+   "sha256": "2a4b152d6d194979"
+  },
+  {
+   "skill": "namefix",
+   "repo": "HarbourMasters/Starship",
+   "sha256": "0da6d9af4a4fed28"
+  },
+  {
+   "skill": "find_duplicates",
+   "repo": "HarbourMasters/Starship",
+   "sha256": "072400ca16dde9ef"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-05 18:58:37"
 }
