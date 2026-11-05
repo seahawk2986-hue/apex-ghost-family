@@ -12465,7 +12465,312 @@
    ],
    "registered": "2026-11-05 10:03:01",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "make_logo",
+   "source_file": "core/SaintsRebornLogo/make_logo.py",
+   "source_repo": "whompay/SaintsReborn",
+   "license": "check repo",
+   "sha256": "a19dedbc7b6f52ccbc9dbdadd04e9783cf29cd3605c366d126f0aa9a9d210ff1",
+   "lines": 79,
+   "first_line": "# Developer tool: turns logo.png into logo.bin for patch.lua.",
+   "imports": [
+    "numpy",
+    "os",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:04:21",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "art",
+   "source_file": "tools/glyphgen/art.py",
+   "source_repo": "whompay/SaintsReborn",
+   "license": "check repo",
+   "sha256": "ad3a19ca63004a254984499f473847fda82957a5f582775cee4e4b1bf8b6bfa1",
+   "lines": 160,
+   "first_line": "# Keyboard/mouse button pictures, drawn from scratch (no game artwork).",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-11-05 11:04:21",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "ontology_sql_eval/__init__.py",
+   "source_repo": "NVIDIA/ontology-sql-eval",
+   "license": "check repo",
+   "sha256": "9bcc2ca888e5fbd4b09ded8ef819c106c0e92009704c47875f5a951c5a0a456e",
+   "lines": 4,
+   "first_line": "# SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES.",
+   "imports": [],
+   "registered": "2026-11-05 11:04:22",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bird_interact_http",
+   "source_file": "ontology_sql_eval/bird_interact/bird_interact_http.py",
+   "source_repo": "NVIDIA/ontology-sql-eval",
+   "license": "check repo",
+   "sha256": "c3f972d679fcf41289b550634fccd0d68520e182ac4b0b1b8d8b664de8086f8a",
+   "lines": 129,
+   "first_line": "\"\"\"HTTP clients for Bird ADK :6001 (user simulator) and :6002 (DB environment).\"",
+   "imports": [
+    "asyncio",
+    "httpx",
+    "logging",
+    "sqlglot"
+   ],
+   "registered": "2026-11-05 11:04:22",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "benchmark_data",
+   "source_file": "decontamination/benchmark_data.py",
+   "source_repo": "bigcode-project/bigcode-dataset",
+   "license": "check repo",
+   "sha256": "421875415036c66eeb3e7840ef4b56d4ea611dfc1d0b2ce0473cbef98cb1e3e3",
+   "lines": 140,
+   "first_line": "",
+   "imports": [
+    "itertools",
+    "json"
+   ],
+   "registered": "2026-11-05 11:04:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "find_substrings",
+   "source_file": "decontamination/find_substrings.py",
+   "source_repo": "bigcode-project/bigcode-dataset",
+   "license": "check repo",
+   "sha256": "c95620ef20ef79578065a26350fcbd41c0025a93d9ff17837ca6a66ca77dbb06",
+   "lines": 326,
+   "first_line": "from copy import deepcopy",
+   "imports": [
+    "argparse",
+    "json",
+    "os",
+    "shutil",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:04:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "accelerator/__init__.py",
+   "source_repo": "microsoft/DeepSpeed",
+   "license": "check repo",
+   "sha256": "d69367bc65fd878d7c7a48d8fd79e96f7eb7b4ba3ee52cf0de27107fd851be4d",
+   "lines": 8,
+   "first_line": "# Copyright (c) Microsoft Corporation.",
+   "imports": [],
+   "registered": "2026-11-05 11:04:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "hpu_accelerator",
+   "source_file": "accelerator/hpu_accelerator.py",
+   "source_repo": "microsoft/DeepSpeed",
+   "license": "check repo",
+   "sha256": "af38cf6d93a6a7f2d655608a94bd2467617c07fadc4d68ecc429ab6f1eaf999b",
+   "lines": 331,
+   "first_line": "# Copyright (c) Microsoft Corporation.",
+   "imports": [
+    "functools",
+    "habana_frameworks",
+    "importlib",
+    "os",
+    "pkgutil",
+    "torch"
+   ],
+   "registered": "2026-11-05 11:04:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "si_openaccess",
+   "source_file": "src/si_openaccess/si_openaccess.py",
+   "source_repo": "Smithsonian/smithsonian-openaccess",
+   "license": "check repo",
+   "sha256": "cfb22ce213eea47396e2ff2c22eeb51a43f3b635ec7b463cda9250705387f602",
+   "lines": 130,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "requests"
+   ],
+   "registered": "2026-11-05 11:04:25",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "gen_emscripten_exported_json",
+   "source_file": "scripts/gen-emscripten-exported-json.py",
+   "source_repo": "WebAssembly/wabt",
+   "license": "check repo",
+   "sha256": "0919c0cf7bde0f3b17086d38bd464f822c85f3b974760ac28ad880b77500d8de",
+   "lines": 110,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:04:27",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "sha256sum",
+   "source_file": "scripts/sha256sum.py",
+   "source_repo": "WebAssembly/wabt",
+   "license": "check repo",
+   "sha256": "f98e2bfd5b4aa9703d1590b5ea86a4997af02fc7ef6f7328c62665f01f874838",
+   "lines": 39,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "hashlib",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:04:27",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "serve",
+   "source_file": "web/serve.py",
+   "source_repo": "OpenRsG/GunZRs",
+   "license": "check repo",
+   "sha256": "5936e689fa4be6fdb4e7e5bc93db36c509c014a0261e67820556a19a15186d84",
+   "lines": 76,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "http",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:04:28",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "integrations/hermes-agent/__init__.py",
+   "source_repo": "tt-a1i/archify",
+   "license": "check repo",
+   "sha256": "af0ac0d1239f9fc22aefb102916d7fda5f2d1e133b086189308cb4e73650d643",
+   "lines": 62,
+   "first_line": "\"\"\"Skill-only Hermes plugin for Archify.",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-05 11:04:29",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "config",
+   "source_file": "component-tests/config.py",
+   "source_repo": "cloudflare/cloudflared",
+   "license": "check repo",
+   "sha256": "04f1381b1b711a398f5d25bdd0f47ec176eeb78fdab1f770a0b321ad0aeae266",
+   "lines": 102,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "base64",
+    "copy",
+    "json"
+   ],
+   "registered": "2026-11-05 11:04:30",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conftest",
+   "source_file": "component-tests/conftest.py",
+   "source_repo": "cloudflare/cloudflared",
+   "license": "check repo",
+   "sha256": "d1bf7a54d6d498c6c0cdbe656062ad3ff4b6c576183963fa29297adb1a5794f9",
+   "lines": 56,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "pytest",
+    "yaml"
+   ],
+   "registered": "2026-11-05 11:04:30",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "cilium_external_links",
+   "source_file": "Documentation/_exts/cilium_external_links.py",
+   "source_repo": "cilium/cilium",
+   "license": "check repo",
+   "sha256": "77f82cd23756beb6a9479b99bb12114f3dfe0dc1177cf68edcac6bc339c50020",
+   "lines": 17,
+   "first_line": "from sphinx.writers.html5 import HTML5Translator",
+   "imports": [],
+   "registered": "2026-11-05 11:04:31",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "cilium_helm_directive",
+   "source_file": "Documentation/_exts/cilium_helm_directive.py",
+   "source_repo": "cilium/cilium",
+   "license": "check repo",
+   "sha256": "3ec9f07caf4cbcb1c9c8c8c2a3004ce30bc6e1b4145cace25c969351049a6d9b",
+   "lines": 201,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-05 11:04:31",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "boilerplate",
+   "source_file": "tools/boilerplate/boilerplate.py",
+   "source_repo": "envoyproxy/gateway",
+   "license": "check repo",
+   "sha256": "a4e832ac4f4b0d409e20fb3d1154d986e6e0077010d563cac4d8ba0a3e602376",
+   "lines": 257,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "datetime",
+    "difflib",
+    "glob",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:04:32",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "flux_local/__init__.py",
+   "source_repo": "allenporter/flux-local",
+   "license": "check repo",
+   "sha256": "f6cc02a19d61c8dbb9d6020d486eb7ce7a632114da865ca2c2f73003b6206d0d",
+   "lines": 21,
+   "first_line": "\"\"\"",
+   "imports": [
+    "warnings"
+   ],
+   "registered": "2026-11-05 11:04:32",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "config",
+   "source_file": "flux_local/config.py",
+   "source_repo": "allenporter/flux-local",
+   "license": "check repo",
+   "sha256": "0ee053a04372dccd6225f9bc5db5a3ad6a18b5393cc8ff4d9a275fed11d0864c",
+   "lines": 25,
+   "first_line": "\"\"\"Configuration objects for flux-local.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-05 11:04:32",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-05 10:03:01"
+ "built": "2026-11-05 11:04:32"
 }
