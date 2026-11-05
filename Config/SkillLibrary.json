@@ -11866,7 +11866,309 @@
    ],
    "registered": "2026-11-05 07:18:03",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "entities",
+   "source_file": "server/lib/entities.py",
+   "source_repo": "nat/openplayground",
+   "license": "check repo",
+   "sha256": "0a8aa4a5e2c69070b80cc2b6dc96606c5bfff78ca212286d502e2082a09d75c5",
+   "lines": 127,
+   "first_line": "import json",
+   "imports": [
+    "json"
+   ],
+   "registered": "2026-11-05 09:00:17",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "grab_notary_id",
+   "source_file": ".circleci/grab_notary_id.py",
+   "source_repo": "nomic-ai/gpt4all",
+   "license": "check repo",
+   "sha256": "6b76c92e1422c7b52702e065afdc802088289963cd214aa33e8907244745ae85",
+   "lines": 17,
+   "first_line": "import re",
+   "imports": [
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 09:00:18",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "app",
+   "source_file": "gpt4all-bindings/cli/app.py",
+   "source_repo": "nomic-ai/gpt4all",
+   "license": "check repo",
+   "sha256": "7511e892406e8b168f5e45d7be137323ea6ec2e5898b3fcb883a4e08e212aca1",
+   "lines": 185,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "importlib",
+    "io",
+    "sys",
+    "typer"
+   ],
+   "registered": "2026-11-05 09:00:18",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "GpuMemDumpVis",
+   "source_file": "tools/GpuMemDumpVis/GpuMemDumpVis.py",
+   "source_repo": "GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator",
+   "license": "check repo",
+   "sha256": "4878818fb72ae1bd7d8a72a14f67837c4d3ec0ade8ec74e268d82bfacad283aa",
+   "lines": 335,
+   "first_line": "#",
+   "imports": [
+    "argparse",
+    "json"
+   ],
+   "registered": "2026-11-05 09:00:20",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "seed",
+   "source_file": "docker/firestore/seed.py",
+   "source_repo": "libredb/libredb-studio",
+   "license": "check repo",
+   "sha256": "e5099bf2724e60830601bc2ff9230e296f3ae322534a1de2600872e3032a8ed4",
+   "lines": 45,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "sys",
+    "time",
+    "urllib"
+   ],
+   "registered": "2026-11-05 09:00:22",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bulk",
+   "source_file": "docker/influxdb/bulk.py",
+   "source_repo": "libredb/libredb-studio",
+   "license": "check repo",
+   "sha256": "b31f1793ea0f06edb17b1eb8cc23552f9491bf11d603b0df60daa4bf3b69bbe8",
+   "lines": 62,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "sys",
+    "time"
+   ],
+   "registered": "2026-11-05 09:00:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "kibitzr/kibitzr",
+   "license": "check repo",
+   "sha256": "348cfcff2f75767658522b758686d0a71c96c1bf4eae3065a0c70e1b59816052",
+   "lines": 274,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-05 09:00:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "kibitzr/__init__.py",
+   "source_repo": "kibitzr/kibitzr",
+   "license": "check repo",
+   "sha256": "a58a1d8c3f535f0c0a514fdc4535c035029b745205825fc4fb217d642e0b2b14",
+   "lines": 6,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [],
+   "registered": "2026-11-05 09:00:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "ageitgey/face_recognition",
+   "license": "check repo",
+   "sha256": "f0f91348fa5252df507f32a63334846172ed47a8f9f88857071aa0af9d40440e",
+   "lines": 285,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "face_recognition",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-05 09:00:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "benchmark",
+   "source_file": "examples/benchmark.py",
+   "source_repo": "ageitgey/face_recognition",
+   "license": "check repo",
+   "sha256": "8189f68b09b3767efed2784c63a7e22fc4e87103d3d385bb016665aaea5a1f47",
+   "lines": 78,
+   "first_line": "import timeit",
+   "imports": [
+    "timeit"
+   ],
+   "registered": "2026-11-05 09:00:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "admin",
+   "source_file": "bookmarks/admin.py",
+   "source_repo": "sissbruecker/linkding",
+   "license": "check repo",
+   "sha256": "e37fe3d2e6ca1e7ee26a2ab0f5fe636455f2eb9b31825e916b4797e181a52086",
+   "lines": 345,
+   "first_line": "import os",
+   "imports": [
+    "os"
+   ],
+   "registered": "2026-11-05 09:00:29",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "auth",
+   "source_file": "bookmarks/api/auth.py",
+   "source_repo": "sissbruecker/linkding",
+   "license": "check repo",
+   "sha256": "b31d8bad45c7af65f8fb9faf0a817e0d32bf3dec5f3b89d305669cdfc74270f4",
+   "lines": 39,
+   "first_line": "from django.utils.translation import gettext_lazy as _",
+   "imports": [],
+   "registered": "2026-11-05 09:00:30",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "evfl/__init__.py",
+   "source_repo": "zeldamods/evfl",
+   "license": "check repo",
+   "sha256": "e8c91e9246d2bc1bbdf66a94c457db3803feb94568aa4fddb9acdaa35c129e1b",
+   "lines": 10,
+   "first_line": "from evfl.actor import Actor",
+   "imports": [],
+   "registered": "2026-11-05 09:00:31",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "actor",
+   "source_file": "evfl/actor.py",
+   "source_repo": "zeldamods/evfl",
+   "license": "check repo",
+   "sha256": "cf004ae0407872760f40c12f6fe5f7cf78043ad502c31e151df31eca4772b349",
+   "lines": 127,
+   "first_line": "from evfl.common import ActorIdentifier, StringHolder",
+   "imports": [],
+   "registered": "2026-11-05 09:00:32",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conftest",
+   "source_file": "test/conftest.py",
+   "source_repo": "zeldamods/oead",
+   "license": "check repo",
+   "sha256": "910015b6c2fcd8995b163734eeb5a19668b466d2a03a1e802456cb1c9da526c4",
+   "lines": 5,
+   "first_line": "import sys",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-05 09:00:33",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "utils",
+   "source_file": "test/helpers/utils.py",
+   "source_repo": "zeldamods/oead",
+   "license": "check repo",
+   "sha256": "41b523019b7526b9a077d2c88c5939055f5abfd6a5d323627f21989bb432d347",
+   "lines": 37,
+   "first_line": "from pathlib import Path",
+   "imports": [
+    "pytest"
+   ],
+   "registered": "2026-11-05 09:00:34",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "switch_top_rmii_serial_adapter_timing",
+   "source_file": "examples/ice40_hx8k/switch_top_rmii_serial_adapter_timing.py",
+   "source_repo": "the-aerospace-corporation/satcat5",
+   "license": "check repo",
+   "sha256": "a56bc25b9047ae3a8d269cc13cd67d41aa46f5e8360d93291ffb961d67403de9",
+   "lines": 10,
+   "first_line": "##########################################################################",
+   "imports": [],
+   "registered": "2026-11-05 09:00:44",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "echo_demo",
+   "source_file": "examples/python/echo_demo.py",
+   "source_repo": "the-aerospace-corporation/satcat5",
+   "license": "check repo",
+   "sha256": "52067f16a28d6f0b187f3da9d9ca56453717efae784428994e855e754496c087",
+   "lines": 58,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [
+    "logging",
+    "os",
+    "satcat5_eth",
+    "sys",
+    "time"
+   ],
+   "registered": "2026-11-05 09:00:44",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "remove_php_end_tags",
+   "source_file": "phpBB/develop/remove-php-end-tags.py",
+   "source_repo": "phpbb/phpbb",
+   "license": "check repo",
+   "sha256": "0af62d97f0f3cea9547f969b73f8fb8531690fb96f39aa22cc2bcca544cb0590",
+   "lines": 66,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "optparse",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 09:00:45",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "setup",
+   "source_file": "pip-package/setup.py",
+   "source_repo": "taleshape-com/shaper",
+   "license": "check repo",
+   "sha256": "4e4fc963567b08a00feebae974c9a72a6cfaaab2ebdda2ec1a12d6fc0fe1d98f",
+   "lines": 8,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [],
+   "registered": "2026-11-05 09:00:46",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "pip-package/shaper_pkg/__init__.py",
+   "source_repo": "taleshape-com/shaper",
+   "license": "check repo",
+   "sha256": "0f45b711f10284ec4c37672fe08bc202095fd4fdc3a43736cd62e2cc754d2897",
+   "lines": 6,
+   "first_line": "# SPDX-License-Identifier: MPL-2.0",
+   "imports": [],
+   "registered": "2026-11-05 09:00:46",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-05 07:18:03"
+ "built": "2026-11-05 09:00:46"
 }

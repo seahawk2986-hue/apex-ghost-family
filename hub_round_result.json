@@ -1,113 +1,111 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-05 08:21:42",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "entities",
+   "repo": "nat/openplayground",
+   "sha256": "0a8aa4a5e2c69070"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "296e24e19dc05f00"
+   "skill": "grab_notary_id",
+   "repo": "nomic-ai/gpt4all",
+   "sha256": "6b76c92e1422c7b5"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "app",
+   "repo": "nomic-ai/gpt4all",
+   "sha256": "7511e892406e8b16"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "GpuMemDumpVis",
+   "repo": "GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator",
+   "sha256": "4878818fb72ae1bd"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "seed",
+   "repo": "libredb/libredb-studio",
+   "sha256": "e5099bf2724e6083"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "bulk",
+   "repo": "libredb/libredb-studio",
+   "sha256": "b31f1793ea0f06ed"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "conf",
+   "repo": "kibitzr/kibitzr",
+   "sha256": "348cfcff2f757676"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "__init__",
+   "repo": "kibitzr/kibitzr",
+   "sha256": "a58a1d8c3f535f0c"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "conf",
+   "repo": "ageitgey/face_recognition",
+   "sha256": "f0f91348fa5252df"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "benchmark",
+   "repo": "ageitgey/face_recognition",
+   "sha256": "8189f68b09b3767e"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "admin",
+   "repo": "sissbruecker/linkding",
+   "sha256": "e37fe3d2e6ca1e7e"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "auth",
+   "repo": "sissbruecker/linkding",
+   "sha256": "b31d8bad45c7af65"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "__init__",
+   "repo": "zeldamods/evfl",
+   "sha256": "e8c91e9246d2bc1b"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "actor",
+   "repo": "zeldamods/evfl",
+   "sha256": "cf004ae040787276"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "conftest",
+   "repo": "zeldamods/oead",
+   "sha256": "910015b6c2fcd899"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "utils",
+   "repo": "zeldamods/oead",
+   "sha256": "41b523019b7526b9"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "switch_top_rmii_serial_adapter_timing",
+   "repo": "the-aerospace-corporation/satcat5",
+   "sha256": "a56bc25b9047ae3a"
+  },
+  {
+   "skill": "echo_demo",
+   "repo": "the-aerospace-corporation/satcat5",
+   "sha256": "52067f16a28d6f0b"
+  },
+  {
+   "skill": "remove_php_end_tags",
+   "repo": "phpbb/phpbb",
+   "sha256": "0af62d97f0f3cea9"
+  },
+  {
+   "skill": "setup",
+   "repo": "taleshape-com/shaper",
+   "sha256": "4e4fc963567b08a0"
+  },
+  {
+   "skill": "__init__",
+   "repo": "taleshape-com/shaper",
+   "sha256": "0f45b711f10284ec"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-05 09:00:46"
 }
