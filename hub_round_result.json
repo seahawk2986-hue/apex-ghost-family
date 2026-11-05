@@ -1,111 +1,113 @@
 {
- "kind": "vet-line",
- "added": [
+ "hub": "actions-runner",
+ "ts": "2026-11-05 12:54:36",
+ "status": "done",
+ "lifecycle": "done",
+ "requested": 150,
+ "ok": 128,
+ "mines": [
   {
-   "skill": "create_external_cluster_resources_tests",
-   "repo": "rook/rook",
-   "sha256": "4b64ceba2867208e"
+   "repo": "ETLCPP/etl",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "286a3041456d2834"
   },
   {
-   "skill": "check_sprint_last_day",
-   "repo": "longhorn/longhorn",
-   "sha256": "b4f30a5176a39ebd"
+   "repo": "rfgplk/micron.cpp",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "296e24e19dc05f00"
   },
   {
-   "skill": "scan_and_notify_testing_items",
-   "repo": "longhorn/longhorn",
-   "sha256": "ab85dd8164104ebc"
+   "repo": "Pagghiu/SaneCppLibraries",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "4ab3813a8e445aa1"
   },
   {
-   "skill": "boilerplate",
-   "repo": "kubernetes-csi/csi-driver-nfs",
-   "sha256": "b93db788473c0868"
+   "repo": "gammasoft71/xtd",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "f6e929a357533ee9"
   },
   {
-   "skill": "boilerplate",
-   "repo": "kubernetes-csi/csi-driver-nfs",
-   "sha256": "c3c9ce1a478ec82c"
+   "repo": "hkr04/cpp-mcp",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "4ca78a1584382c28"
   },
   {
-   "skill": "boilerplate",
-   "repo": "kubernetes-csi/csi-driver-smb",
-   "sha256": "dc58170ced7a717d"
+   "repo": "Dobiasd/frugally-deep",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "ade0802382527573"
   },
   {
-   "skill": "aws_cleanup_legacy_txt_records",
-   "repo": "kubernetes-sigs/external-dns",
-   "sha256": "d161fbf43752a76f"
+   "repo": "flashlight/flashlight",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "83019abe4094c7cd"
   },
   {
-   "skill": "update_route53_k8s_txt_owner",
-   "repo": "kubernetes-sigs/external-dns",
-   "sha256": "e81bd0f65f1a9cec"
+   "repo": "oneapi-src/oneDNN",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "9137b16c7fe4662e"
   },
   {
-   "skill": "filter_commit_messages",
-   "repo": "Elumenotion/GuideAnts",
-   "sha256": "fa84dd6c1c615b58"
+   "repo": "volt-software/ichor",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "e242fb55b5beb55d"
   },
   {
-   "skill": "timeline_compile",
-   "repo": "Elumenotion/GuideAnts",
-   "sha256": "4ec2526f4d2e1805"
+   "repo": "libuv/libuv",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "c21a178b9518fea8"
   },
   {
-   "skill": "env",
-   "repo": "Martossien/transcria",
-   "sha256": "4f561411f8bd2ae7"
+   "repo": "skypjack/uvw",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "7bdd8e519a9cc6f2"
   },
   {
-   "skill": "8f2b6d0e4a1c_add_job_queue_waiting_order_index",
-   "repo": "Martossien/transcria",
-   "sha256": "159a2e171298a012"
+   "repo": "adamstark/AudioFile",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "b023032642cc770c"
   },
   {
-   "skill": "fixtures",
-   "repo": "zulip/zulip",
-   "sha256": "636968997d0cda6e"
+   "repo": "libAudioFlux/audioFlux",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "c983a1870ff2710d"
   },
   {
-   "skill": "time_utils",
-   "repo": "zulip/zulip",
-   "sha256": "b61e824bcc0a7657"
+   "repo": "ekg/vcflib",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "844371468ae93fab"
   },
   {
-   "skill": "crowdin_contributors",
-   "repo": "znc/znc",
-   "sha256": "9bc1be3d951293f6"
+   "repo": "p-ranav/argparse",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "63cf0d9102a78020"
   },
   {
-   "skill": "translation_tmpl",
-   "repo": "znc/znc",
-   "sha256": "1fc65324f06dc18e"
+   "repo": "jupyter-xeus/cpp-terminal",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "8eb309d6f4691864"
   },
   {
-   "skill": "app",
-   "repo": "middlewarehq/middleware",
-   "sha256": "625b0f1d5c6d92ec"
-  },
-  {
-   "skill": "env",
-   "repo": "middlewarehq/middleware",
-   "sha256": "d476fa86526238bb"
-  },
-  {
-   "skill": "timeseries_cli",
-   "repo": "jitsi/jitsi-videobridge",
-   "sha256": "212c4f6f864392f9"
-  },
-  {
-   "skill": "Changes",
-   "repo": "dgtlmoon/changedetection.io",
-   "sha256": "f640b1990b15076e"
-  },
-  {
-   "skill": "Import",
-   "repo": "dgtlmoon/changedetection.io",
-   "sha256": "b60e606a26741166"
+   "repo": "jcwangxp/Crossline",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "80b9ddc6b66b9f89"
   }
  ],
- "ts": "2026-11-05 11:59:26"
+ "rules_followed": true
 }
