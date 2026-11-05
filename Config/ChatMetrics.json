@@ -1,7 +1,6 @@
 {
  "recent": [
   {
-<<<<<<< Updated upstream
    "ts": "2026-11-03 23:47:40",
    "lane": "local-coder",
    "ttft_s": 12.499,
@@ -23,185 +22,6 @@
    "ts": "2026-11-03 23:49:44",
    "lane": "local-coder",
    "ttft_s": 21.961,
-=======
-   "ts": "2026-11-01 19:57:27",
-   "lane": "local-phi4",
-   "ttft_s": 8.632,
-   "chars_in": 3
-  },
-  {
-   "ts": "2026-11-01 19:59:06",
-   "lane": "local-phi4",
-   "ttft_s": 2.582,
-   "chars_in": 22
-  },
-  {
-   "ts": "2026-11-01 20:02:54",
-   "lane": "local-phi4",
-   "ttft_s": 2.48,
-   "chars_in": 35
-  },
-  {
-   "ts": "2026-11-01 20:16:46",
-   "lane": "local-phi4",
-   "ttft_s": 2.717,
-   "chars_in": 5
-  },
-  {
-   "ts": "2026-11-01 20:26:30",
-   "lane": "local-phi4",
-   "ttft_s": 2.548,
-   "chars_in": 25
-  },
-  {
-   "ts": "2026-11-01 20:58:12",
-   "lane": "local-phi4",
-   "ttft_s": 8.535,
-   "chars_in": 530
-  },
-  {
-   "ts": "2026-11-01 20:59:07",
-   "lane": "local-phi4",
-   "ttft_s": 2.483,
-   "chars_in": 45
-  },
-  {
-   "ts": "2026-11-01 20:59:51",
-   "lane": "local-phi4",
-   "ttft_s": 2.522,
-   "chars_in": 563
-  },
-  {
-   "ts": "2026-11-01 21:02:40",
-   "lane": "local-phi4",
-   "ttft_s": 2.865,
-   "chars_in": 26
-  },
-  {
-   "ts": "2026-11-01 21:04:19",
-   "lane": "local-phi4",
-   "ttft_s": 5.024,
-   "chars_in": 23
-  },
-  {
-   "ts": "2026-11-01 21:15:10",
-   "lane": "local-phi4",
-   "ttft_s": 2.832,
-   "chars_in": 24
-  },
-  {
-   "ts": "2026-11-01 21:46:12",
-   "lane": "local-phi4",
-   "ttft_s": 2.821,
-   "chars_in": 24
-  },
-  {
-   "ts": "2026-11-01 21:46:22",
-   "lane": "local-phi4",
-   "ttft_s": 2.603,
-   "chars_in": 13
-  },
-  {
-   "ts": "2026-11-01 21:52:10",
-   "lane": "local-phi4",
-   "ttft_s": 4.577,
-   "chars_in": 22
-  },
-  {
-   "ts": "2026-11-01 21:52:46",
-   "lane": "local-phi4",
-   "ttft_s": 9.918,
-   "chars_in": 51
-  },
-  {
-   "ts": "2026-11-02 08:21:02",
-   "lane": "groq",
-   "ttft_s": 0.435,
-   "chars_in": 153
-  },
-  {
-   "ts": "2026-11-02 08:35:06",
-   "lane": "groq",
-   "ttft_s": 0.608,
-   "chars_in": 2
-  },
-  {
-   "ts": "2026-11-02 08:35:37",
-   "lane": "groq",
-   "ttft_s": 0.806,
-   "chars_in": 2
-  },
-  {
-   "ts": "2026-11-02 08:39:17",
-   "lane": "groq",
-   "ttft_s": 0.681,
-   "chars_in": 2
-  },
-  {
-   "ts": "2026-11-02 08:39:28",
-   "lane": "groq",
-   "ttft_s": 0.404,
-   "chars_in": 21
-  },
-  {
-   "ts": "2026-11-02 08:39:54",
-   "lane": "local-phi4",
-   "ttft_s": 10.988,
-   "chars_in": 21
-  },
-  {
-   "ts": "2026-11-02 09:10:15",
-   "lane": "groq",
-   "ttft_s": 2.089,
-   "chars_in": 3
-  },
-  {
-   "ts": "2026-11-02 09:10:31",
-   "lane": "local-phi4",
-   "ttft_s": 8.6,
-   "chars_in": 19
-  },
-  {
-   "ts": "2026-11-02 18:28:20",
-   "lane": "groq",
-   "ttft_s": 0.929,
-   "chars_in": 5
-  },
-  {
-   "ts": "2026-11-02 18:45:49",
-   "lane": "groq",
-   "ttft_s": 0.565,
-   "chars_in": 69
-  },
-  {
-   "ts": "2026-11-02 19:02:14",
-   "lane": "groq",
-   "ttft_s": 0.529,
-   "chars_in": 1
-  },
-  {
-   "ts": "2026-11-02 19:04:01",
-   "lane": "local-phi4",
-   "ttft_s": 2.53,
-   "chars_in": 46
-  },
-  {
-   "ts": "2026-11-02 19:07:31",
-   "lane": "local-phi4",
-   "ttft_s": 2.929,
-   "chars_in": 78
-  },
-  {
-   "ts": "2026-11-02 19:07:33",
-   "lane": "local-phi4",
-   "ttft_s": 2.44,
-   "chars_in": 71
-  },
-  {
-   "ts": "2026-11-02 19:07:36",
-   "lane": "local-phi4",
-   "ttft_s": 2.522,
->>>>>>> Stashed changes
    "chars_in": 43
   },
   {
@@ -391,7 +211,6 @@
    "chars_in": 87
   },
   {
-<<<<<<< Updated upstream
    "ts": "2026-11-04 08:48:16",
    "lane": "local-coder",
    "ttft_s": 20.744,
@@ -480,60 +299,6 @@
    "lane": "groq",
    "ttft_s": 0.452,
    "chars_in": 19
-=======
-   "ts": "2026-11-02 19:26:35",
-   "lane": "local-phi4",
-   "ttft_s": 2.295,
-   "chars_in": 25
-  },
-  {
-   "ts": "2026-11-03 22:14:59",
-   "lane": "groq",
-   "ttft_s": 0.739,
-   "chars_in": 88
-  },
-  {
-   "ts": "2026-11-03 22:15:27",
-   "lane": "groq",
-   "ttft_s": 0.726,
-   "chars_in": 46
-  },
-  {
-   "ts": "2026-11-03 22:16:10",
-   "lane": "groq",
-   "ttft_s": 0.643,
-   "chars_in": 46
-  },
-  {
-   "ts": "2026-11-03 22:16:36",
-   "lane": "groq",
-   "ttft_s": 0.757,
-   "chars_in": 60
-  },
-  {
-   "ts": "2026-11-03 22:37:14",
-   "lane": "groq",
-   "ttft_s": 0.723,
-   "chars_in": 43
-  },
-  {
-   "ts": "2026-11-03 22:37:31",
-   "lane": "groq",
-   "ttft_s": 0.475,
-   "chars_in": 18
-  },
-  {
-   "ts": "2026-11-03 22:38:22",
-   "lane": "local-coder",
-   "ttft_s": 10.53,
-   "chars_in": 74
-  },
-  {
-   "ts": "2026-11-03 22:39:18",
-   "lane": "local-coder",
-   "ttft_s": 9.473,
-   "chars_in": 60
->>>>>>> Stashed changes
   }
  ]
 }

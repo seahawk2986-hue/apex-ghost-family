@@ -1,16 +1,8 @@
 {
-<<<<<<< Updated upstream
  "mode": "straining",
  "reason": "RAM guard: 0.36GB free < 2.0GB",
  "stress_streak": 13,
  "current_wait_s": 600,
  "since": "2026-11-04 19:35:00",
-=======
- "mode": "healthy",
- "reason": "OK (ram 6.68GB, cpu 8%, disk 413.2GB)",
- "stress_streak": 0,
- "current_wait_s": 0,
- "since": "2026-11-03 22:40:37",
->>>>>>> Stashed changes
  "lesson": "the self-abort lesson 2026-10-31: pacing never silently downsizes - every pause explains its why"
 }

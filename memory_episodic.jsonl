@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {"id": "2df9972e3384", "ts": "2026-11-04 06:43:23", "kind": "tdd", "text": "ApexIPCEngine.py: spec-first tests after targeted repair: FAILED", "meta": {"file": "ApexIPCEngine.py", "result": "FAILED"}, "imp": 0.8333333333333334}
 {"id": "c92448db9bc2", "ts": "2026-11-04 06:43:23", "kind": "error", "text": "ApexIPCEngine.py plan discarded: spec tests unresolved after repair", "meta": {"file": "ApexIPCEngine.py"}, "imp": 0.75}
 {"id": "6c428b74dbef", "ts": "2026-11-04 06:44:43", "kind": "planning_vote", "text": "votes={'trainingcalc.py': 1} modal=trainingcalc.py agree=1/1", "meta": {"file": "TrainingCalc.py", "agree": 1, "total": 1}, "imp": 0.8333333333333334}
@@ -570,7 +569,6 @@
 {"id": "e791f78c2759", "ts": "2026-11-04 19:34:34", "kind": "tdd", "text": "TrainingLogParser.py: spec-first tests FAILED", "meta": {"file": "TrainingLogParser.py", "result": "FAILED"}, "imp": 0.8333333333333334}
 {"id": "f7df59b8d6bf", "ts": "2026-11-04 19:35:00", "kind": "tdd", "text": "TrainingLogParser.py: spec-first tests after targeted repair: FAILED", "meta": {"file": "TrainingLogParser.py", "result": "FAILED"}, "imp": 0.8333333333333334}
 {"id": "6adcdb79d70f", "ts": "2026-11-04 19:35:00", "kind": "error", "text": "TrainingLogParser.py plan discarded: spec tests unresolved after repair", "meta": {"file": "TrainingLogParser.py"}, "imp": 0.75}
-=======
 {"id": "77269fd09a72", "ts": "2026-11-03 06:46:58", "kind": "tdd", "text": "ApexIPCEngine.py: spec-first tests after targeted repair: FAILED", "meta": {"file": "ApexIPCEngine.py", "result": "FAILED"}, "imp": 0.8333333333333334}
 {"id": "e830ed35d709", "ts": "2026-11-03 06:46:58", "kind": "error", "text": "ApexIPCEngine.py plan discarded: spec tests unresolved after repair", "meta": {"file": "ApexIPCEngine.py"}, "imp": 0.75}
 {"id": "ea6136e3adf1", "ts": "2026-11-03 06:57:22", "kind": "planning_vote", "text": "votes={'apexinstaller.py': 1} modal=apexinstaller.py agree=1/1", "meta": {"file": "ApexInstaller.py", "agree": 1, "total": 1}, "imp": 0.8333333333333334}
@@ -1371,4 +1369,3 @@
 {"id": "5e3705dc8cde", "ts": "2026-11-03 22:42:41", "kind": "tdd", "text": "test_reward.py: spec-first tests FAILED", "meta": {"file": "test_reward.py", "result": "FAILED"}, "imp": 0.8333333333333334}
 {"id": "f02a9566e354", "ts": "2026-11-03 22:42:51", "kind": "tdd", "text": "test_reward.py: spec-first tests after targeted repair: FAILED", "meta": {"file": "test_reward.py", "result": "FAILED"}, "imp": 0.8333333333333334}
 {"id": "19d5ab31cc8a", "ts": "2026-11-03 22:42:51", "kind": "error", "text": "test_reward.py plan discarded: spec tests unresolved after repair", "meta": {"file": "test_reward.py"}, "imp": 0.75}
->>>>>>> Stashed changes

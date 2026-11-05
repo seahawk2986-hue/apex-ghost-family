@@ -184,7 +184,6 @@
   "Rhymen/go-whatsapp",
   "Tjtoymaster/KING-TJAY-BAILEYS",
   "tseguine/grunkalunka",
-<<<<<<< Updated upstream
   "LunCoSim/lunco-space-jargon",
   "enhansome/enhansome-space",
   "sylvesterkaczmarek/awesome-assured-autonomy",
@@ -208,34 +207,6 @@
   "kodpen/PinegrapCMS",
   "avifenesh/computer-use-linux",
   "Mochi96336/bopomofo-trainer"
-=======
-  "enhansome/enhansome-space",
-  "LunCoSim/lunco-space-jargon",
-  "sylvesterkaczmarek/awesome-space-autonomy",
-  "sylvesterkaczmarek/awesome-assured-autonomy",
-  "pablosancheznunez/ixd-lab",
-  "nyx-space/anise",
-  "ben-n93/pyspaceweather",
-  "jarvis-starkz/VulnWatchdog",
-  "SpaceOceanCorp/space-water-logistics",
-  "stzifkas/pluto-ecss",
-  "brownj4/Tetra",
-  "dotchance/nodalarc",
-  "oresat/oresat-star-tracker-software",
-  "wselwood/orbcalc",
-  "OpenLST/openlst",
-  "bair-climate-initiative/metaearth",
-  "Salad109/SIMPLETON",
-  "swift-nav/libsbp",
-  "brandon-rhodes/python-sgp4",
-  "ShipItAndPray/orbital-compute",
-  "5OKB/grid-python-sdk",
-  "typpo/astrokit",
-  "mimitoz62/exostab",
-  "AndrewAnnex/SpiceyPy",
-  "cesabici-bit/satguard",
-  "orbital-sim-lab/space-ml-sim"
->>>>>>> Stashed changes
  ],
  "pending": [],
  "rotated": "2026-10-31"

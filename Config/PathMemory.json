@@ -43,11 +43,7 @@
   "champion": "base"
  },
  "andrew_help": {
-<<<<<<< Updated upstream
   "briefs": 248,
-=======
-  "briefs": 204,
->>>>>>> Stashed changes
   "alarmsRaised": 6,
   "lastHelp": "2026-10-31 22:18:04",
   "earn_briefs": [
@@ -372,7 +368,6 @@
     "text": "EarnLoop beat 45: the top unclaimed = Primeteumm/Screenshot-Enhancer; filed=False"
    },
    {
-<<<<<<< Updated upstream
     "ts": "2026-11-03 23:09:02",
     "text": "EarnLoop beat 26: the top unclaimed = Primeteumm/Screenshot-Enhancer; filed=False"
    },
@@ -551,10 +546,6 @@
    {
     "ts": "2026-11-04 18:09:05",
     "text": "EarnLoop beat 102: the top unclaimed = Primeteumm/Screenshot-Enhancer; filed=False"
-=======
-    "ts": "2026-11-03 22:39:02",
-    "text": "EarnLoop beat 24: the top unclaimed = Primeteumm/Screenshot-Enhancer; filed=False"
->>>>>>> Stashed changes
    }
   ]
  },
