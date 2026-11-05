@@ -1,111 +1,113 @@
 {
- "kind": "vet-line",
- "added": [
+ "hub": "actions-runner",
+ "ts": "2026-11-05 04:51:41",
+ "status": "done",
+ "lifecycle": "done",
+ "requested": 150,
+ "ok": 128,
+ "mines": [
   {
-   "skill": "interpolate_product_name",
-   "repo": "onetimesecret/onetimesecret",
-   "sha256": "e60ca40449c41c8f"
+   "repo": "ETLCPP/etl",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "286a3041456d2834"
   },
   {
-   "skill": "register_coverage",
-   "repo": "onetimesecret/onetimesecret",
-   "sha256": "0ba9ba7043bbf41f"
+   "repo": "rfgplk/micron.cpp",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "296e24e19dc05f00"
   },
   {
-   "skill": "version",
-   "repo": "leon-ai/leon",
-   "sha256": "870389b855042adb"
+   "repo": "Pagghiu/SaneCppLibraries",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "4ab3813a8e445aa1"
   },
   {
-   "skill": "__init__",
-   "repo": "Bhanunamikaze/Agentic-SEO-Skill",
-   "sha256": "372993bff3c6f273"
+   "repo": "gammasoft71/xtd",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "f6e929a357533ee9"
   },
   {
-   "skill": "a11y_seo_checker",
-   "repo": "Bhanunamikaze/Agentic-SEO-Skill",
-   "sha256": "87ca8325aae91aeb"
+   "repo": "hkr04/cpp-mcp",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "4ca78a1584382c28"
   },
   {
-   "skill": "generate_keys",
-   "repo": "Kenix3/libultraship",
-   "sha256": "cef535a95e18d699"
+   "repo": "Dobiasd/frugally-deep",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "ade0802382527573"
   },
   {
-   "skill": "sign",
-   "repo": "Kenix3/libultraship",
-   "sha256": "fef7829e0a635581"
+   "repo": "flashlight/flashlight",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "83019abe4094c7cd"
   },
   {
-   "skill": "set_value_test",
-   "repo": "stablyai/orca",
-   "sha256": "9b0bb72a867df8c1"
+   "repo": "oneapi-src/oneDNN",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "9137b16c7fe4662e"
   },
   {
-   "skill": "validate_package",
-   "repo": "blader/humanizer",
-   "sha256": "941bd99e52b2ba21"
+   "repo": "volt-software/ichor",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "e242fb55b5beb55d"
   },
   {
-   "skill": "cleanup",
-   "repo": "Leey21/arxiv-translator",
-   "sha256": "c33187cdf4400e5e"
+   "repo": "libuv/libuv",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "c21a178b9518fea8"
   },
   {
-   "skill": "download",
-   "repo": "Leey21/arxiv-translator",
-   "sha256": "ec5d6de172a1ae79"
+   "repo": "skypjack/uvw",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "7bdd8e519a9cc6f2"
   },
   {
-   "skill": "__init__",
-   "repo": "obra/superpowers",
-   "sha256": "767b7956f86b0343"
+   "repo": "adamstark/AudioFile",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "b023032642cc770c"
   },
   {
-   "skill": "analyze_token_usage",
-   "repo": "obra/superpowers",
-   "sha256": "b3b124b975086e66"
+   "repo": "libAudioFlux/audioFlux",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "c983a1870ff2710d"
   },
   {
-   "skill": "analyze_lod_flyby",
-   "repo": "hyqzz/Solar-Wanderer",
-   "sha256": "9b43b863b30980b8"
+   "repo": "ekg/vcflib",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "844371468ae93fab"
   },
   {
-   "skill": "cmp_metrics",
-   "repo": "hyqzz/Solar-Wanderer",
-   "sha256": "e8338a896b9a5b9c"
+   "repo": "p-ranav/argparse",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "63cf0d9102a78020"
   },
   {
-   "skill": "conf",
-   "repo": "ben-n93/pyspaceweather",
-   "sha256": "ac53f77e2675525a"
+   "repo": "jupyter-xeus/cpp-terminal",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "8eb309d6f4691864"
   },
   {
-   "skill": "__init__",
-   "repo": "ben-n93/pyspaceweather",
-   "sha256": "b06b296b99fd933a"
-  },
-  {
-   "skill": "build_docs",
-   "repo": "pragyaangaur/SETU",
-   "sha256": "76c6217e74494ccd"
-  },
-  {
-   "skill": "calibrate_delay",
-   "repo": "pragyaangaur/SETU",
-   "sha256": "e5192a0b889083ad"
-  },
-  {
-   "skill": "__init__",
-   "repo": "bair-climate-initiative/metaearth",
-   "sha256": "46c2388ab0ca22c6"
-  },
-  {
-   "skill": "api",
-   "repo": "bair-climate-initiative/metaearth",
-   "sha256": "9c744e45e6144cd7"
+   "repo": "jcwangxp/Crossline",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "80b9ddc6b66b9f89"
   }
  ],
- "ts": "2026-11-05 03:56:12"
+ "rules_followed": true
 }
