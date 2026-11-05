@@ -14367,7 +14367,163 @@
    ],
    "registered": "2026-11-05 18:58:37",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "auth",
+   "source_file": "management/auth.py",
+   "source_repo": "mail-in-a-box/mailinabox",
+   "license": "check repo",
+   "sha256": "c02ded90eea0781894885bd88778edfb72eb67d830b8995f10b4fa96d4ebe788",
+   "lines": 159,
+   "first_line": "import base64, hmac, json, secrets",
+   "imports": [
+    "base64",
+    "hmac",
+    "json",
+    "secrets",
+    "utils"
+   ],
+   "registered": "2026-11-05 19:56:38",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "cli",
+   "source_file": "management/cli.py",
+   "source_repo": "mail-in-a-box/mailinabox",
+   "license": "check repo",
+   "sha256": "dce155be1e72dca9f59fd73b8bb2ee69914a7c34e2aeb3d9d83e19719e3c6523",
+   "lines": 153,
+   "first_line": "#!/usr/bin/python3",
+   "imports": [
+    "contextlib",
+    "csv",
+    "getpass",
+    "json",
+    "sys",
+    "urllib"
+   ],
+   "registered": "2026-11-05 19:56:39",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "decompctx",
+   "source_file": "tools/decompctx.py",
+   "source_repo": "doldecomp/sms",
+   "license": "check repo",
+   "sha256": "803fe1339f6677fbfd1361ae677976a2233fe895b2778f345b4951561165b2dd",
+   "lines": 179,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "fnmatch",
+    "os",
+    "re"
+   ],
+   "registered": "2026-11-05 19:56:42",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "accessor_candidates",
+   "source_file": "tools/accessor-candidates.py",
+   "source_repo": "chasem-dev/sms-english",
+   "license": "check repo",
+   "sha256": "a1c3d5f52473e99d4153cc533d986659d070be412b68adff8fb77a261f139338",
+   "lines": 195,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 19:56:43",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "agent_timing",
+   "source_file": "tools/agent-timing.py",
+   "source_repo": "chasem-dev/sms-english",
+   "license": "check repo",
+   "sha256": "2325faefa525ccea823356b0b14a22cc0b06fe43e5dd19764696f6765b536a7c",
+   "lines": 62,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 19:56:44",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "download_tool",
+   "source_file": "tools/download_tool.py",
+   "source_repo": "SMGCommunity/Petari",
+   "license": "check repo",
+   "sha256": "d0f6a8de3b4b11835d7c3836ba61c71f108f340108424b017976b44171770df9",
+   "lines": 153,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "certifi",
+    "io",
+    "os",
+    "platform",
+    "shutil",
+    "ssl",
+    "stat",
+    "urllib",
+    "zipfile"
+   ],
+   "registered": "2026-11-05 19:56:46",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "audit_tus",
+   "source_file": "jp/tools/audit_tus.py",
+   "source_repo": "HalmyLyseas/VandalHearts-PcPort",
+   "license": "check repo",
+   "sha256": "cde972c4fef428cc406b81353fde0d3b3c2873e98d9c65f3905cb14a37b6926b",
+   "lines": 39,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-05 19:56:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "fix_linker_align",
+   "source_file": "jp/tools/fix_linker_align.py",
+   "source_repo": "HalmyLyseas/VandalHearts-PcPort",
+   "license": "check repo",
+   "sha256": "ddf7969e7bb17e1c1cca92cfdfdda0164c9fc8343971887b47da9993a35ef10a",
+   "lines": 57,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 19:56:47",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "pal16dis_chunked",
+   "source_file": "tools/converters/pal16dis_chunked.py",
+   "source_repo": "ACreTeam/ac-decomp",
+   "license": "check repo",
+   "sha256": "693d44368ac888affca0cb9858394e0aab13f57e5ff6b0edd28a6a30c054b350",
+   "lines": 67,
+   "first_line": "from argparse import ArgumentParser",
+   "imports": [
+    "ninja_syntax",
+    "os",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-05 19:56:48",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-05 18:58:37"
+ "built": "2026-11-05 19:56:50"
 }
