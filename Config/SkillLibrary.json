@@ -3407,7 +3407,7 @@
    "license": "check repo",
    "sha256": "6bc9269df79f6c211a0c72816d3c4a29a8491f0202ac56506a6a0c97855db1a9",
    "lines": 22,
-   "first_line": "\"\"\"User-data helpers — re-exported from ``crewai_core.user_data``.\"\"\"",
+   "first_line": "\"\"\"User-data helpers \u2014 re-exported from ``crewai_core.user_data``.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:12"
   },
@@ -3446,7 +3446,7 @@
    "license": "check repo",
    "sha256": "45ee86a7440b594196ed9578fa0346585184fb3d19b04ae248d2de9c529423dd",
    "lines": 24,
-   "first_line": "\"\"\"OAuth2 authentication primitives — shared by crewai and crewai-cli.\"\"\"",
+   "first_line": "\"\"\"OAuth2 authentication primitives \u2014 shared by crewai and crewai-cli.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:19"
   },
@@ -8327,7 +8327,7 @@
    "license": "check repo",
    "sha256": "0cf503ae3d98d07cc4645890b41d77e93c746e4302282364c50917cb63834cdd",
    "lines": 177,
-   "first_line": "\"\"\"Loader for the shared alarm keyword vocabulary — see ``data/alarm_keywords.js",
+   "first_line": "\"\"\"Loader for the shared alarm keyword vocabulary \u2014 see ``data/alarm_keywords.js",
    "imports": [
     "json"
    ],
@@ -9182,11 +9182,11 @@
    "skill": "__init__",
    "source_file": "src/satguard/__init__.py",
    "source_repo": "cesabici-bit/satguard",
-   "summary": "\"\"\"SatGuard — Open-source conjunction assessment pipeline.\"\"\"",
+   "summary": "\"\"\"SatGuard \u2014 Open-source conjunction assessment pipeline.\"\"\"",
    "license": "permissive (fetched)",
    "sha256": "e07816f9bd8d9463212651cdd29d14f642adfdbc6eb33e8ef01b7fcb31895727",
    "lines": 91,
-   "first_line": "\"\"\"SatGuard — Open-source conjunction assessment pipeline.\"\"\"",
+   "first_line": "\"\"\"SatGuard \u2014 Open-source conjunction assessment pipeline.\"\"\"",
    "imports": [],
    "registered": "2026-11-03 22:38:55"
   },
@@ -9932,7 +9932,330 @@
     "math"
    ],
    "registered": "2026-11-04 12:02:42"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "maptiler/tileserver-gl",
+   "license": "check repo",
+   "sha256": "b8bb528bca9d22fabf9ced7b0df7758145c5184335ab227368dbc8e67f8c9cc2",
+   "lines": 259,
+   "first_line": "# -*- coding: utf-8 -*-",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-05 01:00:17",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "env",
+   "source_file": "backend/alembic/env.py",
+   "source_repo": "feuerwehr-oberwil/kp-front",
+   "license": "check repo",
+   "sha256": "f27b359ad31c85353d926e5da0e6e300322819e0f07900c9e5376b79d9764da0",
+   "lines": 57,
+   "first_line": "\"\"\"Alembic environment \u2014 async engine, metadata from the app's models.\"\"\"",
+   "imports": [
+    "app",
+    "asyncio"
+   ],
+   "registered": "2026-11-05 01:00:46",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "address_ranges",
+   "source_file": "backend/app/address_ranges.py",
+   "source_repo": "feuerwehr-oberwil/kp-front",
+   "license": "check repo",
+   "sha256": "e3c45a08e0e9b9fc499749c98320bc9b25dbe890a39c464d244b2c99928d6d8b",
+   "lines": 211,
+   "first_line": "\"\"\"The addresses an object's NAME covers \u2014 \u00abStallenmattstrasse 2-14, Kaibmattweg",
+   "imports": [
+    "re",
+    "unicodedata"
+   ],
+   "registered": "2026-11-05 01:00:46",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_release_version",
+   "source_file": ".github/scripts/check_release_version.py",
+   "source_repo": "climate-analytics-lab/jax-rrtmgp",
+   "license": "check repo",
+   "sha256": "472c5a36038d93bbdcdec6c6813ebe0a6760f84a17c22dfac2cafb6c4bd688f1",
+   "lines": 77,
+   "first_line": "\"\"\"Fail a release build when the git tag and the built package version disagree.",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-05 01:00:56",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "rrtmgp/__init__.py",
+   "source_repo": "climate-analytics-lab/jax-rrtmgp",
+   "license": "check repo",
+   "sha256": "e4782b76695c89ed0c045289b125c1587dec4f10a18d13f56dbba961f8168743",
+   "lines": 15,
+   "first_line": "# Copyright 2024 The swirl_jatmos Authors.",
+   "imports": [],
+   "registered": "2026-11-05 01:00:56",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "glad/__init__.py",
+   "source_repo": "Dav1dde/glad",
+   "license": "check repo",
+   "sha256": "7b031873e37cdafa847f59cf17ea0baab693987726b10412b08a636071eaeb0d",
+   "lines": 4,
+   "first_line": "",
+   "imports": [],
+   "registered": "2026-11-05 01:00:58",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__main__",
+   "source_file": "glad/__main__.py",
+   "source_repo": "Dav1dde/glad",
+   "license": "check repo",
+   "sha256": "db827456ac89f20e943bd55421e1469f365dfeff69a17d59fefe94c4b3fd80c8",
+   "lines": 198,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "glad",
+    "logging",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-05 01:00:58",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "SearchTex",
+   "source_file": "Scripts/SearchTex.py",
+   "source_repo": "iryoku/smaa",
+   "license": "check repo",
+   "sha256": "1b42167a29a580487ccd9cf0a6c3f0d8ddc1f84eb07e0d5fad54f36cd3c63301",
+   "lines": 133,
+   "first_line": "#!python3",
+   "imports": [],
+   "registered": "2026-11-05 01:01:01",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "inspect_pdb_streams",
+   "source_file": "scripts/analysis/inspect-pdb-streams.py",
+   "source_repo": "N0zoM1z0/th08",
+   "license": "check repo",
+   "sha256": "f3ee9f2aa054d185a7dbb9c24685056bf112c51bc335c1c51fb498b69a697213",
+   "lines": 154,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "struct"
+   ],
+   "registered": "2026-11-05 01:01:07",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "probe_anonymous_namespaces",
+   "source_file": "scripts/analysis/probe-anonymous-namespaces.py",
+   "source_repo": "N0zoM1z0/th08",
+   "license": "check repo",
+   "sha256": "6656f4f7f5930bd3e5c8d9303edece5d78f141fc16fa23b20a5963bb41b26459",
+   "lines": 64,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "hashlib",
+    "json",
+    "shutil",
+    "sys"
+   ],
+   "registered": "2026-11-05 01:01:07",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "analysis_tools",
+   "source_file": "scripts/analysis_tools.py",
+   "source_repo": "N0zoM1z0/dx-ball",
+   "license": "check repo",
+   "sha256": "585322900b1750cd16089a76977f508ddacbb39998cf59278d811316dee965c6",
+   "lines": 25,
+   "first_line": "\"\"\"Attest installed Ghidra launch metadata and the JDK used by headless queries.",
+   "imports": [
+    "hashlib",
+    "tomllib"
+   ],
+   "registered": "2026-11-05 01:01:08",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "build_legacy",
+   "source_file": "scripts/build-legacy.py",
+   "source_repo": "N0zoM1z0/dx-ball",
+   "license": "check repo",
+   "sha256": "2c3ba4a61691825e3e461a2fd014151fe29bd9e736a025f5e38fabf7fd9ce111",
+   "lines": 253,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "re",
+    "shutil",
+    "sys",
+    "tomllib"
+   ],
+   "registered": "2026-11-05 01:01:08",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_fixture",
+   "source_file": "benchmarks/entity-model-document-2026-10-14/generate_fixture.py",
+   "source_repo": "ludovic111/horizon",
+   "license": "check repo",
+   "sha256": "7c0b94cd389cc9c8929a1566f74b323de2b0f08e0541290c123a1a8f34061976",
+   "lines": 32,
+   "first_line": "\"\"\"Generate a production-size synthetic document; no prepared assets required.\"\"",
+   "imports": [
+    "json",
+    "pathlib",
+    "sys"
+   ],
+   "registered": "2026-11-05 01:01:09",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "anvil_dump",
+   "source_file": "tools/anvil_dump.py",
+   "source_repo": "ludovic111/horizon",
+   "license": "check repo",
+   "sha256": "d07904636c99b87addfe5fc9db80b4d9ec6b4cca320592dd9e6237364d84d484",
+   "lines": 147,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "gzip",
+    "io",
+    "json",
+    "struct",
+    "sys",
+    "zlib"
+   ],
+   "registered": "2026-11-05 01:01:10",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "bundle_disc",
+   "source_file": "tools/bundle_disc.py",
+   "source_repo": "chasem-dev/sms-pc-port",
+   "license": "check repo",
+   "sha256": "1fa5f6daf6f9f265dd6b5298fcbd95d820cc593cc37264ac134f1ad53f651f54",
+   "lines": 183,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "os",
+    "shutil",
+    "struct",
+    "sys"
+   ],
+   "registered": "2026-11-05 01:01:11",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "contact",
+   "source_file": "tools/contact.py",
+   "source_repo": "chasem-dev/sms-pc-port",
+   "license": "check repo",
+   "sha256": "74af6115acd1977ebe9a66be72768775b246415d49d7b93efb23960a4413b877",
+   "lines": 13,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-05 01:01:11",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "specs",
+   "source_file": "tools/hd-sheets/specs.py",
+   "source_repo": "troyedwardsjr/z2rs",
+   "license": "check repo",
+   "sha256": "d45a65ad0e6d19dfaa7b485f8c76f60e7098a34d804a889a397e0328e0b44923",
+   "lines": 241,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 01:01:11",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "add_relaxed_self_declarations",
+   "source_file": "conker/conker/add_relaxed_self_declarations.py",
+   "source_repo": "sciaschi/CBFD-Recompiled",
+   "license": "check repo",
+   "sha256": "646158fd4b4af69d5f3ab31b73093e10b86e0b8526c0d1a270f0a1693fc8366f",
+   "lines": 196,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "re"
+   ],
+   "registered": "2026-11-05 01:01:12",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "diff_settings",
+   "source_file": "conker/conker/diff_settings.py",
+   "source_repo": "sciaschi/CBFD-Recompiled",
+   "license": "check repo",
+   "sha256": "7fa74fa3c36fb3122b86cd8ab3bd1f068c43798f5713cd80d53083dd6530c60a",
+   "lines": 10,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [],
+   "registered": "2026-11-05 01:01:12",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "collection_archive",
+   "source_file": "installer/collection_archive.py",
+   "source_repo": "Yokimitsuro/khdays-port",
+   "license": "check repo",
+   "sha256": "10bb22fb0bcf8aaaeff09739e0b3515343c4dfba6b555cc6a1a9b02dfa4e838e",
+   "lines": 215,
+   "first_line": "\"\"\"The KINGDOM HEARTS collections' archives (a `.hed` index and its `.pkg`), rea",
+   "imports": [
+    "hashlib",
+    "struct",
+    "sys",
+    "zlib"
+   ],
+   "registered": "2026-11-05 01:01:13",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "epic_library",
+   "source_file": "installer/epic_library.py",
+   "source_repo": "Yokimitsuro/khdays-port",
+   "license": "check repo",
+   "sha256": "c90d616e45636c0df98138a5a1ef9759e8bfedbed31d0be7573125dff390b2bf",
+   "lines": 53,
+   "first_line": "\"\"\"Where the Epic Games Store keeps the KINGDOM HEARTS collections on this compu",
+   "imports": [
+    "json",
+    "os"
+   ],
+   "registered": "2026-11-05 01:01:13",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-04 12:02:42"
+ "built": "2026-11-05 01:01:13"
 }

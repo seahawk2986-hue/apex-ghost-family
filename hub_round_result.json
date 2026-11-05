@@ -1,113 +1,111 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-05 00:48:01",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "conf",
+   "repo": "maptiler/tileserver-gl",
+   "sha256": "b8bb528bca9d22fa"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "296e24e19dc05f00"
+   "skill": "env",
+   "repo": "feuerwehr-oberwil/kp-front",
+   "sha256": "f27b359ad31c8535"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "address_ranges",
+   "repo": "feuerwehr-oberwil/kp-front",
+   "sha256": "e3c45a08e0e9b9fc"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "skill": "check_release_version",
+   "repo": "climate-analytics-lab/jax-rrtmgp",
+   "sha256": "472c5a36038d93bb"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "__init__",
+   "repo": "climate-analytics-lab/jax-rrtmgp",
+   "sha256": "e4782b76695c89ed"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "__init__",
+   "repo": "Dav1dde/glad",
+   "sha256": "7b031873e37cdafa"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "__main__",
+   "repo": "Dav1dde/glad",
+   "sha256": "db827456ac89f20e"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "SearchTex",
+   "repo": "iryoku/smaa",
+   "sha256": "1b42167a29a58048"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "inspect_pdb_streams",
+   "repo": "N0zoM1z0/th08",
+   "sha256": "f3ee9f2aa054d185"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "probe_anonymous_namespaces",
+   "repo": "N0zoM1z0/th08",
+   "sha256": "6656f4f7f5930bd3"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "analysis_tools",
+   "repo": "N0zoM1z0/dx-ball",
+   "sha256": "585322900b1750cd"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "build_legacy",
+   "repo": "N0zoM1z0/dx-ball",
+   "sha256": "2c3ba4a61691825e"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "generate_fixture",
+   "repo": "ludovic111/horizon",
+   "sha256": "7c0b94cd389cc9c8"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "anvil_dump",
+   "repo": "ludovic111/horizon",
+   "sha256": "d07904636c99b87a"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "bundle_disc",
+   "repo": "chasem-dev/sms-pc-port",
+   "sha256": "1fa5f6daf6f9f265"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "contact",
+   "repo": "chasem-dev/sms-pc-port",
+   "sha256": "74af6115acd1977e"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "specs",
+   "repo": "troyedwardsjr/z2rs",
+   "sha256": "d45a65ad0e6d19df"
+  },
+  {
+   "skill": "add_relaxed_self_declarations",
+   "repo": "sciaschi/CBFD-Recompiled",
+   "sha256": "646158fd4b4af69d"
+  },
+  {
+   "skill": "diff_settings",
+   "repo": "sciaschi/CBFD-Recompiled",
+   "sha256": "7fa74fa3c36fb312"
+  },
+  {
+   "skill": "collection_archive",
+   "repo": "Yokimitsuro/khdays-port",
+   "sha256": "10bb22fb0bcf8aaa"
+  },
+  {
+   "skill": "epic_library",
+   "repo": "Yokimitsuro/khdays-port",
+   "sha256": "c90d616e45636c0d"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-05 01:01:13"
 }
