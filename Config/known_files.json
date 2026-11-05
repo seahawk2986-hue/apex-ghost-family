@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 {"files": ["ApexIPCEngine.py", "ApexInstaller.py", "ApexPacing.py", "TrainingCalc.py", "TrainingLogParser.py", "TrainingMinStack.py", "test_reward.py"], "updated": "2026-11-04 19:30:45"}
+=======
+{"files": ["ApexIPCEngine.py", "ApexInstaller.py", "ApexPacing.py", "TrainingCalc.py", "TrainingLogParser.py", "TrainingMinStack.py", "test_reward.py"], "updated": "2026-11-03 22:41:16"}
+>>>>>>> Stashed changes

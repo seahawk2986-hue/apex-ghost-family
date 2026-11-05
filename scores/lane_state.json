@@ -1,5 +1,6 @@
 {
  "groq-120b": {
+<<<<<<< Updated upstream
   "pace_s": 2.5,
   "walls": 2,
   "oks": 73,
@@ -7,28 +8,52 @@
   "last_http": 200,
   "note": "alive",
   "last_ok_ts": 1793837822.3213313
+=======
+  "pace_s": 5.184000000000001,
+  "walls": 3,
+  "oks": 31,
+  "last": "22:17:02",
+  "last_http": 429,
+  "note": "rate window - will re-open",
+  "last_ok_ts": 1793706421.9911802
+>>>>>>> Stashed changes
  },
  "groq-qwen": {
   "pace_s": 2.5,
   "walls": 0,
+<<<<<<< Updated upstream
   "oks": 74,
   "last": "19:17:04",
   "last_http": 200,
   "last_ok_ts": 1793837824.1122901,
+=======
+  "oks": 34,
+  "last": "22:17:04",
+  "last_http": 200,
+  "last_ok_ts": 1793762224.1866648,
+>>>>>>> Stashed changes
   "note": "alive"
  },
  "cerebras-120b": {
   "pace_s": 2.5,
   "walls": 0,
+<<<<<<< Updated upstream
   "oks": 75,
   "last": "19:17:05",
   "last_http": 200,
   "last_ok_ts": 1793837825.800451,
+=======
+  "oks": 34,
+  "last": "22:17:05",
+  "last_http": 200,
+  "last_ok_ts": 1793762225.8439183,
+>>>>>>> Stashed changes
   "note": "alive"
  },
  "cerebras-qwen": {
   "pace_s": 2.5,
   "walls": 0,
+<<<<<<< Updated upstream
   "oks": 75,
   "last": "19:17:07",
   "last_http": 200,
@@ -52,32 +77,74 @@
   "last_http": 200,
   "note": "alive",
   "last_ok_ts": 1793837831.7923625
+=======
+  "oks": 34,
+  "last": "22:17:07",
+  "last_http": 200,
+  "last_ok_ts": 1793762227.5520222,
+  "note": "alive"
+ },
+ "or-ultra": {
+  "pace_s": 120.0,
+  "walls": 33,
+  "oks": 1,
+  "last": "22:17:09",
+  "last_http": 429,
+  "note": "free-models-per-day cap - re-probe after 00:00 UTC",
+  "last_ok_ts": 1793665029.4219668
+ },
+ "or-reason": {
+  "pace_s": 120.0,
+  "walls": 33,
+  "oks": 1,
+  "last": "22:17:11",
+  "last_http": 429,
+  "note": "same shared daily cap as or-ultra",
+  "last_ok_ts": 1793665031.378361
+>>>>>>> Stashed changes
  },
  "sflow-122b": {
   "pace_s": 2.5,
   "walls": 0,
   "oks": 0,
+<<<<<<< Updated upstream
   "last": "19:19:20",
+=======
+  "last": "22:19:21",
+>>>>>>> Stashed changes
   "last_http": 402,
   "note": "{\"code\":30001,\"message\":\"Sorry, your account balance is insufficient\","
  },
  "gemini-flash": {
   "pace_s": 120.0,
+<<<<<<< Updated upstream
   "walls": 56,
   "oks": 0,
   "last": "19:19:21",
+=======
+  "walls": 23,
+  "oks": 0,
+  "last": "22:19:23",
+>>>>>>> Stashed changes
   "last_http": 429,
   "note": "free-tier quota window - the pacer reopens it"
  },
  "gemini-pro": {
   "pace_s": 120.0,
+<<<<<<< Updated upstream
   "walls": 73,
   "oks": 0,
   "last": "19:19:23",
+=======
+  "walls": 32,
+  "oks": 0,
+  "last": "22:19:24",
+>>>>>>> Stashed changes
   "last_http": 429,
   "note": "rate window - will re-open"
  },
  "or-auto": {
+<<<<<<< Updated upstream
   "pace_s": 108.0,
   "walls": 62,
   "oks": 9,
@@ -85,6 +152,15 @@
   "last_http": 200,
   "note": "alive",
   "last_ok_ts": 1793837958.4881868
+=======
+  "pace_s": 120.0,
+  "walls": 29,
+  "oks": 1,
+  "last": "22:19:19",
+  "last_http": 429,
+  "note": "rate window - will re-open",
+  "last_ok_ts": 1793665158.0345254
+>>>>>>> Stashed changes
  },
  "nim-k3": {
   "note": "RETIRED (410 Gone) - AutoRoster watches for the model's return",
@@ -148,7 +224,11 @@
   "pace_s": 2.5,
   "walls": 0,
   "oks": 0,
+<<<<<<< Updated upstream
   "last": "19:19:16",
+=======
+  "last": "22:19:15",
+>>>>>>> Stashed changes
   "last_http": 410,
   "note": "{\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model "
  }

@@ -16,36 +16,61 @@
  },
  "groq": {
   "delivered": 0,
+<<<<<<< Updated upstream
   "failed": 20,
+=======
+  "failed": 1,
+>>>>>>> Stashed changes
   "rate": 0.0
  },
  "cerebras-120b": {
   "delivered": 0,
+<<<<<<< Updated upstream
   "failed": 20,
+=======
+  "failed": 1,
+>>>>>>> Stashed changes
   "rate": 0.0
  },
  "gemini": {
   "delivered": 0,
+<<<<<<< Updated upstream
   "failed": 17,
+=======
+  "failed": 1,
+>>>>>>> Stashed changes
   "rate": 0.0
  },
  "openrouter": {
   "delivered": 0,
+<<<<<<< Updated upstream
   "failed": 20,
+=======
+  "failed": 1,
+>>>>>>> Stashed changes
   "rate": 0.0
  },
  "nim-v41f": {
   "delivered": 0,
+<<<<<<< Updated upstream
   "failed": 20,
+=======
+  "failed": 1,
+>>>>>>> Stashed changes
   "rate": 0.0
  },
  "nim-glm": {
   "delivered": 0,
+<<<<<<< Updated upstream
   "failed": 20,
+=======
+  "failed": 1,
+>>>>>>> Stashed changes
   "rate": 0.0
  },
  "nim-kimi-k26": {
   "delivered": 0,
+<<<<<<< Updated upstream
   "failed": 20,
   "rate": 0.0
  },
@@ -60,6 +85,12 @@
   "rate": 0.0
  },
  "pollinations": {
+=======
+  "failed": 1,
+  "rate": 0.0
+ },
+ "nemotron-550b": {
+>>>>>>> Stashed changes
   "delivered": 1,
   "failed": 0,
   "rate": 1.0

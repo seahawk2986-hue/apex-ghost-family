@@ -4186,7 +4186,11 @@
    "action": null
   },
   {
+<<<<<<< Updated upstream
    "ts": "2026-11-03 23:14:02",
+=======
+   "ts": "2026-11-03 22:14:02",
+>>>>>>> Stashed changes
    "wall_s": 0.0,
    "before": [
     {
@@ -4222,7 +4226,11 @@
     {
      "cap": "autonomy",
      "score": 6.5,
+<<<<<<< Updated upstream
      "receipt": "earn_loop: filed=False beat=26",
+=======
+     "receipt": "earn_loop: filed=False beat=22",
+>>>>>>> Stashed changes
      "lever": "the daemon's first FILED proof"
     },
     {
@@ -4302,6 +4310,7 @@
     {
      "cap": "autonomy",
      "score": 6.5,
+<<<<<<< Updated upstream
      "receipt": "earn_loop: filed=False beat=26",
      "lever": "the daemon's first FILED proof"
     },
@@ -7603,6 +7612,9 @@
      "cap": "autonomy",
      "score": 6.5,
      "receipt": "earn_loop: filed=False beat=102",
+=======
+     "receipt": "earn_loop: filed=False beat=22",
+>>>>>>> Stashed changes
      "lever": "the daemon's first FILED proof"
     },
     {

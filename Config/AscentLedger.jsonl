@@ -367,6 +367,7 @@
 {"ts": "2026-11-02 19:55:03", "kind": "upward_alarm", "text": "goal 'safety' stalled 2050min (no external claims yet - the door stands open)"}
 {"ts": "2026-11-02 20:09:02", "kind": "upward", "what": "earn-loop-beat", "beat": 44, "unclaimed": 0, "filed": false}
 {"ts": "2026-11-02 20:24:02", "kind": "upward", "what": "earn-loop-beat", "beat": 45, "unclaimed": 0, "filed": false}
+<<<<<<< Updated upstream
 {"ts": "2026-11-03 23:09:02", "kind": "upward", "what": "earn-loop-beat", "beat": 26, "unclaimed": 0, "filed": false}
 {"ts": "2026-11-03 23:24:02", "kind": "upward", "what": "earn-loop-beat", "beat": 27, "unclaimed": 0, "filed": false}
 {"ts": "2026-11-03 23:39:02", "kind": "upward", "what": "earn-loop-beat", "beat": 28, "unclaimed": 0, "filed": false}
@@ -473,3 +474,6 @@
 {"ts": "2026-11-04 17:24:05", "kind": "upward", "what": "earn-loop-beat", "beat": 99, "unclaimed": 0, "filed": false}
 {"ts": "2026-11-04 17:39:05", "kind": "upward", "what": "earn-loop-beat", "beat": 100, "unclaimed": 0, "filed": false}
 {"ts": "2026-11-04 18:09:05", "kind": "upward", "what": "earn-loop-beat", "beat": 102, "unclaimed": 0, "filed": false}
+=======
+{"ts": "2026-11-03 22:39:02", "kind": "upward", "what": "earn-loop-beat", "beat": 24, "unclaimed": 0, "filed": false}
+>>>>>>> Stashed changes
