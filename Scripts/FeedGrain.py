@@ -40,12 +40,28 @@ for line in open(os.path.join(ADV, "swarm_findings.jsonl"),
                        "stars": r.get("stars") or 0,
                        "license": r.get("license_source") or ""}
 ordered = sorted(leads.values(), key=lambda x: -x["score"])[:2500]
+
+# THE CHURN GATE (2026-11-04, repo-hygiene repair): only rewrite + commit
+# when the LEAD SET actually changed; the ts field alone never counts as a
+# change. This ends the hourly "leads: the vet-feed 514" append-log spam
+# that grew .git into a journal of identical grains. Bug named where born:
+# Scripts/FeedGrain.py lines 42-48 (the version before this comment).
+prev = {}
+if os.path.exists(GRAIN):
+    try:
+        prev = json.load(open(GRAIN, encoding="utf-8-sig"))
+    except Exception:
+        prev = {}
+if prev.get("leads") == ordered:          # same leads = same grain = no-op
+    print(f"[feed]: {len(ordered)} ordered leads UNCHANGED (no write, no "
+          f"commit - the honest quiet round)")
+    sys.exit(0)
 tmp = GRAIN + ".tmp"
 with open(tmp, "w", encoding="utf-8") as f:
     json.dump({"ts": __import__("time").strftime("%Y-%m-%d %H:%M:%S"),
                "count": len(ordered), "leads": ordered}, f, indent=1)
 os.replace(tmp, GRAIN)
-print(f"[feed]: {len(ordered)} ordered leads written")
+print(f"[feed]: {len(ordered)} ordered leads written (lead-set changed)")
 
 r = sp.run(["git", "add", "family/leads_grain.json"], capture_output=True,
            text=True, timeout=60)
