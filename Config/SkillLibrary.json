@@ -13733,7 +13733,312 @@
    "imports": [],
    "registered": "2026-11-05 14:25:41",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "download_hf",
+   "source_file": "docker/ray-base/download_hf.py",
+   "source_repo": "kalavai-net/kalavai-client",
+   "license": "check repo",
+   "sha256": "5f7e716830eddf546fdd3f63a389c9a4934fabfd0afbbf8cebbcc97e47831693",
+   "lines": 48,
+   "first_line": "import argparse",
+   "imports": [
+    "argparse"
+   ],
+   "registered": "2026-11-05 17:16:50",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "billing_heartbeat",
+   "source_file": "docker/registrar/billing_heartbeat.py",
+   "source_repo": "kalavai-net/kalavai-client",
+   "license": "check repo",
+   "sha256": "c0aa5ae31aaba9c01569c0fe6abfe9534f4567ff441b9d9bd72ae817ff3e2c23",
+   "lines": 232,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "aiohttp",
+    "asyncio",
+    "json",
+    "logging",
+    "os",
+    "sys",
+    "time"
+   ],
+   "registered": "2026-11-05 17:16:51",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "reclassify",
+   "source_file": "hack/spine-probes/reclassify.py",
+   "source_repo": "defilantech/llmkube",
+   "license": "check repo",
+   "sha256": "0d1e13b9d3cee825654748e1aa1bff01e4cc9dcf1e663f3896559a57b3d830b9",
+   "lines": 127,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 17:16:52",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "run_probes",
+   "source_file": "hack/spine-probes/run_probes.py",
+   "source_repo": "defilantech/llmkube",
+   "license": "check repo",
+   "sha256": "81f7adc90f7ddf314acb6107dc5e18b400ce5e963be9e398b4db578e1975313b",
+   "lines": 193,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "re",
+    "time",
+    "urllib"
+   ],
+   "registered": "2026-11-05 17:16:53",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "conf",
+   "source_file": "docs/conf.py",
+   "source_repo": "volcengine/verl",
+   "license": "check repo",
+   "sha256": "2afb77335e1dda87a4b2d1ed4f1f77e72e72e2c97c2da1eeedc35c617443fd21",
+   "lines": 114,
+   "first_line": "# Copyright 2024 Bytedance Ltd. and/or its affiliates",
+   "imports": [],
+   "registered": "2026-11-05 17:16:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "aime2024_multiturn_w_tool",
+   "source_file": "examples/data_preprocess/aime2024_multiturn_w_tool.py",
+   "source_repo": "volcengine/verl",
+   "license": "check repo",
+   "sha256": "700505becc21f3057da72a115b9983b180efed40f157b160feaf2bd8af82578c",
+   "lines": 80,
+   "first_line": "# Copyright 2024 Bytedance Ltd. and/or its affiliates",
+   "imports": [
+    "argparse",
+    "datasets",
+    "os"
+   ],
+   "registered": "2026-11-05 17:16:54",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "math_normalize",
+   "source_file": "data_preprocessing/math_util/math_normalize.py",
+   "source_repo": "PRIME-RL/PRIME",
+   "license": "check repo",
+   "sha256": "f5f2d67ce4e6a44a1cd60562ac142c567d7a4bf6e696c669c7b5d41cb160065e",
+   "lines": 163,
+   "first_line": "\"\"\"",
+   "imports": [
+    "re"
+   ],
+   "registered": "2026-11-05 17:16:56",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "sft_prompt",
+   "source_file": "data_preprocessing/sft_prompt.py",
+   "source_repo": "PRIME-RL/PRIME",
+   "license": "check repo",
+   "sha256": "fb49285eb4349680215bb3887efc1f32ce63a3fb2a9a42ab2b151912476940b0",
+   "lines": 35,
+   "first_line": "SYS = \"\"\"When tackling complex reasoning tasks, you have access to the following",
+   "imports": [],
+   "registered": "2026-11-05 17:16:56",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "eval/ninfer_eval/__init__.py",
+   "source_repo": "natpate/ninfer-windows",
+   "license": "check repo",
+   "sha256": "045e6db849ebb7fced3cef24a03000b8194b78d015a49354e7643af419a0b7c1",
+   "lines": 4,
+   "first_line": "\"\"\"Repository-local capability evaluation coordinator.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-05 17:16:58",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__main__",
+   "source_file": "eval/ninfer_eval/__main__.py",
+   "source_repo": "natpate/ninfer-windows",
+   "license": "check repo",
+   "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+   "lines": 4,
+   "first_line": "from .cli import main",
+   "imports": [],
+   "registered": "2026-11-05 17:16:58",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "ace_step_python_warm_bench",
+   "source_file": "tests/ace_step/ace_step_python_warm_bench.py",
+   "source_repo": "0xShug0/audio.cpp",
+   "license": "check repo",
+   "sha256": "80ed21e709685670f36a203dd4a3a41e1c9459044cd182ecfa49a4c3f2c238a0",
+   "lines": 396,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "numpy",
+    "os",
+    "soundfile",
+    "sys",
+    "time",
+    "torch"
+   ],
+   "registered": "2026-11-05 17:17:00",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "convert_silence_latent",
+   "source_file": "tests/ace_step/convert_silence_latent.py",
+   "source_repo": "0xShug0/audio.cpp",
+   "license": "check repo",
+   "sha256": "6655a1f4fa52c9e052fbd90a02021d3a566803c3628d7cc7082bfb4d7c605efc",
+   "lines": 61,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "torch"
+   ],
+   "registered": "2026-11-05 17:17:00",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "SpeakType/app/__init__.py",
+   "source_repo": "kigner/audio.cpp-webui",
+   "license": "check repo",
+   "sha256": "fdb4120b3291617187cb780b4eee43cae01d4abcf0e40e8dd4ba8ddb08451b47",
+   "lines": 3,
+   "first_line": "\"\"\"SpeakType local ASR demo.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-05 17:17:03",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "audio_capture",
+   "source_file": "SpeakType/app/audio_capture.py",
+   "source_repo": "kigner/audio.cpp-webui",
+   "license": "check repo",
+   "sha256": "e5f64fa07e7178650da8b3b694ebd920e486a34c16e1d69ffa51f8b8ea69122e",
+   "lines": 172,
+   "first_line": "from __future__ import annotations",
+   "imports": [
+    "logging",
+    "numpy",
+    "queue",
+    "sounddevice",
+    "sys",
+    "time"
+   ],
+   "registered": "2026-11-05 17:17:03",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "import_webui_locales",
+   "source_file": "tools/locales/import_webui_locales.py",
+   "source_repo": "christopherthompson81/AudioCpp-Bindings",
+   "license": "check repo",
+   "sha256": "19566734e0e2f72cb4b2339f43bd3b4db5e66e51112569874738550083f555e4",
+   "lines": 175,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "re",
+    "sys",
+    "xml"
+   ],
+   "registered": "2026-11-05 17:17:04",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "make_pseudo_locale",
+   "source_file": "tools/locales/make_pseudo_locale.py",
+   "source_repo": "christopherthompson81/AudioCpp-Bindings",
+   "license": "check repo",
+   "sha256": "022b09faf1d12644f101b8198896d49a600731a4fd859eed4d9ed5699a075ced",
+   "lines": 51,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "xml"
+   ],
+   "registered": "2026-11-05 17:17:04",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "docs",
+   "source_file": "cmake/docs/docs.py",
+   "source_repo": "nasa/fprime",
+   "license": "check repo",
+   "sha256": "968baf8fc6ec6242ec05c82e74e7d3f27bb9d8a0b5b199b7f8902c073ca8a6a8",
+   "lines": 108,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "enum",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 17:17:06",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "ini_to_stdio",
+   "source_file": "cmake/settings/ini-to-stdio.py",
+   "source_repo": "nasa/fprime",
+   "license": "check repo",
+   "sha256": "639a647601f5151f05ce25e0e04cde47f26460dec9740d3117f32185fe61516a",
+   "lines": 107,
+   "first_line": "\"\"\"ini-to-stdio.py:",
+   "imports": [
+    "argparse",
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-05 17:17:07",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "gpustack/__init__.py",
+   "source_repo": "gpustack/gpustack",
+   "license": "check repo",
+   "sha256": "86478bfb0247f65464b42326363a9886ca225be28c6d19b2a9f054387e8325a5",
+   "lines": 17,
+   "first_line": "__version__ = '0.0.0'",
+   "imports": [],
+   "registered": "2026-11-05 17:17:08",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "exceptions",
+   "source_file": "gpustack/api/exceptions.py",
+   "source_repo": "gpustack/gpustack",
+   "license": "check repo",
+   "sha256": "5712ae5be16171d863a7a60150e617d0922a0f41dfa659e20f404591066b3177",
+   "lines": 293,
+   "first_line": "from typing import Any, Dict, Optional",
+   "imports": [
+    "httpx",
+    "logging"
+   ],
+   "registered": "2026-11-05 17:17:08",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-05 14:25:41"
+ "built": "2026-11-05 17:17:08"
 }
