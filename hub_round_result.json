@@ -1,113 +1,111 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-05 14:12:39",
- "status": "done",
- "lifecycle": "done",
- "requested": 150,
- "ok": 128,
- "mines": [
+ "kind": "vet-line",
+ "added": [
   {
-   "repo": "ETLCPP/etl",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "286a3041456d2834"
+   "skill": "attn_and_long_ctx_patches",
+   "repo": "ymcui/Chinese-LLaMA-Alpaca-2",
+   "sha256": "5380f3466354fb06"
   },
   {
-   "repo": "rfgplk/micron.cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "296e24e19dc05f00"
+   "skill": "eval",
+   "repo": "ymcui/Chinese-LLaMA-Alpaca-2",
+   "sha256": "2ce2d8c10cb424cf"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "skill": "lm_harness_eval",
+   "repo": "state-spaces/mamba",
+   "sha256": "830bca2473837a3f"
   },
   {
-   "repo": "gammasoft71/xtd",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4039bb5d9226c038"
+   "skill": "__init__",
+   "repo": "state-spaces/mamba",
+   "sha256": "d96b346da56c3c63"
   },
   {
-   "repo": "hkr04/cpp-mcp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "skill": "convert_llama_weights_to_hf",
+   "repo": "bofenghuang/vigogne",
+   "sha256": "7ff92d5e07aa167c"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "skill": "generate_responses",
+   "repo": "bofenghuang/vigogne",
+   "sha256": "9941210d4f049885"
   },
   {
-   "repo": "flashlight/flashlight",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "skill": "trainer",
+   "repo": "BlinkDL/RWKV-LM",
+   "sha256": "998a353be08b3596"
   },
   {
-   "repo": "oneapi-src/oneDNN",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "skill": "utils",
+   "repo": "BlinkDL/RWKV-LM",
+   "sha256": "90d7ec6a8b73a6bc"
   },
   {
-   "repo": "volt-software/ichor",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "skill": "numerical_reasoning_arithmetic",
+   "repo": "EleutherAI/pythia",
+   "sha256": "7bf0a7bc84331ece"
   },
   {
-   "repo": "libuv/libuv",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
+   "skill": "numerical_reasoning_time_unit_conversion",
+   "repo": "EleutherAI/pythia",
+   "sha256": "8b6972eb3a604335"
   },
   {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
+   "skill": "constants",
+   "repo": "BAAI-DCAI/Bunny",
+   "sha256": "c56a6ce35d32a144"
   },
   {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
+   "skill": "conversation",
+   "repo": "BAAI-DCAI/Bunny",
+   "sha256": "67309455ad89eaa3"
   },
   {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "skill": "find_includes",
+   "repo": "undreamai/LlamaLib",
+   "sha256": "eaaca40ad007391b"
   },
   {
-   "repo": "ekg/vcflib",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "skill": "create_build_script",
+   "repo": "undreamai/LlamaLib",
+   "sha256": "726f41f1fa92b34b"
   },
   {
-   "repo": "p-ranav/argparse",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "skill": "eval",
+   "repo": "ymcui/Chinese-LLaMA-Alpaca",
+   "sha256": "74d39e1290fe8a28"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "skill": "evaluator",
+   "repo": "ymcui/Chinese-LLaMA-Alpaca",
+   "sha256": "2366ddbc36744797"
   },
   {
-   "repo": "jcwangxp/Crossline",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "skill": "command_line",
+   "repo": "intentee/paddler",
+   "sha256": "821dc9ccbce28403"
+  },
+  {
+   "skill": "convertible_kev_checkpoint",
+   "repo": "intentee/paddler",
+   "sha256": "27926496d085b48d"
+  },
+  {
+   "skill": "update_tooltips",
+   "repo": "undreamai/LLMUnity",
+   "sha256": "c8bc1e7980668eab"
+  },
+  {
+   "skill": "main",
+   "repo": "InftyAI/llmaz",
+   "sha256": "2941affdfb6e1938"
+  },
+  {
+   "skill": "constant",
+   "repo": "InftyAI/llmaz",
+   "sha256": "dba2f2bb758064be"
   }
  ],
- "rules_followed": true
+ "ts": "2026-11-05 14:25:41"
 }
