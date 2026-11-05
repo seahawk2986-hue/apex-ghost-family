@@ -120,3 +120,1284 @@
 {"ts": "2026-11-03 21:48:03", "ev": "TRIED", "gen": 4, "op": "meta", "child": 0.36057, "lat": 0.136}
 {"ts": "2026-11-03 21:48:03", "ev": "TRIED", "gen": 4, "op": "meta", "child": 0.36057, "lat": 0.136}
 {"ts": "2026-11-03 21:48:03", "ev": "DISCARD", "gen": 4, "op": "meta", "child": 0.36057, "parent": 0.36057, "task": "builtin", "lat": 0.136}
+{"ts": "2026-11-03 22:48:02", "ev": "WAKE", "gen": 3, "parent": 0.36057, "task": "builtin"}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 4, "op": "graft", "child": 0.221772, "lat": 0.185}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 4, "op": "jit", "child": 0.361149, "lat": 0.185}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 4, "op": "swap", "child": 0.36057, "lat": 0.185}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 4, "op": "swap", "child": 0.36057, "lat": 0.185}
+{"ts": "2026-11-03 22:48:02", "ev": "PROMOTE", "gen": 4, "op": "graft", "child": 0.221772, "parent": 0.221772, "task": "builtin", "lat": 0.185}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 5, "op": "swap", "child": 1.19022, "lat": 0.16}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 5, "op": "graft", "child": 0.658835, "lat": 0.16}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 5, "op": "graft", "child": 1.758375, "lat": 0.16}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 5, "op": "meta", "child": 0.221772, "lat": 0.16}
+{"ts": "2026-11-03 22:48:02", "ev": "DISCARD", "gen": 5, "op": "meta", "child": 0.221772, "parent": 0.221772, "task": "builtin", "lat": 0.16}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 5, "op": "jit", "child": 0.221063, "lat": 0.146}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 5, "op": "graft", "child": 0.386594, "lat": 0.146}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 5, "op": "prune", "child": 0.384863, "lat": 0.146}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 5, "op": "meta", "child": 0.221772, "lat": 0.146}
+{"ts": "2026-11-03 22:48:02", "ev": "PROMOTE", "gen": 5, "op": "jit", "child": 0.221063, "parent": 0.221063, "task": "builtin", "lat": 0.146}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 6, "op": "graft", "child": 4.708725, "lat": 0.188}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 6, "op": "jit", "child": 0.130694, "lat": 0.188}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 6, "op": "jit", "child": 0.371667, "lat": 0.188}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 6, "op": "jit", "child": 0.236856, "lat": 0.188}
+{"ts": "2026-11-03 22:48:02", "ev": "PROMOTE", "gen": 6, "op": "jit", "child": 0.130694, "parent": 0.130694, "task": "builtin", "lat": 0.188}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 7, "op": "jit", "child": 0.137608, "lat": 0.135}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 7, "op": "swap", "child": 0.130694, "lat": 0.135}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 7, "op": "graft", "child": 1.526267, "lat": 0.135}
+{"ts": "2026-11-03 22:48:02", "ev": "TRIED", "gen": 7, "op": "jit", "child": 0.1229, "lat": 0.135}
+{"ts": "2026-11-03 22:48:02", "ev": "PROMOTE", "gen": 7, "op": "jit", "child": 0.1229, "parent": 0.1229, "task": "builtin", "lat": 0.135}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "jit", "child": 0.129983, "lat": 0.144}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "prune", "child": 0.422484, "lat": 0.144}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "graft", "child": 0.15589, "lat": 0.144}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "jit", "child": 0.133603, "lat": 0.144}
+{"ts": "2026-11-03 22:48:03", "ev": "DISCARD", "gen": 8, "op": "jit", "child": 0.129983, "parent": 0.1229, "task": "builtin", "lat": 0.144}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "meta", "child": 0.1229, "lat": 0.138}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "jit", "child": 0.21099, "lat": 0.138}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "graft", "child": 4.512995, "lat": 0.138}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "meta", "child": 0.1229, "lat": 0.138}
+{"ts": "2026-11-03 22:48:03", "ev": "DISCARD", "gen": 8, "op": "meta", "child": 0.1229, "parent": 0.1229, "task": "builtin", "lat": 0.138}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "graft", "child": 0.78334, "lat": 0.135}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "jit", "child": 0.146265, "lat": 0.135}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "jit", "child": 0.166243, "lat": 0.135}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "jit", "child": 0.130886, "lat": 0.135}
+{"ts": "2026-11-03 22:48:03", "ev": "DISCARD", "gen": 8, "op": "jit", "child": 0.130886, "parent": 0.1229, "task": "builtin", "lat": 0.135}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "jit", "child": 0.130644, "lat": 0.135}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "meta", "child": 0.1229, "lat": 0.135}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "swap", "child": 0.120522, "lat": 0.135}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 8, "op": "meta", "child": 0.1229, "lat": 0.135}
+{"ts": "2026-11-03 22:48:03", "ev": "PROMOTE", "gen": 8, "op": "swap", "child": 0.120522, "parent": 0.120522, "task": "builtin", "lat": 0.135}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 9, "op": "swap", "child": 0.135959, "lat": 0.143}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 9, "op": "swap", "child": 0.120522, "lat": 0.143}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 9, "op": "meta", "child": 0.120522, "lat": 0.143}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 9, "op": "jit", "child": 0.127201, "lat": 0.143}
+{"ts": "2026-11-03 22:48:03", "ev": "DISCARD", "gen": 9, "op": "swap", "child": 0.120522, "parent": 0.120522, "task": "builtin", "lat": 0.143}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 9, "op": "meta", "child": 0.120522, "lat": 0.159}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 9, "op": "prune", "child": 0.402841, "lat": 0.159}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 9, "op": "swap", "child": 0.120522, "lat": 0.159}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 9, "op": "jit", "child": 0.176712, "lat": 0.159}
+{"ts": "2026-11-03 22:48:03", "ev": "DISCARD", "gen": 9, "op": "meta", "child": 0.120522, "parent": 0.120522, "task": "builtin", "lat": 0.159}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 9, "op": "meta", "child": 0.120522, "lat": 0.167}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 9, "op": "jit", "child": 0.127851, "lat": 0.167}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 9, "op": "jit", "child": 0.166321, "lat": 0.167}
+{"ts": "2026-11-03 22:48:03", "ev": "TRIED", "gen": 9, "op": "swap", "child": 0.120522, "lat": 0.167}
+{"ts": "2026-11-03 22:48:03", "ev": "DISCARD", "gen": 9, "op": "meta", "child": 0.120522, "parent": 0.120522, "task": "builtin", "lat": 0.167}
+{"ts": "2026-11-03 23:48:02", "ev": "WAKE", "gen": 8, "parent": 0.120522, "task": "builtin"}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 9, "op": "graft", "child": 0.414588, "lat": 0.173}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 9, "op": "prune", "child": 0.105778, "lat": 0.173}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 9, "op": "meta", "child": 0.120522, "lat": 0.173}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 9, "op": "swap", "child": 0.120522, "lat": 0.173}
+{"ts": "2026-11-03 23:48:02", "ev": "PROMOTE", "gen": 9, "op": "prune", "child": 0.105778, "parent": 0.105778, "task": "builtin", "lat": 0.173}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "graft", "child": 0.676742, "lat": 0.145}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "swap", "child": 2.291515, "lat": 0.145}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.115046, "lat": 0.145}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "swap", "child": 1.100723, "lat": 0.145}
+{"ts": "2026-11-03 23:48:02", "ev": "DISCARD", "gen": 10, "op": "jit", "child": 0.115046, "parent": 0.105778, "task": "builtin", "lat": 0.145}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "graft", "child": 0.953891, "lat": 0.136}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.277778, "lat": 0.136}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.182704, "lat": 0.136}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "graft", "child": 2.566201, "lat": 0.136}
+{"ts": "2026-11-03 23:48:02", "ev": "DISCARD", "gen": 10, "op": "jit", "child": 0.182704, "parent": 0.105778, "task": "builtin", "lat": 0.136}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "meta", "child": 0.105778, "lat": 0.135}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "graft", "child": 2.349483, "lat": 0.135}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "graft", "child": 1.861091, "lat": 0.135}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.114204, "lat": 0.135}
+{"ts": "2026-11-03 23:48:02", "ev": "DISCARD", "gen": 10, "op": "meta", "child": 0.105778, "parent": 0.105778, "task": "builtin", "lat": 0.135}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.113535, "lat": 0.137}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.183401, "lat": 0.137}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "swap", "child": 0.843647, "lat": 0.137}
+{"ts": "2026-11-03 23:48:02", "ev": "TRIED", "gen": 10, "op": "meta", "child": 0.105778, "lat": 0.137}
+{"ts": "2026-11-03 23:48:02", "ev": "DISCARD", "gen": 10, "op": "meta", "child": 0.105778, "parent": 0.105778, "task": "builtin", "lat": 0.137}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.264005, "lat": 0.13}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "swap", "child": 1.216778, "lat": 0.13}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "graft", "child": 3.768825, "lat": 0.13}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "meta", "child": 0.105778, "lat": 0.13}
+{"ts": "2026-11-03 23:48:03", "ev": "DISCARD", "gen": 10, "op": "meta", "child": 0.105778, "parent": 0.105778, "task": "builtin", "lat": 0.13}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "graft", "child": 1.403777, "lat": 0.134}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.140429, "lat": 0.134}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "prune", "child": 0.397432, "lat": 0.134}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.114021, "lat": 0.134}
+{"ts": "2026-11-03 23:48:03", "ev": "DISCARD", "gen": 10, "op": "jit", "child": 0.114021, "parent": 0.105778, "task": "builtin", "lat": 0.134}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.105939, "lat": 0.155}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "meta", "child": 0.105778, "lat": 0.155}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "graft", "child": 1.498776, "lat": 0.155}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "prune", "child": 0.46323, "lat": 0.155}
+{"ts": "2026-11-03 23:48:03", "ev": "DISCARD", "gen": 10, "op": "meta", "child": 0.105778, "parent": 0.105778, "task": "builtin", "lat": 0.155}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "graft", "child": 4.127921, "lat": 0.155}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.156527, "lat": 0.155}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "graft", "child": 4.995589, "lat": 0.155}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "graft", "child": 0.387982, "lat": 0.155}
+{"ts": "2026-11-03 23:48:03", "ev": "DISCARD", "gen": 10, "op": "jit", "child": 0.156527, "parent": 0.105778, "task": "builtin", "lat": 0.155}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "meta", "child": 0.105778, "lat": 0.147}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "meta", "child": 0.105778, "lat": 0.147}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "graft", "child": 2.368358, "lat": 0.147}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.124473, "lat": 0.147}
+{"ts": "2026-11-03 23:48:03", "ev": "DISCARD", "gen": 10, "op": "meta", "child": 0.105778, "parent": 0.105778, "task": "builtin", "lat": 0.147}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "meta", "child": 0.105778, "lat": 0.152}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "prune", "child": 2.479354, "lat": 0.152}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "graft", "child": 2.169175, "lat": 0.152}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "meta", "child": 0.105778, "lat": 0.152}
+{"ts": "2026-11-03 23:48:03", "ev": "DISCARD", "gen": 10, "op": "meta", "child": 0.105778, "parent": 0.105778, "task": "builtin", "lat": 0.152}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "meta", "child": 0.105778, "lat": 0.185}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.099519, "lat": 0.185}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "jit", "child": 0.183391, "lat": 0.185}
+{"ts": "2026-11-03 23:48:03", "ev": "TRIED", "gen": 10, "op": "meta", "child": 0.105778, "lat": 0.185}
+{"ts": "2026-11-03 23:48:03", "ev": "PROMOTE", "gen": 10, "op": "jit", "child": 0.099519, "parent": 0.099519, "task": "builtin", "lat": 0.185}
+{"ts": "2026-11-04 00:48:02", "ev": "WAKE", "gen": 10, "parent": 0.099519, "task": "builtin"}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 11, "op": "meta", "child": 0.099519, "lat": 0.161}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 11, "op": "graft", "child": 1.713621, "lat": 0.161}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 11, "op": "meta", "child": 0.099519, "lat": 0.161}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 11, "op": "prune", "child": 0.283943, "lat": 0.161}
+{"ts": "2026-11-04 00:48:02", "ev": "DISCARD", "gen": 11, "op": "meta", "child": 0.099519, "parent": 0.099519, "task": "builtin", "lat": 0.161}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 11, "op": "graft", "child": 0.942469, "lat": 0.141}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 11, "op": "jit", "child": 0.115835, "lat": 0.141}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 11, "op": "meta", "child": 0.099519, "lat": 0.141}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 11, "op": "meta", "child": 0.099519, "lat": 0.141}
+{"ts": "2026-11-04 00:48:02", "ev": "DISCARD", "gen": 11, "op": "meta", "child": 0.099519, "parent": 0.099519, "task": "builtin", "lat": 0.141}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 11, "op": "meta", "child": 0.099519, "lat": 0.142}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 11, "op": "jit", "child": 0.099043, "lat": 0.142}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 11, "op": "meta", "child": 0.099519, "lat": 0.142}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 11, "op": "jit", "child": 0.10812, "lat": 0.142}
+{"ts": "2026-11-04 00:48:02", "ev": "PROMOTE", "gen": 11, "op": "jit", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.142}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 12, "op": "jit", "child": 0.165907, "lat": 0.14}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 12, "op": "meta", "child": 0.099043, "lat": 0.14}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 12, "op": "prune", "child": 0.111024, "lat": 0.14}
+{"ts": "2026-11-04 00:48:02", "ev": "TRIED", "gen": 12, "op": "graft", "child": 1.297432, "lat": 0.14}
+{"ts": "2026-11-04 00:48:02", "ev": "PROMOTE", "gen": 12, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.14}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 13, "op": "jit", "child": 0.159209, "lat": 0.142}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 13, "op": "meta", "child": 0.099043, "lat": 0.142}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 13, "op": "graft", "child": 0.112739, "lat": 0.142}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 13, "op": "graft", "child": 0.524346, "lat": 0.142}
+{"ts": "2026-11-04 00:48:03", "ev": "PROMOTE", "gen": 13, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.142}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 14, "op": "graft", "child": 0.301574, "lat": 0.142}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 14, "op": "jit", "child": 0.119, "lat": 0.142}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 14, "op": "prune", "child": 0.306791, "lat": 0.142}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 14, "op": "jit", "child": 0.245738, "lat": 0.142}
+{"ts": "2026-11-04 00:48:03", "ev": "DISCARD", "gen": 14, "op": "jit", "child": 0.119, "parent": 0.099043, "task": "builtin", "lat": 0.142}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 14, "op": "jit", "child": 0.133593, "lat": 0.136}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 14, "op": "meta", "child": 0.099043, "lat": 0.136}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 14, "op": "jit", "child": 1.238807, "lat": 0.136}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 14, "op": "graft", "child": 0.618211, "lat": 0.136}
+{"ts": "2026-11-04 00:48:03", "ev": "PROMOTE", "gen": 14, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.136}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 15, "op": "graft", "child": 5.79281, "lat": 0.146}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 15, "op": "graft", "child": 2.577678, "lat": 0.146}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 15, "op": "meta", "child": 0.099043, "lat": 0.146}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 15, "op": "graft", "child": 0.616011, "lat": 0.146}
+{"ts": "2026-11-04 00:48:03", "ev": "PROMOTE", "gen": 15, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.146}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 16, "op": "prune", "child": 0.25815, "lat": 0.148}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 16, "op": "meta", "child": 0.099043, "lat": 0.148}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 16, "op": "graft", "child": 0.629411, "lat": 0.148}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 16, "op": "swap", "child": 0.1061, "lat": 0.148}
+{"ts": "2026-11-04 00:48:03", "ev": "PROMOTE", "gen": 16, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.148}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 17, "op": "meta", "child": 0.099043, "lat": 0.131}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 17, "op": "meta", "child": 0.099043, "lat": 0.131}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 17, "op": "prune", "child": 0.157427, "lat": 0.131}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 17, "op": "prune", "child": 2.693522, "lat": 0.131}
+{"ts": "2026-11-04 00:48:03", "ev": "PROMOTE", "gen": 17, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.131}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 18, "op": "jit", "child": 0.106033, "lat": 0.145}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 18, "op": "meta", "child": 0.099043, "lat": 0.145}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 18, "op": "graft", "child": 1.355264, "lat": 0.145}
+{"ts": "2026-11-04 00:48:03", "ev": "TRIED", "gen": 18, "op": "prune", "child": 2.396426, "lat": 0.145}
+{"ts": "2026-11-04 00:48:03", "ev": "PROMOTE", "gen": 18, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.145}
+{"ts": "2026-11-04 00:48:04", "ev": "TRIED", "gen": 19, "op": "prune", "child": 0.743963, "lat": 0.144}
+{"ts": "2026-11-04 00:48:04", "ev": "TRIED", "gen": 19, "op": "graft", "child": 0.409648, "lat": 0.144}
+{"ts": "2026-11-04 00:48:04", "ev": "TRIED", "gen": 19, "op": "meta", "child": 0.099043, "lat": 0.144}
+{"ts": "2026-11-04 00:48:04", "ev": "TRIED", "gen": 19, "op": "jit", "child": 0.107922, "lat": 0.144}
+{"ts": "2026-11-04 00:48:04", "ev": "PROMOTE", "gen": 19, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.144}
+{"ts": "2026-11-04 01:48:02", "ev": "WAKE", "gen": 19, "parent": 0.099043, "task": "builtin"}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 20, "op": "graft", "child": 1.498776, "lat": 0.191}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 20, "op": "jit", "child": 0.170469, "lat": 0.191}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 20, "op": "jit", "child": 0.309718, "lat": 0.191}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 20, "op": "jit", "child": 0.118092, "lat": 0.191}
+{"ts": "2026-11-04 01:48:02", "ev": "DISCARD", "gen": 20, "op": "jit", "child": 0.118092, "parent": 0.099043, "task": "builtin", "lat": 0.191}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 20, "op": "jit", "child": 0.145597, "lat": 0.146}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 20, "op": "graft", "child": 2.311677, "lat": 0.146}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 20, "op": "meta", "child": 0.099043, "lat": 0.146}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 20, "op": "graft", "child": 0.382388, "lat": 0.146}
+{"ts": "2026-11-04 01:48:02", "ev": "PROMOTE", "gen": 20, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.146}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 21, "op": "graft", "child": 0.681993, "lat": 0.138}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 21, "op": "graft", "child": 1.401865, "lat": 0.138}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 21, "op": "graft", "child": 1.431054, "lat": 0.138}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 21, "op": "prune", "child": 1.194172, "lat": 0.138}
+{"ts": "2026-11-04 01:48:02", "ev": "DISCARD", "gen": 21, "op": "graft", "child": 0.681993, "parent": 0.099043, "task": "builtin", "lat": 0.138}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 21, "op": "graft", "child": 0.288846, "lat": 0.135}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 21, "op": "jit", "child": 0.136297, "lat": 0.135}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 21, "op": "prune", "child": 1.055104, "lat": 0.135}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 21, "op": "graft", "child": 0.099043, "lat": 0.135}
+{"ts": "2026-11-04 01:48:02", "ev": "PROMOTE", "gen": 21, "op": "graft", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.135}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 22, "op": "graft", "child": 0.738789, "lat": 0.131}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 22, "op": "graft", "child": 0.647038, "lat": 0.131}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 22, "op": "graft", "child": 0.14997, "lat": 0.131}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 22, "op": "jit", "child": 0.161005, "lat": 0.131}
+{"ts": "2026-11-04 01:48:02", "ev": "DISCARD", "gen": 22, "op": "graft", "child": 0.14997, "parent": 0.099043, "task": "builtin", "lat": 0.131}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 22, "op": "jit", "child": 0.099906, "lat": 0.132}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 22, "op": "jit", "child": 0.158915, "lat": 0.132}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 22, "op": "swap", "child": 0.099043, "lat": 0.132}
+{"ts": "2026-11-04 01:48:02", "ev": "TRIED", "gen": 22, "op": "swap", "child": 0.110779, "lat": 0.132}
+{"ts": "2026-11-04 01:48:02", "ev": "PROMOTE", "gen": 22, "op": "swap", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.132}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 23, "op": "prune", "child": 2.104804, "lat": 0.131}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 23, "op": "graft", "child": 12.652527, "lat": 0.131}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 23, "op": "prune", "child": 1.276521, "lat": 0.131}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 23, "op": "meta", "child": 0.099043, "lat": 0.131}
+{"ts": "2026-11-04 01:48:03", "ev": "PROMOTE", "gen": 23, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.131}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 24, "op": "graft", "child": 0.684536, "lat": 0.129}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 24, "op": "graft", "child": 0.630477, "lat": 0.129}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 24, "op": "prune", "child": 0.110734, "lat": 0.129}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 24, "op": "meta", "child": 0.099043, "lat": 0.129}
+{"ts": "2026-11-04 01:48:03", "ev": "PROMOTE", "gen": 24, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.129}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 25, "op": "jit", "child": 0.593949, "lat": 0.13}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 25, "op": "graft", "child": 0.895168, "lat": 0.13}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 25, "op": "meta", "child": 0.099043, "lat": 0.13}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 25, "op": "graft", "child": 1.486269, "lat": 0.13}
+{"ts": "2026-11-04 01:48:03", "ev": "PROMOTE", "gen": 25, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.13}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 26, "op": "meta", "child": 0.099043, "lat": 0.131}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 26, "op": "swap", "child": 0.639151, "lat": 0.131}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 26, "op": "jit", "child": 0.12285, "lat": 0.131}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 26, "op": "jit", "child": 0.10446, "lat": 0.131}
+{"ts": "2026-11-04 01:48:03", "ev": "PROMOTE", "gen": 26, "op": "meta", "child": 0.099043, "parent": 0.099043, "task": "builtin", "lat": 0.131}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 27, "op": "jit", "child": 0.107261, "lat": 0.13}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 27, "op": "prune", "child": 0.096789, "lat": 0.13}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 27, "op": "swap", "child": 0.113437, "lat": 0.13}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 27, "op": "jit", "child": 0.141585, "lat": 0.13}
+{"ts": "2026-11-04 01:48:03", "ev": "PROMOTE", "gen": 27, "op": "prune", "child": 0.096789, "parent": 0.096789, "task": "builtin", "lat": 0.13}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 28, "op": "swap", "child": 0.096789, "lat": 0.138}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 28, "op": "prune", "child": 1.925383, "lat": 0.138}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 28, "op": "graft", "child": 2.896161, "lat": 0.138}
+{"ts": "2026-11-04 01:48:03", "ev": "TRIED", "gen": 28, "op": "prune", "child": 1.927518, "lat": 0.138}
+{"ts": "2026-11-04 01:48:03", "ev": "PROMOTE", "gen": 28, "op": "swap", "child": 0.096789, "parent": 0.096789, "task": "builtin", "lat": 0.138}
+{"ts": "2026-11-04 02:48:02", "ev": "WAKE", "gen": 28, "parent": 0.096789, "task": "builtin"}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 29, "op": "jit", "child": 1.23634, "lat": 0.158}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 29, "op": "meta", "child": 0.096789, "lat": 0.158}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 29, "op": "meta", "child": 0.096789, "lat": 0.158}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 29, "op": "prune", "child": 4.098784, "lat": 0.158}
+{"ts": "2026-11-04 02:48:02", "ev": "PROMOTE", "gen": 29, "op": "meta", "child": 0.096789, "parent": 0.096789, "task": "builtin", "lat": 0.158}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 30, "op": "jit", "child": 1.06993, "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 30, "op": "jit", "child": 0.792173, "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 30, "op": "graft", "child": 0.096789, "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 30, "op": "graft", "child": 0.911188, "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "PROMOTE", "gen": 30, "op": "graft", "child": 0.096789, "parent": 0.096789, "task": "builtin", "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 31, "op": "jit", "child": 0.118735, "lat": 0.136}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 31, "op": "prune", "child": 0.231663, "lat": 0.136}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 31, "op": "swap", "child": 0.096789, "lat": 0.136}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 31, "op": "graft", "child": 1.883124, "lat": 0.136}
+{"ts": "2026-11-04 02:48:02", "ev": "PROMOTE", "gen": 31, "op": "swap", "child": 0.096789, "parent": 0.096789, "task": "builtin", "lat": 0.136}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 32, "op": "graft", "child": 35.146616, "lat": 0.131}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 32, "op": "graft", "child": 2.168266, "lat": 0.131}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 32, "op": "prune", "child": 1.503142, "lat": 0.131}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 32, "op": "meta", "child": 0.096789, "lat": 0.131}
+{"ts": "2026-11-04 02:48:02", "ev": "PROMOTE", "gen": 32, "op": "meta", "child": 0.096789, "parent": 0.096789, "task": "builtin", "lat": 0.131}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 33, "op": "meta", "child": 0.096789, "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 33, "op": "meta", "child": 0.096789, "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 33, "op": "graft", "child": 0.344887, "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 33, "op": "jit", "child": 0.106782, "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "PROMOTE", "gen": 33, "op": "meta", "child": 0.096789, "parent": 0.096789, "task": "builtin", "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 34, "op": "jit", "child": 0.13521, "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 34, "op": "prune", "child": 0.905026, "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 34, "op": "swap", "child": 0.106633, "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "TRIED", "gen": 34, "op": "graft", "child": 0.629639, "lat": 0.13}
+{"ts": "2026-11-04 02:48:02", "ev": "DISCARD", "gen": 34, "op": "swap", "child": 0.106633, "parent": 0.096789, "task": "builtin", "lat": 0.13}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 34, "op": "graft", "child": 0.801285, "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 34, "op": "swap", "child": 0.08895, "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 34, "op": "swap", "child": 1.147978, "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 34, "op": "jit", "child": 0.115972, "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "PROMOTE", "gen": 34, "op": "swap", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 35, "op": "jit", "child": 0.545904, "lat": 0.135}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 35, "op": "swap", "child": 0.08895, "lat": 0.135}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 35, "op": "meta", "child": 0.08895, "lat": 0.135}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 35, "op": "graft", "child": 2.351602, "lat": 0.135}
+{"ts": "2026-11-04 02:48:03", "ev": "PROMOTE", "gen": 35, "op": "swap", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.135}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 36, "op": "graft", "child": 0.20906, "lat": 0.141}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 36, "op": "meta", "child": 0.08895, "lat": 0.141}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 36, "op": "meta", "child": 0.08895, "lat": 0.141}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 36, "op": "jit", "child": 0.095651, "lat": 0.141}
+{"ts": "2026-11-04 02:48:03", "ev": "PROMOTE", "gen": 36, "op": "meta", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.141}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 37, "op": "jit", "child": 0.202932, "lat": 0.13}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 37, "op": "swap", "child": 17.221167, "lat": 0.13}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 37, "op": "prune", "child": 1.224273, "lat": 0.13}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 37, "op": "jit", "child": 0.12537, "lat": 0.13}
+{"ts": "2026-11-04 02:48:03", "ev": "DISCARD", "gen": 37, "op": "jit", "child": 0.12537, "parent": 0.08895, "task": "builtin", "lat": 0.13}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 37, "op": "jit", "child": 0.221586, "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 37, "op": "meta", "child": 0.08895, "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 37, "op": "meta", "child": 0.08895, "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 37, "op": "swap", "child": 0.353365, "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "PROMOTE", "gen": 37, "op": "meta", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 38, "op": "jit", "child": 0.191149, "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 38, "op": "graft", "child": 0.760584, "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 38, "op": "prune", "child": 4.40786, "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "TRIED", "gen": 38, "op": "jit", "child": 0.14514, "lat": 0.128}
+{"ts": "2026-11-04 02:48:03", "ev": "DISCARD", "gen": 38, "op": "jit", "child": 0.14514, "parent": 0.08895, "task": "builtin", "lat": 0.128}
+{"ts": "2026-11-04 03:48:02", "ev": "WAKE", "gen": 37, "parent": 0.08895, "task": "builtin"}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 38, "op": "prune", "child": 0.424246, "lat": 0.165}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 38, "op": "graft", "child": 5.162585, "lat": 0.165}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 38, "op": "swap", "child": 0.08895, "lat": 0.165}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 38, "op": "prune", "child": 0.104854, "lat": 0.165}
+{"ts": "2026-11-04 03:48:02", "ev": "PROMOTE", "gen": 38, "op": "swap", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.165}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 39, "op": "jit", "child": 0.118527, "lat": 0.14}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 39, "op": "swap", "child": 0.25415, "lat": 0.14}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 39, "op": "graft", "child": 0.684536, "lat": 0.14}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 39, "op": "graft", "child": 2.144154, "lat": 0.14}
+{"ts": "2026-11-04 03:48:02", "ev": "DISCARD", "gen": 39, "op": "jit", "child": 0.118527, "parent": 0.08895, "task": "builtin", "lat": 0.14}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 39, "op": "graft", "child": 1.847334, "lat": 0.136}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 39, "op": "swap", "child": 0.747115, "lat": 0.136}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 39, "op": "prune", "child": 0.737173, "lat": 0.136}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 39, "op": "meta", "child": 0.08895, "lat": 0.136}
+{"ts": "2026-11-04 03:48:02", "ev": "PROMOTE", "gen": 39, "op": "meta", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.136}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 40, "op": "graft", "child": 0.107684, "lat": 0.137}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 40, "op": "meta", "child": 0.08895, "lat": 0.137}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 40, "op": "jit", "child": 0.091135, "lat": 0.137}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 40, "op": "jit", "child": 0.1232, "lat": 0.137}
+{"ts": "2026-11-04 03:48:02", "ev": "PROMOTE", "gen": 40, "op": "meta", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.137}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 41, "op": "meta", "child": 0.08895, "lat": 0.135}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 41, "op": "prune", "child": 0.625319, "lat": 0.135}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 41, "op": "jit", "child": 0.112079, "lat": 0.135}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 41, "op": "meta", "child": 0.08895, "lat": 0.135}
+{"ts": "2026-11-04 03:48:02", "ev": "PROMOTE", "gen": 41, "op": "meta", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.135}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 42, "op": "jit", "child": 0.176599, "lat": 0.135}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 42, "op": "meta", "child": 0.08895, "lat": 0.135}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 42, "op": "jit", "child": 0.101535, "lat": 0.135}
+{"ts": "2026-11-04 03:48:02", "ev": "TRIED", "gen": 42, "op": "jit", "child": 0.105605, "lat": 0.135}
+{"ts": "2026-11-04 03:48:02", "ev": "PROMOTE", "gen": 42, "op": "meta", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.135}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 43, "op": "graft", "child": 0.538956, "lat": 0.139}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 43, "op": "swap", "child": 0.08895, "lat": 0.139}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 43, "op": "graft", "child": 0.904961, "lat": 0.139}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 43, "op": "prune", "child": 0.468058, "lat": 0.139}
+{"ts": "2026-11-04 03:48:03", "ev": "PROMOTE", "gen": 43, "op": "swap", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.139}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 44, "op": "meta", "child": 0.08895, "lat": 0.146}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 44, "op": "jit", "child": 0.102702, "lat": 0.146}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 44, "op": "swap", "child": 0.08895, "lat": 0.146}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 44, "op": "graft", "child": 0.904961, "lat": 0.146}
+{"ts": "2026-11-04 03:48:03", "ev": "PROMOTE", "gen": 44, "op": "meta", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.146}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 45, "op": "graft", "child": 1.116152, "lat": 0.149}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 45, "op": "swap", "child": 0.08895, "lat": 0.149}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 45, "op": "swap", "child": 0.353365, "lat": 0.149}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 45, "op": "meta", "child": 0.08895, "lat": 0.149}
+{"ts": "2026-11-04 03:48:03", "ev": "PROMOTE", "gen": 45, "op": "swap", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.149}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 46, "op": "jit", "child": 0.105168, "lat": 0.128}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 46, "op": "jit", "child": 0.124717, "lat": 0.128}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 46, "op": "graft", "child": 0.271081, "lat": 0.128}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 46, "op": "meta", "child": 0.08895, "lat": 0.128}
+{"ts": "2026-11-04 03:48:03", "ev": "PROMOTE", "gen": 46, "op": "meta", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.128}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 47, "op": "meta", "child": 0.08895, "lat": 0.131}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 47, "op": "graft", "child": 2.087519, "lat": 0.131}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 47, "op": "graft", "child": 1.395622, "lat": 0.131}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 47, "op": "graft", "child": 3.515312, "lat": 0.131}
+{"ts": "2026-11-04 03:48:03", "ev": "PROMOTE", "gen": 47, "op": "meta", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.131}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 48, "op": "jit", "child": 0.125197, "lat": 0.14}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 48, "op": "jit", "child": 0.090399, "lat": 0.14}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 48, "op": "swap", "child": 0.373588, "lat": 0.14}
+{"ts": "2026-11-04 03:48:03", "ev": "TRIED", "gen": 48, "op": "meta", "child": 0.08895, "lat": 0.14}
+{"ts": "2026-11-04 03:48:03", "ev": "PROMOTE", "gen": 48, "op": "meta", "child": 0.08895, "parent": 0.08895, "task": "builtin", "lat": 0.14}
+{"ts": "2026-11-04 04:48:02", "ev": "WAKE", "gen": 48, "parent": 0.08895, "task": "builtin"}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 49, "op": "graft", "child": 0.727943, "lat": 0.191}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 49, "op": "graft", "child": 12.214063, "lat": 0.191}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 49, "op": "jit", "child": 0.096487, "lat": 0.191}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 49, "op": "graft", "child": 3.946482, "lat": 0.191}
+{"ts": "2026-11-04 04:48:02", "ev": "PROMOTE", "gen": 49, "op": "jit", "child": 0.096487, "parent": 0.096487, "task": "builtin", "lat": 0.191}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 50, "op": "prune", "child": 3.432983, "lat": 0.175}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 50, "op": "swap", "child": 0.096487, "lat": 0.175}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 50, "op": "graft", "child": 0.334831, "lat": 0.175}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 50, "op": "jit", "child": 0.357069, "lat": 0.175}
+{"ts": "2026-11-04 04:48:02", "ev": "PROMOTE", "gen": 50, "op": "swap", "child": 0.096487, "parent": 0.096487, "task": "builtin", "lat": 0.175}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 51, "op": "swap", "child": 0.096487, "lat": 0.166}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 51, "op": "meta", "child": 0.096487, "lat": 0.166}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 51, "op": "prune", "child": 2.034879, "lat": 0.166}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 51, "op": "swap", "child": 0.381124, "lat": 0.166}
+{"ts": "2026-11-04 04:48:02", "ev": "PROMOTE", "gen": 51, "op": "swap", "child": 0.096487, "parent": 0.096487, "task": "builtin", "lat": 0.166}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 52, "op": "jit", "child": 0.442194, "lat": 0.182}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 52, "op": "jit", "child": 0.446601, "lat": 0.182}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 52, "op": "graft", "child": 0.684279, "lat": 0.182}
+{"ts": "2026-11-04 04:48:02", "ev": "TRIED", "gen": 52, "op": "swap", "child": 0.87989, "lat": 0.182}
+{"ts": "2026-11-04 04:48:02", "ev": "DISCARD", "gen": 52, "op": "jit", "child": 0.442194, "parent": 0.096487, "task": "builtin", "lat": 0.182}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 52, "op": "jit", "child": 0.400359, "lat": 0.175}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 52, "op": "jit", "child": 0.103395, "lat": 0.175}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 52, "op": "graft", "child": 0.732064, "lat": 0.175}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 52, "op": "swap", "child": 0.569589, "lat": 0.175}
+{"ts": "2026-11-04 04:48:03", "ev": "DISCARD", "gen": 52, "op": "jit", "child": 0.103395, "parent": 0.096487, "task": "builtin", "lat": 0.175}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 52, "op": "graft", "child": 1.732344, "lat": 0.162}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 52, "op": "jit", "child": 0.160672, "lat": 0.162}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 52, "op": "swap", "child": 0.87989, "lat": 0.162}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 52, "op": "meta", "child": 0.096487, "lat": 0.162}
+{"ts": "2026-11-04 04:48:03", "ev": "PROMOTE", "gen": 52, "op": "meta", "child": 0.096487, "parent": 0.096487, "task": "builtin", "lat": 0.162}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 53, "op": "graft", "child": 0.132282, "lat": 0.153}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 53, "op": "graft", "child": 1.491465, "lat": 0.153}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 53, "op": "graft", "child": 0.684536, "lat": 0.153}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 53, "op": "prune", "child": 0.495601, "lat": 0.153}
+{"ts": "2026-11-04 04:48:03", "ev": "DISCARD", "gen": 53, "op": "graft", "child": 0.132282, "parent": 0.096487, "task": "builtin", "lat": 0.153}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 53, "op": "meta", "child": 0.096487, "lat": 0.156}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 53, "op": "jit", "child": 0.404885, "lat": 0.156}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 53, "op": "jit", "child": 0.160612, "lat": 0.156}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 53, "op": "swap", "child": 0.87989, "lat": 0.156}
+{"ts": "2026-11-04 04:48:03", "ev": "PROMOTE", "gen": 53, "op": "meta", "child": 0.096487, "parent": 0.096487, "task": "builtin", "lat": 0.156}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 54, "op": "swap", "child": 0.096487, "lat": 0.155}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 54, "op": "swap", "child": 0.096487, "lat": 0.155}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 54, "op": "meta", "child": 0.096487, "lat": 0.155}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 54, "op": "graft", "child": 3.638598, "lat": 0.155}
+{"ts": "2026-11-04 04:48:03", "ev": "PROMOTE", "gen": 54, "op": "swap", "child": 0.096487, "parent": 0.096487, "task": "builtin", "lat": 0.155}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 55, "op": "jit", "child": 0.09711, "lat": 0.154}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 55, "op": "graft", "child": 1.912167, "lat": 0.154}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 55, "op": "jit", "child": 0.102379, "lat": 0.154}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 55, "op": "swap", "child": 0.096487, "lat": 0.154}
+{"ts": "2026-11-04 04:48:03", "ev": "PROMOTE", "gen": 55, "op": "swap", "child": 0.096487, "parent": 0.096487, "task": "builtin", "lat": 0.154}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 56, "op": "meta", "child": 0.096487, "lat": 0.161}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 56, "op": "meta", "child": 0.096487, "lat": 0.161}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 56, "op": "graft", "child": 1.755778, "lat": 0.161}
+{"ts": "2026-11-04 04:48:03", "ev": "TRIED", "gen": 56, "op": "prune", "child": 0.568858, "lat": 0.161}
+{"ts": "2026-11-04 04:48:03", "ev": "PROMOTE", "gen": 56, "op": "meta", "child": 0.096487, "parent": 0.096487, "task": "builtin", "lat": 0.161}
+{"ts": "2026-11-04 04:48:04", "ev": "TRIED", "gen": 57, "op": "jit", "child": 0.208095, "lat": 0.156}
+{"ts": "2026-11-04 04:48:04", "ev": "TRIED", "gen": 57, "op": "swap", "child": 0.096487, "lat": 0.156}
+{"ts": "2026-11-04 04:48:04", "ev": "TRIED", "gen": 57, "op": "meta", "child": 0.096487, "lat": 0.156}
+{"ts": "2026-11-04 04:48:04", "ev": "TRIED", "gen": 57, "op": "graft", "child": 0.384731, "lat": 0.156}
+{"ts": "2026-11-04 04:48:04", "ev": "PROMOTE", "gen": 57, "op": "swap", "child": 0.096487, "parent": 0.096487, "task": "builtin", "lat": 0.156}
+{"ts": "2026-11-04 05:48:02", "ev": "WAKE", "gen": 57, "parent": 0.096487, "task": "builtin"}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 58, "op": "meta", "child": 0.096487, "lat": 0.202}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 58, "op": "graft", "child": 0.334831, "lat": 0.202}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 58, "op": "jit", "child": 0.641666, "lat": 0.202}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 58, "op": "prune", "child": 1.687936, "lat": 0.202}
+{"ts": "2026-11-04 05:48:02", "ev": "PROMOTE", "gen": 58, "op": "meta", "child": 0.096487, "parent": 0.096487, "task": "builtin", "lat": 0.202}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 59, "op": "jit", "child": 0.102451, "lat": 0.161}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 59, "op": "graft", "child": 1.030586, "lat": 0.161}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 59, "op": "graft", "child": 0.818215, "lat": 0.161}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 59, "op": "meta", "child": 0.096487, "lat": 0.161}
+{"ts": "2026-11-04 05:48:02", "ev": "PROMOTE", "gen": 59, "op": "meta", "child": 0.096487, "parent": 0.096487, "task": "builtin", "lat": 0.161}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 60, "op": "graft", "child": 1.45617, "lat": 0.171}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 60, "op": "prune", "child": 1.571293, "lat": 0.171}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 60, "op": "meta", "child": 0.096487, "lat": 0.171}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 60, "op": "swap", "child": 1.105206, "lat": 0.171}
+{"ts": "2026-11-04 05:48:02", "ev": "PROMOTE", "gen": 60, "op": "meta", "child": 0.096487, "parent": 0.096487, "task": "builtin", "lat": 0.171}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 61, "op": "meta", "child": 0.096487, "lat": 0.171}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 61, "op": "meta", "child": 0.096487, "lat": 0.171}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 61, "op": "jit", "child": 0.095804, "lat": 0.171}
+{"ts": "2026-11-04 05:48:02", "ev": "TRIED", "gen": 61, "op": "swap", "child": 0.096487, "lat": 0.171}
+{"ts": "2026-11-04 05:48:02", "ev": "PROMOTE", "gen": 61, "op": "jit", "child": 0.095804, "parent": 0.095804, "task": "builtin", "lat": 0.171}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 62, "op": "swap", "child": 0.095804, "lat": 0.166}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 62, "op": "meta", "child": 0.095804, "lat": 0.166}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 62, "op": "swap", "child": 0.095672, "lat": 0.166}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 62, "op": "meta", "child": 0.095804, "lat": 0.166}
+{"ts": "2026-11-04 05:48:03", "ev": "PROMOTE", "gen": 62, "op": "swap", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.166}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 63, "op": "swap", "child": 0.942125, "lat": 0.192}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 63, "op": "jit", "child": 0.154494, "lat": 0.192}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 63, "op": "graft", "child": 0.780051, "lat": 0.192}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 63, "op": "swap", "child": 0.095672, "lat": 0.192}
+{"ts": "2026-11-04 05:48:03", "ev": "PROMOTE", "gen": 63, "op": "swap", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.192}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 64, "op": "prune", "child": 0.502844, "lat": 0.16}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 64, "op": "graft", "child": 0.683464, "lat": 0.16}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 64, "op": "prune", "child": 0.235495, "lat": 0.16}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 64, "op": "swap", "child": 0.095672, "lat": 0.16}
+{"ts": "2026-11-04 05:48:03", "ev": "PROMOTE", "gen": 64, "op": "swap", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.16}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 65, "op": "jit", "child": 0.224929, "lat": 0.154}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 65, "op": "swap", "child": 0.106647, "lat": 0.154}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 65, "op": "swap", "child": 0.455723, "lat": 0.154}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 65, "op": "graft", "child": 0.387689, "lat": 0.154}
+{"ts": "2026-11-04 05:48:03", "ev": "DISCARD", "gen": 65, "op": "swap", "child": 0.106647, "parent": 0.095672, "task": "builtin", "lat": 0.154}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 65, "op": "graft", "child": 4.352721, "lat": 0.156}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 65, "op": "jit", "child": 0.214504, "lat": 0.156}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 65, "op": "swap", "child": 0.095672, "lat": 0.156}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 65, "op": "jit", "child": 0.109516, "lat": 0.156}
+{"ts": "2026-11-04 05:48:03", "ev": "PROMOTE", "gen": 65, "op": "swap", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.156}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 66, "op": "swap", "child": 0.095672, "lat": 0.152}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 66, "op": "jit", "child": 0.221101, "lat": 0.152}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 66, "op": "jit", "child": 0.115764, "lat": 0.152}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 66, "op": "swap", "child": 0.107876, "lat": 0.152}
+{"ts": "2026-11-04 05:48:03", "ev": "PROMOTE", "gen": 66, "op": "swap", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.152}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 67, "op": "prune", "child": 0.564077, "lat": 0.152}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 67, "op": "jit", "child": 0.10796, "lat": 0.152}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 67, "op": "swap", "child": 2.740283, "lat": 0.152}
+{"ts": "2026-11-04 05:48:03", "ev": "TRIED", "gen": 67, "op": "meta", "child": 0.095672, "lat": 0.152}
+{"ts": "2026-11-04 05:48:03", "ev": "PROMOTE", "gen": 67, "op": "meta", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.152}
+{"ts": "2026-11-04 05:48:04", "ev": "TRIED", "gen": 68, "op": "swap", "child": 0.095672, "lat": 0.169}
+{"ts": "2026-11-04 05:48:04", "ev": "TRIED", "gen": 68, "op": "meta", "child": 0.095672, "lat": 0.169}
+{"ts": "2026-11-04 05:48:04", "ev": "TRIED", "gen": 68, "op": "meta", "child": 0.095672, "lat": 0.169}
+{"ts": "2026-11-04 05:48:04", "ev": "TRIED", "gen": 68, "op": "graft", "child": 2.057409, "lat": 0.169}
+{"ts": "2026-11-04 05:48:04", "ev": "PROMOTE", "gen": 68, "op": "swap", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.169}
+{"ts": "2026-11-04 06:48:02", "ev": "WAKE", "gen": 68, "parent": 0.095672, "task": "builtin"}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 69, "op": "meta", "child": 0.095672, "lat": 0.201}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 69, "op": "graft", "child": 0.511417, "lat": 0.201}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 69, "op": "swap", "child": 0.095672, "lat": 0.201}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 69, "op": "meta", "child": 0.095672, "lat": 0.201}
+{"ts": "2026-11-04 06:48:02", "ev": "PROMOTE", "gen": 69, "op": "meta", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.201}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 70, "op": "graft", "child": 4.908402, "lat": 0.168}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 70, "op": "jit", "child": 0.142586, "lat": 0.168}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 70, "op": "swap", "child": 0.095672, "lat": 0.168}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 70, "op": "meta", "child": 0.095672, "lat": 0.168}
+{"ts": "2026-11-04 06:48:02", "ev": "PROMOTE", "gen": 70, "op": "swap", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.168}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 71, "op": "jit", "child": 0.114396, "lat": 0.159}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 71, "op": "graft", "child": 0.141448, "lat": 0.159}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 71, "op": "graft", "child": 0.943417, "lat": 0.159}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 71, "op": "jit", "child": 0.24262, "lat": 0.159}
+{"ts": "2026-11-04 06:48:02", "ev": "DISCARD", "gen": 71, "op": "jit", "child": 0.114396, "parent": 0.095672, "task": "builtin", "lat": 0.159}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 71, "op": "jit", "child": 0.131935, "lat": 0.162}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 71, "op": "swap", "child": 0.095672, "lat": 0.162}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 71, "op": "meta", "child": 0.095672, "lat": 0.162}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 71, "op": "swap", "child": 0.095672, "lat": 0.162}
+{"ts": "2026-11-04 06:48:02", "ev": "PROMOTE", "gen": 71, "op": "swap", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.162}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 72, "op": "swap", "child": 0.095672, "lat": 0.157}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 72, "op": "graft", "child": 0.409053, "lat": 0.157}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 72, "op": "prune", "child": 0.114177, "lat": 0.157}
+{"ts": "2026-11-04 06:48:02", "ev": "TRIED", "gen": 72, "op": "prune", "child": 0.652065, "lat": 0.157}
+{"ts": "2026-11-04 06:48:02", "ev": "PROMOTE", "gen": 72, "op": "swap", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.157}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 73, "op": "meta", "child": 0.095672, "lat": 0.159}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 73, "op": "jit", "child": 0.102607, "lat": 0.159}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 73, "op": "meta", "child": 0.095672, "lat": 0.159}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 73, "op": "meta", "child": 0.095672, "lat": 0.159}
+{"ts": "2026-11-04 06:48:03", "ev": "PROMOTE", "gen": 73, "op": "meta", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.159}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 74, "op": "meta", "child": 0.095672, "lat": 0.151}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 74, "op": "prune", "child": 0.417857, "lat": 0.151}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 74, "op": "graft", "child": 0.683464, "lat": 0.151}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 74, "op": "graft", "child": 1.58417, "lat": 0.151}
+{"ts": "2026-11-04 06:48:03", "ev": "PROMOTE", "gen": 74, "op": "meta", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.151}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 75, "op": "jit", "child": 0.10425, "lat": 0.154}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 75, "op": "swap", "child": 0.817385, "lat": 0.154}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 75, "op": "graft", "child": 0.297595, "lat": 0.154}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 75, "op": "jit", "child": 0.105097, "lat": 0.154}
+{"ts": "2026-11-04 06:48:03", "ev": "DISCARD", "gen": 75, "op": "jit", "child": 0.10425, "parent": 0.095672, "task": "builtin", "lat": 0.154}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 75, "op": "swap", "child": 0.107876, "lat": 0.153}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 75, "op": "graft", "child": 4.397881, "lat": 0.153}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 75, "op": "meta", "child": 0.095672, "lat": 0.153}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 75, "op": "swap", "child": 0.095672, "lat": 0.153}
+{"ts": "2026-11-04 06:48:03", "ev": "PROMOTE", "gen": 75, "op": "meta", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.153}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 76, "op": "swap", "child": 0.095672, "lat": 0.155}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 76, "op": "jit", "child": 0.15422, "lat": 0.155}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 76, "op": "prune", "child": 2.472938, "lat": 0.155}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 76, "op": "jit", "child": 1.027247, "lat": 0.155}
+{"ts": "2026-11-04 06:48:03", "ev": "PROMOTE", "gen": 76, "op": "swap", "child": 0.095672, "parent": 0.095672, "task": "builtin", "lat": 0.155}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 77, "op": "swap", "child": 0.095672, "lat": 0.155}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 77, "op": "meta", "child": 0.095672, "lat": 0.155}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 77, "op": "graft", "child": 0.894482, "lat": 0.155}
+{"ts": "2026-11-04 06:48:03", "ev": "TRIED", "gen": 77, "op": "swap", "child": 0.090506, "lat": 0.155}
+{"ts": "2026-11-04 06:48:03", "ev": "PROMOTE", "gen": 77, "op": "swap", "child": 0.090506, "parent": 0.090506, "task": "builtin", "lat": 0.155}
+{"ts": "2026-11-04 06:48:04", "ev": "TRIED", "gen": 78, "op": "swap", "child": 0.090506, "lat": 0.155}
+{"ts": "2026-11-04 06:48:04", "ev": "TRIED", "gen": 78, "op": "swap", "child": 0.090506, "lat": 0.155}
+{"ts": "2026-11-04 06:48:04", "ev": "TRIED", "gen": 78, "op": "prune", "child": 0.087429, "lat": 0.155}
+{"ts": "2026-11-04 06:48:04", "ev": "TRIED", "gen": 78, "op": "swap", "child": 0.140338, "lat": 0.155}
+{"ts": "2026-11-04 06:48:04", "ev": "PROMOTE", "gen": 78, "op": "prune", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.155}
+{"ts": "2026-11-04 07:48:02", "ev": "WAKE", "gen": 78, "parent": 0.087429, "task": "builtin"}
+{"ts": "2026-11-04 07:48:02", "ev": "TRIED", "gen": 79, "op": "graft", "child": 2.136205, "lat": 0.259}
+{"ts": "2026-11-04 07:48:02", "ev": "TRIED", "gen": 79, "op": "meta", "child": 0.087429, "lat": 0.259}
+{"ts": "2026-11-04 07:48:02", "ev": "TRIED", "gen": 79, "op": "swap", "child": 0.728298, "lat": 0.259}
+{"ts": "2026-11-04 07:48:02", "ev": "TRIED", "gen": 79, "op": "prune", "child": 0.485037, "lat": 0.259}
+{"ts": "2026-11-04 07:48:02", "ev": "PROMOTE", "gen": 79, "op": "meta", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.259}
+{"ts": "2026-11-04 07:48:02", "ev": "TRIED", "gen": 80, "op": "jit", "child": 0.096555, "lat": 0.227}
+{"ts": "2026-11-04 07:48:02", "ev": "TRIED", "gen": 80, "op": "swap", "child": 1.525949, "lat": 0.227}
+{"ts": "2026-11-04 07:48:02", "ev": "TRIED", "gen": 80, "op": "swap", "child": 0.087429, "lat": 0.227}
+{"ts": "2026-11-04 07:48:02", "ev": "TRIED", "gen": 80, "op": "jit", "child": 0.237677, "lat": 0.227}
+{"ts": "2026-11-04 07:48:02", "ev": "PROMOTE", "gen": 80, "op": "swap", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.227}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 81, "op": "jit", "child": 0.367536, "lat": 0.231}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 81, "op": "jit", "child": 0.187441, "lat": 0.231}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 81, "op": "meta", "child": 0.087429, "lat": 0.231}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 81, "op": "meta", "child": 0.087429, "lat": 0.231}
+{"ts": "2026-11-04 07:48:03", "ev": "PROMOTE", "gen": 81, "op": "meta", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.231}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 82, "op": "graft", "child": 0.512411, "lat": 0.238}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 82, "op": "swap", "child": 0.380185, "lat": 0.238}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 82, "op": "swap", "child": 0.087429, "lat": 0.238}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 82, "op": "prune", "child": 0.087429, "lat": 0.238}
+{"ts": "2026-11-04 07:48:03", "ev": "PROMOTE", "gen": 82, "op": "swap", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.238}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 83, "op": "jit", "child": 0.087429, "lat": 0.26}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 83, "op": "swap", "child": 0.384776, "lat": 0.26}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 83, "op": "meta", "child": 0.087429, "lat": 0.26}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 83, "op": "graft", "child": 0.089587, "lat": 0.26}
+{"ts": "2026-11-04 07:48:03", "ev": "PROMOTE", "gen": 83, "op": "jit", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.26}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 84, "op": "graft", "child": 0.174433, "lat": 0.234}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 84, "op": "swap", "child": 0.087429, "lat": 0.234}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 84, "op": "jit", "child": 0.095608, "lat": 0.234}
+{"ts": "2026-11-04 07:48:03", "ev": "TRIED", "gen": 84, "op": "meta", "child": 0.087429, "lat": 0.234}
+{"ts": "2026-11-04 07:48:03", "ev": "PROMOTE", "gen": 84, "op": "swap", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.234}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 85, "op": "graft", "child": 0.599246, "lat": 0.227}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 85, "op": "jit", "child": 0.106015, "lat": 0.227}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 85, "op": "meta", "child": 0.087429, "lat": 0.227}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 85, "op": "jit", "child": 0.118373, "lat": 0.227}
+{"ts": "2026-11-04 07:48:04", "ev": "PROMOTE", "gen": 85, "op": "meta", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.227}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 86, "op": "jit", "child": 0.095193, "lat": 0.225}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 86, "op": "graft", "child": 0.266294, "lat": 0.225}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 86, "op": "swap", "child": 0.768343, "lat": 0.225}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 86, "op": "swap", "child": 0.087429, "lat": 0.225}
+{"ts": "2026-11-04 07:48:04", "ev": "PROMOTE", "gen": 86, "op": "swap", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.225}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 87, "op": "jit", "child": 0.094432, "lat": 0.228}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 87, "op": "jit", "child": 0.094458, "lat": 0.228}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 87, "op": "swap", "child": 0.087429, "lat": 0.228}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 87, "op": "swap", "child": 0.087429, "lat": 0.228}
+{"ts": "2026-11-04 07:48:04", "ev": "PROMOTE", "gen": 87, "op": "swap", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.228}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 88, "op": "jit", "child": 0.096791, "lat": 0.23}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 88, "op": "jit", "child": 0.246783, "lat": 0.23}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 88, "op": "prune", "child": 0.525852, "lat": 0.23}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 88, "op": "meta", "child": 0.087429, "lat": 0.23}
+{"ts": "2026-11-04 07:48:04", "ev": "PROMOTE", "gen": 88, "op": "meta", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.23}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 89, "op": "jit", "child": 0.103397, "lat": 0.249}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 89, "op": "jit", "child": 0.149851, "lat": 0.249}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 89, "op": "prune", "child": 1.520748, "lat": 0.249}
+{"ts": "2026-11-04 07:48:04", "ev": "TRIED", "gen": 89, "op": "meta", "child": 0.087429, "lat": 0.249}
+{"ts": "2026-11-04 07:48:04", "ev": "PROMOTE", "gen": 89, "op": "meta", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.249}
+{"ts": "2026-11-04 07:48:05", "ev": "TRIED", "gen": 90, "op": "swap", "child": 0.087429, "lat": 0.272}
+{"ts": "2026-11-04 07:48:05", "ev": "TRIED", "gen": 90, "op": "graft", "child": 2.552854, "lat": 0.272}
+{"ts": "2026-11-04 07:48:05", "ev": "TRIED", "gen": 90, "op": "meta", "child": 0.087429, "lat": 0.272}
+{"ts": "2026-11-04 07:48:05", "ev": "TRIED", "gen": 90, "op": "graft", "child": 0.412661, "lat": 0.272}
+{"ts": "2026-11-04 07:48:05", "ev": "PROMOTE", "gen": 90, "op": "swap", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.272}
+{"ts": "2026-11-04 08:48:02", "ev": "WAKE", "gen": 90, "parent": 0.087429, "task": "builtin"}
+{"ts": "2026-11-04 08:48:02", "ev": "TRIED", "gen": 91, "op": "swap", "child": 0.087429, "lat": 0.317}
+{"ts": "2026-11-04 08:48:02", "ev": "TRIED", "gen": 91, "op": "prune", "child": 2.363456, "lat": 0.317}
+{"ts": "2026-11-04 08:48:02", "ev": "TRIED", "gen": 91, "op": "jit", "child": 0.105306, "lat": 0.317}
+{"ts": "2026-11-04 08:48:02", "ev": "TRIED", "gen": 91, "op": "meta", "child": 0.087429, "lat": 0.317}
+{"ts": "2026-11-04 08:48:02", "ev": "PROMOTE", "gen": 91, "op": "swap", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.317}
+{"ts": "2026-11-04 08:48:02", "ev": "TRIED", "gen": 92, "op": "graft", "child": 0.121654, "lat": 0.224}
+{"ts": "2026-11-04 08:48:02", "ev": "TRIED", "gen": 92, "op": "graft", "child": 0.087429, "lat": 0.224}
+{"ts": "2026-11-04 08:48:02", "ev": "TRIED", "gen": 92, "op": "meta", "child": 0.087429, "lat": 0.224}
+{"ts": "2026-11-04 08:48:02", "ev": "TRIED", "gen": 92, "op": "swap", "child": 0.087429, "lat": 0.224}
+{"ts": "2026-11-04 08:48:02", "ev": "PROMOTE", "gen": 92, "op": "graft", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.224}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 93, "op": "meta", "child": 0.087429, "lat": 0.247}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 93, "op": "meta", "child": 0.087429, "lat": 0.247}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 93, "op": "meta", "child": 0.087429, "lat": 0.247}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 93, "op": "graft", "child": 0.143126, "lat": 0.247}
+{"ts": "2026-11-04 08:48:03", "ev": "PROMOTE", "gen": 93, "op": "meta", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.247}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 94, "op": "jit", "child": 0.1009, "lat": 0.238}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 94, "op": "swap", "child": 0.087429, "lat": 0.238}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 94, "op": "graft", "child": 0.897476, "lat": 0.238}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 94, "op": "jit", "child": 0.115522, "lat": 0.238}
+{"ts": "2026-11-04 08:48:03", "ev": "PROMOTE", "gen": 94, "op": "swap", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.238}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 95, "op": "meta", "child": 0.087429, "lat": 0.362}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 95, "op": "jit", "child": 0.139156, "lat": 0.362}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 95, "op": "graft", "child": 0.901607, "lat": 0.362}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 95, "op": "jit", "child": 0.098369, "lat": 0.362}
+{"ts": "2026-11-04 08:48:03", "ev": "PROMOTE", "gen": 95, "op": "meta", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.362}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 96, "op": "meta", "child": 0.087429, "lat": 0.265}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 96, "op": "jit", "child": 0.094904, "lat": 0.265}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 96, "op": "jit", "child": 0.087429, "lat": 0.265}
+{"ts": "2026-11-04 08:48:03", "ev": "TRIED", "gen": 96, "op": "graft", "child": 1.199734, "lat": 0.265}
+{"ts": "2026-11-04 08:48:03", "ev": "PROMOTE", "gen": 96, "op": "meta", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.265}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 97, "op": "jit", "child": 0.087429, "lat": 0.265}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 97, "op": "jit", "child": 0.087429, "lat": 0.265}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 97, "op": "graft", "child": 0.384027, "lat": 0.265}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 97, "op": "graft", "child": 0.749059, "lat": 0.265}
+{"ts": "2026-11-04 08:48:04", "ev": "PROMOTE", "gen": 97, "op": "jit", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.265}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 98, "op": "prune", "child": 1.450037, "lat": 0.239}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 98, "op": "graft", "child": 0.702921, "lat": 0.239}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 98, "op": "jit", "child": 0.090133, "lat": 0.239}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 98, "op": "meta", "child": 0.087429, "lat": 0.239}
+{"ts": "2026-11-04 08:48:04", "ev": "PROMOTE", "gen": 98, "op": "meta", "child": 0.087429, "parent": 0.087429, "task": "builtin", "lat": 0.239}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 99, "op": "jit", "child": 0.101257, "lat": 0.259}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 99, "op": "graft", "child": 0.672929, "lat": 0.259}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 99, "op": "prune", "child": 0.630983, "lat": 0.259}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 99, "op": "graft", "child": 0.888535, "lat": 0.259}
+{"ts": "2026-11-04 08:48:04", "ev": "DISCARD", "gen": 99, "op": "jit", "child": 0.101257, "parent": 0.087429, "task": "builtin", "lat": 0.259}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 99, "op": "graft", "child": 0.085229, "lat": 0.236}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 99, "op": "meta", "child": 0.087429, "lat": 0.236}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 99, "op": "meta", "child": 0.087429, "lat": 0.236}
+{"ts": "2026-11-04 08:48:04", "ev": "TRIED", "gen": 99, "op": "jit", "child": 0.087429, "lat": 0.236}
+{"ts": "2026-11-04 08:48:04", "ev": "PROMOTE", "gen": 99, "op": "graft", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.236}
+{"ts": "2026-11-04 08:48:05", "ev": "TRIED", "gen": 100, "op": "graft", "child": 0.680263, "lat": 0.306}
+{"ts": "2026-11-04 08:48:05", "ev": "TRIED", "gen": 100, "op": "jit", "child": 1.133512, "lat": 0.306}
+{"ts": "2026-11-04 08:48:05", "ev": "TRIED", "gen": 100, "op": "swap", "child": 0.085229, "lat": 0.306}
+{"ts": "2026-11-04 08:48:05", "ev": "TRIED", "gen": 100, "op": "jit", "child": 0.097123, "lat": 0.306}
+{"ts": "2026-11-04 08:48:05", "ev": "PROMOTE", "gen": 100, "op": "swap", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.306}
+{"ts": "2026-11-04 08:48:05", "ev": "TRIED", "gen": 101, "op": "jit", "child": 0.089344, "lat": 0.232}
+{"ts": "2026-11-04 08:48:05", "ev": "TRIED", "gen": 101, "op": "meta", "child": 0.085229, "lat": 0.232}
+{"ts": "2026-11-04 08:48:05", "ev": "TRIED", "gen": 101, "op": "swap", "child": 0.085229, "lat": 0.232}
+{"ts": "2026-11-04 08:48:05", "ev": "TRIED", "gen": 101, "op": "swap", "child": 0.590858, "lat": 0.232}
+{"ts": "2026-11-04 08:48:05", "ev": "PROMOTE", "gen": 101, "op": "meta", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.232}
+{"ts": "2026-11-04 09:48:02", "ev": "WAKE", "gen": 101, "parent": 0.085229, "task": "builtin"}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 102, "op": "meta", "child": 0.085229, "lat": 0.209}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 102, "op": "graft", "child": 0.140926, "lat": 0.209}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 102, "op": "graft", "child": 0.098429, "lat": 0.209}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 102, "op": "swap", "child": 0.085229, "lat": 0.209}
+{"ts": "2026-11-04 09:48:02", "ev": "PROMOTE", "gen": 102, "op": "meta", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.209}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 103, "op": "swap", "child": 0.085229, "lat": 0.162}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 103, "op": "meta", "child": 0.085229, "lat": 0.162}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 103, "op": "swap", "child": 0.085229, "lat": 0.162}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 103, "op": "jit", "child": 0.112443, "lat": 0.162}
+{"ts": "2026-11-04 09:48:02", "ev": "PROMOTE", "gen": 103, "op": "swap", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.162}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 104, "op": "jit", "child": 0.092298, "lat": 0.156}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 104, "op": "jit", "child": 0.162288, "lat": 0.156}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 104, "op": "jit", "child": 0.370458, "lat": 0.156}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 104, "op": "swap", "child": 0.085229, "lat": 0.156}
+{"ts": "2026-11-04 09:48:02", "ev": "PROMOTE", "gen": 104, "op": "swap", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.156}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 105, "op": "graft", "child": 1.822932, "lat": 0.153}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 105, "op": "graft", "child": 0.140926, "lat": 0.153}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 105, "op": "graft", "child": 0.151687, "lat": 0.153}
+{"ts": "2026-11-04 09:48:02", "ev": "TRIED", "gen": 105, "op": "meta", "child": 0.085229, "lat": 0.153}
+{"ts": "2026-11-04 09:48:02", "ev": "PROMOTE", "gen": 105, "op": "meta", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.153}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 106, "op": "swap", "child": 1.523749, "lat": 0.161}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 106, "op": "prune", "child": 0.110706, "lat": 0.161}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 106, "op": "jit", "child": 0.090828, "lat": 0.161}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 106, "op": "graft", "child": 0.085229, "lat": 0.161}
+{"ts": "2026-11-04 09:48:03", "ev": "PROMOTE", "gen": 106, "op": "graft", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.161}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 107, "op": "swap", "child": 1.547991, "lat": 0.183}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 107, "op": "graft", "child": 0.769661, "lat": 0.183}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 107, "op": "graft", "child": 0.833119, "lat": 0.183}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 107, "op": "swap", "child": 0.76944, "lat": 0.183}
+{"ts": "2026-11-04 09:48:03", "ev": "DISCARD", "gen": 107, "op": "swap", "child": 0.76944, "parent": 0.085229, "task": "builtin", "lat": 0.183}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 107, "op": "graft", "child": 1.871023, "lat": 0.168}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 107, "op": "meta", "child": 0.085229, "lat": 0.168}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 107, "op": "jit", "child": 0.203673, "lat": 0.168}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 107, "op": "graft", "child": 0.684536, "lat": 0.168}
+{"ts": "2026-11-04 09:48:03", "ev": "PROMOTE", "gen": 107, "op": "meta", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.168}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 108, "op": "graft", "child": 0.738663, "lat": 0.152}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 108, "op": "meta", "child": 0.085229, "lat": 0.152}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 108, "op": "jit", "child": 0.091029, "lat": 0.152}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 108, "op": "swap", "child": 0.096365, "lat": 0.152}
+{"ts": "2026-11-04 09:48:03", "ev": "PROMOTE", "gen": 108, "op": "meta", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.152}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 109, "op": "meta", "child": 0.085229, "lat": 0.154}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 109, "op": "prune", "child": 1.004565, "lat": 0.154}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 109, "op": "jit", "child": 0.102979, "lat": 0.154}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 109, "op": "swap", "child": 0.085229, "lat": 0.154}
+{"ts": "2026-11-04 09:48:03", "ev": "PROMOTE", "gen": 109, "op": "meta", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.154}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 110, "op": "jit", "child": 0.092738, "lat": 0.159}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 110, "op": "jit", "child": 0.100233, "lat": 0.159}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 110, "op": "swap", "child": 0.085229, "lat": 0.159}
+{"ts": "2026-11-04 09:48:03", "ev": "TRIED", "gen": 110, "op": "prune", "child": 1.157835, "lat": 0.159}
+{"ts": "2026-11-04 09:48:03", "ev": "PROMOTE", "gen": 110, "op": "swap", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.159}
+{"ts": "2026-11-04 09:48:04", "ev": "TRIED", "gen": 111, "op": "jit", "child": 0.090633, "lat": 0.151}
+{"ts": "2026-11-04 09:48:04", "ev": "TRIED", "gen": 111, "op": "jit", "child": 0.38942, "lat": 0.151}
+{"ts": "2026-11-04 09:48:04", "ev": "TRIED", "gen": 111, "op": "swap", "child": 0.085229, "lat": 0.151}
+{"ts": "2026-11-04 09:48:04", "ev": "TRIED", "gen": 111, "op": "swap", "child": 0.085229, "lat": 0.151}
+{"ts": "2026-11-04 09:48:04", "ev": "PROMOTE", "gen": 111, "op": "swap", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.151}
+{"ts": "2026-11-04 09:48:04", "ev": "TRIED", "gen": 112, "op": "jit", "child": 0.183405, "lat": 0.157}
+{"ts": "2026-11-04 09:48:04", "ev": "TRIED", "gen": 112, "op": "meta", "child": 0.085229, "lat": 0.157}
+{"ts": "2026-11-04 09:48:04", "ev": "TRIED", "gen": 112, "op": "swap", "child": 0.085229, "lat": 0.157}
+{"ts": "2026-11-04 09:48:04", "ev": "TRIED", "gen": 112, "op": "meta", "child": 0.085229, "lat": 0.157}
+{"ts": "2026-11-04 09:48:04", "ev": "PROMOTE", "gen": 112, "op": "meta", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.157}
+{"ts": "2026-11-04 10:48:02", "ev": "WAKE", "gen": 112, "parent": 0.085229, "task": "builtin"}
+{"ts": "2026-11-04 10:48:02", "ev": "TRIED", "gen": 113, "op": "meta", "child": 0.085229, "lat": 0.311}
+{"ts": "2026-11-04 10:48:02", "ev": "TRIED", "gen": 113, "op": "jit", "child": 0.107797, "lat": 0.311}
+{"ts": "2026-11-04 10:48:02", "ev": "TRIED", "gen": 113, "op": "prune", "child": 1.465575, "lat": 0.311}
+{"ts": "2026-11-04 10:48:02", "ev": "TRIED", "gen": 113, "op": "prune", "child": 0.087429, "lat": 0.311}
+{"ts": "2026-11-04 10:48:02", "ev": "PROMOTE", "gen": 113, "op": "meta", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.311}
+{"ts": "2026-11-04 10:48:02", "ev": "TRIED", "gen": 114, "op": "jit", "child": 0.211517, "lat": 0.256}
+{"ts": "2026-11-04 10:48:02", "ev": "TRIED", "gen": 114, "op": "meta", "child": 0.085229, "lat": 0.256}
+{"ts": "2026-11-04 10:48:02", "ev": "TRIED", "gen": 114, "op": "meta", "child": 0.085229, "lat": 0.256}
+{"ts": "2026-11-04 10:48:02", "ev": "TRIED", "gen": 114, "op": "graft", "child": 1.018217, "lat": 0.256}
+{"ts": "2026-11-04 10:48:02", "ev": "PROMOTE", "gen": 114, "op": "meta", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.256}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 115, "op": "graft", "child": 0.666329, "lat": 0.251}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 115, "op": "graft", "child": 1.192074, "lat": 0.251}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 115, "op": "prune", "child": 1.100044, "lat": 0.251}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 115, "op": "swap", "child": 0.085229, "lat": 0.251}
+{"ts": "2026-11-04 10:48:03", "ev": "PROMOTE", "gen": 115, "op": "swap", "child": 0.085229, "parent": 0.085229, "task": "builtin", "lat": 0.251}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 116, "op": "swap", "child": 0.95282, "lat": 0.228}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 116, "op": "swap", "child": 0.490754, "lat": 0.228}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 116, "op": "jit", "child": 0.090672, "lat": 0.228}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 116, "op": "jit", "child": 0.093124, "lat": 0.228}
+{"ts": "2026-11-04 10:48:03", "ev": "PROMOTE", "gen": 116, "op": "jit", "child": 0.090672, "parent": 0.090672, "task": "builtin", "lat": 0.228}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 117, "op": "jit", "child": 0.122201, "lat": 0.274}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 117, "op": "swap", "child": 0.090672, "lat": 0.274}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 117, "op": "jit", "child": 0.090415, "lat": 0.274}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 117, "op": "swap", "child": 0.694061, "lat": 0.274}
+{"ts": "2026-11-04 10:48:03", "ev": "PROMOTE", "gen": 117, "op": "jit", "child": 0.090415, "parent": 0.090415, "task": "builtin", "lat": 0.274}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 118, "op": "meta", "child": 0.090415, "lat": 0.207}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 118, "op": "swap", "child": 0.809952, "lat": 0.207}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 118, "op": "jit", "child": 0.141778, "lat": 0.207}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 118, "op": "graft", "child": 0.55755, "lat": 0.207}
+{"ts": "2026-11-04 10:48:03", "ev": "PROMOTE", "gen": 118, "op": "meta", "child": 0.090415, "parent": 0.090415, "task": "builtin", "lat": 0.207}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 119, "op": "graft", "child": 2.896161, "lat": 0.191}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 119, "op": "graft", "child": 0.79842, "lat": 0.191}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 119, "op": "graft", "child": 3.241278, "lat": 0.191}
+{"ts": "2026-11-04 10:48:03", "ev": "TRIED", "gen": 119, "op": "swap", "child": 0.090415, "lat": 0.191}
+{"ts": "2026-11-04 10:48:04", "ev": "PROMOTE", "gen": 119, "op": "swap", "child": 0.090415, "parent": 0.090415, "task": "builtin", "lat": 0.191}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 120, "op": "swap", "child": 0.090415, "lat": 0.164}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 120, "op": "graft", "child": 0.848276, "lat": 0.164}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 120, "op": "graft", "child": 0.092615, "lat": 0.164}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 120, "op": "prune", "child": 1.638689, "lat": 0.164}
+{"ts": "2026-11-04 10:48:04", "ev": "PROMOTE", "gen": 120, "op": "swap", "child": 0.090415, "parent": 0.090415, "task": "builtin", "lat": 0.164}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 121, "op": "graft", "child": 0.682993, "lat": 0.164}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 121, "op": "graft", "child": 0.985747, "lat": 0.164}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 121, "op": "graft", "child": 0.785344, "lat": 0.164}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 121, "op": "prune", "child": 2.983759, "lat": 0.164}
+{"ts": "2026-11-04 10:48:04", "ev": "DISCARD", "gen": 121, "op": "graft", "child": 0.682993, "parent": 0.090415, "task": "builtin", "lat": 0.164}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 121, "op": "prune", "child": 0.363887, "lat": 0.161}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 121, "op": "meta", "child": 0.090415, "lat": 0.161}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 121, "op": "meta", "child": 0.090415, "lat": 0.161}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 121, "op": "jit", "child": 0.0977, "lat": 0.161}
+{"ts": "2026-11-04 10:48:04", "ev": "PROMOTE", "gen": 121, "op": "meta", "child": 0.090415, "parent": 0.090415, "task": "builtin", "lat": 0.161}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 122, "op": "meta", "child": 0.090415, "lat": 0.159}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 122, "op": "meta", "child": 0.090415, "lat": 0.159}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 122, "op": "swap", "child": 0.090415, "lat": 0.159}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 122, "op": "meta", "child": 0.090415, "lat": 0.159}
+{"ts": "2026-11-04 10:48:04", "ev": "PROMOTE", "gen": 122, "op": "meta", "child": 0.090415, "parent": 0.090415, "task": "builtin", "lat": 0.159}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 123, "op": "swap", "child": 0.742406, "lat": 0.159}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 123, "op": "graft", "child": 0.237283, "lat": 0.159}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 123, "op": "jit", "child": 0.134639, "lat": 0.159}
+{"ts": "2026-11-04 10:48:04", "ev": "TRIED", "gen": 123, "op": "prune", "child": 0.847356, "lat": 0.159}
+{"ts": "2026-11-04 10:48:04", "ev": "DISCARD", "gen": 123, "op": "jit", "child": 0.134639, "parent": 0.090415, "task": "builtin", "lat": 0.159}
+{"ts": "2026-11-04 11:48:02", "ev": "WAKE", "gen": 122, "parent": 0.090415, "task": "builtin"}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 123, "op": "jit", "child": 0.100588, "lat": 0.185}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 123, "op": "meta", "child": 0.090415, "lat": 0.185}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 123, "op": "meta", "child": 0.090415, "lat": 0.185}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 123, "op": "jit", "child": 0.097217, "lat": 0.185}
+{"ts": "2026-11-04 11:48:02", "ev": "PROMOTE", "gen": 123, "op": "meta", "child": 0.090415, "parent": 0.090415, "task": "builtin", "lat": 0.185}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 124, "op": "meta", "child": 0.090415, "lat": 0.159}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 124, "op": "prune", "child": 0.384649, "lat": 0.159}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 124, "op": "graft", "child": 0.139383, "lat": 0.159}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 124, "op": "meta", "child": 0.090415, "lat": 0.159}
+{"ts": "2026-11-04 11:48:02", "ev": "PROMOTE", "gen": 124, "op": "meta", "child": 0.090415, "parent": 0.090415, "task": "builtin", "lat": 0.159}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 125, "op": "prune", "child": 0.384511, "lat": 0.161}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 125, "op": "graft", "child": 0.390893, "lat": 0.161}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 125, "op": "graft", "child": 0.920671, "lat": 0.161}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 125, "op": "swap", "child": 0.090415, "lat": 0.161}
+{"ts": "2026-11-04 11:48:02", "ev": "PROMOTE", "gen": 125, "op": "swap", "child": 0.090415, "parent": 0.090415, "task": "builtin", "lat": 0.161}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 126, "op": "swap", "child": 0.630857, "lat": 0.155}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 126, "op": "jit", "child": 0.188437, "lat": 0.155}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 126, "op": "meta", "child": 0.090415, "lat": 0.155}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 126, "op": "meta", "child": 0.090415, "lat": 0.155}
+{"ts": "2026-11-04 11:48:02", "ev": "PROMOTE", "gen": 126, "op": "meta", "child": 0.090415, "parent": 0.090415, "task": "builtin", "lat": 0.155}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 127, "op": "meta", "child": 0.090415, "lat": 0.154}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 127, "op": "prune", "child": 0.697552, "lat": 0.154}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 127, "op": "jit", "child": 0.158558, "lat": 0.154}
+{"ts": "2026-11-04 11:48:02", "ev": "TRIED", "gen": 127, "op": "jit", "child": 0.106424, "lat": 0.154}
+{"ts": "2026-11-04 11:48:02", "ev": "PROMOTE", "gen": 127, "op": "meta", "child": 0.090415, "parent": 0.090415, "task": "builtin", "lat": 0.154}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 128, "op": "prune", "child": 0.799685, "lat": 0.154}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 128, "op": "jit", "child": 0.256989, "lat": 0.154}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 128, "op": "graft", "child": 0.092615, "lat": 0.154}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 128, "op": "jit", "child": 0.109316, "lat": 0.154}
+{"ts": "2026-11-04 11:48:03", "ev": "PROMOTE", "gen": 128, "op": "graft", "child": 0.092615, "parent": 0.092615, "task": "builtin", "lat": 0.154}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 129, "op": "meta", "child": 0.092615, "lat": 0.166}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 129, "op": "jit", "child": 0.326357, "lat": 0.166}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 129, "op": "graft", "child": 0.482213, "lat": 0.166}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 129, "op": "graft", "child": 0.682993, "lat": 0.166}
+{"ts": "2026-11-04 11:48:03", "ev": "PROMOTE", "gen": 129, "op": "meta", "child": 0.092615, "parent": 0.092615, "task": "builtin", "lat": 0.166}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 130, "op": "jit", "child": 0.142412, "lat": 0.155}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 130, "op": "graft", "child": 0.143879, "lat": 0.155}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 130, "op": "swap", "child": 0.092615, "lat": 0.155}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 130, "op": "jit", "child": 0.092615, "lat": 0.155}
+{"ts": "2026-11-04 11:48:03", "ev": "PROMOTE", "gen": 130, "op": "swap", "child": 0.092615, "parent": 0.092615, "task": "builtin", "lat": 0.155}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 131, "op": "swap", "child": 0.633057, "lat": 0.158}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 131, "op": "swap", "child": 0.255161, "lat": 0.158}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 131, "op": "swap", "child": 0.095023, "lat": 0.158}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 131, "op": "jit", "child": 0.137267, "lat": 0.158}
+{"ts": "2026-11-04 11:48:03", "ev": "PROMOTE", "gen": 131, "op": "swap", "child": 0.095023, "parent": 0.095023, "task": "builtin", "lat": 0.158}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 132, "op": "jit", "child": 0.101342, "lat": 0.16}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 132, "op": "graft", "child": 0.09245, "lat": 0.16}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 132, "op": "prune", "child": 0.706452, "lat": 0.16}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 132, "op": "graft", "child": 0.418114, "lat": 0.16}
+{"ts": "2026-11-04 11:48:03", "ev": "PROMOTE", "gen": 132, "op": "graft", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.16}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 133, "op": "jit", "child": 0.149105, "lat": 0.157}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 133, "op": "jit", "child": 0.106018, "lat": 0.157}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 133, "op": "graft", "child": 0.09245, "lat": 0.157}
+{"ts": "2026-11-04 11:48:03", "ev": "TRIED", "gen": 133, "op": "graft", "child": 0.09245, "lat": 0.157}
+{"ts": "2026-11-04 11:48:03", "ev": "PROMOTE", "gen": 133, "op": "graft", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.157}
+{"ts": "2026-11-04 11:48:04", "ev": "TRIED", "gen": 134, "op": "jit", "child": 0.095918, "lat": 0.158}
+{"ts": "2026-11-04 11:48:04", "ev": "TRIED", "gen": 134, "op": "jit", "child": 0.09245, "lat": 0.158}
+{"ts": "2026-11-04 11:48:04", "ev": "TRIED", "gen": 134, "op": "prune", "child": 0.09245, "lat": 0.158}
+{"ts": "2026-11-04 11:48:04", "ev": "TRIED", "gen": 134, "op": "prune", "child": 1.750193, "lat": 0.158}
+{"ts": "2026-11-04 11:48:04", "ev": "PROMOTE", "gen": 134, "op": "jit", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.158}
+{"ts": "2026-11-04 12:48:02", "ev": "WAKE", "gen": 134, "parent": 0.09245, "task": "builtin"}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 135, "op": "jit", "child": 0.092815, "lat": 0.227}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 135, "op": "graft", "child": 0.435214, "lat": 0.227}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 135, "op": "graft", "child": 0.592656, "lat": 0.227}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 135, "op": "swap", "child": 0.09245, "lat": 0.227}
+{"ts": "2026-11-04 12:48:02", "ev": "PROMOTE", "gen": 135, "op": "swap", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.227}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 136, "op": "graft", "child": 0.585293, "lat": 0.192}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 136, "op": "graft", "child": 0.09245, "lat": 0.192}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 136, "op": "jit", "child": 0.11907, "lat": 0.192}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 136, "op": "meta", "child": 0.09245, "lat": 0.192}
+{"ts": "2026-11-04 12:48:02", "ev": "PROMOTE", "gen": 136, "op": "graft", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.192}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 137, "op": "swap", "child": 0.09245, "lat": 0.166}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 137, "op": "jit", "child": 0.270119, "lat": 0.166}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 137, "op": "jit", "child": 0.09245, "lat": 0.166}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 137, "op": "swap", "child": 0.09245, "lat": 0.166}
+{"ts": "2026-11-04 12:48:02", "ev": "PROMOTE", "gen": 137, "op": "swap", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.166}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 138, "op": "meta", "child": 0.09245, "lat": 0.164}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 138, "op": "prune", "child": 3.366806, "lat": 0.164}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 138, "op": "jit", "child": 0.092793, "lat": 0.164}
+{"ts": "2026-11-04 12:48:02", "ev": "TRIED", "gen": 138, "op": "graft", "child": 2.678293, "lat": 0.164}
+{"ts": "2026-11-04 12:48:02", "ev": "PROMOTE", "gen": 138, "op": "meta", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.164}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 139, "op": "jit", "child": 0.256899, "lat": 0.162}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 139, "op": "swap", "child": 0.450443, "lat": 0.162}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 139, "op": "meta", "child": 0.09245, "lat": 0.162}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 139, "op": "swap", "child": 0.142919, "lat": 0.162}
+{"ts": "2026-11-04 12:48:03", "ev": "PROMOTE", "gen": 139, "op": "meta", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.162}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 140, "op": "jit", "child": 0.152916, "lat": 0.174}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 140, "op": "graft", "child": 73955.775941, "lat": 0.174}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 140, "op": "prune", "child": 0.09245, "lat": 0.174}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 140, "op": "graft", "child": 1.739693, "lat": 0.174}
+{"ts": "2026-11-04 12:48:03", "ev": "PROMOTE", "gen": 140, "op": "prune", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.174}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 141, "op": "meta", "child": 0.09245, "lat": 0.177}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 141, "op": "jit", "child": 0.09245, "lat": 0.177}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 141, "op": "swap", "child": 0.09245, "lat": 0.177}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 141, "op": "swap", "child": 0.822274, "lat": 0.177}
+{"ts": "2026-11-04 12:48:03", "ev": "PROMOTE", "gen": 141, "op": "meta", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.177}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 142, "op": "swap", "child": 0.09245, "lat": 0.182}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 142, "op": "graft", "child": 0.435348, "lat": 0.182}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 142, "op": "graft", "child": 5.190715, "lat": 0.182}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 142, "op": "swap", "child": 0.09245, "lat": 0.182}
+{"ts": "2026-11-04 12:48:03", "ev": "PROMOTE", "gen": 142, "op": "swap", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.182}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 143, "op": "jit", "child": 0.09821, "lat": 0.181}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 143, "op": "meta", "child": 0.09245, "lat": 0.181}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 143, "op": "jit", "child": 0.09245, "lat": 0.181}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 143, "op": "graft", "child": 0.10345, "lat": 0.181}
+{"ts": "2026-11-04 12:48:03", "ev": "PROMOTE", "gen": 143, "op": "meta", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.181}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 144, "op": "graft", "child": 0.682993, "lat": 0.166}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 144, "op": "jit", "child": 0.233643, "lat": 0.166}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 144, "op": "jit", "child": 0.313318, "lat": 0.166}
+{"ts": "2026-11-04 12:48:03", "ev": "TRIED", "gen": 144, "op": "jit", "child": 0.09245, "lat": 0.166}
+{"ts": "2026-11-04 12:48:03", "ev": "PROMOTE", "gen": 144, "op": "jit", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.166}
+{"ts": "2026-11-04 12:48:04", "ev": "TRIED", "gen": 145, "op": "jit", "child": 0.093384, "lat": 0.166}
+{"ts": "2026-11-04 12:48:04", "ev": "TRIED", "gen": 145, "op": "graft", "child": 1.744064, "lat": 0.166}
+{"ts": "2026-11-04 12:48:04", "ev": "TRIED", "gen": 145, "op": "jit", "child": 0.398116, "lat": 0.166}
+{"ts": "2026-11-04 12:48:04", "ev": "TRIED", "gen": 145, "op": "meta", "child": 0.09245, "lat": 0.166}
+{"ts": "2026-11-04 12:48:04", "ev": "PROMOTE", "gen": 145, "op": "meta", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.166}
+{"ts": "2026-11-04 12:48:04", "ev": "TRIED", "gen": 146, "op": "swap", "child": 0.09245, "lat": 0.174}
+{"ts": "2026-11-04 12:48:04", "ev": "TRIED", "gen": 146, "op": "jit", "child": 0.905037, "lat": 0.174}
+{"ts": "2026-11-04 12:48:04", "ev": "TRIED", "gen": 146, "op": "prune", "child": 0.985494, "lat": 0.174}
+{"ts": "2026-11-04 12:48:04", "ev": "TRIED", "gen": 146, "op": "graft", "child": 1.741546, "lat": 0.174}
+{"ts": "2026-11-04 12:48:04", "ev": "PROMOTE", "gen": 146, "op": "swap", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.174}
+{"ts": "2026-11-04 13:48:02", "ev": "WAKE", "gen": 146, "parent": 0.09245, "task": "builtin"}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 147, "op": "graft", "child": 0.10345, "lat": 0.207}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 147, "op": "swap", "child": 0.09245, "lat": 0.207}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 147, "op": "meta", "child": 0.09245, "lat": 0.207}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 147, "op": "swap", "child": 0.156086, "lat": 0.207}
+{"ts": "2026-11-04 13:48:02", "ev": "PROMOTE", "gen": 147, "op": "swap", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.207}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 148, "op": "graft", "child": 6.972171, "lat": 0.182}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 148, "op": "jit", "child": 0.09245, "lat": 0.182}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 148, "op": "jit", "child": 0.09245, "lat": 0.182}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 148, "op": "prune", "child": 0.160777, "lat": 0.182}
+{"ts": "2026-11-04 13:48:02", "ev": "PROMOTE", "gen": 148, "op": "jit", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.182}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 149, "op": "graft", "child": 2.402888, "lat": 0.162}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 149, "op": "graft", "child": 17.949706, "lat": 0.162}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 149, "op": "swap", "child": 0.09245, "lat": 0.162}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 149, "op": "graft", "child": 0.10125, "lat": 0.162}
+{"ts": "2026-11-04 13:48:02", "ev": "PROMOTE", "gen": 149, "op": "swap", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.162}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 150, "op": "jit", "child": 0.09245, "lat": 0.157}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 150, "op": "prune", "child": 0.496078, "lat": 0.157}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 150, "op": "meta", "child": 0.09245, "lat": 0.157}
+{"ts": "2026-11-04 13:48:02", "ev": "TRIED", "gen": 150, "op": "swap", "child": 0.290048, "lat": 0.157}
+{"ts": "2026-11-04 13:48:02", "ev": "PROMOTE", "gen": 150, "op": "jit", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.157}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 151, "op": "prune", "child": 0.831802, "lat": 0.16}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 151, "op": "meta", "child": 0.09245, "lat": 0.16}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 151, "op": "jit", "child": 0.09245, "lat": 0.16}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 151, "op": "jit", "child": 0.09245, "lat": 0.16}
+{"ts": "2026-11-04 13:48:03", "ev": "PROMOTE", "gen": 151, "op": "meta", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.16}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 152, "op": "graft", "child": 0.399507, "lat": 0.157}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 152, "op": "graft", "child": 1.279531, "lat": 0.157}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 152, "op": "graft", "child": 1.185319, "lat": 0.157}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 152, "op": "jit", "child": 0.185418, "lat": 0.157}
+{"ts": "2026-11-04 13:48:03", "ev": "DISCARD", "gen": 152, "op": "jit", "child": 0.185418, "parent": 0.09245, "task": "builtin", "lat": 0.157}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 152, "op": "swap", "child": 0.795517, "lat": 0.158}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 152, "op": "meta", "child": 0.09245, "lat": 0.158}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 152, "op": "prune", "child": 0.718345, "lat": 0.158}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 152, "op": "swap", "child": 0.09245, "lat": 0.158}
+{"ts": "2026-11-04 13:48:03", "ev": "PROMOTE", "gen": 152, "op": "meta", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.158}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 153, "op": "graft", "child": 1.535254, "lat": 0.158}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 153, "op": "swap", "child": 0.969356, "lat": 0.158}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 153, "op": "meta", "child": 0.09245, "lat": 0.158}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 153, "op": "graft", "child": 0.829855, "lat": 0.158}
+{"ts": "2026-11-04 13:48:03", "ev": "PROMOTE", "gen": 153, "op": "meta", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.158}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 154, "op": "prune", "child": 0.09245, "lat": 0.156}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 154, "op": "swap", "child": 0.139887, "lat": 0.156}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 154, "op": "graft", "child": 0.141583, "lat": 0.156}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 154, "op": "swap", "child": 0.09245, "lat": 0.156}
+{"ts": "2026-11-04 13:48:03", "ev": "PROMOTE", "gen": 154, "op": "prune", "child": 0.09245, "parent": 0.09245, "task": "builtin", "lat": 0.156}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 155, "op": "prune", "child": 0.844959, "lat": 0.167}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 155, "op": "jit", "child": 0.100839, "lat": 0.167}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 155, "op": "graft", "child": 0.682993, "lat": 0.167}
+{"ts": "2026-11-04 13:48:03", "ev": "TRIED", "gen": 155, "op": "jit", "child": 0.093555, "lat": 0.167}
+{"ts": "2026-11-04 13:48:03", "ev": "PROMOTE", "gen": 155, "op": "jit", "child": 0.093555, "parent": 0.093555, "task": "builtin", "lat": 0.167}
+{"ts": "2026-11-04 13:48:04", "ev": "TRIED", "gen": 156, "op": "jit", "child": 0.341457, "lat": 0.159}
+{"ts": "2026-11-04 13:48:04", "ev": "TRIED", "gen": 156, "op": "jit", "child": 0.147082, "lat": 0.159}
+{"ts": "2026-11-04 13:48:04", "ev": "TRIED", "gen": 156, "op": "swap", "child": 0.093555, "lat": 0.159}
+{"ts": "2026-11-04 13:48:04", "ev": "TRIED", "gen": 156, "op": "jit", "child": 0.093555, "lat": 0.159}
+{"ts": "2026-11-04 13:48:04", "ev": "PROMOTE", "gen": 156, "op": "swap", "child": 0.093555, "parent": 0.093555, "task": "builtin", "lat": 0.159}
+{"ts": "2026-11-04 13:48:04", "ev": "TRIED", "gen": 157, "op": "jit", "child": 0.093555, "lat": 0.154}
+{"ts": "2026-11-04 13:48:04", "ev": "TRIED", "gen": 157, "op": "jit", "child": 0.337733, "lat": 0.154}
+{"ts": "2026-11-04 13:48:04", "ev": "TRIED", "gen": 157, "op": "prune", "child": 1.669764, "lat": 0.154}
+{"ts": "2026-11-04 13:48:04", "ev": "TRIED", "gen": 157, "op": "swap", "child": 0.093555, "lat": 0.154}
+{"ts": "2026-11-04 13:48:04", "ev": "PROMOTE", "gen": 157, "op": "jit", "child": 0.093555, "parent": 0.093555, "task": "builtin", "lat": 0.154}
+{"ts": "2026-11-04 14:48:04", "ev": "WAKE", "gen": 157, "parent": 0.093555, "task": "builtin"}
+{"ts": "2026-11-04 14:48:04", "ev": "TRIED", "gen": 158, "op": "swap", "child": 0.093555, "lat": 0.195}
+{"ts": "2026-11-04 14:48:04", "ev": "TRIED", "gen": 158, "op": "graft", "child": 0.339379, "lat": 0.195}
+{"ts": "2026-11-04 14:48:04", "ev": "TRIED", "gen": 158, "op": "jit", "child": 0.475583, "lat": 0.195}
+{"ts": "2026-11-04 14:48:04", "ev": "TRIED", "gen": 158, "op": "graft", "child": 0.372562, "lat": 0.195}
+{"ts": "2026-11-04 14:48:04", "ev": "PROMOTE", "gen": 158, "op": "swap", "child": 0.093555, "parent": 0.093555, "task": "builtin", "lat": 0.195}
+{"ts": "2026-11-04 14:48:05", "ev": "TRIED", "gen": 159, "op": "jit", "child": 0.108744, "lat": 0.401}
+{"ts": "2026-11-04 14:48:05", "ev": "TRIED", "gen": 159, "op": "meta", "child": 0.093555, "lat": 0.401}
+{"ts": "2026-11-04 14:48:05", "ev": "TRIED", "gen": 159, "op": "meta", "child": 0.093555, "lat": 0.401}
+{"ts": "2026-11-04 14:48:05", "ev": "TRIED", "gen": 159, "op": "swap", "child": 0.842444, "lat": 0.401}
+{"ts": "2026-11-04 14:48:05", "ev": "PROMOTE", "gen": 159, "op": "meta", "child": 0.093555, "parent": 0.093555, "task": "builtin", "lat": 0.401}
+{"ts": "2026-11-04 14:48:05", "ev": "TRIED", "gen": 160, "op": "graft", "child": 0.50096, "lat": 0.329}
+{"ts": "2026-11-04 14:48:05", "ev": "TRIED", "gen": 160, "op": "graft", "child": 0.432753, "lat": 0.329}
+{"ts": "2026-11-04 14:48:05", "ev": "TRIED", "gen": 160, "op": "jit", "child": 0.179229, "lat": 0.329}
+{"ts": "2026-11-04 14:48:05", "ev": "TRIED", "gen": 160, "op": "graft", "child": 0.093555, "lat": 0.329}
+{"ts": "2026-11-04 14:48:05", "ev": "PROMOTE", "gen": 160, "op": "graft", "child": 0.093555, "parent": 0.093555, "task": "builtin", "lat": 0.329}
+{"ts": "2026-11-04 14:48:08", "ev": "TRIED", "gen": 161, "op": "prune", "child": 0.490204, "lat": 2.644}
+{"ts": "2026-11-04 14:48:08", "ev": "TRIED", "gen": 161, "op": "graft", "child": 0.455011, "lat": 2.644}
+{"ts": "2026-11-04 14:48:08", "ev": "TRIED", "gen": 161, "op": "jit", "child": 0.09971, "lat": 2.644}
+{"ts": "2026-11-04 14:48:08", "ev": "TRIED", "gen": 161, "op": "jit", "child": 0.123886, "lat": 2.644}
+{"ts": "2026-11-04 14:48:08", "ev": "DISCARD", "gen": 161, "op": "jit", "child": 0.09971, "parent": 0.093555, "task": "builtin", "lat": 2.644}
+{"ts": "2026-11-04 14:48:10", "ev": "TRIED", "gen": 161, "op": "graft", "child": 2.250461, "lat": 2.74}
+{"ts": "2026-11-04 14:48:10", "ev": "TRIED", "gen": 161, "op": "graft", "child": 1.053658, "lat": 2.74}
+{"ts": "2026-11-04 14:48:10", "ev": "TRIED", "gen": 161, "op": "jit", "child": 0.180106, "lat": 2.74}
+{"ts": "2026-11-04 14:48:10", "ev": "TRIED", "gen": 161, "op": "jit", "child": 0.119218, "lat": 2.74}
+{"ts": "2026-11-04 14:48:10", "ev": "DISCARD", "gen": 161, "op": "jit", "child": 0.119218, "parent": 0.093555, "task": "builtin", "lat": 2.74}
+{"ts": "2026-11-04 14:48:12", "ev": "TRIED", "gen": 161, "op": "prune", "child": 0.093555, "lat": 1.718}
+{"ts": "2026-11-04 14:48:12", "ev": "TRIED", "gen": 161, "op": "swap", "child": 0.093555, "lat": 1.718}
+{"ts": "2026-11-04 14:48:12", "ev": "TRIED", "gen": 161, "op": "graft", "child": 0.868459, "lat": 1.718}
+{"ts": "2026-11-04 14:48:12", "ev": "TRIED", "gen": 161, "op": "graft", "child": 1.012704, "lat": 1.718}
+{"ts": "2026-11-04 14:48:12", "ev": "PROMOTE", "gen": 161, "op": "prune", "child": 0.093555, "parent": 0.093555, "task": "builtin", "lat": 1.718}
+{"ts": "2026-11-04 14:48:14", "ev": "TRIED", "gen": 162, "op": "jit", "child": 0.093555, "lat": 1.651}
+{"ts": "2026-11-04 14:48:14", "ev": "TRIED", "gen": 162, "op": "jit", "child": 0.946754, "lat": 1.651}
+{"ts": "2026-11-04 14:48:14", "ev": "TRIED", "gen": 162, "op": "prune", "child": 0.557255, "lat": 1.651}
+{"ts": "2026-11-04 14:48:14", "ev": "TRIED", "gen": 162, "op": "graft", "child": 0.095755, "lat": 1.651}
+{"ts": "2026-11-04 14:48:14", "ev": "PROMOTE", "gen": 162, "op": "jit", "child": 0.093555, "parent": 0.093555, "task": "builtin", "lat": 1.651}
+{"ts": "2026-11-04 14:48:15", "ev": "TRIED", "gen": 163, "op": "prune", "child": 0.093555, "lat": 1.383}
+{"ts": "2026-11-04 14:48:15", "ev": "TRIED", "gen": 163, "op": "graft", "child": 0.102355, "lat": 1.383}
+{"ts": "2026-11-04 14:48:15", "ev": "TRIED", "gen": 163, "op": "meta", "child": 0.093555, "lat": 1.383}
+{"ts": "2026-11-04 14:48:15", "ev": "TRIED", "gen": 163, "op": "meta", "child": 0.093555, "lat": 1.383}
+{"ts": "2026-11-04 14:48:15", "ev": "PROMOTE", "gen": 163, "op": "prune", "child": 0.093555, "parent": 0.093555, "task": "builtin", "lat": 1.383}
+{"ts": "2026-11-04 14:48:15", "ev": "TRIED", "gen": 164, "op": "swap", "child": 0.093555, "lat": 0.172}
+{"ts": "2026-11-04 14:48:15", "ev": "TRIED", "gen": 164, "op": "graft", "child": 5.813199, "lat": 0.172}
+{"ts": "2026-11-04 14:48:15", "ev": "TRIED", "gen": 164, "op": "graft", "child": 0.093555, "lat": 0.172}
+{"ts": "2026-11-04 14:48:15", "ev": "TRIED", "gen": 164, "op": "jit", "child": 0.113106, "lat": 0.172}
+{"ts": "2026-11-04 14:48:15", "ev": "PROMOTE", "gen": 164, "op": "swap", "child": 0.093555, "parent": 0.093555, "task": "builtin", "lat": 0.172}
+{"ts": "2026-11-04 14:48:16", "ev": "TRIED", "gen": 165, "op": "jit", "child": 1.100408, "lat": 0.176}
+{"ts": "2026-11-04 14:48:16", "ev": "TRIED", "gen": 165, "op": "jit", "child": 0.093555, "lat": 0.176}
+{"ts": "2026-11-04 14:48:16", "ev": "TRIED", "gen": 165, "op": "swap", "child": 0.09905, "lat": 0.176}
+{"ts": "2026-11-04 14:48:16", "ev": "TRIED", "gen": 165, "op": "swap", "child": 0.093555, "lat": 0.176}
+{"ts": "2026-11-04 14:48:16", "ev": "PROMOTE", "gen": 165, "op": "jit", "child": 0.093555, "parent": 0.093555, "task": "builtin", "lat": 0.176}
+{"ts": "2026-11-04 14:48:16", "ev": "TRIED", "gen": 166, "op": "prune", "child": 0.755111, "lat": 0.219}
+{"ts": "2026-11-04 14:48:16", "ev": "TRIED", "gen": 166, "op": "graft", "child": 0.416632, "lat": 0.219}
+{"ts": "2026-11-04 14:48:16", "ev": "TRIED", "gen": 166, "op": "graft", "child": 1.833409, "lat": 0.219}
+{"ts": "2026-11-04 14:48:16", "ev": "TRIED", "gen": 166, "op": "prune", "child": 3.98789, "lat": 0.219}
+{"ts": "2026-11-04 14:48:16", "ev": "DISCARD", "gen": 166, "op": "graft", "child": 0.416632, "parent": 0.093555, "task": "builtin", "lat": 0.219}
+{"ts": "2026-11-04 14:48:16", "ev": "TRIED", "gen": 166, "op": "jit", "child": 0.280018, "lat": 0.444}
+{"ts": "2026-11-04 14:48:16", "ev": "TRIED", "gen": 166, "op": "prune", "child": 1.312543, "lat": 0.444}
+{"ts": "2026-11-04 14:48:16", "ev": "TRIED", "gen": 166, "op": "jit", "child": 0.119871, "lat": 0.444}
+{"ts": "2026-11-04 14:48:16", "ev": "TRIED", "gen": 166, "op": "prune", "child": 0.979404, "lat": 0.444}
+{"ts": "2026-11-04 14:48:16", "ev": "DISCARD", "gen": 166, "op": "jit", "child": 0.119871, "parent": 0.093555, "task": "builtin", "lat": 0.444}
+{"ts": "2026-11-04 15:48:02", "ev": "WAKE", "gen": 165, "parent": 0.093555, "task": "builtin"}
+{"ts": "2026-11-04 15:48:02", "ev": "TRIED", "gen": 166, "op": "graft", "child": 0.620509, "lat": 0.219}
+{"ts": "2026-11-04 15:48:02", "ev": "TRIED", "gen": 166, "op": "jit", "child": 0.290996, "lat": 0.219}
+{"ts": "2026-11-04 15:48:02", "ev": "TRIED", "gen": 166, "op": "meta", "child": 0.093555, "lat": 0.219}
+{"ts": "2026-11-04 15:48:02", "ev": "TRIED", "gen": 166, "op": "graft", "child": 0.091355, "lat": 0.219}
+{"ts": "2026-11-04 15:48:02", "ev": "PROMOTE", "gen": 166, "op": "graft", "child": 0.091355, "parent": 0.091355, "task": "builtin", "lat": 0.219}
+{"ts": "2026-11-04 15:48:02", "ev": "TRIED", "gen": 167, "op": "jit", "child": 0.146079, "lat": 0.234}
+{"ts": "2026-11-04 15:48:02", "ev": "TRIED", "gen": 167, "op": "jit", "child": 0.248441, "lat": 0.234}
+{"ts": "2026-11-04 15:48:02", "ev": "TRIED", "gen": 167, "op": "graft", "child": 2.425353, "lat": 0.234}
+{"ts": "2026-11-04 15:48:02", "ev": "TRIED", "gen": 167, "op": "jit", "child": 0.349878, "lat": 0.234}
+{"ts": "2026-11-04 15:48:02", "ev": "DISCARD", "gen": 167, "op": "jit", "child": 0.146079, "parent": 0.091355, "task": "builtin", "lat": 0.234}
+{"ts": "2026-11-04 15:48:02", "ev": "TRIED", "gen": 167, "op": "meta", "child": 0.091355, "lat": 0.188}
+{"ts": "2026-11-04 15:48:02", "ev": "TRIED", "gen": 167, "op": "graft", "child": 1.831209, "lat": 0.188}
+{"ts": "2026-11-04 15:48:02", "ev": "TRIED", "gen": 167, "op": "prune", "child": 2.31431, "lat": 0.188}
+{"ts": "2026-11-04 15:48:02", "ev": "TRIED", "gen": 167, "op": "jit", "child": 0.385225, "lat": 0.188}
+{"ts": "2026-11-04 15:48:02", "ev": "PROMOTE", "gen": 167, "op": "meta", "child": 0.091355, "parent": 0.091355, "task": "builtin", "lat": 0.188}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 168, "op": "graft", "child": 1.829645, "lat": 0.165}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 168, "op": "prune", "child": 3.18573, "lat": 0.165}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 168, "op": "graft", "child": 10.354768, "lat": 0.165}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 168, "op": "swap", "child": 0.091355, "lat": 0.165}
+{"ts": "2026-11-04 15:48:03", "ev": "PROMOTE", "gen": 168, "op": "swap", "child": 0.091355, "parent": 0.091355, "task": "builtin", "lat": 0.165}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 169, "op": "swap", "child": 0.256935, "lat": 0.16}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 169, "op": "meta", "child": 0.091355, "lat": 0.16}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 169, "op": "swap", "child": 0.09522, "lat": 0.16}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 169, "op": "meta", "child": 0.091355, "lat": 0.16}
+{"ts": "2026-11-04 15:48:03", "ev": "PROMOTE", "gen": 169, "op": "meta", "child": 0.091355, "parent": 0.091355, "task": "builtin", "lat": 0.16}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 170, "op": "jit", "child": 0.102684, "lat": 0.166}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 170, "op": "graft", "child": 1.831209, "lat": 0.166}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 170, "op": "jit", "child": 0.091136, "lat": 0.166}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 170, "op": "graft", "child": 1.116706, "lat": 0.166}
+{"ts": "2026-11-04 15:48:03", "ev": "PROMOTE", "gen": 170, "op": "jit", "child": 0.091136, "parent": 0.091136, "task": "builtin", "lat": 0.166}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 171, "op": "swap", "child": 0.091136, "lat": 0.185}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 171, "op": "swap", "child": 0.091136, "lat": 0.185}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 171, "op": "jit", "child": 0.128134, "lat": 0.185}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 171, "op": "graft", "child": 0.088936, "lat": 0.185}
+{"ts": "2026-11-04 15:48:03", "ev": "PROMOTE", "gen": 171, "op": "graft", "child": 0.088936, "parent": 0.088936, "task": "builtin", "lat": 0.185}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 172, "op": "jit", "child": 0.132591, "lat": 0.204}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 172, "op": "prune", "child": 0.919812, "lat": 0.204}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 172, "op": "meta", "child": 0.088936, "lat": 0.204}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 172, "op": "graft", "child": 0.448264, "lat": 0.204}
+{"ts": "2026-11-04 15:48:03", "ev": "PROMOTE", "gen": 172, "op": "meta", "child": 0.088936, "parent": 0.088936, "task": "builtin", "lat": 0.204}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 173, "op": "graft", "child": 0.734084, "lat": 0.205}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 173, "op": "swap", "child": 0.088936, "lat": 0.205}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 173, "op": "graft", "child": 1.895082, "lat": 0.205}
+{"ts": "2026-11-04 15:48:03", "ev": "TRIED", "gen": 173, "op": "graft", "child": 0.971796, "lat": 0.205}
+{"ts": "2026-11-04 15:48:03", "ev": "PROMOTE", "gen": 173, "op": "swap", "child": 0.088936, "parent": 0.088936, "task": "builtin", "lat": 0.205}
+{"ts": "2026-11-04 15:48:04", "ev": "TRIED", "gen": 174, "op": "swap", "child": 0.088936, "lat": 0.191}
+{"ts": "2026-11-04 15:48:04", "ev": "TRIED", "gen": 174, "op": "prune", "child": 4.015082, "lat": 0.191}
+{"ts": "2026-11-04 15:48:04", "ev": "TRIED", "gen": 174, "op": "jit", "child": 0.14754, "lat": 0.191}
+{"ts": "2026-11-04 15:48:04", "ev": "TRIED", "gen": 174, "op": "jit", "child": 0.088936, "lat": 0.191}
+{"ts": "2026-11-04 15:48:04", "ev": "PROMOTE", "gen": 174, "op": "swap", "child": 0.088936, "parent": 0.088936, "task": "builtin", "lat": 0.191}
+{"ts": "2026-11-04 15:48:04", "ev": "TRIED", "gen": 175, "op": "swap", "child": 1.752829, "lat": 0.21}
+{"ts": "2026-11-04 15:48:04", "ev": "TRIED", "gen": 175, "op": "prune", "child": 0.536561, "lat": 0.21}
+{"ts": "2026-11-04 15:48:04", "ev": "TRIED", "gen": 175, "op": "swap", "child": 0.088936, "lat": 0.21}
+{"ts": "2026-11-04 15:48:04", "ev": "TRIED", "gen": 175, "op": "prune", "child": 0.088936, "lat": 0.21}
+{"ts": "2026-11-04 15:48:04", "ev": "PROMOTE", "gen": 175, "op": "swap", "child": 0.088936, "parent": 0.088936, "task": "builtin", "lat": 0.21}
+{"ts": "2026-11-04 15:48:04", "ev": "TRIED", "gen": 176, "op": "jit", "child": 0.344294, "lat": 0.199}
+{"ts": "2026-11-04 15:48:04", "ev": "TRIED", "gen": 176, "op": "graft", "child": 1.060391, "lat": 0.199}
+{"ts": "2026-11-04 15:48:04", "ev": "TRIED", "gen": 176, "op": "prune", "child": 0.088936, "lat": 0.199}
+{"ts": "2026-11-04 15:48:04", "ev": "TRIED", "gen": 176, "op": "swap", "child": 0.088936, "lat": 0.199}
+{"ts": "2026-11-04 15:48:04", "ev": "PROMOTE", "gen": 176, "op": "prune", "child": 0.088936, "parent": 0.088936, "task": "builtin", "lat": 0.199}
+{"ts": "2026-11-04 16:48:02", "ev": "WAKE", "gen": 176, "parent": 0.088936, "task": "builtin"}
+{"ts": "2026-11-04 16:48:02", "ev": "TRIED", "gen": 177, "op": "swap", "child": 0.078005, "lat": 0.22}
+{"ts": "2026-11-04 16:48:02", "ev": "TRIED", "gen": 177, "op": "jit", "child": 0.583869, "lat": 0.22}
+{"ts": "2026-11-04 16:48:02", "ev": "TRIED", "gen": 177, "op": "jit", "child": 0.088936, "lat": 0.22}
+{"ts": "2026-11-04 16:48:02", "ev": "TRIED", "gen": 177, "op": "jit", "child": 0.112789, "lat": 0.22}
+{"ts": "2026-11-04 16:48:02", "ev": "PROMOTE", "gen": 177, "op": "swap", "child": 0.078005, "parent": 0.078005, "task": "builtin", "lat": 0.22}
+{"ts": "2026-11-04 16:48:02", "ev": "TRIED", "gen": 178, "op": "graft", "child": 0.677046, "lat": 0.219}
+{"ts": "2026-11-04 16:48:02", "ev": "TRIED", "gen": 178, "op": "graft", "child": 4.141073, "lat": 0.219}
+{"ts": "2026-11-04 16:48:02", "ev": "TRIED", "gen": 178, "op": "meta", "child": 0.078005, "lat": 0.219}
+{"ts": "2026-11-04 16:48:02", "ev": "TRIED", "gen": 178, "op": "jit", "child": 0.408205, "lat": 0.219}
+{"ts": "2026-11-04 16:48:02", "ev": "PROMOTE", "gen": 178, "op": "meta", "child": 0.078005, "parent": 0.078005, "task": "builtin", "lat": 0.219}
+{"ts": "2026-11-04 16:48:02", "ev": "TRIED", "gen": 179, "op": "graft", "child": 0.376982, "lat": 0.19}
+{"ts": "2026-11-04 16:48:02", "ev": "TRIED", "gen": 179, "op": "swap", "child": 0.078005, "lat": 0.19}
+{"ts": "2026-11-04 16:48:02", "ev": "TRIED", "gen": 179, "op": "graft", "child": 0.093405, "lat": 0.19}
+{"ts": "2026-11-04 16:48:02", "ev": "TRIED", "gen": 179, "op": "swap", "child": 213.477778, "lat": 0.19}
+{"ts": "2026-11-04 16:48:02", "ev": "PROMOTE", "gen": 179, "op": "swap", "child": 0.078005, "parent": 0.078005, "task": "builtin", "lat": 0.19}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 180, "op": "swap", "child": 0.078005, "lat": 0.197}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 180, "op": "swap", "child": 0.246333, "lat": 0.197}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 180, "op": "meta", "child": 0.078005, "lat": 0.197}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 180, "op": "jit", "child": 0.078005, "lat": 0.197}
+{"ts": "2026-11-04 16:48:03", "ev": "PROMOTE", "gen": 180, "op": "swap", "child": 0.078005, "parent": 0.078005, "task": "builtin", "lat": 0.197}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 181, "op": "jit", "child": 0.086085, "lat": 0.198}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 181, "op": "jit", "child": 0.103008, "lat": 0.198}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 181, "op": "jit", "child": 0.101247, "lat": 0.198}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 181, "op": "swap", "child": 0.078005, "lat": 0.198}
+{"ts": "2026-11-04 16:48:03", "ev": "PROMOTE", "gen": 181, "op": "swap", "child": 0.078005, "parent": 0.078005, "task": "builtin", "lat": 0.198}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 182, "op": "meta", "child": 0.078005, "lat": 0.175}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 182, "op": "graft", "child": 0.075805, "lat": 0.175}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 182, "op": "jit", "child": 0.078005, "lat": 0.175}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 182, "op": "jit", "child": 0.078005, "lat": 0.175}
+{"ts": "2026-11-04 16:48:03", "ev": "PROMOTE", "gen": 182, "op": "graft", "child": 0.075805, "parent": 0.075805, "task": "builtin", "lat": 0.175}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 183, "op": "jit", "child": 0.075805, "lat": 0.188}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 183, "op": "meta", "child": 0.075805, "lat": 0.188}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 183, "op": "prune", "child": 0.075805, "lat": 0.188}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 183, "op": "prune", "child": 0.39636, "lat": 0.188}
+{"ts": "2026-11-04 16:48:03", "ev": "PROMOTE", "gen": 183, "op": "jit", "child": 0.075805, "parent": 0.075805, "task": "builtin", "lat": 0.188}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 184, "op": "swap", "child": 0.075805, "lat": 0.204}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 184, "op": "swap", "child": 0.77419, "lat": 0.204}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 184, "op": "graft", "child": 0.131236, "lat": 0.204}
+{"ts": "2026-11-04 16:48:03", "ev": "TRIED", "gen": 184, "op": "swap", "child": 0.164983, "lat": 0.204}
+{"ts": "2026-11-04 16:48:03", "ev": "PROMOTE", "gen": 184, "op": "swap", "child": 0.075805, "parent": 0.075805, "task": "builtin", "lat": 0.204}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 185, "op": "prune", "child": 0.075805, "lat": 0.164}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 185, "op": "meta", "child": 0.075805, "lat": 0.164}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 185, "op": "swap", "child": 0.075805, "lat": 0.164}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 185, "op": "graft", "child": 0.075805, "lat": 0.164}
+{"ts": "2026-11-04 16:48:04", "ev": "PROMOTE", "gen": 185, "op": "prune", "child": 0.075805, "parent": 0.075805, "task": "builtin", "lat": 0.164}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 186, "op": "graft", "child": 0.083312, "lat": 0.159}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 186, "op": "jit", "child": 0.084193, "lat": 0.159}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 186, "op": "swap", "child": 1.902758, "lat": 0.159}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 186, "op": "graft", "child": 0.663908, "lat": 0.159}
+{"ts": "2026-11-04 16:48:04", "ev": "PROMOTE", "gen": 186, "op": "graft", "child": 0.083312, "parent": 0.083312, "task": "builtin", "lat": 0.159}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 187, "op": "jit", "child": 0.092275, "lat": 0.162}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 187, "op": "jit", "child": 0.096359, "lat": 0.162}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 187, "op": "jit", "child": 0.111684, "lat": 0.162}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 187, "op": "graft", "child": 13.150999, "lat": 0.162}
+{"ts": "2026-11-04 16:48:04", "ev": "PROMOTE", "gen": 187, "op": "jit", "child": 0.092275, "parent": 0.092275, "task": "builtin", "lat": 0.162}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 188, "op": "jit", "child": 0.097685, "lat": 0.163}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 188, "op": "graft", "child": 0.102508, "lat": 0.163}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 188, "op": "swap", "child": 0.092275, "lat": 0.163}
+{"ts": "2026-11-04 16:48:04", "ev": "TRIED", "gen": 188, "op": "graft", "child": 0.453332, "lat": 0.163}
+{"ts": "2026-11-04 16:48:04", "ev": "PROMOTE", "gen": 188, "op": "swap", "child": 0.092275, "parent": 0.092275, "task": "builtin", "lat": 0.163}
+{"ts": "2026-11-04 17:48:02", "ev": "WAKE", "gen": 188, "parent": 0.092275, "task": "builtin"}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 189, "op": "prune", "child": 2.386292, "lat": 0.206}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 189, "op": "jit", "child": 0.196058, "lat": 0.206}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 189, "op": "prune", "child": 0.898844, "lat": 0.206}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 189, "op": "swap", "child": 0.092275, "lat": 0.206}
+{"ts": "2026-11-04 17:48:02", "ev": "PROMOTE", "gen": 189, "op": "swap", "child": 0.092275, "parent": 0.092275, "task": "builtin", "lat": 0.206}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 190, "op": "meta", "child": 0.092275, "lat": 0.195}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 190, "op": "graft", "child": 0.393407, "lat": 0.195}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 190, "op": "jit", "child": 0.120414, "lat": 0.195}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 190, "op": "jit", "child": 0.097456, "lat": 0.195}
+{"ts": "2026-11-04 17:48:02", "ev": "PROMOTE", "gen": 190, "op": "meta", "child": 0.092275, "parent": 0.092275, "task": "builtin", "lat": 0.195}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 191, "op": "meta", "child": 0.092275, "lat": 0.169}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 191, "op": "prune", "child": 1.075994, "lat": 0.169}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 191, "op": "graft", "child": 0.622108, "lat": 0.169}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 191, "op": "meta", "child": 0.092275, "lat": 0.169}
+{"ts": "2026-11-04 17:48:02", "ev": "PROMOTE", "gen": 191, "op": "meta", "child": 0.092275, "parent": 0.092275, "task": "builtin", "lat": 0.169}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 192, "op": "meta", "child": 0.092275, "lat": 0.173}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 192, "op": "meta", "child": 0.092275, "lat": 0.173}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 192, "op": "swap", "child": 0.092275, "lat": 0.173}
+{"ts": "2026-11-04 17:48:02", "ev": "TRIED", "gen": 192, "op": "graft", "child": 0.726563, "lat": 0.173}
+{"ts": "2026-11-04 17:48:02", "ev": "PROMOTE", "gen": 192, "op": "meta", "child": 0.092275, "parent": 0.092275, "task": "builtin", "lat": 0.173}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 193, "op": "swap", "child": 0.094053, "lat": 0.17}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 193, "op": "swap", "child": 0.092275, "lat": 0.17}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 193, "op": "jit", "child": 0.133066, "lat": 0.17}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 193, "op": "jit", "child": 0.096203, "lat": 0.17}
+{"ts": "2026-11-04 17:48:03", "ev": "PROMOTE", "gen": 193, "op": "swap", "child": 0.092275, "parent": 0.092275, "task": "builtin", "lat": 0.17}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 194, "op": "jit", "child": 0.113128, "lat": 0.165}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 194, "op": "graft", "child": 1.419658, "lat": 0.165}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 194, "op": "graft", "child": 1.521687, "lat": 0.165}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 194, "op": "graft", "child": 0.168369, "lat": 0.165}
+{"ts": "2026-11-04 17:48:03", "ev": "DISCARD", "gen": 194, "op": "jit", "child": 0.113128, "parent": 0.092275, "task": "builtin", "lat": 0.165}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 194, "op": "graft", "child": 0.775118, "lat": 0.165}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 194, "op": "meta", "child": 0.092275, "lat": 0.165}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 194, "op": "graft", "child": 1.519427, "lat": 0.165}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 194, "op": "swap", "child": 1.290216, "lat": 0.165}
+{"ts": "2026-11-04 17:48:03", "ev": "PROMOTE", "gen": 194, "op": "meta", "child": 0.092275, "parent": 0.092275, "task": "builtin", "lat": 0.165}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 195, "op": "graft", "child": 0.428298, "lat": 0.157}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 195, "op": "graft", "child": 0.092275, "lat": 0.157}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 195, "op": "graft", "child": 0.094475, "lat": 0.157}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 195, "op": "graft", "child": 0.437549, "lat": 0.157}
+{"ts": "2026-11-04 17:48:03", "ev": "PROMOTE", "gen": 195, "op": "graft", "child": 0.092275, "parent": 0.092275, "task": "builtin", "lat": 0.157}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 196, "op": "graft", "child": 0.097131, "lat": 0.158}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 196, "op": "swap", "child": 0.627938, "lat": 0.158}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 196, "op": "jit", "child": 0.109915, "lat": 0.158}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 196, "op": "swap", "child": 0.092275, "lat": 0.158}
+{"ts": "2026-11-04 17:48:03", "ev": "PROMOTE", "gen": 196, "op": "swap", "child": 0.092275, "parent": 0.092275, "task": "builtin", "lat": 0.158}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 197, "op": "graft", "child": 0.123311, "lat": 0.167}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 197, "op": "graft", "child": 0.126274, "lat": 0.167}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 197, "op": "jit", "child": 0.096764, "lat": 0.167}
+{"ts": "2026-11-04 17:48:03", "ev": "TRIED", "gen": 197, "op": "swap", "child": 1.244628, "lat": 0.167}
+{"ts": "2026-11-04 17:48:03", "ev": "PROMOTE", "gen": 197, "op": "jit", "child": 0.096764, "parent": 0.096764, "task": "builtin", "lat": 0.167}
+{"ts": "2026-11-04 17:48:04", "ev": "TRIED", "gen": 198, "op": "swap", "child": 0.109476, "lat": 0.166}
+{"ts": "2026-11-04 17:48:04", "ev": "TRIED", "gen": 198, "op": "jit", "child": 0.108809, "lat": 0.166}
+{"ts": "2026-11-04 17:48:04", "ev": "TRIED", "gen": 198, "op": "swap", "child": 0.096764, "lat": 0.166}
+{"ts": "2026-11-04 17:48:04", "ev": "TRIED", "gen": 198, "op": "swap", "child": 0.672004, "lat": 0.166}
+{"ts": "2026-11-04 17:48:04", "ev": "PROMOTE", "gen": 198, "op": "swap", "child": 0.096764, "parent": 0.096764, "task": "builtin", "lat": 0.166}
+{"ts": "2026-11-04 17:48:04", "ev": "TRIED", "gen": 199, "op": "jit", "child": 0.126028, "lat": 0.161}
+{"ts": "2026-11-04 17:48:04", "ev": "TRIED", "gen": 199, "op": "graft", "child": 5.833107, "lat": 0.161}
+{"ts": "2026-11-04 17:48:04", "ev": "TRIED", "gen": 199, "op": "graft", "child": 0.107764, "lat": 0.161}
+{"ts": "2026-11-04 17:48:04", "ev": "TRIED", "gen": 199, "op": "prune", "child": 0.098964, "lat": 0.161}
+{"ts": "2026-11-04 17:48:04", "ev": "PROMOTE", "gen": 199, "op": "prune", "child": 0.098964, "parent": 0.098964, "task": "builtin", "lat": 0.161}
+{"ts": "2026-11-04 18:48:02", "ev": "WAKE", "gen": 199, "parent": 0.098964, "task": "builtin"}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 200, "op": "graft", "child": 1.583599, "lat": 0.159}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 200, "op": "graft", "child": 0.420676, "lat": 0.159}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 200, "op": "prune", "child": 0.112279, "lat": 0.159}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 200, "op": "jit", "child": 0.218774, "lat": 0.159}
+{"ts": "2026-11-04 18:48:02", "ev": "DISCARD", "gen": 200, "op": "prune", "child": 0.112279, "parent": 0.098964, "task": "builtin", "lat": 0.159}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 200, "op": "prune", "child": 1.212694, "lat": 0.159}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 200, "op": "jit", "child": 0.130988, "lat": 0.159}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 200, "op": "jit", "child": 0.105391, "lat": 0.159}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 200, "op": "prune", "child": 0.239403, "lat": 0.159}
+{"ts": "2026-11-04 18:48:02", "ev": "DISCARD", "gen": 200, "op": "jit", "child": 0.105391, "parent": 0.098964, "task": "builtin", "lat": 0.159}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 200, "op": "graft", "child": 1.00148, "lat": 0.147}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 200, "op": "swap", "child": 0.098964, "lat": 0.147}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 200, "op": "graft", "child": 1.691323, "lat": 0.147}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 200, "op": "jit", "child": 0.127353, "lat": 0.147}
+{"ts": "2026-11-04 18:48:02", "ev": "PROMOTE", "gen": 200, "op": "swap", "child": 0.098964, "parent": 0.098964, "task": "builtin", "lat": 0.147}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 201, "op": "meta", "child": 0.098964, "lat": 0.135}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 201, "op": "graft", "child": 0.614937, "lat": 0.135}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 201, "op": "jit", "child": 0.135768, "lat": 0.135}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 201, "op": "swap", "child": 0.560277, "lat": 0.135}
+{"ts": "2026-11-04 18:48:02", "ev": "PROMOTE", "gen": 201, "op": "meta", "child": 0.098964, "parent": 0.098964, "task": "builtin", "lat": 0.135}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 202, "op": "jit", "child": 0.198455, "lat": 0.136}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 202, "op": "swap", "child": 0.198137, "lat": 0.136}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 202, "op": "graft", "child": 0.621135, "lat": 0.136}
+{"ts": "2026-11-04 18:48:02", "ev": "TRIED", "gen": 202, "op": "jit", "child": 0.110809, "lat": 0.136}
+{"ts": "2026-11-04 18:48:02", "ev": "DISCARD", "gen": 202, "op": "jit", "child": 0.110809, "parent": 0.098964, "task": "builtin", "lat": 0.136}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 202, "op": "graft", "child": 1.011878, "lat": 0.135}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 202, "op": "meta", "child": 0.098964, "lat": 0.135}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 202, "op": "graft", "child": 0.149087, "lat": 0.135}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 202, "op": "meta", "child": 0.098964, "lat": 0.135}
+{"ts": "2026-11-04 18:48:03", "ev": "PROMOTE", "gen": 202, "op": "meta", "child": 0.098964, "parent": 0.098964, "task": "builtin", "lat": 0.135}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 203, "op": "jit", "child": 0.105082, "lat": 0.139}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 203, "op": "graft", "child": 0.096764, "lat": 0.139}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 203, "op": "swap", "child": 0.560277, "lat": 0.139}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 203, "op": "meta", "child": 0.098964, "lat": 0.139}
+{"ts": "2026-11-04 18:48:03", "ev": "PROMOTE", "gen": 203, "op": "graft", "child": 0.096764, "parent": 0.096764, "task": "builtin", "lat": 0.139}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 204, "op": "graft", "child": 0.430615, "lat": 0.144}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 204, "op": "swap", "child": 0.249419, "lat": 0.144}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 204, "op": "prune", "child": 1.152064, "lat": 0.144}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 204, "op": "jit", "child": 0.182157, "lat": 0.144}
+{"ts": "2026-11-04 18:48:03", "ev": "DISCARD", "gen": 204, "op": "jit", "child": 0.182157, "parent": 0.096764, "task": "builtin", "lat": 0.144}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 204, "op": "graft", "child": 3.391566, "lat": 0.137}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 204, "op": "prune", "child": 3.352275, "lat": 0.137}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 204, "op": "meta", "child": 0.096764, "lat": 0.137}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 204, "op": "graft", "child": 1.013221, "lat": 0.137}
+{"ts": "2026-11-04 18:48:03", "ev": "PROMOTE", "gen": 204, "op": "meta", "child": 0.096764, "parent": 0.096764, "task": "builtin", "lat": 0.137}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 205, "op": "graft", "child": 1.445743, "lat": 0.137}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 205, "op": "prune", "child": 0.774284, "lat": 0.137}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 205, "op": "jit", "child": 0.119008, "lat": 0.137}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 205, "op": "swap", "child": 0.096764, "lat": 0.137}
+{"ts": "2026-11-04 18:48:03", "ev": "PROMOTE", "gen": 205, "op": "swap", "child": 0.096764, "parent": 0.096764, "task": "builtin", "lat": 0.137}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 206, "op": "meta", "child": 0.096764, "lat": 0.138}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 206, "op": "swap", "child": 0.096764, "lat": 0.138}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 206, "op": "graft", "child": 0.093375, "lat": 0.138}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 206, "op": "graft", "child": 1.232672, "lat": 0.138}
+{"ts": "2026-11-04 18:48:03", "ev": "PROMOTE", "gen": 206, "op": "graft", "child": 0.093375, "parent": 0.093375, "task": "builtin", "lat": 0.138}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 207, "op": "jit", "child": 0.135059, "lat": 0.139}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 207, "op": "swap", "child": 0.093375, "lat": 0.139}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 207, "op": "meta", "child": 0.093375, "lat": 0.139}
+{"ts": "2026-11-04 18:48:03", "ev": "TRIED", "gen": 207, "op": "jit", "child": 0.09998, "lat": 0.139}
+{"ts": "2026-11-04 18:48:03", "ev": "PROMOTE", "gen": 207, "op": "swap", "child": 0.093375, "parent": 0.093375, "task": "builtin", "lat": 0.139}

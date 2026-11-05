@@ -1,0 +1,10 @@
+{
+ "gen": 0,
+ "rate": 0.35,
+ "rounds": 1,
+ "debate": false,
+ "synth": false,
+ "refine": false,
+ "style": 0,
+ "maxt": 160
+}

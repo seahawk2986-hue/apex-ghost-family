@@ -3407,7 +3407,7 @@
    "license": "check repo",
    "sha256": "6bc9269df79f6c211a0c72816d3c4a29a8491f0202ac56506a6a0c97855db1a9",
    "lines": 22,
-   "first_line": "\"\"\"User-data helpers \u2014 re-exported from ``crewai_core.user_data``.\"\"\"",
+   "first_line": "\"\"\"User-data helpers — re-exported from ``crewai_core.user_data``.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:12"
   },
@@ -3446,7 +3446,7 @@
    "license": "check repo",
    "sha256": "45ee86a7440b594196ed9578fa0346585184fb3d19b04ae248d2de9c529423dd",
    "lines": 24,
-   "first_line": "\"\"\"OAuth2 authentication primitives \u2014 shared by crewai and crewai-cli.\"\"\"",
+   "first_line": "\"\"\"OAuth2 authentication primitives — shared by crewai and crewai-cli.\"\"\"",
    "imports": [],
    "registered": "2026-10-31 20:56:19"
   },
@@ -8327,7 +8327,7 @@
    "license": "check repo",
    "sha256": "0cf503ae3d98d07cc4645890b41d77e93c746e4302282364c50917cb63834cdd",
    "lines": 177,
-   "first_line": "\"\"\"Loader for the shared alarm keyword vocabulary \u2014 see ``data/alarm_keywords.js",
+   "first_line": "\"\"\"Loader for the shared alarm keyword vocabulary — see ``data/alarm_keywords.js",
    "imports": [
     "json"
    ],
@@ -8928,4366 +8928,1011 @@
    "vetby": "hub-runner-v1"
   },
   {
-   "skill": "check_release_version",
-   "source_file": ".github/scripts/check_release_version.py",
-   "source_repo": "climate-analytics-lab/jax-rrtmgp",
+   "skill": "experiment_figures",
+   "source_file": "benchmark/memory_benchmark/scripts/experiment_figures.py",
+   "source_repo": "opendatahub-io/kuberay",
    "license": "check repo",
-   "sha256": "472c5a36038d93bbdcdec6c6813ebe0a6760f84a17c22dfac2cafb6c4bd688f1",
-   "lines": 77,
-   "first_line": "\"\"\"Fail a release build when the git tag and the built package version disagree.",
+   "sha256": "affc780b7e3b1bd95a0b4ae81f37c7d46a14b33e6d3c1082977ffbdea86d0162",
+   "lines": 75,
+   "first_line": "import matplotlib.pyplot as plt",
    "imports": [
-    "sys"
+    "matplotlib"
    ],
-   "registered": "2026-11-04 03:52:56",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:12:07"
   },
   {
    "skill": "__init__",
-   "source_file": "rrtmgp/__init__.py",
-   "source_repo": "climate-analytics-lab/jax-rrtmgp",
+   "source_file": "clients/python-apiserver-client/src/python_apiserver_client/params/__init__.py",
+   "source_repo": "opendatahub-io/kuberay",
    "license": "check repo",
-   "sha256": "e4782b76695c89ed0c045289b125c1587dec4f10a18d13f56dbba961f8168743",
-   "lines": 15,
-   "first_line": "# Copyright 2024 The swirl_jatmos Authors.",
-   "imports": [],
-   "registered": "2026-11-04 03:52:56",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "inspect_pdb_streams",
-   "source_file": "scripts/analysis/inspect-pdb-streams.py",
-   "source_repo": "N0zoM1z0/th08",
-   "license": "check repo",
-   "sha256": "f3ee9f2aa054d185a7dbb9c24685056bf112c51bc335c1c51fb498b69a697213",
-   "lines": 154,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "json",
-    "struct"
-   ],
-   "registered": "2026-11-04 03:53:04",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "probe_anonymous_namespaces",
-   "source_file": "scripts/analysis/probe-anonymous-namespaces.py",
-   "source_repo": "N0zoM1z0/th08",
-   "license": "check repo",
-   "sha256": "6656f4f7f5930bd3e5c8d9303edece5d78f141fc16fa23b20a5963bb41b26459",
-   "lines": 64,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "hashlib",
-    "json",
-    "shutil",
-    "sys"
-   ],
-   "registered": "2026-11-04 03:53:04",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "analysis_tools",
-   "source_file": "scripts/analysis_tools.py",
-   "source_repo": "N0zoM1z0/dx-ball",
-   "license": "check repo",
-   "sha256": "585322900b1750cd16089a76977f508ddacbb39998cf59278d811316dee965c6",
-   "lines": 25,
-   "first_line": "\"\"\"Attest installed Ghidra launch metadata and the JDK used by headless queries.",
-   "imports": [
-    "hashlib",
-    "tomllib"
-   ],
-   "registered": "2026-11-04 03:53:05",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "build_legacy",
-   "source_file": "scripts/build-legacy.py",
-   "source_repo": "N0zoM1z0/dx-ball",
-   "license": "check repo",
-   "sha256": "2c3ba4a61691825e3e461a2fd014151fe29bd9e736a025f5e38fabf7fd9ce111",
-   "lines": 253,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "json",
-    "re",
-    "shutil",
-    "sys",
-    "tomllib"
-   ],
-   "registered": "2026-11-04 03:53:05",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "generate_fixture",
-   "source_file": "benchmarks/entity-model-document-2026-10-14/generate_fixture.py",
-   "source_repo": "ludovic111/horizon",
-   "license": "check repo",
-   "sha256": "7c0b94cd389cc9c8929a1566f74b323de2b0f08e0541290c123a1a8f34061976",
-   "lines": 32,
-   "first_line": "\"\"\"Generate a production-size synthetic document; no prepared assets required.\"\"",
-   "imports": [
-    "json",
-    "pathlib",
-    "sys"
-   ],
-   "registered": "2026-11-04 03:53:06",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "anvil_dump",
-   "source_file": "tools/anvil_dump.py",
-   "source_repo": "ludovic111/horizon",
-   "license": "check repo",
-   "sha256": "d07904636c99b87addfe5fc9db80b4d9ec6b4cca320592dd9e6237364d84d484",
-   "lines": 147,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "gzip",
-    "io",
-    "json",
-    "struct",
-    "sys",
-    "zlib"
-   ],
-   "registered": "2026-11-04 03:53:06",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "bundle_disc",
-   "source_file": "tools/bundle_disc.py",
-   "source_repo": "chasem-dev/sms-pc-port",
-   "license": "check repo",
-   "sha256": "1fa5f6daf6f9f265dd6b5298fcbd95d820cc593cc37264ac134f1ad53f651f54",
-   "lines": 183,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "os",
-    "shutil",
-    "struct",
-    "sys"
-   ],
-   "registered": "2026-11-04 03:53:07",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "contact",
-   "source_file": "tools/contact.py",
-   "source_repo": "chasem-dev/sms-pc-port",
-   "license": "check repo",
-   "sha256": "74af6115acd1977ebe9a66be72768775b246415d49d7b93efb23960a4413b877",
-   "lines": 13,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 03:53:07",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "specs",
-   "source_file": "tools/hd-sheets/specs.py",
-   "source_repo": "troyedwardsjr/z2rs",
-   "license": "check repo",
-   "sha256": "d45a65ad0e6d19dfaa7b485f8c76f60e7098a34d804a889a397e0328e0b44923",
-   "lines": 241,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 03:53:07",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "add_relaxed_self_declarations",
-   "source_file": "conker/conker/add_relaxed_self_declarations.py",
-   "source_repo": "sciaschi/CBFD-Recompiled",
-   "license": "check repo",
-   "sha256": "646158fd4b4af69d5f3ab31b73093e10b86e0b8526c0d1a270f0a1693fc8366f",
-   "lines": 196,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "re"
-   ],
-   "registered": "2026-11-04 03:53:08",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "diff_settings",
-   "source_file": "conker/conker/diff_settings.py",
-   "source_repo": "sciaschi/CBFD-Recompiled",
-   "license": "check repo",
-   "sha256": "7fa74fa3c36fb3122b86cd8ab3bd1f068c43798f5713cd80d53083dd6530c60a",
-   "lines": 10,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [],
-   "registered": "2026-11-04 03:53:08",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "collection_archive",
-   "source_file": "installer/collection_archive.py",
-   "source_repo": "Yokimitsuro/khdays-port",
-   "license": "check repo",
-   "sha256": "10bb22fb0bcf8aaaeff09739e0b3515343c4dfba6b555cc6a1a9b02dfa4e838e",
-   "lines": 215,
-   "first_line": "\"\"\"The KINGDOM HEARTS collections' archives (a `.hed` index and its `.pkg`), rea",
-   "imports": [
-    "hashlib",
-    "struct",
-    "sys",
-    "zlib"
-   ],
-   "registered": "2026-11-04 03:53:08",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "epic_library",
-   "source_file": "installer/epic_library.py",
-   "source_repo": "Yokimitsuro/khdays-port",
-   "license": "check repo",
-   "sha256": "c90d616e45636c0df98138a5a1ef9759e8bfedbed31d0be7573125dff390b2bf",
+   "sha256": "ad726133a5ea0a9104443b6f623f299514cde9b78f24df170af2730fbfd1998a",
    "lines": 53,
-   "first_line": "\"\"\"Where the Epic Games Store keeps the KINGDOM HEARTS collections on this compu",
-   "imports": [
-    "json",
-    "os"
-   ],
-   "registered": "2026-11-04 03:53:08",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "scan_literals",
-   "source_file": "dm/i18n/scan_literals.py",
-   "source_repo": "jhaizhou-ops/d2r-mobile",
-   "license": "check repo",
-   "sha256": "52a582e2ecc1f7fdec04a4f3fb3db0973facadd9054c5b5a23e13c100397bc0e",
-   "lines": 94,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "csv",
-    "glob",
-    "io",
-    "os",
-    "re",
-    "sys",
-    "tokenize"
-   ],
-   "registered": "2026-11-04 03:53:09",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "blackcols",
-   "source_file": "dm/tools/blackcols.py",
-   "source_repo": "jhaizhou-ops/d2r-mobile",
-   "license": "check repo",
-   "sha256": "95a84e9b89647905048c018614aa74e3cd153607027689993dd470afb5b1e02e",
-   "lines": 21,
-   "first_line": "# \u4e24\u4fa7\u9ed1\u67f1\u68c0\u67e5\uff1a\u7edf\u8ba1\u622a\u56fe\u91cc\u300c\u6574\u5217\u7eaf\u9ed1\u300d\uff08\u6240\u6709\u50cf\u7d20 RGB \u90fd \u2264 \u9608\u503c\uff09\u7684\u5217\u6570\uff0c\u5206\u5de6\u534a / \u53f3\u534a\u62a5\uff1b\u7528\u4e8e\u5bbd\u5c4f\u9ed1\u67f1\u56de\u5f52",
-   "imports": [
-    "numpy",
-    "sys"
-   ],
-   "registered": "2026-11-04 03:53:10",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "build_wiki",
-   "source_file": "docs/wiki/build_wiki.py",
-   "source_repo": "HarbourMasters/Ghostship",
-   "license": "check repo",
-   "sha256": "605f779c4332484884350ba825f9ae80659997019db375046b62d61e96007a43",
-   "lines": 253,
-   "first_line": "# Builds the modding wiki from the mod API headers and src/port/events/EVENTS.md",
-   "imports": [
-    "json",
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 03:53:10",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "gen_script_tables",
-   "source_file": "tools/gen_script_tables.py",
-   "source_repo": "HarbourMasters/Ghostship",
-   "license": "check repo",
-   "sha256": "9ea53e26dab288c074c66a84bb8ae579f327a7001c71320cbdef44791786752d",
-   "lines": 158,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "glob",
-    "os",
-    "re"
-   ],
-   "registered": "2026-11-04 03:53:10",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "src/makejinja/__init__.py",
-   "source_repo": "mirkolenz/makejinja",
-   "license": "check repo",
-   "sha256": "753137fba00914d082bdd5f285c842ecf21dbb80673fd6c10e97cfc08535ec3f",
-   "lines": 20,
-   "first_line": "\"\"\"",
+   "first_line": "from python_apiserver_client.params.templates import (",
    "imports": [],
-   "registered": "2026-11-04 03:53:12",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:12:08"
   },
   {
-   "skill": "__main__",
-   "source_file": "src/makejinja/__main__.py",
-   "source_repo": "mirkolenz/makejinja",
+   "skill": "environmentvariables",
+   "source_file": "clients/python-apiserver-client/src/python_apiserver_client/params/environmentvariables.py",
+   "source_repo": "opendatahub-io/kuberay",
    "license": "check repo",
-   "sha256": "7db92320c98b168482b5e785386e18296e3a82ffa1f959ce653cc41d522471ba",
-   "lines": 4,
-   "first_line": "from .cli import makejinja_cli",
-   "imports": [],
-   "registered": "2026-11-04 03:53:12",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "golden_trace",
-   "source_file": "kintsugi/sdk/golden_trace.py",
-   "source_repo": "atlaslattice/aluminum-os",
-   "license": "check repo",
-   "sha256": "51b322f6e6d4e18199827194d78ec1a8ee1818327fc1aeb71417dcb98203a454",
-   "lines": 170,
-   "first_line": "\"\"\"",
+   "sha256": "1dffea0ed9c3db49c2764b55c1334424187fcbd7d0cc3e71ab245b79dc90de20",
+   "lines": 146,
+   "first_line": "import enum",
    "imports": [
-    "hashlib",
-    "json",
-    "uuid"
+    "enum"
    ],
-   "registered": "2026-11-04 04:58:34",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:12:09"
   },
   {
-   "skill": "__init__",
-   "source_file": "python/core/__init__.py",
-   "source_repo": "atlaslattice/aluminum-os",
+   "skill": "headnode",
+   "source_file": "clients/python-apiserver-client/src/python_apiserver_client/params/headnode.py",
+   "source_repo": "opendatahub-io/kuberay",
    "license": "check repo",
-   "sha256": "fc06db71b974f43b1445597e2890e8bc18f52f7f9e1faa85a1edc7b472c4a2cb",
-   "lines": 15,
-   "first_line": "# Aluminum OS \u2014 Ring 1 (Manus Core)",
-   "imports": [],
-   "registered": "2026-11-04 04:58:35",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "plugin",
-   "source_file": "template/scripts/plugin.py",
-   "source_repo": "ajaykumar4/cluster-template",
-   "license": "check repo",
-   "sha256": "95421a9d7962865cc51f1d7e6b6ee3dddd760b29a73eb52db0fe0a44397b28d1",
-   "lines": 147,
-   "first_line": "from pathlib import Path",
-   "imports": [
-    "base64",
-    "json",
-    "makejinja",
-    "re",
-    "validate"
-   ],
-   "registered": "2026-11-04 04:58:36",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "custom_components/heatpump_optimizer/__init__.py",
-   "source_repo": "strutsfarm/heatpump_optimizer",
-   "license": "check repo",
-   "sha256": "eaa48b18f9a8d3290bbcf00c6dfd37e9acb618c3640bd9bcf5db8d4406ad3b90",
-   "lines": 163,
-   "first_line": "\"\"\"Heat Pump Cost Optimizer integration for Home Assistant.",
-   "imports": [
-    "logging",
-    "voluptuous"
-   ],
-   "registered": "2026-11-04 04:58:37",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "climate",
-   "source_file": "custom_components/heatpump_optimizer/climate.py",
-   "source_repo": "strutsfarm/heatpump_optimizer",
-   "license": "check repo",
-   "sha256": "11ab5bd2c99139a2d6c40e40d2d0066fba477d0d975fadb512e61ecc6726d12a",
-   "lines": 283,
-   "first_line": "\"\"\"Climate entity for Heat Pump Cost Optimizer.",
-   "imports": [
-    "logging"
-   ],
-   "registered": "2026-11-04 04:58:37",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "config",
-   "source_file": "backend/app/config.py",
-   "source_repo": "inikolax/remiqora",
-   "license": "check repo",
-   "sha256": "f27ce22f28ac4afee3ecfda075e33cf916d60d7050e9fd74302e412c4e8ae986",
-   "lines": 299,
-   "first_line": "\"\"\"Static configuration: paths to the model repos, ports, launch commands.",
-   "imports": [
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 04:58:38",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "catalog_toml_support",
-   "source_file": "tests/catalog_toml_support.py",
-   "source_repo": "zeropointnine/tts-audiobook-tool",
-   "license": "check repo",
-   "sha256": "15169ab03c31c389eeb3d373000c35f9bf0f13d2f676e65bc95f74e7499b8be7",
-   "lines": 52,
-   "first_line": "\"\"\"Dependency-free TOML fixtures for tests that mutate the shipped model catalog",
-   "imports": [
-    "json",
-    "math",
-    "tomllib"
-   ],
-   "registered": "2026-11-04 04:58:40",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "concat_test_support",
-   "source_file": "tests/concat_test_support.py",
-   "source_repo": "zeropointnine/tts-audiobook-tool",
-   "license": "check repo",
-   "sha256": "4dcd4cd4f9c15456f1ebf4fefda5aea45a76be6de55f25cfd259feaaee45089c",
-   "lines": 109,
-   "first_line": "\"\"\"Shared harness for driving ConcatUtil.concatenate_sound_segments() in tests.",
-   "imports": [
-    "numpy"
-   ],
-   "registered": "2026-11-04 04:58:40",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "acme_extract",
-   "source_file": "target/bin/acme_extract.py",
-   "source_repo": "docker-mailserver/docker-mailserver",
-   "license": "check repo",
-   "sha256": "fad04d3c367c7589afdb0c583e5e39ea5d3709db1616119cb322c86eac1a2ad1",
-   "lines": 40,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "json"
-   ],
-   "registered": "2026-11-04 04:58:41",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "import_blogger",
-   "source_file": "contrib/import_blogger.py",
-   "source_repo": "isso-comments/isso",
-   "license": "check repo",
-   "sha256": "a4310e044a769c0b0d0c996c26f6c713f34e7737514ae2ca13b3d0b7bfea755f",
-   "lines": 129,
-   "first_line": "#!/usr/bin/env python",
-   "imports": [
-    "argparse",
-    "feedparser",
-    "json",
-    "sys",
-    "time"
-   ],
-   "registered": "2026-11-04 04:58:43",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "remove_heading",
-   "source_file": "docs/_theme/remove_heading.py",
-   "source_repo": "isso-comments/isso",
-   "license": "check repo",
-   "sha256": "a82e42c65d30ab4dbfb79e2daae4f696bb183b0fea6983c4dbf7d50067cb133b",
-   "lines": 12,
-   "first_line": "",
-   "imports": [],
-   "registered": "2026-11-04 04:58:43",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "marquee",
-   "source_file": ".github/pages/marquee.py",
-   "source_repo": "ArchiveBox/ArchiveBox",
-   "license": "check repo",
-   "sha256": "e4b6fea6d76d3ae5eb9f883d2bff189f81e629b969a771ffab7fa9eb79c9aa03",
-   "lines": 97,
-   "first_line": "\"\"\"Render homepage screenshot strips from the site's existing gallery HTML.\"\"\"",
-   "imports": [
-    "re"
-   ],
-   "registered": "2026-11-04 04:58:43",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "verify",
-   "source_file": ".github/pages/verify.py",
-   "source_repo": "ArchiveBox/ArchiveBox",
-   "license": "check repo",
-   "sha256": "c8885b92bdf83f455ba9449cafe4d0fb2006218d7ab91805d733981851ce7f6e",
-   "lines": 277,
-   "first_line": "\"\"\"Check the built site in real Chromium at desktop and phone widths.\"\"\"",
-   "imports": [
-    "argparse",
-    "json",
-    "os",
-    "re"
-   ],
-   "registered": "2026-11-04 04:58:44",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "shhh/__init__.py",
-   "source_repo": "smallwat3r/shhh",
-   "license": "check repo",
-   "sha256": "5adcd1547677dcf38fb14954bbccb45f28de2bc268366db56d439adedcfa1718",
-   "lines": 2,
-   "first_line": "__version__ = \"3.2.4\"",
-   "imports": [],
-   "registered": "2026-11-04 04:58:47",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "orm",
-   "source_file": "shhh/adapters/orm.py",
-   "source_repo": "smallwat3r/shhh",
-   "license": "check repo",
-   "sha256": "b5d4fa28b8e68bc98cf4f97d5081a06506a38d3eea0c16761846d64ff32f6dce",
-   "lines": 26,
-   "first_line": "from sqlalchemy.orm import registry",
-   "imports": [],
-   "registered": "2026-11-04 04:58:47",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "interpolate_product_name",
-   "source_file": "locales/scripts/interpolate-product-name.py",
-   "source_repo": "onetimesecret/onetimesecret",
-   "license": "check repo",
-   "sha256": "e60ca40449c41c8f9fee437006d0cc5eb8d94eae71afc1dc106ee80229786d7c",
-   "lines": 353,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "hashlib",
-    "json",
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 04:58:48",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "register_coverage",
-   "source_file": "locales/scripts/register-coverage.py",
-   "source_repo": "onetimesecret/onetimesecret",
-   "license": "check repo",
-   "sha256": "0ba9ba7043bbf41ff9245052b499635d94004f608c60bd4e2580116135fce848",
-   "lines": 293,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "json",
-    "sys"
-   ],
-   "registered": "2026-11-04 04:58:48",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "version",
-   "source_file": "tcp_server/src/version.py",
-   "source_repo": "leon-ai/leon",
-   "license": "check repo",
-   "sha256": "870389b855042adb2088eb7897aa29f6cfa1be2a2f33a4cad6e09db513566381",
-   "lines": 2,
-   "first_line": "__version__ = '2.0.0'",
-   "imports": [],
-   "registered": "2026-11-04 04:58:49",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "scripts/__init__.py",
-   "source_repo": "Bhanunamikaze/Agentic-SEO-Skill",
-   "license": "check repo",
-   "sha256": "372993bff3c6f2731f8beb499c5248b9b8ec484ab848a23fa703a22ff72e7930",
-   "lines": 2,
-   "first_line": "\"\"\"Agentic SEO script package.\"\"\"",
-   "imports": [],
-   "registered": "2026-11-04 04:58:50",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "a11y_seo_checker",
-   "source_file": "scripts/a11y_seo_checker.py",
-   "source_repo": "Bhanunamikaze/Agentic-SEO-Skill",
-   "license": "check repo",
-   "sha256": "87ca8325aae91aeb89305ea896fc2ed4a13973b88520e357306427951b67272a",
-   "lines": 79,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "json",
-    "re"
-   ],
-   "registered": "2026-11-04 04:58:50",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "generate_keys",
-   "source_file": "tools/generate_keys.py",
-   "source_repo": "Kenix3/libultraship",
-   "license": "check repo",
-   "sha256": "cef535a95e18d69983d1b8726696742821f32febbc9b7936bd83031ece01a105",
-   "lines": 31,
-   "first_line": "from cryptography.hazmat.primitives.asymmetric import ed25519",
-   "imports": [],
-   "registered": "2026-11-04 05:59:17",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "sign",
-   "source_file": "tools/sign.py",
-   "source_repo": "Kenix3/libultraship",
-   "license": "check repo",
-   "sha256": "fef7829e0a6355810c2a4977788160bc623de691d5c5058584f377660a190cbb",
-   "lines": 98,
-   "first_line": "import argparse",
-   "imports": [
-    "argparse",
-    "hashlib",
-    "json",
-    "os",
-    "shutil",
-    "sys",
-    "tempfile",
-    "zipfile"
-   ],
-   "registered": "2026-11-04 05:59:18",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "set_value_test",
-   "source_file": "native/computer-use-linux/set_value_test.py",
-   "source_repo": "stablyai/orca",
-   "license": "check repo",
-   "sha256": "9b0bb72a867df8c1a69dc0a3592310f17621376185232fb3631c04ffe38e1e82",
-   "lines": 36,
-   "first_line": "import importlib.util",
-   "imports": [
-    "importlib",
-    "sys",
-    "types",
-    "unittest"
-   ],
-   "registered": "2026-11-04 05:59:22",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "validate_package",
-   "source_file": "scripts/validate-package.py",
-   "source_repo": "blader/humanizer",
-   "license": "check repo",
-   "sha256": "941bd99e52b2ba21449719bb7969607ac8117e3dc173d0c9dfe64fd274c65938",
-   "lines": 147,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "json",
-    "re"
-   ],
-   "registered": "2026-11-04 05:59:24",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "cleanup",
-   "source_file": "arxiv-translator/scripts/cleanup.py",
-   "source_repo": "Leey21/arxiv-translator",
-   "license": "check repo",
-   "sha256": "c33187cdf4400e5efba369ce969b8d3273b1264e7d83f26dc106df84eba84578",
-   "lines": 83,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "os",
-    "re",
-    "shutil",
-    "sys"
-   ],
-   "registered": "2026-11-04 05:59:25",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "download",
-   "source_file": "arxiv-translator/scripts/download.py",
-   "source_repo": "Leey21/arxiv-translator",
-   "license": "check repo",
-   "sha256": "ec5d6de172a1ae796010016248f776e54643edbf02f9a9764f9ac0fc287ae7e0",
+   "sha256": "e1a9d926fbdaabe514ef76b245acfbab7f544cab00ee0e6e75717d0541bc599d",
    "lines": 189,
-   "first_line": "#!/usr/bin/env python3",
+   "first_line": "import enum",
    "imports": [
-    "gzip",
-    "html",
-    "os",
-    "re",
-    "shutil",
-    "sys",
-    "tarfile",
-    "urllib",
-    "xml"
+    "enum"
    ],
-   "registered": "2026-11-04 05:59:25",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:12:10"
   },
   {
-   "skill": "__init__",
-   "source_file": ".hermes-plugin/__init__.py",
-   "source_repo": "obra/superpowers",
+   "skill": "jobsubmission",
+   "source_file": "clients/python-apiserver-client/src/python_apiserver_client/params/jobsubmission.py",
+   "source_repo": "opendatahub-io/kuberay",
    "license": "check repo",
-   "sha256": "767b7956f86b0343a8244943ac733c4f9f2a38cb571162cf67b26d2704a8afb1",
-   "lines": 128,
-   "first_line": "import os",
+   "sha256": "ad73c72636e662528929e728c917bca35b8d7b7ea8ac1f1feee5e129a85103a0",
+   "lines": 151,
+   "first_line": "import datetime",
    "imports": [
-    "os",
-    "re"
+    "datetime"
    ],
-   "registered": "2026-11-04 05:59:26",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:12:10"
   },
   {
-   "skill": "analyze_token_usage",
-   "source_file": "tests/claude-code/analyze-token-usage.py",
-   "source_repo": "obra/superpowers",
+   "skill": "templates",
+   "source_file": "clients/python-apiserver-client/src/python_apiserver_client/params/templates.py",
+   "source_repo": "opendatahub-io/kuberay",
    "license": "check repo",
-   "sha256": "b3b124b975086e66540dca1328d7b6b75416450b0c93fc246f0d7d148fc2394c",
-   "lines": 169,
-   "first_line": "#!/usr/bin/env python3",
+   "sha256": "05f1046cfb84a064542c007e7822888aa37833d8c0402c6831e026c05ca78254",
+   "lines": 221,
+   "first_line": "import enum",
    "imports": [
-    "json",
-    "sys"
+    "enum"
    ],
-   "registered": "2026-11-04 05:59:26",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:12:11"
   },
   {
-   "skill": "analyze_lod_flyby",
-   "source_file": "tools/analyze-lod-flyby.py",
-   "source_repo": "hyqzz/Solar-Wanderer",
-   "license": "check repo",
-   "sha256": "9b43b863b30980b81d3f8536f749875aff5a59f558732627eff9dc7dedc08b48",
-   "lines": 100,
-   "first_line": "# LOD \u63a0\u98de\u5e27\u5e8f\u5217\u7684\u91cf\u5316\u5206\u6790\uff1a\u9010\u5e27\u4f30\u8ba1\u5730\u5f62\u7684**\u7ad6\u76f4\u4f4d\u79fb**\uff0c\u628a LOD \u91cd\u5efa\u9020\u6210\u7684",
-   "imports": [
-    "matplotlib",
-    "numpy",
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 05:59:29",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "cmp_metrics",
-   "source_file": "tools/cmp-metrics.py",
-   "source_repo": "hyqzz/Solar-Wanderer",
-   "license": "check repo",
-   "sha256": "e8338a896b9a5b9c19e438fb9ccaea2cdb8211656ba6aafa35f05bdb555ec205",
-   "lines": 162,
-   "first_line": "# \u4e24\u4e2a\u76ee\u5f55\u4e0b\u7684\u540c\u673a\u4f4d\u622a\u56fe\uff1a\u9010\u5f20\u7b97\u6307\u6807 + \u751f\u6210\u5e76\u6392\u62fc\u56fe\u3002",
-   "imports": [
-    "glob",
-    "os",
-    "struct",
-    "sys",
-    "zlib"
-   ],
-   "registered": "2026-11-04 05:59:29",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "admin",
-   "source_file": "accounts/admin.py",
+   "skill": "forms",
+   "source_file": "accounts/forms.py",
    "source_repo": "typpo/astrokit",
-   "license": "check repo",
-   "sha256": "b2e328e31f08dc907100505521d13ee6a9ea67a240655d051120011ce49cfaf8",
-   "lines": 4,
-   "first_line": "from django.contrib import admin",
-   "imports": [],
-   "registered": "2026-11-04 05:59:30",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "apps",
-   "source_file": "accounts/apps.py",
-   "source_repo": "typpo/astrokit",
-   "license": "check repo",
-   "sha256": "e3050671c36f501ebec785cee8705cc6cda2d8c4836271103febfa79ae01b706",
-   "lines": 8,
-   "first_line": "from __future__ import unicode_literals",
-   "imports": [],
-   "registered": "2026-11-04 05:59:30",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "conf",
-   "source_file": "docs/source/conf.py",
-   "source_repo": "ben-n93/pyspaceweather",
-   "license": "check repo",
-   "sha256": "ac53f77e2675525a73adf32fb7bc5e9afaf17f544df263a1c20dda07e3d7910d",
-   "lines": 34,
-   "first_line": "# Configuration file for the Sphinx documentation builder.",
+   "summary": "from django import forms",
+   "license": "permissive (fetched)",
+   "sha256": "e6d93cb1e91d3bd1a4ffc44b4aae658f6e17f7144e01232887cc74e256beae1d",
+   "lines": 80,
+   "first_line": "from django import forms",
    "imports": [
-    "os",
-    "sys"
+    "datetime"
    ],
-   "registered": "2026-11-04 05:59:31",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "pyspaceweather/__init__.py",
-   "source_repo": "ben-n93/pyspaceweather",
-   "license": "check repo",
-   "sha256": "b06b296b99fd933aa9ed356c2b90fbb1cd46aa209292536c9bba37064f1ff0bd",
-   "lines": 18,
-   "first_line": "\"\"\"Top-level package for beachwatch.\"\"\"",
-   "imports": [],
-   "registered": "2026-11-04 05:59:32",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "build_docs",
-   "source_file": "scripts/build_docs.py",
-   "source_repo": "pragyaangaur/SETU",
-   "license": "check repo",
-   "sha256": "76c6217e74494ccd0b5b1f405782dd78b74264a7dc0a3de6b12a1a12ad078a9f",
-   "lines": 36,
-   "first_line": "\"\"\"Bundle the exported results into one JavaScript file for the dashboard.",
-   "imports": [
-    "json",
-    "sys"
-   ],
-   "registered": "2026-11-04 05:59:32",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "calibrate_delay",
-   "source_file": "scripts/calibrate_delay.py",
-   "source_repo": "pragyaangaur/SETU",
-   "license": "check repo",
-   "sha256": "e5192a0b889083ad7f6a30873ef5c1012d4cb6088a8157947d9401fd29552278",
-   "lines": 59,
-   "first_line": "\"\"\"Measure the two geometry constants the warning time depends on.",
-   "imports": [
-    "glob",
-    "numpy",
-    "sys"
-   ],
-   "registered": "2026-11-04 05:59:32",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "multiearth/__init__.py",
-   "source_repo": "bair-climate-initiative/metaearth",
-   "license": "check repo",
-   "sha256": "46c2388ab0ca22c6d82fff0d4a26ddb88f669c5a403351203690408882610f14",
-   "lines": 4,
-   "first_line": "\"\"\"Download any remote sensing data from any provider using a single config.\"\"\"",
-   "imports": [],
-   "registered": "2026-11-04 05:59:33",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "api",
-   "source_file": "multiearth/api.py",
-   "source_repo": "bair-climate-initiative/metaearth",
-   "license": "check repo",
-   "sha256": "9c744e45e6144cd7841090738c46c7620d5d03748fb1d0476492e44620e7b3d5",
-   "lines": 97,
-   "first_line": "\"\"\"API for downloading assets programmatically. Use cli.py to download assets fr",
-   "imports": [
-    "datetime",
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 05:59:33",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "jupyter_server_config",
-   "source_file": ".binder/jupyter_server_config.py",
-   "source_repo": "mimitoz62/exostab",
-   "license": "check repo",
-   "sha256": "9339ce5250c75be24b793029c5e8bd15fa84800bb36a9721187ecfe44fdcba12",
-   "lines": 24,
-   "first_line": "\"\"\"Serve the exostab web app at <session URL>/exostab/. jupyter-server-proxy sta",
-   "imports": [],
-   "registered": "2026-11-04 05:59:34",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "catalog_changes",
-   "source_file": "scripts/catalog_changes.py",
-   "source_repo": "mimitoz62/exostab",
-   "license": "check repo",
-   "sha256": "cbef6127d31ab07ea8c819fddaf60324ac906d8dfbf70bfa39dcb8d1056374d5",
-   "lines": 268,
-   "first_line": "\"\"\"Write docs/catalog-changes.md and docs/catalog-changes.xml: what changed betw",
-   "imports": [
-    "csv",
-    "html",
-    "sys",
-    "xml"
-   ],
-   "registered": "2026-11-04 05:59:34",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:43"
   },
   {
    "skill": "build_playground",
    "source_file": "scripts/build_playground.py",
    "source_repo": "stzifkas/pluto-ecss",
-   "license": "check repo",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
    "sha256": "06814d80f6dd6c61a7b1cca9dca4a69e773dd7c030f99ea6058c7d9581cdc9b2",
-   "lines": 46,
+   "lines": 45,
    "first_line": "#!/usr/bin/env python3",
    "imports": [
     "json",
     "pathlib",
     "sys"
    ],
-   "registered": "2026-11-04 07:11:52",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:44"
   },
   {
    "skill": "__init__",
    "source_file": "src/pluto_ecss/__init__.py",
    "source_repo": "stzifkas/pluto-ecss",
-   "license": "check repo",
+   "summary": "\"\"\"pluto-ecss: a PLUTO (ECSS-E-ST-70-32C) to Python transpiler and runtime.\"\"\"",
+   "license": "permissive (fetched)",
    "sha256": "bcd74745d9216b94bcda20cecd72f9240852df92f4c3e65d05d66d18d5c81a23",
-   "lines": 38,
+   "lines": 37,
    "first_line": "\"\"\"pluto-ecss: a PLUTO (ECSS-E-ST-70-32C) to Python transpiler and runtime.\"\"\"",
    "imports": [
     "importlib"
    ],
-   "registered": "2026-11-04 07:11:52",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:45"
   },
   {
-   "skill": "render_preview",
-   "source_file": "scripts/render_preview.py",
-   "source_repo": "SimplySolid3D/planetary-dem-to-stl",
-   "license": "check repo",
-   "sha256": "687d44350630a3732a95c63273c61fbadcc7c7c656ae48f8122826f6a393c39a",
-   "lines": 59,
-   "first_line": "\"\"\"Render a shaded preview PNG of an STL, offscreen (needs trimesh + matplotlib)",
-   "imports": [
-    "argparse",
-    "matplotlib",
-    "numpy",
-    "trimesh"
-   ],
-   "registered": "2026-11-04 07:11:52",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "src/planetary_dem_to_stl/__init__.py",
-   "source_repo": "SimplySolid3D/planetary-dem-to-stl",
-   "license": "check repo",
-   "sha256": "bd854a281dc52174f7af1485f8f11fd67058bd8a7a24455bfeaf4257a8496130",
-   "lines": 25,
-   "first_line": "\"\"\"Turn public Moon and Mars elevation data into watertight, printable STL files",
+   "skill": "_nodes",
+   "source_file": "src/pluto_ecss/_nodes.py",
+   "source_repo": "stzifkas/pluto-ecss",
+   "summary": "\"\"\"Shared parse-tree helpers for the transpiler, formatter, and json_emit.",
+   "license": "permissive (fetched)",
+   "sha256": "d9e990b947df62d51f570bc89ed4911a3fb1daf60275be34952faa40b405e4d7",
+   "lines": 154,
+   "first_line": "\"\"\"Shared parse-tree helpers for the transpiler, formatter, and json_emit.",
    "imports": [],
-   "registered": "2026-11-04 07:11:52",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:46"
   },
   {
-   "skill": "plot_m20_three_forks",
-   "source_file": "docs/examples/plot_m20_three_forks.py",
-   "source_repo": "AndrewAnnex/SpiceyPy",
-   "license": "check repo",
-   "sha256": "92f66a924d361f452aeb8cf4af219604fca6dd22b84b204bbb184d6fe5c9a630",
-   "lines": 93,
-   "first_line": "\"\"\"",
-   "imports": [
-    "matplotlib",
-    "numpy",
-    "os",
-    "spiceypy"
-   ],
-   "registered": "2026-11-04 07:11:53",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "plot_m20_three_forks_cyice",
-   "source_file": "docs/examples/plot_m20_three_forks_cyice.py",
-   "source_repo": "AndrewAnnex/SpiceyPy",
-   "license": "check repo",
-   "sha256": "695ff4329d46ee67b3a8e01332a5ffdf3c7886fc9ee5d2bd3cf9cda538065cf6",
-   "lines": 131,
-   "first_line": "\"\"\"",
-   "imports": [
-    "matplotlib",
-    "numpy",
-    "os",
-    "spiceypy",
-    "time"
-   ],
-   "registered": "2026-11-04 07:11:53",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "real_starlink_demo",
-   "source_file": "examples/real_starlink_demo.py",
-   "source_repo": "ShipItAndPray/orbital-compute",
-   "license": "check repo",
-   "sha256": "3237d4f5f9a36eac177a9a30ff0579b8aaa889c89de7800d938fb860ef76ceb9",
-   "lines": 225,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 07:11:54",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "json2test",
-   "source_file": "generator/json2test.py",
-   "source_repo": "swift-nav/libsbp",
-   "license": "check repo",
-   "sha256": "527b817ce5c77cfbd545167885891ec5753da69527acea2a61674644a28345ec",
-   "lines": 95,
-   "first_line": "# Copyright (C) 2024 Swift Navigation Inc.",
-   "imports": [
-    "argparse",
-    "datetime",
-    "json",
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 07:11:54",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "missing",
-   "source_file": "generator/missing.py",
-   "source_repo": "swift-nav/libsbp",
-   "license": "check repo",
-   "sha256": "6b4a498f0780f638e7bc52197cf30315bba6689ddeeec0e77e65229d5e858214",
-   "lines": 146,
-   "first_line": "# Copyright (C) 2021 Swift Navigation Inc.",
-   "imports": [
-    "argparse",
-    "collections",
-    "datetime",
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 07:11:55",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "centroid_generation",
-   "source_file": "C_Tetra/centroid_generation.py",
-   "source_repo": "brownj4/Tetra",
-   "license": "check repo",
-   "sha256": "c2dcb71f69ed9b7211faf48f4cd7a28edcb3ce1467c6e46ee67482fc811eaee4",
-   "lines": 160,
-   "first_line": "import PIL",
-   "imports": [
-    "PIL",
-    "cPickle",
-    "itertools",
-    "numpy",
-    "random",
-    "sys"
-   ],
-   "registered": "2026-11-04 07:11:55",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "beast/__init__.py",
-   "source_repo": "UBNanosatLab/openstartracker",
-   "license": "check repo",
-   "sha256": "3a28bd3bd3f13b2a783ddfe14b027da2824a8314a0d12d65d46b32450d8a6872",
-   "lines": 1,
-   "first_line": "beast.py",
-   "imports": [],
-   "registered": "2026-11-04 07:11:55",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "src/satguard/__init__.py",
-   "source_repo": "cesabici-bit/satguard",
-   "license": "check repo",
-   "sha256": "e07816f9bd8d9463212651cdd29d14f642adfdbc6eb33e8ef01b7fcb31895727",
-   "lines": 92,
-   "first_line": "\"\"\"SatGuard \u2014 Open-source conjunction assessment pipeline.\"\"\"",
-   "imports": [],
-   "registered": "2026-11-04 07:11:56",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "cw_comparison",
-   "source_file": "verify/cw_comparison.py",
-   "source_repo": "cesabici-bit/satguard",
-   "license": "check repo",
-   "sha256": "96c8e2e3bae3ad4ff0d64d1682df15fd2120e5e89f23c9126ddae82e159e049e",
-   "lines": 161,
-   "first_line": "\"\"\"M4: CW analytical vs numerical Hill equations integration.",
-   "imports": [
-    "math",
-    "numpy",
-    "sys"
-   ],
-   "registered": "2026-11-04 07:11:56",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "check_agent_selection_retention",
-   "source_file": "scripts/check-agent-selection-retention.py",
-   "source_repo": "openclaw/openclaw",
-   "license": "check repo",
-   "sha256": "824793ed98587d80bf548e8a7a290dd7b91ff1d6e47b7a8bd5b32a4ffa7d52fa",
-   "lines": 64,
-   "first_line": "\"\"\"Validate the separate warmed selection-cycle diagnostic; never rewrite old pr",
-   "imports": [
-    "json",
-    "sys"
-   ],
-   "registered": "2026-11-04 07:11:59",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "check_composite_action_input_interpolation",
-   "source_file": "scripts/check-composite-action-input-interpolation.py",
-   "source_repo": "openclaw/openclaw",
-   "license": "check repo",
-   "sha256": "abd25e31f864eee5a5b045f81a886bc21cd0df7de27f2293c577a1b38c279636",
-   "lines": 85,
-   "first_line": "#!/usr/bin/env python3",
+   "skill": "generator",
+   "source_file": "src/pluto_ecss/generator.py",
+   "source_repo": "stzifkas/pluto-ecss",
+   "summary": "\"\"\"Generate a PLUTO procedure from a YAML / dict specification.",
+   "license": "permissive (fetched)",
+   "sha256": "d431f2e4e600ef3befc7c18b4fed90e167ab12a0ceec66e98ca32cbcc45c0cd0",
+   "lines": 357,
+   "first_line": "\"\"\"Generate a PLUTO procedure from a YAML / dict specification.",
    "imports": [
     "pathlib",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 07:11:59",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "render_sponsors",
-   "source_file": "docs/snippets/render-sponsors.py",
-   "source_repo": "zizmorcore/zizmor",
-   "license": "check repo",
-   "sha256": "b3d7fb4db576b9fb47d5ff5f7d4d1bce2d4dd5d51f7c6561547d17b97d3790ac",
-   "lines": 96,
-   "first_line": "#!/usr/bin/env -S uv run --script --locked",
-   "imports": [
-    "json",
-    "re"
-   ],
-   "registered": "2026-11-04 07:12:00",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "render_trophies",
-   "source_file": "docs/snippets/render-trophies.py",
-   "source_repo": "zizmorcore/zizmor",
-   "license": "check repo",
-   "sha256": "04ba59d9e678432b7117b096f144322d3d3465f3b087e28ca25d5513a683941e",
-   "lines": 76,
-   "first_line": "#!/usr/bin/env -S uv run --script --locked",
-   "imports": [
-    "re"
-   ],
-   "registered": "2026-11-04 07:12:00",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "convert_cerebras_to_ggml",
-   "source_file": "examples/gpt-2/convert-cerebras-to-ggml.py",
-   "source_repo": "ggml-org/ggml",
-   "license": "check repo",
-   "sha256": "002d6391ec791911b547dcf9a3e8fb416128e66404c630d7104763d39ab71d2d",
-   "lines": 184,
-   "first_line": "# Convert Cerebras models to ggml format",
-   "imports": [
-    "json",
-    "numpy",
-    "re",
-    "struct",
-    "sys",
-    "torch"
-   ],
-   "registered": "2026-11-04 07:12:02",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "convert_ckpt_to_ggml",
-   "source_file": "examples/gpt-2/convert-ckpt-to-ggml.py",
-   "source_repo": "ggml-org/ggml",
-   "license": "check repo",
-   "sha256": "c0b2d98ac6ca48e4d484d28825f2e065427945347aa1594e3b2ea1172854eda9",
-   "lines": 160,
-   "first_line": "# Convert a model checkpoint to a ggml compatible file",
-   "imports": [
-    "json",
-    "numpy",
-    "struct",
-    "sys",
-    "tensorflow"
-   ],
-   "registered": "2026-11-04 07:12:02",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "easy_llama/__init__.py",
-   "source_repo": "ddh0/easy-llama",
-   "license": "check repo",
-   "sha256": "49c43895702d027dfd1ed8008c17aa5fd26a204431be36e5c8cf917263637eca",
-   "lines": 33,
-   "first_line": "# __init__.py",
-   "imports": [],
-   "registered": "2026-11-04 07:12:02",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "formats",
-   "source_file": "easy_llama/formats.py",
-   "source_repo": "ddh0/easy-llama",
-   "license": "check repo",
-   "sha256": "9a971118739fd08732ad6e98644bb49513346c439c86167111af105fbca9b755",
-   "lines": 231,
-   "first_line": "# formats.py",
-   "imports": [
-    "time"
-   ],
-   "registered": "2026-11-04 07:12:02",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "download_models",
-   "source_file": ".github/download_models.py",
-   "source_repo": "SciSharp/LLamaSharp",
-   "license": "check repo",
-   "sha256": "02d04cbb2c3a4a2b6c3ab01e74b270c22868083a062ab2413754e1936d13457b",
-   "lines": 20,
-   "first_line": "from huggingface_hub import hf_hub_download",
-   "imports": [
-    "argparse"
-   ],
-   "registered": "2026-11-04 08:57:33",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "upload_to_hf",
-   "source_file": ".github/upload_to_hf.py",
-   "source_repo": "SciSharp/LLamaSharp",
-   "license": "check repo",
-   "sha256": "47e267730237f9f82622a91f41979d5d11b73a0c8d77ccbda34c43100db63558",
-   "lines": 37,
-   "first_line": "from huggingface_hub import HfApi",
-   "imports": [
-    "argparse"
-   ],
-   "registered": "2026-11-04 08:57:33",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "active_view_event",
-   "source_file": "plugins/active_view_event.py",
-   "source_repo": "yaroslavyaroslav/OpenAI-sublime-text",
-   "license": "check repo",
-   "sha256": "3a260c199b0d5560898aad3394e24c5a186026024679acbd38c6c5c294411284",
-   "lines": 64,
-   "first_line": "from __future__ import annotations",
-   "imports": [
-    "logging",
-    "sublime"
-   ],
-   "registered": "2026-11-04 08:57:35",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "ai_chat_event",
-   "source_file": "plugins/ai_chat_event.py",
-   "source_repo": "yaroslavyaroslav/OpenAI-sublime-text",
-   "license": "check repo",
-   "sha256": "fa1c49d490bfc80b7037d5b43f400c05d7fc4c665007987ade4218cbb366b6aa",
-   "lines": 37,
-   "first_line": "from __future__ import annotations",
-   "imports": [],
-   "registered": "2026-11-04 08:57:35",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "img2c",
-   "source_file": "tools/img2c.py",
-   "source_repo": "zhouwg/kantv",
-   "license": "check repo",
-   "sha256": "3b64af3158b2d6a6a7b9edcaf715b6d20045bc3a2264cae179e91595a3ab4056",
-   "lines": 32,
-   "first_line": "#author:nihui, https://github.com/nihui/ncnn_on_esp32/blob/master/image/img2c.py",
-   "imports": [
-    "cv2",
-    "glob",
-    "numpy",
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 08:57:37",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "baichuan",
-   "source_file": "conversion/baichuan.py",
-   "source_repo": "LostRuins/koboldcpp",
-   "license": "check repo",
-   "sha256": "698f48eab3fffb30226ef8ccd69fd4544ca7cac070fb44e50e70e60d235aae1d",
-   "lines": 61,
-   "first_line": "from __future__ import annotations",
-   "imports": [],
-   "registered": "2026-11-04 08:57:40",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "bailingmoe",
-   "source_file": "conversion/bailingmoe.py",
-   "source_repo": "LostRuins/koboldcpp",
-   "license": "check repo",
-   "sha256": "39c96855c12eef3675640a369e3f6454dddad78486709e2fa3ba60039ff420b9",
-   "lines": 220,
-   "first_line": "from __future__ import annotations",
-   "imports": [
-    "torch"
-   ],
-   "registered": "2026-11-04 08:57:40",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "populate",
-   "source_file": "container-images/hfmirror/populate.py",
-   "source_repo": "containers/ramalama",
-   "license": "check repo",
-   "sha256": "a80164533fa8ac7ed4b85f4c27431d2d8a7c59ada70eafc1170db307a23d66e8",
-   "lines": 98,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 08:57:41",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "server",
-   "source_file": "container-images/hfmirror/server.py",
-   "source_repo": "containers/ramalama",
-   "license": "check repo",
-   "sha256": "a76d1df476593de32f62c9a6101851ff768f76303639e505215daa158a996d53",
-   "lines": 313,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "hashlib",
-    "json",
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 08:57:41",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "ollama_dl/__init__.py",
-   "source_repo": "akx/ollama-dl",
-   "license": "check repo",
-   "sha256": "116e298d672f8f23b582e68fe8828d57f96b9a99268a83308f31172f4483767e",
-   "lines": 230,
-   "first_line": "import argparse",
-   "imports": [
-    "argparse",
-    "asyncio",
-    "dataclasses",
-    "httpx2",
-    "logging",
-    "pathlib",
-    "time"
-   ],
-   "registered": "2026-11-04 08:57:42",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__main__",
-   "source_file": "ollama_dl/__main__.py",
-   "source_repo": "akx/ollama-dl",
-   "license": "check repo",
-   "sha256": "cf1cd9e7f9a5311f20241f520957f260edcdcd830a504bb5b928bb3425064778",
-   "lines": 5,
-   "first_line": "if __name__ == \"__main__\":",
-   "imports": [],
-   "registered": "2026-11-04 08:57:42",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "gppmc",
-   "source_file": "gppmc/gppmc.py",
-   "source_repo": "crashr/gppm",
-   "license": "check repo",
-   "sha256": "ced36ede4b372d42e0ea63265f8ce046ec320d4ee10ff517cab12790fa8d4ad4",
-   "lines": 150,
-   "first_line": "import click",
-   "imports": [
-    "click",
-    "click_completion",
-    "json",
-    "requests",
     "yaml"
    ],
-   "registered": "2026-11-04 08:57:42",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:48"
   },
   {
-   "skill": "heads",
-   "source_file": "examples/classifier/heads.py",
-   "source_repo": "onicai/llama_cpp_canister",
-   "license": "check repo",
-   "sha256": "377e6d3d47b9e61e01d875d4d9776df3041df849ccd286449fc1bc6a68e982d8",
-   "lines": 87,
-   "first_line": "\"\"\"The classifier's outputs: one linear head of 15 scores, a group per fact.",
+   "skill": "parser",
+   "source_file": "src/pluto_ecss/parser.py",
+   "source_repo": "stzifkas/pluto-ecss",
+   "summary": "\"\"\"Lark parser wrapper. Loads grammar.lark and exposes parse() with",
+   "license": "permissive (fetched)",
+   "sha256": "8610ddd23d91ebce8890eab4f5a22e664617d3b7b46d81a86ee03e7f3c6b70dd",
+   "lines": 168,
+   "first_line": "\"\"\"Lark parser wrapper. Loads grammar.lark and exposes parse() with",
    "imports": [
-    "torch"
+    "pathlib"
    ],
-   "registered": "2026-11-04 08:57:43",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:48"
   },
   {
-   "skill": "merge_labels",
-   "source_file": "examples/classifier/merge_labels.py",
-   "source_repo": "onicai/llama_cpp_canister",
-   "license": "check repo",
-   "sha256": "c3a1106723a94485cd79ea2721ee3783e3ca74c2fd83ae64ec5f6b4636a9f7fb",
-   "lines": 101,
-   "first_line": "\"\"\"Builds the training set from two independent labeling passes.",
-   "imports": [
-    "json",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 08:57:43",
-   "vetby": "hub-runner-v1"
+   "skill": "pygments_lexer",
+   "source_file": "src/pluto_ecss/pygments_lexer.py",
+   "source_repo": "stzifkas/pluto-ecss",
+   "summary": "\"\"\"Pygments lexer for the PLUTO DSL.",
+   "license": "permissive (fetched)",
+   "sha256": "5a3a738cb1f1e25b134123aca12b97b05a3d844f33e2b5e092be137f638141f3",
+   "lines": 74,
+   "first_line": "\"\"\"Pygments lexer for the PLUTO DSL.",
+   "imports": [],
+   "registered": "2026-11-03 22:38:49"
   },
   {
-   "skill": "constructor",
-   "source_file": "absolute_zero_reasoner/data_construction/constructor.py",
-   "source_repo": "LeapLabTHU/Absolute-Zero-Reasoner",
-   "license": "check repo",
-   "sha256": "52597120bdc64ef9624582833386e202d3e1ea54e0ffa52055ce5e0428ff12fa",
-   "lines": 226,
-   "first_line": "from typing import List, Dict",
+   "skill": "camera",
+   "source_file": "oresat_star_tracker/camera.py",
+   "source_repo": "oresat/oresat-star-tracker-software",
+   "summary": "\"\"\"Star tracker AR013x camera\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "9b134cb8dc168f32fc588a5b8473708348aadf22eb66c057fcb45c03081f94cd",
+   "lines": 177,
+   "first_line": "\"\"\"Star tracker AR013x camera\"\"\"",
    "imports": [
-    "pandas"
+    "numpy"
    ],
-   "registered": "2026-11-04 08:57:44",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "process_code_reasoning_data",
-   "source_file": "absolute_zero_reasoner/data_construction/process_code_reasoning_data.py",
-   "source_repo": "LeapLabTHU/Absolute-Zero-Reasoner",
-   "license": "check repo",
-   "sha256": "c12db6bfac71b9a146760984f57a31e9382d9fc6c4a8a081d1e90500266156f2",
-   "lines": 176,
-   "first_line": "from pathlib import Path",
-   "imports": [
-    "argparse",
-    "pandas",
-    "re"
-   ],
-   "registered": "2026-11-04 08:57:45",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "mmlu",
-   "source_file": "eval/mmlu.py",
-   "source_repo": "turboderp/exllamav2",
-   "license": "check repo",
-   "sha256": "db5e32180e5b17a03366cdffbf2154d6051ed568774c806b2ea49c5802344d02",
-   "lines": 197,
-   "first_line": "from __future__ import annotations",
-   "imports": [
-    "argparse",
-    "contextlib",
-    "os",
-    "random",
-    "sys",
-    "torch",
-    "util"
-   ],
-   "registered": "2026-11-04 08:57:47",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "util",
-   "source_file": "eval/util.py",
-   "source_repo": "turboderp/exllamav2",
-   "license": "check repo",
-   "sha256": "6ec5f82d79b599851b812cb2aefe6273e1dc275794b4d94a04f72b0b4e1d3b02",
-   "lines": 41,
-   "first_line": "from datasets import load_dataset",
-   "imports": [
-    "json",
-    "os"
-   ],
-   "registered": "2026-11-04 08:57:47",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "api_events",
-   "source_file": "docs/scripts/api-events.py",
-   "source_repo": "mitmproxy/mitmproxy",
-   "license": "check repo",
-   "sha256": "6bba6e5aaeb653e9f43702373e48ae483f59739c7aea892bee6d0ed3c2074e3f",
-   "lines": 206,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "contextlib",
-    "inspect",
-    "textwrap",
-    "typing"
-   ],
-   "registered": "2026-11-04 08:57:48",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "api_render",
-   "source_file": "docs/scripts/api-render.py",
-   "source_repo": "mitmproxy/mitmproxy",
-   "license": "check repo",
-   "sha256": "60f7f05e16a304c164f6bc6c468982564cefb67c48c776fb56edc06843b43873",
-   "lines": 84,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "os",
-    "pdoc",
-    "shutil",
-    "textwrap"
-   ],
-   "registered": "2026-11-04 08:57:48",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "capture_screenshots",
-   "source_file": "scripts/capture_screenshots.py",
-   "source_repo": "KanenasInGreece/Shared_Memory_Monitor",
-   "license": "check repo",
-   "sha256": "2f9176db21a91503c24de56f465179ddf5e35bb5cea374ff8138122144157ed7",
-   "lines": 166,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "os",
-    "sys",
-    "urllib"
-   ],
-   "registered": "2026-11-04 10:03:45",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:50"
   },
   {
    "skill": "__init__",
-   "source_file": "src/sm_telemetry_monitor/__init__.py",
-   "source_repo": "KanenasInGreece/Shared_Memory_Monitor",
-   "license": "check repo",
-   "sha256": "516ed5081e0f2d6611f429bcbbb0cd21c4648e031f3feb896a62a359f8f20004",
-   "lines": 3,
-   "first_line": "\"\"\"Read-only view over gateway telemetry and framework logs \u2014 no separate data i",
+   "source_file": "oresat_star_tracker/lost/__init__.py",
+   "source_repo": "oresat/oresat-star-tracker-software",
+   "summary": "\"\"\"Minimal wrapper to LOST for generating databases\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "50a52c304c0e8786f68cce05d7f469c7e0c53256380ffde9d6b02c02ffc7500c",
+   "lines": 11,
+   "first_line": "\"\"\"Minimal wrapper to LOST for generating databases\"\"\"",
    "imports": [],
-   "registered": "2026-11-04 10:03:45",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "source/__init__.py",
-   "source_repo": "lutzroeder/netron",
-   "license": "check repo",
-   "sha256": "561046fc986566b55d02ca2911b482024d1995df6c8662fc2a4209bf42ff3827",
-   "lines": 48,
-   "first_line": "\"\"\" Python Server entry point \"\"\"",
-   "imports": [
-    "argparse",
-    "logging",
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 10:03:47",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "onnx",
-   "source_file": "source/onnx.py",
-   "source_repo": "lutzroeder/netron",
-   "license": "check repo",
-   "sha256": "b05618e55389a941b08f738b1e7cfd03e4546fc6608db560e6132a1a777e5276",
-   "lines": 232,
-   "first_line": "\"\"\" ONNX backend \"\"\"",
-   "imports": [
-    "collections",
-    "enum",
-    "json",
-    "os"
-   ],
-   "registered": "2026-11-04 10:03:48",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "api_source",
-   "source_file": "eval/api_source.py",
-   "source_repo": "turboderp-org/exllamav3",
-   "license": "check repo",
-   "sha256": "a41d95bccbbd5e86317b5a01517f4902282c361ff0289d1fa99df3e2f5b36d98",
-   "lines": 150,
-   "first_line": "\"\"\"",
-   "imports": [
-    "json",
-    "os",
-    "requests",
-    "threading",
-    "time"
-   ],
-   "registered": "2026-11-04 10:03:51",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "bbeh_mini",
-   "source_file": "eval/bbeh_mini.py",
-   "source_repo": "turboderp-org/exllamav3",
-   "license": "check repo",
-   "sha256": "90f9e52d4a774020765deabebeb0479ea000bdaf5c70a51cc306faf2c99a5ff7",
-   "lines": 292,
-   "first_line": "from __future__ import annotations",
-   "imports": [
-    "argparse",
-    "json",
-    "math",
-    "os",
-    "random",
-    "sys",
-    "time",
-    "torch"
-   ],
-   "registered": "2026-11-04 10:03:51",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "plot",
-   "source_file": "docs/1-step-size/plot.py",
-   "source_repo": "Salad109/SIMPLETON",
-   "license": "check repo",
-   "sha256": "3a120091cd9b515748a2cdfcfc5553ee643078c0d94c2cde3687689f3ff8547b",
-   "lines": 76,
-   "first_line": "import pandas as pd",
-   "imports": [
-    "matplotlib",
-    "numpy",
-    "pandas"
-   ],
-   "registered": "2026-11-04 10:03:53",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "plot",
-   "source_file": "docs/2-knot-gap/plot.py",
-   "source_repo": "Salad109/SIMPLETON",
-   "license": "check repo",
-   "sha256": "3a3d2bb245dab544168da59b7a3b704718469da5f4e008d5b2d07b2bcde4a2ed",
-   "lines": 93,
-   "first_line": "import pandas as pd",
-   "imports": [
-    "matplotlib",
-    "numpy",
-    "pandas"
-   ],
-   "registered": "2026-11-04 10:03:53",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "convert_barbet_to_gguf",
-   "source_file": "scripts/barbet/convert_barbet_to_gguf.py",
-   "source_repo": "mybigday/llama.rn",
-   "license": "check repo",
-   "sha256": "a75f22cb374aab9169c82cb84c9afdc699e2eedb4473342981802ffc86b95ae3",
-   "lines": 250,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "gguf",
-    "json",
-    "numpy",
-    "torch"
-   ],
-   "registered": "2026-11-04 10:03:55",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "update_feature_log",
-   "source_file": "scripts/update_feature_log.py",
-   "source_repo": "ylsdamxssjxxdd/eva",
-   "license": "check repo",
-   "sha256": "3f06ea3ac767df94ba67e0e27d1589c7319dc99f84048df58c5289ca56ea5d73",
-   "lines": 132,
-   "first_line": "#!/usr/bin/env python",
-   "imports": [
-    "argparse",
-    "codecs",
-    "sys"
-   ],
-   "registered": "2026-11-04 10:03:57",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "check_and_update",
-   "source_file": ".github/check_and_update.py",
-   "source_repo": "mudler/LocalAI",
-   "license": "check repo",
-   "sha256": "909b2d02d075bad6058d289b939b76f6eaec88c43266bdb4ef5d9a476caee018",
-   "lines": 89,
-   "first_line": "import hashlib",
-   "imports": [
-    "hashlib",
-    "os",
-    "requests",
-    "sys"
-   ],
-   "registered": "2026-11-04 10:03:58",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "ttft_streaming_tool_parser",
-   "source_file": "examples/vllm-bench/ttft_streaming_tool_parser.py",
-   "source_repo": "mudler/LocalAI",
-   "license": "check repo",
-   "sha256": "5d303774b313041e9ffcc26255d3704429c957b333420965d1d278cf2cb66217",
-   "lines": 176,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "json",
-    "sys",
-    "time",
-    "urllib"
-   ],
-   "registered": "2026-11-04 10:03:58",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "entities",
-   "source_file": "server/lib/entities.py",
-   "source_repo": "nat/openplayground",
-   "license": "check repo",
-   "sha256": "0a8aa4a5e2c69070b80cc2b6dc96606c5bfff78ca212286d502e2082a09d75c5",
-   "lines": 127,
-   "first_line": "import json",
-   "imports": [
-    "json"
-   ],
-   "registered": "2026-11-04 10:04:00",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "grab_notary_id",
-   "source_file": ".circleci/grab_notary_id.py",
-   "source_repo": "nomic-ai/gpt4all",
-   "license": "check repo",
-   "sha256": "6b76c92e1422c7b52702e065afdc802088289963cd214aa33e8907244745ae85",
-   "lines": 17,
-   "first_line": "import re",
-   "imports": [
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 10:04:01",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "app",
-   "source_file": "gpt4all-bindings/cli/app.py",
-   "source_repo": "nomic-ai/gpt4all",
-   "license": "check repo",
-   "sha256": "7511e892406e8b168f5e45d7be137323ea6ec2e5898b3fcb883a4e08e212aca1",
-   "lines": 185,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "importlib",
-    "io",
-    "sys",
-    "typer"
-   ],
-   "registered": "2026-11-04 10:04:01",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "seed",
-   "source_file": "docker/firestore/seed.py",
-   "source_repo": "libredb/libredb-studio",
-   "license": "check repo",
-   "sha256": "e5099bf2724e60830601bc2ff9230e296f3ae322534a1de2600872e3032a8ed4",
-   "lines": 45,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "json",
-    "sys",
-    "time",
-    "urllib"
-   ],
-   "registered": "2026-11-04 10:04:04",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "bulk",
-   "source_file": "docker/influxdb/bulk.py",
-   "source_repo": "libredb/libredb-studio",
-   "license": "check repo",
-   "sha256": "b31f1793ea0f06edb17b1eb8cc23552f9491bf11d603b0df60daa4bf3b69bbe8",
-   "lines": 62,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "sys",
-    "time"
-   ],
-   "registered": "2026-11-04 10:04:04",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "conf",
-   "source_file": "docs/conf.py",
-   "source_repo": "kibitzr/kibitzr",
-   "license": "check repo",
-   "sha256": "348cfcff2f75767658522b758686d0a71c96c1bf4eae3065a0c70e1b59816052",
-   "lines": 274,
-   "first_line": "#!/usr/bin/env python",
-   "imports": [
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 10:04:04",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "kibitzr/__init__.py",
-   "source_repo": "kibitzr/kibitzr",
-   "license": "check repo",
-   "sha256": "a58a1d8c3f535f0c0a514fdc4535c035029b745205825fc4fb217d642e0b2b14",
-   "lines": 6,
-   "first_line": "# -*- coding: utf-8 -*-",
-   "imports": [],
-   "registered": "2026-11-04 10:04:05",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "conf",
-   "source_file": "docs/conf.py",
-   "source_repo": "ageitgey/face_recognition",
-   "license": "check repo",
-   "sha256": "f0f91348fa5252df507f32a63334846172ed47a8f9f88857071aa0af9d40440e",
-   "lines": 285,
-   "first_line": "#!/usr/bin/env python",
-   "imports": [
-    "face_recognition",
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 10:04:05",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "benchmark",
-   "source_file": "examples/benchmark.py",
-   "source_repo": "ageitgey/face_recognition",
-   "license": "check repo",
-   "sha256": "8189f68b09b3767efed2784c63a7e22fc4e87103d3d385bb016665aaea5a1f47",
-   "lines": 78,
-   "first_line": "import timeit",
-   "imports": [
-    "timeit"
-   ],
-   "registered": "2026-11-04 10:04:05",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "admin",
-   "source_file": "bookmarks/admin.py",
-   "source_repo": "sissbruecker/linkding",
-   "license": "check repo",
-   "sha256": "e37fe3d2e6ca1e7ee26a2ab0f5fe636455f2eb9b31825e916b4797e181a52086",
-   "lines": 345,
-   "first_line": "import os",
-   "imports": [
-    "os"
-   ],
-   "registered": "2026-11-04 11:15:26",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "auth",
-   "source_file": "bookmarks/api/auth.py",
-   "source_repo": "sissbruecker/linkding",
-   "license": "check repo",
-   "sha256": "b31d8bad45c7af65f8fb9faf0a817e0d32bf3dec5f3b89d305669cdfc74270f4",
-   "lines": 39,
-   "first_line": "from django.utils.translation import gettext_lazy as _",
-   "imports": [],
-   "registered": "2026-11-04 11:15:26",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "print_attributes",
-   "source_file": "bin/print_attributes.py",
-   "source_repo": "brandon-rhodes/python-sgp4",
-   "license": "check repo",
-   "sha256": "a951fefa0fe3e0dde0b67ba2ef653256cabf583e3870f5d138a80423450e6007",
-   "lines": 27,
-   "first_line": "#!/usr/bin/env python",
-   "imports": [],
-   "registered": "2026-11-04 11:15:27",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:51"
   },
   {
    "skill": "__init__",
    "source_file": "sgp4/__init__.py",
    "source_repo": "brandon-rhodes/python-sgp4",
-   "license": "check repo",
+   "summary": "# -*- coding: utf-8 -*-",
+   "license": "permissive (fetched)",
    "sha256": "8f01018363382658c82ae05408e8fb00e077c02be3b6a857478205f887da6b0e",
-   "lines": 14,
+   "lines": 13,
    "first_line": "# -*- coding: utf-8 -*-",
    "imports": [],
-   "registered": "2026-11-04 11:15:27",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:52"
   },
   {
-   "skill": "switch_top_rmii_serial_adapter_timing",
-   "source_file": "examples/ice40_hx8k/switch_top_rmii_serial_adapter_timing.py",
-   "source_repo": "the-aerospace-corporation/satcat5",
-   "license": "check repo",
-   "sha256": "a56bc25b9047ae3a8d269cc13cd67d41aa46f5e8360d93291ffb961d67403de9",
-   "lines": 10,
-   "first_line": "##########################################################################",
+   "skill": "alpha5",
+   "source_file": "sgp4/alpha5.py",
+   "source_repo": "brandon-rhodes/python-sgp4",
+   "summary": "\"\"\"Alpha 5 encoding of satellite numbers to fit in 5 characters.\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "98b6a004d971f25f837a0efa1f073e6bc6a36314fd1448b3078473db9ab4267a",
+   "lines": 22,
+   "first_line": "\"\"\"Alpha 5 encoding of satellite numbers to fit in 5 characters.\"\"\"",
    "imports": [],
-   "registered": "2026-11-04 11:15:38",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:53"
   },
   {
-   "skill": "echo_demo",
-   "source_file": "examples/python/echo_demo.py",
-   "source_repo": "the-aerospace-corporation/satcat5",
-   "license": "check repo",
-   "sha256": "52067f16a28d6f0b187f3da9d9ca56453717efae784428994e855e754496c087",
-   "lines": 58,
-   "first_line": "# -*- coding: utf-8 -*-",
+   "skill": "api",
+   "source_file": "sgp4/api.py",
+   "source_repo": "brandon-rhodes/python-sgp4",
+   "summary": "\"\"\"Public API that tries to import C++ module, but falls back to Python.\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "e61f7a4b1ddd026a0cfd147ef18cf2eaf1aee9e05eae9098677cbd811f519bf3",
+   "lines": 27,
+   "first_line": "\"\"\"Public API that tries to import C++ module, but falls back to Python.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-03 22:38:54"
+  },
+  {
+   "skill": "bench_fleet",
+   "source_file": "bench_fleet.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Benchmark: vectorized fleet screening with real catalog.",
+   "license": "permissive (fetched)",
+   "sha256": "2cec5b8ed80b6f48379a18ceae3458d982bba91a0ebc60b85cf1696a156cbc6f",
+   "lines": 74,
+   "first_line": "\"\"\"Benchmark: vectorized fleet screening with real catalog.",
    "imports": [
+    "asyncio",
     "logging",
-    "os",
-    "satcat5_eth",
-    "sys",
     "time"
    ],
-   "registered": "2026-11-04 11:15:38",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "remove_php_end_tags",
-   "source_file": "phpBB/develop/remove-php-end-tags.py",
-   "source_repo": "phpbb/phpbb",
-   "license": "check repo",
-   "sha256": "0af62d97f0f3cea9547f969b73f8fb8531690fb96f39aa22cc2bcca544cb0590",
-   "lines": 66,
-   "first_line": "#!/usr/bin/env python",
-   "imports": [
-    "optparse",
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 11:15:39",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "setup",
-   "source_file": "pip-package/setup.py",
-   "source_repo": "taleshape-com/shaper",
-   "license": "check repo",
-   "sha256": "4e4fc963567b08a00feebae974c9a72a6cfaaab2ebdda2ec1a12d6fc0fe1d98f",
-   "lines": 8,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [],
-   "registered": "2026-11-04 11:15:40",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:55"
   },
   {
    "skill": "__init__",
-   "source_file": "pip-package/shaper_pkg/__init__.py",
-   "source_repo": "taleshape-com/shaper",
-   "license": "check repo",
-   "sha256": "0f45b711f10284ec4c37672fe08bc202095fd4fdc3a43736cd62e2cc754d2897",
-   "lines": 6,
-   "first_line": "# SPDX-License-Identifier: MPL-2.0",
+   "source_file": "src/satguard/__init__.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"SatGuard — Open-source conjunction assessment pipeline.\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "e07816f9bd8d9463212651cdd29d14f642adfdbc6eb33e8ef01b7fcb31895727",
+   "lines": 91,
+   "first_line": "\"\"\"SatGuard — Open-source conjunction assessment pipeline.\"\"\"",
    "imports": [],
-   "registered": "2026-11-04 11:15:40",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "make_icon",
-   "source_file": "android/make_icon.py",
-   "source_repo": "ZeldaWWHDRecomp/ZeldaWWHDRecomp",
-   "license": "check repo",
-   "sha256": "371fe05e8d1f4d60fe19ad142165aebc3348552c45dc56b5b1dc764aa4c5e854",
-   "lines": 48,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 11:15:42",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "generate_art",
-   "source_file": "examples/guest-mods/generate_art.py",
-   "source_repo": "ZeldaWWHDRecomp/ZeldaWWHDRecomp",
-   "license": "check repo",
-   "sha256": "bfe32f7ef8e1f5a2b9040c4b48cc8edc223f62762358338f81f73d33dfba0fac",
-   "lines": 90,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "struct",
-    "zlib"
-   ],
-   "registered": "2026-11-04 11:15:42",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "main",
-   "source_file": "examples/all_in_one/main.py",
-   "source_repo": "getsops/sops",
-   "license": "check repo",
-   "sha256": "1805d0d48fb16895a5d01f194a20599e34150e0805c0b39b5efbf719dca53759",
-   "lines": 19,
-   "first_line": "# Load in our dependencies",
-   "imports": [],
-   "registered": "2026-11-04 11:15:43",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "main",
-   "source_file": "examples/per_file/main.py",
-   "source_repo": "getsops/sops",
-   "license": "check repo",
-   "sha256": "d909ae8501aad0065d328eb6b8a3ec11d05334c984ab44ec3ae09b5f07df354c",
-   "lines": 29,
-   "first_line": "# Load in our dependencies",
-   "imports": [],
-   "registered": "2026-11-04 11:15:43",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "gemini_reviewer",
-   "source_file": ".github/scripts/gemini_reviewer.py",
-   "source_repo": "nyx-space/anise",
-   "license": "check repo",
-   "sha256": "ac86dce16400103345525793bf99e1fc9a786ac36a1cec3d9ce4466a45ef5508",
-   "lines": 206,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "json",
-    "os",
-    "requests",
-    "sys"
-   ],
-   "registered": "2026-11-04 11:15:46",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:55"
   },
   {
    "skill": "__init__",
-   "source_file": "anise-py/anise/__init__.py",
-   "source_repo": "nyx-space/anise",
-   "license": "check repo",
-   "sha256": "e77b1d6d638e63597aa9ffd34f90c094d95c6cbbdd0c5f862497738400f8100c",
-   "lines": 46,
-   "first_line": "from anise._anise import (",
+   "source_file": "src/satguard/alert/__init__.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Alert system for conjunction monitoring.\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "2eacedeb404545eddcec48cb24ede2ca8176e5b02bf62a1017f9e73a2347cebb",
+   "lines": 11,
+   "first_line": "\"\"\"Alert system for conjunction monitoring.\"\"\"",
    "imports": [],
-   "registered": "2026-11-04 11:15:46",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:56"
   },
   {
-   "skill": "conf",
-   "source_file": "docs/wiki/conf.py",
-   "source_repo": "nasa/nos3",
-   "license": "check repo",
-   "sha256": "be9bbfdb70905a860ac88fcca65bbc0ab6a5595f3dbcf5547d2442be34278c7c",
-   "lines": 44,
-   "first_line": "# Configuration file for the Sphinx documentation builder.",
-   "imports": [],
-   "registered": "2026-11-04 11:15:48",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "base",
-   "source_file": "ldm/data/base.py",
-   "source_repo": "vicgalle/stable-diffusion-aesthetic-gradients",
-   "license": "check repo",
-   "sha256": "4016b6242f78855179134781bd02cad9e843001623e3549f255103fd056de0b6",
-   "lines": 23,
-   "first_line": "from abc import abstractmethod",
-   "imports": [],
-   "registered": "2026-11-04 11:15:50",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "lsun",
-   "source_file": "ldm/data/lsun.py",
-   "source_repo": "vicgalle/stable-diffusion-aesthetic-gradients",
-   "license": "check repo",
-   "sha256": "654355d9c1d3a9420dd3b36f39a1ec4a1f0f61334109aa2162d9d8e8acd3d3b7",
-   "lines": 93,
-   "first_line": "import os",
+   "skill": "rules",
+   "source_file": "src/satguard/alert/rules.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Alert rule definitions and configuration parsing.",
+   "license": "permissive (fetched)",
+   "sha256": "6d36cd0abd594e9591015ae5049ce33798468c6e17804bda2d8d5b4db1d2263d",
+   "lines": 106,
+   "first_line": "\"\"\"Alert rule definitions and configuration parsing.",
    "imports": [
-    "PIL",
-    "numpy",
-    "os"
+    "tomllib"
    ],
-   "registered": "2026-11-04 11:15:51",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:57"
   },
   {
-   "skill": "compare_reprobit_cost",
-   "source_file": ".github/scripts/compare-reprobit-cost.py",
-   "source_repo": "isledecomp/isle",
-   "license": "check repo",
-   "sha256": "ed5d81dbe5655b1710ba9e8ad239095c26c30a25c9ea5399a9d897e20468324d",
-   "lines": 165,
-   "first_line": "#!/usr/bin/env python3",
+   "skill": "cache",
+   "source_file": "src/satguard/api/cache.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"In-memory TTL cache for catalog and conjunction data.\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "90787cf39555be868379d6f52cb8236491e8fb9e403b9dece066f56aa5559551",
+   "lines": 55,
+   "first_line": "\"\"\"In-memory TTL cache for catalog and conjunction data.\"\"\"",
    "imports": [
-    "json",
-    "sys"
+    "asyncio",
+    "time"
    ],
-   "registered": "2026-11-04 11:15:53",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:58"
   },
   {
-   "skill": "summarize_match",
-   "source_file": ".github/scripts/summarize-match.py",
-   "source_repo": "isledecomp/isle",
-   "license": "check repo",
-   "sha256": "8b78170d25ce0a86e14a132063c109b8e2afd33ffcda65e9eb2db1feb69e10f4",
-   "lines": 32,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "json",
-    "sys"
-   ],
-   "registered": "2026-11-04 11:15:53",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "curpng2h",
-   "source_file": "tools/curpng2h.py",
-   "source_repo": "isledecomp/isle-portable",
-   "license": "check repo",
-   "sha256": "f6a793c2f484157697fc65916a24b04210fd9be053ca72966b68b0bdb045efa6",
-   "lines": 76,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "itertools"
-   ],
-   "registered": "2026-11-04 13:02:42",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "leap_seconds_generator",
-   "source_file": "scripts/leap_seconds_generator.py",
-   "source_repo": "swift-nav/libswiftnav",
-   "license": "check repo",
-   "sha256": "859283d7ee900ce44152298d200677b8019581a1404c2f996eab3bf36a3d03ea",
-   "lines": 159,
-   "first_line": "#!/usr/bin/python3",
-   "imports": [
-    "datetime",
-    "jinja2",
-    "sys",
-    "urllib"
-   ],
-   "registered": "2026-11-04 13:02:45",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "check2junit",
-   "source_file": "tools/check2junit.py",
-   "source_repo": "swift-nav/libswiftnav",
-   "license": "check repo",
-   "sha256": "966c8f0bf2af749874406a307496cfadacb26c41bec9428593bdc61bfd66db09",
-   "lines": 86,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "copy",
-    "lxml",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 13:02:45",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "convert",
-   "source_file": "tools/python/convert.py",
-   "source_repo": "xenia-project/FFmpeg",
-   "license": "check repo",
-   "sha256": "4d77f732637f4c3d71b174e079e92e6e7cc61ba3d4846f7062bf10abf4496b9d",
-   "lines": 57,
-   "first_line": "# Copyright (c) 2019 Guo Yejun",
-   "imports": [
-    "argparse",
-    "os"
-   ],
-   "registered": "2026-11-04 13:02:48",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "convert_header",
-   "source_file": "tools/python/convert_header.py",
-   "source_repo": "xenia-project/FFmpeg",
-   "license": "check repo",
-   "sha256": "9953ef731e1d3d8111cbe7012a198b70c696acc5917980da1a29c94aa8d91b5c",
-   "lines": 27,
-   "first_line": "# Copyright (c) 2019",
-   "imports": [],
-   "registered": "2026-11-04 13:02:48",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "conf",
-   "source_file": "airflow-core/docs/conf.py",
-   "source_repo": "apache/airflow",
-   "license": "check repo",
-   "sha256": "7645cdc33585a6a8a9666ca88da56be7917c6f44a9172bdc7c22756402f29c15",
-   "lines": 371,
-   "first_line": "# Disable Flake8 because of all the sphinx imports",
-   "imports": [
-    "airflow",
-    "logging",
-    "os",
-    "pathlib",
-    "re"
-   ],
-   "registered": "2026-11-04 13:02:49",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "conf",
-   "source_file": "airflow-ctl/docs/conf.py",
-   "source_repo": "apache/airflow",
-   "license": "check repo",
-   "sha256": "05c64144ef960ce7e231e7f9f56fa4d3d2fe38cb5941773dea74b10e3a4e53e4",
-   "lines": 300,
-   "first_line": "# Disable Flake8 because of all the sphinx imports",
-   "imports": [
-    "airflowctl",
-    "logging",
-    "os",
-    "pathlib",
-    "re"
-   ],
-   "registered": "2026-11-04 13:02:49",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "generate_email",
-   "source_file": "RELEASING/generate_email.py",
-   "source_repo": "apache/superset",
-   "license": "check repo",
-   "sha256": "f4142c96a662c4e57a1be748ec123a076b08aec65612f64498f75ba1a0fdc084",
-   "lines": 155,
-   "first_line": "#!/usr/bin/python3",
-   "imports": [
-    "click",
-    "jinja2"
-   ],
-   "registered": "2026-11-04 13:02:51",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "superset_config",
-   "source_file": "docker/pythonpath_dev/superset_config.py",
-   "source_repo": "apache/superset",
-   "license": "check repo",
-   "sha256": "523a1e68dc214e8f7f5e09304dfe9593b7996009dd13224d67d09abfe4fe29f7",
-   "lines": 154,
-   "first_line": "# Licensed to the Apache Software Foundation (ASF) under one",
-   "imports": [
-    "logging",
-    "os",
-    "superset_config_docker"
-   ],
-   "registered": "2026-11-04 13:02:51",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "make_logo",
-   "source_file": "core/SaintsRebornLogo/make_logo.py",
-   "source_repo": "whompay/SaintsReborn",
-   "license": "check repo",
-   "sha256": "a19dedbc7b6f52ccbc9dbdadd04e9783cf29cd3605c366d126f0aa9a9d210ff1",
-   "lines": 79,
-   "first_line": "# Developer tool: turns logo.png into logo.bin for patch.lua.",
-   "imports": [
-    "numpy",
-    "os",
-    "struct",
-    "sys"
-   ],
-   "registered": "2026-11-04 13:02:52",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "art",
-   "source_file": "tools/glyphgen/art.py",
-   "source_repo": "whompay/SaintsReborn",
-   "license": "check repo",
-   "sha256": "ad3a19ca63004a254984499f473847fda82957a5f582775cee4e4b1bf8b6bfa1",
-   "lines": 160,
-   "first_line": "# Keyboard/mouse button pictures, drawn from scratch (no game artwork).",
+   "skill": "alfano",
+   "source_file": "src/satguard/assess/alfano.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Alfano collision probability method.",
+   "license": "permissive (fetched)",
+   "sha256": "754c1e1ae3eb83a4c49eba90f0757414800a4118559df4d3e751d0d57d7aa477",
+   "lines": 119,
+   "first_line": "\"\"\"Alfano collision probability method.",
    "imports": [
     "numpy"
    ],
-   "registered": "2026-11-04 13:02:52",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:38:58"
   },
   {
-   "skill": "__init__",
-   "source_file": "ontology_sql_eval/__init__.py",
-   "source_repo": "NVIDIA/ontology-sql-eval",
-   "license": "check repo",
-   "sha256": "9bcc2ca888e5fbd4b09ded8ef819c106c0e92009704c47875f5a951c5a0a456e",
-   "lines": 4,
-   "first_line": "# SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES.",
+   "skill": "chan",
+   "source_file": "src/satguard/assess/chan.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Chan collision probability method.",
+   "license": "permissive (fetched)",
+   "sha256": "5b6689ed310cb92cbaa56f5ccea6fc80872f45c2d5c3568b0c13b921d0db2787",
+   "lines": 106,
+   "first_line": "\"\"\"Chan collision probability method.",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-11-03 22:38:59"
+  },
+  {
+   "skill": "foster",
+   "source_file": "src/satguard/assess/foster.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Foster collision probability method.",
+   "license": "permissive (fetched)",
+   "sha256": "e78f327a73c5e5e51c5f14b9df6466efa9056ba3e194dc0c4558add6e64178bc",
+   "lines": 87,
+   "first_line": "\"\"\"Foster collision probability method.",
+   "imports": [
+    "numpy"
+   ],
+   "registered": "2026-11-03 22:38:59"
+  },
+  {
+   "skill": "tle",
+   "source_file": "src/satguard/catalog/tle.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"TLE (Two-Line Element) parser.",
+   "license": "permissive (fetched)",
+   "sha256": "6461685d952af8e88b0bd48fc5e55fd72efe91bcd0d6325915f062ed20078fdb",
+   "lines": 181,
+   "first_line": "\"\"\"TLE (Two-Line Element) parser.",
    "imports": [],
-   "registered": "2026-11-04 13:02:53",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:39:00"
   },
   {
-   "skill": "bird_interact_http",
-   "source_file": "ontology_sql_eval/bird_interact/bird_interact_http.py",
-   "source_repo": "NVIDIA/ontology-sql-eval",
-   "license": "check repo",
-   "sha256": "c3f972d679fcf41289b550634fccd0d68520e182ac4b0b1b8d8b664de8086f8a",
-   "lines": 129,
-   "first_line": "\"\"\"HTTP clients for Bird ADK :6001 (user simulator) and :6002 (DB environment).\"",
-   "imports": [
-    "asyncio",
-    "httpx",
-    "logging",
-    "sqlglot"
-   ],
-   "registered": "2026-11-04 13:02:54",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "benchmark_data",
-   "source_file": "decontamination/benchmark_data.py",
-   "source_repo": "bigcode-project/bigcode-dataset",
-   "license": "check repo",
-   "sha256": "421875415036c66eeb3e7840ef4b56d4ea611dfc1d0b2ce0473cbef98cb1e3e3",
-   "lines": 140,
-   "first_line": "",
-   "imports": [
-    "itertools",
-    "json"
-   ],
-   "registered": "2026-11-04 13:02:54",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "find_substrings",
-   "source_file": "decontamination/find_substrings.py",
-   "source_repo": "bigcode-project/bigcode-dataset",
-   "license": "check repo",
-   "sha256": "c95620ef20ef79578065a26350fcbd41c0025a93d9ff17837ca6a66ca77dbb06",
-   "lines": 326,
-   "first_line": "from copy import deepcopy",
-   "imports": [
-    "argparse",
-    "json",
-    "os",
-    "shutil",
-    "sys"
-   ],
-   "registered": "2026-11-04 13:02:54",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "accelerator/__init__.py",
-   "source_repo": "microsoft/DeepSpeed",
-   "license": "check repo",
-   "sha256": "d69367bc65fd878d7c7a48d8fd79e96f7eb7b4ba3ee52cf0de27107fd851be4d",
-   "lines": 8,
-   "first_line": "# Copyright (c) Microsoft Corporation.",
+   "skill": "writer",
+   "source_file": "src/satguard/cdm/writer.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"CDM (Conjunction Data Message) writer in CCSDS KVN format.",
+   "license": "permissive (fetched)",
+   "sha256": "8bf0ae6d3042c906869fdd2ce8f0d25dcc71eddd940c70dd9aadf0c9f27e4a15",
+   "lines": 87,
+   "first_line": "\"\"\"CDM (Conjunction Data Message) writer in CCSDS KVN format.",
    "imports": [],
-   "registered": "2026-11-04 13:02:55",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:39:01"
   },
   {
-   "skill": "hpu_accelerator",
-   "source_file": "accelerator/hpu_accelerator.py",
-   "source_repo": "microsoft/DeepSpeed",
-   "license": "check repo",
-   "sha256": "af38cf6d93a6a7f2d655608a94bd2467617c07fadc4d68ecc429ab6f1eaf999b",
-   "lines": 331,
-   "first_line": "# Copyright (c) Microsoft Corporation.",
+   "skill": "realism",
+   "source_file": "src/satguard/covariance/realism.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Covariance handling for collision probability computation.",
+   "license": "permissive (fetched)",
+   "sha256": "20a9033adc71f8752621dd05a3d56831879ac8f91bea77e1032f39b12a8c5490",
+   "lines": 312,
+   "first_line": "\"\"\"Covariance handling for collision probability computation.",
    "imports": [
-    "functools",
-    "habana_frameworks",
-    "importlib",
-    "os",
-    "pkgutil",
-    "torch"
+    "numpy"
    ],
-   "registered": "2026-11-04 13:02:56",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "si_openaccess",
-   "source_file": "src/si_openaccess/si_openaccess.py",
-   "source_repo": "Smithsonian/smithsonian-openaccess",
-   "license": "check repo",
-   "sha256": "cfb22ce213eea47396e2ff2c22eeb51a43f3b635ec7b463cda9250705387f602",
-   "lines": 130,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "json",
-    "requests"
-   ],
-   "registered": "2026-11-04 13:02:57",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "gen_emscripten_exported_json",
-   "source_file": "scripts/gen-emscripten-exported-json.py",
-   "source_repo": "WebAssembly/wabt",
-   "license": "check repo",
-   "sha256": "0919c0cf7bde0f3b17086d38bd464f822c85f3b974760ac28ad880b77500d8de",
-   "lines": 110,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "json",
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 13:02:59",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "sha256sum",
-   "source_file": "scripts/sha256sum.py",
-   "source_repo": "WebAssembly/wabt",
-   "license": "check repo",
-   "sha256": "f98e2bfd5b4aa9703d1590b5ea86a4997af02fc7ef6f7328c62665f01f874838",
-   "lines": 39,
-   "first_line": "#!/usr/bin/env python",
-   "imports": [
-    "argparse",
-    "hashlib",
-    "sys"
-   ],
-   "registered": "2026-11-04 13:02:59",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "serve",
-   "source_file": "web/serve.py",
-   "source_repo": "OpenRsG/GunZRs",
-   "license": "check repo",
-   "sha256": "5936e689fa4be6fdb4e7e5bc93db36c509c014a0261e67820556a19a15186d84",
-   "lines": 76,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "http",
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 14:20:12",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:39:08"
   },
   {
    "skill": "__init__",
-   "source_file": "integrations/hermes-agent/__init__.py",
-   "source_repo": "tt-a1i/archify",
-   "license": "check repo",
-   "sha256": "af0ac0d1239f9fc22aefb102916d7fda5f2d1e133b086189308cb4e73650d643",
-   "lines": 62,
-   "first_line": "\"\"\"Skill-only Hermes plugin for Archify.",
-   "imports": [
-    "os"
-   ],
-   "registered": "2026-11-04 14:20:12",
-   "vetby": "hub-runner-v1"
+   "source_file": "src/satguard/fleet/__init__.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Fleet management: YAML config + batch screening.\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "2c671727a1fa5c5ac4f0c04e23cc3e33e592fffe6d17c480f7c7c6b9dd3544df",
+   "lines": 13,
+   "first_line": "\"\"\"Fleet management: YAML config + batch screening.\"\"\"",
+   "imports": [],
+   "registered": "2026-11-03 22:39:08"
   },
   {
-   "skill": "config",
-   "source_file": "component-tests/config.py",
-   "source_repo": "cloudflare/cloudflared",
-   "license": "check repo",
-   "sha256": "04f1381b1b711a398f5d25bdd0f47ec176eeb78fdab1f770a0b321ad0aeae266",
-   "lines": 102,
-   "first_line": "#!/usr/bin/env python",
+   "skill": "batch",
+   "source_file": "src/satguard/fleet/batch.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Batch conjunction screening for fleet objects.",
+   "license": "permissive (fetched)",
+   "sha256": "cae6d3b2d73ec55c189ecf6bf949526937c13c2892123288a9bbeb818e65f501",
+   "lines": 83,
+   "first_line": "\"\"\"Batch conjunction screening for fleet objects.",
    "imports": [
-    "base64",
-    "copy",
-    "json"
+    "logging"
    ],
-   "registered": "2026-11-04 14:20:14",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:39:09"
   },
   {
-   "skill": "conftest",
-   "source_file": "component-tests/conftest.py",
-   "source_repo": "cloudflare/cloudflared",
-   "license": "check repo",
-   "sha256": "d1bf7a54d6d498c6c0cdbe656062ad3ff4b6c576183963fa29297adb1a5794f9",
-   "lines": 56,
-   "first_line": "import os",
+   "skill": "parser",
+   "source_file": "src/satguard/fleet/parser.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Fleet YAML parser.",
+   "license": "permissive (fetched)",
+   "sha256": "ebb5ef27e108cd16a9d4fab0be069ac41c8c6669b93c2902057d782551d8746b",
+   "lines": 116,
+   "first_line": "\"\"\"Fleet YAML parser.",
    "imports": [
-    "os",
-    "pytest",
     "yaml"
    ],
-   "registered": "2026-11-04 14:20:14",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "cilium_external_links",
-   "source_file": "Documentation/_exts/cilium_external_links.py",
-   "source_repo": "cilium/cilium",
-   "license": "check repo",
-   "sha256": "77f82cd23756beb6a9479b99bb12114f3dfe0dc1177cf68edcac6bc339c50020",
-   "lines": 17,
-   "first_line": "from sphinx.writers.html5 import HTML5Translator",
-   "imports": [],
-   "registered": "2026-11-04 14:20:16",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "cilium_helm_directive",
-   "source_file": "Documentation/_exts/cilium_helm_directive.py",
-   "source_repo": "cilium/cilium",
-   "license": "check repo",
-   "sha256": "3ec9f07caf4cbcb1c9c8c8c2a3004ce30bc6e1b4145cace25c969351049a6d9b",
-   "lines": 201,
-   "first_line": "\"\"\"",
-   "imports": [],
-   "registered": "2026-11-04 14:20:16",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "boilerplate",
-   "source_file": "tools/boilerplate/boilerplate.py",
-   "source_repo": "envoyproxy/gateway",
-   "license": "check repo",
-   "sha256": "a4e832ac4f4b0d409e20fb3d1154d986e6e0077010d563cac4d8ba0a3e602376",
-   "lines": 257,
-   "first_line": "#!/usr/bin/env python",
-   "imports": [
-    "argparse",
-    "datetime",
-    "difflib",
-    "glob",
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 14:20:17",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:39:10"
   },
   {
    "skill": "__init__",
-   "source_file": "flux_local/__init__.py",
-   "source_repo": "allenporter/flux-local",
-   "license": "check repo",
-   "sha256": "f6cc02a19d61c8dbb9d6020d486eb7ce7a632114da865ca2c2f73003b6206d0d",
-   "lines": 21,
-   "first_line": "\"\"\"",
-   "imports": [
-    "warnings"
-   ],
-   "registered": "2026-11-04 14:20:18",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "config",
-   "source_file": "flux_local/config.py",
-   "source_repo": "allenporter/flux-local",
-   "license": "check repo",
-   "sha256": "0ee053a04372dccd6225f9bc5db5a3ad6a18b5393cc8ff4d9a275fed11d0864c",
-   "lines": 25,
-   "first_line": "\"\"\"Configuration objects for flux-local.\"\"\"",
+   "source_file": "src/satguard/history/__init__.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Pc history tracking, evolution analysis, and historical replay.\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "c4042307b8ca6208d5565d065cc28a8fdac9196f71574b35e131c0bd6ea5ffee",
+   "lines": 18,
+   "first_line": "\"\"\"Pc history tracking, evolution analysis, and historical replay.\"\"\"",
    "imports": [],
-   "registered": "2026-11-04 14:20:19",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-03 22:39:10"
   },
   {
-   "skill": "create_external_cluster_resources_tests",
-   "source_file": "deploy/examples/create-external-cluster-resources-tests.py",
-   "source_repo": "rook/rook",
-   "license": "check repo",
-   "sha256": "4b64ceba2867208e0d11dde8ee70a14134627a554d88f9df8b094f5d2f21f17d",
-   "lines": 288,
-   "first_line": "\"\"\"",
+   "skill": "evolution",
+   "source_file": "src/satguard/history/evolution.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Pc evolution trend analysis.",
+   "license": "permissive (fetched)",
+   "sha256": "208a041532629c31ec2c7745f1951f88b624e4b3fccca72069801d3594a02ad8",
+   "lines": 119,
+   "first_line": "\"\"\"Pc evolution trend analysis.",
+   "imports": [],
+   "registered": "2026-11-03 22:39:10"
+  },
+  {
+   "skill": "replay",
+   "source_file": "src/satguard/history/replay.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Historical replay of conjunction evolution from archived TLE snapshots.",
+   "license": "permissive (fetched)",
+   "sha256": "db96a7548ad41630797fc08b80b7e2c09f48d5d9e6188bd4137261576a7e8ff8",
+   "lines": 158,
+   "first_line": "\"\"\"Historical replay of conjunction evolution from archived TLE snapshots.",
    "imports": [
-    "importlib",
+    "numpy"
+   ],
+   "registered": "2026-11-03 22:39:11"
+  },
+  {
+   "skill": "store",
+   "source_file": "src/satguard/history/store.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"JSON-based persistence for Pc evolution tracking.",
+   "license": "permissive (fetched)",
+   "sha256": "d74255dd436827b77c35e5fc7c05ea970311e4d309c138f55f31ea08504e7b2f",
+   "lines": 166,
+   "first_line": "\"\"\"JSON-based persistence for Pc evolution tracking.",
+   "imports": [
+    "json"
+   ],
+   "registered": "2026-11-03 22:39:12"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "src/satguard/maneuver/__init__.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Maneuver planning for collision avoidance (v0.6).\"\"\"",
+   "license": "permissive (fetched)",
+   "sha256": "32e4adffb4e5cfa95f849cdc9c8d4e72e7cc3fab76cc992d9899f013351be328",
+   "lines": 18,
+   "first_line": "\"\"\"Maneuver planning for collision avoidance (v0.6).\"\"\"",
+   "imports": [],
+   "registered": "2026-11-03 22:39:12"
+  },
+  {
+   "skill": "cw",
+   "source_file": "src/satguard/maneuver/cw.py",
+   "source_repo": "cesabici-bit/satguard",
+   "summary": "\"\"\"Clohessy-Wiltshire (CW) linearized relative motion equations.",
+   "license": "permissive (fetched)",
+   "sha256": "5f808703ab90dec58f49cabae27fde6f918192c1ab7e3624fc51568fb9e907f3",
+   "lines": 150,
+   "first_line": "\"\"\"Clohessy-Wiltshire (CW) linearized relative motion equations.",
+   "imports": [
+    "math",
+    "numpy"
+   ],
+   "registered": "2026-11-03 22:39:12"
+  },
+  {
+   "skill": "jsonfile",
+   "source_file": "gnd-sys/app/tools/jsonfile.py",
+   "source_repo": "cfs-tools/cfs-basecamp",
+   "license": "check repo",
+   "sha256": "14ece973a2f68dd2c3788485c433de9708a267748784074eaff920b296edfe91",
+   "lines": 263,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
     "json",
     "os",
-    "sys",
-    "unittest"
-   ],
-   "registered": "2026-11-04 14:20:20",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "check_sprint_last_day",
-   "source_file": ".github/workflows/check-sprint-last-day.py",
-   "source_repo": "longhorn/longhorn",
-   "license": "check repo",
-   "sha256": "b4f30a5176a39ebdd9620e81f3c7bcee0e730979971d76b7011f812384c2878c",
-   "lines": 130,
-   "first_line": "import requests",
-   "imports": [
-    "os",
-    "requests",
-    "sys"
-   ],
-   "registered": "2026-11-04 14:20:21",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "scan_and_notify_testing_items",
-   "source_file": ".github/workflows/scan-and-notify-testing-items.py",
-   "source_repo": "longhorn/longhorn",
-   "license": "check repo",
-   "sha256": "ab85dd8164104ebc5ee5225b285687cb921f3d119d3f0a5a4a40e308dbd88d32",
-   "lines": 309,
-   "first_line": "import requests",
-   "imports": [
-    "json",
-    "os",
-    "requests",
+    "re",
     "sys",
     "time"
    ],
-   "registered": "2026-11-04 14:20:21",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 03:58:17"
   },
   {
-   "skill": "boilerplate",
-   "source_file": "hack/boilerplate/boilerplate.py",
-   "source_repo": "kubernetes-csi/csi-driver-nfs",
+   "skill": "pdfviewer",
+   "source_file": "gnd-sys/app/tools/pdfviewer.py",
+   "source_repo": "cfs-tools/cfs-basecamp",
    "license": "check repo",
-   "sha256": "b93db788473c0868784cf45f9894c493645b5652b3ad3fe81e3ab027c5727b79",
-   "lines": 203,
-   "first_line": "#!/usr/bin/env python3",
+   "sha256": "beea3ca320daef1006f5a380c960b415f910c621d04eefad67c846910ca402b8",
+   "lines": 123,
+   "first_line": "\"\"\"",
    "imports": [
-    "argparse",
-    "difflib",
-    "glob",
-    "json",
-    "mmap",
-    "os",
-    "re",
+    "FreeSimpleGUI",
+    "fitz",
     "sys"
    ],
-   "registered": "2026-11-04 14:20:23",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 03:58:17"
   },
   {
-   "skill": "boilerplate",
-   "source_file": "release-tools/boilerplate/boilerplate.py",
-   "source_repo": "kubernetes-csi/csi-driver-nfs",
+   "skill": "demo_script",
+   "source_file": "gnd-sys/scripts/demo_script.py",
+   "source_repo": "cfs-tools/cfs-basecamp",
    "license": "check repo",
-   "sha256": "c3c9ce1a478ec82cc5a009224d8fc04d7fed80e7cc20b06a4c1b84db309bf076",
-   "lines": 201,
-   "first_line": "#!/usr/bin/env python",
+   "sha256": "3ae534f7a28416cee40f70a72a1fb252346b18a34c28df69f2d3de02cd7bb96a",
+   "lines": 50,
+   "first_line": "\"\"\"",
+   "imports": [],
+   "registered": "2026-11-04 03:58:19"
+  },
+  {
+   "skill": "orders",
+   "source_file": "apps/review-desktop/scripts/e2e/fixtures/lsp/python/orders.py",
+   "source_repo": "devdotfast/whiteboard",
+   "license": "check repo",
+   "sha256": "2e140bb69589f519ea0eb64e944950e5a88bd3bbac65dc7a9f8ed0d4f30d4609",
+   "lines": 5,
+   "first_line": "from storage import save_order, OrderRecord",
+   "imports": [],
+   "registered": "2026-11-04 08:58:23"
+  },
+  {
+   "skill": "storage",
+   "source_file": "apps/review-desktop/scripts/e2e/fixtures/lsp/python/storage.py",
+   "source_repo": "devdotfast/whiteboard",
+   "license": "check repo",
+   "sha256": "0879954ea08efb74859879571c93f4a39a8a459f52c8e2fd57db6971cf6ea7d5",
+   "lines": 11,
+   "first_line": "from dataclasses import dataclass",
+   "imports": [],
+   "registered": "2026-11-04 08:58:24"
+  },
+  {
+   "skill": "after",
+   "source_file": "diffr/examples/review/real/11-flask-5526/after.py",
+   "source_repo": "devdotfast/whiteboard",
+   "license": "check repo",
+   "sha256": "2a8bdb6b03e11a86992a06deffdc762ce47b59f72b67ce3afb96a870ed6226d3",
+   "lines": 128,
+   "first_line": "from __future__ import annotations",
    "imports": [
-    "argparse",
-    "difflib",
-    "glob",
     "os",
-    "re",
-    "sys"
+    "typing"
    ],
-   "registered": "2026-11-04 14:20:23",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 08:58:28"
   },
   {
-   "skill": "boilerplate",
-   "source_file": "hack/boilerplate/boilerplate.py",
-   "source_repo": "kubernetes-csi/csi-driver-smb",
+   "skill": "before",
+   "source_file": "diffr/examples/review/real/11-flask-5526/before.py",
+   "source_repo": "devdotfast/whiteboard",
    "license": "check repo",
-   "sha256": "dc58170ced7a717d58d58cf5a6d20455225315f152bdd4091885c1a2cba1ff96",
-   "lines": 203,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "difflib",
-    "glob",
-    "json",
-    "mmap",
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 14:20:25",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "aws_cleanup_legacy_txt_records",
-   "source_file": "scripts/aws-cleanup-legacy-txt-records.py",
-   "source_repo": "kubernetes-sigs/external-dns",
-   "license": "check repo",
-   "sha256": "d161fbf43752a76fdee5b55a250774cfc05d39a5bad3ca926477a9b810b46949",
-   "lines": 251,
-   "first_line": "#!/usr/bin/env python",
-   "imports": [
-    "argparse",
-    "boto3",
-    "json",
-    "os",
-    "time",
-    "uuid"
-   ],
-   "registered": "2026-11-04 14:20:26",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "update_route53_k8s_txt_owner",
-   "source_file": "scripts/update_route53_k8s_txt_owner.py",
-   "source_repo": "kubernetes-sigs/external-dns",
-   "license": "check repo",
-   "sha256": "e81bd0f65f1a9cecd17bd813227f6902ac394ba9fe813c8712b308cb80225eaa",
+   "sha256": "ec83573f04e45317ce41738ebf5caee763691cf98f188e5f31330567e046f726",
    "lines": 129,
-   "first_line": "#!/usr/bin/env python",
+   "first_line": "from __future__ import annotations",
    "imports": [
-    "boto3"
+    "os",
+    "typing"
    ],
-   "registered": "2026-11-04 14:20:26",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 08:58:29"
   },
   {
-   "skill": "filter_commit_messages",
-   "source_file": "scripts/filter-commit-messages.py",
-   "source_repo": "Elumenotion/GuideAnts",
+   "skill": "after",
+   "source_file": "diffr/examples/review/synthetic/01-unchanged-imports/after.py",
+   "source_repo": "devdotfast/whiteboard",
    "license": "check repo",
-   "sha256": "fa84dd6c1c615b5812f1e8460bf4da69a04d17f3f8695280eb1e9c17d737c058",
-   "lines": 44,
-   "first_line": "#!/usr/bin/env python3",
+   "sha256": "6b586dcbba47a4e33fe071e672a32b8e9e791c6d9ed6e6f73fe51f09d25049c8",
+   "lines": 5,
+   "first_line": "import os",
    "imports": [
-    "re",
+    "os",
     "sys"
    ],
-   "registered": "2026-11-04 14:20:27",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 08:58:30"
   },
   {
-   "skill": "timeline_compile",
-   "source_file": "scripts/timeline_compile.py",
-   "source_repo": "Elumenotion/GuideAnts",
+   "skill": "before",
+   "source_file": "diffr/examples/review/synthetic/01-unchanged-imports/before.py",
+   "source_repo": "devdotfast/whiteboard",
    "license": "check repo",
-   "sha256": "4ec2526f4d2e18055e43508850f1bfec92387b2cf0e4089fcce3615ae7a02314",
-   "lines": 233,
+   "sha256": "36a0507baae7a5584e32ea8673a72bfcfa6292e704845a04b40496f332342827",
+   "lines": 5,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 08:58:30"
+  },
+  {
+   "skill": "after",
+   "source_file": "diffr/examples/review/synthetic/05-new-function-replacement/after.py",
+   "source_repo": "devdotfast/whiteboard",
+   "license": "check repo",
+   "sha256": "315f3249f3e065ede4f4a7cb274daa11a4aa25befafd3e21ecbcd769e29ed52a",
+   "lines": 9,
+   "first_line": "def main():",
+   "imports": [],
+   "registered": "2026-11-04 08:58:35"
+  },
+  {
+   "skill": "after",
+   "source_file": "diffr/examples/review/synthetic/06-enclosing-context/after.py",
+   "source_repo": "devdotfast/whiteboard",
+   "license": "check repo",
+   "sha256": "f76412d4afe118d1b9a4bf0a2ccb31134d784b7ae0d1ce866d54a4a1250832bf",
+   "lines": 20,
+   "first_line": "def permission_map():",
+   "imports": [],
+   "registered": "2026-11-04 08:58:36"
+  },
+  {
+   "skill": "before",
+   "source_file": "diffr/examples/review/synthetic/06-enclosing-context/before.py",
+   "source_repo": "devdotfast/whiteboard",
+   "license": "check repo",
+   "sha256": "0df4bebef6de83eab62454db2dd754acadcc18c52cb77a8f09bbd0881793ba53",
+   "lines": 19,
+   "first_line": "def permission_map():",
+   "imports": [],
+   "registered": "2026-11-04 08:58:37"
+  },
+  {
+   "skill": "has_many_hunk",
+   "source_file": "diffr/sample_files/dir_1/has_many_hunk.py",
+   "source_repo": "devdotfast/whiteboard",
+   "license": "check repo",
+   "sha256": "43942c91b81c0e44995856867974fdacdb3f93f85a82f470d9e85b7537e7a7b4",
+   "lines": 300,
+   "first_line": "def function001():",
+   "imports": [],
+   "registered": "2026-11-04 08:58:41"
+  },
+  {
+   "skill": "if_1",
+   "source_file": "diffr/sample_files/if_1.py",
+   "source_repo": "devdotfast/whiteboard",
+   "license": "check repo",
+   "sha256": "77b7af522fc5f07082df666c7c3ad546a31a75d5997aa3da279641d284a95885",
+   "lines": 3,
+   "first_line": "if x:",
+   "imports": [],
+   "registered": "2026-11-04 08:58:51"
+  },
+  {
+   "skill": "if_2",
+   "source_file": "diffr/sample_files/if_2.py",
+   "source_repo": "devdotfast/whiteboard",
+   "license": "check repo",
+   "sha256": "693999e7ea19e7dee47b6c6d3318ead923ba9c9f579b183a79537528bbbee7a6",
+   "lines": 3,
+   "first_line": "if x:",
+   "imports": [],
+   "registered": "2026-11-04 08:58:52"
+  },
+  {
+   "skill": "__init__",
+   "source_file": "diffr/vendored_parsers/tree-sitter-latex/bindings/python/tree_sitter_latex/__init__.py",
+   "source_repo": "devdotfast/whiteboard",
+   "license": "check repo",
+   "sha256": "8e246f5cc3183bf6c16f936c9739339389b0e62cdb26f0de5a8f87c34a8d2b8d",
+   "lines": 5,
+   "first_line": "\"Latex grammar for tree-sitter\"",
+   "imports": [],
+   "registered": "2026-11-04 08:58:55"
+  },
+  {
+   "skill": "audit-causative-evidence",
+   "source_file": "scripts/audit-causative-evidence.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "74d6d15011a6ea503ed294b515aa733ba159dd76f2d481d48e5aca7ef84086c4",
+   "lines": 67,
    "first_line": "#!/usr/bin/env python3",
    "imports": [
     "argparse",
-    "json",
-    "sys"
+    "json"
    ],
-   "registered": "2026-11-04 14:20:28",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:21"
   },
   {
-   "skill": "env",
-   "source_file": "alembic/env.py",
-   "source_repo": "Martossien/transcria",
-   "license": "check repo",
-   "sha256": "4f561411f8bd2ae7f33c9c2c444e105c2b6aacda3d2b62a6166ab952759d266e",
-   "lines": 72,
-   "first_line": "\"\"\"Environnement Alembic pour TranscrIA.",
-   "imports": [],
-   "registered": "2026-11-04 14:20:29",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "8f2b6d0e4a1c_add_job_queue_waiting_order_index",
-   "source_file": "alembic/versions/8f2b6d0e4a1c_add_job_queue_waiting_order_index.py",
-   "source_repo": "Martossien/transcria",
-   "license": "check repo",
-   "sha256": "159a2e171298a0123d7cd5de6fbcf07309792f14623b2e396f593142a16c1838",
-   "lines": 33,
-   "first_line": "\"\"\"add job queue waiting order index",
-   "imports": [
-    "sqlalchemy"
-   ],
-   "registered": "2026-11-04 14:20:29",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "fixtures",
-   "source_file": "analytics/lib/fixtures.py",
-   "source_repo": "zulip/zulip",
-   "license": "check repo",
-   "sha256": "636968997d0cda6e54c46d28b18b68127ef2550ecb0d79490ca4686cf45e9fe9",
-   "lines": 78,
-   "first_line": "from math import sqrt",
-   "imports": [],
-   "registered": "2026-11-04 15:57:11",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "time_utils",
-   "source_file": "analytics/lib/time_utils.py",
-   "source_repo": "zulip/zulip",
-   "license": "check repo",
-   "sha256": "b61e824bcc0a76577f47b8a4276152b767995c85b87826270fce91f29fd6f4d6",
-   "lines": 34,
-   "first_line": "from datetime import datetime, timedelta",
-   "imports": [],
-   "registered": "2026-11-04 15:57:11",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "crowdin_contributors",
-   "source_file": ".ci/crowdin-contributors.py",
-   "source_repo": "znc/znc",
-   "license": "check repo",
-   "sha256": "9bc1be3d951293f645e04cc70d8feaeeae5e03d81d4a98b9bae0fcdbaefb9030",
-   "lines": 26,
+   "skill": "audit-resultative-evidence",
+   "source_file": "scripts/audit-resultative-evidence.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "beff5c690e40ab4f7066b335a09c8e4287e5bab31682073add5647fd48db00cb",
+   "lines": 60,
    "first_line": "#!/usr/bin/env python3",
    "imports": [
-    "json",
-    "sys"
+    "argparse",
+    "json"
    ],
-   "registered": "2026-11-04 15:57:12",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:21"
   },
   {
-   "skill": "translation_tmpl",
-   "source_file": "cmake/translation_tmpl.py",
-   "source_repo": "znc/znc",
-   "license": "check repo",
-   "sha256": "1fc65324f06dc18ee668da2358486abc2723509a215ccaa35474894a53e1306f",
+   "skill": "audit-xcomp-controller-evidence",
+   "source_file": "scripts/audit-xcomp-controller-evidence.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "c49b341a694144227dde4ea6a85a5095584b7e89e55e4e128c62ffa0745dc107",
    "lines": 55,
    "first_line": "#!/usr/bin/env python3",
    "imports": [
     "argparse",
-    "glob",
-    "os",
-    "re"
+    "json"
    ],
-   "registered": "2026-11-04 15:57:12",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:22"
   },
   {
-   "skill": "app",
-   "source_file": "backend/analytics_server/app.py",
-   "source_repo": "middlewarehq/middleware",
-   "license": "check repo",
-   "sha256": "625b0f1d5c6d92ececdfb76fd338332417ebfd08ae06c9d16109c122b1bcf02b",
-   "lines": 41,
-   "first_line": "from os import getenv",
-   "imports": [],
-   "registered": "2026-11-04 15:57:13",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "env",
-   "source_file": "backend/analytics_server/env.py",
-   "source_repo": "middlewarehq/middleware",
-   "license": "check repo",
-   "sha256": "d476fa86526238bb53773b0d23a33c2011d82e1f53a042cf009585b765564769",
-   "lines": 11,
-   "first_line": "from os import getenv",
-   "imports": [],
-   "registered": "2026-11-04 15:57:13",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "timeseries_cli",
-   "source_file": "resources/timeseries-cli.py",
-   "source_repo": "jitsi/jitsi-videobridge",
-   "license": "check repo",
-   "sha256": "212c4f6f864392f9282e4ec89c3ec2380261f42c3d34b29a1331d59495fa97b3",
-   "lines": 204,
-   "first_line": "#!/usr/bin/env python",
-   "imports": [
-    "argparse",
-    "matplotlib",
-    "pandas"
-   ],
-   "registered": "2026-11-04 15:57:15",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "Changes",
-   "source_file": "changedetectionio/api/Changes.py",
-   "source_repo": "dgtlmoon/changedetection.io",
-   "license": "check repo",
-   "sha256": "f640b1990b15076e0ac7f16cddb927dc3dc00cf62271900352ee9f653584cafe",
-   "lines": 72,
-   "first_line": "import os",
-   "imports": [
-    "os",
-    "time"
-   ],
-   "registered": "2026-11-04 15:57:15",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "Import",
-   "source_file": "changedetectionio/api/Import.py",
-   "source_repo": "dgtlmoon/changedetection.io",
-   "license": "check repo",
-   "sha256": "b60e606a267411664841b3dfd14390618e252642913852a8cb2aaa275eabd278",
-   "lines": 255,
-   "first_line": "from changedetectionio.strtobool import strtobool",
-   "imports": [
-    "json",
-    "threading"
-   ],
-   "registered": "2026-11-04 15:57:16",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "fixture",
-   "source_file": "contrib/core/fixture.py",
-   "source_repo": "StackStorm/st2",
-   "license": "check repo",
-   "sha256": "76fec01ac529dd279a389704575f00a42178c1fa9c6fa685f9aa7d4b059c8566",
-   "lines": 17,
-   "first_line": "# Copyright 2022 The StackStorm Authors.",
-   "imports": [],
-   "registered": "2026-11-04 15:57:16",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "datasette/__init__.py",
-   "source_repo": "simonw/datasette",
-   "license": "check repo",
-   "sha256": "6812aeabed75decf1a5afd50c32ac6d1c2e3d03390753c53b2b5bd4ec9dd4067",
-   "lines": 17,
-   "first_line": "from datasette.permissions import Permission  # noqa",
-   "imports": [],
-   "registered": "2026-11-04 15:57:18",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__main__",
-   "source_file": "datasette/__main__.py",
-   "source_repo": "simonw/datasette",
-   "license": "check repo",
-   "sha256": "4590c06708876fe74aa173d39628ee44a7d2165767ae0dee1a3d84f0c6133489",
-   "lines": 5,
-   "first_line": "from datasette.cli import cli",
-   "imports": [],
-   "registered": "2026-11-04 15:57:18",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "hooks",
-   "source_file": "docs/hooks.py",
-   "source_repo": "binwiederhier/ntfy",
-   "license": "check repo",
-   "sha256": "ec9419c9d42908e4b24171ac0858163d26b383f7e04720308b216beea3e36686",
-   "lines": 8,
-   "first_line": "import os",
-   "imports": [
-    "os",
-    "shutil"
-   ],
-   "registered": "2026-11-04 15:57:20",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "publish",
-   "source_file": "examples/publish-python/publish.py",
-   "source_repo": "binwiederhier/ntfy",
-   "license": "check repo",
-   "sha256": "9a8c1fe925e68e6908042c51a84afc1e7d60ced5b0212761f8f366305830beb0",
-   "lines": 13,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "requests"
-   ],
-   "registered": "2026-11-04 15:57:20",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "check_ci_results",
-   "source_file": ".github/scripts/check_ci_results.py",
-   "source_repo": "openai/codex",
-   "license": "check repo",
-   "sha256": "4e7e7d67c74b1882c0c18b17a3a9b55680080497cd649de47ac7e7ffefb31501",
-   "lines": 35,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "json",
-    "os"
-   ],
-   "registered": "2026-11-04 15:57:24",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "releases",
-   "source_file": ".github/scripts/releases.py",
-   "source_repo": "openai/codex",
-   "license": "check repo",
-   "sha256": "f46e47b4d84563c7d7820f574bb90709f7df34cd962f20d220cb35053aaeaef5",
-   "lines": 86,
-   "first_line": "\"\"\"Validate Codex releases and check whether their GitHub channel pointers can a",
-   "imports": [
-    "argparse",
-    "json",
-    "re",
-    "sys",
-    "tomllib"
-   ],
-   "registered": "2026-11-04 15:57:25",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "crew_water_loop",
-   "source_file": "models/crew_water_loop.py",
-   "source_repo": "SpaceOceanCorp/space-water-logistics",
-   "license": "check repo",
-   "sha256": "28b615e5a0d4da079797b61102b82d58d8da459fd6711e7ff9bcd7de8f0ff774",
-   "lines": 126,
-   "first_line": "\"\"\"",
-   "imports": [],
-   "registered": "2026-11-04 15:57:26",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "lunar_settlement_water",
-   "source_file": "models/lunar_settlement_water.py",
-   "source_repo": "SpaceOceanCorp/space-water-logistics",
-   "license": "check repo",
-   "sha256": "9214331647c0b73fda0f59b139191ab5ab26b4c6b1b4c911538513b2024e2f15",
-   "lines": 74,
-   "first_line": "\"\"\"",
-   "imports": [],
-   "registered": "2026-11-04 15:57:26",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "adapters/__init__.py",
-   "source_repo": "dotchance/nodalarc",
-   "license": "check repo",
-   "sha256": "b0826142fd7049ae8455b2770e45940dd72c4249cc64d8e44cebd2de7678887b",
-   "lines": 11,
-   "first_line": "# Copyright 2024-2026 .chance (dotchance)",
-   "imports": [],
-   "registered": "2026-11-04 15:57:27",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "adapters/frr/__init__.py",
-   "source_repo": "dotchance/nodalarc",
-   "license": "check repo",
-   "sha256": "febd5955e8f8e3adc05d4b8fc5b89a6f9d66ce5ac43c7548e36b8eabb3b9111e",
-   "lines": 9,
-   "first_line": "# Copyright 2024-2026 .chance (dotchance)",
-   "imports": [],
-   "registered": "2026-11-04 15:57:27",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "preserve_copyright_years",
-   "source_file": "hack/setup/preserve-copyright-years.py",
-   "source_repo": "opendatahub-io/kserve",
-   "license": "check repo",
-   "sha256": "48e63f4464881bc461296ece6ffe0550f9e12a9fcff3ec374d1df5060514e036",
-   "lines": 63,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "re"
-   ],
-   "registered": "2026-11-04 16:59:52",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "example_utils",
-   "source_file": "docs/example-utils.py",
-   "source_repo": "opendatahub-io/model-registry-operator",
-   "license": "check repo",
-   "sha256": "794d6d002a10476286343c1d3c8559e9615a753f121cb5b096fa426335aa5cca",
-   "lines": 22,
-   "first_line": "import requests",
-   "imports": [
-    "boto3",
-    "requests"
-   ],
-   "registered": "2026-11-04 16:59:54",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "setup_data",
-   "source_file": "examples/agent_feature_store/setup_data.py",
-   "source_repo": "opendatahub-io/feast",
-   "license": "check repo",
-   "sha256": "289e1334ac2f923b17a75941fbf74c27a2bd3d04df2fefef6ba2e4ab3d74018a",
-   "lines": 202,
-   "first_line": "\"\"\"",
-   "imports": [
-    "numpy",
-    "os",
-    "pandas",
-    "sys"
-   ],
-   "registered": "2026-11-04 16:59:57",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "mcp_client_demo",
-   "source_file": "examples/feast_mcp_server/mcp_client_demo.py",
-   "source_repo": "opendatahub-io/feast",
-   "license": "check repo",
-   "sha256": "06ff0e0f54a3f4e4e58ed7cd1733428f1a0e3fbf5df92172f1a6ddd9a45510ab",
-   "lines": 118,
-   "first_line": "\"\"\"Minimal MCP client for the standalone Feast MCP server.",
-   "imports": [
-    "asyncio",
-    "json",
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 16:59:57",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "conf",
-   "source_file": "docs/conf.py",
-   "source_repo": "opendatahub-io/trainer",
-   "license": "check repo",
-   "sha256": "047185939c714a2ef704b65e75571967b20afe36a97611089a9c95681066307c",
-   "lines": 142,
-   "first_line": "# Copyright The Kubeflow Authors.",
-   "imports": [
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 16:59:58",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "conftest",
-   "source_file": "pkg/initializers/conftest.py",
-   "source_repo": "opendatahub-io/trainer",
-   "license": "check repo",
-   "sha256": "8e858cd2b0d48a103817492cd623fe40a0e3402eeceebf33afa9a21e51429539",
-   "lines": 38,
-   "first_line": "# Copyright The Kubeflow Authors.",
-   "imports": [
-    "os",
-    "pytest"
-   ],
-   "registered": "2026-11-04 16:59:59",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "gen_gha_matrix_jobs",
-   "source_file": "ci/cached-builds/gen_gha_matrix_jobs.py",
-   "source_repo": "opendatahub-io/notebooks",
-   "license": "check repo",
-   "sha256": "a3c46ad2093639901f5225ba22396831b35c46945b468012ea643e51d1675792",
-   "lines": 356,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "enum",
-    "gha_pr_changed_files",
-    "json",
-    "logging",
-    "makefile_helper",
-    "os",
-    "pathlib",
-    "re",
-    "sys",
-    "unittest"
-   ],
-   "registered": "2026-11-04 17:00:02",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "gha_pr_changed_files_symlink_test",
-   "source_file": "ci/cached-builds/gha_pr_changed_files_symlink_test.py",
-   "source_repo": "opendatahub-io/notebooks",
-   "license": "check repo",
-   "sha256": "92f63610c7f41c7b25bcf311afcb1629bb496ce33eb82874f3162a495a34dbb9",
-   "lines": 48,
-   "first_line": "\"\"\"pyfakefs tests for Dockerfile symlink resolution in gha_pr_changed_files.\"\"\"",
-   "imports": [
-    "gha_pr_changed_files",
-    "pathlib",
-    "pytest",
-    "unittest"
-   ],
-   "registered": "2026-11-04 17:00:02",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "check_integration_test_label",
-   "source_file": ".github/scripts/check_integration_test_label.py",
-   "source_repo": "opendatahub-io/data-science-pipelines-operator",
-   "license": "check repo",
-   "sha256": "2f842d8c6abd163f102b9f9c1c920aec643523fc179caf2077662103b0fc868e",
-   "lines": 215,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 17:00:03",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "params",
-   "source_file": "scripts/release/params.py",
-   "source_repo": "opendatahub-io/data-science-pipelines-operator",
-   "license": "check repo",
-   "sha256": "668b3a4f942470d99984ce7a890dd5135def226b4287d30d6a1dcde99364d96d",
-   "lines": 127,
-   "first_line": "import sys",
-   "imports": [
-    "requests",
-    "sys"
-   ],
-   "registered": "2026-11-04 17:00:04",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "attn_and_long_ctx_patches",
-   "source_file": "scripts/attn_and_long_ctx_patches.py",
-   "source_repo": "ymcui/Chinese-LLaMA-Alpaca-2",
-   "license": "check repo",
-   "sha256": "5380f3466354fb062ddeb82c806ca621735ee1e462ef6bd43510dacebfb5e522",
-   "lines": 247,
-   "first_line": "import torch",
-   "imports": [
-    "math",
-    "torch",
-    "transformers"
-   ],
-   "registered": "2026-11-04 17:00:05",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "eval",
-   "source_file": "scripts/ceval/eval.py",
-   "source_repo": "ymcui/Chinese-LLaMA-Alpaca-2",
-   "license": "check repo",
-   "sha256": "2ce2d8c10cb424cf49d9f33cbbb9de1e5b3b0947d7352a3e84f4f4d15e0c9d33",
-   "lines": 118,
-   "first_line": "# This code is modified from C-Eval Project: https://github.com/SJTU-LIT/ceval",
-   "imports": [
-    "argparse",
-    "json",
-    "os",
-    "pandas",
-    "time",
-    "torch"
-   ],
-   "registered": "2026-11-04 17:00:05",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "lm_harness_eval",
-   "source_file": "evals/lm_harness_eval.py",
-   "source_repo": "state-spaces/mamba",
-   "license": "check repo",
-   "sha256": "830bca2473837a3f1156ac95a52a661e515381f474c750f5fd3f5fc3e95a8ac6",
-   "lines": 40,
-   "first_line": "import torch",
-   "imports": [
-    "torch",
-    "transformers"
-   ],
-   "registered": "2026-11-04 17:00:06",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "mamba_ssm/__init__.py",
-   "source_repo": "state-spaces/mamba",
-   "license": "check repo",
-   "sha256": "d96b346da56c3c63a32224b5ca1d5af97526c3c95af83496c21c71d51dc2a36c",
-   "lines": 8,
-   "first_line": "__version__ = \"2.3.2.post1\"",
-   "imports": [],
-   "registered": "2026-11-04 17:00:06",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "convert_llama_weights_to_hf",
-   "source_file": "scripts/convert_llama_weights_to_hf.py",
-   "source_repo": "bofenghuang/vigogne",
-   "license": "check repo",
-   "sha256": "7ff92d5e07aa167cc1ac4d149a805a45601e534b98e84d5ad15f12c7a6b784f4",
-   "lines": 282,
-   "first_line": "# Copied from Hugging Face",
-   "imports": [
-    "argparse",
-    "gc",
-    "json",
-    "math",
-    "os",
-    "shutil",
-    "torch"
-   ],
-   "registered": "2026-11-04 17:00:07",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "generate_responses",
-   "source_file": "scripts/data_generation/generate_responses.py",
-   "source_repo": "bofenghuang/vigogne",
-   "license": "check repo",
-   "sha256": "9941210d4f0498852752c2b6d42f41d67113787ccb7a1f7ed6b1a202baf933ca",
+   "skill": "discover-moe-20260929-sense-source",
+   "source_file": "scripts/discover-moe-20260929-sense-source.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "6846530f756ef4a8544cb28f4e5c517e91476c0187d7b60554214a625d53276b",
    "lines": 192,
-   "first_line": "#!/usr/bin/env python",
-   "imports": [
-    "fire",
-    "openai",
-    "os",
-    "re",
-    "time"
-   ],
-   "registered": "2026-11-04 17:00:08",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "trainer",
-   "source_file": "RWKV-v1/src/trainer.py",
-   "source_repo": "BlinkDL/RWKV-LM",
-   "license": "check repo",
-   "sha256": "998a353be08b3596a71d3e8d8aface45e8ce8df4e438f3ec4dd232733d81cb63",
-   "lines": 131,
-   "first_line": "import math, sys, datetime",
-   "imports": [
-    "datetime",
-    "logging",
-    "math",
-    "numpy",
-    "sys",
-    "torch"
-   ],
-   "registered": "2026-11-04 17:00:10",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "utils",
-   "source_file": "RWKV-v1/src/utils.py",
-   "source_repo": "BlinkDL/RWKV-LM",
-   "license": "check repo",
-   "sha256": "90d7ec6a8b73a6bc474403c61fb3a263789530b0d6ab10e5912db32a4dcf8756",
-   "lines": 51,
-   "first_line": "import random",
-   "imports": [
-    "numpy",
-    "random",
-    "torch"
-   ],
-   "registered": "2026-11-04 17:00:10",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "numerical_reasoning_arithmetic",
-   "source_file": "case-studies/term_frequency/numerical_reasoning_arithmetic.py",
-   "source_repo": "EleutherAI/pythia",
-   "license": "check repo",
-   "sha256": "7bf0a7bc84331ece5f0adbfc1f0febc88fbd1b52eb2384f435f332532cb69153",
-   "lines": 110,
-   "first_line": "# Copyright 2020 The HuggingFace Datasets Authors and the current dataset script",
-   "imports": [
-    "datasets"
-   ],
-   "registered": "2026-11-04 17:00:12",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "numerical_reasoning_time_unit_conversion",
-   "source_file": "case-studies/term_frequency/numerical_reasoning_time_unit_conversion.py",
-   "source_repo": "EleutherAI/pythia",
-   "license": "check repo",
-   "sha256": "8b6972eb3a6043355d18b6305a8c14f7c71b711018a4d1da7d71b371709004fb",
-   "lines": 122,
-   "first_line": "# Copyright 2020 The HuggingFace Datasets Authors and the current dataset script",
-   "imports": [
-    "datasets"
-   ],
-   "registered": "2026-11-04 17:00:12",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "constants",
-   "source_file": "bunny/constants.py",
-   "source_repo": "BAAI-DCAI/Bunny",
-   "license": "check repo",
-   "sha256": "c56a6ce35d32a144ddadee6ececa5305717e7ae75b448b257e6c2025a92aded9",
-   "lines": 8,
-   "first_line": "# Model Constants",
-   "imports": [],
-   "registered": "2026-11-04 17:56:48",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "conversation",
-   "source_file": "bunny/conversation.py",
-   "source_repo": "BAAI-DCAI/Bunny",
-   "license": "check repo",
-   "sha256": "67309455ad89eaa3e8e229bd9032d911b236f1ced3c5c04d53a9d0e787f89f49",
-   "lines": 240,
-   "first_line": "import dataclasses",
-   "imports": [
-    "base64",
-    "dataclasses"
-   ],
-   "registered": "2026-11-04 17:56:48",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "find_includes",
-   "source_file": ".github/scripts/find_includes.py",
-   "source_repo": "undreamai/LlamaLib",
-   "license": "check repo",
-   "sha256": "eaaca40ad007391bc5893cae383daa713efae9cef66bc933e5e12dafbe512cfa",
-   "lines": 51,
-   "first_line": "import os",
-   "imports": [
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 17:56:50",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "create_build_script",
-   "source_file": ".github/workflows_template/create_build_script.py",
-   "source_repo": "undreamai/LlamaLib",
-   "license": "check repo",
-   "sha256": "726f41f1fa92b34b39645f9935b67c32a3d06dae2a7c228d43e37280ef9f9fdc",
-   "lines": 71,
-   "first_line": "import os",
-   "imports": [
-    "os",
-    "re",
-    "yaml"
-   ],
-   "registered": "2026-11-04 17:56:50",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "eval",
-   "source_file": "scripts/ceval/eval.py",
-   "source_repo": "ymcui/Chinese-LLaMA-Alpaca",
-   "license": "check repo",
-   "sha256": "74d39e1290fe8a2825162ea0369108fdbff60e033d9efd305303e3f900830dd3",
-   "lines": 116,
-   "first_line": "# This code is modified from C-Eval Project: https://github.com/SJTU-LIT/ceval",
+   "first_line": "#!/usr/bin/env python3",
    "imports": [
     "argparse",
+    "hashlib",
+    "importlib",
     "json",
-    "os",
-    "pandas",
-    "time",
-    "torch"
+    "sys",
+    "zipfile"
    ],
-   "registered": "2026-11-04 17:56:53",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:22"
   },
   {
-   "skill": "evaluator",
-   "source_file": "scripts/ceval/evaluator.py",
-   "source_repo": "ymcui/Chinese-LLaMA-Alpaca",
-   "license": "check repo",
-   "sha256": "2366ddbc367447979d1811ab106abe173cd69692a570bdc008d3ca39cd597c6d",
-   "lines": 48,
-   "first_line": "# This code is modified from C-Eval Project: https://github.com/SJTU-LIT/ceval",
+   "skill": "lexicon_candidate_set",
+   "source_file": "scripts/lexicon_candidate_set.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "8dc9f44929d0a30862f0272b0c19c7e38485c99e7445b4f25d98f585105cf76d",
+   "lines": 293,
+   "first_line": "#!/usr/bin/env python3",
    "imports": [
-    "string"
+    "csv",
+    "hashlib",
+    "json",
+    "math"
    ],
-   "registered": "2026-11-04 17:56:54",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:23"
   },
   {
-   "skill": "command_line",
-   "source_file": "paddler_kev_converter_python/paddler_kev_converter/command_line.py",
-   "source_repo": "intentee/paddler",
-   "license": "check repo",
-   "sha256": "821dc9ccbce284035a0154d97952cdd530954f2da0fc6494578d9a7c3d474430",
-   "lines": 95,
-   "first_line": "from argparse import ArgumentParser, Namespace",
-   "imports": [],
-   "registered": "2026-11-04 17:56:55",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "convertible_kev_checkpoint",
-   "source_file": "paddler_kev_converter_python/paddler_kev_converter/convertible_kev_checkpoint.py",
-   "source_repo": "intentee/paddler",
-   "license": "check repo",
-   "sha256": "27926496d085b48d4fe69879831c1783d1995b01efae9bd0d4a3448848f94389",
-   "lines": 90,
-   "first_line": "from dataclasses import dataclass",
+   "skill": "project-lexicon-reading-generation",
+   "source_file": "scripts/project-lexicon-reading-generation.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "1aec1cae335f1f5e2858ca5a706c8de6c51718bffd955483540cd903379cc6d7",
+   "lines": 159,
+   "first_line": "#!/usr/bin/env python3",
    "imports": [
-    "torch",
-    "transformers"
-   ],
-   "registered": "2026-11-04 17:56:55",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "update_tooltips",
-   "source_file": ".github/update_tooltips.py",
-   "source_repo": "undreamai/LLMUnity",
-   "license": "check repo",
-   "sha256": "c8bc1e7980668eaba64c18d506167b6fe073c26f6a470b2b7545caf9ab302b06",
-   "lines": 105,
-   "first_line": "import os",
-   "imports": [
-    "os",
+    "argparse",
+    "importlib",
+    "json",
     "sys"
    ],
-   "registered": "2026-11-04 17:56:56",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:23"
   },
   {
-   "skill": "main",
-   "source_file": "llmaz/main.py",
-   "source_repo": "InftyAI/llmaz",
-   "license": "check repo",
-   "sha256": "2941affdfb6e19383c4ddc73d65436f29a4d6f039b9f5a9d66e08ea495743d35",
-   "lines": 67,
-   "first_line": "\"\"\"",
+   "skill": "project-moe-sense-evidence",
+   "source_file": "scripts/project-moe-sense-evidence.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "aa694ac9209a9714b502d277bb2964e569dfc97e194ae368baea8e4a789e4db4",
+   "lines": 249,
+   "first_line": "#!/usr/bin/env python3",
    "imports": [
-    "os"
+    "argparse",
+    "hashlib",
+    "importlib",
+    "json",
+    "sys"
    ],
-   "registered": "2026-11-04 17:56:57",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:24"
   },
   {
-   "skill": "constant",
-   "source_file": "llmaz/model_loader/constant.py",
-   "source_repo": "InftyAI/llmaz",
-   "license": "check repo",
-   "sha256": "dba2f2bb758064beb6ee41e85f0465e2c4b4503884b918aca50c66c3def2bbb3",
-   "lines": 17,
-   "first_line": "MODEL_LOCAL_DIR = \"/workspace/models/\"",
-   "imports": [],
-   "registered": "2026-11-04 17:56:57",
-   "vetby": "hub-runner-v1"
+   "skill": "project-naer-commonness",
+   "source_file": "scripts/project-naer-commonness.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "78ad1f46e0ee62a0c54b76798bf25985ad7fd345a91ae9acdf9f0c65d042eb3a",
+   "lines": 314,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "csv",
+    "hashlib",
+    "json",
+    "math",
+    "posixpath",
+    "re",
+    "unicodedata"
+   ],
+   "registered": "2026-11-04 12:02:24"
   },
   {
-   "skill": "download_hf",
-   "source_file": "docker/ray-base/download_hf.py",
-   "source_repo": "kalavai-net/kalavai-client",
-   "license": "check repo",
-   "sha256": "5f7e716830eddf546fdd3f63a389c9a4934fabfd0afbbf8cebbcc97e47831693",
-   "lines": 48,
-   "first_line": "import argparse",
+   "skill": "project-ud-grammar-evidence-generation",
+   "source_file": "scripts/project-ud-grammar-evidence-generation.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "f803d0eb6450ce276b36ec7745eb203271c4b0ab32f59e8129ac50b4ccef2ad2",
+   "lines": 40,
+   "first_line": "#!/usr/bin/env python3",
    "imports": [
     "argparse"
    ],
-   "registered": "2026-11-04 17:57:00",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:25"
   },
   {
-   "skill": "billing_heartbeat",
-   "source_file": "docker/registrar/billing_heartbeat.py",
-   "source_repo": "kalavai-net/kalavai-client",
-   "license": "check repo",
-   "sha256": "c0aa5ae31aaba9c01569c0fe6abfe9534f4567ff441b9d9bd72ae817ff3e2c23",
-   "lines": 232,
+   "skill": "project-ud-lexical-compatibility-generation",
+   "source_file": "scripts/project-ud-lexical-compatibility-generation.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "77e41dd1976bc14d74a82aebc97525cef42a90a577f5f5840df0bab0e90f3686",
+   "lines": 38,
    "first_line": "#!/usr/bin/env python3",
    "imports": [
-    "aiohttp",
-    "asyncio",
-    "json",
-    "logging",
-    "os",
-    "sys",
-    "time"
+    "argparse"
    ],
-   "registered": "2026-11-04 17:57:00",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:25"
   },
   {
-   "skill": "reclassify",
-   "source_file": "hack/spine-probes/reclassify.py",
-   "source_repo": "defilantech/llmkube",
-   "license": "check repo",
-   "sha256": "0d1e13b9d3cee825654748e1aa1bff01e4cc9dcf1e663f3896559a57b3d830b9",
-   "lines": 127,
+   "skill": "run-naer-frequency-workbook-inspection",
+   "source_file": "scripts/run-naer-frequency-workbook-inspection.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "4a80feb587d2653751d982ca2316a0d7f355779756cd5c96d8fb281c77df37e5",
+   "lines": 133,
    "first_line": "#!/usr/bin/env python3",
    "imports": [
+    "importlib",
     "json",
-    "re",
+    "sys",
+    "warnings"
+   ],
+   "registered": "2026-11-04 12:02:37"
+  },
+  {
+   "skill": "summarize-naer-reading-coverage",
+   "source_file": "scripts/summarize-naer-reading-coverage.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "#!/usr/bin/env python3",
+   "license": "permissive (fetched)",
+   "sha256": "495412598409c7cbc663e5a5800217a8c8bc7b81d04f7a34345ecdd6ba88a97d",
+   "lines": 309,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "hashlib",
+    "json",
     "sys"
    ],
-   "registered": "2026-11-04 17:57:01",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "run_probes",
-   "source_file": "hack/spine-probes/run_probes.py",
-   "source_repo": "defilantech/llmkube",
-   "license": "check repo",
-   "sha256": "81f7adc90f7ddf314acb6107dc5e18b400ce5e963be9e398b4db578e1975313b",
-   "lines": 193,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "json",
-    "re",
-    "time",
-    "urllib"
-   ],
-   "registered": "2026-11-04 17:57:02",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "conf",
-   "source_file": "docs/conf.py",
-   "source_repo": "volcengine/verl",
-   "license": "check repo",
-   "sha256": "2afb77335e1dda87a4b2d1ed4f1f77e72e72e2c97c2da1eeedc35c617443fd21",
-   "lines": 114,
-   "first_line": "# Copyright 2024 Bytedance Ltd. and/or its affiliates",
-   "imports": [],
-   "registered": "2026-11-04 17:57:03",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "aime2024_multiturn_w_tool",
-   "source_file": "examples/data_preprocess/aime2024_multiturn_w_tool.py",
-   "source_repo": "volcengine/verl",
-   "license": "check repo",
-   "sha256": "700505becc21f3057da72a115b9983b180efed40f157b160feaf2bd8af82578c",
-   "lines": 80,
-   "first_line": "# Copyright 2024 Bytedance Ltd. and/or its affiliates",
-   "imports": [
-    "argparse",
-    "datasets",
-    "os"
-   ],
-   "registered": "2026-11-04 17:57:03",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "math_normalize",
-   "source_file": "data_preprocessing/math_util/math_normalize.py",
-   "source_repo": "PRIME-RL/PRIME",
-   "license": "check repo",
-   "sha256": "f5f2d67ce4e6a44a1cd60562ac142c567d7a4bf6e696c669c7b5d41cb160065e",
-   "lines": 163,
-   "first_line": "\"\"\"",
-   "imports": [
-    "re"
-   ],
-   "registered": "2026-11-04 17:57:04",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "sft_prompt",
-   "source_file": "data_preprocessing/sft_prompt.py",
-   "source_repo": "PRIME-RL/PRIME",
-   "license": "check repo",
-   "sha256": "fb49285eb4349680215bb3887efc1f32ce63a3fb2a9a42ab2b151912476940b0",
-   "lines": 35,
-   "first_line": "SYS = \"\"\"When tackling complex reasoning tasks, you have access to the following",
-   "imports": [],
-   "registered": "2026-11-04 17:57:04",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "ace_step_python_warm_bench",
-   "source_file": "tests/ace_step/ace_step_python_warm_bench.py",
-   "source_repo": "0xShug0/audio.cpp",
-   "license": "check repo",
-   "sha256": "80ed21e709685670f36a203dd4a3a41e1c9459044cd182ecfa49a4c3f2c238a0",
-   "lines": 396,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "json",
-    "numpy",
-    "os",
-    "soundfile",
-    "sys",
-    "time",
-    "torch"
-   ],
-   "registered": "2026-11-04 17:57:06",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "convert_silence_latent",
-   "source_file": "tests/ace_step/convert_silence_latent.py",
-   "source_repo": "0xShug0/audio.cpp",
-   "license": "check repo",
-   "sha256": "6655a1f4fa52c9e052fbd90a02021d3a566803c3628d7cc7082bfb4d7c605efc",
-   "lines": 61,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "torch"
-   ],
-   "registered": "2026-11-04 17:57:06",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:37"
   },
   {
    "skill": "__init__",
-   "source_file": "SpeakType/app/__init__.py",
-   "source_repo": "kigner/audio.cpp-webui",
-   "license": "check repo",
-   "sha256": "fdb4120b3291617187cb780b4eee43cae01d4abcf0e40e8dd4ba8ddb08451b47",
-   "lines": 3,
-   "first_line": "\"\"\"SpeakType local ASR demo.\"\"\"",
+   "source_file": "scripts/ud_grammar_evidence/__init__.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "from .common import (",
+   "license": "permissive (fetched)",
+   "sha256": "db2284ff0c3a42fe21b7eaceb914a50b933a64b7f99631d116d2b053436df9b0",
+   "lines": 25,
+   "first_line": "from .common import (",
    "imports": [],
-   "registered": "2026-11-04 18:58:38",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:38"
   },
   {
-   "skill": "audio_capture",
-   "source_file": "SpeakType/app/audio_capture.py",
-   "source_repo": "kigner/audio.cpp-webui",
-   "license": "check repo",
-   "sha256": "e5f64fa07e7178650da8b3b694ebd920e486a34c16e1d69ffa51f8b8ea69122e",
-   "lines": 172,
+   "skill": "causative_shape",
+   "source_file": "scripts/ud_grammar_evidence/causative_shape.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "from __future__ import annotations",
+   "license": "permissive (fetched)",
+   "sha256": "a28cf5716ea0b684f382bc632ec95184672204236456010e9880f27f53f24961",
+   "lines": 189,
+   "first_line": "from __future__ import annotations",
+   "imports": [],
+   "registered": "2026-11-04 12:02:38"
+  },
+  {
+   "skill": "common",
+   "source_file": "scripts/ud_grammar_evidence/common.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "from __future__ import annotations",
+   "license": "permissive (fetched)",
+   "sha256": "f04dc8aecd3ffe549db713317fac082eb58f6796e1ba4687dde755c8eafe61f8",
+   "lines": 301,
    "first_line": "from __future__ import annotations",
    "imports": [
-    "logging",
-    "numpy",
-    "queue",
-    "sounddevice",
-    "sys",
-    "time"
-   ],
-   "registered": "2026-11-04 18:58:39",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "import_webui_locales",
-   "source_file": "tools/locales/import_webui_locales.py",
-   "source_repo": "christopherthompson81/AudioCpp-Bindings",
-   "license": "check repo",
-   "sha256": "19566734e0e2f72cb4b2339f43bd3b4db5e66e51112569874738550083f555e4",
-   "lines": 175,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "json",
-    "re",
-    "sys",
-    "xml"
-   ],
-   "registered": "2026-11-04 18:58:39",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "make_pseudo_locale",
-   "source_file": "tools/locales/make_pseudo_locale.py",
-   "source_repo": "christopherthompson81/AudioCpp-Bindings",
-   "license": "check repo",
-   "sha256": "022b09faf1d12644f101b8198896d49a600731a4fd859eed4d9ed5699a075ced",
-   "lines": 51,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "xml"
-   ],
-   "registered": "2026-11-04 18:58:39",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "docs",
-   "source_file": "cmake/docs/docs.py",
-   "source_repo": "nasa/fprime",
-   "license": "check repo",
-   "sha256": "968baf8fc6ec6242ec05c82e74e7d3f27bb9d8a0b5b199b7f8902c073ca8a6a8",
-   "lines": 108,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "enum",
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 18:58:42",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "ini_to_stdio",
-   "source_file": "cmake/settings/ini-to-stdio.py",
-   "source_repo": "nasa/fprime",
-   "license": "check repo",
-   "sha256": "639a647601f5151f05ce25e0e04cde47f26460dec9740d3117f32185fe61516a",
-   "lines": 107,
-   "first_line": "\"\"\"ini-to-stdio.py:",
-   "imports": [
-    "argparse",
-    "os",
-    "sys"
-   ],
-   "registered": "2026-11-04 18:58:42",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "gpustack/__init__.py",
-   "source_repo": "gpustack/gpustack",
-   "license": "check repo",
-   "sha256": "edbbda0d288210b736e0744ee3d8fa18b9ce8126e28e5ce3b9ccfeaf822d179f",
-   "lines": 17,
-   "first_line": "__version__ = '0.0.0'",
-   "imports": [],
-   "registered": "2026-11-04 18:58:43",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "exceptions",
-   "source_file": "gpustack/api/exceptions.py",
-   "source_repo": "gpustack/gpustack",
-   "license": "check repo",
-   "sha256": "a890f14a92ce3b696d70152efb642e59defe3bba60fea95638e2e82b97428da2",
-   "lines": 283,
-   "first_line": "from typing import Any, Dict, Optional",
-   "imports": [
-    "httpx",
-    "logging"
-   ],
-   "registered": "2026-11-04 18:58:43",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "verify_packages",
-   "source_file": "eng/packaging/verify_packages.py",
-   "source_repo": "dongfangzhizhu/AudioCpp.NET",
-   "license": "check repo",
-   "sha256": "7322f7b7acfd9a5e39078d54d966d19a0afcca7d1171e272e0ac217bf2546c88",
-   "lines": 222,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "re",
-    "sys",
-    "zipfile"
-   ],
-   "registered": "2026-11-04 18:58:45",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "fetch_linux_artifact",
-   "source_file": "eng/release/fetch-linux-artifact.py",
-   "source_repo": "dongfangzhizhu/AudioCpp.NET",
-   "license": "check repo",
-   "sha256": "31bc6fe5c1c8aebb68085d8e971a353fbdc1f93b405056e0c0ace89e93a9a382",
-   "lines": 113,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "json",
-    "pathlib",
-    "sys",
-    "time",
-    "urllib",
-    "zipfile"
-   ],
-   "registered": "2026-11-04 18:58:46",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "get_documentation",
-   "source_file": "build_tools/get_documentation.py",
-   "source_repo": "asterisk/asterisk",
-   "license": "check repo",
-   "sha256": "5672c02d64ee7f2a10077f0dc546ab2855940760f486111eae82e7d0197083b0",
-   "lines": 173,
-   "first_line": "#! /usr/bin/env python",
-   "imports": [
-    "sys",
-    "xml"
-   ],
-   "registered": "2026-11-04 18:58:47",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "post_process_documentation",
-   "source_file": "build_tools/post_process_documentation.py",
-   "source_repo": "asterisk/asterisk",
-   "license": "check repo",
-   "sha256": "d28ce2aedce95d3ea651c69af2d120958e88db25a38258e2c30762cdf9a92c9e",
-   "lines": 107,
-   "first_line": "#! /usr/bin/env python",
-   "imports": [
-    "optparse",
-    "sys"
-   ],
-   "registered": "2026-11-04 18:58:47",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "running_stats",
-   "source_file": "bin/running_stats.py",
-   "source_repo": "ckan/ckan",
-   "license": "check repo",
-   "sha256": "e5ad0de26beb293c746a6bdebedd04c039a7ceaedada546ed4eefe9114fec5ec",
-   "lines": 84,
-   "first_line": "# encoding: utf-8",
-   "imports": [
-    "copy"
-   ],
-   "registered": "2026-11-04 18:58:48",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "__init__",
-   "source_file": "ckan/__init__.py",
-   "source_repo": "ckan/ckan",
-   "license": "check repo",
-   "sha256": "36011ff7fe40dc68048ecb69dded4e7ea838c46f5ae373a69257b21d8c506eb2",
-   "lines": 9,
-   "first_line": "# encoding: utf-8",
-   "imports": [
-    "sys"
-   ],
-   "registered": "2026-11-04 18:58:48",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "changes_fmt",
-   "source_file": "tools/changes_fmt.py",
-   "source_repo": "zeldaret/ss",
-   "license": "check repo",
-   "sha256": "cf8eb290216f90db812f91c508397a51834a11766d565dc44109ce5b657e6cf5",
-   "lines": 163,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "json",
-    "os"
-   ],
-   "registered": "2026-11-04 18:58:49",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "apply_objdiff_mappings",
-   "source_file": "tools/custom/apply_objdiff_mappings.py",
-   "source_repo": "zeldaret/ss",
-   "license": "check repo",
-   "sha256": "01abaefe4034fb9112d50e23037c6b6a9c6800570477c6648f0e213bae4a6322",
-   "lines": 72,
-   "first_line": "# Thanks KooShnoo! https://discord.com/channels/727908905392275526/1024871155804",
-   "imports": [
-    "json",
-    "re"
-   ],
-   "registered": "2026-11-04 18:58:49",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "tww_class_to_cpp",
-   "source_file": "docs/tww_class_to_cpp.py",
-   "source_repo": "zeldaret/tww",
-   "license": "check repo",
-   "sha256": "17dd52cf95b08f14e7b007bc923bd0f8bca132c1518e7e60a1f3a9124578b686",
-   "lines": 140,
-   "first_line": "# Dumps structure members to C format with comments and names",
-   "imports": [
-    "re"
-   ],
-   "registered": "2026-11-04 18:58:51",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "binary_funcs",
-   "source_file": "tools/converters/binary_funcs.py",
-   "source_repo": "zeldaret/tww",
-   "license": "check repo",
-   "sha256": "e3972dd25885df37cb8a69dfeccf904bb9f1a9e9f42e89542800ca9b0e753b4d",
-   "lines": 62,
-   "first_line": "import os",
-   "imports": [
-    "os",
-    "struct"
-   ],
-   "registered": "2026-11-04 18:58:52",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "check_progress",
-   "source_file": "scripts/check_progress.py",
-   "source_repo": "TheOnlyZac/sly1",
-   "license": "check repo",
-   "sha256": "9f5b525bd69b5b539de750f37a3a37c1ea92b4cbab45da3e860066d626b2d5fa",
-   "lines": 35,
-   "first_line": "import json",
-   "imports": [
-    "json",
-    "sys"
-   ],
-   "registered": "2026-11-04 18:58:52",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "upload_progress",
-   "source_file": "scripts/frogress/upload_progress.py",
-   "source_repo": "TheOnlyZac/sly1",
-   "license": "check repo",
-   "sha256": "a3f493bf35b057d218afb6dd9470d9b6350b2a7f1f2c1551644a76db2bf9f3bb",
-   "lines": 116,
-   "first_line": "\"\"\"",
-   "imports": [
-    "argparse",
-    "mapfile_parser"
-   ],
-   "registered": "2026-11-04 18:58:53",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "asm_sizes",
-   "source_file": "tools/asm_sizes.py",
-   "source_repo": "HarbourMasters/PaperBoat",
-   "license": "check repo",
-   "sha256": "c51356c456681e376581b375c657925b12d4bcb170e308f2649163bf9fefccb9",
-   "lines": 115,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "glob",
-    "json",
-    "os"
-   ],
-   "registered": "2026-11-04 20:00:22",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "actor_types",
-   "source_file": "tools/build/actor_types.py",
-   "source_repo": "HarbourMasters/PaperBoat",
-   "license": "check repo",
-   "sha256": "1b4c2ac9a32fba3415895b40b5a68b35310acbd4971a2594b8fa0e25afc87336",
-   "lines": 145,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "re",
-    "yaml"
-   ],
-   "registered": "2026-11-04 20:00:22",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "_src_roots",
-   "source_file": "sdk/_src_roots.py",
-   "source_repo": "Yokimitsuro/khdays-decomp",
-   "license": "check repo",
-   "sha256": "3b8916e6027552bb0bda7bfaacd67e19bded2852ce28f1f873d6d8c1446401de",
-   "lines": 32,
-   "first_line": "\"\"\"Shared: enumerate every directory that holds a .c source file.",
-   "imports": [
-    "os"
-   ],
-   "registered": "2026-11-04 20:00:24",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "apply_names",
-   "source_file": "sdk/apply_names.py",
-   "source_repo": "Yokimitsuro/khdays-decomp",
-   "license": "check repo",
-   "sha256": "5aaff9513a94df6ab15239750ca758dfe1ca82ed4250f194838c1faa5c51a730",
-   "lines": 215,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "json",
-    "os",
-    "re",
-    "shutil",
-    "sys"
-   ],
-   "registered": "2026-11-04 20:00:24",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "mant_tear_exporter",
-   "source_file": "tools/mant_tear_exporter.py",
-   "source_repo": "TwilitRealm/dusklight",
-   "license": "check repo",
-   "sha256": "a7987f72f01ac65f79de838b4dce420a30c4f856649d110aaa64b6b1cddc700e",
-   "lines": 190,
-   "first_line": "\"\"\"",
-   "imports": [
-    "math",
-    "struct",
-    "xxhash"
-   ],
-   "registered": "2026-11-04 20:00:27",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "saves_to_states_json",
-   "source_file": "tools/saves_to_states_json.py",
-   "source_repo": "TwilitRealm/dusklight",
-   "license": "check repo",
-   "sha256": "9853f6cf3298d17750d4a5bd88f461e63d7ace844f2b9acf7322e6b4a8db82ef",
-   "lines": 59,
-   "first_line": "\"\"\"",
-   "imports": [
-    "base64",
-    "json",
-    "struct",
-    "sys",
-    "zstandard"
-   ],
-   "registered": "2026-11-04 20:00:27",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "gen_audio_yaml",
-   "source_file": "tools/gen_audio_yaml.py",
-   "source_repo": "HarbourMasters/Lighthouse",
-   "license": "check repo",
-   "sha256": "2a4b152d6d1949799d2d8f3e558cdecb9f8d7a7d0142221516eb49eacd439d68",
-   "lines": 186,
-   "first_line": "#!/usr/bin/env python",
-   "imports": [
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 20:00:31",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "namefix",
-   "source_file": "include/assets/namefix.py",
-   "source_repo": "HarbourMasters/Starship",
-   "license": "check repo",
-   "sha256": "0da6d9af4a4fed28bf2638195d8c906710ab9db52a32b4ddd21c329166e8f51f",
-   "lines": 14,
-   "first_line": "import os",
-   "imports": [
-    "os"
-   ],
-   "registered": "2026-11-04 20:00:32",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "find_duplicates",
-   "source_file": "tools/find_duplicates.py",
-   "source_repo": "HarbourMasters/Starship",
-   "license": "check repo",
-   "sha256": "072400ca16dde9ef42c9a2a6d0003f269460875783c1e63fad47d636bb2918bd",
-   "lines": 388,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 20:00:33",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "auth",
-   "source_file": "management/auth.py",
-   "source_repo": "mail-in-a-box/mailinabox",
-   "license": "check repo",
-   "sha256": "c02ded90eea0781894885bd88778edfb72eb67d830b8995f10b4fa96d4ebe788",
-   "lines": 159,
-   "first_line": "import base64, hmac, json, secrets",
-   "imports": [
-    "base64",
-    "hmac",
-    "json",
-    "secrets",
-    "utils"
-   ],
-   "registered": "2026-11-04 20:00:33",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "cli",
-   "source_file": "management/cli.py",
-   "source_repo": "mail-in-a-box/mailinabox",
-   "license": "check repo",
-   "sha256": "dce155be1e72dca9f59fd73b8bb2ee69914a7c34e2aeb3d9d83e19719e3c6523",
-   "lines": 153,
-   "first_line": "#!/usr/bin/python3",
-   "imports": [
-    "contextlib",
     "csv",
-    "getpass",
-    "json",
-    "sys",
-    "urllib"
+    "hashlib",
+    "json"
    ],
-   "registered": "2026-11-04 20:00:34",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:39"
   },
   {
-   "skill": "decompctx",
-   "source_file": "tools/decompctx.py",
-   "source_repo": "doldecomp/sms",
-   "license": "check repo",
-   "sha256": "803fe1339f6677fbfd1361ae677976a2233fe895b2778f345b4951561165b2dd",
-   "lines": 179,
-   "first_line": "#!/usr/bin/env python3",
+   "skill": "generation",
+   "source_file": "scripts/ud_grammar_evidence/generation.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "from __future__ import annotations",
+   "license": "permissive (fetched)",
+   "sha256": "a8912b95f380b73e2e7a4b81b8cc6d542e5bfe6cbc8695e06da5b03406d806ab",
+   "lines": 130,
+   "first_line": "from __future__ import annotations",
    "imports": [
-    "argparse",
-    "fnmatch",
-    "os",
+    "sys"
+   ],
+   "registered": "2026-11-04 12:02:40"
+  },
+  {
+   "skill": "resultative_shape",
+   "source_file": "scripts/ud_grammar_evidence/resultative_shape.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "from __future__ import annotations",
+   "license": "permissive (fetched)",
+   "sha256": "a10eec655abc95056721a6969569e5dd040328233a1de39b342f163bbf619668",
+   "lines": 94,
+   "first_line": "from __future__ import annotations",
+   "imports": [],
+   "registered": "2026-11-04 12:02:40"
+  },
+  {
+   "skill": "xcomp_control",
+   "source_file": "scripts/ud_grammar_evidence/xcomp_control.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "from __future__ import annotations",
+   "license": "permissive (fetched)",
+   "sha256": "38f106cfee5a3e1404031cbd8c188c2c29d5bd9c14d428407592a8b5cfb22eb4",
+   "lines": 210,
+   "first_line": "from __future__ import annotations",
+   "imports": [
     "re"
    ],
-   "registered": "2026-11-04 20:00:38",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:41"
   },
   {
-   "skill": "accessor_candidates",
-   "source_file": "tools/accessor-candidates.py",
-   "source_repo": "chasem-dev/sms-english",
-   "license": "check repo",
-   "sha256": "a1c3d5f52473e99d4153cc533d986659d070be412b68adff8fb77a261f139338",
-   "lines": 195,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 20:00:39",
-   "vetby": "hub-runner-v1"
+   "skill": "__init__",
+   "source_file": "scripts/ud_lexical_compatibility/__init__.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "from .projector import (",
+   "license": "permissive (fetched)",
+   "sha256": "855b3a0fbcd1dcd26ef634bb1bf3d392830800dcba1dd4dd284397dd7798a133",
+   "lines": 13,
+   "first_line": "from .projector import (",
+   "imports": [],
+   "registered": "2026-11-04 12:02:41"
   },
   {
-   "skill": "agent_timing",
-   "source_file": "tools/agent-timing.py",
-   "source_repo": "chasem-dev/sms-english",
-   "license": "check repo",
-   "sha256": "2325faefa525ccea823356b0b14a22cc0b06fe43e5dd19764696f6765b536a7c",
-   "lines": 62,
-   "first_line": "#!/usr/bin/env python3",
+   "skill": "projector",
+   "source_file": "scripts/ud_lexical_compatibility/projector.py",
+   "source_repo": "Mochi96336/bopomofo-trainer",
+   "summary": "from __future__ import annotations",
+   "license": "permissive (fetched)",
+   "sha256": "9acc4e2119cceae6cbb6a0c70c65fe9f96ab4bd818f0cc11b4a87a477984244f",
+   "lines": 224,
+   "first_line": "from __future__ import annotations",
    "imports": [
-    "json",
-    "re",
-    "sys"
+    "math"
    ],
-   "registered": "2026-11-04 20:00:39",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "download_tool",
-   "source_file": "tools/download_tool.py",
-   "source_repo": "SMGCommunity/Petari",
-   "license": "check repo",
-   "sha256": "d0f6a8de3b4b11835d7c3836ba61c71f108f340108424b017976b44171770df9",
-   "lines": 153,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "argparse",
-    "certifi",
-    "io",
-    "os",
-    "platform",
-    "shutil",
-    "ssl",
-    "stat",
-    "urllib",
-    "zipfile"
-   ],
-   "registered": "2026-11-04 20:00:41",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "audit_tus",
-   "source_file": "jp/tools/audit_tus.py",
-   "source_repo": "HalmyLyseas/VandalHearts-PcPort",
-   "license": "check repo",
-   "sha256": "cde972c4fef428cc406b81353fde0d3b3c2873e98d9c65f3905cb14a37b6926b",
-   "lines": 39,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "sys"
-   ],
-   "registered": "2026-11-04 20:00:41",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "fix_linker_align",
-   "source_file": "jp/tools/fix_linker_align.py",
-   "source_repo": "HalmyLyseas/VandalHearts-PcPort",
-   "license": "check repo",
-   "sha256": "ddf7969e7bb17e1c1cca92cfdfdda0164c9fc8343971887b47da9993a35ef10a",
-   "lines": 57,
-   "first_line": "#!/usr/bin/env python3",
-   "imports": [
-    "os",
-    "re",
-    "sys"
-   ],
-   "registered": "2026-11-04 20:00:42",
-   "vetby": "hub-runner-v1"
-  },
-  {
-   "skill": "pal16dis_chunked",
-   "source_file": "tools/converters/pal16dis_chunked.py",
-   "source_repo": "ACreTeam/ac-decomp",
-   "license": "check repo",
-   "sha256": "693d44368ac888affca0cb9858394e0aab13f57e5ff6b0edd28a6a30c054b350",
-   "lines": 67,
-   "first_line": "from argparse import ArgumentParser",
-   "imports": [
-    "ninja_syntax",
-    "os",
-    "struct",
-    "sys"
-   ],
-   "registered": "2026-11-04 20:00:43",
-   "vetby": "hub-runner-v1"
+   "registered": "2026-11-04 12:02:42"
   }
  ],
- "built": "2026-11-04 20:00:45"
+ "built": "2026-11-04 12:02:42"
 }

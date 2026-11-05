@@ -14,3 +14,8 @@
 {"ev": "COMPRESS_SURVEY", "total_kb": 1941.0, "heavy": 4}
 {"ev": "ZERO_AUDIT", "scanned": 330, "suspects": 0}
 {"ev": "TELEMETRY", "organs_with_fails": 1}
+{"ev": "PREFLIGHT", "ok": 230, "broken": 7}
+{"ev": "PREFLIGHT", "ok": 230, "broken": 7}
+{"ev": "ZERO_AUDIT", "scanned": 330, "suspects": 0}
+{"ev": "COMPRESS_SURVEY", "total_kb": 1945.6, "heavy": 4}
+{"ev": "TELEMETRY", "organs_with_fails": 2}

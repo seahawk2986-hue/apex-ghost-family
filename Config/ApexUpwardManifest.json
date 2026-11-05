@@ -1,6 +1,6 @@
 {
- "ts": "2026-11-02 19:55:03",
- "ms": 8164.9,
+ "ts": "2026-11-04 11:56:44",
+ "ms": 5133.0,
  "state": {
   "genes": {
    "gen": 22,
@@ -10,8 +10,8 @@
    ],
    "lineages": {
     "base": {
-     "fitness": 0.5215,
-     "m_rounds": 15
+     "fitness": 0.4433,
+     "m_rounds": 18
     },
     "g0_0": {
      "fitness": 0.0,
@@ -121,7 +121,7 @@
   "knowledge": {
    "events": {
     "reqs": 0,
-    "mines": 233
+    "mines": 301
    },
    "wiki": {
     "reqs": 0,
@@ -137,7 +137,7 @@
    }
   },
   "help": {
-   "briefs": 201,
+   "briefs": 234,
    "alarmsRaised": 6
   },
   "canon": {
@@ -145,9 +145,9 @@
    "papers_evolution": 421
   },
   "skills_lib": {
-   "count": 569,
-   "coding": 567,
-   "categories": 99
+   "count": 712,
+   "coding": 710,
+   "categories": 153
   },
   "board": {
    "backlog": 1455,
@@ -170,7 +170,7 @@
    "mcp.json": true
   },
   "jobs": {
-   "opps_inbox": 1,
+   "opps_inbox": 146,
    "rungs_filed": 96
   },
   "proactive": {
@@ -183,13 +183,13 @@
    "head": ""
   },
   "hardware": {
-   "ram_free_gb": 2.15,
+   "ram_free_gb": 1.67,
    "tier": "honest-idle",
    "allowed": [
     "manifests-only"
    ],
    "starved": false,
-   "proc_rss_mb": 104.0,
+   "proc_rss_mb": 94.6,
    "gpu_note": "no GPU loads for swarm work (the 3050 stays idle-capable)"
   },
   "lessons": {
@@ -206,7 +206,7 @@
   },
   "brain": {
    "ollama_chat": [
-    "phi4-mini:latest"
+    "deepseek-coder:6.7b"
    ]
   },
   "integrity": {
@@ -214,88 +214,86 @@
    "ok": true
   },
   "mining": {
-   "net_reqs": 190,
-   "net_ok": 82,
-   "findings": 122
+   "net_reqs": 172,
+   "net_ok": 63,
+   "findings": 102
   },
   "transport": {
    "last_hub_root": "{'sha': '4fe1c94a79d9', 'commit_msg': 'grain: hub harvest 133 (manifest-digested) [skip ci]', 'ts': '2026-10-31 22:18:04'}"
   }
  },
- "folded_genes": [
-  "base"
- ],
+ "folded_genes": [],
  "rolled_back": [],
  "retired": [],
- "floors_restored": 1,
+ "floors_restored": 2,
  "git_restored": 0,
  "alarms": [
-  "knowledge lane 'wiki.mines' regressed 34 -> 33 (PathMemory clobber suspected)",
-  "goal 'money' stalled 2095min (moves only when Andrew files/review - the honest $0.00 law)",
-  "goal 'recruits' stalled 2050min (no external claims yet - the door stands open)",
-  "goal 'jobs' stalled 600min (needs the inbox triaged - a brain window serves)",
-  "goal 'efficiency' stalled 2050min (outputs are earned inside the hardware gate)",
-  "goal 'safety' stalled 2050min (no external claims yet - the door stands open)"
+  "knowledge lane 'events.mines' regressed 301 -> 299 (PathMemory clobber suspected)",
+  "knowledge lane 'wiki.mines' regressed 34 -> 32 (PathMemory clobber suspected)",
+  "goal 'money' stalled 4497min (moves only when Andrew files/review - the honest $0.00 law)",
+  "goal 'recruits' stalled 4452min (no external claims yet - the door stands open)",
+  "goal 'efficiency' stalled 4452min (outputs are earned inside the hardware gate)",
+  "goal 'safety' stalled 4452min (no external claims yet - the door stands open)"
  ],
  "goals": {
   "gold": {
-   "score": 2487.0,
-   "delta": 46.0,
-   "progress_age_min": 0.0
+   "score": 2535.0,
+   "delta": 0.0,
+   "progress_age_min": 0.3
   },
   "money": {
    "score": 0.0,
    "delta": 0.0,
-   "progress_age_min": 2095.9
+   "progress_age_min": 4497.6
   },
   "life": {
-   "score": 207.0,
-   "delta": 6.0,
-   "progress_age_min": 0.0
+   "score": 240.0,
+   "delta": 0.0,
+   "progress_age_min": 0.3
   },
   "recruits": {
    "score": 6.0,
    "delta": 0.0,
-   "progress_age_min": 2050.8
+   "progress_age_min": 4452.5
   },
   "jobs": {
-   "score": 97.0,
+   "score": 242.0,
    "delta": 0.0,
-   "progress_age_min": 600.4
+   "progress_age_min": 0.3
   },
   "coding": {
-   "score": 570.0,
-   "delta": 18.0,
-   "progress_age_min": 0.0
+   "score": 713.0,
+   "delta": 0.0,
+   "progress_age_min": 0.3
   },
   "omnivore": {
-   "score": 671.0,
-   "delta": 21.0,
-   "progress_age_min": 0.0
+   "score": 868.0,
+   "delta": 0.0,
+   "progress_age_min": 0.3
   },
   "efficiency": {
    "score": 526.0,
    "delta": 0.0,
-   "progress_age_min": 2050.8
+   "progress_age_min": 4452.5
   },
   "safety": {
    "score": 2.0,
    "delta": 0.0,
-   "progress_age_min": 2050.8
+   "progress_age_min": 4452.5
   }
  },
  "goal_progress": {
-  "gold": 1793667303.6889963,
+  "gold": 1793811389.6156554,
   "money": 1793541551.1543214,
-  "life": 1793667303.6889963,
+  "life": 1793811389.6156554,
   "recruits": 1793544253.5449352,
-  "jobs": 1793631278.07535,
-  "coding": 1793667303.6889963,
-  "omnivore": 1793667303.6889963,
+  "jobs": 1793811389.6156554,
+  "coding": 1793811389.6156554,
+  "omnivore": 1793811389.6156554,
   "efficiency": 1793544253.5449352,
   "safety": 1793544253.5449352
  },
- "gi_score": 594.5,
+ "gi_score": 681.6,
  "goal_genealogy": {
   "gold": {
    "origin": "ApplyTriGenome: MAXIMIZE YIELD (mines/req - the original fitness)",
@@ -470,44 +468,44 @@
  },
  "hardware_history": [
   {
-   "ts": "11:55:05",
-   "ms": 8187.0,
-   "ram": 3.86
+   "ts": "23:57:25",
+   "ms": 4316.6,
+   "ram": 5.96
   },
   {
-   "ts": "13:54:37",
-   "ms": 8226.9,
-   "ram": 5.08
+   "ts": "03:56:17",
+   "ms": 4208.1,
+   "ram": 7.35
   },
   {
-   "ts": "15:54:17",
-   "ms": 8194.1,
-   "ram": 5.0
+   "ts": "05:57:02",
+   "ms": 4227.6,
+   "ram": 5.98
   },
   {
-   "ts": "15:55:13",
-   "ms": 8244.1,
-   "ram": 0.88
+   "ts": "07:56:54",
+   "ms": 4272.9,
+   "ram": 4.92
   },
   {
-   "ts": "17:54:24",
-   "ms": 8270.6,
-   "ram": 7.17
+   "ts": "08:55:11",
+   "ms": 4180.1,
+   "ram": 7.09
   },
   {
-   "ts": "17:54:51",
-   "ms": 8199.7,
-   "ram": 6.65
+   "ts": "08:57:38",
+   "ms": 4190.0,
+   "ram": 7.08
   },
   {
-   "ts": "17:55:31",
-   "ms": 8175.7,
-   "ram": 2.65
+   "ts": "11:56:29",
+   "ms": 4300.1,
+   "ram": 4.4
   },
   {
-   "ts": "19:55:03",
-   "ms": 8164.9,
-   "ram": 2.15
+   "ts": "11:56:44",
+   "ms": 5133.0,
+   "ram": 1.67
   }
  ],
  "speed": {

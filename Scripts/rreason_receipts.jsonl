@@ -1,0 +1,9 @@
+{"ts": "2026-11-04 02:23:45", "ev": "WAKE", "gen": 0, "parent": 0.4, "world": "builtin"}
+{"ts": "2026-11-04 02:34:41", "ev": "TRIED", "gen": 1, "op": "style", "child": 0.775, "lat": 655.563}
+{"ts": "2026-11-04 02:34:41", "ev": "TRIED", "gen": 1, "op": "style", "child": 0.4, "lat": 655.563}
+{"ts": "2026-11-04 02:34:41", "ev": "TRIED", "gen": 1, "op": "flip", "child": 1.175, "lat": 655.563}
+{"ts": "2026-11-04 02:34:41", "ev": "DISCARD", "gen": 1, "op": "style", "child": 0.4, "parent": 0.4, "world": "builtin", "lat": 655.563}
+{"ts": "2026-11-04 02:54:14", "ev": "TRIED", "gen": 1, "op": "flip", "child": 0.4, "lat": 1173.738}
+{"ts": "2026-11-04 02:54:14", "ev": "TRIED", "gen": 1, "op": "style", "child": 0.525, "lat": 1173.738}
+{"ts": "2026-11-04 02:54:14", "ev": "TRIED", "gen": 1, "op": "rounds", "child": 1.05, "lat": 1173.738}
+{"ts": "2026-11-04 02:54:14", "ev": "DISCARD", "gen": 1, "op": "flip", "child": 0.4, "parent": 0.4, "world": "builtin", "lat": 1173.738}

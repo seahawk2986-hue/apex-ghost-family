@@ -1,8 +1,8 @@
 {
- "ts": "2026-11-03 00:33:57",
- "attacks": 6,
- "held_pct": 100.0,
+ "ts": "2026-11-04 02:35:41",
+ "attacks": 18,
+ "held_pct": 38.9,
  "leak_pct": 0.0,
  "route_downs_only": false,
- "gen": 1
+ "gen": 3
 }

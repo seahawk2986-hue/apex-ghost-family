@@ -1,0 +1,60 @@
+{
+ "ts": "2026-11-03 17:11",
+ "grade": "A+ (the machinery proved; the S-gates are honest-n-pending)",
+ "passed": 8,
+ "of": 8,
+ "checks": [
+  {
+   "check": "deliver-floor",
+   "ok": true,
+   "note": "cumulative 10/10 = 100.0% (PROVISIONAL: n<50)"
+  },
+  {
+   "check": "privacy-refusal",
+   "ok": true,
+   "note": "the private purpose was refused wide-routing"
+  },
+  {
+   "check": "same-weights",
+   "ok": true,
+   "note": "0/1 routes carry explicit model pins"
+  },
+  {
+   "check": "the-$0-audit",
+   "ok": true,
+   "note": "spend_usd = 0"
+  },
+  {
+   "check": "mesh round-trip",
+   "ok": true,
+   "note": "node booted, verified, served ('safe') | asks tracked 2 <= cap 10"
+  },
+  {
+   "check": "cap-respect",
+   "ok": true,
+   "note": "the per-node caps enforced by construction (verified 5 above)"
+  },
+  {
+   "check": "quorum-live",
+   "ok": true,
+   "note": "CONSENSUS | n=4 (consensus 50.0%)"
+  },
+  {
+   "check": "mesh-registry",
+   "ok": true,
+   "note": "1 node(s) registered"
+  }
+ ],
+ "delivery": {
+  "n": 10,
+  "pct": 100.0
+ },
+ "s_grid": {
+  "S+": "all-8 + n>=50@95% + quorum n>=30@70% + 7 nights",
+  "S": "all-8 + delivery n>=25@90% + quorum n>=10",
+  "A+": "all 8 pass",
+  "A-": ">=6 pass, no law-fails",
+  "B": ">=4 pass"
+ },
+ "law": "the grade may only rise on the receipts; stale receipts fail (the FeatureLedger's law, swarmed)"
+}

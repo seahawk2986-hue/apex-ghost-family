@@ -2,89 +2,89 @@
  "groq-120b": {
   "pace_s": 2.5,
   "walls": 2,
-  "oks": 48,
-  "last": "06:47:02",
+  "oks": 73,
+  "last": "19:17:02",
   "last_http": 200,
   "note": "alive",
-  "last_ok_ts": 1793792822.9215758
+  "last_ok_ts": 1793837822.3213313
  },
  "groq-qwen": {
   "pace_s": 2.5,
   "walls": 0,
-  "oks": 50,
-  "last": "06:47:04",
+  "oks": 74,
+  "last": "19:17:04",
   "last_http": 200,
-  "last_ok_ts": 1793792824.6302938,
+  "last_ok_ts": 1793837824.1122901,
   "note": "alive"
  },
  "cerebras-120b": {
   "pace_s": 2.5,
   "walls": 0,
-  "oks": 50,
-  "last": "06:47:06",
+  "oks": 75,
+  "last": "19:17:05",
   "last_http": 200,
-  "last_ok_ts": 1793792826.3018177,
+  "last_ok_ts": 1793837825.800451,
   "note": "alive"
  },
  "cerebras-qwen": {
   "pace_s": 2.5,
   "walls": 0,
-  "oks": 50,
-  "last": "06:47:07",
+  "oks": 75,
+  "last": "19:17:07",
   "last_http": 200,
-  "last_ok_ts": 1793792827.9556832,
+  "last_ok_ts": 1793837827.458265,
   "note": "alive"
  },
  "or-ultra": {
-  "pace_s": 120.0,
-  "walls": 49,
-  "oks": 1,
-  "last": "06:47:09",
-  "last_http": 429,
-  "note": "free-models-per-day cap - re-probe after 00:00 UTC",
-  "last_ok_ts": 1793665029.4219668
+  "pace_s": 108.0,
+  "walls": 73,
+  "oks": 2,
+  "last": "19:17:10",
+  "last_http": 200,
+  "note": "alive",
+  "last_ok_ts": 1793837830.0753062
  },
  "or-reason": {
-  "pace_s": 120.0,
-  "walls": 49,
-  "oks": 1,
-  "last": "06:47:11",
-  "last_http": 429,
-  "note": "same shared daily cap as or-ultra",
-  "last_ok_ts": 1793665031.378361
+  "pace_s": 108.0,
+  "walls": 73,
+  "oks": 2,
+  "last": "19:17:11",
+  "last_http": 200,
+  "note": "alive",
+  "last_ok_ts": 1793837831.7923625
  },
  "sflow-122b": {
   "pace_s": 2.5,
   "walls": 0,
   "oks": 0,
-  "last": "06:49:20",
+  "last": "19:19:20",
   "last_http": 402,
   "note": "{\"code\":30001,\"message\":\"Sorry, your account balance is insufficient\","
  },
  "gemini-flash": {
   "pace_s": 120.0,
-  "walls": 33,
+  "walls": 56,
   "oks": 0,
-  "last": "06:49:22",
+  "last": "19:19:21",
   "last_http": 429,
   "note": "free-tier quota window - the pacer reopens it"
  },
  "gemini-pro": {
   "pace_s": 120.0,
-  "walls": 48,
+  "walls": 73,
   "oks": 0,
-  "last": "06:49:23",
+  "last": "19:19:23",
   "last_http": 429,
   "note": "rate window - will re-open"
  },
  "or-auto": {
   "pace_s": 108.0,
-  "walls": 41,
-  "oks": 5,
-  "last": "06:49:18",
+  "walls": 62,
+  "oks": 9,
+  "last": "19:19:18",
   "last_http": 200,
   "note": "alive",
-  "last_ok_ts": 1793792958.6537275
+  "last_ok_ts": 1793837958.4881868
  },
  "nim-k3": {
   "note": "RETIRED (410 Gone) - AutoRoster watches for the model's return",
@@ -106,49 +106,49 @@
  "nim-glm": {
   "pace_s": 120.0,
   "walls": 0,
-  "oks": 2,
+  "oks": 3,
   "last": "ReadTimeout",
   "last_http": null,
-  "last_ok_ts": 1793661544.4493744,
+  "last_ok_ts": 1793825340.0817444,
   "note": "alive"
  },
  "bandit": {
   "nim/minimaxai/minimax-m3.1-flash": {
-   "n": 7,
-   "w": 7,
-   "ms": 12043.7
-  },
-  "local-floor": {
    "n": 12,
    "w": 12,
-   "ms": 5032.1
+   "ms": 5183.7
+  },
+  "local-floor": {
+   "n": 17,
+   "w": 17,
+   "ms": 6445.1
   },
   "cerebras-120b": {
-   "n": 14,
-   "w": 14,
-   "ms": 386.4
+   "n": 22,
+   "w": 22,
+   "ms": 459.6
   },
   "groq-qwen": {
-   "n": 10,
-   "w": 10,
-   "ms": 372.5
+   "n": 12,
+   "w": 12,
+   "ms": 363.0
   },
   "or-auto": {
-   "n": 4,
-   "w": 4,
-   "ms": 7677.6
+   "n": 5,
+   "w": 5,
+   "ms": 8347.8
   },
   "groq-120b": {
-   "n": 9,
-   "w": 9,
-   "ms": 1077.0
+   "n": 16,
+   "w": 16,
+   "ms": 987.6
   }
  },
  "nim-v4pro": {
   "pace_s": 2.5,
   "walls": 0,
   "oks": 0,
-  "last": "06:49:15",
+  "last": "19:19:16",
   "last_http": 410,
   "note": "{\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model "
  }

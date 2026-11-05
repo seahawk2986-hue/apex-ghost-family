@@ -10,12 +10,12 @@
     "ghost_queue_mines_to_farm": 27,
     "ghost_min_stars": 315
    },
-   "fitness": 0.5215,
+   "fitness": 0.4433,
    "descriptor": "cc4_ev3_tr2",
-   "wins": 11,
-   "mines": 1358,
-   "reqs": 2604,
-   "m_rounds": 15
+   "wins": 14,
+   "mines": 1450,
+   "reqs": 3271,
+   "m_rounds": 18
   },
   "g0_0": {
    "genes": {
@@ -421,7 +421,7 @@
   },
   "cc4_ev3_tr2": {
    "vid": "base",
-   "fitness": 0.5215
+   "fitness": 0.4433
   },
   "cc4_ev1_tr2": {
    "vid": "g2_2",

@@ -93,5 +93,97 @@
     "reason": "Provides a practical diff report generator for ByteMatch, but uses conventional methods without introducing novel concepts."
    }
   ]
+ },
+ {
+  "ts": "2026-11-04 07:00:02",
+  "checked": [
+   {
+    "skill": "k_means",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 7,
+    "keep": true,
+    "reason": "Standard numpy-based k-means implementation; useful for clustering tasks but not novel."
+   },
+   {
+    "skill": "missing_ranges",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 3,
+    "keep": false,
+    "reason": "Only a docstring/signature with no implementation, so it provides no actionable capability."
+   },
+   {
+    "skill": "conf",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 2,
+    "keep": false,
+    "reason": "Django configuration boilerplate with little reusable value for a self-improving agent library."
+   },
+   {
+    "skill": "z80_json2bin",
+    "compiles_prev": false,
+    "verified_at_prev": null
+   },
+   {
+    "skill": "__init__",
+    "compiles_prev": false,
+    "verified_at_prev": null
+   },
+   {
+    "skill": "macho_text_rwx",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 3,
+    "keep": false,
+    "reason": "The skill appears to target low‑level Mach‑O text segment manipulation, which has limited relevance for a self‑improving agent library and lacks sufficient detail to assess its value."
+   },
+   {
+    "skill": "rock_paper_scissors",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 0,
+    "keep": false,
+    "reason": "No code provided, so the skill cannot be evaluated or used."
+   },
+   {
+    "skill": "_nodes",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 7,
+    "keep": true,
+    "reason": "Provides essential shared utilities for multiple components, but implements standard parsing helpers without novel techniques."
+   },
+   {
+    "skill": "nnet_mlp",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 2,
+    "keep": false,
+    "reason": "Only a logging import is visible, with no substantive MLP implementation or reusable agent logic."
+   },
+   {
+    "skill": "add-binary",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 7,
+    "keep": true,
+    "reason": "Implements a standard binary addition algorithm useful for string manipulation, but offers little novelty."
+   },
+   {
+    "skill": "advanced_example",
+    "compiles_prev": false,
+    "verified_at_prev": null
+   },
+   {
+    "skill": "GS_Model",
+    "compiles_prev": false,
+    "verified_at_prev": null,
+    "usefulness": 3,
+    "keep": false,
+    "reason": "Signature-only info suggests a generic model/controller wrapper with limited evidence of self-improvement value."
+   }
+  ]
  }
 ]

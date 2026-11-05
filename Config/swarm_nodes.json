@@ -1,0 +1,14 @@
+{
+ "version": 1,
+ "nodes": [
+  {
+   "id": "cert-self",
+   "region": "local-cert",
+   "url": "http://127.0.0.1:8091",
+   "daily_cap": 10,
+   "status": "candidate",
+   "joined": "2026-11-03"
+  }
+ ],
+ "law": "opt-in only; per-node caps enforced; the same-weights law worldwide; private workloads never route wide; revocation instant"
+}

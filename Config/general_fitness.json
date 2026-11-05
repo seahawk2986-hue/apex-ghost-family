@@ -1,5 +1,5 @@
 {
- "ts": "2026-11-03 22:32:13",
+ "ts": "2026-11-04 19:01:01",
  "law": "one ledger, whole mind: mutations are selected against ALL axes jointly, never one bench alone",
  "axes": [
   {
@@ -17,10 +17,10 @@
   },
   {
    "axis": "swe-execution",
-   "state": "empty",
-   "exec_verdicts": 0,
+   "state": "measured",
+   "exec_verdicts": 1,
    "solved": 0,
-   "pass_rate": null
+   "pass_rate": 0.0
   },
   {
    "axis": "reasoning-strategy",
@@ -39,13 +39,12 @@
   {
    "axis": "scheduled-organ-reliability",
    "state": "measured",
-   "organs_ready": 23,
-   "suspect": 23
+   "organs_ready": 22,
+   "suspect": 22
   }
  ],
- "unmeasured_count": 3,
+ "unmeasured_count": 2,
  "unmeasured": [
-  "swe-execution",
   "reasoning-strategy",
   "model-lane-selection"
  ],

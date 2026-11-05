@@ -1,56 +1,31 @@
 {
- "ts": "2026-11-01 13:29:47",
+ "ts": "2026-11-04 03:30:01",
  "asks": [
   {
    "n": 0,
-   "lanes": [
-    "groq-120b",
-    "qwen25-7b",
-    "phi4-mini",
-    "deepseek-r1"
-   ],
-   "rank": [
-    "A",
-    "C",
-    "B",
-    "D"
-   ],
-   "judge_why": "A is concise, specific, and clear; C is detailed but less concise; B is vague and overly brief; D is incomplete.",
-   "count": 4
+   "verdict": "HONEST-SKIP (the lanes' outage)",
+   "served": 1
   },
   {
    "n": 1,
-   "lanes": [
-    "groq-120b",
-    "qwen25-7b",
-    "phi4-mini",
-    "deepseek-r1"
-   ],
-   "rank": [
-    "A",
-    "C",
-    "B",
-    "D"
-   ],
-   "judge_why": "A is most honest, clear, and specific about data handling; C is clear but less detail on logging; B is vague about security; D is incomplete",
-   "count": 4
+   "verdict": "HONEST-SKIP (the lanes' outage)",
+   "served": 1
   },
   {
    "n": 2,
-   "lanes": [
-    "groq-120b",
-    "qwen25-7b",
-    "phi4-mini",
-    "deepseek-r1"
-   ],
-   "rank": [
-    "A",
-    "C",
-    "B",
-    "D"
-   ],
-   "judge_why": "A provides concrete task, metrics, and benefits; C adds detail but remains vague; B is generic hype; D is incomplete and unclear.",
-   "count": 4
+   "verdict": "HONEST-SKIP (the lanes' outage)",
+   "served": 1
   }
+ ],
+ "errs": [
+  "qwen25-7b/ask0: RAM-PAUSED (the honest gate)",
+  "phi4-mini/ask0: RAM-PAUSED (the honest gate)",
+  "deepseek-r1/ask0: RAM-PAUSED (the honest gate)",
+  "qwen25-7b/ask1: RAM-PAUSED (the honest gate)",
+  "phi4-mini/ask1: RAM-PAUSED (the honest gate)",
+  "deepseek-r1/ask1: RAM-PAUSED (the honest gate)",
+  "qwen25-7b/ask2: RAM-PAUSED (the honest gate)",
+  "phi4-mini/ask2: RAM-PAUSED (the honest gate)",
+  "deepseek-r1/ask2: RAM-PAUSED (the honest gate)"
  ]
 }

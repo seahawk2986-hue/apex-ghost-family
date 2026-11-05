@@ -1,0 +1,27 @@
+{
+ "gen": 3,
+ "rate": 0.35,
+ "ops": {
+  "bi": [
+   "add",
+   "sub",
+   "mul",
+   "sdiv",
+   "min",
+   "max"
+  ],
+  "un": [
+   "sin",
+   "tanh",
+   "abs",
+   "neg",
+   "cap",
+   "sq",
+   "root"
+  ]
+ },
+ "tree": [
+  "c",
+  0.1063
+ ]
+}

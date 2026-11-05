@@ -1,0 +1,15 @@
+{
+ "health": {
+  "cert-self": {
+   "ts": "2026-11-04 18:23:01",
+   "ok": false,
+   "latency_ms": null,
+   "capacity_left": 0,
+   "note": "URLError"
+  }
+ },
+ "asks": {
+  "cert-self": 1
+ },
+ "ts": "2026-11-04 18:23:03"
+}

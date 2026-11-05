@@ -1,0 +1,26 @@
+[
+ {
+  "schemaVersion": 1,
+  "label": "swarm cert",
+  "message": "(not yet certified) ?/?",
+  "color": "yellow"
+ },
+ {
+  "schemaVersion": 1,
+  "label": "the gate",
+  "message": "HELD 100.0% (n=6)",
+  "color": "green"
+ },
+ {
+  "schemaVersion": 1,
+  "label": "sales",
+  "message": "0 (honest)",
+  "color": "red"
+ },
+ {
+  "schemaVersion": 1,
+  "label": "sources proven [V]",
+  "message": "103 proven | 54 S+-connected",
+  "color": "yellow"
+ }
+]

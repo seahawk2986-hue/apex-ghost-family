@@ -2,3 +2,5 @@
 {"ts": "2026-11-03 00:26:32", "door": "repo", "ok": true, "defects": ["link-rot: 4/6 dead"], "ttfb_ms": 560}
 {"ts": "2026-11-03 00:33:57", "door": "pages", "ok": true, "defects": [], "ttfb_ms": 267}
 {"ts": "2026-11-03 00:33:59", "door": "repo", "ok": true, "defects": ["link-rot: 4/6 dead"], "ttfb_ms": 476}
+{"ts": "2026-11-04 02:35:42", "door": "pages", "ok": true, "defects": [], "ttfb_ms": 461}
+{"ts": "2026-11-04 02:35:44", "door": "repo", "ok": true, "defects": ["link-rot: 4/6 dead"], "ttfb_ms": 627}

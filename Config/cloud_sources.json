@@ -1,0 +1,69 @@
+{
+ "sources": {
+  "local-ollama": {
+   "tier": "local-indefinite",
+   "$0": true,
+   "note": "hardware-owned; cannot be revoked by any company",
+   "probe": "http://127.0.0.1:11434/api/tags",
+   "last_checked": "2026-11-04 09:10:01",
+   "probe_status": 200,
+   "first_verified": "2026-11-03"
+  },
+  "local-lmstudio": {
+   "tier": "local-indefinite",
+   "$0": true,
+   "note": "hardware-owned; probes-yet-unverified engines exist (30B)",
+   "probe": "http://127.0.0.1:1234/v1/models",
+   "last_checked": "2026-11-04 09:10:01",
+   "probe_status": 200,
+   "first_verified": "2026-11-03"
+  },
+  "huggingface-datasets-server": {
+   "tier": "public-institutional",
+   "$0": true,
+   "note": "verified 2026-11-04: 300 SWE-bench instances, no auth",
+   "probe": "https://datasets-server.huggingface.co/rows?dataset=princeton-nlp/SWE-bench_Lite&config=default&split=test&offset=0&length=1",
+   "last_checked": "2026-11-04 09:10:02",
+   "probe_status": 200,
+   "first_verified": "2026-11-03"
+  },
+  "github-actions": {
+   "tier": "public-institutional",
+   "$0": true,
+   "note": "free compute for public repos; 3 green receipts tonight",
+   "probe": "https://api.github.com/repos/seahawk2986-hue/apex-ghost-family/actions/runs?per_page=1",
+   "last_checked": "2026-11-04 09:10:02",
+   "probe_status": 200,
+   "first_verified": "2026-11-03"
+  },
+  "github-models": {
+   "tier": "incumbent-bundled",
+   "$0": true,
+   "note": "inference-plane verified live; rate-capped free tier",
+   "probe": null,
+   "last_checked": "2026-11-04 09:10:02",
+   "probe_status": "not-probed(key-only)",
+   "first_verified": "2026-11-03"
+  },
+  "nim-nvidia": {
+   "tier": "vendor-free-tier",
+   "$0": true,
+   "note": "500/day observed; key-ring gated",
+   "probe": "https://integrate.api.nvidia.com/v1/models",
+   "last_checked": "2026-11-04 09:10:02",
+   "probe_status": 200,
+   "first_verified": "2026-11-03"
+  },
+  "openrouter-free": {
+   "tier": "community-subsidized",
+   "$0": true,
+   "note": "per-model daily caps; rightly paranoid: subsidy could end",
+   "probe": null,
+   "last_checked": "2026-11-04 09:10:02",
+   "probe_status": "not-probed(key-only)",
+   "first_verified": "2026-11-03"
+  }
+ },
+ "checked": "2026-11-04 09:10:02",
+ "policy": "local-first indefinite base; N independent clouds; every closure = CHANGED receipt + graceful handoff, the floor holds, nothing paid is substituted"
+}

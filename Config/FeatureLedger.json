@@ -5,94 +5,94 @@
    "description": "the chat streams cleanly (charset/sanitizer/grounding)",
    "check": "receipt:ChatMetrics/live",
    "passes": true,
-   "verified_at": "2026-11-02 23:53"
+   "verified_at": "2026-11-04 19:30"
   },
   {
    "category": "cognition",
    "description": "the math tier measured (sympy-truth drills)",
    "check": "receipt:abstract/math",
    "passes": true,
-   "verified_at": "2026-11-02 23:53"
+   "verified_at": "2026-11-04 19:30"
   },
   {
    "category": "cognition",
    "description": "the ARC-class abstraction measured",
    "check": "receipt:abstract/abstraction",
    "passes": true,
-   "verified_at": "2026-11-02 23:53"
+   "verified_at": "2026-11-04 19:30"
   },
   {
    "category": "metacognition",
    "description": "the Blind Court's verdict = CLEAN (the sealed holdout)",
    "check": "doctor:court",
    "passes": true,
-   "verified_at": "2026-11-02 23:53"
+   "verified_at": "2026-11-04 19:30"
   },
   {
    "category": "metacognition",
    "description": "the HonestyBond published (the public claims checked)",
    "check": "receipt:claim_bond/bond>=95",
-   "passes": true,
-   "verified_at": "2026-11-02 23:53"
+   "passes": false,
+   "verified_at": "2026-11-04 19:30"
   },
   {
    "category": "coordination",
    "description": "the routes = auction-allocated (the RoleMarket's receipt)",
    "check": "receipt:role_market/auctions",
    "passes": true,
-   "verified_at": "2026-11-02 23:53"
+   "verified_at": "2026-11-04 19:30"
   },
   {
    "category": "coordination",
    "description": "the MCP registry listing live",
    "check": "receipt:registry/io.github.seahawk2986-hue",
    "passes": true,
-   "verified_at": "2026-11-02 23:53"
+   "verified_at": "2026-11-04 19:30"
   },
   {
    "category": "swengineering",
    "description": "the SWE court scoring (the verified resolves exist)",
    "check": "doctor:swe-court",
    "passes": true,
-   "verified_at": "2026-11-02 23:53"
+   "verified_at": "2026-11-04 19:30"
   },
   {
    "category": "swengineering",
    "description": "the ApexPacing evolution = a verified write",
    "check": "receipt:RewardLedger/ApexPacing.py",
    "passes": true,
-   "verified_at": "2026-11-02 23:53"
+   "verified_at": "2026-11-04 19:30"
   },
   {
    "category": "swengineering",
    "description": "the demo-desk = an external claim served",
    "check": "receipt:DemoDesk/external-user",
    "passes": false,
-   "verified_at": "2026-11-02 23:53"
+   "verified_at": "2026-11-04 19:30"
   },
   {
    "category": "funnel",
    "description": "the first REAL external arrival (not self-checks)",
    "check": "receipt:arrivals/external",
    "passes": true,
-   "verified_at": "2026-11-02 23:53"
+   "verified_at": "2026-11-04 19:30"
   },
   {
    "category": "funnel",
    "description": "the first SALE (the Polar's orders:read)",
    "check": "receipt:sales/>= 1",
    "passes": false,
-   "verified_at": "2026-11-02 23:53"
+   "verified_at": "2026-11-04 19:30"
   }
  ],
- "progress": "10/12 verified-done",
+ "progress": "9/12 verified-done",
  "law": "passes = DERIVED from the receipt-files only; the machine cannot self-mark; the drift-cure: the stale receipts flip a done feature BACK automatically",
  "next_feature": {
-  "category": "swengineering",
-  "description": "the demo-desk = an external claim served",
-  "check": "receipt:DemoDesk/external-user",
+  "category": "metacognition",
+  "description": "the HonestyBond published (the public claims checked)",
+  "check": "receipt:claim_bond/bond>=95",
   "passes": false,
-  "verified_at": "2026-11-02 23:53"
+  "verified_at": "2026-11-04 19:30"
  },
  "version": 3
 }
