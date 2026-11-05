@@ -1,111 +1,113 @@
 {
- "kind": "vet-line",
- "added": [
+ "hub": "actions-runner",
+ "ts": "2026-11-05 14:12:39",
+ "status": "done",
+ "lifecycle": "done",
+ "requested": 150,
+ "ok": 128,
+ "mines": [
   {
-   "skill": "fixture",
-   "repo": "StackStorm/st2",
-   "sha256": "76fec01ac529dd27"
+   "repo": "ETLCPP/etl",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "286a3041456d2834"
   },
   {
-   "skill": "__init__",
-   "repo": "simonw/datasette",
-   "sha256": "6812aeabed75decf"
+   "repo": "rfgplk/micron.cpp",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "296e24e19dc05f00"
   },
   {
-   "skill": "__main__",
-   "repo": "simonw/datasette",
-   "sha256": "4590c06708876fe7"
+   "repo": "Pagghiu/SaneCppLibraries",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "4ab3813a8e445aa1"
   },
   {
-   "skill": "hooks",
-   "repo": "binwiederhier/ntfy",
-   "sha256": "ec9419c9d42908e4"
+   "repo": "gammasoft71/xtd",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "4039bb5d9226c038"
   },
   {
-   "skill": "publish",
-   "repo": "binwiederhier/ntfy",
-   "sha256": "9a8c1fe925e68e69"
+   "repo": "hkr04/cpp-mcp",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "4ca78a1584382c28"
   },
   {
-   "skill": "check_ci_results",
-   "repo": "openai/codex",
-   "sha256": "4e7e7d67c74b1882"
+   "repo": "Dobiasd/frugally-deep",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "ade0802382527573"
   },
   {
-   "skill": "releases",
-   "repo": "openai/codex",
-   "sha256": "f46e47b4d84563c7"
+   "repo": "flashlight/flashlight",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "83019abe4094c7cd"
   },
   {
-   "skill": "crew_water_loop",
-   "repo": "SpaceOceanCorp/space-water-logistics",
-   "sha256": "28b615e5a0d4da07"
+   "repo": "oneapi-src/oneDNN",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "9137b16c7fe4662e"
   },
   {
-   "skill": "lunar_settlement_water",
-   "repo": "SpaceOceanCorp/space-water-logistics",
-   "sha256": "9214331647c0b73f"
+   "repo": "volt-software/ichor",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "e242fb55b5beb55d"
   },
   {
-   "skill": "__init__",
-   "repo": "dotchance/nodalarc",
-   "sha256": "b0826142fd7049ae"
+   "repo": "libuv/libuv",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "c21a178b9518fea8"
   },
   {
-   "skill": "__init__",
-   "repo": "dotchance/nodalarc",
-   "sha256": "febd5955e8f8e3ad"
+   "repo": "skypjack/uvw",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "7bdd8e519a9cc6f2"
   },
   {
-   "skill": "preserve_copyright_years",
-   "repo": "opendatahub-io/kserve",
-   "sha256": "48e63f4464881bc4"
+   "repo": "adamstark/AudioFile",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "b023032642cc770c"
   },
   {
-   "skill": "example_utils",
-   "repo": "opendatahub-io/model-registry-operator",
-   "sha256": "794d6d002a104762"
+   "repo": "libAudioFlux/audioFlux",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "c983a1870ff2710d"
   },
   {
-   "skill": "setup_data",
-   "repo": "opendatahub-io/feast",
-   "sha256": "289e1334ac2f923b"
+   "repo": "ekg/vcflib",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "844371468ae93fab"
   },
   {
-   "skill": "mcp_client_demo",
-   "repo": "opendatahub-io/feast",
-   "sha256": "06ff0e0f54a3f4e4"
+   "repo": "p-ranav/argparse",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "63cf0d9102a78020"
   },
   {
-   "skill": "conf",
-   "repo": "opendatahub-io/trainer",
-   "sha256": "047185939c714a2e"
+   "repo": "jupyter-xeus/cpp-terminal",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "8eb309d6f4691864"
   },
   {
-   "skill": "conftest",
-   "repo": "opendatahub-io/trainer",
-   "sha256": "8e858cd2b0d48a10"
-  },
-  {
-   "skill": "gen_gha_matrix_jobs",
-   "repo": "opendatahub-io/notebooks",
-   "sha256": "a3c46ad209363990"
-  },
-  {
-   "skill": "gha_pr_changed_files_symlink_test",
-   "repo": "opendatahub-io/notebooks",
-   "sha256": "92f63610c7f41c7b"
-  },
-  {
-   "skill": "check_integration_test_label",
-   "repo": "opendatahub-io/data-science-pipelines-operator",
-   "sha256": "2f842d8c6abd163f"
-  },
-  {
-   "skill": "params",
-   "repo": "opendatahub-io/data-science-pipelines-operator",
-   "sha256": "668b3a4f942470d9"
+   "repo": "jcwangxp/Crossline",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "80b9ddc6b66b9f89"
   }
  ],
- "ts": "2026-11-05 13:09:30"
+ "rules_followed": true
 }

@@ -1,7 +1,7 @@
 {
- "digest": "d25452d47239cb06",
+ "digest": "63972ee9edc176d6",
  "hub": "actions-runner",
- "ts": "2026-11-05 12:54:36",
+ "ts": "2026-11-05 14:12:39",
  "status": "done",
  "lifecycle": "done",
  "requested": 150,
@@ -29,7 +29,7 @@
    "repo": "gammasoft71/xtd",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "f6e929a357533ee9"
+   "sha": "4039bb5d9226c038"
   },
   {
    "repo": "hkr04/cpp-mcp",
