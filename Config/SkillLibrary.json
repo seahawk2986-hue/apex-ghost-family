@@ -12770,7 +12770,336 @@
    "imports": [],
    "registered": "2026-11-05 11:04:32",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "create_external_cluster_resources_tests",
+   "source_file": "deploy/examples/create-external-cluster-resources-tests.py",
+   "source_repo": "rook/rook",
+   "license": "check repo",
+   "sha256": "4b64ceba2867208e0d11dde8ee70a14134627a554d88f9df8b094f5d2f21f17d",
+   "lines": 288,
+   "first_line": "\"\"\"",
+   "imports": [
+    "importlib",
+    "json",
+    "os",
+    "sys",
+    "unittest"
+   ],
+   "registered": "2026-11-05 11:59:05",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_sprint_last_day",
+   "source_file": ".github/workflows/check-sprint-last-day.py",
+   "source_repo": "longhorn/longhorn",
+   "license": "check repo",
+   "sha256": "b4f30a5176a39ebdd9620e81f3c7bcee0e730979971d76b7011f812384c2878c",
+   "lines": 130,
+   "first_line": "import requests",
+   "imports": [
+    "os",
+    "requests",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:59:05",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "scan_and_notify_testing_items",
+   "source_file": ".github/workflows/scan-and-notify-testing-items.py",
+   "source_repo": "longhorn/longhorn",
+   "license": "check repo",
+   "sha256": "ab85dd8164104ebc5ee5225b285687cb921f3d119d3f0a5a4a40e308dbd88d32",
+   "lines": 309,
+   "first_line": "import requests",
+   "imports": [
+    "json",
+    "os",
+    "requests",
+    "sys",
+    "time"
+   ],
+   "registered": "2026-11-05 11:59:06",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "boilerplate",
+   "source_file": "hack/boilerplate/boilerplate.py",
+   "source_repo": "kubernetes-csi/csi-driver-nfs",
+   "license": "check repo",
+   "sha256": "b93db788473c0868784cf45f9894c493645b5652b3ad3fe81e3ab027c5727b79",
+   "lines": 203,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "difflib",
+    "glob",
+    "json",
+    "mmap",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:59:07",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "boilerplate",
+   "source_file": "release-tools/boilerplate/boilerplate.py",
+   "source_repo": "kubernetes-csi/csi-driver-nfs",
+   "license": "check repo",
+   "sha256": "c3c9ce1a478ec82cc5a009224d8fc04d7fed80e7cc20b06a4c1b84db309bf076",
+   "lines": 201,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "difflib",
+    "glob",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:59:07",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "boilerplate",
+   "source_file": "hack/boilerplate/boilerplate.py",
+   "source_repo": "kubernetes-csi/csi-driver-smb",
+   "license": "check repo",
+   "sha256": "dc58170ced7a717d58d58cf5a6d20455225315f152bdd4091885c1a2cba1ff96",
+   "lines": 203,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "difflib",
+    "glob",
+    "json",
+    "mmap",
+    "os",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:59:09",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "aws_cleanup_legacy_txt_records",
+   "source_file": "scripts/aws-cleanup-legacy-txt-records.py",
+   "source_repo": "kubernetes-sigs/external-dns",
+   "license": "check repo",
+   "sha256": "d161fbf43752a76fdee5b55a250774cfc05d39a5bad3ca926477a9b810b46949",
+   "lines": 251,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "boto3",
+    "json",
+    "os",
+    "time",
+    "uuid"
+   ],
+   "registered": "2026-11-05 11:59:10",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "update_route53_k8s_txt_owner",
+   "source_file": "scripts/update_route53_k8s_txt_owner.py",
+   "source_repo": "kubernetes-sigs/external-dns",
+   "license": "check repo",
+   "sha256": "e81bd0f65f1a9cecd17bd813227f6902ac394ba9fe813c8712b308cb80225eaa",
+   "lines": 129,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "boto3"
+   ],
+   "registered": "2026-11-05 11:59:10",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "filter_commit_messages",
+   "source_file": "scripts/filter-commit-messages.py",
+   "source_repo": "Elumenotion/GuideAnts",
+   "license": "check repo",
+   "sha256": "fa84dd6c1c615b5812f1e8460bf4da69a04d17f3f8695280eb1e9c17d737c058",
+   "lines": 44,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:59:12",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "timeline_compile",
+   "source_file": "scripts/timeline_compile.py",
+   "source_repo": "Elumenotion/GuideAnts",
+   "license": "check repo",
+   "sha256": "4ec2526f4d2e18055e43508850f1bfec92387b2cf0e4089fcce3615ae7a02314",
+   "lines": 233,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:59:12",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "env",
+   "source_file": "alembic/env.py",
+   "source_repo": "Martossien/transcria",
+   "license": "check repo",
+   "sha256": "4f561411f8bd2ae7f33c9c2c444e105c2b6aacda3d2b62a6166ab952759d266e",
+   "lines": 72,
+   "first_line": "\"\"\"Environnement Alembic pour TranscrIA.",
+   "imports": [],
+   "registered": "2026-11-05 11:59:13",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "8f2b6d0e4a1c_add_job_queue_waiting_order_index",
+   "source_file": "alembic/versions/8f2b6d0e4a1c_add_job_queue_waiting_order_index.py",
+   "source_repo": "Martossien/transcria",
+   "license": "check repo",
+   "sha256": "159a2e171298a0123d7cd5de6fbcf07309792f14623b2e396f593142a16c1838",
+   "lines": 33,
+   "first_line": "\"\"\"add job queue waiting order index",
+   "imports": [
+    "sqlalchemy"
+   ],
+   "registered": "2026-11-05 11:59:13",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "fixtures",
+   "source_file": "analytics/lib/fixtures.py",
+   "source_repo": "zulip/zulip",
+   "license": "check repo",
+   "sha256": "636968997d0cda6e54c46d28b18b68127ef2550ecb0d79490ca4686cf45e9fe9",
+   "lines": 78,
+   "first_line": "from math import sqrt",
+   "imports": [],
+   "registered": "2026-11-05 11:59:19",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "time_utils",
+   "source_file": "analytics/lib/time_utils.py",
+   "source_repo": "zulip/zulip",
+   "license": "check repo",
+   "sha256": "b61e824bcc0a76577f47b8a4276152b767995c85b87826270fce91f29fd6f4d6",
+   "lines": 34,
+   "first_line": "from datetime import datetime, timedelta",
+   "imports": [],
+   "registered": "2026-11-05 11:59:20",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "crowdin_contributors",
+   "source_file": ".ci/crowdin-contributors.py",
+   "source_repo": "znc/znc",
+   "license": "check repo",
+   "sha256": "9bc1be3d951293f645e04cc70d8feaeeae5e03d81d4a98b9bae0fcdbaefb9030",
+   "lines": 26,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "sys"
+   ],
+   "registered": "2026-11-05 11:59:21",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "translation_tmpl",
+   "source_file": "cmake/translation_tmpl.py",
+   "source_repo": "znc/znc",
+   "license": "check repo",
+   "sha256": "1fc65324f06dc18ee668da2358486abc2723509a215ccaa35474894a53e1306f",
+   "lines": 55,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "glob",
+    "os",
+    "re"
+   ],
+   "registered": "2026-11-05 11:59:21",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "app",
+   "source_file": "backend/analytics_server/app.py",
+   "source_repo": "middlewarehq/middleware",
+   "license": "check repo",
+   "sha256": "625b0f1d5c6d92ececdfb76fd338332417ebfd08ae06c9d16109c122b1bcf02b",
+   "lines": 41,
+   "first_line": "from os import getenv",
+   "imports": [],
+   "registered": "2026-11-05 11:59:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "env",
+   "source_file": "backend/analytics_server/env.py",
+   "source_repo": "middlewarehq/middleware",
+   "license": "check repo",
+   "sha256": "d476fa86526238bb53773b0d23a33c2011d82e1f53a042cf009585b765564769",
+   "lines": 11,
+   "first_line": "from os import getenv",
+   "imports": [],
+   "registered": "2026-11-05 11:59:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "timeseries_cli",
+   "source_file": "resources/timeseries-cli.py",
+   "source_repo": "jitsi/jitsi-videobridge",
+   "license": "check repo",
+   "sha256": "212c4f6f864392f9282e4ec89c3ec2380261f42c3d34b29a1331d59495fa97b3",
+   "lines": 204,
+   "first_line": "#!/usr/bin/env python",
+   "imports": [
+    "argparse",
+    "matplotlib",
+    "pandas"
+   ],
+   "registered": "2026-11-05 11:59:25",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "Changes",
+   "source_file": "changedetectionio/api/Changes.py",
+   "source_repo": "dgtlmoon/changedetection.io",
+   "license": "check repo",
+   "sha256": "f640b1990b15076e0ac7f16cddb927dc3dc00cf62271900352ee9f653584cafe",
+   "lines": 72,
+   "first_line": "import os",
+   "imports": [
+    "os",
+    "time"
+   ],
+   "registered": "2026-11-05 11:59:26",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "Import",
+   "source_file": "changedetectionio/api/Import.py",
+   "source_repo": "dgtlmoon/changedetection.io",
+   "license": "check repo",
+   "sha256": "b60e606a267411664841b3dfd14390618e252642913852a8cb2aaa275eabd278",
+   "lines": 255,
+   "first_line": "from changedetectionio.strtobool import strtobool",
+   "imports": [
+    "json",
+    "threading"
+   ],
+   "registered": "2026-11-05 11:59:26",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-05 11:04:32"
+ "built": "2026-11-05 11:59:26"
 }
