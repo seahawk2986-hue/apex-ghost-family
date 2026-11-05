@@ -26,8 +26,12 @@ jobs:
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
-          pip install --quiet mini-swe-agent pytest mcp mcp-runtime || pip install --quiet mini-swe-agent pytest mcp
+          pip install --quiet mini-swe-agent pytest mcp
           python -c "import mcp" || pip install --quiet mcp
+          if [ -z "$GROQ_API_KEY" ]; then
+            echo "GROQ_API_KEY secret not set - founder-gate pending; the beat is skipped honestly."
+            exit 0
+          fi
           python - <<'PY'
           import sys
           sys.path.insert(0, 'Scripts')

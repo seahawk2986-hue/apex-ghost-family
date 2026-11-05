@@ -21,15 +21,13 @@ import sys
 import tempfile
 import time
 
-import psutil
-
 if hasattr(sys.stdout, "reconfigure") and not getattr(sys.stdout, "_apex_reconfigured", False):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     sys.stdout._apex_reconfigured = True
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
     sys.stderr._apex_reconfigured = True
 
-REPO = r"C:\Users\seaha\Downloads\Apex-With-Triggers-Fixed"
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LEDGER = os.path.join(REPO, "Scores", "swe_smoke.jsonl")
 TURNS_CAP = 6
 TASK_TURNS = 3
@@ -306,7 +304,13 @@ def run_task(task, model_name=None):
         for lane_model in chain:
             if lane_model.startswith("studio/"):
                 # the zero-cap local floor: LM Studio's openai-compat seat
-                if psutil.virtual_memory().available / (1024 ** 3) < 4.5:
+                try:
+                    _free_gb = __import__("psutil").virtual_memory().available / (1024 ** 3)
+                except ImportError:
+                    print("[swe-smoke]: studio floor skipped honestly "
+                          "(psutil unavailable on this runner - RAM gate unknowable)")
+                    continue
+                if _free_gb < 4.5:
                     print("[swe-smoke]: studio floor skipped honestly "
                           "(RAM < 4.5GB - the 30B MoE needs its window)")
                     continue

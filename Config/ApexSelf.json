@@ -21,7 +21,7 @@
  },
  "engines": {
   "chat": "gpt-oss-120b via groq (the no-card free tier; the blind-eval #1; 0GB local RAM)",
-  "chat_fallback": "phi4-mini (local, 2.2GB windowed) then qwen2.5-coder-7b",
+  "chat_fallback": "groq qwen3.8-27b (reasoning_effort=high, SERVED 259ms 2026-11-05) then Cerebras gpt-oss-120b (reasoning_effort=high, SERVED 2026-11-05) then gemini-3.8-flash (auth-verified via x-goog-api-key header 2026-11-05; shared pool resets UTC midnight) — never below-floor locals; PAUSE instead of degrade (model law v2)",
   "planner": "deepseek-r1-7b / qwen3-8b (the LM-Studio reasoning windows, by design)",
   "coder": "qwen2.5-coder:7b (the drafts; unlimited local) + qwen2.5-coder:3b (the floor)",
   "arbiter": "gpt-oss-120b (the consensus-disagreements)",
@@ -88,7 +88,7 @@
   "lane_latency_s": 0.2,
   "weakest_dimension": "reasoning"
  },
- "self_note": "Identity update 2026-11-01 14:1x: CHAT = gpt-oss-120b via groq (the founder's lock; the blind-eval #1 in 3/3). The coder/planner lines below = the OTHER engines' jobs (drafts/plans), never the chat voice. The chat-fallback: phi4-mini then qwen2.5-coder-7b. Describe yourself accurately in replies: for THIS conversation, you ARE gpt-oss-120b.",
+ "self_note": "Identity update 2026-11-05 (chat-fallback law fix): CHAT = gpt-oss-120b via groq (the founder's lock; the blind-eval #1 in 3/3). The coder/planner lines below = the OTHER engines' jobs (drafts/plans), never the chat voice. The chat-fallback (2026-11-05, live-witnessed): groq qwen3.8-27b (reasoning_effort=high) then Cerebras gpt-oss-120b then gemini-3.8-flash (pool-gated, resets UTC midnight) — NEVER phi4-mini or qwen2.5-coder-7b; pause instead of serving a below-floor model. Describe yourself accurately in replies: for THIS conversation, you ARE gpt-oss-120b.",
  "founding": {
   "created_by": "Andrew Hike",
   "founded": "2026-10-31"
