@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8">
+<html lang="en" data-gc=""><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Apex - verified repository care by an agent family</title>
-<meta name="description" content="Triage reports, patch-packs with tests, verified deliverables. Disclosed on every artifact; human-verified before delivery.">
+<title>Apex - tested fixes and triage for your repo, in 24 hours</title>
+<meta name="description" content="Send a repo link and one paragraph. Get a prioritized triage report, patch diffs, tests and run receipts within 24 hours. AI-drafted, founder-checked, with a public sample you can verify.">
 <link rel="canonical" href="https://seahawk2986-hue.github.io/apex-ghost-family/">
-<meta property="og:title" content="Apex - verified repository care">
-<meta property="og:description" content="Triage reports, patch-packs with tests. Disclosed, human-verified, delivered in 24h.">
+<meta property="og:title" content="Apex - tested fixes for your repo">
+<meta property="og:description" content="Triage report, patches, tests and receipts in 24 hours. AI-drafted, founder-checked, with a public sample you can verify.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://seahawk2986-hue.github.io/apex-ghost-family/og_banner.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:url" content="https://seahawk2986-hue.github.io/apex-ghost-family/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>\U0001F441</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128065;</text></svg>">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@graph": [
  {"@type": "Product", "name": "Repository Triage & Patch Pack", "brand": {"@type": "Brand", "name": "apex-ghost-family"}, "offers": {"@type": "Offer", "price": "75.00", "priceCurrency": "USD", "url": "https://buy.polar.sh/polar_cl_B5IRFENVd7Cs0ZyHCKQK1KND9brqA0FLQTQ7A46OS7m", "availability": "https://schema.org/InStock"}},
@@ -18,138 +18,131 @@
  {"@type": "Product", "name": "Data/ML Pipeline Pack", "brand": {"@type": "Brand", "name": "apex-ghost-family"}, "offers": {"@type": "Offer", "price": "200.00", "priceCurrency": "USD", "url": "https://buy.polar.sh/polar_cl_Z13ve7lCOz6os6FKuno354De4fI43rq3wEeOx0eFXb9", "availability": "https://schema.org/InStock"}}]}
 </script>
 <style>
-:root{--bg:#fff;--fg:#1f2328;--muted:#656d76;--acc:#0969da;--grn:#1a7f37;
---brd:#d0d7de;--soft:#f6f8fa;--wbg:#fff8e1;--wbar:#d4a72c;--r:8px;--max:920px}
-@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--fg:#e6edf3;--muted:#8b949e;
---acc:#4493f8;--grn:#3fb950;--brd:#30363d;--soft:#161b22;--wbg:#28240f;--wbar:#d4a72c}}
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,
-"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:var(--bg);
-line-height:1.6}a{color:var(--acc)}.skip{position:absolute;left:-999px;top:0;
-background:var(--acc);color:#fff;padding:8px 16px;z-index:10}.skip:focus{left:8px}
+:root{--bg:#fff;--fg:#1f2328;--muted:#59636e;--acc:#0969da;--grn:#1a7f37;--red:#cf222e;
+--brd:#d0d7de;--soft:#f6f8fa;--r:8px;--max:940px}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;
+--acc:#4493f8;--grn:#3fb950;--red:#f85149;--brd:#30363d;--soft:#161b22}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,
+BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--fg);
+background:var(--bg);line-height:1.6}a{color:var(--acc)}
+.skip{position:absolute;left:-999px;top:0;background:var(--acc);color:#fff;padding:8px 16px;z-index:10}
+.skip:focus{left:8px}
 header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--brd);
-padding:12px 24px;display:flex;gap:20px;align-items:center;z-index:9;flex-wrap:wrap}
-.brand{font-weight:700}nav a{margin-right:14px;text-decoration:none}
-main{max-width:var(--max);margin:0 auto;padding:24px 20px}
-.hero{padding:34px 0 6px}.hero h1{font-size:2.05em;margin:0 0 10px;line-height:1.2}
-.hero p{color:var(--muted);font-size:1.06em;max-width:660px}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:18px 0 4px}
-.cta{background:var(--acc);color:#fff;padding:11px 22px;border-radius:var(--r);
-text-decoration:none;font-weight:700;display:inline-block}
-.cta2{background:var(--soft);color:var(--fg);border:1px solid var(--brd);padding:
-11px 18px;border-radius:var(--r);text-decoration:none;font-weight:600}
-.micro{color:var(--muted);font-size:.88em}
-.stats{display:flex;gap:14px;flex-wrap:wrap;margin:16px 0}
-.stat{background:var(--soft);border:1px solid var(--brd);border-radius:var(--r);
-padding:8px 14px;font-size:.94em}.stat b{font-size:1.05em}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:16px;margin:20px 0}
-.card{border:1px solid var(--brd);border-radius:12px;padding:18px;display:flex;
-flex-direction:column;gap:8px}.card h3{margin:0;font-size:1.08em}
-.price{font-size:1.5em;font-weight:700}.card ul{margin:6px 0;padding-left:18px;
-color:var(--muted);font-size:.93em}
-.buy{background:var(--acc);color:#fff;padding:11px 18px;border-radius:var(--r);
-text-decoration:none;font-weight:600;text-align:center;margin-top:auto}
-.panel{background:var(--soft);border-left:4px solid var(--grn);padding:12px 16px;
-border-radius:4px;margin:16px 0;font-size:.97em}
-.warn{background:var(--wbg);border-left:4px solid var(--wbar);padding:10px 14px;
-border-radius:4px;font-size:.94em;margin:14px 0}
+padding:10px 24px;display:flex;gap:18px;align-items:center;z-index:9;flex-wrap:wrap}
+.brand{font-weight:700}nav a{margin-right:14px;text-decoration:none;font-size:.95em;white-space:nowrap}
+main{max-width:var(--max);margin:0 auto;padding:12px 20px 24px}
+section{padding-top:8px}h2{margin:1.8em 0 .5em;font-size:1.4em}
+.eyebrow{color:var(--grn);font-weight:700;font-size:.82em;letter-spacing:.06em;text-transform:uppercase;margin:30px 0 6px}
+.hero h1{font-size:2.15em;margin:0 0 12px;line-height:1.18;max-width:780px}
+.hero p.lead{color:var(--muted);font-size:1.1em;max-width:700px;margin:0}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:22px 0 6px}
+.cta,.buy{background:var(--acc);color:#fff;border-radius:var(--r);text-decoration:none;font-weight:700;
+display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px}
+.cta2{background:var(--soft);color:var(--fg);border:1px solid var(--brd);border-radius:var(--r);
+text-decoration:none;font-weight:600;display:inline-flex;align-items:center;min-height:46px;padding:0 18px}
+.micro{color:var(--muted);font-size:.88em;margin:6px 0}
+.guar{border:1px solid var(--grn);border-left:4px solid var(--grn);border-radius:var(--r);padding:10px 14px;margin:14px 0;max-width:720px;font-size:.97em}.guar p{margin:4px 0}
+.honest{background:var(--soft);border:1px solid var(--brd);border-radius:var(--r);padding:10px 14px;
+font-size:.94em;margin:18px 0;max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:16px 0}
+.card{border:1px solid var(--brd);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.card h3{margin:0;font-size:1.08em}.price{font-size:1.6em;font-weight:700}
+.card ul{margin:4px 0;padding-left:18px;color:var(--muted);font-size:.93em}
+.best{font-size:.92em;margin:0}.buy{margin-top:auto}
+a.pf{display:block;border:1px solid var(--brd);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--fg)}
+a.pf:hover{border-color:var(--acc)}a.pf b{display:block;color:var(--acc)}a.pf span{color:var(--muted);font-size:.92em}
+.finding{border:1px solid var(--brd);border-left:4px solid var(--red);border-radius:var(--r);padding:12px 16px;margin:14px 0;background:var(--soft)}
+.finding p{margin:4px 0}.chip{display:inline-block;background:var(--red);color:#fff;border-radius:99px;padding:0 9px;font-size:.78em;font-weight:700;margin-right:6px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}
+pre{margin:6px 0;padding:8px 12px;background:var(--bg);border:1px solid var(--brd);border-radius:6px;overflow-x:auto}
+.panel{background:var(--soft);border-left:4px solid var(--grn);padding:12px 16px;border-radius:4px;margin:16px 0}
+.care{border:2px solid var(--acc);border-radius:12px;padding:18px;margin:16px 0}
 .steps{counter-reset:st;padding-left:0;list-style:none}
-.steps li{margin:10px 0;padding-left:36px;position:relative}
-.steps li:before{counter-increment:st;content:counter(st);position:absolute;left:0;
-top:2px;width:24px;height:24px;border-radius:50%;background:var(--soft);
-border:1px solid var(--brd);display:grid;place-items:center;font-size:.85em;
-font-weight:700}
-details{border:1px solid var(--brd);border-radius:var(--r);padding:10px 14px;
-margin:10px 0}summary{cursor:pointer;font-weight:600}
-h2{margin-top:2em}a:focus,.buy:focus,.cta:focus{outline:2px solid var(--acc);
-outline-offset:2px}footer{border-top:1px solid var(--brd);padding:20px 24px;
-color:var(--muted);font-size:.9em}
+.steps li{margin:10px 0;padding-left:38px;position:relative}
+.steps li:before{counter-increment:st;content:counter(st);position:absolute;left:0;top:1px;width:26px;height:26px;
+border-radius:50%;background:var(--soft);border:1px solid var(--brd);display:grid;place-items:center;font-size:.85em;font-weight:700}
+details{border:1px solid var(--brd);border-radius:var(--r);padding:10px 14px;margin:10px 0}
+summary{cursor:pointer;font-weight:600}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+footer{border-top:1px solid var(--brd);padding:20px 24px;color:var(--muted);font-size:.9em}
+@media (max-width:560px){.hero h1{font-size:1.75em}header{padding:10px 16px}main{padding:8px 16px 20px}}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header aria-label="Site"><span class="brand">&#128065; Apex</span>
-<nav aria-label="Sections"><a href="#packs">Packs</a><a href="#how">How it
-works</a><a href="#honesty">Honesty</a><a href="#faq">FAQ</a></nav></header>
+<nav aria-label="Sections"><a href="#proof">Proof</a><a href="#packs">Packs</a><a href="#care">Monthly care</a><a href="#how">How it works</a><a href="#faq">FAQ</a></nav></header>
 <main id="main">
-<section class="hero"><h1>Verified repository care, by an agent family
-that shows its work.</h1>
-<p>Apex does real work - triage, fixes, tests, schemas - behind a 5-stage
-quality gate, with <b>"automated draft (disclosed)" on every artifact</b>
-and <b>a human verifying before delivery</b>.</p>
-<div class="panel" style="margin:18px 0"><b>Try it FREE first:</b> the
-<a href="https://github.com/seahawk2986-hue/open-triage-demo">open-triage-demo</a>
-repo - a real <a href="https://github.com/seahawk2986-hue/open-triage-demo/blob/main/SAMPLE_TRIAGE.md">sample triage report</a>
-(read it before you buy anything) + claim your free one via an issue.</div>
-<div class="cta-row"><a class="cta"
-href="https://buy.polar.sh/polar_cl_B5IRFENVd7Cs0ZyHCKQK1KND9brqA0FLQTQ7A46OS7m">Order
-the triage report - $75</a><a class="cta2" href="#how">See how it
-works</a></div>
-<div class="micro">Secure checkout via Stripe (Polar) &middot; delivery
-within 24h &middot; one revision included within 7 days</div>
-<div class="stats" role="list"><span class="stat"><b>2</b> PRs in
-review</span><span class="stat"><b>563</b> tracked skills</span>
-<span class="stat"><b>1,116</b> sourced papers</span><span class="stat">
-<b>24h</b> delivery</span></div></section>
-<section id="packs" aria-label="The packs"><h2>The packs</h2>
+<section class="hero">
+<p class="eyebrow">For maintainers and small teams</p>
+<h1>Your repo's top problems, found, patched and tested in 24 hours.</h1>
+<p class="lead">Send a repo link and one paragraph. You get a prioritized report, patch diffs, tests and run receipts. AI agents draft it; the founder, Andrew Hike, checks it before it ships, and every file says so.</p>
+<div class="cta-row"><a class="cta" href="https://buy.polar.sh/polar_cl_B5IRFENVd7Cs0ZyHCKQK1KND9brqA0FLQTQ7A46OS7m">Get the triage report - $75</a>
+<a class="cta2" href="https://github.com/seahawk2986-hue/apex-ghost-family/issues/new?title=Free+triage+request&amp;body=Repo+link%3A+%0A%0AWhat+hurts+most%3A+">Try a free triage first</a></div>
+<div class="guar"><p><b>The guarantee.</b> Every patch comes with a test that fails on your code today and passes on the fix. If it does not, you pay nothing.</p>
+<p><b>Capacity.</b> I take 2 repos a day. A human checks every delivery. &mdash; Andrew Hike, founder</p></div>
+<p class="micro">Secure checkout by Polar (cards via Stripe) &middot; 24 hours from your repo link &middot; one revision within 7 days</p>
+<p class="honest"><b>New shop, no customer reviews yet.</b> So the proof below is something you can check yourself, not a quote.</p>
+</section>
+
+<section id="proof"><h2>Check our work before you pay</h2>
 <div class="grid">
-<article class="card"><h3>Repository Triage &amp; Patch Pack</h3>
-<span class="price">$75</span><ul><li>10-point triage report
-(report.md)</li><li>the prioritized patch-pack (the diffs)</li><li>the
-tests + the run-receipts</li></ul>
-<a class="buy"
-href="https://buy.polar.sh/polar_cl_B5IRFENVd7Cs0ZyHCKQK1KND9brqA0FLQTQ7A46OS7m">Start
-a triage</a></article>
+<a class="pf" href="https://github.com/seahawk2986-hue/open-triage-demo/blob/main/SAMPLE_TRIAGE.md"><b>Sample report</b><span>10 findings on a real public repo, each with a command you can run.</span></a>
+<a class="pf" href="https://github.com/seahawk2986-hue/open-triage-demo/blob/main/patches/0001-claimcheck-portable-root.diff"><b>Sample patch + test</b><span>A one-line fix and a test that fails before it and passes after.</span></a>
+<a class="pf" href="https://github.com/seahawk2986-hue/open-triage-demo/blob/main/RECEIPTS.md"><b>Run receipts</b><span>Every command and its output, with checksums.</span></a></div>
+<div class="finding"><p><span class="chip">High</span><b>408 of 485 Python files hard-code a Windows <code>C:\Users\...</code> path</b></p>
+<p>So the code cannot run or be tested on any other machine, Linux CI included. This is finding #1 in the sample report.</p>
+<p>Check it yourself:</p><pre><code>git grep -lE 'C:\\Users\\' -- '*.py' | wc -l</code></pre>
+<p>Fix: derive the root from <code>__file__</code>. The patch and its test are in the sample.</p></div>
+<p class="micro">We also send fixes to real projects. Open pull requests: <a href="https://github.com/rtk-ai/rtk/pull/4929">rtk #4929</a> &middot; <a href="https://github.com/dream-machine-systems/dream-machine-os/pull/23">dream-machine-os #23</a>.</p>
+</section>
+
+<section id="packs"><h2>Pick a pack</h2>
+<div class="grid">
+<article class="card"><h3>Repository Triage &amp; Patch Pack</h3><span class="price">$75</span>
+<p class="best"><b>Best for:</b> a repo you inherited, or a second opinion before you invest more.</p>
+<ul><li>10-point triage report (report.md)</li><li>the prioritized patch-pack (the diffs)</li><li>the tests + the run-receipts</li></ul>
+<a class="buy" href="https://buy.polar.sh/polar_cl_B5IRFENVd7Cs0ZyHCKQK1KND9brqA0FLQTQ7A46OS7m">Start a triage</a></article>
 <article class="card"><h3>Code Fix Pack</h3><span class="price">$150</span>
-<ul><li>one named bug: located + patched</li><li>a test proving the
-fix</li><li>the run-receipts included</li></ul>
-<a class="buy"
-href="https://buy.polar.sh/polar_cl_gQ7mE3GkE1JLIQZzGrnwlD6YH2A4HpRLNW64a34sMrX">Fix
-my bug</a></article>
-<article class="card"><h3>Data/ML Pipeline Pack</h3><span class="price">
-$200</span><ul><li>the schema + the loader</li><li>the validation
-receipts</li><li>the docs for one task</li></ul>
-<a class="buy"
-href="https://buy.polar.sh/polar_cl_Z13ve7lCOz6os6FKuno354De4fI43rq3wEeOx0eFXb9">Build
-my pipeline</a></article></div>
-<div class="panel" id="before"><b>Before you order, know:</b> you send us
-the repo URL + one paragraph on the bug or task - that's the only input.
-Public repos are fastest; for private ones we'll agree on access after
-checkout. <b>Not sure it fits? <a
-href="https://github.com/seahawk2986-hue/apex-ghost-family/issues">Open a
-free issue</a></b> - no checkout needed.</div></section>
+<p class="best"><b>Best for:</b> one failing test or one bug you can describe in a sentence.</p>
+<ul><li>one named bug: located + patched</li><li>a test proving the fix</li><li>the run-receipts included</li></ul>
+<a class="buy" href="https://buy.polar.sh/polar_cl_gQ7mE3GkE1JLIQZzGrnwlD6YH2A4HpRLNW64a34sMrX">Fix my bug</a></article>
+<article class="card"><h3>Data/ML Pipeline Pack</h3><span class="price">$200</span>
+<p class="best"><b>Best for:</b> one dataset that needs a clean schema and a validated loader.</p>
+<ul><li>the schema + the loader</li><li>the validation receipts</li><li>the docs for one task</li></ul>
+<a class="buy" href="https://buy.polar.sh/polar_cl_Z13ve7lCOz6os6FKuno354De4fI43rq3wEeOx0eFXb9">Build my pipeline</a></article></div>
+<div class="panel" id="order"><b>How ordering works.</b>
+<ol class="steps"><li>Pick a pack and check out.</li>
+<li>In the checkout box <b>&ldquo;Repo link + one paragraph on the task&rdquo;</b>, paste your repo link and describe the job. Private repo? Say so; we agree on access afterwards.</li>
+<li>Your files arrive within 24 hours of that.</li></ol>
+Not sure it fits? <a href="https://github.com/seahawk2986-hue/apex-ghost-family/issues/new?title=Question+before+ordering&amp;body=Repo+link%3A+%0A%0AWhat+do+you+need%3F+">Ask first</a>, no checkout needed. Not a fit: security audits, full rewrites, or anything that needs production access.</div>
+</section>
+
+<section id="care"><h2>Need it every month?</h2>
+<div class="care"><h3 style="margin-top:0">Monthly Repo Care</h3>
+<p>We triage, fix and test your repo on a schedule, with test and dependency upkeep, for one repo. Tell us about your repo and we reply with a scoped plan and a price. Nothing to pay now.</p>
+<a class="cta" href="https://github.com/seahawk2986-hue/apex-ghost-family/issues/new?title=Monthly+care+inquiry&amp;body=Repo+link%3A+%0A%0AWhat+do+you+need+each+month%3F+">Ask about monthly care</a></div>
+</section>
+
 <section id="how"><h2>How it works</h2>
-<ol class="steps"><li><b>You send the repo URL + one paragraph.</b></li>
-<li><b>The family drafts</b> - the triage, the patches, the tests - all
-disclosed, all receipted.</li><li><b>The founder verifies, then your
-files arrive</b> - within 24 hours; one revision within 7 days.</li>
-</ol></section>
-<section id="honesty"><h2>The honesty policy</h2><div class="warn">Every
-artifact carries <b>"automated draft (disclosed)"</b>; a human verifies
-before delivery; the ledger's 141 audited rows show <b>zero
-reward-theater</b>; the loop refuses to take any task a person has
-already promised.</div>
-<p>Receipts: <a href="https://github.com/rtk-ai/rtk/pull/4929">PR
-#4929</a> &middot; <a
-href="https://github.com/dream-machine-systems/dream-machine-os/pull/23">PR
-#23</a> &middot; the <a
-href="https://github.com/seahawk2986-hue/apex-ghost-family">hub's
-ledger</a>.</p></section>
+<ol class="steps"><li><b>You send a repo link and one paragraph</b> in the checkout box.</li>
+<li><b>AI agents draft the work</b>: the triage, the patches, the tests. Every file is stamped &ldquo;automated draft (disclosed)&rdquo;.</li>
+<li><b>The founder checks it, then your files arrive</b>, within 24 hours; one revision within 7 days.</li></ol></section>
+
+<section id="honesty"><h2>How we keep it honest</h2>
+<ul><li>Every artifact is stamped <b>&ldquo;automated draft (disclosed)&rdquo;</b>.</li>
+<li>The founder, Andrew Hike, checks each delivery by hand before it ships.</li>
+<li>Every command we ran, and its output, is in the receipts.</li>
+<li>We skip any task someone else has already claimed.</li></ul>
+<p class="micro">Under the hood: <a href="https://github.com/seahawk2986-hue/apex-ghost-family">the hub repo and its ledger</a>.</p></section>
+
 <section id="faq"><h2>FAQ</h2>
-<details open><summary>What do I receive, exactly?</summary><p>Files: an
-<code>report.md</code> + a <code>patches/</code> pack + <code>tests/</code>
-with the run-receipts. No subscription.</p></details>
-<details><summary>How fast?</summary><p>Within 24 hours; one revision
-within 7 days.</p></details>
-<details><summary>Is the work automated?</summary><p>Yes - disclosed on
-every artifact; a human verifies before anything ships.</p></details>
-<details><summary>What do you need from me?</summary><p>The repo URL +
-one paragraph. That's the only input.</p></details>
-<details><summary>Private repos?</summary><p>Yes, we'll coordinate access
-after checkout.</p></details>
-<details><summary>What if it doesn't fit?</summary><p>Open a <a
-href="https://github.com/seahawk2986-hue/apex-ghost-family/issues">free
-issue</a> first - no checkout needed.</p></details></section>
-</main><footer>&copy; 2026 apex-ghost-family &middot; the founder: Andrew
-Hike &middot; <a
-href="https://github.com/seahawk2986-hue/apex-ghost-family/issues">the
-support/issues</a> &middot; site updated 2026-11-01</footer>
+<details open><summary>What do I receive, exactly?</summary><p>Files: a <code>report.md</code>, a <code>patches/</code> pack and <code>tests/</code> with the run-receipts. No subscription.</p></details>
+<details><summary>How fast?</summary><p>Within 24 hours of getting your repo link and paragraph; one revision within 7 days.</p></details>
+<details><summary>What does the guarantee cover?</summary><p>Every patch ships with a test that fails on your code as it is today and passes once the patch is applied. If it does not, you pay nothing: I refund the order in full.</p></details>
+<details><summary>Is the work automated?</summary><p>AI agents draft it and say so on every artifact. The founder checks everything before it ships.</p></details>
+<details><summary>What do you need from me?</summary><p>A repo link and one paragraph about the task, entered in the checkout box. That is the only input.</p></details>
+<details><summary>Private repos?</summary><p>Yes. Say so in the checkout box and we will agree on access after checkout.</p></details>
+<details><summary>What if it doesn't fit?</summary><p><a href="https://github.com/seahawk2986-hue/apex-ghost-family/issues/new?title=Question+before+ordering&amp;body=Repo+link%3A+%0A%0AWhat+do+you+need%3F+">Ask first</a>, no checkout needed.</p></details></section>
+</main>
+<footer>&copy; 2026 apex-ghost-family &middot; the founder: Andrew Hike &middot; <a href="https://github.com/seahawk2986-hue/apex-ghost-family/issues">support/issues</a> &middot; site updated 2026-11-07</footer>
+<script>(function(){var c=document.documentElement.getAttribute("data-gc");if(!c)return;var s=document.createElement("script");s.async=true;s.src="https://gc.zgo.at/count.js";s.setAttribute("data-goatcounter","https://"+c+".goatcounter.com/count");document.head.appendChild(s);})();</script>
 </body></html>
