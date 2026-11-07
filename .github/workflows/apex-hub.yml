@@ -4,8 +4,8 @@ name: ApexHubWorker
   push:
     branches: [main]
   schedule:
-    - cron: '0 * * * *'   # HOURLY: the outsource-max (a public repo = the
-                          # unlimited free minutes; the honest pacing)
+    - cron: '17 */6 * * *'   # every 6 h: a rotating window over the lead pool (family/hub_round.py);
+                             # slower cadence keeps the hub well inside GitHub Actions terms
   workflow_dispatch:
 
 permissions:

@@ -20,8 +20,19 @@ req = urllib.request.Request(PACKET_URL, headers=UA)
 with urllib.request.urlopen(req, timeout=30) as r:
     pk = json.load(r)
 print("packet pulled: family", pk.get("family"), "| rules", list((pk.get("rules") or {}).keys())[:4])
-pending = (pk.get("parent_knowledge") or {}).get("backlog_slice", [])[:150]
-print("backlog slice to mine:", len(pending))
+import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import hub_rotate as HR
+
+_now = time.time()
+_pool = HR.build_pool((pk.get("parent_knowledge") or {}).get("backlog_slice", []),
+                      (HR.load("family/leads_grain.json", {}) or {}).get("leads", []))
+_cur = HR.load("family/hub_cursor.json", {"i": 0})
+_seen = HR.load("family/hub_seen.json", {})
+pending, _next = HR.pick_window(_pool, _seen, int(_cur.get("i", 0)), 60, _now)
+print("pool:", len(_pool), "| window:", len(pending), "| cursor", _cur.get("i", 0), "->", _next,
+      "| skipped as recently mined:", len(_pool) - len(pending))
 
 ok, mined = 0, []
 for lead in pending:
@@ -43,6 +54,11 @@ for lead in pending:
                                   "sha": hashlib.sha256(body).hexdigest()[:16]})
     except Exception:
         continue
+
+for _l in pending:
+    _seen[_l.lower()] = _now
+HR.save("family/hub_seen.json", HR.trim_seen(_seen))
+HR.save("family/hub_cursor.json", {"i": _next, "pool": len(_pool), "ts": time.strftime("%Y-%m-%d %H:%M:%S")})
 
 out = {"hub": "actions-runner", "ts": time.strftime("%Y-%m-%d %H:%M:%S"),
        "status": "done", "lifecycle": "done",   # C2 (A2A): explicit task lifecycle
