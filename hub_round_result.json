@@ -1,46 +1,100 @@
 {
  "hub": "actions-runner",
- "ts": "2026-11-08 13:04:38",
+ "ts": "2026-11-08 18:56:54",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
  "ok": 52,
  "mines": [
   {
-   "repo": "max0x7ba/atomic_queue",
+   "repo": "Rookfighter/inifile-cpp",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "0547133636b7ced8"
+   "sha": "ad27737410a9cc70"
   },
   {
-   "repo": "mtmucha/coros",
+   "repo": "ndevilla/iniparser",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "d96aaad19a97713c"
+   "sha": "abea7c9d832dcb4a"
   },
   {
-   "repo": "facebookincubator/dispenso",
+   "repo": "mcmtroffaes/inipp",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "dcf0010d0fd0a1c7"
+   "sha": "e40c242a3a995571"
   },
   {
-   "repo": "vincent212/kaspar-hft",
+   "repo": "metayeti/mINI",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "49c9bb3d5d7672fd"
+   "sha": "c2d0da78b8d98327"
   },
   {
-   "repo": "taskflow/taskflow",
+   "repo": "marzer/tomlplusplus",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "02e9121bbbbf548b"
+   "sha": "4e9a31bd9097ec6f"
   },
   {
-   "repo": "ddemidov/vexcl",
+   "repo": "ToruNiina/toml11",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "7ad0fc8661da082a"
+   "sha": "7ac422e0189d6032"
+  },
+  {
+   "repo": "pinam45/dynamic_bitset",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "59c50fbdfc6c31f7"
+  },
+  {
+   "repo": "teslamotors/fixed-containers",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "346a3e731443597d"
+  },
+  {
+   "repo": "Tessil/hat-trie",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "7b20d82b67db7fb2"
+  },
+  {
+   "repo": "Tessil/hopscotch-map",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "b50b6ce06b257efa"
+  },
+  {
+   "repo": "martinus/robin-hood-hashing",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "dfbc3b95d444e052"
+  },
+  {
+   "repo": "Tessil/robin-map",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "5fb32f5a69f37d43"
+  },
+  {
+   "repo": "martinus/svector",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "40e4c2ce41e9de14"
+  },
+  {
+   "repo": "nlohmann/fifo_map",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "282c0ce04361a862"
+  },
+  {
+   "repo": "Tessil/ordered-map",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "17e536238a0b0f8b"
   }
  ],
  "rules_followed": true
