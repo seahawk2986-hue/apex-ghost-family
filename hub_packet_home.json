@@ -1,83 +1,65 @@
 {
- "digest": "0415203b0d1b40e1",
+ "digest": "2dbe730ff5b93772",
  "hub": "actions-runner",
- "ts": "2026-11-08 01:20:18",
+ "ts": "2026-11-08 07:16:38",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 52,
+ "ok": 51,
  "mines": [
   {
-   "repo": "rfgplk/micron.cpp",
+   "repo": "ekg/vcflib",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "a82a74710284f53f"
+   "sha": "844371468ae93fab"
   },
   {
-   "repo": "Pagghiu/SaneCppLibraries",
+   "repo": "p-ranav/argparse",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "4ab3813a8e445aa1"
+   "sha": "63cf0d9102a78020"
   },
   {
-   "repo": "gammasoft71/xtd",
+   "repo": "jupyter-xeus/cpp-terminal",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "4039bb5d9226c038"
+   "sha": "8eb309d6f4691864"
   },
   {
-   "repo": "hkr04/cpp-mcp",
+   "repo": "jcwangxp/Crossline",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "4ca78a1584382c28"
+   "sha": "80b9ddc6b66b9f89"
   },
   {
-   "repo": "Dobiasd/frugally-deep",
+   "repo": "evgenykislov/ctrl-c",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "ade0802382527573"
+   "sha": "b428fb8a902f08b8"
   },
   {
-   "repo": "flashlight/flashlight",
+   "repo": "p-ranav/indicators",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "83019abe4094c7cd"
+   "sha": "b017912cc16bf24b"
   },
   {
-   "repo": "oneapi-src/oneDNN",
+   "repo": "a-n-t-h-o-n-y/TermOx",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "9137b16c7fe4662e"
+   "sha": "d28ea6c3d8824a3b"
   },
   {
-   "repo": "volt-software/ichor",
+   "repo": "google/brotli",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "e242fb55b5beb55d"
+   "sha": "e45155f191dab9d8"
   },
   {
-   "repo": "libuv/libuv",
+   "repo": "ariya/FastLZ",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "c21a178b9518fea8"
-  },
-  {
-   "repo": "skypjack/uvw",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7bdd8e519a9cc6f2"
-  },
-  {
-   "repo": "adamstark/AudioFile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b023032642cc770c"
-  },
-  {
-   "repo": "libAudioFlux/audioFlux",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c983a1870ff2710d"
+   "sha": "3255d47f1d5854f8"
   }
  ],
  "rules_followed": true
