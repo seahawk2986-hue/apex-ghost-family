@@ -1,64 +1,46 @@
 {
  "hub": "actions-runner",
- "ts": "2026-11-08 07:16:38",
+ "ts": "2026-11-08 13:04:38",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 51,
+ "ok": 52,
  "mines": [
   {
-   "repo": "ekg/vcflib",
+   "repo": "max0x7ba/atomic_queue",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "844371468ae93fab"
+   "sha": "0547133636b7ced8"
   },
   {
-   "repo": "p-ranav/argparse",
+   "repo": "mtmucha/coros",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "63cf0d9102a78020"
+   "sha": "d96aaad19a97713c"
   },
   {
-   "repo": "jupyter-xeus/cpp-terminal",
+   "repo": "facebookincubator/dispenso",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "8eb309d6f4691864"
+   "sha": "dcf0010d0fd0a1c7"
   },
   {
-   "repo": "jcwangxp/Crossline",
+   "repo": "vincent212/kaspar-hft",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "80b9ddc6b66b9f89"
+   "sha": "49c9bb3d5d7672fd"
   },
   {
-   "repo": "evgenykislov/ctrl-c",
+   "repo": "taskflow/taskflow",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "b428fb8a902f08b8"
+   "sha": "02e9121bbbbf548b"
   },
   {
-   "repo": "p-ranav/indicators",
+   "repo": "ddemidov/vexcl",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "b017912cc16bf24b"
-  },
-  {
-   "repo": "a-n-t-h-o-n-y/TermOx",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "d28ea6c3d8824a3b"
-  },
-  {
-   "repo": "google/brotli",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e45155f191dab9d8"
-  },
-  {
-   "repo": "ariya/FastLZ",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "3255d47f1d5854f8"
+   "sha": "7ad0fc8661da082a"
   }
  ],
  "rules_followed": true
