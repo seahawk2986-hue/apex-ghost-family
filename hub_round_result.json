@@ -1,10 +1,83 @@
 {
  "hub": "actions-runner",
- "ts": "2026-11-09 13:27:43",
+ "ts": "2026-11-09 19:08:13",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 59,
- "mines": [],
+ "ok": 58,
+ "mines": [
+  {
+   "repo": "MindWorkAI/AI-Studio",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "bc85dc85a6a91acb"
+  },
+  {
+   "repo": "snesrev/zelda3",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "1e0c51d450b2638e"
+  },
+  {
+   "repo": "nothings/stb",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "f80d39c467ada53b"
+  },
+  {
+   "repo": "iryoku/smaa",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "2e9c8e68ff718322"
+  },
+  {
+   "repo": "ashlrai/lexicon",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "ccf26432fc45f677"
+  },
+  {
+   "repo": "zhxunzh84/rea-dino-reverse-engineering",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "4e275c62fd996eda"
+  },
+  {
+   "repo": "Dvurechensky/Browser.Reverse.Engineering.Toolkit",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "ac19256a93f198f9"
+  },
+  {
+   "repo": "HumanSecurity/restringer",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "223c942b06ecdb49"
+  },
+  {
+   "repo": "N0zoM1z0/th08",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "52eaab828345f3b8"
+  },
+  {
+   "repo": "troyedwardsjr/z2rs",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "7b3bf6681bb7b7fd"
+  },
+  {
+   "repo": "sciaschi/CBFD-Recompiled",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "9e731315357fd9fb"
+  },
+  {
+   "repo": "jhaizhou-ops/d2r-mobile",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "7ae62831bade1d21"
+  }
+ ],
  "rules_followed": true
 }
