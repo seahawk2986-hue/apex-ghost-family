@@ -1,30 +1,11 @@
 {
- "digest": "3de4f1f386136414",
+ "digest": "3bd78710f7156123",
  "hub": "actions-runner",
- "ts": "2026-11-09 07:40:43",
+ "ts": "2026-11-09 13:27:43",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 55,
- "mines": [
-  {
-   "repo": "keithpotz/CrashCatch",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "d9534a6534121be2"
-  },
-  {
-   "repo": "vinniefalco/DSPFilters",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "fea99d932d828c60"
-  },
-  {
-   "repo": "ruffle-rs/ruffle",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "d0f2dd68f65db7ea"
-  }
- ],
+ "ok": 59,
+ "mines": [],
  "rules_followed": true
 }
