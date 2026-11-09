@@ -1,77 +1,29 @@
 {
- "digest": "2bafb328fa70d730",
+ "digest": "3de4f1f386136414",
  "hub": "actions-runner",
- "ts": "2026-11-09 01:24:20",
+ "ts": "2026-11-09 07:40:43",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 56,
+ "ok": 55,
  "mines": [
   {
-   "repo": "stephenberry/glaze",
+   "repo": "keithpotz/CrashCatch",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "c811a12c1b9dca27"
+   "sha": "d9534a6534121be2"
   },
   {
-   "repo": "kuzudb/kuzu",
+   "repo": "vinniefalco/DSPFilters",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "4d9a55c3ddbeb99c"
+   "sha": "fea99d932d828c60"
   },
   {
-   "repo": "LadybugDB/ladybug",
+   "repo": "ruffle-rs/ruffle",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "57704ece0cbed62d"
-  },
-  {
-   "repo": "pganalyze/libpg_query",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "938cf5abd51329fb"
-  },
-  {
-   "repo": "getml/sqlgen",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "917a28f46c131755"
-  },
-  {
-   "repo": "SRombauts/SQLiteCpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "432f54bab4e57cc4"
-  },
-  {
-   "repo": "SqliteModernCpp/sqlite_modern_cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "381322b5ae1a46bd"
-  },
-  {
-   "repo": "fnc12/sqlite_orm",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c63841093b6685ca"
-  },
-  {
-   "repo": "TileDB-Inc/TileDB",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7a609b4d690afa44"
-  },
-  {
-   "repo": "trilogy-libraries/trilogy",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "037cd33963b70191"
-  },
-  {
-   "repo": "bombela/backward-cpp",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "41e75fc0d7e5017f"
+   "sha": "d0f2dd68f65db7ea"
   }
  ],
  "rules_followed": true
