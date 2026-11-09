@@ -1,101 +1,77 @@
 {
- "digest": "9c06f2c978a49ca2",
+ "digest": "2bafb328fa70d730",
  "hub": "actions-runner",
- "ts": "2026-11-08 18:56:54",
+ "ts": "2026-11-09 01:24:20",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 52,
+ "ok": 56,
  "mines": [
   {
-   "repo": "Rookfighter/inifile-cpp",
+   "repo": "stephenberry/glaze",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "ad27737410a9cc70"
+   "sha": "c811a12c1b9dca27"
   },
   {
-   "repo": "ndevilla/iniparser",
+   "repo": "kuzudb/kuzu",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "abea7c9d832dcb4a"
+   "sha": "4d9a55c3ddbeb99c"
   },
   {
-   "repo": "mcmtroffaes/inipp",
+   "repo": "LadybugDB/ladybug",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "e40c242a3a995571"
+   "sha": "57704ece0cbed62d"
   },
   {
-   "repo": "metayeti/mINI",
+   "repo": "pganalyze/libpg_query",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "c2d0da78b8d98327"
+   "sha": "938cf5abd51329fb"
   },
   {
-   "repo": "marzer/tomlplusplus",
+   "repo": "getml/sqlgen",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "4e9a31bd9097ec6f"
+   "sha": "917a28f46c131755"
   },
   {
-   "repo": "ToruNiina/toml11",
+   "repo": "SRombauts/SQLiteCpp",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "7ac422e0189d6032"
+   "sha": "432f54bab4e57cc4"
   },
   {
-   "repo": "pinam45/dynamic_bitset",
+   "repo": "SqliteModernCpp/sqlite_modern_cpp",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "59c50fbdfc6c31f7"
+   "sha": "381322b5ae1a46bd"
   },
   {
-   "repo": "teslamotors/fixed-containers",
+   "repo": "fnc12/sqlite_orm",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "346a3e731443597d"
+   "sha": "c63841093b6685ca"
   },
   {
-   "repo": "Tessil/hat-trie",
+   "repo": "TileDB-Inc/TileDB",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "7b20d82b67db7fb2"
+   "sha": "7a609b4d690afa44"
   },
   {
-   "repo": "Tessil/hopscotch-map",
+   "repo": "trilogy-libraries/trilogy",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "b50b6ce06b257efa"
+   "sha": "037cd33963b70191"
   },
   {
-   "repo": "martinus/robin-hood-hashing",
+   "repo": "bombela/backward-cpp",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "dfbc3b95d444e052"
-  },
-  {
-   "repo": "Tessil/robin-map",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "5fb32f5a69f37d43"
-  },
-  {
-   "repo": "martinus/svector",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "40e4c2ce41e9de14"
-  },
-  {
-   "repo": "nlohmann/fifo_map",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "282c0ce04361a862"
-  },
-  {
-   "repo": "Tessil/ordered-map",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "17e536238a0b0f8b"
+   "sha": "41e75fc0d7e5017f"
   }
  ],
  "rules_followed": true
