@@ -1,76 +1,112 @@
 {
  "hub": "actions-runner",
- "ts": "2026-11-10 01:16:56",
+ "ts": "2026-11-10 07:25:51",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 60,
+ "ok": 59,
  "mines": [
   {
-   "repo": "pungme/superagent-ios",
+   "repo": "obra/superpowers",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "6a8a11293d908838"
+   "sha": "79f29f50c735862d"
   },
   {
-   "repo": "jktrn/astro-erudite",
+   "repo": "hyqzz/Solar-Wanderer",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "38b4b2fa5037ac59"
+   "sha": "e72b677c0a509460"
   },
   {
-   "repo": "microsoft/VibeASR.cpp",
+   "repo": "shashwatak/satellite-js",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "a04e88f7d4442da6"
+   "sha": "04305462c526b93b"
   },
   {
-   "repo": "inikolax/remiqora",
+   "repo": "zizmorcore/zizmor",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "d4d48341767704ee"
+   "sha": "4676e0e205c260f1"
   },
   {
-   "repo": "estebanstifli/OpenDub",
+   "repo": "ptsochantaris/emeltal",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "9eee6648e7a5dce9"
+   "sha": "fcc6b88ee45005d6"
   },
   {
-   "repo": "shadcn-ui/ui",
+   "repo": "ShelbyJenkins/llm_client",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "bb0869848a2063e4"
+   "sha": "336a5fbafde2f275"
   },
   {
-   "repo": "Bhanunamikaze/Agentic-SEO-Skill",
+   "repo": "SciSharp/LLamaSharp",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "052a6c2a7f363898"
+   "sha": "2f10ee9bf39546e0"
   },
   {
-   "repo": "stablyai/orca",
+   "repo": "distantmagic/resonance",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "c3a7e8155866d760"
+   "sha": "14c7a316cd201aeb"
   },
   {
-   "repo": "Niekvdm/godot-plugins-gtml",
+   "repo": "Mobile-Artificial-Intelligence/maid",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "f8d40115a021b1d2"
+   "sha": "8e1526946a07c13a"
   },
   {
-   "repo": "Orchestra-Research/AI-Research-SKILLs",
+   "repo": "a-ghorbani/pocketpal-ai",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "d5442649de72ecd3"
+   "sha": "68a915d32a0e45f3"
   },
   {
-   "repo": "Rhymen/go-whatsapp",
+   "repo": "LostRuins/koboldcpp",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "ba086a86c6ca8ea2"
+   "sha": "ed52ee1fa6ee8d29"
+  },
+  {
+   "repo": "semperai/amica",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "4ae21443421c984a"
+  },
+  {
+   "repo": "yoshoku/llama_cpp.rb",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "557f49ce5ea18981"
+  },
+  {
+   "repo": "WhiskeySockets/Baileys",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "8e04fbb1c4c5a6a0"
+  },
+  {
+   "repo": "Uzaaft/awesome-libghostty",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "39557a3faa3cedf8"
+  },
+  {
+   "repo": "N0zoM1z0/th04",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "c929a6cb4e410dc9"
+  },
+  {
+   "repo": "Niko1221/Strata",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "ff2ce6d23262c3a0"
   }
  ],
  "rules_followed": true
