@@ -1,82 +1,22 @@
 {
  "hub": "actions-runner",
- "ts": "2026-11-10 13:17:53",
+ "ts": "2026-11-10 19:08:57",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 55,
+ "ok": 58,
  "mines": [
   {
-   "repo": "p4kl0nc4t/kyros",
+   "repo": "NVIDIA/ontology-sql-eval",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "cee2ecd368a9c0dd"
+   "sha": "8145cad7dbeba337"
   },
   {
-   "repo": "AaronWong1999/hermesclaw",
+   "repo": "defai-digital/ax-code-desktop",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "977fec254f6a701c"
-  },
-  {
-   "repo": "AkashNaickar/crdb-sample-frontend",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "edae86c95bd70cba"
-  },
-  {
-   "repo": "jehna/humanify",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "db7686381e11a8ba"
-  },
-  {
-   "repo": "coinbase/coinbase-exchange-node",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "2da90e29f73778e2"
-  },
-  {
-   "repo": "gunvirranu/perturb",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c578eb1409b8fb83"
-  },
-  {
-   "repo": "actions/dependency-review-action",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7169870b47bd2f81"
-  },
-  {
-   "repo": "better-auth/better-auth",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f66803e0697a6d42"
-  },
-  {
-   "repo": "paazmaya/shuji",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "a9bd7df6b6baa520"
-  },
-  {
-   "repo": "microsoft/vssetup.powershell",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "3ced36f6e6cf5f06"
-  },
-  {
-   "repo": "phronmophobic/llama.clj",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e10fd0073f476790"
-  },
-  {
-   "repo": "KytyPS5/KytyPS5",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "5ba8978d7c4e406b"
+   "sha": "db7a522884b1a092"
   }
  ],
  "rules_followed": true
