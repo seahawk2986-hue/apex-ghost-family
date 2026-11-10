@@ -1,82 +1,76 @@
 {
  "hub": "actions-runner",
- "ts": "2026-11-09 19:08:13",
+ "ts": "2026-11-10 01:16:56",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 58,
+ "ok": 60,
  "mines": [
   {
-   "repo": "MindWorkAI/AI-Studio",
+   "repo": "pungme/superagent-ios",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "bc85dc85a6a91acb"
+   "sha": "6a8a11293d908838"
   },
   {
-   "repo": "snesrev/zelda3",
+   "repo": "jktrn/astro-erudite",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "1e0c51d450b2638e"
+   "sha": "38b4b2fa5037ac59"
   },
   {
-   "repo": "nothings/stb",
+   "repo": "microsoft/VibeASR.cpp",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "f80d39c467ada53b"
+   "sha": "a04e88f7d4442da6"
   },
   {
-   "repo": "iryoku/smaa",
+   "repo": "inikolax/remiqora",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "2e9c8e68ff718322"
+   "sha": "d4d48341767704ee"
   },
   {
-   "repo": "ashlrai/lexicon",
+   "repo": "estebanstifli/OpenDub",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "ccf26432fc45f677"
+   "sha": "9eee6648e7a5dce9"
   },
   {
-   "repo": "zhxunzh84/rea-dino-reverse-engineering",
+   "repo": "shadcn-ui/ui",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "4e275c62fd996eda"
+   "sha": "bb0869848a2063e4"
   },
   {
-   "repo": "Dvurechensky/Browser.Reverse.Engineering.Toolkit",
+   "repo": "Bhanunamikaze/Agentic-SEO-Skill",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "ac19256a93f198f9"
+   "sha": "052a6c2a7f363898"
   },
   {
-   "repo": "HumanSecurity/restringer",
+   "repo": "stablyai/orca",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "223c942b06ecdb49"
+   "sha": "c3a7e8155866d760"
   },
   {
-   "repo": "N0zoM1z0/th08",
+   "repo": "Niekvdm/godot-plugins-gtml",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "52eaab828345f3b8"
+   "sha": "f8d40115a021b1d2"
   },
   {
-   "repo": "troyedwardsjr/z2rs",
+   "repo": "Orchestra-Research/AI-Research-SKILLs",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "7b3bf6681bb7b7fd"
+   "sha": "d5442649de72ecd3"
   },
   {
-   "repo": "sciaschi/CBFD-Recompiled",
+   "repo": "Rhymen/go-whatsapp",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "9e731315357fd9fb"
-  },
-  {
-   "repo": "jhaizhou-ops/d2r-mobile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "7ae62831bade1d21"
+   "sha": "ba086a86c6ca8ea2"
   }
  ],
  "rules_followed": true
