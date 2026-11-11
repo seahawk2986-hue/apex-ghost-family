@@ -1,10 +1,11 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-11 07:29:20",
- "status": "done",
- "lifecycle": "done",
- "requested": 60,
- "ok": 59,
- "mines": [],
- "rules_followed": true
+ "kind": "vet-line",
+ "added": [
+  {
+   "skill": "shp2parquet",
+   "repo": "onthegomap/planetiler",
+   "sha256": "53a43f118fd1dadc"
+  }
+ ],
+ "ts": "2026-11-11 11:02:46"
 }

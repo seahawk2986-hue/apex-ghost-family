@@ -14523,7 +14523,26 @@
    ],
    "registered": "2026-11-05 19:56:48",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "shp2parquet",
+   "source_file": "scripts/shp2parquet.py",
+   "source_repo": "onthegomap/planetiler",
+   "license": "check repo",
+   "sha256": "53a43f118fd1dadce3da3aad1bd7fed7b06ba0b7d2751a7d59962c664037d732",
+   "lines": 118,
+   "first_line": "# /// script",
+   "imports": [
+    "argparse",
+    "geopandas",
+    "os",
+    "pyarrow",
+    "signal",
+    "sys"
+   ],
+   "registered": "2026-11-11 11:02:37",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-05 19:56:50"
+ "built": "2026-11-11 11:02:46"
 }
