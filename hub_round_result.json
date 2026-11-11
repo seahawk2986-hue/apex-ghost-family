@@ -1,11 +1,10 @@
 {
- "kind": "vet-line",
- "added": [
-  {
-   "skill": "shp2parquet",
-   "repo": "onthegomap/planetiler",
-   "sha256": "53a43f118fd1dadc"
-  }
- ],
- "ts": "2026-11-11 11:02:46"
+ "hub": "actions-runner",
+ "ts": "2026-11-11 13:25:56",
+ "status": "done",
+ "lifecycle": "done",
+ "requested": 13,
+ "ok": 10,
+ "mines": [],
+ "rules_followed": true
 }
