@@ -14542,7 +14542,58 @@
    ],
    "registered": "2026-11-11 11:02:37",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "snapshots_compare",
+   "source_file": "scripts/ci/snapshots-compare.py",
+   "source_repo": "simplex-chat/simplex-chat",
+   "license": "check repo",
+   "sha256": "80e20ab41841addef0088a806d2375307f0bff37ee5fd55bc31b0df3980d117c",
+   "lines": 151,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "json",
+    "os",
+    "struct",
+    "sys",
+    "zlib"
+   ],
+   "registered": "2026-11-11 14:20:23",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_emoji_data",
+   "source_file": "scripts/desktop/generate-emoji-data.py",
+   "source_repo": "simplex-chat/simplex-chat",
+   "license": "check repo",
+   "sha256": "7a3de4a092f6ed1a15c432f909f2feb6daa7ef1b98647c6517007c6b6d76ec31",
+   "lines": 45,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "sys"
+   ],
+   "registered": "2026-11-11 14:20:24",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "generate_banner",
+   "source_file": "media/Banner/generate_banner.py",
+   "source_repo": "MindWorkAI/AI-Studio",
+   "license": "check repo",
+   "sha256": "00fd35f4f3ba34068ad08e5e07b1424c46b79a697eb48f1102e6f417b22858f6",
+   "lines": 384,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "hashlib",
+    "json",
+    "logging",
+    "sys",
+    "uharfbuzz"
+   ],
+   "registered": "2026-11-11 14:20:41",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-11 11:02:46"
+ "built": "2026-11-11 14:23:02"
 }
