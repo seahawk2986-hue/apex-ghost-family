@@ -1,23 +1,10 @@
 {
  "hub": "actions-runner",
- "ts": "2026-11-10 19:08:57",
+ "ts": "2026-11-11 01:19:52",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 58,
- "mines": [
-  {
-   "repo": "NVIDIA/ontology-sql-eval",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8145cad7dbeba337"
-  },
-  {
-   "repo": "defai-digital/ax-code-desktop",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "db7a522884b1a092"
-  }
- ],
+ "ok": 59,
+ "mines": [],
  "rules_followed": true
 }
