@@ -1,10 +1,11 @@
 {
- "hub": "actions-runner",
- "ts": "2026-11-14 13:05:48",
- "status": "done",
- "lifecycle": "done",
- "requested": 0,
- "ok": 0,
- "mines": [],
- "rules_followed": true
+ "kind": "vet-line",
+ "added": [
+  {
+   "skill": "datasette_lite_test_stream",
+   "repo": "simonw/datasette-lite",
+   "sha256": "b82fc5f7b68e5b73"
+  }
+ ],
+ "ts": "2026-11-14 17:41:00"
 }

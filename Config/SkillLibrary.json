@@ -14593,7 +14593,22 @@
    ],
    "registered": "2026-11-11 14:20:41",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "datasette_lite_test_stream",
+   "source_file": "tests/plugins/datasette_lite_test_stream.py",
+   "source_repo": "simonw/datasette-lite",
+   "license": "check repo",
+   "sha256": "b82fc5f7b68e5b73bd95fded75c2ec67699e7c0d1e4b35e6e2d01aff602f1993",
+   "lines": 82,
+   "first_line": "\"\"\"A plugin for the Datasette Lite tests: responses that arrive over time.",
+   "imports": [
+    "asyncio",
+    "json"
+   ],
+   "registered": "2026-11-14 17:40:27",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-11 14:23:02"
+ "built": "2026-11-14 17:41:00"
 }
