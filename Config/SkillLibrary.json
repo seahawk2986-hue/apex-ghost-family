@@ -14608,7 +14608,19 @@
    ],
    "registered": "2026-11-14 17:40:27",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "make_screenshots",
+   "source_file": "docs/appstore/make-screenshots.py",
+   "source_repo": "pungme/superagent-ios",
+   "license": "check repo",
+   "sha256": "c654e4514e8c70f057d5ae97b1693b4bb2fd515f69659509c34c587ea3063131",
+   "lines": 100,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [],
+   "registered": "2026-11-17 13:06:56",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-14 17:41:00"
+ "built": "2026-11-17 13:08:22"
 }
