@@ -1,11 +1,10 @@
 {
- "kind": "vet-line",
- "added": [
-  {
-   "skill": "make_screenshots",
-   "repo": "pungme/superagent-ios",
-   "sha256": "c654e4514e8c70f0"
-  }
- ],
- "ts": "2026-11-17 13:08:22"
+ "hub": "actions-runner",
+ "ts": "2026-11-17 13:26:19",
+ "status": "done",
+ "lifecycle": "done",
+ "requested": 0,
+ "ok": 0,
+ "mines": [],
+ "rules_followed": true
 }
