@@ -14620,7 +14620,43 @@
    "imports": [],
    "registered": "2026-11-17 13:06:56",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "chocolatey",
+   "source_file": ".github/scripts/chocolatey.py",
+   "source_repo": "supermerill/SuperSlicer",
+   "license": "check repo",
+   "sha256": "852dc4e9116135f070be9bceb136c39469d83dcd2093a6144555484dc3585678",
+   "lines": 155,
+   "first_line": "\"\"\"Prepare a script-only Chocolatey package from a published stable upstream MSI",
+   "imports": [
+    "argparse",
+    "json",
+    "os",
+    "re",
+    "sys",
+    "urllib",
+    "xml"
+   ],
+   "registered": "2026-11-20 23:48:41",
+   "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "nightly_version",
+   "source_file": ".github/scripts/nightly_version.py",
+   "source_repo": "supermerill/SuperSlicer",
+   "license": "check repo",
+   "sha256": "7cd572e176524cdd53d0749bafcd888dbee122f4843852821713a42d5dacf0d7",
+   "lines": 85,
+   "first_line": "\"\"\"Prepare one dated nightly identity without changing the numeric MSI version.\"",
+   "imports": [
+    "argparse",
+    "re",
+    "sys"
+   ],
+   "registered": "2026-11-20 23:48:42",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-17 13:08:22"
+ "built": "2026-11-20 23:50:31"
 }
