@@ -14656,7 +14656,24 @@
    ],
    "registered": "2026-11-20 23:48:42",
    "vetby": "hub-runner-v1"
+  },
+  {
+   "skill": "check_runner_versions",
+   "source_file": "scripts/check-runner-versions.py",
+   "source_repo": "ricsanfre/pi-cluster",
+   "license": "check repo",
+   "sha256": "e8cbc10333ec4819e8534d260117690cde8cb6e510ebf6882ed541ca69d03250",
+   "lines": 151,
+   "first_line": "#!/usr/bin/env python3",
+   "imports": [
+    "argparse",
+    "re",
+    "sys",
+    "tomllib"
+   ],
+   "registered": "2026-11-21 15:47:16",
+   "vetby": "hub-runner-v1"
   }
  ],
- "built": "2026-11-20 23:50:31"
+ "built": "2026-11-21 15:48:45"
 }
