@@ -1,16 +1,10 @@
 {
- "kind": "vet-line",
- "added": [
-  {
-   "skill": "chocolatey",
-   "repo": "supermerill/SuperSlicer",
-   "sha256": "852dc4e9116135f0"
-  },
-  {
-   "skill": "nightly_version",
-   "repo": "supermerill/SuperSlicer",
-   "sha256": "7cd572e176524cdd"
-  }
- ],
- "ts": "2026-11-20 23:50:31"
+ "hub": "actions-runner",
+ "ts": "2026-11-21 01:26:52",
+ "status": "done",
+ "lifecycle": "done",
+ "requested": 0,
+ "ok": 0,
+ "mines": [],
+ "rules_followed": true
 }
