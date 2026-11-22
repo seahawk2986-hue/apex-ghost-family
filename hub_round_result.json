@@ -1,10 +1,17 @@
 {
  "hub": "actions-runner",
- "ts": "2026-11-21 19:00:35",
+ "ts": "2026-11-22 01:25:13",
  "status": "done",
  "lifecycle": "done",
- "requested": 0,
- "ok": 0,
- "mines": [],
+ "requested": 60,
+ "ok": 49,
+ "mines": [
+  {
+   "repo": "ETLCPP/etl",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "286a3041456d2834"
+  }
+ ],
  "rules_followed": true
 }
