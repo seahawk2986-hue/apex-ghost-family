@@ -1,113 +1,89 @@
 {
- "digest": "378cdeaa9e4a6de3",
+ "digest": "b758926ca8340491",
  "hub": "actions-runner",
- "ts": "2026-11-24 13:31:36",
+ "ts": "2026-11-24 19:14:34",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 59,
+ "ok": 55,
  "mines": [
   {
-   "repo": "obra/superpowers",
+   "repo": "p4kl0nc4t/kyros",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "79f29f50c735862d"
+   "sha": "cee2ecd368a9c0dd"
   },
   {
-   "repo": "hyqzz/Solar-Wanderer",
+   "repo": "AaronWong1999/hermesclaw",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "e72b677c0a509460"
+   "sha": "977fec254f6a701c"
   },
   {
-   "repo": "shashwatak/satellite-js",
+   "repo": "AkashNaickar/crdb-sample-frontend",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "04305462c526b93b"
+   "sha": "edae86c95bd70cba"
   },
   {
-   "repo": "zizmorcore/zizmor",
+   "repo": "jehna/humanify",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "7bfc7124db35a0a5"
+   "sha": "bc3bedb74e16bc12"
   },
   {
-   "repo": "ptsochantaris/emeltal",
+   "repo": "coinbase/coinbase-exchange-node",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "fcc6b88ee45005d6"
+   "sha": "2da90e29f73778e2"
   },
   {
-   "repo": "ShelbyJenkins/llm_client",
+   "repo": "gunvirranu/perturb",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "336a5fbafde2f275"
+   "sha": "c578eb1409b8fb83"
   },
   {
-   "repo": "SciSharp/LLamaSharp",
+   "repo": "actions/dependency-review-action",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "1cd58c950d20c438"
+   "sha": "dbbd75a5e1bc2bd6"
   },
   {
-   "repo": "distantmagic/resonance",
+   "repo": "mudler/LocalAI",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "14c7a316cd201aeb"
+   "sha": "756427b958181fa2"
   },
   {
-   "repo": "Mobile-Artificial-Intelligence/maid",
+   "repo": "better-auth/better-auth",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "8e1526946a07c13a"
+   "sha": "f66803e0697a6d42"
   },
   {
-   "repo": "a-ghorbani/pocketpal-ai",
+   "repo": "paazmaya/shuji",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "210a5b7d69da6b86"
+   "sha": "2c234c57dcaa7f4e"
   },
   {
-   "repo": "LostRuins/koboldcpp",
+   "repo": "microsoft/vssetup.powershell",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "dcd792350f3cb269"
+   "sha": "3ced36f6e6cf5f06"
   },
   {
-   "repo": "semperai/amica",
+   "repo": "phronmophobic/llama.clj",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "4ae21443421c984a"
+   "sha": "e10fd0073f476790"
   },
   {
-   "repo": "yoshoku/llama_cpp.rb",
+   "repo": "KytyPS5/KytyPS5",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "557f49ce5ea18981"
-  },
-  {
-   "repo": "WhiskeySockets/Baileys",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "8e04fbb1c4c5a6a0"
-  },
-  {
-   "repo": "Uzaaft/awesome-libghostty",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "64cf5f9c5d98228b"
-  },
-  {
-   "repo": "N0zoM1z0/th04",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c929a6cb4e410dc9"
-  },
-  {
-   "repo": "Niko1221/Strata",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "62794b7783963e01"
+   "sha": "b20d3a8220219735"
   }
  ],
  "rules_followed": true
