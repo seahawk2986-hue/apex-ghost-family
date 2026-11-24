@@ -1,11 +1,90 @@
 {
- "digest": "357c1f2ca8cf5bda",
+ "digest": "6961794f1b7b34f1",
  "hub": "actions-runner",
- "ts": "2026-11-23 19:14:50",
+ "ts": "2026-11-24 01:27:58",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 59,
- "mines": [],
+ "ok": 58,
+ "mines": [
+  {
+   "repo": "MindWorkAI/AI-Studio",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "66d810730b36429c"
+  },
+  {
+   "repo": "snesrev/zelda3",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "1e0c51d450b2638e"
+  },
+  {
+   "repo": "nothings/stb",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "813443473fa26851"
+  },
+  {
+   "repo": "iryoku/smaa",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "2e9c8e68ff718322"
+  },
+  {
+   "repo": "RAAAAAGEEEEE/vuntum-mcp",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "595472fbaaa6540c"
+  },
+  {
+   "repo": "ashlrai/lexicon",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "125bf1052a4026de"
+  },
+  {
+   "repo": "zhxunzh84/rea-dino-reverse-engineering",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "4e275c62fd996eda"
+  },
+  {
+   "repo": "Dvurechensky/Browser.Reverse.Engineering.Toolkit",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "ac19256a93f198f9"
+  },
+  {
+   "repo": "HumanSecurity/restringer",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "223c942b06ecdb49"
+  },
+  {
+   "repo": "N0zoM1z0/th08",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "66c4a9ceb1ac7b99"
+  },
+  {
+   "repo": "troyedwardsjr/z2rs",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "7b3bf6681bb7b7fd"
+  },
+  {
+   "repo": "sciaschi/CBFD-Recompiled",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "384c5062a89768c9"
+  },
+  {
+   "repo": "jhaizhou-ops/d2r-mobile",
+   "tier": "MINE",
+   "evidence": "README declares MIT",
+   "sha": "669800ec74bdffe5"
+  }
+ ],
  "rules_followed": true
 }
