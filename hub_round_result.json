@@ -1,88 +1,82 @@
 {
  "hub": "actions-runner",
- "ts": "2026-11-24 01:27:58",
+ "ts": "2026-11-24 07:36:19",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 58,
+ "ok": 60,
  "mines": [
   {
-   "repo": "MindWorkAI/AI-Studio",
+   "repo": "pungme/superagent-ios",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "66d810730b36429c"
+   "sha": "6a8a11293d908838"
   },
   {
-   "repo": "snesrev/zelda3",
+   "repo": "jktrn/astro-erudite",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "1e0c51d450b2638e"
+   "sha": "38b4b2fa5037ac59"
   },
   {
-   "repo": "nothings/stb",
+   "repo": "microsoft/VibeASR.cpp",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "813443473fa26851"
+   "sha": "a04e88f7d4442da6"
   },
   {
-   "repo": "iryoku/smaa",
+   "repo": "inikolax/remiqora",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "2e9c8e68ff718322"
+   "sha": "8a86c868c8d8b551"
   },
   {
-   "repo": "RAAAAAGEEEEE/vuntum-mcp",
+   "repo": "estebanstifli/OpenDub",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "595472fbaaa6540c"
+   "sha": "9eee6648e7a5dce9"
   },
   {
-   "repo": "ashlrai/lexicon",
+   "repo": "shadcn-ui/ui",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "125bf1052a4026de"
+   "sha": "bb0869848a2063e4"
   },
   {
-   "repo": "zhxunzh84/rea-dino-reverse-engineering",
+   "repo": "leon-ai/leon",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "4e275c62fd996eda"
+   "sha": "6e037beacddf00d0"
   },
   {
-   "repo": "Dvurechensky/Browser.Reverse.Engineering.Toolkit",
+   "repo": "Bhanunamikaze/Agentic-SEO-Skill",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "ac19256a93f198f9"
+   "sha": "052a6c2a7f363898"
   },
   {
-   "repo": "HumanSecurity/restringer",
+   "repo": "stablyai/orca",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "223c942b06ecdb49"
+   "sha": "6b54e587ad7274ef"
   },
   {
-   "repo": "N0zoM1z0/th08",
+   "repo": "Niekvdm/godot-plugins-gtml",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "66c4a9ceb1ac7b99"
+   "sha": "f8d40115a021b1d2"
   },
   {
-   "repo": "troyedwardsjr/z2rs",
+   "repo": "Orchestra-Research/AI-Research-SKILLs",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "7b3bf6681bb7b7fd"
+   "sha": "d5442649de72ecd3"
   },
   {
-   "repo": "sciaschi/CBFD-Recompiled",
+   "repo": "Rhymen/go-whatsapp",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "384c5062a89768c9"
-  },
-  {
-   "repo": "jhaizhou-ops/d2r-mobile",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "669800ec74bdffe5"
+   "sha": "ba086a86c6ca8ea2"
   }
  ],
  "rules_followed": true
