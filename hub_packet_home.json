@@ -1,89 +1,23 @@
 {
- "digest": "b758926ca8340491",
+ "digest": "b6f7c0836a29249c",
  "hub": "actions-runner",
- "ts": "2026-11-24 19:14:34",
+ "ts": "2026-11-25 01:32:09",
  "status": "done",
  "lifecycle": "done",
  "requested": 60,
- "ok": 55,
+ "ok": 58,
  "mines": [
   {
-   "repo": "p4kl0nc4t/kyros",
+   "repo": "NVIDIA/ontology-sql-eval",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "cee2ecd368a9c0dd"
+   "sha": "56daca6251a0237f"
   },
   {
-   "repo": "AaronWong1999/hermesclaw",
+   "repo": "defai-digital/ax-code-desktop",
    "tier": "MINE",
    "evidence": "README declares MIT",
-   "sha": "977fec254f6a701c"
-  },
-  {
-   "repo": "AkashNaickar/crdb-sample-frontend",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "edae86c95bd70cba"
-  },
-  {
-   "repo": "jehna/humanify",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "bc3bedb74e16bc12"
-  },
-  {
-   "repo": "coinbase/coinbase-exchange-node",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "2da90e29f73778e2"
-  },
-  {
-   "repo": "gunvirranu/perturb",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "c578eb1409b8fb83"
-  },
-  {
-   "repo": "actions/dependency-review-action",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "dbbd75a5e1bc2bd6"
-  },
-  {
-   "repo": "mudler/LocalAI",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "756427b958181fa2"
-  },
-  {
-   "repo": "better-auth/better-auth",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "f66803e0697a6d42"
-  },
-  {
-   "repo": "paazmaya/shuji",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "2c234c57dcaa7f4e"
-  },
-  {
-   "repo": "microsoft/vssetup.powershell",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "3ced36f6e6cf5f06"
-  },
-  {
-   "repo": "phronmophobic/llama.clj",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "e10fd0073f476790"
-  },
-  {
-   "repo": "KytyPS5/KytyPS5",
-   "tier": "MINE",
-   "evidence": "README declares MIT",
-   "sha": "b20d3a8220219735"
+   "sha": "c03e7dfc6a6dce60"
   }
  ],
  "rules_followed": true
